@@ -1,4 +1,4 @@
-## Photos & Videos
+## Travels
 
 <div class="gallery" id="gallery-1">
   <a href="Durham_clouds.jpg" data-lightbox="mygallery" data-title="Noctilucent clouds over the Durham Cathedral"><img src="Durham_clouds.jpg" alt="Noctilucent clouds" width="1200"></a>
