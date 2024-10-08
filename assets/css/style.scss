@@ -1,0 +1,43 @@
+---
+---
+$section-headings-color: rosybrown;
+
+@import"{{ site.theme }}";
+
+.page-header {
+  background:url("../../Durham_clouds2.jpg");
+  background-size:cover;
+}
+
+#Nav a{
+     color: #f2f2f2;
+     text-decoration:none;
+}
+
+#Nav a:hover {
+    color: SteelBlue;
+}
+
+#Nav a:active a{
+  color: SteelBlue;
+}
+
+body {
+  background-color: black;
+  color: silver;
+}
+
+.gallery {
+  margin: 10px 50px;
+}
+
+.gallery img {
+  transition: 1s;
+  padding: 15px;
+  width: 200px;
+}
+
+.gallery img:hover {
+  filter:grayscale(100%);
+  transform: scale(1.1);
+}
