@@ -1,6 +1,9 @@
 ## 个人/For Me
+我目前是同济大学海洋与地球科学学院海洋科学系的本科生。2025年9月，我将开始在北京大学物理学院大气与海洋科学系攻读博士学位，在那里我将进行行星气候学研究。我目前还在日本东京的东京科学大学（前身为东京工业大学）作为访问学生进行交流。
 
-I am currently an undergraduate student in the Department of Marine Science at the College of Ocean and Earth Sciences, Tongji University. In September 2025, I will begin my studies at the Department of Atmospheric and Oceanic Sciences, School of Physics, Peking University, where I will be conducting research in planetary climatology. I am also currently participating in an exchange program at Institute of Science Tokyo (formerly known as Tokyo Institute of Technology) in Tokyo, Japan.
+I am currently an undergraduate student in the Department of Marine Science at the College of Ocean and Earth Sciences, Tongji University. In September 2025, I will begin my PHD studies at the Department of Atmospheric and Oceanic Sciences, School of Physics, Peking University, where I will be conducting research in planetary climatology. I am also currently participating in an exchange program at Institute of Science Tokyo (formerly known as Tokyo Institute of Technology) in Tokyo, Japan.
+
+我在华北山西省的一个工矿城市阳泉出生长大，这里曾在上世纪后半业繁极一时。多年来，我也在太原、北京、上海和东京曾长期生活过。我毕业于阳泉市第一中学校，该校以培养科幻作家刘慈欣和百度首席执行官李彦宏等杰出人物而闻名。在同济大学的本科生涯中，我经过深思熟虑，选择将深造重点放在气候动力学上，并对行星气候学尤为感兴趣。这是一个交叉学科而且是蕴含着复杂系统理论的领域，我因此而入迷。
 
 I was born and raised in Yangquan, an industrial and mining city in Shanxi Province, northern China, which flourished during the latter half of the 20th century. Over the years, I have also lived for extended periods in Taiyuan, Beijing, Shanghai, and Tokyo. I graduated from Yangquan No. 1 High School, which is known for having nurtured prominent figures such as the science fiction writer Liu Cixin and Baidu's CEO Robin Li. At Tongji University, after thoughtful deliberation, I chose to focus my advanced studies on climate dynamics, with a particular passion for planetary climatology. I am fascinated by this interdisciplinary field, which is rich with the complexities of systems theory.
 ### Research Areas
