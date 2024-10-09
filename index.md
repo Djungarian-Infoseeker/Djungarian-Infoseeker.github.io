@@ -6,13 +6,11 @@ I am currently an undergraduate student in the Department of Marine Science at t
 我在华北山西省的一个工矿城市阳泉出生长大，这里曾在上世纪后半业繁极一时。多年来，我也在太原、北京、上海和东京曾长期生活过。我毕业于阳泉市第一中学校，该校以培养科幻作家刘慈欣和百度首席执行官李彦宏等杰出人物而闻名。在同济大学的本科生涯中，我经过深思熟虑，选择将深造重点放在气候动力学上，并对行星气候学尤为感兴趣。这是一个交叉学科而且是蕴含着复杂系统理论的领域，我因此而入迷。
 
 I was born and raised in Yangquan, an industrial and mining city in Shanxi Province, northern China, which flourished during the latter half of the 20th century. Over the years, I have also lived for extended periods in Taiyuan, Beijing, Shanghai, and Tokyo. I graduated from Yangquan No. 1 High School, which is known for having nurtured prominent figures such as the science fiction writer Liu Cixin and Baidu's CEO Robin Li. At Tongji University, after thoughtful deliberation, I chose to focus my advanced studies on climate dynamics, with a particular passion for planetary climatology. I am fascinated by this interdisciplinary field, which is rich with the complexities of systems theory.
-### Research Areas
+### 研究领域/Research Areas
 
 - **Outer boundary of the habitable zone of planetary climate**
 
 
 
-### Research Links
 
-- [Peking University](https://www.pku.edu.cn/)
 
