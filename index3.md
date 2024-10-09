@@ -1,31 +1,62 @@
-## Current project:
+## Curriculum Vitae:
 
-### KURVS: KMOS Ultra-Deep Rotational Velocity Survey
-
-Galaxy rotation curves provide fundamental measurements of the baryonic and dark matter distributions in galaxies. Though kinematic studies of galaxies in the local Universe revealed the need for dark matter and its’ dominance over baryonic matter, recent studies have suggested that dark matter contribution may be much lower in galaxies in the distant Universe. However, the most recent studies suffer from systematics associated with stacking analysis and small number statistics. 
-
-The KMOS ultra-deep rotational velocity survey of high redshift (*z*∼1.5) galaxies will allow to obtain the shapes of individual rotation curves and decompose them into the stellar, gaseous and dark matter components. One of the main outcomes of survey will be testing whether there is evidence for deviation from the widely accepted ΛCDM cosmology model in the distant Universe.
-
-## Past projects:
-
-### AS2UDS: Multi-wavelength properties of submillimetre galaxies
-
-Sub-millimetre galaxies (SMGs) represent some of the most actively star forming galaxies that have ever occurred, with star formation rates in the range ~100-1000 solar masses per year and large molecular gas reservoirs. Several lines of evidence suggest that SMGs are an important element for constraining models of galaxy formation and evolution.  
-
-This study analysed the largest available sample of ALMA identified SMGs from the ALMA SCUBA-2 UDS survey (follow-up of the SCUBA-2 Cosmology Legacy Survey). The main findings from the multi-wavelength analysis of this sample are:
-
-- SMGs may represent the highly efficient collapse of gas-rich massive haloes
-- SMGs are broadly consistent with simple homologous systems in the far-infrared, consistent with a centrally illuminated starburst;
-- almost all galaxies with stellar masses of M∗>3×10<sup>11</sup>M⊙ have gone through a sub-millimetre-luminous phase;
-- roughly half of the star-formation rate density at z∼3 arises in ULIRG-luminosity sources and the star formation contribution from this population appears to decline only slowly across the 1 Gyr from z∼3 to 6;
-- strong support for an evolutionary link between the SMG population at z>1 and the formation of massive, bulge-dominated galaxies across the history of the Universe.
-
-The paper *“An ALMA survey of the SCUBA-2 CLS UDS field: physical properties of 707 sub-millimetre galaxies”* is published in MNRAS and can be found [here](https://ui.adsabs.harvard.edu/abs/2020MNRAS.494.3828D/abstract).
-
-### The evolution of dust-obscured activity using STUDIES & AS2UDS
-
-This study aimed to better understand the physical properties of SMGs and in particular the relationship between samples selected at 450- and 850-𝜇m, by exploiting a very deep 450-𝜇m imaging survey: the SCUBA-2 Ultra Deep Imaging EAO Survey (STUDIES; Wang et al. 2017; Lim et al. 2020) in the COSMOS field. STUDIES is a multi-year JCMT survey within the CANDELS region (∼300 arcmin<sup>2</sup>), which obtained the deepest single-dish map at 450𝜇m currently available.
-
-The combination and comparison of 450-𝜇m and 850-𝜇m surveys provide a more complete view of luminous far-infrared activity in the Universe over a wider redshift range than possible with either individual sample. In particular, we exploited these large samples to construct subsets that are matched in rest-frame wavelength to quantify the physical differences between an identically selected sample of dusty galaxies at *z*∼1.5 and *z*∼3.5. 
-
-The paper *“Tracing the evolution of dust-obscured activity using sub-millimetre galaxy populations from STUDIES and AS2UDS”* is published in MNRAS and can be found [here](https://ui.adsabs.harvard.edu/abs/2020arXiv201006605D/abstract).
+<table>
+<tr>
+    <td style="padding-right: 15px;">
+    <img src="/avatar copy.png" alt="alt text">
+    </td>
+    <td>
+    <strong style="font-size: 20px;">王胤杰</strong><br>
+    <a href="https://www.tongji.edu.cn" target="_blank">同济大学</a><a href="https://mgg.tongji.edu.cn/" target="_blank">海洋与地球科学学院 海洋科学系</a><br> <!-- 添加超链接 -->
+    <strong style="font-size: 20px;">Yinjie Wang</strong><br>
+    <a href="https://mgg.tongji.edu.cn/mggen/main.htm" target="_blank">Department of Marine Science, School of Ocean and Earth Sciences</a>, <a href="https://en.tongji.edu.cn/" target="_blank">Tongji University</a><br> <!-- 添加超链接 -->
+    <strong>Email:</strong><a href="mailto:wangyinjie@tongji.edu.cn">wangyinjie@tongji.edu.cn</a><br> <!-- 添加邮件链接 -->
+    <strong>Add: </strong><a href="https://www.bing.com/maps?cp=31.283704%7E121.500936&lvl=16.0" target="_blank">NO.1239 Siping Road, Shanghai, P.R. China</a><br>
+    </td>
+</tr>
+<tr><td colspan="2" style="height: 20px;"></td></tr> <!-- 在这里添加一个空行的效果 -->
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白 -->
+        <div style="background-color: white; height: 2px; width: 100%; margin: 0;"></div> <!-- 修改横杠颜色为白色，宽度为100%，边距为0 -->
+    </td>
+</tr>
+<tr><td colspan="2" style="height: 10px;"></td></tr> <!-- 在这里添加一个空行的效果 -->
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
+    <strong style="font-size: 20px;">简介</strong><br>
+    2002年4月  山西省阳泉市矿区  出生<br>
+    2020年7月  山西省阳泉市第一中学校  毕业<br>
+    2020年9月  同济大学海洋与地球科学学院  海洋科学系  入学<br>
+    </td>
+</tr>
+<tr><td colspan="2" style="height: 10px;"></td></tr> <!-- 在这里添加一个空行的效果 -->
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 保持一致，删除左侧空白 -->
+        <div style="background-color: white; height: 2px; width: 100%; margin: 0;"></div> <!-- 保持横杠样式一致 -->
+    </td>
+</tr>
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
+    <strong style="font-size: 20px;">个人兴趣</strong><br>
+    行星大气, 大气与海洋动力学, 复杂系统<br>
+    </td>
+</tr>
+<tr><td colspan="2" style="height: 10px;"></td></tr> <!-- 在这里添加一个空行的效果 -->
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 保持一致，删除左侧空白 -->
+        <div style="background-color: white; height: 2px; width: 100%; margin: 0;"></div> <!-- 保持横杠样式一致 -->
+    </td>
+</tr>
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
+    <strong style="font-size: 20px;">个人兴趣</strong><br>
+    行星大气, 大气与海洋动力学, 复杂系统<br>
+    </td>
+</tr>
+<tr><td colspan="2" style="height: 10px;"></td></tr> <!-- 在这里添加一个空行的效果 -->
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 保持一致，删除左侧空白 -->
+        <div style="background-color: white; height: 2px; width: 100%; margin: 0;"></div> <!-- 保持横杠样式一致 -->
+    </td>
+</tr>
+</table>
