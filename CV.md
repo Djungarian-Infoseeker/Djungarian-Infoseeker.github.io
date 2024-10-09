@@ -41,4 +41,13 @@
     音mad（现在不怎么会做了）<br>
     </td>
 </tr>
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
+    <strong style="font-size: 20px;">参加过的会议</strong><br>
+    Distinguished Lectures on Planetary Atmospheres 2024. 2024/08. Peking University, China.<br>
+    第二届地球物理与天体物理流体力学科学研讨会 2024. 2024/05. hanghai Astronomical Observatory，Chinese Academy of Sciences，China.<br>
+    Distinguished Lectures on Planetary Atmospheres 2023. 2023/08. Peking University, China.<br>
+    第七届地球系统科学大会 2023. 2023/07. Tongji University,China.<br>
+    </td>
+</tr>
 </table>
