@@ -1,5 +1,5 @@
 ## 个人/For Me
-我目前是同济大学海洋与地球科学学院海洋科学系的本科生。2025年9月，我将开始在[北京大学](https://www.pku.edu.cn/)物理学院大气与海洋科学系攻读博士学位，在那里我将进行行星气候学研究。我目前还在日本东京的东京科学大学（前身为东京工业大学）作为访问学生进行交流。
+我目前是同济大学海洋与地球科学学院海洋科学系的本科生。2025年9月，我将开始在[北京大学](https://www.pku.edu.cn/)[物理学院](https://www.phy.pku.edu.cn/)[大气与海洋科学系](https://www.atmos.pku.edu.cn/index.htm)攻读博士学位，在那里我将进行行星气候学研究。我目前还在日本东京的东京科学大学（前身为东京工业大学）作为访问学生进行交流。
 
 I am currently an undergraduate student in the Department of Marine Science at the College of Ocean and Earth Sciences, Tongji University. In September 2025, I will begin my PHD studies at the Department of Atmospheric and Oceanic Sciences, School of Physics, Peking University, where I will be conducting research in planetary climatology. I am also currently participating in an exchange program at Institute of Science Tokyo (formerly known as Tokyo Institute of Technology) in Tokyo, Japan.
 
