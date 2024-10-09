@@ -11,7 +11,8 @@
     <strong style="font-size: 20px;">Yinjie Wang</strong><br>
     <a href="https://mgg.tongji.edu.cn/mggen/main.htm" target="_blank">Department of Marine Science, School of Ocean and Earth Sciences</a>, <a href="https://en.tongji.edu.cn/" target="_blank">Tongji University</a><br> <!-- 添加超链接 -->
     <strong>Email:</strong><a href="mailto:wangyinjie@tongji.edu.cn">wangyinjie@tongji.edu.cn</a><br> <!-- 添加邮件链接 -->
-    <strong>Add: </strong><a href="https://www.bing.com/maps?cp=31.283704%7E121.500936&lvl=16.0" target="_blank">NO.1239 Siping Road, Shanghai, P.R. China</a><br>
+    <strong>通讯地址: </strong><a href="https://www.bing.com/maps?cp=31.283704%7E121.500936&lvl=16.0" target="_blank">NO.1239 Siping Road, Shanghai, P.R. China</a><br>
+    <strong>在日通讯地址: </strong><a href="https://www.bing.com/maps?cp=35.538346%7E139.522912&lvl=17.0" target="_blank">〒 227-0052 神奈川県横浜市青葉区梅が丘17-2，日本</a><br>
     </td>
 </tr>
 <tr>
