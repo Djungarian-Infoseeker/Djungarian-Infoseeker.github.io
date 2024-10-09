@@ -14,13 +14,11 @@
   function initMap() {
     // 地图初始化时的中心位置
     var location = {lat: -34.397, lng: 150.644};
-    
     // 创建地图并放置在页面上的地图容器中
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 8,
       center: location
     });
-
     // 添加标记
     var marker = new google.maps.Marker({
       position: location,
