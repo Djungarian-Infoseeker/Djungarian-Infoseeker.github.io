@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 title: Infoseeker's Website
 description: What we have learned in the past will become obsolete in the next era.
+gems:
+  - jekyll-leaflet
