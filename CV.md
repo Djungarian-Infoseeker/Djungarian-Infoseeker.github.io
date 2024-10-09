@@ -28,8 +28,16 @@
 
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
-    <strong style="font-size: 20px;">个人兴趣</strong><br>
+    <strong style="font-size: 20px;">学术领域</strong><br>
     行星大气, 大气与海洋动力学, 复杂系统<br>
+    </td>
+</tr>
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
+    <strong style="font-size: 20px;">个人兴趣</strong><br>
+    喜欢的音乐（Vocaloid、Dubstep、CityPop、Future Funk）<br>
+    旅游（“大面积感受气氛类型”）<br>
+    音mad（现在不怎么会做了）<br>
     </td>
 </tr>
 </table>
