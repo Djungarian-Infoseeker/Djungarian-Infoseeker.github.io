@@ -20,7 +20,6 @@
         <div style="background-color: white; height: 2px; width: 100%; margin: 0;"></div> <!-- 修改横杠颜色为白色，宽度为100%，边距为0 -->
     </td>
 </tr>
-<tr><td colspan="2" style="height: 10px;"></td></tr> <!-- 在这里添加一个空行的效果 -->
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
     <strong style="font-size: 20px;">简介</strong><br>
@@ -29,7 +28,6 @@
     2020年9月  同济大学海洋与地球科学学院  海洋科学系  入学<br>
     </td>
 </tr>
-<tr><td colspan="2" style="height: 10px;"></td></tr> <!-- 在这里添加一个空行的效果 -->
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 保持一致，删除左侧空白 -->
         <div style="background-color: white; height: 2px; width: 100%; margin: 0;"></div> <!-- 保持横杠样式一致 -->
@@ -53,7 +51,6 @@
     行星大气, 大气与海洋动力学, 复杂系统<br>
     </td>
 </tr>
-<tr><td colspan="2" style="height: 10px;"></td></tr> <!-- 在这里添加一个空行的效果 -->
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 保持一致，删除左侧空白 -->
         <div style="background-color: white; height: 2px; width: 100%; margin: 0;"></div> <!-- 保持横杠样式一致 -->
