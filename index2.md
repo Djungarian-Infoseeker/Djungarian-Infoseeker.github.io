@@ -20,7 +20,7 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
         // 将地图视角设置为覆盖东亚和日本的区域
-        var map = L.map('map').setView([34.0, 130.0], 5); // 视角覆盖中国东部和日本
+        var map = L.map('map').setView([34.5, 125.0], 5);
         // 添加 OpenStreetMap 瓦片层
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -78,9 +78,6 @@
         });
     </script>
 </body>
-</html>
-
-
 </html>
 
 <div class="gallery" id="gallery-1">
