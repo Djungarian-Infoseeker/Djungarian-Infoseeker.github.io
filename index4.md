@@ -14,7 +14,7 @@
   <a href="/photos/mayla.jpg" data-lightbox="mygallery" data-title="Mayla"><img src="/photos/mayla.jpg" alt="Mayla" width="1200"></a>
   <a href="/photos/micrantea.jpg" data-lightbox="mygallery" data-title="Micrantea"><img src="/photos/micrantea.jpg" alt="Micrantea" width="1200"></a>
   <a href="/photos/moonbeam.jpg" data-lightbox="mygallery" data-title="Moonbeam"><img src="/photos/moonbeam.jpg" alt="Moonbeam" width="1200"></a>
-  <a href="/photos/opal.jpg" data-lightbox="mygallery" data-title="Opal"><img src="/photos/opal.jpg" alt="Opal" width="1200"></a>
+  <a href="/photos/opal.jpg" data-lightbox="mygallery" data-title="Opal"><img src="/photos/Opal.jpg" alt="Opal" width="1200"></a>
   <a href="/photos/poonsup.jpg" data-lightbox="mygallery" data-title="Poonsup"><img src="/photos/poonsup.jpg" alt="Poonsup" width="1200"></a>
   <a href="/photos/southern charm.jpg" data-lightbox="mygallery" data-title="Southern Charm"><img src="/photos/southern charm.jpg" alt="Southern Charm" width="1200"></a>
   <a href="/photos/tankwan.jpg" data-lightbox="mygallery" data-title="Tankwan"><img src="/photos/tankwan.jpg" alt="Tankwan" width="1200"></a>
