@@ -1,0 +1,6 @@
+*.code-workspace
+docs/.vscode/*
+.vscode
+*jekyll
+project-testing
+/scripts
