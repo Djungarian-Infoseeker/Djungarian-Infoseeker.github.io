@@ -4,7 +4,7 @@ Documentation for the [Luvit](https://luvit.io/) coro-* libraries.
 
 ## Index
 
-- [coro-channel](https://infoseeker.cn/docs/coro-channel.html)
+- [coro-channel](https://infoseeker.cn/coro-channel.html)
 - [coro-fs](https://bilal2453.github.io/coro-docs/docs/coro-fs.html)
 - [coro-http](https://bilal2453.github.io/coro-docs/docs/coro-http.html)
 - [coro-net](https://bilal2453.github.io/coro-docs/docs/coro-net.html)
