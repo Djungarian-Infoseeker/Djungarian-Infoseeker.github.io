@@ -1,10 +1,4 @@
 theme: jekyll-theme-cayman
 title: Infoseeker's Website
 description: What we have learned in the past will become obsolete in the next era.
-remote_theme: Bilal2453/cayman-docs
-navigation:
-  name_over_title: true
-  strip_par: true
-  sanitize: true
-  h_max: 3
 
