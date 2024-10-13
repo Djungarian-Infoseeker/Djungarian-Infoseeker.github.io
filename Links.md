@@ -4,6 +4,7 @@
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
     <strong style="font-size: 20px;">Institutes</strong><br>
+    <a href="https://www.atmos.pku.edu.cn/en/research/Researchdirections/144785.htm" target="_blank" style="text-decoration: underline;">Planetary Atmospheres group</a><br>
     <a href="https://www.tongji.edu.cn/" target="_blank" style="text-decoration: underline;">Tongji University</a><br>
     <a href="https://www.pku.edu.cn/" target="_blank" style="text-decoration: underline;">Peking University</a><br>
     <a href="http://www.shao.ac.cn/" target="_blank" style="text-decoration: underline;"> Shanghai Astronomical Observatory</a><br>
