@@ -37,8 +37,8 @@
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
     <strong style="font-size: 20px;">个人兴趣</strong><br>
     喜欢的音乐（Vocaloid、Dubstep、CityPop、Future Funk）<br>
-    旅游（“大面积感受气氛类型”）<br>
-    音mad（现在不怎么会做了）<br>
+    <a href="https://infoseeker.cn/Travels" target="_blank">旅游</a>（“大面积感受气氛类型”）<br>
+    <a href="https://infoseeker.cn/Otomad&Visual" target="_blank">音mad</a>（现在不怎么会做了）<br>
     </td>
 </tr>
 <tr>
