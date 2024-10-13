@@ -31,7 +31,7 @@
 </tr>
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
-    <strong style="font-size: 20px;">Scientists&Resources</strong><br>
+    <strong style="font-size: 20px;">Researchers</strong><br>
     <a href="https://atmoschem.org.cn/index.php?title=Main_Page" target="_blank" style="text-decoration: underline;"><strong>Tzung-May FU </strong> Atmospheric Chemistry and Climate Group at Southern University of Science and Technology</a><br>
     <a href="https://huang-cl.github.io/" target="_blank" style="text-decoration: underline;"><strong>Chenliang Huang </strong> Shanghai Astronomical Observatory, Chinese Academy of Sciences</a><br>
     <a href="http://pkumet.live/group/doku.php/start" target="_blank" style="text-decoration: underline;"><strong>Xinyu Wen </strong> Climate Group at Peking Univeristy</a><br>
