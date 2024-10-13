@@ -26,8 +26,6 @@
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
     <strong style="font-size: 20px;">Scientists&Resources</strong><br>
-    <a href="http://power.itp.ac.cn/~hao/" target="_blank" style="text-decoration: underline;"><strong>Hao Bailin</strong>（Chinese theoretical physicist, an academician of the Chinese Academy of Sciences）</a><br>
-    <a href="https://corp.fudan.edu.cn/" target="_blank" style="text-decoration: underline;"><strong>Haijun Yang</strong> The Laboratory for Climate and Ocean-Atmosphere Studies (LaCOAS)</a><br>
     <a href="https://atmoschem.org.cn/index.php?title=Main_Page" target="_blank" style="text-decoration: underline;"><strong>Tzung-May FU </strong> Atmospheric Chemistry and Climate Group at Southern University of Science and Technology</a><br>
     <a href="https://huang-cl.github.io/" target="_blank" style="text-decoration: underline;"><strong>Chenliang Huang </strong> Shanghai Astronomical Observatory, Chinese Academy of Sciences</a><br>
     <a href="https://ocean.tongji.edu.cn/space/ywzhang/" target="_blank" style="text-decoration: underline;"><strong>Yanwei Zhang </strong> School of Ocean and Earth Science, Tongji University</a><br>
