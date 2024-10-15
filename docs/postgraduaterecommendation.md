@@ -6,3 +6,6 @@
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQkLXfzvmcnfo6Q0DVES5zNbZOhDXEUKM1EuLKc-6fpCmXhlU0NSbuJDtLhWplSM6v76hC1F7Edp_Dd/pubhtml?widget=true&amp;headers=false" width="100%" height="800"></iframe>
 <a href="{{site.baseurl}}/地学院校研究机构名单.xlsx" download>地学研究机构名单</a>
+
+# 推荐免试的准备
+如果确定要读理学研究生，那么最重要的是绩点与科研，其次是英语，其他用处不大。这部分内容网上阐述很多，我不过多言说。
