@@ -1,6 +1,1 @@
-# 文档/Documentation
-- [推荐免试/Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation)
-- [CESM学习/Numerical Model Learning](https://infoseeker.cn/docs/NumericalModelLearning)
-- [翻译文章/Translation](https://infoseeker.cn/docs/translation)
-- [本科阶段做的质量尚可的工作/Work of reasonably good quality done during the undergraduate phase](https://infoseeker.cn/docs/works)
-- [闲话/Trivialness](https://infoseeker.cn/docs/Trivialness)
+非常遗憾，很多年没做了，而且展示的内容都是我初中和高中早期做的，受限于当时年龄的见识与审美素养，所以在现在看来很多是很搞笑的。但是这个经历对于我的各方面产生了深远的影响。
