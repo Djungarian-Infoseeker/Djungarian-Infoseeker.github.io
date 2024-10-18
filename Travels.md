@@ -81,9 +81,19 @@
 </html>
 我爱旅游！
 <div class="gallery" id="gallery-1">
-  <a href="/Travels/yangquan.jpg" data-lightbox="mygallery" data-title="Albert"><img src="/Travels/yangquan.jpg" alt="阳泉/Yangquan" width="1200"></a>
-  <a href="/Travels/Xinzhou.jpg" data-lightbox="mygallery" data-title="Albert"><img src="/Travels/Xinzhou.jpg" alt="忻州/Xinzhou" width="1200"></a>
-  <a href="/Travels/Taiyuan.jpg" data-lightbox="mygallery" data-title="Albert"><img src="/Travels/Taiyuan.jpg" alt="太原/Taiyuan" width="1200"></a>
-  <a href="/Travels/Shijiazhuang.jpg" data-lightbox="mygallery" data-title="Albert"><img src="/Travels/Shijiazhuang.jpg" alt="石家庄/Shijiazhuang" width="1200"></a>
+  <a href="/Travels/yangquan.jpg" data-lightbox="mygallery" data-title="阳泉/Yangquan">
+    <img src="/Travels/yangquan.jpg" alt="阳泉/Yangquan">
+  </a>
+  <a href="/Travels/Xinzhou.jpg" data-lightbox="mygallery" data-title="忻州/Xinzhou">
+    <img src="/Travels/Xinzhou.jpg" alt="忻州/Xinzhou">
+  </a>
+  <a href="/Travels/Taiyuan.jpg" data-lightbox="mygallery" data-title="太原/Taiyuan">
+    <img src="/Travels/Taiyuan.jpg" alt="太原/Taiyuan">
+  </a>
+  <a href="/Travels/Shijiazhuang.jpg" data-lightbox="mygallery" data-title="石家庄/Shijiazhuang">
+    <img src="/Travels/Shijiazhuang.jpg" alt="石家庄/Shijiazhuang">
+  </a>
+</div>
+
 
 </div>
