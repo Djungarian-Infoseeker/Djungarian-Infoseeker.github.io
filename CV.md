@@ -70,5 +70,21 @@
     
     </td>
 </tr>
-
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
+        <<strong style="font-size: 20px;">个人技能 / Skills</strong><br>
+        <span style="color: white;">语言：英语:雅思6.5，大学英语六级、日语:入门</span><br>
+        <span style="color: gray;">Languages: English (IELTS 6.5, CET-6), Japanese (Beginner)</span><br>
+        <span style="color: white;">数值气候模型：CESM、ExoCAM</span><br>
+        <span style="color: gray;">Numerical Climate Models: CESM, ExoCAM</span><br>
+        <span style="color: white;">编程语言：Python、MATLAB</span><br>
+        <span style="color: gray;">Programming Languages: Python, MATLAB</span><br>
+        <span style="color: white;">标记语言：LATEX、HTML</span><br>
+        <span style="color: gray;">Markup Languages: LaTeX, HTML</span><br>
+        <span style="color: white;">视效软件：Cinema 4D（三维建模软件）、After Effects（特效软件）、VEGAS（视频剪辑软件）</span><br>
+        <span style="color: gray;">Visual Effects Software: Cinema 4D (3D Modeling), After Effects (Special Effects), VEGAS (Video Editing)</span><br>
+        <span style="color: white;">音效软件：FL Studio（编曲软件）</span><br>
+        <span style="color: gray;">Audio Software: FL Studio (Music Production)</span><br>
+    </td>
+</tr>
 </table>
