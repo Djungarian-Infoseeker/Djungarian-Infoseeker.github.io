@@ -93,6 +93,7 @@
     <td>通知优秀营员评选结果</td>
   </tr>
 </table>
+
 1. 专业文献阅读：从3-6篇给定文献中选1篇制作PPT，报告时长10分钟，提问5分钟。第1分钟用英文总结文献内容，之后可中英文混合。考试时间为3小时，PPT需在考试结束后当场提交，且提交后不得修改。同时需要提交预先准备好的个人展示PPT。<br>
 要求：自备笔记本电脑，需带电源和鼠标。电脑必须有USB接口，能阅读PDF和制作PPT，建议安装离线英汉词典软件。<br>
 <span style="color: orange;">如何准备？关注 <a href="https://www.nature.com/" target="_blank" style="text-decoration: underline; color: orange;">Nature</a>, 
