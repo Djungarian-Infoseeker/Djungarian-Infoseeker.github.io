@@ -82,7 +82,7 @@
         <span style="color: white;">标记语言：LATEX、HTML</span><br>
         <span style="color: gray;">Markup Languages: LaTeX, HTML</span><br>
         <span style="color: white;">视效软件：Cinema 4D（三维建模软件）、After Effects（特效软件）、VEGAS（视频剪辑软件）</span><br>
-        <span style="color: gray;">Visual Effects Software: Cinema 4D (3D Modeling), After Effects (Special Effects), VEGAS (Video Editing)</span><br>
+        <span style="color: gray;">Visual Effects Software: Cinema 4D (3D Modeling), After Effects (Effects), VEGAS (Editing)</span><br>
         <span style="color: white;">音效软件：FL Studio（编曲软件）</span><br>
         <span style="color: gray;">Audio Software: FL Studio (Music Production)</span><br>
     </td>
