@@ -40,30 +40,39 @@
         <span style="color: gray;">September 2025, Ph.D. Candidate, School of Physics, Department of Atmospheric and Oceanic Sciences, Peking University (Expected)</span><br>
     </td>
 </tr>
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
+        <strong style="font-size: 20px;">学术领域/Research Domain</strong><br>
 
-
+        <span style="color: white;">行星气候, 大气与海洋动力学, 复杂系统</span><br>
+        <span style="color: gray;">Planetary Climate, Atmospheric and Oceanic Dynamics, Complex Systems</span><br>
+    </td>
+</tr>
 
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
-    <strong style="font-size: 20px;">学术领域/Research Domain</strong><br>
-    行星气候, 大气与海洋动力学, 复杂系统<br>
+        <strong style="font-size: 20px;">个人兴趣/Personal Interest</strong><br>
+        <span style="color: white;">喜欢的音乐（Vocaloid、Dubstep、CityPop、Future Funk）</span><br>
+        <span style="color: gray;">Favorite Music (Vocaloid, Dubstep, CityPop, Future Funk)</span><br>
+        <span style="color: white;"><a href="https://infoseeker.cn/Travels" target="_blank" style="color: white;">旅游</a>（“大面积感受气氛类型”）</span><br>
+        <span style="color: gray;"><a href="https://infoseeker.cn/Travels" target="_blank" style="color: gray;">Travel</a> ("Wide-range immersive experience")</span><br>
+        <span style="color: white;"><a href="https://infoseeker.cn/Otomad&Visual" target="_blank" style="color: white;">音mad</a>（现在不怎么会做了）</span><br>
+        <span style="color: gray;"><a href="https://infoseeker.cn/Otomad&Visual" target="_blank" style="color: gray;">Otomad</a> (I don't really make them anymore)</span><br>
     </td>
 </tr>
+
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
-    <strong style="font-size: 20px;">个人兴趣</strong><br>
-    喜欢的音乐（Vocaloid、Dubstep、CityPop、Future Funk）<br>
-    <a href="https://infoseeker.cn/Travels" target="_blank">旅游</a>（“大面积感受气氛类型”）<br>
-    <a href="https://infoseeker.cn/Otomad&Visual" target="_blank">音mad</a>（现在不怎么会做了）<br>
+        <strong style="font-size: 20px;">参加过的会议</strong><br>
+        <span style="color: white;">2024年 行星大气杰出讲座，2024年8月，北京大学，中国</span><br>
+        <span style="color: gray;">Distinguished Lectures on Planetary Atmospheres 2024, August 2024, Peking University, China</span><br>
+        <span style="color: white;">2024年 第二届地球物理与天体物理流体力学科学研讨会，2024年5月，上海天文台，中国科学院，中国</span><br>
+        <span style="color: gray;">2nd Symposium on Geophysical and Astrophysical Fluid Dynamics 2024, May 2024, Shanghai Astronomical Observatory, Chinese Academy of Sciences, China</span><br>
+        <span style="color: white;">2023年 行星大气杰出讲座，2023年8月，北京大学，中国</span><br>
+        <span style="color: gray;">Distinguished Lectures on Planetary Atmospheres 2023, August 2023, Peking University, China</span><br>
+        <span style="color: white;">2023年 第七届地球系统科学大会，2023年7月，同济大学，中国</span><br>
+        <span style="color: gray;">The 7th Conference on Earth System Science 2023, July 2023, Tongji University, China</span><br>
     </td>
 </tr>
-<tr>
-    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
-    <strong style="font-size: 20px;">参加过的会议</strong><br>
-    Distinguished Lectures on Planetary Atmospheres 2024. 2024/08. Peking University, China.<br>
-    第二届地球物理与天体物理流体力学科学研讨会 2024. 2024/05. hanghai Astronomical Observatory，Chinese Academy of Sciences，China.<br>
-    Distinguished Lectures on Planetary Atmospheres 2023. 2023/08. Peking University, China.<br>
-    第七届地球系统科学大会 2023. 2023/07. Tongji University,China.<br>
-    </td>
-</tr>
+
 </table>
