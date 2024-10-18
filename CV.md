@@ -68,10 +68,11 @@
         <span style="color: gray;">Distinguished Lectures on Planetary Atmospheres 2024, August 2024, Peking University, China</span><br>
         <span style="color: white;">2024年 第二届地球物理与天体物理流体力学科学研讨会，2024年5月，上海天文台，中国科学院，中国</span><br>
         <span style="color: gray;">2nd Symposium on Geophysical and Astrophysical Fluid Dynamics 2024, May 2024, Shanghai Astronomical Observatory, Chinese Academy of Sciences, China</span><br>
-        <span style="color: white;">2023年 行星大气杰出讲座，2023年8月，北京大学，中国</span><br>
-        <span style="color: gray;">Distinguished Lectures on Planetary Atmospheres 2023, August 2023, Peking University, China</span><br>
-        <span style="color: white;">2023年 第七届地球系统科学大会，2023年7月，同济大学，中国</span><br>
-        <span style="color: gray;">The 7th Conference on Earth System Science 2023, July 2023, Tongji University, China</span><br>
+        <span style="color: white;"><a href="https://www.atmos.pku.edu.cn/kxzb/xzbg/tybg/152073.htm" target="_blank" style="color: white; text-decoration: underline;">2023年 行星大气杰出讲座，2023年8月，北京大学，中国</a></span><br>
+        <span style="color: gray;"><a href="https://www.atmos.pku.edu.cn/kxzb/xzbg/tybg/152073.htm" target="_blank" style="color: gray; text-decoration: underline;">Distinguished Lectures on Planetary Atmospheres 2023, August 2023, Peking University, China</a></span><br>
+        <span style="color: white;"><a href="http://www.cess.org.cn/Data/List/hyjj" target="_blank" style="color: white; text-decoration: underline;">2023年 第七届地球系统科学大会，2023年7月，同济大学，中国</a></span><br>
+        <span style="color: gray;"><a href="http://www.cess.org.cn/Data/List/hyjj" target="_blank" style="color: gray; text-decoration: underline;">The 7th Conference on Earth System Science 2023, July 2023, Tongji University, China</a></span><br>
+    
     </td>
 </tr>
 
