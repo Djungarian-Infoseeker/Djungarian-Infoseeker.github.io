@@ -63,7 +63,7 @@
 
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
-        <strong style="font-size: 20px;">参加过的会议</strong><br>
+        <strong style="font-size: 20px;">参加过的会议/Attended Conferences</strong><br>
         <span style="color: white;">2024年 行星大气杰出讲座，2024年8月，北京大学，中国</span><br>
         <span style="color: gray;">Distinguished Lectures on Planetary Atmospheres 2024, August 2024, Peking University, China</span><br>
         <span style="color: white;">2024年 第二届地球物理与天体物理流体力学科学研讨会，2024年5月，上海天文台，中国科学院，中国</span><br>
