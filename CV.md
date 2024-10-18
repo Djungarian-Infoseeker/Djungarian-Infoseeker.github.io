@@ -1,10 +1,4 @@
 ## Curriculum Vitae:
-.chinese {
-  color: white;
-}
-.english {
-  color: gray;
-}
 
 <table>
 <tr>
@@ -30,8 +24,8 @@
         <span style="color: gray;">September 2014, Yangquan No. 3 Middle School, Junior High</span><br>
         <span style="color: white;">2017年9月 山西省阳泉市第一中学校 高中</span><br>
         <span style="color: gray;">September 2017, Yangquan No. 1 High School</span><br>
-        <s><span style="color: white;">2020年9月 上海大学悉尼工商学院 国际经济与贸易系</span><br></s>
-        <s><span style="color: gray;">September 2020, Sydney Institute of Business and Technology, Shanghai University, International Economics and Trade</span><br></s>
+        <s><span style="color: white; text-decoration-thickness: 2px;">2020年9月 上海大学悉尼工商学院 国际经济与贸易系</span><br></s>
+        <s><span style="color: gray; text-decoration-thickness: 2px;">September 2020, Sydney Institute of Business and Technology, Shanghai University, International Economics and Trade</span><br></s>
         <span style="color: white;"><a href="https://www.tongji.edu.cn/" target="_blank" style="color: white; text-decoration: underline;">2021年9月 同济大学</a> <a href="https://mgg.tongji.edu.cn/" target="_blank" style="color: white; text-decoration: underline;">海洋与地球科学学院</a> 海洋科学系 本科</span><br>
         <span style="color: gray;"><a href="https://www.tongji.edu.cn/" target="_blank" style="color: gray; text-decoration: underline;">September 2021, Tongji University</a>, <a href="https://mgg.tongji.edu.cn/" target="_blank" style="color: gray; text-decoration: underline;">College of Ocean and Earth Sciences</a>, Marine Science - Bachelor's Degree</span><br>
         <span style="color: white;"><a href="https://www.isct.ac.jp/en" target="_blank" style="color: white; text-decoration: underline;">2024年10月 东京科学大学</a>（<a href="https://www.titech.ac.jp/english" target="_blank" style="color: white; text-decoration: underline;">东京工业大学</a>）访问学生</span><br>
