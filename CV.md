@@ -1,4 +1,10 @@
 ## Curriculum Vitae:
+.chinese {
+  color: white;
+}
+.english {
+  color: gray;
+}
 
 <table>
 <tr>
@@ -17,20 +23,28 @@
 </tr>
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
-        <strong style="font-size: 20px;">简介</strong><br>
-        2002年4月  山西省阳泉市矿区  出生<br>
-        2014年9月  山西省阳泉市第三中学校 初中<br>
-        2017年9月  山西省阳泉市第一中学校 高中<br>
-        <s>2020年9月 上海大学悉尼工商学院 国际经济与贸易系</s><br>
-        2021年9月 同济大学海洋与地球科学学院 海洋科学系 本科<br>
-        2024年10月 东京科学大学（东京工业大学）访问学生<br>
-        2025年9月 北京大学物理学院 大气与海洋科学系 博士研究生（预计）<br>
+        <strong style="font-size: 20px;">简介/Intro</strong><br>
+        <span class="chinese">2002年4月 山西省阳泉市矿区 出生</span><br>
+        <span class="english">April 2002, Born in Mining District, Yangquan City, Shanxi Province</span><br>
+        <span class="chinese">2014年9月 山西省阳泉市第三中学校 初中</span><br>
+        <span class="english">September 2014, Yangquan No. 3 Middle School, Junior High</span><br>
+        <span class="chinese">2017年9月 山西省阳泉市第一中学校 高中</span><br>
+        <span class="english">September 2017, Yangquan No. 1 High School</span><br>
+        <s><span class="chinese">2020年9月 上海大学悉尼工商学院 国际经济与贸易系</span><br></s>
+        <s><span class="english">September 2020, Sydney Institute of Business and Technology, Shanghai University, International Economics and Trade</span><br></s>
+        <span class="chinese">2021年9月 同济大学海洋与地球科学学院 海洋科学系 本科</span><br>
+        <span class="english">September 2021, Tongji University, College of Ocean and Earth Sciences, Marine Science - Bachelor's Degree</span><br>
+        <span class="chinese">2024年10月 东京科学大学（东京工业大学）访问学生</span><br>
+        <span class="english">October 2024, Visiting Student at Tokyo University of Science (Tokyo Institute of Technology)</span><br>
+        <span class="chinese">2025年9月 北京大学物理学院 大气与海洋科学系 博士研究生（预计）</span><br>
+        <span class="english">September 2025, Ph.D. Candidate, School of Physics, Department of Atmospheric and Oceanic Sciences, Peking University (Expected)</span><br>
     </td>
 </tr>
 
+
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
-    <strong style="font-size: 20px;">学术领域</strong><br>
+    <strong style="font-size: 20px;">学术领域/Research Domain</strong><br>
     行星气候, 大气与海洋动力学, 复杂系统<br>
     </td>
 </tr>
