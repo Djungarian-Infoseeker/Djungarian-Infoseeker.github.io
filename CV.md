@@ -32,12 +32,13 @@
         <span style="color: gray;">September 2017, Yangquan No. 1 High School</span><br>
         <s><span style="color: white;">2020年9月 上海大学悉尼工商学院 国际经济与贸易系</span><br></s>
         <s><span style="color: gray;">September 2020, Sydney Institute of Business and Technology, Shanghai University, International Economics and Trade</span><br></s>
-        <span style="color: white;">2021年9月 同济大学海洋与地球科学学院 海洋科学系 本科</span><br>
-        <span style="color: gray;">September 2021, Tongji University, College of Ocean and Earth Sciences, Marine Science - Bachelor's Degree</span><br>
-        <span style="color: white;">2024年10月 东京科学大学（东京工业大学）访问学生</span><br>
-        <span style="color: gray;">October 2024, Visiting Student at Tokyo University of Science (Tokyo Institute of Technology)</span><br>
-        <span style="color: white;">2025年9月 北京大学物理学院 大气与海洋科学系 博士研究生（预计）</span><br>
-        <span style="color: gray;">September 2025, Ph.D. Candidate, School of Physics, Department of Atmospheric and Oceanic Sciences, Peking University (Expected)</span><br>
+        <span style="color: white;"><a href="https://www.tongji.edu.cn/" target="_blank" style="color: white; text-decoration: underline;">2021年9月 同济大学</a> <a href="https://mgg.tongji.edu.cn/" target="_blank" style="color: white; text-decoration: underline;">海洋与地球科学学院</a> 海洋科学系 本科</span><br>
+        <span style="color: gray;"><a href="https://www.tongji.edu.cn/" target="_blank" style="color: gray; text-decoration: underline;">September 2021, Tongji University</a>, <a href="https://mgg.tongji.edu.cn/" target="_blank" style="color: gray; text-decoration: underline;">College of Ocean and Earth Sciences</a>, Marine Science - Bachelor's Degree</span><br>
+        <span style="color: white;"><a href="https://www.isct.ac.jp/en" target="_blank" style="color: white; text-decoration: underline;">2024年10月 东京科学大学</a>（<a href="https://www.titech.ac.jp/english" target="_blank" style="color: white; text-decoration: underline;">东京工业大学</a>）访问学生</span><br>
+        <span style="color: gray;"><a href="https://www.isct.ac.jp/en" target="_blank" style="color: gray; text-decoration: underline;">October 2024, Visiting Student at Tokyo University of Science</a> (<a href="https://www.titech.ac.jp/english" target="_blank" style="color: gray; text-decoration: underline;">Tokyo Institute of Technology</a>)</span><br>
+        <span style="color: white;"><a href="https://www.pku.edu.cn/" target="_blank" style="color: white; text-decoration: underline;">2025年9月 北京大学</a> <a href="https://www.phy.pku.edu.cn/" target="_blank" style="color: white; text-decoration: underline;">物理学院</a> <a href="https://www.atmos.pku.edu.cn/index.htm" target="_blank" style="color: white; text-decoration: underline;">大气与海洋科学系</a> 博士研究生（预计）</span><br>
+        <span style="color: gray;"><a href="https://www.pku.edu.cn/" target="_blank" style="color: gray; text-decoration: underline;">September 2025, Ph.D. Candidate, Peking University</a>, <a href="https://www.phy.pku.edu.cn/" target="_blank" style="color: gray; text-decoration: underline;">School of Physics</a>, <a href="https://www.atmos.pku.edu.cn/index.htm" target="_blank" style="color: gray; text-decoration: underline;">Department of Atmospheric and Oceanic Sciences</a> (Expected)</span><br>
+    
     </td>
 </tr>
 <tr>
