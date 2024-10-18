@@ -80,20 +80,123 @@
 </body>
 </html>
 我爱旅游！
-<div class="gallery" id="gallery-1">
-  <a href="/Travels/yangquan.jpg" data-lightbox="mygallery" data-title="阳泉/Yangquan">
-    <img src="/Travels/yangquan.jpg" alt="阳泉/Yangquan">
-  </a>
-  <a href="/Travels/Xinzhou.jpg" data-lightbox="mygallery" data-title="忻州/Xinzhou">
-    <img src="/Travels/Xinzhou.jpg" alt="忻州/Xinzhou">
-  </a>
-  <a href="/Travels/Taiyuan.jpg" data-lightbox="mygallery" data-title="太原/Taiyuan">
-    <img src="/Travels/Taiyuan.jpg" alt="太原/Taiyuan">
-  </a>
-  <a href="/Travels/Shijiazhuang.jpg" data-lightbox="mygallery" data-title="石家庄/Shijiazhuang">
-    <img src="/Travels/Shijiazhuang.jpg" alt="石家庄/Shijiazhuang">
-  </a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow with Captions</title>
+    <style>
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        .slides {
+          display: none;
+        }
+        img {
+          vertical-align: middle;
+          width: 100%;
+        }
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        .thumbnail-container {
+          text-align: center;
+        }
+        .thumbnail-container img {
+          width: 80px;
+          height: 60px;
+          cursor: pointer;
+          margin: 5px;
+          transition: 0.3s;
+        }
+        .thumbnail-container img:hover {
+          opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+    <div class="slides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="/Travels/yangquan.jpg" style="width:100%">
+        <div class="text">阳泉/Yangquan</div>
+    </div>
+
+    <div class="slides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="/Travels/Xinzhou.jpg" style="width:100%">
+        <div class="text">忻州/Xinzhou</div>
+    </div>
+
+    <div class="slides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="/Travels/Taiyuan.jpg" style="width:100%">
+        <div class="text">太原/Taiyuan</div>
+    </div>
+
+    <div class="slides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="/Travels/Shijiazhuang.jpg" style="width:100%">
+        <div class="text">石家庄/Shijiazhuang</div>
+    </div>
+    
 </div>
 
-
+<div class="thumbnail-container">
+    <img src="/Travels/yangquan.jpg" onclick="currentSlide(1)">
+    <img src="/Travels/Xinzhou.jpg" onclick="currentSlide(2)">
+    <img src="/Travels/Taiyuan.jpg" onclick="currentSlide(3)">
+    <img src="/Travels/Shijiazhuang.jpg" onclick="currentSlide(4)">
 </div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
+
