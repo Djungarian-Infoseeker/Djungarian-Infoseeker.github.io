@@ -95,20 +95,21 @@
 </table>
 1. 专业文献阅读：从3-6篇给定文献中选1篇制作PPT，报告时长10分钟，提问5分钟。第1分钟用英文总结文献内容，之后可中英文混合。考试时间为3小时，PPT需在考试结束后当场提交，且提交后不得修改。同时需要提交预先准备好的个人展示PPT。<br>
 要求：自备笔记本电脑，需带电源和鼠标。电脑必须有USB接口，能阅读PDF和制作PPT，建议安装离线英汉词典软件。<br>
-<span style="color: red;">如何准备？关注</span> <a href="https://www.nature.com/" target="_blank" style="text-decoration: underline;">Nature</a>, 
-<a href="https://www.science.org/journals" target="_blank" style="text-decoration: underline;">Science</a>, 
-<a href="https://www.pnas.org/" target="_blank" style="text-decoration: underline;">PNAS</a>, 
-<a href="https://www.nature.com/ngeo/" target="_blank" style="text-decoration: underline;">Nature Geoscience</a>, 
-<a href="https://www.nature.com/natastron/" target="_blank" style="text-decoration: underline;">Nature Astronomy</a>, 
-<a href="https://www.nature.com/nclimate/" target="_blank" style="text-decoration: underline;">Nature Climate Change</a>, 
-<a href="https://agupubs.onlinelibrary.wiley.com/" target="_blank" style="text-decoration: underline;">Publish with AGU</a>, 
-<a href="https://journals.ametsoc.org/view/journals/clim/clim-overview.xml" target="_blank" style="text-decoration: underline;">Journal of Climate</a>, 
-<a href="https://www.science.org/journal/sciadv" target="_blank" style="text-decoration: underline;">Science Advances</a>, 
-<a href="https://agupubs.onlinelibrary.wiley.com/journal/21698996" target="_blank" style="text-decoration: underline;">Journal of Geophysical Research: Atmospheres</a>, 
-<a href="https://agupubs.onlinelibrary.wiley.com/journal/21699291" target="_blank" style="text-decoration: underline;">Journal of Geophysical Research: Oceans</a>, 
-<a href="https://link.springer.com/journal/382" target="_blank" style="text-decoration: underline;">Climate Dynamics</a>, 
-<a href="https://journals.ametsoc.org/view/journals/atsc/atsc-overview.xml" target="_blank" style="text-decoration: underline;">Journal of the Atmospheric Sciences</a>, 
-<a href="https://agupubs.onlinelibrary.wiley.com/journal/19448007?journalRedirectCheck=true" target="_blank" style="text-decoration: underline;">Geophysical Research Letters</a> 等杂志相关研究领域的论文，并在日常当中进行训练。<br><br>
+<span style="color: orange;">如何准备？关注 <a href="https://www.nature.com/" target="_blank" style="text-decoration: underline; color: orange;">Nature</a>, 
+<a href="https://www.science.org/journals" target="_blank" style="text-decoration: underline; color: orange;">Science</a>, 
+<a href="https://www.pnas.org/" target="_blank" style="text-decoration: underline; color: orange;">PNAS</a>, 
+<a href="https://www.nature.com/ngeo/" target="_blank" style="text-decoration: underline; color: orange;">Nature Geoscience</a>, 
+<a href="https://www.nature.com/natastron/" target="_blank" style="text-decoration: underline; color: orange;">Nature Astronomy</a>, 
+<a href="https://www.nature.com/nclimate/" target="_blank" style="text-decoration: underline; color: orange;">Nature Climate Change</a>, 
+<a href="https://agupubs.onlinelibrary.wiley.com/" target="_blank" style="text-decoration: underline; color: orange;">Publish with AGU</a>, 
+<a href="https://journals.ametsoc.org/view/journals/clim/clim-overview.xml" target="_blank" style="text-decoration: underline; color: orange;">Journal of Climate</a>, 
+<a href="https://www.science.org/journal/sciadv" target="_blank" style="text-decoration: underline; color: orange;">Science Advances</a>, 
+<a href="https://agupubs.onlinelibrary.wiley.com/journal/21698996" target="_blank" style="text-decoration: underline; color: orange;">Journal of Geophysical Research: Atmospheres</a>, 
+<a href="https://agupubs.onlinelibrary.wiley.com/journal/21699291" target="_blank" style="text-decoration: underline; color: orange;">Journal of Geophysical Research: Oceans</a>, 
+<a href="https://link.springer.com/journal/382" target="_blank" style="text-decoration: underline; color: orange;">Climate Dynamics</a>, 
+<a href="https://journals.ametsoc.org/view/journals/atsc/atsc-overview.xml" target="_blank" style="text-decoration: underline; color: orange;">Journal of the Atmospheric Sciences</a>, 
+<a href="https://agupubs.onlinelibrary.wiley.com/journal/19448007?journalRedirectCheck=true" target="_blank" style="text-decoration: underline; color: orange;">Geophysical Research Letters</a> 等杂志相关研究领域的论文，并在日常当中进行训练。</span> <br><br>
+
 
 2. 综合面试：用文献阅读时制作的PPT进行汇报，汇报时间每人15分钟，包含10分钟报告和5分钟提问。第1分钟需用英文汇报，后续可中英文混合。<br><br>
 
