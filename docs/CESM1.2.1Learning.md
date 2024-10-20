@@ -34,3 +34,13 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
 - **安装示例**：
   ```bash
   sudo apt-get install subversion
+
+### 安装CESM
+
+# 下载 CESM1.2.1 源代码
+
+通过 Subversion (`svn`) 工具从官方代码库中下载 CESM1.2.1 的代码：
+
+```bash
+# 运行以下命令下载 CESM1.2.1 源代码
+svn co https://svn-ccsm-models.cgd.ucar.edu/cesm1/release_tags/cesm1_2_1 cesm1_2_1
