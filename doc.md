@@ -1,7 +1,10 @@
-# 文档/Documentation
+# 学校事务
 - [推荐免试/Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation)
 - [东京科学大学（东京工业大学）交换/Science Tokyo（Tokyo Tech）Exchange](https://infoseeker.cn/docs/Exchange)
+# 专业学习
 - [CESM学习/Numerical Model Learning](https://infoseeker.cn/docs/NumericalModelLearning)
 - [翻译文章/Translation](https://infoseeker.cn/docs/translation)
+# 资料
 - [本科阶段做的质量尚可的工作/Work of reasonably good quality done during the undergraduate phase](https://infoseeker.cn/docs/works)
+# 其他
 - [闲话/Trivialness](https://infoseeker.cn/docs/Trivialness)
