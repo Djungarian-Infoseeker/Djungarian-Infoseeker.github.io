@@ -73,7 +73,7 @@
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
         <<strong style="font-size: 20px;">个人技能 / Skills</strong><br>
-        <span style="color: white;">语言：普通话（母语），晋语（并州片、大包片）（母语）、英语:雅思6.5，大学英语六级，日语:入门</span><br>
+        <span style="color: white;">语言：普通话（母语），晋语（并州片、大包片）（母语）, k英语:雅思6.5，大学英语六级，日语:入门</span><br>
         <span style="color: gray;">Languages: Mandarin (Native language), Jin Chinese (Bingzhou and Datong-Baotou groups) (Native language), English (IELTS 6.5, CET-6), Japanese (Beginner)</span><br>
         <span style="color: white;">数值气候模型：CESM、ExoCAM</span><br>
         <span style="color: gray;">Numerical Climate Models: CESM, ExoCAM</span><br>
