@@ -1,2 +1,1 @@
-# 2024.10.1
-什么都没有
+- [Neural general circulation models for weather and climate](https://infoseeker.cn/docs/translation/Neural general circulation models for weather and climate) 2024年10月20日 <a href="https://www.nature.com/articles/s41586-024-07744-y" target="_blank" style="text-decoration: underline;">原文链接
