@@ -43,9 +43,47 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
 
 <div>
   <pre>
-    <code>
+    <code id="codeBlock">
       # 运行以下命令下载 CESM1.2.1 源代码
       svn co https://svn-ccsm-models.cgd.ucar.edu/cesm1/release_tags/cesm1_2_1 cesm1_2_1
     </code>
   </pre>
+  <button onclick="copyCode()">点击复制</button>
 </div>
+
+<script>
+  function copyCode() {
+    var code = document.getElementById("codeBlock").innerText;
+    var tempTextArea = document.createElement("textarea");
+    tempTextArea.value = code;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempTextArea);
+    alert("代码已复制到剪贴板！");
+  }
+</script>
+
+<style>
+  pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    position: relative;
+  }
+
+  button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #005f5f;
+  }
+</style>
