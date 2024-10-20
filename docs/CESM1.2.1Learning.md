@@ -17,10 +17,12 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
 主要参考资料有：
 - [2020 CESM Tutorial Coursework](https://www2.cesm.ucar.edu/events/tutorials/2020/coursework.html)
 - [CESM User's Guide (CESM1.2 Release Series User's Guide) ](https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/book1.html)
-- [《CESM1.2.2 移植》 ——by 盖世女侠“边边”](http://bbs.06climate.com/forum.php?mod=viewthread&tid=49077&highlight=CESM%2b1.2.2) <a href="{{site.baseurl}}/assets/css/CESM1.2.2移植(包括ESMF库安装).pdf" download>CESM1.2.2 移植 PDF文件下载</a>
+- [《CESM1.2.2 移植》 ——by 盖世女侠“边边”](http://bbs.06climate.com/forum.php?mod=viewthread&tid=49077&highlight=CESM%2b1.2.2) <a href="{{site.baseurl}}/assets/css/CESM1.2.2移植(包括ESMF库安装).pdf" download>PDF文件下载</a>
+- [兰州大学CESM1.2.0学习笔记](https://trop-strat.lzu.edu.cn/static/upload/file/20230823/1692756798144593.pdf) <a href="{{site.baseurl}}/assets/css/兰州大学CESM.pdf" download>PDF文件下载</a>
 ## 安装
 如果是租用的大公司服务机器可以拜托运维工程师进行安装，也可以自己进行安装。
 ### 安装依赖文件
+
 #### 操作系统
 - **要求**：UNIX 操作系统，如 CNL、AIX 和 Linux 等。
 
