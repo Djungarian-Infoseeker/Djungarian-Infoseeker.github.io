@@ -1,3 +1,9 @@
+# 为什么我要写博客？
+1.因为我现在还是本科生阶段，所以做科研时间非常有限，总是隔一段时间才有时间可以来做，断断续续做的情况下会发生偶尔忘记自己前面走过的一些错误路径，还得反过来再研究，这就大大浪费了我们的时间。我是一个比较内向，不爱麻烦别人的人。我现在觉得需要有一定的记录途径比较好。<br>
+2.方便自己日后回来看，积累经验。<br>
+3.方便给大家看，希望能够让大家遇到相同问题时少走弯路。<br>
+4.练练文笔，个人平时不太说话，语言锻炼很欠缺。<br>
+5.写点实实在在的东西出来蛮有成就感，给自己添加一点正向反馈，让我更有动力做事情。<br>
 # 学校事务 / School Affairs
 - [推荐免试 / Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation)
 - [东京科学大学（东京工业大学）交换 / Science Tokyo (Tokyo Tech) Exchange](https://infoseeker.cn/docs/Exchange)
