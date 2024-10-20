@@ -38,7 +38,7 @@
     <a href="https://danielkoll.github.io/" target="_blank" style="text-decoration: underline;"><strong>Daniel Koll</strong> Peking University</a><br>
     <a href="https://atmoschem.org.cn/index.php?title=Main_Page" target="_blank" style="text-decoration: underline;"><strong>Tzung-May FU </strong> Atmospheric Chemistry and Climate Group at Southern University of Science and Technology</a><br>
     <a href="https://huang-cl.github.io/" target="_blank" style="text-decoration: underline;"><strong>Chenliang Huang </strong> Shanghai Astronomical Observatory, Chinese Academy of Sciences</a><br>
-    <a href="http://pkumet.live/group/doku.php/start" target="_blank" style="text-decoration: underline;"><strong>Xinyu Wen </strong> Climate Group at Peking Univeristy</a><br>
+    <a href="http://pkuclimate.free.nf/group" target="_blank" style="text-decoration: underline;"><strong>Xinyu Wen </strong> Climate Group at Peking Univeristy</a><br>
     <a href="https://www.weizmann.ac.il/EPS/kaspi/" target="_blank" style="text-decoration: underline;"><strong>Yohai Kaspi</strong> Weizmann Institute of Science </a><br>
     <a href="http://211.152.43.30:8889/index.jsp" target="_blank" style="text-decoration: underline;">Tongji University Earth Science Teaching Group Information Website</a><br>
     </td>
