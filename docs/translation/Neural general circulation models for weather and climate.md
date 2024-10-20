@@ -1,1 +1,1 @@
-- [Neural general circulation models for weather and climate](https://www.nature.com/articles/s41586-024-07744-y) 2024年10月20日 <a href="https://www.nature.com/articles/s41586-024-07744-y" target="_blank" style="text-decoration: underline;">原文链接
+好
