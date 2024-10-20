@@ -47,8 +47,8 @@
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
         <strong style="font-size: 20px;">个人兴趣/Personal Interest</strong><br>
-        <span style="color: white;">喜欢的音乐（Vocaloid、Dubstep、CityPop、Future Funk）</span><br>
-        <span style="color: gray;">Favorite Music (Vocaloid, Dubstep, CityPop, Future Funk)</span><br>
+        <span style="color: white;">喜欢的音乐（Vocaloid、Dubstep、CityPop、Future Funk等）</span><br>
+        <span style="color: gray;">Favorite Music (Vocaloid, Dubstep, CityPop, Future Funk, etc)</span><br>
         <span style="color: white;"><a href="https://infoseeker.cn/Travels" target="_blank" style="color: white;">旅游</a>（“大面积感受气氛类型”）</span><br>
         <span style="color: gray;"><a href="https://infoseeker.cn/Travels" target="_blank" style="color: gray;">Travel</a> ("Wide-range immersive experience")</span><br>
         <span style="color: white;"><a href="https://infoseeker.cn/Otomad&Visual" target="_blank" style="color: white;">音mad</a>（现在不怎么会做了）</span><br>
