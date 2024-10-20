@@ -5,7 +5,7 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
 
 本文主要记录我从2024年8月开始的CESM1.2.1模型的学习。
 # 个人概况
-我在组里购买的国家超算互联网的“乌镇之光”超级计算机上运行CESM，选择版本为CESM1.2.1.<br>
+我在组里租用的国家超算互联网的“乌镇之光”超级计算机上运行CESM，选择版本为CESM1.2.1.<br>
 主要参考资料有：
 - [2020 CESM Tutorial Coursework](https://www2.cesm.ucar.edu/events/tutorials/2020/coursework.html)
 - [CESM User's Guide (CESM1.2 Release Series User's Guide) ](https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/book1.html)
