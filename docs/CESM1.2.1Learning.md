@@ -32,9 +32,15 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
 #### Subversion (svn)
 - **要求**：`subversion` 客户端版本 **1.4.2** 或更高，用于下载 CESM 源代码。
 - **安装示例**：
-  ```bash
-  sudo apt-get install subversion
-
+<div>
+  <pre>
+    <code id="svnCodeBlock">
+      sudo apt-get install subversion
+    </code>
+  </pre>
+  <button onclick="copySvnCode()">点击复制</button>
+</div>
+如果服务器没有sudo权限，也可以通过其他方式进行下载。
 ### 安装CESM
 
 # 下载 CESM1.2.1 源代码
