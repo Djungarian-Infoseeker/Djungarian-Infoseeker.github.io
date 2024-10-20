@@ -10,6 +10,7 @@
 
 # 专业学习 / Academic Learning
 - [CESM1.2.1学习 / CESM1.2.1 Learning](https://infoseeker.cn/docs/CESM1.2.1Learning)
+- [自学气候动力学 / SelfStudying Climate Dynamics](https://infoseeker.cn/docs/ClimateDynamic)
 - [翻译文章 / Translations](https://infoseeker.cn/docs/translation)
 
 # 资料 / Resources
