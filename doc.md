@@ -9,7 +9,7 @@
 - [东京科学大学（东京工业大学）交换 / Science Tokyo (Tokyo Tech) Exchange](https://infoseeker.cn/docs/Exchange)
 
 # 专业学习 / Academic Learning
-- [CESM学习 / CESM Learning](https://infoseeker.cn/docs/CESMLearning)
+- [CESM1.2.1学习 / CESM1.2.1 Learning](https://infoseeker.cn/docs/CESM1.2.1Learning)
 - [翻译文章 / Translations](https://infoseeker.cn/docs/translation)
 
 # 资料 / Resources
