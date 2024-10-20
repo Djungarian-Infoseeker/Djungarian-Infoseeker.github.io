@@ -35,8 +35,6 @@
 </head>
 <body>
 
-<h1>可参与东京工业大学YSEP和ACAP项目的中国合作院校</h1>
-
 <p>以下是国内高校与东京工业大学之间的官方合作项目，这些高校的学生可以通过交换项目参与东京工业大学的 <span style="color:red;">YSEP</span>（青年科学与工程研究者计划）和 <span style="color:red;">ACAP</span>（学术课程访问计划）。这些学校与东京工业大学签订了学生交换、学术信息交流等协议，部分学校还享有学费减免的政策。</p>
 
 <table>
@@ -138,8 +136,6 @@
 
 东京工业大学有两大交换项目：<span class="highlight">青年科学与工程研究者计划（YSEP）</span> 和 <span class="highlight">学术课程访问计划（ACAP）</span>，具体内容对比如下。
 
-<h2>对比表：YSEP 与 ACAP</h2>
-
 <table>
     <tr>
         <th>项目特点</th>
@@ -202,3 +198,4 @@
         <td>需每季度选修一定数量的课程</td>
     </tr>
 </table>
+# 交换项目简介
