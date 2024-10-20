@@ -10,7 +10,7 @@
 - [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)
 
 # 瞎玩 / Fun & Exploration
-- [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on QQ Space](https://infoseeker.cn/docs/Qzone)
+- [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)
 
 # 其他 / Miscellaneous
 - [闲话 / Trivialness](https://infoseeker.cn/docs/Trivialness)
