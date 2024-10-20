@@ -20,4 +20,15 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
 - [《CESM1.2.2 移植》 ——by 盖世女侠“边边”](http://bbs.06climate.com/forum.php?mod=viewthread&tid=49077&highlight=CESM%2b1.2.2) <a href="{{site.baseurl}}/assets/css/CESM1.2.2移植(包括ESMF库安装).pdf" download>CESM1.2.2 移植 PDF文件下载</a>
 ## 安装
 如果是租用的大公司服务机器可以拜托运维工程师进行安装，也可以自己进行安装。
-### 安装所需文件
+### 安装依赖文件
+#### 操作系统
+- **要求**：UNIX 操作系统，如 CNL、AIX 和 Linux 等。
+
+#### 脚本语言
+- **要求**：必需安装 `csh`、`bash` 和 `perl` 脚本语言来处理各类脚本。
+
+#### Subversion (svn)
+- **要求**：`subversion` 客户端版本 **1.4.2** 或更高，用于下载 CESM 源代码。
+- **安装示例**：
+  ```bash
+  sudo apt-get install subversion
