@@ -6,3 +6,5 @@ navigation:
   strip_par: true
   sanitize: true
   h_max: 3
+markdown: kramdown
+highlighter: rouge
