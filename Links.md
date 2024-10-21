@@ -45,6 +45,7 @@
     <a href="https://eps.harvard.edu/people/robin-wordsworth" target="_blank" style="text-decoration: underline;"><strong>Robin Wordsworth </strong>Havard Univeristy</a><br>
     <a href="http://211.152.43.30:8889/index.jsp" target="_blank" style="text-decoration: underline;">Tongji University Earth Science Teaching Group Information Website</a><br>
     <a href="https://163wangyue.wordpress.com/" target="_blank" style="text-decoration: underline;">Yue Wang，Tongji University</a><br>
+    <a href="https://wanyingkang.com/" target="_blank" style="text-decoration: underline;">Wanying Kang，Massachusetts Institute of Technology</a><br>
     </td>
 </tr>
 <tr>
