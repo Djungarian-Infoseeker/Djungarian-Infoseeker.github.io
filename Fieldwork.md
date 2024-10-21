@@ -67,7 +67,7 @@
     <div class="slides fade">
         <div class="numbertext">1 / 12</div>
         <img src="/Fieldwork/IMG_20230817_072323.jpg" style="width:100%">
-        <div class="text">一张标注了航行路线和目标区域的海图</div>
+        <div class="text">2023KPP-YEC的海图，标注了行驶轨迹和采样点</div>
     </div>
 
     <div class="slides fade">
@@ -79,61 +79,61 @@
     <div class="slides fade">
         <div class="numbertext">3 / 12</div>
         <img src="/Fieldwork/IMG_20230817_185001.jpg" style="width:100%">
-        <div class="text">实验室里的操作，科学研究的现场工作</div>
+        <div class="text">量筒取海水过滤泥沙进行分析</div>
     </div>
 
     <div class="slides fade">
         <div class="numbertext">4 / 12</div>
         <img src="/Fieldwork/IMG_20230817_195324.jpg" style="width:100%">
-        <div class="text">仪器设备显示着实验结果的实时数据</div>
+        <div class="text">取海底钻孔样品分段的孔隙水进行分析</div>
     </div>
 
     <div class="slides fade">
         <div class="numbertext">5 / 12</div>
         <img src="/Fieldwork/IMG_20230817_203817.jpg" style="width:100%">
-        <div class="text">夜间海上观测设备的显示屏</div>
+        <div class="text">海洋地球物理单波束设备，可以观察海面下情况</div>
     </div>
 
     <div class="slides fade">
         <div class="numbertext">6 / 12</div>
         <img src="/Fieldwork/IMG_20230818_175617.jpg" style="width:100%">
-        <div class="text">船后卷起的白色海浪，象征着船的前进</div>
+        <div class="text">船后卷起的白色海浪</div>
     </div>
 
     <div class="slides fade">
         <div class="numbertext">7 / 12</div>
         <img src="/Fieldwork/IMG_20230818_185526.jpg" style="width:100%">
-        <div class="text">夜晚船尾的科研设备布置，准备进行深海测量</div>
+        <div class="text">夜晚船尾乱七八糟的设备</div>
     </div>
 
     <div class="slides fade">
         <div class="numbertext">8 / 12</div>
         <img src="/Fieldwork/IMG_20230819_050125.jpg" style="width:100%">
-        <div class="text">黎明前的海平面，天空微微泛蓝</div>
+        <div class="text">黎明前的海平面</div>
     </div>
 
     <div class="slides fade">
         <div class="numbertext">9 / 12</div>
         <img src="/Fieldwork/IMG_20230819_193717.jpg" style="width:100%">
-        <div class="text">夜晚满天繁星，点缀了静谧的夜空</div>
+        <div class="text">夜晚满天繁星</div>
     </div>
 
     <div class="slides fade">
         <div class="numbertext">10 / 12</div>
         <img src="/Fieldwork/IMG_20230819_195916.jpg" style="width:100%">
-        <div class="text">朦胧夜色中的大海与天空</div>
+        <div class="text">疑似拍到马一龙的星链，很快速的一排亮点掠过</div>
     </div>
 
     <div class="slides fade">
         <div class="numbertext">11 / 12</div>
         <img src="/Fieldwork/IMG_20230819_205708.jpg" style="width:100%">
-        <div class="text">夜晚拍摄的银河，璀璨星河映入眼帘</div>
+        <div class="text">银河与嵊泗县城，从海上看光污染特别明显</div>
     </div>
 
     <div class="slides fade">
         <div class="numbertext">12 / 12</div>
         <img src="/Fieldwork/IMG_20230820_120403.jpg" style="width:100%">
-        <div class="text">白天的海面与远处的船只，科研任务中的一幕</div>
+        <div class="text">离开博海科号时拍的船只全景</div>
     </div>
 
 </div>
