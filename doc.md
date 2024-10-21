@@ -14,7 +14,7 @@
 - [翻译文章 / Translations](https://infoseeker.cn/docs/translation)<span style="color:orange;">（还未开始）</span>
 
 # 资料 / Resources
-- [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)<span style="color:red;">（更新日期2024/10/20）</span>
+- [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)<span style="color:green;">（更新日期2024/10/20）</span>
 
 # 瞎玩 / Fun & Exploration
 - [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)<span style="color:orange;">（还未开始）</span>
