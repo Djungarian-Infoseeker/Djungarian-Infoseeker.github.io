@@ -24,4 +24,3 @@
   <a href="/photos/tina.jpg" data-lightbox="mygallery" data-title="Tina"><img src="/photos/tina.jpg" alt="Tina" width="1200"></a>
   <a href="/photos/ultraviolet.jpg" data-lightbox="mygallery" data-title="Ultraviolet"><img src="/photos/ultraviolet.jpg" alt="Ultraviolet" width="1200"></a>
 </div>
-
