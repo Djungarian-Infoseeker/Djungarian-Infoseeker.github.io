@@ -18,6 +18,6 @@
 
 # 瞎玩 / Fun & Exploration
 - [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)
-
+- [找到你生日那天的亚太地球遥感图像 /Find the Asia-Pacific Earth remote sensing image on your birthday](https://infoseeker.cn/docs/Qzone)
 # 其他 / Miscellaneous
 - [闲话 / Trivialness](https://infoseeker.cn/docs/Trivialness)
