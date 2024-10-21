@@ -10,14 +10,14 @@
 
 # 专业学习 / Academic Learning
 - [CESM1.2.1学习 / CESM1.2.1 Learning](https://infoseeker.cn/docs/CESM1.2.1Learning)<span style="color:red;">（更新日期2024/10/20，未完结）</span>
-- [自学气候动力学 / SelfStudying Climate Dynamics](https://infoseeker.cn/docs/ClimateDynamic)<span style="color:red;">（还未开始）</span>
-- [翻译文章 / Translations](https://infoseeker.cn/docs/translation)<span style="color:red;">（还未开始）</span>
+- [自学气候动力学 / SelfStudying Climate Dynamics](https://infoseeker.cn/docs/ClimateDynamic)<span style="color:orange;">（还未开始）</span>
+- [翻译文章 / Translations](https://infoseeker.cn/docs/translation)<span style="color:orange;">（还未开始）</span>
 
 # 资料 / Resources
 - [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)<span style="color:red;">（更新日期2024/10/20）</span>
 
 # 瞎玩 / Fun & Exploration
-- [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)<span style="color:red;">（还未开始）</span>
-- [找到你生日那天的亚太地球遥感图像 /Find the Asia-Pacific Earth remote sensing image on your birthday](https://infoseeker.cn/docs/Qzone)<span style="color:red;">（还未开始）</span>
+- [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)<span style="color:orange;">（还未开始）</span>
+- [找到你生日那天的亚太地球遥感图像 /Find the Asia-Pacific Earth remote sensing image on your birthday](https://infoseeker.cn/docs/Qzone)<span style="color:orange;">（还未开始）</span>
 # 其他 / Miscellaneous
-- [闲话 / Trivialness](https://infoseeker.cn/docs/Trivialness)<span style="color:red;">（还未开始）</span>
+- [闲话 / Trivialness](https://infoseeker.cn/docs/Trivialness)<span style="color:orange;">（还未开始）</span>
