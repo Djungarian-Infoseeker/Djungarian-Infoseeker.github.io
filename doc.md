@@ -5,19 +5,19 @@
 4.练练文笔，个人平时不太说话，语言锻炼很欠缺。<br>
 5.写点实实在在的东西出来蛮有成就感，给自己添加一点正向反馈，让我更有动力做事情。<br>
 # 学校事务 / School Affairs
-- [推荐免试 / Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation)
-- [东京科学大学（东京工业大学）交换 / Science Tokyo (Tokyo Tech) Exchange](https://infoseeker.cn/docs/Exchange)
+- [推荐免试 / Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation) <span style="color:red;">（更新日期2024/10/21，未完结）</span>
+- [东京科学大学（东京工业大学）交换 / Science Tokyo (Tokyo Tech) Exchange](https://infoseeker.cn/docs/Exchange)<span style="color:red;">（更新日期2024/10/21，未完结）</span>
 
 # 专业学习 / Academic Learning
-- [CESM1.2.1学习 / CESM1.2.1 Learning](https://infoseeker.cn/docs/CESM1.2.1Learning)
-- [自学气候动力学 / SelfStudying Climate Dynamics](https://infoseeker.cn/docs/ClimateDynamic)
-- [翻译文章 / Translations](https://infoseeker.cn/docs/translation)
+- [CESM1.2.1学习 / CESM1.2.1 Learning](https://infoseeker.cn/docs/CESM1.2.1Learning)<span style="color:red;">（更新日期2024/10/20，未完结）</span>
+- [自学气候动力学 / SelfStudying Climate Dynamics](https://infoseeker.cn/docs/ClimateDynamic)<span style="color:red;">（还未开始）</span>
+- [翻译文章 / Translations](https://infoseeker.cn/docs/translation)<span style="color:red;">（还未开始）</span>
 
 # 资料 / Resources
-- [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)
+- [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)<span style="color:red;">（更新日期2024/10/20）</span>
 
 # 瞎玩 / Fun & Exploration
-- [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)
-- [找到你生日那天的亚太地球遥感图像 /Find the Asia-Pacific Earth remote sensing image on your birthday](https://infoseeker.cn/docs/Qzone)
+- [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)<span style="color:red;">（还未开始）</span>
+- [找到你生日那天的亚太地球遥感图像 /Find the Asia-Pacific Earth remote sensing image on your birthday](https://infoseeker.cn/docs/Qzone)<span style="color:red;">（还未开始）</span>
 # 其他 / Miscellaneous
-- [闲话 / Trivialness](https://infoseeker.cn/docs/Trivialness)
+- [闲话 / Trivialness](https://infoseeker.cn/docs/Trivialness)<span style="color:red;">（还未开始）</span>
