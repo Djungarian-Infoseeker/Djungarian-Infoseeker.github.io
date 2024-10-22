@@ -15,7 +15,8 @@
 
 # 资料 / Resources
 - [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)<span style="color:green;">（更新日期2024/10/20）</span>
-
+# 有趣的经历 / Fun & Exploration
+- [2023 年夏季海洋地质国重室 KPP-YEC 科考航次 / The 2023 Summer Marine Geology KPP-YEC Expedition of the State Key Laboratory of Marine Geology.](https://infoseeker.cn/docs/Fieldwork)<span style="color:red;">（更新日期2024/10/20）</span>
 # 瞎玩 / Fun & Exploration
 - [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)<span style="color:orange;">（还未开始）</span>
 - [找到你生日那天的亚太地球遥感图像 /Find the Asia-Pacific Earth remote sensing image on your birthday](https://infoseeker.cn/docs/Qzone)<span style="color:orange;">（还未开始）</span>
