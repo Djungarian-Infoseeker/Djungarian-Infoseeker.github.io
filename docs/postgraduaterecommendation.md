@@ -151,3 +151,9 @@
 
 4. **师生交流**：这个部分是互选的辅助阶段，在交流时注意导师态度，及时调整志愿顺序。<br>
 
+
+## 北京大学大气与海洋科学系相关资料
+<a href="{{site.baseurl}}/assets/css/物理学院大气与海洋科学系概况.pdf" download>北京大学物理学院大气与海洋科学系概况</a>
+<a href="{{site.baseurl}}/assets/css/芝加哥学派.pdf" download>我所知道的芝加哥学派</a>
+<a href="{{site.baseurl}}/assets/css/北京大学大气科学系历史.pdf" download>北京大学大气科学系历史</a>
+<a href="{{site.baseurl}}/assets/css/学术道路的选择、信念与方法——访物理学院胡永云老师.pdf" download>学术道路的选择、信念与方法——访物理学院胡永云老师</a>
