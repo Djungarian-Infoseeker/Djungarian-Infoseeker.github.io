@@ -105,7 +105,6 @@
             {name: "都江堰", coords: [30.9983, 103.6372]},
             {name: "汶川", coords: [31.4740, 103.5809]}
 
-
         ];
         // 循环添加每个城市的标记和弹窗
         cities.forEach(function(city) {
