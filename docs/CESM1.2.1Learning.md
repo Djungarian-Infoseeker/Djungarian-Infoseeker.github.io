@@ -82,7 +82,7 @@ HPC Kit 包含高性能计算支持库，包括 ICC 编译器和 Intel MPI。
       chmod +x l_HPCKit_p_2022.2.0.191.sh
 
       # 启动安装程序
-      ./l_HPCKit_p_2022.2.0.191.sh --install-dir /work/home/yinjiewang/intel
+      ./l_HPCKit_p_2022.2.0.191.sh -a --install-dir /work/home/yinjiewang/intel
 
       # 修改环境变量
       vim ~/.bashrc
