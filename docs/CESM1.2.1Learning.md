@@ -52,8 +52,8 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
       # 赋予安装文件可执行权限
       chmod +x l_BaseKit_p_2022.1.2.146_offline.sh
 
-      # 启动安装
-      ./l_BaseKit_p_2022.1.2.146_offline.sh --install-dir /work/home/yinjiewang/intel
+      # 使用 -a 选项传递 --install-dir 参数
+      ./l_BaseKit_p_2022.1.2.146_offline.sh -a --install-dir /work/home/yinjiewang/intel
 
       # 安装完成后修改环境变量
       vim ~/.bashrc
