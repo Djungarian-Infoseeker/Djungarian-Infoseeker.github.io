@@ -19,39 +19,80 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
 - [CESM User's Guide (CESM1.2 Release Series User's Guide) ](https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/book1.html)
 - [《CESM1.2.2 移植》 ——by 盖世女侠“边边”](http://bbs.06climate.com/forum.php?mod=viewthread&tid=49077&highlight=CESM%2b1.2.2) <a href="{{site.baseurl}}/assets/css/CESM1.2.2移植(包括ESMF库安装).pdf" download>PDF文件下载</a>
 - [兰州大学CESM1.2.0学习笔记](https://trop-strat.lzu.edu.cn/static/upload/file/20230823/1692756798144593.pdf) <a href="{{site.baseurl}}/assets/css/兰州大学CESM.pdf" download>PDF文件下载</a>
-## 安装
+## CESM 1.2.1 安装和系统要求
+
+安装和运行 CESM 1.2.1 前，请确保以下系统依赖和外部软件已安装：
+
+- **操作系统**: 支持UNIX类操作系统，如 CNL、AIX 或 Linux。
+- **脚本语言**: 支持 `csh`、`bash` 和 `perl` 脚本语言。
+- **版本控制**: Subversion 客户端，版本1.4.2或更高。
+- **编译器**: 需要Fortran和C编译器，本文档使用 GNU 7.3.0。
+- **MPI库**: 支持 OpenMPI（2.1.6及以上版本）或 MPICH（1.0及以上版本）。
+- **NetCDF**: 必需，版本4.2.0或更新，且需支持 `curl`。
+- **耦合器**: 可选，支持ESMF 5.2.0或更新版本；默认使用 MCT 耦合器。
+- **并行NetCDF (pNetCDF)**: 必需，推荐版本1.3.1或更高。
+- **LAPACK**: 可选，某些模拟可能会用到。
+- **CMake**: 必需，版本2.8.6或更新。
+
+确保所有依赖项正确配置，以顺利安装和运行 CESM。
+
 如果是租用的大公司服务机器可以拜托运维工程师进行安装，也可以自己进行安装。
-### 安装依赖文件
 
-#### 操作系统
-- **要求**：UNIX 操作系统，如 CNL、AIX 和 Linux 等。
+## 2. 安装 Intel OneAPI 和 IntelMPI
 
-#### 脚本语言
-- **要求**：必需安装 `csh`、`bash` 和 `perl` 脚本语言来处理各类脚本。
-
-#### Subversion (svn)
-- **要求**：`subversion` 客户端版本 **1.4.2** 或更高，用于下载 CESM 源代码。
-- **安装示例**：
-<div>
-  <pre>
-    <code id="svnCodeBlock">
-      sudo apt-get install subversion
-    </code>
-  </pre>
-  <button onclick="copySvnCode()">点击复制</button>
-</div>
-如果服务器没有sudo权限，也可以通过其他方式进行下载。
-### 安装CESM
-
-# 下载 CESM1.2.1 源代码
-
-通过 Subversion (`svn`) 工具从官方代码库中下载 CESM1.2.1 的代码：
+### 安装Intel BaseKit (2022.1.2)
+此版本包含并行计算开发的基础工具和库。我们将安装路径设为`/work/home/yinjiewang/intel`。
 
 <div>
   <pre>
     <code id="codeBlock">
-      # 运行以下命令下载 CESM1.2.1 源代码
-      svn co https://svn-ccsm-models.cgd.ucar.edu/cesm1/release_tags/cesm1_2_1 cesm1_2_1
+      # 下载 Intel BaseKit 2022.1.2 安装包
+      wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18487/l_BaseKit_p_2022.1.2.146_offline.sh
+
+      # 赋予安装文件可执行权限
+      chmod +x l_BaseKit_p_2022.1.2.146_offline.sh
+
+      # 启动安装
+      ./l_BaseKit_p_2022.1.2.146_offline.sh --install-dir /work/home/yinjiewang/intel
+
+      # 安装完成后修改环境变量
+      vim ~/.bashrc
+
+      # 在 .bashrc 文件末尾添加
+      export PATH=/work/home/yinjiewang/intel/basekit/bin:$PATH
+      export LD_LIBRARY_PATH=/work/home/yinjiewang/intel/basekit/lib:$LD_LIBRARY_PATH
+
+      # 激活新环境变量
+      source ~/.bashrc
+    </code>
+  </pre>
+  <button onclick="copyCode()">点击复制</button>
+</div>
+
+### 安装Intel HPC Kit (2022.2)
+HPC Kit 包含高性能计算支持库，包括 ICC 编译器和 Intel MPI。
+
+<div>
+  <pre>
+    <code id="codeBlock">
+      # 下载 Intel HPC Kit 2022.2 安装包
+      wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18679/l_HPCKit_p_2022.2.0.191.sh
+
+      # 赋予安装文件可执行权限
+      chmod +x l_HPCKit_p_2022.2.0.191.sh
+
+      # 启动安装程序
+      ./l_HPCKit_p_2022.2.0.191.sh --install-dir /work/home/yinjiewang/intel
+
+      # 修改环境变量
+      vim ~/.bashrc
+
+      # 在 .bashrc 文件末尾添加
+      export PATH=/work/home/yinjiewang/intel/hpckit/bin:$PATH
+      export LD_LIBRARY_PATH=/work/home/yinjiewang/intel/hpckit/lib:$LD_LIBRARY_PATH
+
+      # 激活新环境变量
+      source ~/.bashrc
     </code>
   </pre>
   <button onclick="copyCode()">点击复制</button>
