@@ -39,7 +39,9 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
 如果是租用的大公司服务机器可以拜托运维工程师进行安装，也可以自己进行安装。
 
 ## 2. 安装 Intel OneAPI 和 IntelMPI
+要安装 ICC 支持的 Intel OneAPI 旧版本真是个坎坷的过程！在2024年后，Intel 不再为新版本的 OneAPI 提供 ICC 编译器支持，这对 CESM 等依赖 ICC 的软件带来不小麻烦。为了找到旧版本，我一度尝试通过 Intel 官方渠道，但无奈旧版资源的下载被设置为会员专享，且在论坛中多次碰壁。
 
+经过了一顿折腾，终于在 https://get.hpc.dev/vault/intel/ 站点找到了解决之道！这个网站收录了所有旧版的 Intel OneAPI BaseToolkit 和 HPC 附件，终于让我下载到可用的安装包。真是就我狗命！
 ### 安装Intel BaseKit (2022.1.2)
 此版本包含并行计算开发的基础工具和库。我们将安装路径设为`/work/home/yinjiewang/intel`。
 
@@ -47,7 +49,7 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
   <pre>
     <code id="codeBlock">
       # 下载 Intel BaseKit 2022.1.2 安装包
-      wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18487/l_BaseKit_p_2022.1.2.146_offline.sh
+      wget https://get.hpc.dev/vault/intel/l_BaseKit_p_2022.2.0.262_offline.sh
 
       # 赋予安装文件可执行权限
       chmod +x l_BaseKit_p_2022.1.2.146_offline.sh
