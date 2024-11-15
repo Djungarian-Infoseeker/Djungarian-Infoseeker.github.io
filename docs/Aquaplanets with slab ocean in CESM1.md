@@ -41,17 +41,17 @@
     <p>（<code>config_grid.xml</code> 文件位于 <code>cesm1_2_1/scripts/ccsm_utils/Case.template</code> 目录下。）</p>
 
     <h3>2.2 新的使用案例</h3>
-    <p>目前已有一些适用于水星球的CAM用例，它们在大多数情况下运行良好。然而，当应用平板海洋时，这些用例不能直接使用，因为 <code>aqua_planet</code> 命名列表参数会触发海洋组件使用分析SST代码。为了解决这个问题，可以将水星球的用例复制到一个新的用例文件，并删除 <code>aqua_planet</code> 选项（或将其设置为 <code>false</code>）。这些用例只是存储在模型目录 <code>cesm1_2_0/models/atm/cam/bld/namelist_files/use_cases</code> 中的命名列表参数。</p>
+    <p>目前已有一些适用于水星球的CAM用例，它们在大多数情况下运行良好。然而，当应用平板海洋时，这些用例不能直接使用，因为 <code>aqua_planet</code> 命名列表参数会触发海洋组件使用分析SST代码。为了解决这个问题，可以将水星球的用例复制到一个新的用例文件，并删除 <code>aqua_planet</code> 选项（或将其设置为 <code>false</code>）。这些用例只是存储在模型目录 <code>cesm1_2_1/models/atm/cam/bld/namelist_files/use_cases</code> 中的命名列表参数。</p>
 
 
     <h3>2.3 设置案例</h3>
     <p>第一步是创建案例，和往常一样。我们可以使用CESM的选项来即时创建一个包含大气和平板海洋模型的配置集，同时为所有其他组件提供存根。这样就排除了海冰，但稍后我们会讨论如何处理海冰。</p>
 
-    <pre><code>create_newcase -case /glade/p/work/brianpm/my_cases/CAM5AquaSOM_noice -user_compset 2000_CAM5_SLND_SICE_DOCN%SOM_SROF_SGLC_SWAV -res f19_f19_AQUA -mach yellowstone</code></pre>
+    <pre><code>./create_newcase -case /work/home/yinjiewang/slab_aquaplanet_case -user_compset 2000_CAM5_SLND_SICE_DOCN%SOM_SROF_SGLC_SWAV -res f19_f19_AQUA -mach sugon</code></pre>
 
     <p>到此为止，我们已经准备好设置案例：</p>
 
-    <pre><code>cd /glade/p/work/brianpm/my_cases/CAM5AquaSOM_noice
+    <pre><code>cd /work/home/yinjiewang/slab_aquaplanet_case
 ./cesm_setup</code></pre>
 
     <p>在没有海冰的示例配置中，我还希望使用“传统”的水星球设置，即常年春分的轨道参数。这是通过在 <code>user_nl_cpl</code> 命名列表中设置以下值来实现的：</p>
