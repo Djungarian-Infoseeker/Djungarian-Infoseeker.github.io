@@ -142,7 +142,7 @@ tr_iage = .true.</code></pre>
     <p>这种方法对包含热力海冰的水星球-SOM模式不完全适用。问题在于配置集假设存在陆地区域，即使指定了域文件，模型仍可能崩溃。</p>
     <p>要运行包含热力海冰的水星球-SOM模式，可以采取类似的路径，但需要更复杂的 <code>create_newcase</code> 调用。以下是一个示例：</p>
 
-    <pre><code>create_newcase -case /glade/scratch/brianpm/AquaSOM_CICE -user_compset 2000_CAM5_SLND_CICE_DOCN%SOM_SROF_SGLC_SWAV -res f19_f19_AQUA -mach yellowstone</code></pre>
+    <pre><code>./create_newcase -case /glade/scratch/brianpm/AquaSOM_CICE -user_compset 2000_CAM5_SLND_CICE_DOCN%SOM_SROF_SGLC_SWAV -res f19_f19_AQUA -mach yellowstone</code></pre>
 
     <p>请注意，我使用了与上述无海冰案例相同的网格规范。唯一的变化是指定了一个海冰模型。</p>
 
