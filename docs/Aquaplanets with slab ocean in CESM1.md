@@ -114,6 +114,73 @@ cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
 
     <pre><code>./slab_aquaplanet_case.build
 ./slab_aquaplanet_case.submit</code></pre>
+    <h2>3. 海冰（SEA-ICE）</h2>
+    <p>在水星球使用平板海洋模型时，主要问题是动态海冰模型。本质上，海冰动力学只能在位移极点网格（如 gx1v6）上运行。当移除陆地后，极点暴露，海冰模型因此失效。在上述示例中，我们在与大气相同的网格上运行了平板海洋模型，但未包含海冰模型。</p>
+    <p>如果在水星球设置中需要海冰，目前唯一可行的选项是以热力模式运行海冰。实现这一目标的一种方法是设置一个类似 AMIP 的案例，然后修改海冰以使用热力学代码。</p>
+
+    <pre><code>create_newcase -case /glade/scratch/[case] -compset F_2000 -res f19_f19 -mach yellowstone</code></pre>
+
+    <p>接下来编辑 <code>user_nl_cice</code> 文件：</p>
+
+    <pre><code>user_nl_cice
+kitd = 1
+prescribed_ice = .false.
+tr_aero = .true.
+tr_fy = .true.
+tr_iage = .true.</code></pre>
+
+    <p>参数 <code>kitd</code> 控制是否使用海冰热力学。我们也可以包含 <code>kdyn = 0</code> 来明确指定不使用海冰动力学（虽然在这个配置集中它已经默认被设为 0）。</p>
+
+    <p>将模式更改为平板海洋模式，通过修改 <code>env_run.xml</code>：</p>
+
+    <pre><code>&lt;!-- DOCN mode, valid values: prescribed, som, copyall, null (char) --&gt;
+&lt;entry id="DOCN_MODE" value="som" /&gt;
+&lt;!-- Sets SOM forcing data filename for pres runs, only used in D and E compset (char) --&gt;
+&lt;entry id="DOCN_SOM_FILENAME" value="[forcing file]" /&gt;</code></pre>
+
+    <p>然后按照正常步骤继续操作。</p>
+    <p>这种方法对包含热力海冰的水星球-SOM模式不完全适用。问题在于配置集假设存在陆地区域，即使指定了域文件，模型仍可能崩溃。</p>
+    <p>要运行包含热力海冰的水星球-SOM模式，可以采取类似的路径，但需要更复杂的 <code>create_newcase</code> 调用。以下是一个示例：</p>
+
+    <pre><code>create_newcase -case /glade/scratch/brianpm/AquaSOM_CICE -user_compset 2000_CAM5_SLND_CICE_DOCN%SOM_SROF_SGLC_SWAV -res f19_f19_AQUA -mach yellowstone</code></pre>
+
+    <p>请注意，我使用了与上述无海冰案例相同的网格规范。唯一的变化是指定了一个海冰模型。</p>
+
+    <p>新的 <code>user_nl_cice</code> 文件应包含以下内容：</p>
+
+    <pre><code>user_nl_cice
+kdyn = 0
+kitd = 1
+prescribed_ice = .false.
+tr_aero = .true.
+tr_fy = .true.
+tr_iage = .true.
+grid_file = ‘/glade/scratch/brianpm/domain.ocn.1.9x2.5_AQUAPLANET.nc’
+kmt_file = ‘/glade/scratch/brianpm/domain.ocn.1.9x2.5_AQUAPLANET.nc’
+grid_type = ‘latlon’
+grid_format = ‘nc’
+kstrength = 0</code></pre>
+
+    <p>与上述相比，这是更广泛的设置。现在需要指定 <code>grid_file</code> 和 <code>kmt_file</code> 为域文件。添加 <code>kdyn</code> 参数只是为了明确说明。此外，<code>grid_type</code>、<code>grid_format</code> 和 <code>kstrength</code> 参数是通过试验和错误确定为必要的。</p>
+    <p>其他更改遵循之前的描述：</p>
+    <ul>
+        <li>修改 <code>env_run.xml</code>，包括 <code>DOCN_MODE</code>、<code>DOCN_SOM_FILENAME</code>，以及（可选的）<code>CAM_NML_USE_CASE</code>。</li>
+        <li><code>user_nl_cam</code> 应指定地形边界条件，以及任何其他 CAM 选项（如气溶胶）。</li>
+        <li><code>user_nl_docn</code> 应指定域文件。</li>
+        <li><code>user_docn.streams.txt.som</code> 应包含上述相同的信息。</li>
+        <li><code>user_nl_cpl</code> 应指定任何必要的轨道参数更改。</li>
+        <li><code>env_build.xml</code> 应与此处的选择保持一致。</li>
+        <li>根据需要修改 <code>[case].run</code> 文件的项目编号和运行时设置。</li>
+    </ul>
+
+    <h2>4. 气溶胶（AEROSOL）</h2>
+    <p>在水星球的大气中应使用哪种气溶胶？这一选择是任意的，但可能会影响模拟的某些方面。对于 CAM4 物理模块，有一个更明确的约定，即气溶胶不与辐射相互作用；同时，在 CAM4 中气溶胶也不与云相互作用，因此结果是一个“无气溶胶”的水星球。这是 CFMIP2 水星球实验的推荐做法，遵循 APE。</p>
+    <p>对于 CAM5，气溶胶对云有间接影响，但没有标准方法可以“关闭”气溶胶效应。以下是一些可在 CAM5 水星球配置中应用的选项：</p>
+
+    <pre><code>env_build.xml
+&lt;entry id="CAM_CONFIG_OPTS" value="-phys cam5-chem OPTION" /&gt;</code></pre>
+
+    <p>其中，<code>OPTION</code> 可以填充多个值，但这里需要考虑的只有 <code>none</code> 和 <code>trop_mam3</code>。</p>
 
 </body>
 </html>
