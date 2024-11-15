@@ -11,8 +11,8 @@
     <p><strong>Brian Medeiros</strong><br>
     <strong>November 13, 2013</strong></p>
     <h2>0. 翻译者注</h2>
-    <p>本文由于个人利用需要翻译为中文，从而更为直观的去实现这个内容。与此同时将原作者使用的计算机的一些配置更改为我所使用的sugon计算机的配置，撰写本文以便日后重新检查利用。原文链接：- [Aquaplanets with slab ocean in CESM1](https://www2.cesm.ucar.edu/models/simpler-models/files/CAM_aqua_som_description.pdf)</p>
-
+    <p>本文由于个人利用需要翻译为中文，从而更为直观的去实现这个内容。与此同时将原作者使用的计算机的一些配置更改为我所使用的sugon计算机的配置，撰写本文以便日后重新检查利用。原文链接：
+    <a href="https://www2.cesm.ucar.edu/models/simpler-models/files/CAM_aqua_som_description.pdf" download>Aquaplanets with slab ocean in CESM1</a>
     <h2>1. 描述</h2>
     <p>本文档概述了如何在CESM1中配置水星球（Aquaplanet）与平板海洋（slab ocean）模型。本文将介绍所需的边界条件以及如何处理不同选择的选项，如季节变化和海冰的处理方式。当使用CAM5作为大气物理包时，还提供了气溶胶的几种选择，我会简要介绍这些选项。然而，最重要的部分是运行此配置所需的设置步骤。</p>
 
