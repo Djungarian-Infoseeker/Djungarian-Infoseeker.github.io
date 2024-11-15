@@ -21,118 +21,22 @@ ExoCAM是一个基于CESM的模型分支，专门用于模拟系外行星（Exop
 - [兰州大学CESM1.2.0学习笔记](https://trop-strat.lzu.edu.cn/static/upload/file/20230823/1692756798144593.pdf) <a href="{{site.baseurl}}/assets/css/兰州大学CESM.pdf" download>PDF文件下载</a>
 ## CESM 1.2.1 安装和系统要求
 
-安装和运行 CESM 1.2.1 前，请确保以下系统依赖和外部软件已安装：
+在安装和运行 CESM 1.2.1 之前，请确保以下系统依赖和外部软件已安装：
 
-- **操作系统**: 支持UNIX类操作系统，如 CNL、AIX 或 Linux。
+- **操作系统**: 支持 UNIX 类操作系统，如 CNL、AIX 或 Linux。
 - **脚本语言**: 支持 `csh`、`bash` 和 `perl` 脚本语言。
-- **版本控制**: Subversion 客户端，版本1.4.2或更高。
-- **编译器**: 需要Fortran和C编译器，本文档使用 GNU 7.3.0。
-- **MPI库**: 支持 OpenMPI（2.1.6及以上版本）或 MPICH（1.0及以上版本）。
-- **NetCDF**: 必需，版本4.2.0或更新，且需支持 `curl`。
-- **耦合器**: 可选，支持ESMF 5.2.0或更新版本；默认使用 MCT 耦合器。
-- **并行NetCDF (pNetCDF)**: 必需，推荐版本1.3.1或更高。
+- **版本控制**: Subversion 客户端，版本 1.4.2 或更高。
+- **编译器**: 需要 Fortran 和 C 编译器，本文档使用 GNU 7.3.0。
+- **MPI 库**: 支持 OpenMPI（2.1.6 及以上版本）或 MPICH（1.0 及以上版本）。
+- **NetCDF**: 必需，版本 4.2.0 或更新，且需支持 `curl`。
+- **耦合器**: 可选，支持 ESMF 5.2.0 或更新版本；默认使用 MCT 耦合器。
+- **并行 NetCDF (pNetCDF)**: 必需，推荐版本 1.3.1 或更高。
 - **LAPACK**: 可选，某些模拟可能会用到。
-- **CMake**: 必需，版本2.8.6或更新。
+- **CMake**: 必需，版本 2.8.6 或更新。
 
-确保所有依赖项正确配置，以顺利安装和运行 CESM。
+### 安装提示
 
-如果是租用的大公司服务机器可以拜托运维工程师进行安装，也可以自己进行安装。
+在中科曙光的服务机器上，相关依赖已预先安装，并位于公用文件夹中。你可以通过以下命令检查所需模块：
 
-## 2. 安装 Intel OneAPI 和 IntelMPI
-要安装 ICC 支持的 Intel OneAPI 旧版本真是个坎坷的过程！在2024年后，Intel 不再为新版本的 OneAPI 提供 ICC 编译器支持，这对 CESM 等依赖 ICC 的软件带来不小麻烦。为了找到旧版本，我一度尝试通过 Intel 官方渠道，但无奈旧版资源的下载被设置为会员专享，且在论坛中多次碰壁。
-
-经过了一顿折腾，终于在 https://get.hpc.dev/vault/intel/ 站点找到了解决之道！这个网站收录了所有旧版的 Intel OneAPI BaseToolkit 和 HPC 附件，终于让我下载到可用的安装包。真是就我狗命！
-### 安装Intel BaseKit (2022.1.2)
-此版本包含并行计算开发的基础工具和库。我们将安装路径设为`/work/home/yinjiewang/intel`。
-
-<div>
-  <pre>
-    <code id="codeBlock">
-      # 下载 Intel BaseKit 2022.1.2 安装包
-      wget https://get.hpc.dev/vault/intel/l_BaseKit_p_2022.2.0.262_offline.sh
-
-      # 赋予安装文件可执行权限
-      chmod +x l_BaseKit_p_2022.1.2.146_offline.sh
-
-      # 使用 -a 选项传递 --install-dir 参数
-      ./l_BaseKit_p_2022.1.2.146_offline.sh -a --install-dir /work/home/yinjiewang/intel
-
-      # 安装完成后修改环境变量
-      vim ~/.bashrc
-
-      # 在 .bashrc 文件末尾添加
-      export PATH=/work/home/yinjiewang/intel/basekit/bin:$PATH
-      export LD_LIBRARY_PATH=/work/home/yinjiewang/intel/basekit/lib:$LD_LIBRARY_PATH
-
-      # 激活新环境变量
-      source ~/.bashrc
-    </code>
-  </pre>
-  <button onclick="copyCode()">点击复制</button>
-</div>
-
-### 安装Intel HPC Kit (2022.2)
-HPC Kit 包含高性能计算支持库，包括 ICC 编译器和 Intel MPI。
-
-<div>
-  <pre>
-    <code id="codeBlock">
-      # 下载 Intel HPC Kit 2022.2 安装包
-      wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18679/l_HPCKit_p_2022.2.0.191.sh
-
-      # 赋予安装文件可执行权限
-      chmod +x l_HPCKit_p_2022.2.0.191.sh
-
-      # 启动安装程序
-      ./l_HPCKit_p_2022.2.0.191.sh -a --install-dir /work/home/yinjiewang/intel
-
-      # 修改环境变量
-      vim ~/.bashrc
-
-      # 在 .bashrc 文件末尾添加
-      export PATH=/work/home/yinjiewang/intel/hpckit/bin:$PATH
-      export LD_LIBRARY_PATH=/work/home/yinjiewang/intel/hpckit/lib:$LD_LIBRARY_PATH
-
-      # 激活新环境变量
-      source ~/.bashrc
-    </code>
-  </pre>
-  <button onclick="copyCode()">点击复制</button>
-</div>
-
-<script>
-  function copyCode() {
-    var code = document.getElementById("codeBlock").innerText;
-    var tempTextArea = document.createElement("textarea");
-    tempTextArea.value = code;
-    document.body.appendChild(tempTextArea);
-    tempTextArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempTextArea);
-    alert("代码已复制到剪贴板！");
-  }
-</script>
-
-<style>
-  pre {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: monospace;
-    position: relative;
-  }
-
-  button {
-    background-color: #008cba;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-
-  button:hover {
-    background-color: #005f5f;
-  }
-</style>
+```bash
+module av
