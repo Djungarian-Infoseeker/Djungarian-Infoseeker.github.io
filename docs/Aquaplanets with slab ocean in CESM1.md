@@ -112,8 +112,8 @@ cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
 
     <p>到这一步，模型可以编译并运行。记得调整账户号码、运行时设置等。</p>
 
-    <pre><code>./[case].build
-bsub &lt; [case].run</code></pre>
+    <pre><code>./slab_aquaplanet_case.build
+./slab_aquaplanet_case.submit</code></pre>
 
 </body>
 </html>
