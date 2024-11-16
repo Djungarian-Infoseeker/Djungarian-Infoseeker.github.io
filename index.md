@@ -1,22 +1,17 @@
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>实时天气页面</title>
-</head>
-<body>
-    <h1>实时天气信息</h1>
-    <div id="weather-yangquan">加载中...</div>
-    <div id="weather-beijing">加载中...</div>
-    <div id="weather-shanghai">加载中...</div>
-    <div id="weather-tokyo">加载中...</div>
+<a class="weatherwidget-io" href="https://forecast7.com/en/39d90n116d40/beijing/" data-label_1="北京" data-label_2="天气" data-theme="original">北京 天气</a>
+<script>
+    !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+            js=d.createElement(s);
+            js.id=id;
+            js.src='https://weatherwidget.io/js/widget.min.js';
+            fjs.parentNode.insertBefore(js,fjs);
+        }
+    }(document,'script','weatherwidget-io-js');
+</script>
 
-    <!-- 引入 JavaScript 文件 -->
-    <script src="weather.js"></script>
-</body>
-</html>
 
 
 ## 个人/For Me
@@ -34,36 +29,3 @@ During my childhood and teenage years, I had a wide range of interests, which ha
 ### 研究领域/Research Areas
 - **行星宜居带外侧气候研究/Outer boundary of the habitable zone of planetary climate**
 
-
-
-async function getWeather(lat, lon, elementId) {
-    const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 将 YOUR_API_KEY 替换为你实际的 API 密钥
-    const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&lang=zh_cn&appid=${apiKey}`;
-
-    try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error('无法获取天气数据');
-        }
-
-        const data = await response.json();
-        const currentWeather = data.current;
-        const weatherInfo = `
-            城市坐标: (${lat}, ${lon}),
-            温度: ${currentWeather.temp}°C,
-            天气: ${currentWeather.weather[0].description},
-            湿度: ${currentWeather.humidity}%, 
-            风速: ${currentWeather.wind_speed} m/s
-        `;
-        document.getElementById(elementId).innerText = weatherInfo;
-    } catch (error) {
-        console.error('获取天气数据失败:', error);
-        document.getElementById(elementId).innerText = '天气信息获取失败';
-    }
-}
-
-// 调用函数获取各个城市的天气信息
-getWeather(37.85, 113.57, 'weather-yangquan'); // 阳泉
-getWeather(39.90, 116.40, 'weather-beijing');   // 北京
-getWeather(31.23, 121.47, 'weather-shanghai');  // 上海
-getWeather(35.68, 139.69, 'weather-tokyo');     // 东京
