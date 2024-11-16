@@ -34,7 +34,7 @@ I was born and raised in Yangquan, an industrial and mining city in Shanxi Provi
 During my childhood and teenage years, I had a wide range of interests, which have continued to benefit me to this day. In the online community, I have been active under the name "Djungarian" in various groups related to water lilies, YTPMVs（OtoMAD）, astronomy, Qing dynasty history, pets, and antique collecting. I chose this username because, when I registered for QQ in 2010, I was fascinated by raising hamsters. Among the scientific names of various hamster species, only "Djungarian" (later standardized as Phodopus sungorus, the short-tailed dwarf hamster) had a suitable length and didn't sound as odd as the others. Though I attempted to change my username several times over the years, this was my very first name, and I ultimately kept it—sometimes, you just can't fight the inevitable!
 ### 研究领域/Research Areas
 - **行星宜居带外侧气候研究/Outer boundary of the habitable zone of planetary climate**
-
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,13 +51,16 @@ During my childhood and teenage years, I had a wide range of interests, which ha
 
         h1 {
             color: #ffcc00;
+            margin-bottom: 30px;
         }
 
         .weather-container {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
             gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto; /* 确保在窗口小的时候可以滚动 */
         }
 
         .weather-box {
@@ -67,6 +70,7 @@ During my childhood and teenage years, I had a wide range of interests, which ha
             width: 200px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
+            flex: 0 0 auto; /* 确保每个 weather-box 宽度保持固定，不会压缩 */
         }
 
         .weather-box:hover {
@@ -80,3 +84,54 @@ During my childhood and teenage years, I had a wide range of interests, which ha
         }
     </style>
 </head>
+<body>
+    <h1>实时天气信息</h1>
+    <div class="weather-container">
+        <div id="weather-yangquan" class="weather-box">阳泉天气加载中...</div>
+        <div id="weather-beijing" class="weather-box">北京天气加载中...</div>
+        <div id="weather-shanghai" class="weather-box">上海天气加载中...</div>
+        <div id="weather-tokyo" class="weather-box">东京天气加载中...</div>
+    </div>
+
+    <!-- 引入 JavaScript 文件 -->
+    <script>
+        async function getWeather(cityName, elementId, displayName) {
+            const apiKey = 'YOUR_API_KEY'; // 将 YOUR_API_KEY 替换为你实际的 API 密钥
+            const proxyUrl = 'https://corsproxy.io/?'; // 使用 CORS 代理绕过跨域问题
+            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('无法获取天气数据');
+                }
+
+                const data = await response.json();
+                const weatherInfo = `
+                    <div class="weather-title">${displayName}</div>
+                    <p>温度: ${data.main.temp}°C</p>
+                    <p>天气: ${data.weather[0].description}</p>
+                    <p>湿度: ${data.main.humidity}%</p>
+                    <p>风速: ${data.wind.speed} m/s</p>
+                    <p>气压: ${data.main.pressure} hPa</p>
+                    <p>能见度: ${(data.visibility / 1000).toFixed(1)} km</p>
+                    <p>日出: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
+                    <p>日落: ${new Date(data.sys.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
+                `;
+                document.getElementById(elementId).innerHTML = weatherInfo;
+            } catch (error) {
+                console.error('获取天气数据失败:', error);
+                document.getElementById(elementId).innerText = '天气信息获取失败';
+            }
+        }
+
+        // 使用 window.onload 确保页面加载完毕后再执行
+        window.onload = function() {
+            getWeather('Yangquan', 'weather-yangquan', '阳泉');  // 阳泉
+            getWeather('Beijing', 'weather-beijing', '北京');    // 北京
+            getWeather('Shanghai', 'weather-shanghai', '上海');  // 上海
+            getWeather('Tokyo', 'weather-tokyo', '东京');        // 东京
+        };
+    </script>
+</body>
+</html>
