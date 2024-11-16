@@ -1,17 +1,19 @@
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>实时天气信息展示</title>
 </head>
 <body>
     <h1>实时天气信息</h1>
-    <div id="weather-yangquan">阳泉天气加载中...</div>
-    <div id="weather-beijing">北京天气加载中...</div>
-    <div id="weather-shanghai">上海天气加载中...</div>
-    <div id="weather-tokyo">东京天气加载中...</div>
+    <div class="weather-container">
+        <div id="weather-yangquan" class="weather-box">阳泉天气加载中...</div>
+        <div id="weather-beijing" class="weather-box">北京天气加载中...</div>
+        <div id="weather-shanghai" class="weather-box">上海天气加载中...</div>
+        <div id="weather-tokyo" class="weather-box">东京天气加载中...</div>
+    </div>
 
     <!-- 引入 JavaScript 文件 -->
     <script src="weather.js"></script>
@@ -33,3 +35,48 @@ During my childhood and teenage years, I had a wide range of interests, which ha
 ### 研究领域/Research Areas
 - **行星宜居带外侧气候研究/Outer boundary of the habitable zone of planetary climate**
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时天气信息展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        .weather-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .weather-box {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .weather-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .weather-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+    </style>
+</head>
