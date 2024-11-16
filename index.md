@@ -1,4 +1,22 @@
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时天气信息展示</title>
+</head>
+<body>
+    <h1>实时天气信息</h1>
+    <div id="weather-yangquan">阳泉天气加载中...</div>
+    <div id="weather-beijing">北京天气加载中...</div>
+    <div id="weather-shanghai">上海天气加载中...</div>
+    <div id="weather-tokyo">东京天气加载中...</div>
+
+    <!-- 引入 JavaScript 文件 -->
+    <script src="weather.js"></script>
+</body>
+</html>
 
 ## 个人/For Me
 [我](https://infoseeker.cn/CV)目前是[同济大学](https://www.tongji.edu.cn/)[海洋与地球科学学院](https://mgg.tongji.edu.cn/)海洋科学系的本科生。2025年9月，我将开始在[北京大学](https://www.pku.edu.cn/)[物理学院](https://www.phy.pku.edu.cn/)[大气与海洋科学系](https://www.atmos.pku.edu.cn/index.htm)攻读博士学位，在那里我将进行行星气候学研究。我目前还在日本东京的[东京科学大学](https://www.isct.ac.jp/en)（前身为[东京工业大学](https://www.titech.ac.jp/english)作为访问学生进行交流。

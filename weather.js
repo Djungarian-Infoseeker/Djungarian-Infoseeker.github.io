@@ -1,6 +1,6 @@
 async function getWeather(lat, lon, cityName, elementId) {
-    const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 替换为你实际的 API 密钥
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const apiKey = 'YOUR_API_KEY'; // 替换为你实际的 API 密钥
+    const proxyUrl = 'https://corsproxy.io/?';
     const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
     try {
