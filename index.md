@@ -62,7 +62,7 @@
     <!-- JavaScript 用于获取天气数据 -->
     <script>
         async function getWeather(cityName, elementId, displayName) {
-            const apiKey = 'YOUR_API_KEY'; // 将 YOUR_API_KEY 替换为你实际的 API 密钥
+            const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 将 YOUR_API_KEY 替换为你实际的 API 密钥
             const proxyUrl = 'https://corsproxy.io/?'; // 使用 CORS 代理绕过跨域问题
             const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
