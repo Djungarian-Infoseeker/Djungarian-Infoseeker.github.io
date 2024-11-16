@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时天气信息展示</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
     <style>
         body {
@@ -30,7 +31,7 @@
             background-color: #333;
             border-radius: 10px;
             padding: 10px;
-            width: 200px; /* 方框宽度 */
+            width: 200px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
             flex: 0 1 auto;
@@ -52,8 +53,7 @@
         }
 
         canvas {
-            background-color: #fff;
-            border-radius: 5px;
+            background-color: transparent; /* 改成透明，以适应深色背景 */
             margin-top: 5px;
         }
     </style>
@@ -91,7 +91,7 @@
                         <p>日出: ${new Date(data.city.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
                         <p>日落: ${new Date(data.city.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
                     </div>
-                    <canvas id="chart-${cityName}" width="150" height="100"></canvas>
+                    <canvas id="chart-${cityName}" width="180" height="120"></canvas>
                 `;
 
                 const container = document.createElement('div');
@@ -114,11 +114,17 @@
             const ctx = document.getElementById(canvasId).getContext('2d');
 
             // 获取当前时间
-            const currentTime = new Date().getTime() / 1000;
+            const currentTime = new Date();
 
-            // 只保留到当前时间的预测数据
-            const filteredData = forecastData.filter(item => item.dt <= currentTime);
-            
+            // 只保留当天的预测数据
+            const filteredData = forecastData.filter(item => {
+                const forecastTime = new Date(item.dt * 1000);
+                return forecastTime.getDate() === currentTime.getDate() &&
+                       forecastTime.getMonth() === currentTime.getMonth() &&
+                       forecastTime.getFullYear() === currentTime.getFullYear() &&
+                       forecastTime <= currentTime;
+            });
+
             const labels = filteredData.map(item => new Date(item.dt * 1000).getHours() + ':00');
             const temperatures = filteredData.map(item => item.main.temp);
 
@@ -181,6 +187,7 @@
     </script>
 </body>
 </html>
+
 
 
 
