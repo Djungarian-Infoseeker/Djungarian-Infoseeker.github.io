@@ -101,7 +101,7 @@
                 document.getElementById('weather-container').appendChild(container);
 
                 // 绘制温度变化图表
-                drawTemperatureChart(cityName, `chart-${cityName}`);
+                drawTemperatureChart(cityName, `chart-${cityName}`, data.coord.lat, data.coord.lon);
             } catch (error) {
                 console.error('获取天气数据失败:', error);
                 const container = document.createElement('div');
@@ -111,34 +111,31 @@
             }
         }
 
-        async function drawTemperatureChart(cityName, canvasId) {
+        async function drawTemperatureChart(cityName, canvasId, lat, lon) {
             const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 您的 API 密钥
             const proxyUrl = 'https://corsproxy.io/?';
-            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/onecall?lat=${cityLatLng[cityName].lat}&lon=${cityLatLng[cityName].lon}&exclude=minutely,hourly,alerts&units=metric&lang=zh_cn&appid=${apiKey}`;
+            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,daily,alerts&units=metric&lang=zh_cn&appid=${apiKey}`;
 
             try {
                 const response = await fetch(apiUrl);
                 if (!response.ok) {
-                    throw new Error('无法获取天气数据');
+                    throw new Error('无法获取温度数据');
                 }
 
                 const data = await response.json();
-                const today = data.daily[0];
                 
-                // 设置 X 轴标签（小时）和 Y 轴温度数据
+                // 仅使用当天的温度记录
                 const labels = [];
                 const temperatures = [];
                 const now = new Date();
 
-                // 每小时一个点，从 00:00 到 23:00
-                for (let i = 0; i < 24; i++) {
-                    labels.push(`${i}:00`);
-                    if (now.getHours() >= i) {
-                        temperatures.push(today.temp[i]);
-                    } else {
-                        temperatures.push(null);
+                data.hourly.forEach(hourData => {
+                    const hour = new Date(hourData.dt * 1000);
+                    if (hour <= now) {
+                        labels.push(`${hour.getHours()}:00`);
+                        temperatures.push(hourData.temp);
                     }
-                }
+                });
 
                 const ctx = document.getElementById(canvasId).getContext('2d');
                 new Chart(ctx, {
@@ -181,13 +178,6 @@
             }
         }
 
-        const cityLatLng = {
-            'Yangquan': { lat: 37.85, lon: 113.57 },
-            'Beijing': { lat: 39.90, lon: 116.40 },
-            'Shanghai': { lat: 31.23, lon: 121.47 },
-            'Tokyo': { lat: 35.68, lon: 139.69 }
-        };
-
         // 使用 window.onload 确保页面加载完毕后再执行
         window.onload = function () {
             getWeather('Yangquan', '阳泉');  // 阳泉
@@ -198,8 +188,6 @@
     </script>
 </body>
 </html>
-
-
 
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
 ## 个人/For Me
