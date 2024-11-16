@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +32,7 @@
             background-color: #333;
             border-radius: 10px;
             padding: 10px;
-            width: 180px; /* 缩小了方框宽度 */
+            width: 180px; /* 方框宽度 */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
             flex: 0 1 auto;
@@ -53,7 +54,7 @@
         }
 
         canvas {
-            background-color: transparent;
+            background-color: #fff;
             border-radius: 5px;
             margin-top: 5px;
         }
@@ -85,11 +86,6 @@
                         <p>温度: ${data.main.temp}°C</p>
                         <p>天气: ${data.weather[0].description}</p>
                         <p>湿度: ${data.main.humidity}%</p>
-                        <p>风速: ${data.wind.speed} m/s</p>
-                        <p>气压: ${data.main.pressure} hPa</p>
-                        <p>能见度: ${(data.visibility / 1000).toFixed(1)} km</p>
-                        <p>日出: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
-                        <p>日落: ${new Date(data.sys.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
                     </div>
                     <canvas id="chart-${cityName}" width="150" height="100"></canvas>
                 `;
@@ -100,7 +96,7 @@
                 document.getElementById('weather-container').appendChild(container);
 
                 // 绘制温度变化图表
-                drawTemperatureChart(cityName, `chart-${cityName}`, data.coord.lat, data.coord.lon);
+                drawTemperatureChart(cityName);
             } catch (error) {
                 console.error('获取天气数据失败:', error);
                 const container = document.createElement('div');
@@ -110,45 +106,35 @@
             }
         }
 
-        async function drawTemperatureChart(cityName, canvasId, lat, lon) {
+        async function drawTemperatureChart(cityName) {
             const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 您的 API 密钥
             const proxyUrl = 'https://corsproxy.io/?';
-            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,daily,alerts&units=metric&lang=zh_cn&appid=${apiKey}`;
+            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
             try {
                 const response = await fetch(apiUrl);
                 if (!response.ok) {
-                    throw new Error('无法获取温度数据');
+                    throw new Error('无法获取天气数据');
                 }
 
                 const data = await response.json();
+                const forecastData = data.list;
 
-                // 使用过去24小时的温度记录
-                const labels = [];
-                const temperatures = [];
-                const now = new Date();
+                const ctx = document.getElementById(`chart-${cityName}`).getContext('2d');
+                const labels = forecastData.slice(0, 8).map(item => new Date(item.dt * 1000).getHours() + ':00');
+                const temperatures = forecastData.slice(0, 8).map(item => item.main.temp);
 
-                data.hourly.slice(0, 24).forEach(hourData => {
-                    const hour = new Date(hourData.dt * 1000);
-                    if (hour <= now) {
-                        labels.push(`${hour.getHours()}:00`);
-                        temperatures.push(hourData.temp);
-                    }
-                });
-
-                const ctx = document.getElementById(canvasId).getContext('2d');
                 new Chart(ctx, {
                     type: 'line',
                     data: {
                         labels: labels,
                         datasets: [{
+                            label: '温度变化',
                             data: temperatures,
                             borderColor: '#ffcc00',
-                            backgroundColor: 'rgba(255, 204, 0, 0.1)',
-                            borderWidth: 2,
-                            pointRadius: 3,
-                            pointBackgroundColor: '#ffcc00',
-                            tension: 0.4 // 使曲线更平滑
+                            backgroundColor: 'rgba(255, 204, 0, 0.2)',
+                            borderWidth: 1,
+                            pointRadius: 2,
                         }]
                     },
                     options: {
@@ -156,32 +142,27 @@
                         maintainAspectRatio: false,
                         scales: {
                             x: {
+                                display: true,
                                 ticks: {
                                     color: '#ffffff',
                                 },
                                 grid: {
-                                    color: 'rgba(255, 255, 255, 0.2)', // X轴网格颜色
+                                    display: false
                                 }
                             },
                             y: {
+                                display: true,
                                 ticks: {
                                     color: '#ffffff',
                                 },
                                 grid: {
-                                    color: 'rgba(255, 255, 255, 0.2)', // Y轴网格颜色
-                                },
-                                beginAtZero: false,
+                                    color: 'rgba(255, 255, 255, 0.2)'
+                                }
                             }
                         },
                         plugins: {
                             legend: {
                                 display: false // 隐藏图例
-                            },
-                            tooltip: {
-                                enabled: true, // 启用工具提示
-                                backgroundColor: '#333', // 工具提示背景色
-                                titleColor: '#ffffff', // 工具提示标题颜色
-                                bodyColor: '#ffffff' // 工具提示内容颜色
                             }
                         }
                     }
@@ -201,7 +182,6 @@
     </script>
 </body>
 </html>
-
 
 
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
