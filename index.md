@@ -53,7 +53,7 @@
         }
 
         canvas {
-            background-color: #fff;
+            background-color: transparent;
             border-radius: 5px;
             margin-top: 5px;
         }
@@ -144,9 +144,11 @@
                         datasets: [{
                             data: temperatures,
                             borderColor: '#ffcc00',
-                            backgroundColor: 'rgba(255, 204, 0, 0.2)',
-                            borderWidth: 1,
-                            pointRadius: 2,
+                            backgroundColor: 'rgba(255, 204, 0, 0.1)',
+                            borderWidth: 2,
+                            pointRadius: 3,
+                            pointBackgroundColor: '#ffcc00',
+                            tension: 0.4 // 使曲线更平滑
                         }]
                     },
                     options: {
@@ -154,15 +156,19 @@
                         maintainAspectRatio: false,
                         scales: {
                             x: {
-                                display: true, // 显示 X 轴标签
                                 ticks: {
                                     color: '#ffffff',
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.2)', // X轴网格颜色
                                 }
                             },
                             y: {
-                                display: true, // 显示 Y 轴标签
                                 ticks: {
                                     color: '#ffffff',
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.2)', // Y轴网格颜色
                                 },
                                 beginAtZero: false,
                             }
@@ -170,6 +176,12 @@
                         plugins: {
                             legend: {
                                 display: false // 隐藏图例
+                            },
+                            tooltip: {
+                                enabled: true, // 启用工具提示
+                                backgroundColor: '#333', // 工具提示背景色
+                                titleColor: '#ffffff', // 工具提示标题颜色
+                                bodyColor: '#ffffff' // 工具提示内容颜色
                             }
                         }
                     }
@@ -189,6 +201,7 @@
     </script>
 </body>
 </html>
+
 
 
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
