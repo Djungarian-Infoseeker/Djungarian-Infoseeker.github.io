@@ -1,5 +1,4 @@
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #1a1a1a;
-            color: #f5f5f5;
+            color: #ffffff; /* 字体颜色为白色 */
             text-align: center;
             margin: 0;
             padding: 20px;
@@ -17,36 +16,39 @@
 
         h1 {
             color: #ffcc00;
-            margin-bottom: 30px;
+            margin-bottom: 20px; /* 缩小标题的底部间距 */
         }
 
         .weather-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around; /* 使每个方框之间有合适的空间 */
             align-items: center;
-            gap: 20px;
-            flex-wrap: nowrap;
-            overflow-x: auto; /* 确保在窗口小的时候可以滚动 */
+            gap: 10px;
+            flex-wrap: wrap; /* 允许在较小的屏幕上自动换行 */
         }
 
         .weather-box {
             background-color: #333;
             border-radius: 10px;
-            padding: 20px;
-            width: 200px;
+            padding: 15px;
+            width: 150px; /* 方框缩小 */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
-            flex: 0 0 auto; /* 确保每个 weather-box 宽度保持固定，不会压缩 */
+            flex: 0 1 auto; /* 宽度保持合适比例，允许换行 */
         }
 
         .weather-box:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px); /* 缩小浮动高度 */
         }
 
         .weather-title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #ffcc00;
+            font-size: 1.2em; /* 缩小标题字体大小 */
+            margin-bottom: 8px;
+            color: #ffcc00; /* 保持黄色标题 */
+        }
+
+        .weather-details {
+            font-size: 0.9em; /* 缩小详情字体大小 */
         }
     </style>
 </head>
@@ -75,14 +77,16 @@
                 const data = await response.json();
                 const weatherInfo = `
                     <div class="weather-title">${displayName}</div>
-                    <p>温度: ${data.main.temp}°C</p>
-                    <p>天气: ${data.weather[0].description}</p>
-                    <p>湿度: ${data.main.humidity}%</p>
-                    <p>风速: ${data.wind.speed} m/s</p>
-                    <p>气压: ${data.main.pressure} hPa</p>
-                    <p>能见度: ${(data.visibility / 1000).toFixed(1)} km</p>
-                    <p>日出: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
-                    <p>日落: ${new Date(data.sys.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
+                    <div class="weather-details">
+                        <p>温度: ${data.main.temp}°C</p>
+                        <p>天气: ${data.weather[0].description}</p>
+                        <p>湿度: ${data.main.humidity}%</p>
+                        <p>风速: ${data.wind.speed} m/s</p>
+                        <p>气压: ${data.main.pressure} hPa</p>
+                        <p>能见度: ${(data.visibility / 1000).toFixed(1)} km</p>
+                        <p>日出: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
+                        <p>日落: ${new Date(data.sys.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
+                    </div>
                 `;
                 document.getElementById(elementId).innerHTML = weatherInfo;
             } catch (error) {
