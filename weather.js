@@ -1,7 +1,7 @@
-async function getWeather(lat, lon, cityName, elementId) {
-    const apiKey = 'YOUR_API_KEY'; // 替换为你实际的 API 密钥
-    const proxyUrl = 'https://corsproxy.io/?';
-    const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&lang=zh_cn&appid=${apiKey}`;
+async function getWeather(cityName, elementId) {
+    const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 将 YOUR_API_KEY 替换为你实际的 API 密钥
+    const proxyUrl = 'https://corsproxy.io/?'; // 使用 CORS 代理绕过跨域问题
+    const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
     try {
         const response = await fetch(apiUrl);
@@ -10,13 +10,12 @@ async function getWeather(lat, lon, cityName, elementId) {
         }
 
         const data = await response.json();
-        const currentWeather = data.current;
         const weatherInfo = `
             ${cityName}：
-            温度: ${currentWeather.temp}°C,
-            天气: ${currentWeather.weather[0].description},
-            湿度: ${currentWeather.humidity}%,
-            风速: ${currentWeather.wind_speed} m/s
+            温度: ${data.main.temp}°C,
+            天气: ${data.weather[0].description},
+            湿度: ${data.main.humidity}%,
+            风速: ${data.wind.speed} m/s
         `;
         document.getElementById(elementId).innerText = weatherInfo;
     } catch (error) {
@@ -27,8 +26,8 @@ async function getWeather(lat, lon, cityName, elementId) {
 
 // 使用 window.onload 确保页面加载完毕后再执行
 window.onload = function() {
-    getWeather(37.85, 113.57, '阳泉', 'weather-yangquan');  // 阳泉
-    getWeather(39.90, 116.40, '北京', 'weather-beijing');   // 北京
-    getWeather(31.23, 121.47, '上海', 'weather-shanghai');  // 上海
-    getWeather(35.68, 139.69, '东京', 'weather-tokyo');     // 东京
+    getWeather('Yangquan', 'weather-yangquan');  // 阳泉
+    getWeather('Beijing', 'weather-beijing');    // 北京
+    getWeather('Shanghai', 'weather-shanghai');  // 上海
+    getWeather('Tokyo', 'weather-tokyo');        // 东京
 };
