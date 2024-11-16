@@ -67,7 +67,7 @@
     <!-- JavaScript 用于获取天气数据 -->
     <script>
         async function getWeatherForecast(cityName, displayName) {
-            const apiKey = 'YOUR_API_KEY'; // 替换为你的实际 API 密钥
+            const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 替换为你的实际 API 密钥
             const proxyUrl = 'https://corsproxy.io/?';
             const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
