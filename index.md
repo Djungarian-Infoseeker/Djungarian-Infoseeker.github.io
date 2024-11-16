@@ -33,7 +33,7 @@
             background-color: #333;
             border-radius: 10px;
             padding: 10px;
-            width: 240px;
+            width: 260px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
             flex: 0 0 auto; /* 保持宽度固定 */
@@ -123,13 +123,13 @@
                 }
 
                 const data = await response.json();
-                
-                // 仅使用当天的温度记录
+
+                // 使用过去24小时的温度记录
                 const labels = [];
                 const temperatures = [];
                 const now = new Date();
 
-                data.hourly.forEach(hourData => {
+                data.hourly.slice(0, 24).forEach(hourData => {
                     const hour = new Date(hourData.dt * 1000);
                     if (hour <= now) {
                         labels.push(`${hour.getHours()}:00`);
