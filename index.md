@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -25,18 +24,17 @@
             justify-content: space-around;
             align-items: center;
             gap: 10px;
-            flex-wrap: nowrap; /* 保持所有方框在同一行 */
-            overflow-x: auto;
+            flex-wrap: wrap;
         }
 
         .weather-box {
             background-color: #333;
             border-radius: 10px;
             padding: 10px;
-            width: 260px;
+            width: 180px; /* 缩小了方框宽度 */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
-            flex: 0 0 auto; /* 保持宽度固定 */
+            flex: 0 1 auto;
         }
 
         .weather-box:hover {
@@ -50,12 +48,13 @@
         }
 
         .weather-details {
-            font-size: 0.9em;
+            font-size: 0.8em;
             margin-bottom: 10px;
         }
 
         canvas {
-            background-color: transparent;
+            background-color: #fff;
+            border-radius: 5px;
             margin-top: 5px;
         }
     </style>
@@ -92,7 +91,7 @@
                         <p>日出: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
                         <p>日落: ${new Date(data.sys.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
                     </div>
-                    <canvas id="chart-${cityName}" width="200" height="120"></canvas>
+                    <canvas id="chart-${cityName}" width="150" height="100"></canvas>
                 `;
 
                 const container = document.createElement('div');
@@ -146,8 +145,8 @@
                             data: temperatures,
                             borderColor: '#ffcc00',
                             backgroundColor: 'rgba(255, 204, 0, 0.2)',
-                            borderWidth: 2,
-                            pointRadius: 3,
+                            borderWidth: 1,
+                            pointRadius: 2,
                         }]
                     },
                     options: {
@@ -155,11 +154,13 @@
                         maintainAspectRatio: false,
                         scales: {
                             x: {
+                                display: true, // 显示 X 轴标签
                                 ticks: {
                                     color: '#ffffff',
                                 }
                             },
                             y: {
+                                display: true, // 显示 Y 轴标签
                                 ticks: {
                                     color: '#ffffff',
                                 },
@@ -168,7 +169,7 @@
                         },
                         plugins: {
                             legend: {
-                                display: false
+                                display: false // 隐藏图例
                             }
                         }
                     }
@@ -188,6 +189,7 @@
     </script>
 </body>
 </html>
+
 
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
 ## 个人/For Me
