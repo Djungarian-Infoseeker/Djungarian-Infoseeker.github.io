@@ -31,7 +31,7 @@
             background-color: #333;
             border-radius: 10px;
             padding: 10px;
-            width: 180px; /* 方框宽度 */
+            width: 200px; /* 方框宽度 */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
             flex: 0 1 auto;
@@ -86,6 +86,11 @@
                         <p>温度: ${currentWeather.main.temp}°C</p>
                         <p>天气: ${currentWeather.weather[0].description}</p>
                         <p>湿度: ${currentWeather.main.humidity}%</p>
+                        <p>风速: ${currentWeather.wind.speed} m/s</p>
+                        <p>气压: ${currentWeather.main.pressure} hPa</p>
+                        <p>能见度: ${(currentWeather.visibility / 1000).toFixed(1)} km</p>
+                        <p>日出: ${new Date(data.city.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
+                        <p>日落: ${new Date(data.city.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
                     </div>
                     <canvas id="chart-${cityName}" width="150" height="100"></canvas>
                 `;
@@ -108,8 +113,15 @@
 
         function drawTemperatureChart(forecastData, canvasId) {
             const ctx = document.getElementById(canvasId).getContext('2d');
-            const labels = forecastData.slice(0, 8).map(item => new Date(item.dt * 1000).getHours() + ':00');
-            const temperatures = forecastData.slice(0, 8).map(item => item.main.temp);
+
+            // 获取当前时间
+            const currentTime = new Date().getTime() / 1000;
+
+            // 只保留到当前时间的预测数据
+            const filteredData = forecastData.filter(item => item.dt <= currentTime);
+            
+            const labels = filteredData.map(item => new Date(item.dt * 1000).getHours() + ':00');
+            const temperatures = filteredData.map(item => item.main.temp);
 
             new Chart(ctx, {
                 type: 'line',
@@ -120,8 +132,8 @@
                         data: temperatures,
                         borderColor: '#ffcc00',
                         backgroundColor: 'rgba(255, 204, 0, 0.2)',
-                        borderWidth: 1,
-                        pointRadius: 2,
+                        borderWidth: 2,
+                        pointRadius: 3,
                     }]
                 },
                 options: {
@@ -129,15 +141,31 @@
                     maintainAspectRatio: false,
                     scales: {
                         x: {
-                            display: false, // 隐藏 X 轴标签以使图表更简单
+                            title: {
+                                display: true,
+                                text: '时间 (小时)',
+                                color: '#ffffff',
+                            },
+                            ticks: {
+                                color: '#ffffff',
+                            }
                         },
                         y: {
-                            display: false, // 隐藏 Y 轴标签以使图表更简单
+                            title: {
+                                display: true,
+                                text: '温度 (°C)',
+                                color: '#ffffff',
+                            },
+                            ticks: {
+                                color: '#ffffff',
+                            }
                         }
                     },
                     plugins: {
                         legend: {
-                            display: false // 隐藏图例
+                            labels: {
+                                color: '#ffffff',
+                            }
                         }
                     }
                 }
@@ -154,6 +182,7 @@
     </script>
 </body>
 </html>
+
 
 
 
