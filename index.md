@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +31,7 @@
             background-color: #333;
             border-radius: 10px;
             padding: 10px;
-            width: 200px;
+            width: 220px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
             flex: 0 1 auto;
@@ -68,7 +67,7 @@
     <!-- JavaScript 用于获取天气数据 -->
     <script>
         async function getWeatherForecast(cityName, displayName) {
-            const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 替换为你的实际 API 密钥
+            const apiKey = 'YOUR_API_KEY'; // 替换为你的实际 API 密钥
             const proxyUrl = 'https://corsproxy.io/?';
             const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
@@ -86,6 +85,11 @@
                         <p>温度: ${currentWeather.main.temp}°C</p>
                         <p>天气: ${currentWeather.weather[0].description}</p>
                         <p>湿度: ${currentWeather.main.humidity}%</p>
+                        <p>风速: ${currentWeather.wind.speed} m/s</p>
+                        <p>气压: ${currentWeather.main.pressure} hPa</p>
+                        <p>能见度: ${(currentWeather.visibility / 1000).toFixed(1)} km</p>
+                        <p>日出: ${new Date(data.city.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
+                        <p>日落: ${new Date(data.city.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
                     </div>
                     <canvas id="chart-${cityName}" width="180" height="120"></canvas>
                 `;
@@ -118,6 +122,7 @@
                        forecastTime.getFullYear() === currentTime.getFullYear();
             });
 
+            // 设置 X 轴标签（小时）和 Y 轴温度数据
             const labels = filteredData.map(item => new Date(item.dt * 1000).getHours() + ':00');
             const temperatures = filteredData.map(item => item.main.temp);
 
@@ -145,7 +150,8 @@
                         y: {
                             ticks: {
                                 color: '#ffffff',
-                            }
+                            },
+                            beginAtZero: false,
                         }
                     },
                     plugins: {
@@ -167,6 +173,7 @@
     </script>
 </body>
 </html>
+
 
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
 ## 个人/For Me
