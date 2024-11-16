@@ -59,7 +59,6 @@
     </style>
 </head>
 <body>
-    <h1>实时天气信息</h1>
     <div class="weather-container" id="weather-container">
         <!-- 每个城市天气数据和温度图表将插入这里 -->
     </div>
