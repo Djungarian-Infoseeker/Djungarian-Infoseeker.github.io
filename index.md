@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -53,7 +54,7 @@
         }
 
         canvas {
-            background-color: transparent; /* 改成透明，以适应深色背景 */
+            background-color: transparent;
             margin-top: 5px;
         }
     </style>
@@ -67,7 +68,7 @@
     <!-- JavaScript 用于获取天气数据 -->
     <script>
         async function getWeatherForecast(cityName, displayName) {
-            const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 将 YOUR_API_KEY 替换为你实际的 API 密钥
+            const apiKey = 'YOUR_API_KEY'; // 替换为你的实际 API 密钥
             const proxyUrl = 'https://corsproxy.io/?';
             const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
@@ -85,11 +86,6 @@
                         <p>温度: ${currentWeather.main.temp}°C</p>
                         <p>天气: ${currentWeather.weather[0].description}</p>
                         <p>湿度: ${currentWeather.main.humidity}%</p>
-                        <p>风速: ${currentWeather.wind.speed} m/s</p>
-                        <p>气压: ${currentWeather.main.pressure} hPa</p>
-                        <p>能见度: ${(currentWeather.visibility / 1000).toFixed(1)} km</p>
-                        <p>日出: ${new Date(data.city.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
-                        <p>日落: ${new Date(data.city.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
                     </div>
                     <canvas id="chart-${cityName}" width="180" height="120"></canvas>
                 `;
@@ -113,16 +109,13 @@
         function drawTemperatureChart(forecastData, canvasId) {
             const ctx = document.getElementById(canvasId).getContext('2d');
 
-            // 获取当前时间
+            // 获取当天的数据
             const currentTime = new Date();
-
-            // 只保留当天的预测数据
             const filteredData = forecastData.filter(item => {
                 const forecastTime = new Date(item.dt * 1000);
                 return forecastTime.getDate() === currentTime.getDate() &&
                        forecastTime.getMonth() === currentTime.getMonth() &&
-                       forecastTime.getFullYear() === currentTime.getFullYear() &&
-                       forecastTime <= currentTime;
+                       forecastTime.getFullYear() === currentTime.getFullYear();
             });
 
             const labels = filteredData.map(item => new Date(item.dt * 1000).getHours() + ':00');
@@ -133,7 +126,6 @@
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: '温度变化',
                         data: temperatures,
                         borderColor: '#ffcc00',
                         backgroundColor: 'rgba(255, 204, 0, 0.2)',
@@ -146,21 +138,11 @@
                     maintainAspectRatio: false,
                     scales: {
                         x: {
-                            title: {
-                                display: true,
-                                text: '时间 (小时)',
-                                color: '#ffffff',
-                            },
                             ticks: {
                                 color: '#ffffff',
                             }
                         },
                         y: {
-                            title: {
-                                display: true,
-                                text: '温度 (°C)',
-                                color: '#ffffff',
-                            },
                             ticks: {
                                 color: '#ffffff',
                             }
@@ -168,9 +150,7 @@
                     },
                     plugins: {
                         legend: {
-                            labels: {
-                                color: '#ffffff',
-                            }
+                            display: false
                         }
                     }
                 }
@@ -187,10 +167,6 @@
     </script>
 </body>
 </html>
-
-
-
-
 
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
 ## 个人/For Me
