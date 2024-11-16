@@ -3,7 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>实时天气信息展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+
+        .weather-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto; /* 确保在窗口小的时候可以滚动 */
+        }
+
+        .weather-box {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            flex: 0 0 auto; /* 确保每个 weather-box 宽度保持固定，不会压缩 */
+        }
+
+        .weather-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .weather-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+    </style>
 </head>
 <body>
     <h1>实时天气信息</h1>
@@ -15,9 +59,48 @@
     </div>
 
     <!-- 引入 JavaScript 文件 -->
-    <script src="weather.js"></script>
+    <script>
+        async function getWeather(cityName, elementId, displayName) {
+            const apiKey = 'YOUR_API_KEY'; // 将 YOUR_API_KEY 替换为你实际的 API 密钥
+            const proxyUrl = 'https://corsproxy.io/?'; // 使用 CORS 代理绕过跨域问题
+            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('无法获取天气数据');
+                }
+
+                const data = await response.json();
+                const weatherInfo = `
+                    <div class="weather-title">${displayName}</div>
+                    <p>温度: ${data.main.temp}°C</p>
+                    <p>天气: ${data.weather[0].description}</p>
+                    <p>湿度: ${data.main.humidity}%</p>
+                    <p>风速: ${data.wind.speed} m/s</p>
+                    <p>气压: ${data.main.pressure} hPa</p>
+                    <p>能见度: ${(data.visibility / 1000).toFixed(1)} km</p>
+                    <p>日出: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
+                    <p>日落: ${new Date(data.sys.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
+                `;
+                document.getElementById(elementId).innerHTML = weatherInfo;
+            } catch (error) {
+                console.error('获取天气数据失败:', error);
+                document.getElementById(elementId).innerText = '天气信息获取失败';
+            }
+        }
+
+        // 使用 window.onload 确保页面加载完毕后再执行
+        window.onload = function() {
+            getWeather('Yangquan', 'weather-yangquan', '阳泉');  // 阳泉
+            getWeather('Beijing', 'weather-beijing', '北京');    // 北京
+            getWeather('Shanghai', 'weather-shanghai', '上海');  // 上海
+            getWeather('Tokyo', 'weather-tokyo', '东京');        // 东京
+        };
+    </script>
 </body>
 </html>
+
 
 ## 个人/For Me
 [我](https://infoseeker.cn/CV)目前是[同济大学](https://www.tongji.edu.cn/)[海洋与地球科学学院](https://mgg.tongji.edu.cn/)海洋科学系的本科生。2025年9月，我将开始在[北京大学](https://www.pku.edu.cn/)[物理学院](https://www.phy.pku.edu.cn/)[大气与海洋科学系](https://www.atmos.pku.edu.cn/index.htm)攻读博士学位，在那里我将进行行星气候学研究。我目前还在日本东京的[东京科学大学](https://www.isct.ac.jp/en)（前身为[东京工业大学](https://www.titech.ac.jp/english)作为访问学生进行交流。
