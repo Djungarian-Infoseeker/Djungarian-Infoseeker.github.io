@@ -6,14 +6,58 @@
     <title>实时天气信息展示</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
     <style>
-        body { font-family: Arial, sans-serif; background-color: #1a1a1a; color: #ffffff; text-align: center; margin: 0; padding: 20px; }
-        h1 { color: #ffcc00; margin-bottom: 20px; }
-        .weather-container { display: flex; justify-content: space-around; align-items: flex-start; gap: 10px; flex-wrap: nowrap; }
-        .weather-box { background-color: #333; border-radius: 10px; padding: 10px; width: 220px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s; flex: 0 1 auto; }
-        .weather-box:hover { transform: translateY(-5px); }
-        .weather-title { font-size: 1.2em; margin-bottom: 8px; color: #ffcc00; }
-        .weather-details { font-size: 0.8em; margin-bottom: 10px; }
-        canvas { background-color: transparent; margin-top: 5px; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .weather-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: nowrap; /* 保持所有方框在同一行 */
+            overflow-x: auto;
+        }
+
+        .weather-box {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 10px;
+            width: 240px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            flex: 0 0 auto; /* 保持宽度固定 */
+        }
+
+        .weather-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .weather-title {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: #ffcc00;
+        }
+
+        .weather-details {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        canvas {
+            background-color: transparent;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -24,10 +68,10 @@
 
     <!-- JavaScript 用于获取天气数据 -->
     <script>
-        async function getWeatherData(lat, lon, displayName, elementId) {
-            const apiKey = '1550ebde7dead2d2c42f69c899d81984';
+        async function getWeather(cityName, displayName) {
+            const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 您的 API 密钥
             const proxyUrl = 'https://corsproxy.io/?';
-            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&lang=zh_cn&appid=${apiKey}`;
+            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
             try {
                 const response = await fetch(apiUrl);
@@ -36,20 +80,19 @@
                 }
 
                 const data = await response.json();
-                const currentWeather = data.current;
                 const weatherInfo = `
                     <div class="weather-title">${displayName}</div>
                     <div class="weather-details">
-                        <p>温度: ${currentWeather.temp}°C</p>
-                        <p>天气: ${currentWeather.weather[0].description}</p>
-                        <p>湿度: ${currentWeather.humidity}%</p>
-                        <p>风速: ${currentWeather.wind_speed} m/s</p>
-                        <p>气压: ${currentWeather.pressure} hPa</p>
-                        <p>能见度: ${(currentWeather.visibility / 1000).toFixed(1)} km</p>
-                        <p>日出: ${new Date(data.daily[0].sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
-                        <p>日落: ${new Date(data.daily[0].sunset * 1000).toLocaleTimeString('zh-CN')}</p>
+                        <p>温度: ${data.main.temp}°C</p>
+                        <p>天气: ${data.weather[0].description}</p>
+                        <p>湿度: ${data.main.humidity}%</p>
+                        <p>风速: ${data.wind.speed} m/s</p>
+                        <p>气压: ${data.main.pressure} hPa</p>
+                        <p>能见度: ${(data.visibility / 1000).toFixed(1)} km</p>
+                        <p>日出: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
+                        <p>日落: ${new Date(data.sys.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
                     </div>
-                    <canvas id="chart-${elementId}" width="200" height="100"></canvas>
+                    <canvas id="chart-${cityName}" width="200" height="120"></canvas>
                 `;
 
                 const container = document.createElement('div');
@@ -58,7 +101,7 @@
                 document.getElementById('weather-container').appendChild(container);
 
                 // 绘制温度变化图表
-                drawTemperatureChart(data.hourly, `chart-${elementId}`);
+                drawTemperatureChart(cityName, `chart-${cityName}`);
             } catch (error) {
                 console.error('获取天气数据失败:', error);
                 const container = document.createElement('div');
@@ -68,62 +111,94 @@
             }
         }
 
-        function drawTemperatureChart(hourlyData, canvasId) {
-            const ctx = document.getElementById(canvasId).getContext('2d');
+        async function drawTemperatureChart(cityName, canvasId) {
+            const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 您的 API 密钥
+            const proxyUrl = 'https://corsproxy.io/?';
+            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/onecall?lat=${cityLatLng[cityName].lat}&lon=${cityLatLng[cityName].lon}&exclude=minutely,hourly,alerts&units=metric&lang=zh_cn&appid=${apiKey}`;
 
-            // 设置 X 轴标签（小时）和 Y 轴温度数据
-            const labels = [];
-            const temperatures = [];
-
-            hourlyData.forEach((item, index) => {
-                if (index < 24) { // 仅选择今天的数据（24小时）
-                    const forecastTime = new Date(item.dt * 1000);
-                    labels.push(`${forecastTime.getHours()}:00`);
-                    temperatures.push(item.temp);
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('无法获取天气数据');
                 }
-            });
 
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        data: temperatures,
-                        borderColor: '#ffcc00',
-                        backgroundColor: 'rgba(255, 204, 0, 0.2)',
-                        borderWidth: 2,
-                        pointRadius: 3,
-                    }]
-                },
-                options: {
-                    responsive: false,
-                    maintainAspectRatio: false,
-                    scales: {
-                        x: {
-                            ticks: { color: '#ffffff' }
-                        },
-                        y: {
-                            ticks: { color: '#ffffff' },
-                            beginAtZero: false
-                        }
-                    },
-                    plugins: {
-                        legend: { display: false }
+                const data = await response.json();
+                const today = data.daily[0];
+                
+                // 设置 X 轴标签（小时）和 Y 轴温度数据
+                const labels = [];
+                const temperatures = [];
+                const now = new Date();
+
+                // 每小时一个点，从 00:00 到 23:00
+                for (let i = 0; i < 24; i++) {
+                    labels.push(`${i}:00`);
+                    if (now.getHours() >= i) {
+                        temperatures.push(today.temp[i]);
+                    } else {
+                        temperatures.push(null);
                     }
                 }
-            });
+
+                const ctx = document.getElementById(canvasId).getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            data: temperatures,
+                            borderColor: '#ffcc00',
+                            backgroundColor: 'rgba(255, 204, 0, 0.2)',
+                            borderWidth: 2,
+                            pointRadius: 3,
+                        }]
+                    },
+                    options: {
+                        responsive: false,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                ticks: {
+                                    color: '#ffffff',
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    color: '#ffffff',
+                                },
+                                beginAtZero: false,
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('获取温度曲线数据失败:', error);
+            }
         }
+
+        const cityLatLng = {
+            'Yangquan': { lat: 37.85, lon: 113.57 },
+            'Beijing': { lat: 39.90, lon: 116.40 },
+            'Shanghai': { lat: 31.23, lon: 121.47 },
+            'Tokyo': { lat: 35.68, lon: 139.69 }
+        };
 
         // 使用 window.onload 确保页面加载完毕后再执行
         window.onload = function () {
-            getWeatherData(37.85, 113.57, '阳泉', 'yangquan');  // 阳泉
-            getWeatherData(39.90, 116.40, '北京', 'beijing');    // 北京
-            getWeatherData(31.23, 121.47, '上海', 'shanghai');  // 上海
-            getWeatherData(35.68, 139.69, '东京', 'tokyo');     // 东京
+            getWeather('Yangquan', '阳泉');  // 阳泉
+            getWeather('Beijing', '北京');    // 北京
+            getWeather('Shanghai', '上海');  // 上海
+            getWeather('Tokyo', '东京');     // 东京
         };
     </script>
 </body>
 </html>
+
 
 
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
