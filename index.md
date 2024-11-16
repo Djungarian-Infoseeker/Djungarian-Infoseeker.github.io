@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>实时天气信息展示</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
     <style>
         body {
@@ -134,7 +132,6 @@
                     data: {
                         labels: labels,
                         datasets: [{
-                            label: '温度变化',
                             data: temperatures,
                             borderColor: '#ffcc00',
                             borderWidth: 2,
@@ -168,6 +165,13 @@
                         plugins: {
                             legend: {
                                 display: false // 隐藏图例
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.raw}°C`;
+                                    }
+                                }
                             }
                         },
                         layout: {
