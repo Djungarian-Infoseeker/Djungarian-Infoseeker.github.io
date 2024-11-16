@@ -1,16 +1,22 @@
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
-<a class="weatherwidget-io" href="https://forecast7.com/en/39d90n116d40/beijing/" data-label_1="北京" data-label_2="天气" data-theme="original">北京 天气</a>
-<script>
-    !function(d,s,id){
-        var js,fjs=d.getElementsByTagName(s)[0];
-        if(!d.getElementById(id)){
-            js=d.createElement(s);
-            js.id=id;
-            js.src='https://weatherwidget.io/js/widget.min.js';
-            fjs.parentNode.insertBefore(js,fjs);
-        }
-    }(document,'script','weatherwidget-io-js');
-</script>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时天气信息展示</title>
+</head>
+<body>
+    <h1>实时天气信息</h1>
+    <div id="weather-yangquan">阳泉天气加载中...</div>
+    <div id="weather-beijing">北京天气加载中...</div>
+    <div id="weather-shanghai">上海天气加载中...</div>
+    <div id="weather-tokyo">东京天气加载中...</div>
+
+    <!-- 引入 JavaScript 文件 -->
+    <script src="weather.js"></script>
+</body>
+</html>
 
 
 
