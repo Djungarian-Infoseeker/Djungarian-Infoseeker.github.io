@@ -54,9 +54,9 @@
         }
 
         canvas {
-            background-color: #fff;
+            margin: 10px auto; /* 居中对齐 */
+            display: block;
             border-radius: 5px;
-            margin-top: 5px;
         }
     </style>
 </head>
@@ -86,6 +86,11 @@
                         <p>温度: ${data.main.temp}°C</p>
                         <p>天气: ${data.weather[0].description}</p>
                         <p>湿度: ${data.main.humidity}%</p>
+                        <p>风速: ${data.wind.speed} m/s</p>
+                        <p>气压: ${data.main.pressure} hPa</p>
+                        <p>能见度: ${(data.visibility / 1000).toFixed(1)} km</p>
+                        <p>日出: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString('zh-CN')}</p>
+                        <p>日落: ${new Date(data.sys.sunset * 1000).toLocaleTimeString('zh-CN')}</p>
                     </div>
                     <canvas id="chart-${cityName}" width="150" height="100"></canvas>
                 `;
@@ -132,9 +137,9 @@
                             label: '温度变化',
                             data: temperatures,
                             borderColor: '#ffcc00',
-                            backgroundColor: 'rgba(255, 204, 0, 0.2)',
-                            borderWidth: 1,
-                            pointRadius: 2,
+                            borderWidth: 2,
+                            pointRadius: 3,
+                            backgroundColor: 'rgba(255, 204, 0, 0)', // 设置背景为透明
                         }]
                     },
                     options: {
@@ -164,6 +169,14 @@
                             legend: {
                                 display: false // 隐藏图例
                             }
+                        },
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 10,
+                                bottom: 10
+                            }
                         }
                     }
                 });
@@ -182,6 +195,7 @@
     </script>
 </body>
 </html>
+
 
 
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">

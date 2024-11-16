@@ -19,6 +19,7 @@
     <strong style="font-size: 20px;">Study</strong><br>
     <a href="https://www.complexity-explorables.org/" target="_blank" style="text-decoration: underline;">Complexity Explorables</a><br>
     <a href="https://browser.dataspace.copernicus.eu/" target="_blank" style="text-decoration: underline;">Copernitis Browser (Sentinel-2 satellite data)</a><br>
+    <a href="https://zh.weatherspark.com/" target="_blank" style="text-decoration: underline;">Weather Spark</a><br>
     </td>
 </tr>
 <tr>
