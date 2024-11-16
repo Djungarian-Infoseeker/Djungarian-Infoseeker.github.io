@@ -66,9 +66,19 @@
 
     <!-- JavaScript 用于获取天气数据 -->
     <script>
+        const cityNames = [
+            { cityName: 'Yangquan', displayName: '阳泉' },
+            { cityName: 'Beijing', displayName: '北京' },
+            { cityName: 'Shanghai', displayName: '上海' },
+            { cityName: 'Tokyo', displayName: '东京' }
+        ];
+
+        const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 您的 API 密钥
+        const proxyUrl = 'https://corsproxy.io/?';
+        let minTemp = Infinity; // 记录所有城市中最低温度
+        let maxTemp = -Infinity; // 记录所有城市中最高温度
+
         async function getWeather(cityName, displayName) {
-            const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 您的 API 密钥
-            const proxyUrl = 'https://corsproxy.io/?';
             const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
             try {
@@ -99,7 +109,7 @@
                 document.getElementById('weather-container').appendChild(container);
 
                 // 绘制温度变化图表
-                drawTemperatureChart(cityName);
+                await drawTemperatureChart(cityName);
             } catch (error) {
                 console.error('获取天气数据失败:', error);
                 const container = document.createElement('div');
@@ -110,8 +120,6 @@
         }
 
         async function drawTemperatureChart(cityName) {
-            const apiKey = '1550ebde7dead2d2c42f69c899d81984'; // 您的 API 密钥
-            const proxyUrl = 'https://corsproxy.io/?';
             const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
 
             try {
@@ -123,78 +131,98 @@
                 const data = await response.json();
                 const forecastData = data.list;
 
-                const ctx = document.getElementById(`chart-${cityName}`).getContext('2d');
-                const labels = forecastData.slice(0, 8).map(item => new Date(item.dt * 1000).getHours() + ':00');
                 const temperatures = forecastData.slice(0, 8).map(item => item.main.temp);
-
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: labels,
-                        datasets: [{
-                            data: temperatures,
-                            borderColor: '#ffcc00',
-                            borderWidth: 2,
-                            pointRadius: 3,
-                            backgroundColor: 'rgba(255, 204, 0, 0)', // 设置背景为透明
-                        }]
-                    },
-                    options: {
-                        responsive: false,
-                        maintainAspectRatio: false,
-                        scales: {
-                            x: {
-                                display: true,
-                                ticks: {
-                                    color: '#ffffff',
-                                },
-                                grid: {
-                                    display: false
-                                }
-                            },
-                            y: {
-                                display: true,
-                                ticks: {
-                                    color: '#ffffff',
-                                },
-                                grid: {
-                                    color: 'rgba(255, 255, 255, 0.2)'
-                                }
-                            }
-                        },
-                        plugins: {
-                            legend: {
-                                display: false // 隐藏图例
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        return `${context.raw}°C`;
-                                    }
-                                }
-                            }
-                        },
-                        layout: {
-                            padding: {
-                                left: 10,
-                                right: 10,
-                                top: 10,
-                                bottom: 10
-                            }
-                        }
-                    }
+                temperatures.forEach(temp => {
+                    if (temp < minTemp) minTemp = temp;
+                    if (temp > maxTemp) maxTemp = temp;
                 });
+
+                // 当所有城市的数据都获取完之后再绘制图表
+                if (--pendingRequests === 0) {
+                    cityNames.forEach(({ cityName }) => drawChart(cityName));
+                }
             } catch (error) {
                 console.error('获取温度曲线数据失败:', error);
             }
         }
 
+        function drawChart(cityName) {
+            const ctx = document.getElementById(`chart-${cityName}`).getContext('2d');
+            const apiUrl = `${proxyUrl}https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&lang=zh_cn&appid=${apiKey}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const labels = data.list.slice(0, 8).map(item => new Date(item.dt * 1000).getHours() + ':00');
+                    const temperatures = data.list.slice(0, 8).map(item => item.main.temp);
+
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                data: temperatures,
+                                borderColor: '#ffcc00',
+                                borderWidth: 2,
+                                pointRadius: 3,
+                                backgroundColor: 'rgba(255, 204, 0, 0)', // 设置背景为透明
+                            }]
+                        },
+                        options: {
+                            responsive: false,
+                            maintainAspectRatio: false,
+                            scales: {
+                                x: {
+                                    display: true,
+                                    ticks: {
+                                        color: '#ffffff',
+                                    },
+                                    grid: {
+                                        display: false
+                                    }
+                                },
+                                y: {
+                                    display: true,
+                                    ticks: {
+                                        color: '#ffffff',
+                                    },
+                                    grid: {
+                                        color: 'rgba(255, 255, 255, 0.2)'
+                                    },
+                                    min: minTemp,
+                                    max: maxTemp
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    display: false // 隐藏图例
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function (context) {
+                                            return `${context.raw}°C`;
+                                        }
+                                    }
+                                }
+                            },
+                            layout: {
+                                padding: {
+                                    left: 10,
+                                    right: 10,
+                                    top: 10,
+                                    bottom: 10
+                                }
+                            }
+                        }
+                    });
+                });
+        }
+
+        let pendingRequests = cityNames.length;
+
         // 使用 window.onload 确保页面加载完毕后再执行
         window.onload = function () {
-            getWeather('Yangquan', '阳泉');  // 阳泉
-            getWeather('Beijing', '北京');    // 北京
-            getWeather('Shanghai', '上海');  // 上海
-            getWeather('Tokyo', '东京');     // 东京
+            cityNames.forEach(({ cityName, displayName }) => getWeather(cityName, displayName));
         };
     </script>
 </body>
