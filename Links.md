@@ -76,4 +76,10 @@
     <a href="https://agupubs.onlinelibrary.wiley.com/journal/19448007?journalRedirectCheck=true" target="_blank" style="text-decoration: underline;">Geophysical Research Letters</a><br>
     </td>
 </tr>
+<tr>
+    <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
+    <strong style="font-size: 20px;">Others</strong><br>
+    <a href="https://tokyotechtoresen.wixsite.com/toresen/" target="_blank" style="text-decoration: underline;">Science Tokyo's GYM</a><br>
+    </td>
+</tr>
 </table>
