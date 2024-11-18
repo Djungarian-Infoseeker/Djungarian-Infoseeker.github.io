@@ -8,14 +8,15 @@
             font-family: Arial, sans-serif;
             background-color: #1a1a1a;
             color: #ffffff;
-            text-align: center;
             margin: 0;
             padding: 20px;
+            text-align: left; /* 修改为左对齐 */
         }
 
         h1 {
             color: #ffcc00;
             margin-bottom: 20px;
+            text-align: center; /* 保持标题居中 */
         }
 
         .weather-container {
@@ -34,6 +35,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
             flex: 0 1 auto;
+            text-align: left; /* 确保天气信息左对齐 */
         }
 
         .weather-box:hover {
@@ -227,6 +229,7 @@
     </script>
 </body>
 </html>
+
 
 
 <img src="{{site.baseurl}}/evolution.jpg" alt="Evolution Image">
