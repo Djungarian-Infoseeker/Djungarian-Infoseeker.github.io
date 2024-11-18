@@ -248,4 +248,5 @@ I was born and raised in Yangquan, an industrial and mining city in Shanxi Provi
 During my childhood and teenage years, I had a wide range of interests, which have continued to benefit me to this day. In the online community, I have been active under the name "Djungarian" in various groups related to water lilies, YTPMVs (OtoMAD), astronomy, Qing dynasty history, pets, and antique collecting. I chose this username because, when I registered for QQ in 2010, I was fascinated by raising hamsters. Among the scientific names of various hamster species, only "Djungarian" (later standardized as *Phodopus sungorus*, the short-tailed dwarf hamster) had a suitable length and didn't sound as odd as the others. Though I attempted to change my username several times over the years, this was my very first name, and I ultimately kept it—sometimes, you just can't fight the inevitable!
 
 ### 研究领域/Research Areas
-- **行星宜居带外侧气候研究/Outer boundary of the habitable zone of planetary climate**
+- **宜居带外边界行星气候动力理论与模拟/Theory and Simulation of Planetary Climate Dynamics at the Outer Edge of the Habitable Zone**
+- **系外行星高层大气的观测/Observations of the Upper Atmosphere of Exoplanets**
