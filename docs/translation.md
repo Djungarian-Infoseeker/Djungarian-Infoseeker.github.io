@@ -1,1 +1,1 @@
-- [什么是行星气候学？/What is Planetary Climate?（祖师爷Pierrehumbet的行星气候学教材第一章中文翻译/The Chinese Translation of Chapter 1 from the Planetary Climatology Textbook by My Academic Grandmaster Pierrehumbert）](https://infoseeker.cn/docs/translation/planetaryclimate) 2024年11月18日 <a href="https://users.physics.ox.ac.uk/~pierrehumbert/PrinciplesPlanetaryClimate/index.html" target="_blank" style="text-decoration: underline;">原文链接
+meiyou

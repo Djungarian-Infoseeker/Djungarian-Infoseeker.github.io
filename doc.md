@@ -11,8 +11,9 @@
 # 专业学习 / Academic Learning
 - [CESM1.2.1学习 / CESM1.2.1 Learning](https://infoseeker.cn/docs/CESM1.2.1Learning)<span style="color:red;">（更新日期2024/11/15，未完结）</span>
 - [自学气候动力学 / SelfStudying Climate Dynamics](https://infoseeker.cn/docs/ClimateDynamic)<span style="color:orange;">（还未开始）</span>
-- [翻译文章 / Translations](https://infoseeker.cn/docs/translation)<span style="color:red;">（更新日期2024/11/19）</span>
+- [翻译文章 / Translations](https://infoseeker.cn/docs/translation)<span style="color:orange;">（还未开始）</span>
 - [如何在CESM1里的Aquaplanet模拟中开启slab ocean模块中文版本（作者：Brian Medeiros） / Aquaplanets with slab ocean in CESM1（Brian Medeiros November13,2013）](https://infoseeker.cn/docs/Aquaplanets with slab ocean in CESM1)<span style="color:green;">（更新日期2024/11/15，已完结）</span>
+- [什么是行星气候学？/What is Planetary Climate?（祖师爷Pierrehumbet的行星气候学教材第一章中文翻译/The Chinese Translation of Chapter 1 from the Planetary Climatology Textbook by My Academic Grandmaster Pierrehumbert）](https://infoseeker.cn/docs/translation/planetaryclimate) 2024年11月18日 <a href="https://users.physics.ox.ac.uk/~pierrehumbert/PrinciplesPlanetaryClimate/index.html" target="_blank" style="text-decoration: underline;">原文链接
 # 资料 / Resources
 - [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)<span style="color:green;">（更新日期2024/10/20）</span>
 
