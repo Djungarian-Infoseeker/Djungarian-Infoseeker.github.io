@@ -23,7 +23,19 @@
 
     <h2>2. 基本水星球配置</h2>
     <p>在这个示例中，我们将设置一个没有海冰的水星球配置，并使用平板海洋模型。使用的是1.9°网格上的FV动力核心与CAM5物理模块，且使用了指定的气溶胶模型。</p>
+    2.0 创建新案例
     <pre><code>./create_newcase -compset FC5AQUAP -res f19_f19 --mach sugon --compiler intel -case /work/home/yinjiewang/slab_ocean/slab_aquaplanet_case</code></pre>
+
+参数说明:
+- `-compset FC5AQUAP`：选择组件集合，代表水星实验（Aquaplanet）配置。
+- `-res f19_f19`：指定网格分辨率为 1.9° × 2.5°（96 × 144 点）。
+- `--mach sugon`：指定 Sugon 计算平台。
+- `--compiler intel`：使用 Intel 编译器。
+- `-case /work/home/yinjiewang/slab_ocean/slab_aquaplanet_case`：指定案例存储路径。
+创建完成后，进入案例目录：
+
+<pre><code>cd /work/home/yinjiewang/slab_ocean/slab_aquaplanet_case</code></pre>
+<pre><code>./case.setup</code></pre>
     <h3>2.1 网格定义</h3>
   <p>我选择将网格设置硬编码到模型（CESM1.2）中，虽然也有其他方法可以实现相同的效果。在此案例中，我修改了 <code>config_grid.xml</code> 文件，以包含新的配置：</p>
 
