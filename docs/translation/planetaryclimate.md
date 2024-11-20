@@ -30,7 +30,9 @@
     <li><a href="#section14">进一步阅读</a></li>
   </ul>
 </div>
-
+本文是我的学术祖师爷Pierrehumbet（我的导师的导师的导师），所著《Principles of Planetary Climate》教材的第一章中文翻译.适用于了解古气候与行星气候学入门者，我使用了GPT-4o进行翻译以自用。
+该教材购买链接：<a href="https://users.physics.ox.ac.uk/~pierrehumbert/PrinciplesPlanetaryClimate/index.html" target="_blank" style="text-decoration: underline;">购买链接
+网络试读版本（翻译版素材来源）：<a href="https://jvarekamp.web.wesleyan.edu/CO2/ClimateVol1.pdf" target="_blank" style="text-decoration: underline;">试读版本
 
 # 1.1 概述
 
