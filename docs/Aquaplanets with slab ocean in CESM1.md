@@ -27,11 +27,12 @@
   <p>我选择将网格设置硬编码到模型（CESM1.2）中，虽然也有其他方法可以实现相同的效果。在此案例中，我修改了 <code>config_grid.xml</code> 文件，以包含新的配置：</p>
 
 <pre><code>
-<GRID \
-  sname="1.9x2.5_1.9x2.5_AQUA" \
-  alias="f19_f19_AQUA" \
-  compset="(DOCN|XOCN|SOCN|AQUAP)">a%1.9x2.5_l%1.9x2.5_oi%1.9x2.5_r%r05_m%null_g%null_w%null \
+<GRID 
+  sname="1.9x2.5_gx1v6_r01" 
+  alias="f19_g16_r01" 
+  compset="(DOCN|XOCN|SOCN|AQUAP)">a%1.9x2.5_l%1.9x2.5_oi%gx1v6_r%r01_m%gx1v6_g%null_w%null
 </GRID>
+
 </code></pre>
 
 
@@ -42,7 +43,7 @@
     &lt;OCN_DOMAIN_FILE&gt;UNSET&lt;/OCN_DOMAIN_FILE&gt;
 &lt;/griddom&gt;</code></pre>
 
-    <p>（<code>config_grid.xml</code> 文件位于 <code>cesm1_2_1/scripts/ccsm_utils/Case.template</code> 目录下。）</p>
+    <p>（<code>config_grid.xml</code> 文件位于 <code>ccsm_utils/Case.template 目录下。）</p>
 
     <h3>2.2 新的使用案例</h3>
     <p>目前已有一些适用于水星球的CAM用例，它们在大多数情况下运行良好。然而，当应用平板海洋时，这些用例不能直接使用，因为 <code>aqua_planet</code> 命名列表参数会触发海洋组件使用分析SST代码。为了解决这个问题，可以将水星球的用例复制到一个新的用例文件，并删除 <code>aqua_planet</code> 选项（或将其设置为 <code>false</code>）。这些用例只是存储在模型目录 <code>cesm1_2_1/models/atm/cam/bld/namelist_files/use_cases</code> 中的命名列表参数。</p>
@@ -60,7 +61,7 @@
 
     <p>在没有海冰的示例配置中，我还希望使用“传统”的水星球设置，即常年春分的轨道参数。这是通过在 <code>user_nl_cpl</code> 命名列表中设置以下值来实现的：</p>
 
-    <pre><code>user_nl_cpl
+    <pre><code>
 orb_eccen = 0.
 orb_obliq = 0.
 orb_mvelp = 0.
@@ -70,7 +71,7 @@ orb_mode = ‘fixed_parameters’</code></pre>
 
     <p>此外，由于示例中使用的是CAM5物理模块，我们还需要决定如何处理气溶胶。一个选择是使用“整体气溶胶”模型。我们可以在 <code>user_nl_cam</code> 命名列表中做如下更改：</p>
 
-    <pre><code>user_nl_cam
+    <pre><code>
 prescribed_aero_model = ‘bulk’
 bnd_topo = ‘/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/USGS-gtopo_aquaplanet_1.9x2.5.nc’</code></pre>
 
@@ -81,36 +82,54 @@ bnd_topo = ‘/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/U
 
     <p>要运行平板海洋模型，还需要两个文件。第一个是域文件，在数据海洋命名列表中指定，该文件指定哪些网格点为海洋和陆地。为了构建水星球版本，修改了现有文件以去除陆地。第二个是“强迫”文件，指定海洋层的深度和温度以及“qflux”。在这个示例中，我提供了一个版本，其中混合层深度为50米，温度为288K，并且没有qflux。</p>
 
-    <pre><code>user_nl_docn
+    <pre><code>
 domainfile = ‘/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/domain.ocn.1.9x2.5_aquaplanet.nc’</code></pre>
 
     <p>强迫文件在名为 <code>user_docn.streams.txt.som</code> 的文件中指定。该文件的内容可以从以前的平板海洋案例中复制。在这个示例中，文件内容如下：</p>
+<pre><code>&lt;dataSource&gt;
+  GENERIC
+&lt;/dataSource&gt;
+&lt;domainInfo&gt;
+  &lt;variableNames&gt;
+    time    time
+    xc      lon
+    yc      lat
+    area    area
+    mask    mask
+  &lt;/variableNames&gt;
+  &lt;filePath&gt;
+    /glade/scratch/brianpm
+  &lt;/filePath&gt;
+  &lt;fileNames&gt;
+    cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
+  &lt;/fileNames&gt;
+&lt;/domainInfo&gt;
+&lt;fieldInfo&gt;
+  &lt;variableNames&gt;
+    T       t
+    S       s
+    U       u
+    V       v
+    dhdx    dhdx
+    dhdy    dhdy
+    hblt    h
+    qdp     qbot
+  &lt;/variableNames&gt;
+  &lt;filePath&gt;
+    /glade/scratch/brianpm
+  &lt;/filePath&gt;
+  &lt;fileNames&gt;
+    cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
+  &lt;/fileNames&gt;
+  &lt;offset&gt;
+    0
+  &lt;/offset&gt;
+&lt;/fieldInfo&gt;</code></pre>
 
-    <pre><code>user_docn.streams.txt.som
-<dataSource>GENERIC</dataSource>
-<domainInfo>
-<variableNames>
-time time xc yc area mask lon lat area mask
-</variableNames>
-<filePath>/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv</filePath>
-<fileNames>
-pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc
-</fileNames>
-</domainInfo>
-<fieldInfo>
-<variableNames>
-T S U V t s u v dhdx dhdx dhdy dhdy hblt h qdp qbot
-</variableNames>
-<filePath>/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv</filePath>
-<fileNames>
-pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc
-</fileNames>
-<offset>0</offset>
-</fieldInfo></code></pre>
 
     <p>我们还需要在 <code>env_run.xml</code> 中指定我们的新用例：</p>
 
-    <pre><code>env_run.xml
+    <pre><code>
 &lt;entry id="CAM_NML_USE_CASE" value="SOM_aquaplanet_cam5" /&gt;
 &lt;entry id="DOCN_SOM_FILENAME" value="/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc" /&gt;</code></pre>
 
