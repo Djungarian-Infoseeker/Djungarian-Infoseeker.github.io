@@ -23,19 +23,6 @@
 
     <h2>2. 基本水星球配置</h2>
     <p>在这个示例中，我们将设置一个没有海冰的水星球配置，并使用平板海洋模型。使用的是1.9°网格上的FV动力核心与CAM5物理模块，且使用了指定的气溶胶模型。</p>
-    2.0 创建新案例
-    <pre><code>./create_newcase -compset FC5AQUAP -res f19_f19 --mach sugon --compiler intel -case /work/home/yinjiewang/slab_ocean/slab_aquaplanet_case</code></pre>
-
-参数说明:
-- `-compset FC5AQUAP`：选择组件集合，代表水星实验（Aquaplanet）配置。
-- `-res f19_f19`：指定网格分辨率为 1.9° × 2.5°（96 × 144 点）。
-- `--mach sugon`：指定 Sugon 计算平台。
-- `--compiler intel`：使用 Intel 编译器。
-- `-case /work/home/yinjiewang/slab_ocean/slab_aquaplanet_case`：指定案例存储路径。
-创建完成后，进入案例目录：
-
-<pre><code>cd /work/home/yinjiewang/slab_ocean/slab_aquaplanet_case</code></pre>
-<pre><code>./case.setup</code></pre>
     <h3>2.1 网格定义</h3>
   <p>我选择将网格设置硬编码到模型（CESM1.2）中，虽然也有其他方法可以实现相同的效果。在此案例中，我修改了 <code>config_grid.xml</code> 文件，以包含新的配置：</p>
 
@@ -59,11 +46,11 @@
     <h3>2.3 设置案例</h3>
     <p>第一步是创建案例，和往常一样。我们可以使用CESM的选项来即时创建一个包含大气和平板海洋模型的配置集，同时为所有其他组件提供存根。这样就排除了海冰，但稍后我们会讨论如何处理海冰。</p>
 
-    <pre><code>./create_newcase -case /work/home/yinjiewang/slab_aquaplanet_case -user_compset 2000_CAM5_SLND_SICE_DOCN%SOM_SROF_SGLC_SWAV -res f19_f19_AQUA -mach sugon</code></pre>
+    <pre><code>./create_newcase -case /work/home/yinjiewang/slab_ocean/slab_aquaplanet_case -user_compset 2000_CAM5_SLND_SICE_DOCN%SOM_SROF_SGLC_SWAV -res f19_f19_AQUA -mach sugon</code></pre>
 
     <p>到此为止，我们已经准备好设置案例：</p>
 
-    <pre><code>cd /work/home/yinjiewang/slab_aquaplanet_case
+    <pre><code>cd /work/home/yinjiewang/slab_ocean/slab_aquaplanet_case
 ./cesm_setup</code></pre>
 
     <p>在没有海冰的示例配置中，我还希望使用“传统”的水星球设置，即常年春分的轨道参数。这是通过在 <code>user_nl_cpl</code> 命名列表中设置以下值来实现的：</p>
