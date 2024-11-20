@@ -43,7 +43,7 @@
     &lt;OCN_DOMAIN_FILE&gt;UNSET&lt;/OCN_DOMAIN_FILE&gt;
 &lt;/griddom&gt;</code></pre>
 
-    <p>（<code>config_grid.xml</code> 文件位于 <code>ccsm_utils/Case.template 目录下。）</p>
+    <p>（<code>config_grid.xml</code> 文件位于 <code>ccsm_utils/Case.template</code> 目录下。）</p>
 
     <h3>2.2 新的使用案例</h3>
     <p>目前已有一些适用于水星球的CAM用例，它们在大多数情况下运行良好。然而，当应用平板海洋时，这些用例不能直接使用，因为 <code>aqua_planet</code> 命名列表参数会触发海洋组件使用分析SST代码。为了解决这个问题，可以将水星球的用例复制到一个新的用例文件，并删除 <code>aqua_planet</code> 选项（或将其设置为 <code>false</code>）。这些用例只是存储在模型目录 <code>cesm1_2_1/models/atm/cam/bld/namelist_files/use_cases</code> 中的命名列表参数。</p>
