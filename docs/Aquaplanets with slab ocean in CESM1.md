@@ -73,18 +73,19 @@ orb_mode = 'fixed_parameters'
     <p>此外，由于示例中使用的是CAM5物理模块，我们还需要决定如何处理气溶胶。一个选择是使用“整体气溶胶”模型。我们可以在 <code>user_nl_cam</code> 命名列表中做如下更改：</p>
 
     <pre><code>
-prescribed_aero_model = ‘bulk’
-bnd_topo = ‘/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/USGS-gtopo_aquaplanet_1.9x2.5.nc’</code></pre>
+prescribed_aero_model = 'bulk'
+bnd_topo = '/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/USGS-gtopo_aquaplanet_1.9x2.5.nc'</code></pre>
 
     <p>在继续之前，我们还需要确保在模型配置期间识别气溶胶选择，并在 <code>env_build.xml</code> 文件中提供：</p>
 
     <pre><code>env_build.xml
-&lt;entry id="CAM_CONFIG_OPTS" value="-phys cam5-chem none" /&gt;</code></pre>
+&lt;entry id="CAM_CONFIG_OPTS" value="-phys cam5 -chem none" /&gt;</code></pre>
 
-    <p>要运行平板海洋模型，还需要两个文件。第一个是域文件，在数据海洋命名列表中指定，该文件指定哪些网格点为海洋和陆地。为了构建水星球版本，修改了现有文件以去除陆地。第二个是“强迫”文件，指定海洋层的深度和温度以及“qflux”。在这个示例中，我提供了一个版本，其中混合层深度为50米，温度为288K，并且没有qflux。</p>
+    <p>要运行平板海洋模型，还需要两个文件。第一个是域文件，在数据海洋命名列表中指定，该文件指定哪些网格点为海洋和陆地。为了构建水星球版本，修改了现有文件以去除陆地。第二个是“强迫”文件，指定海洋层的深度和温度以及“qflux”。在这个示例中，我提供了一个版本，其中混合层深度为50米，温度为288K，并且没有qflux。在user_nl_docn中我们指定domainfile为：
+    </p>
 
     <pre><code>
-domainfile = ‘/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/domain.ocn.1.9x2.5_aquaplanet.nc’</code></pre>
+domainfile = '/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/domain.ocn.1.9x2.5_aquaplanet.nc'</code></pre>
 
     <p>强迫文件在名为 <code>user_docn.streams.txt.som</code> 的文件中指定。该文件的内容可以从以前的平板海洋案例中复制。在这个示例中，文件内容如下：</p>
 <pre><code>&lt;dataSource&gt;
@@ -99,10 +100,10 @@ domainfile = ‘/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv
     mask    mask
   &lt;/variableNames&gt;
   &lt;filePath&gt;
-    /glade/scratch/brianpm
+    /work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv
   &lt;/filePath&gt;
   &lt;fileNames&gt;
-    cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
+    pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc
   &lt;/fileNames&gt;
 &lt;/domainInfo&gt;
 &lt;fieldInfo&gt;
@@ -117,10 +118,10 @@ domainfile = ‘/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv
     qdp     qbot
   &lt;/variableNames&gt;
   &lt;filePath&gt;
-    /glade/scratch/brianpm
+    /work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv
   &lt;/filePath&gt;
   &lt;fileNames&gt;
-    cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
+    pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc
   &lt;/fileNames&gt;
   &lt;offset&gt;
     0
