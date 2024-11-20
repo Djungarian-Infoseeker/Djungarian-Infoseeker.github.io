@@ -143,11 +143,11 @@ domainfile = '/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/d
     <p>在水星球使用平板海洋模型时，主要问题是动态海冰模型。本质上，海冰动力学只能在位移极点网格（如 gx1v6）上运行。当移除陆地后，极点暴露，海冰模型因此失效。在上述示例中，我们在与大气相同的网格上运行了平板海洋模型，但未包含海冰模型。</p>
     <p>如果在水星球设置中需要海冰，目前唯一可行的选项是以热力模式运行海冰。实现这一目标的一种方法是设置一个类似 AMIP 的案例，然后修改海冰以使用热力学代码。</p>
 
-    <pre><code>create_newcase -case /glade/scratch/[case] -compset F_2000 -res f19_f19 -mach yellowstone</code></pre>
+    <pre><code> ./create_newcase -case /work/home/yinjiewang/slab_ocean/slab_aquaplanet_iced_case -compset F_2000 -res f19_f19 -mach sugon</code></pre>
 
     <p>接下来编辑 <code>user_nl_cice</code> 文件：</p>
 
-    <pre><code>user_nl_cice
+    <pre><code>
 kitd = 1
 prescribed_ice = .false.
 tr_aero = .true.
