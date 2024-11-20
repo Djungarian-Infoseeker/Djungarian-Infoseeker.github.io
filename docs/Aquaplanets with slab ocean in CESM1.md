@@ -65,7 +65,8 @@
 orb_eccen = 0.
 orb_obliq = 0.
 orb_mvelp = 0.
-orb_mode = ‘fixed_parameters’</code></pre>
+orb_mode = 'fixed_parameters'
+</code></pre>
 
     <p>我们还需要对CAM的命名列表进行一些更改。首先，由于没有激活 <code>aqua_planet</code> 命名列表参数，因此在编译时不会触发一些便利代码。最重要的变化是没有设置表面重力势为零。我们可以通过提供一个修改后的地形边界条件文件来避免修改代码，将其设置为零。</p>
 
