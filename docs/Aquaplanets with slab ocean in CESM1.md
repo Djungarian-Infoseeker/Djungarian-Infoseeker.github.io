@@ -67,7 +67,7 @@ orb_mode = ‘fixed_parameters’</code></pre>
 
     <pre><code>user_nl_cam
 prescribed_aero_model = ‘bulk’
-bnd_topo = ‘/glade/scratch/brianpm/AQUA_TOPO.nc’</code></pre>
+bnd_topo = ‘/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/USGS-gtopo_aquaplanet_1.9x2.5.nc’</code></pre>
 
     <p>在继续之前，我们还需要确保在模型配置期间识别气溶胶选择，并在 <code>env_build.xml</code> 文件中提供：</p>
 
@@ -77,7 +77,7 @@ bnd_topo = ‘/glade/scratch/brianpm/AQUA_TOPO.nc’</code></pre>
     <p>要运行平板海洋模型，还需要两个文件。第一个是域文件，在数据海洋命名列表中指定，该文件指定哪些网格点为海洋和陆地。为了构建水星球版本，修改了现有文件以去除陆地。第二个是“强迫”文件，指定海洋层的深度和温度以及“qflux”。在这个示例中，我提供了一个版本，其中混合层深度为50米，温度为288K，并且没有qflux。</p>
 
     <pre><code>user_nl_docn
-domainfile = ‘/glade/scratch/brianpm/domain.ocn.1.9x2.5_AQUAPLANET.nc’</code></pre>
+domainfile = ‘/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/domain.ocn.1.9x2.5_aquaplanet.nc’</code></pre>
 
     <p>强迫文件在名为 <code>user_docn.streams.txt.som</code> 的文件中指定。该文件的内容可以从以前的平板海洋案例中复制。在这个示例中，文件内容如下：</p>
 
@@ -87,7 +87,7 @@ domainfile = ‘/glade/scratch/brianpm/domain.ocn.1.9x2.5_AQUAPLANET.nc’</code
 <variableNames>
 time time xc yc area mask lon lat area mask
 </variableNames>
-<filePath>/glade/scratch/brianpm</filePath>
+<filePath>/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv</filePath>
 <fileNames>
 cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
 </fileNames>
@@ -96,7 +96,7 @@ cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
 <variableNames>
 T S U V t s u v dhdx dhdx dhdy dhdy hblt h qdp qbot
 </variableNames>
-<filePath>/glade/scratch/brianpm</filePath>
+<filePath>/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fvfind</filePath>
 <fileNames>
 cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
 </fileNames>
