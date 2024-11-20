@@ -11,19 +11,19 @@
     <p><strong>Brian Medeiros</strong><br>
     <strong>November 13, 2013</strong></p>
     <h2>0. 翻译者注</h2>
-    <p>本文由于个人利用需要翻译为中文，从而更为直观的去实现这个内容。与此同时将原作者使用的计算机的一些配置更改为我所使用的sugon计算机的配置，撰写本文以便日后重新检查利用。另外由于作者在模式中所用的forcing文件、topo文件、domain文件在ucar的超级计算机服务器当中，我们没有ucar账户的人是获取不到的，所以用ExoCAM当中的initial_file代替<a href="https://github.com/storyofthewolf/ExoCAM/tree/main/cesm1.2.1/initial_files/cam_aqua_fv" ExoCAM中的initial_file>原文链接：
+    <p>本文由于个人利用需要翻译为中文，从而更为直观的去实现这个内容,但我也修改了很多与我使用情况不太一样的内容。比如将原作者使用的计算机的一些配置更改为我所使用的sugon计算机的配置，撰写本文以便日后重新检查利用。另外由于作者在模式中所用的forcing文件、topo文件、domain文件在ucar的超级计算机服务器当中，我们没有ucar账户的人是获取不到的，所以用ExoCAM当中的initial_file代替<a href="https://github.com/storyofthewolf/ExoCAM/tree/main/cesm1.2.1/initial_files/cam_aqua_fv">ExoCAM中的initial_file</a>
     <a href="https://www2.cesm.ucar.edu/models/simpler-models/files/CAM_aqua_som_description.pdf" download>Aquaplanets with slab ocean in CESM1</a>
     <h2>1. 描述</h2>
     <p>本文档概述了如何在CESM1中配置水星球（Aquaplanet）与平板海洋（slab ocean）模型。本文将介绍所需的边界条件以及如何处理不同选择的选项，如季节变化和海冰的处理方式。当使用CAM5作为大气物理包时，还提供了气溶胶的几种选择，我会简要介绍这些选项。然而，最重要的部分是运行此配置所需的设置步骤。</p>
 
     <h3>1.1 假设</h3>
-    <p>在设置以下示例时，我们做出了一些基本假设。首先，所使用的代码示例是CESM1.2.0，这是写作时的最新版本。我已经验证了这些修改在使用FV动力核心的此版本代码中能够正常工作，这些修改应该也适用于类似版本以及SE动力核心。尽管如此，这些修改后的案例并没有经过严格的审查，可能存在一些遗漏。如果您发现任何重要细节，请告诉我，我会将其添加到这份伪文档中。</p>
+    <p>在设置以下示例时，我们做出了一些基本假设。首先，所使用的代码示例是CESM1.2.1。我已经验证了这些修改在使用FV动力核心的此版本代码中能够正常工作，这些修改应该也适用于类似版本以及SE动力核心。尽管如此，这些修改后的案例并没有经过严格的审查，可能存在一些遗漏。如果您发现任何重要细节，请告诉我，我会将其添加到这份伪文档中。</p>
 
     <p>以下所有内容都使用了CESM的标准脚本工作流，该工作流在CESM教程中有介绍。在接下来的两步中，我做了一些修改，要求在模型代码中具有写入权限，因此，如果您按照这个例子进行操作，需要将模型代码检出到您的个人沙箱中。</p>
 
     <h2>2. 基本水星球配置</h2>
-    <p>在这个示例中，我们将设置一个没有海冰的水星球配置，并使用平板海洋模型。使用的是2°网格上的FV动力核心与CAM5物理模块，且使用了指定的气溶胶模型。</p>
-
+    <p>在这个示例中，我们将设置一个没有海冰的水星球配置，并使用平板海洋模型。使用的是1.9°网格上的FV动力核心与CAM5物理模块，且使用了指定的气溶胶模型。</p>
+    <pre><code>./create_newcase -compset FC5AQUAP -res f19_f19 --mach sugon --compiler intel -case /work/home/yinjiewang/slab_ocean/slab_aquaplanet_case</code></pre>
     <h3>2.1 网格定义</h3>
   <p>我选择将网格设置硬编码到模型（CESM1.2）中，虽然也有其他方法可以实现相同的效果。在此案例中，我修改了 <code>config_grid.xml</code> 文件，以包含新的配置：</p>
 
