@@ -26,9 +26,14 @@
     <h3>2.1 网格定义</h3>
   <p>我选择将网格设置硬编码到模型（CESM1.2）中，虽然也有其他方法可以实现相同的效果。在此案例中，我修改了 <code>config_grid.xml</code> 文件，以包含新的配置：</p>
 
-    <pre><code>&lt;GRID sname="1.9x2.5_1.9x2.5_AQUA" alias="f19_f19_AQUA" compset="(DOCN|XOCN|SOCN|AQUAP)"&gt;
-    a%1.9x2.5_l%1.9x2.5_oi%1.9x2.5_r%r05_m%null_g%null_w%null
-&lt;/GRID&gt;</code></pre>
+<pre><code>
+<GRID \
+  sname="1.9x2.5_1.9x2.5_AQUA" \
+  alias="f19_f19_AQUA" \
+  compset="(DOCN|XOCN|SOCN|AQUAP)">a%1.9x2.5_l%1.9x2.5_oi%1.9x2.5_r%r05_m%null_g%null_w%null \
+</GRID>
+</code></pre>
+
 
     <p>在这里，关键的操作是将海洋网格与大气网格设置为相同的网格。此外，已将掩膜网格设置为 <code>null</code>。在 <code>config_grid.xml</code> 文件的进一步配置中，我还取消了域文件的设置，稍后我们可以通过命名列表来设置这些值。</p>
 
