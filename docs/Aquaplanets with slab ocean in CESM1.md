@@ -197,15 +197,6 @@ kstrength = 0</code></pre>
         <li><code>env_build.xml</code> 应与此处的选择保持一致。</li>
         <li>根据需要修改 <code>[case].run</code> 文件的项目编号和运行时设置。</li>
     </ul>
-
-    <h2>4. 气溶胶（AEROSOL）</h2>
-    <p>在水星球的大气中应使用哪种气溶胶？这一选择是任意的，但可能会影响模拟的某些方面。对于 CAM4 物理模块，有一个更明确的约定，即气溶胶不与辐射相互作用；同时，在 CAM4 中气溶胶也不与云相互作用，因此结果是一个“无气溶胶”的水星球。这是 CFMIP2 水星球实验的推荐做法，遵循 APE。</p>
-    <p>对于 CAM5，气溶胶对云有间接影响，但没有标准方法可以“关闭”气溶胶效应。以下是一些可在 CAM5 水星球配置中应用的选项：</p>
-
-    <pre><code>env_build.xml
-&lt;entry id="CAM_CONFIG_OPTS" value="-phys cam5-chem OPTION" /&gt;</code></pre>
-
-    <p>其中，<code>OPTION</code> 可以填充多个值，但这里需要考虑的只有 <code>none</code> 和 <code>trop_mam3</code>。</p>
 <h2>4. 气溶胶（AEROSOL）</h2>
 <p>在水星球的大气中应使用哪种气溶胶？这一选择是任意的，但可能会影响模拟的某些方面。对于 CAM4 物理模块，有一个更明确的约定，即气溶胶不与辐射相互作用；同时，在 CAM4 中气溶胶也不与云相互作用，因此结果是一个“无气溶胶”的水星球。这是 CFMIP2 水星球实验的推荐做法，遵循 APE。对于 CAM5，气溶胶对云有间接影响，但没有标准方法可以“关闭”气溶胶效应。以下是一些可在 CAM5 水星球配置中应用的选项。每个选项都可以在 <code>env_build.xml</code> 中控制，如下所示：</p>
 
