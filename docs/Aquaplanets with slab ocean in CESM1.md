@@ -89,16 +89,16 @@ time time xc yc area mask lon lat area mask
 </variableNames>
 <filePath>/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv</filePath>
 <fileNames>
-cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
+pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc
 </fileNames>
 </domainInfo>
 <fieldInfo>
 <variableNames>
 T S U V t s u v dhdx dhdx dhdy dhdy hblt h qdp qbot
 </variableNames>
-<filePath>/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fvfind</filePath>
+<filePath>/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv</filePath>
 <fileNames>
-cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
+pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc
 </fileNames>
 <offset>0</offset>
 </fieldInfo></code></pre>
@@ -107,7 +107,7 @@ cam5.som.forcing.aquaplanet.Q0h50m.fv19.nc
 
     <pre><code>env_run.xml
 &lt;entry id="CAM_NML_USE_CASE" value="SOM_aquaplanet_cam5" /&gt;
-&lt;entry id="DOCN_SOM_FILENAME" value="/glade/scratch/brianpm/som.forcing.aquaplanet.Q0h50m.fv19.nc" /&gt;</code></pre>
+&lt;entry id="DOCN_SOM_FILENAME" value="/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc" /&gt;</code></pre>
 
     <p>到这一步，模型可以编译并运行。记得调整账户号码、运行时设置等。</p>
 
