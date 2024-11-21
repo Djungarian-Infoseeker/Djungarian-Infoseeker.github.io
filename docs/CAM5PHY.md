@@ -361,3 +361,414 @@
     </p>
 </body>
 </html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.9.4 冰云光学特性到 4.10 辐射传输</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h2>4.9.4 冰云光学特性 (Ice Cloud Optics)</h2>
+    <p>
+        CAM 5.0 指定了云中的冰水路径、冰云分数和冰粒子的有效直径。
+        冰云的光学特性通过查找表的方式表示，作为辐射代码中短波和长波波段的有效直径的函数。
+    </p>
+    <p>
+        冰云光学特性可以通过两种方法得到：
+    </p>
+    <ol>
+        <li>基于电动力学理论计算单个冰晶的散射特性，然后将其应用于假定的冰粒子尺寸分布 (PSD)，并通过 PSD 的有效直径 (\( D_e \)) 表示 PSD 的光学特性。</li>
+        <li>通过参数化冰粒子形状和尺寸的散射/吸收过程，并将这些表达式在 PSD 上积分，得到 PSD 光学特性的解析表达式。</li>
+    </ol>
+    <p>
+        第二种方法的基础是修改后的异常衍射近似 (MADA)。MADA 明确将冰云的光学特性与冰粒子的 PSD 和形状参数相关联，
+        因为 PSD 的光学特性无法仅通过 \( D_e \) 唯一定义 [Mitchell, 2002]。
+    </p>
+    <p>
+        MADA 是基于 van de Hulst 的异常衍射理论 (ADT) [van de Hulst, 1957] 发展而来的，通过一系列物理见解进行了扩展：
+    </p>
+    <ol>
+        <li>粒子散射特性由粒子投影面积与粒子体积的比值决定，体积定义为粒子质量/冰的体密度 (0.917 g/cm³) [Bryant and Latimer, 1969; Mitchell and Arnott, 1994]。</li>
+        <li>内部反射和折射的过程可以看作是光子路径的延伸，并可通过 MADA 框架参数化 [Mitchell et al., 1996b]。</li>
+        <li>波共振或光子隧穿对吸收和消光的最大贡献可以作为折射率实部的线性函数估算 [Mitchell, 2000]。</li>
+        <li>表面波现象的边缘效应仅与消光相关，可用尺寸参数 \( x \) 表示 [Wu, 1956; Mitchell, 2000]。</li>
+    </ol>
+    <p>
+        这些见解简化了 ADT 并使其解析化，最终得到 PSD 的消光和吸收系数的公式 [Mitchell 和 Arnott, 1994]。
+        MADA 的基本公式可以在 [Mitchell, 2002] 的附录中找到。
+    </p>
+    <p>
+        不对称因子 \( g \) 的计算基于 [Mitchell et al., 1996b] 的光线追踪方法，考虑了冰粒子的形状和尺寸。
+        对于地球辐射，\( g \) 的值基于 [Yang et al., 2005] 提供的参数化方案。
+    </p>
+    <h3>冰云光学特性在 CAM 5.0 中的应用</h3>
+    <p>
+        MADA 的理论没有直接用于 CAM 5.0，而是用于生成一个光学特性查找表，以有效直径 \( D_e \) 为函数。
+        光学特性包括质量归一化的消光系数、单次散射反照率和非对称因子，涵盖所有太阳和地球波段。
+    </p>
+    <p>
+        有效直径定义如下：
+    </p>
+    <p>
+        $$
+        D_e = \frac{3}{2} \frac{\text{IWC}}{\rho_i A}
+        $$
+    </p>
+    <p>
+        其中，IWC 是冰水含量，\(\rho_i = 0.917\) g/cm³ 是冰的体密度，\(A\) 是 PSD 的总投影面积。
+    </p>
+
+    <h2>4.9.5 雪云光学特性 (Snow Cloud Optics)</h2>
+    <p>
+        CAM 5.0 中雪云的参数包括雪云分数、雪的有效直径和云内雪的质量混合比。
+        雪云的光学特性与冰云的光学特性相同。
+    </p>
+
+    <h2>4.10 辐射传输 (Radiative Transfer)</h2>
+    <p>
+        长波和短波的辐射传输计算由 RRTMG 辐射代码提供 [Iacono et al., 2008; Mlawer et al., 1997]。
+        RRTMG 是加速版和修订版的相关 \(k\)-分布模型 (RRTM)。
+    </p>
+    <h3>4.10.1 气溶胶辐射特性组合 (Combination of Aerosol Radiative Properties)</h3>
+    <p>
+        气溶胶的辐射特性在输入辐射传输求解器之前进行组合。假设某波段 \(b\) 的气溶胶光学参数包括：
+    </p>
+    <p>
+        $$
+        \tau_b = \sum_{i=1}^N \tau_{i,b}, \quad
+        \omega_b = \frac{\sum_{i=1}^N \tau_{i,b} \omega_{i,b}}{\tau_b}, \quad
+        g_b = \frac{\sum_{i=1}^N \tau_{i,b} \omega_{i,b} g_{i,b}}{\tau_b \omega_b}
+        $$
+    </p>
+    <p>
+        其中，\(\tau_b\) 是波段 \(b\) 的总消光光学深度，\(\omega_b\) 是单次散射反照率，\(g_b\) 是非对称因子。
+    </p>
+
+    <h3>4.10.2 云光学特性组合 (Combination of Cloud Optics)</h3>
+    <p>
+        CAM 5.0 定义了三种不同类型的云：冰云、液态云和雪云。每种云类型有单独的云分数 \(C_{\text{liq}}, C_{\text{ice}}, C_{\text{snow}}\) 和光学特性。
+        总的云辐射参数组合为：
+    </p>
+    <p>
+        $$
+        C = \max \{C_{\text{liq}}, C_{\text{ice}}, C_{\text{snow}}\}
+        $$
+    </p>
+    <p>
+        $$
+        \tau_c = \sum_{t \in \text{type}} \frac{\tau_t C_t}{C}, \quad
+        \omega_c = \frac{\sum_{t \in \text{type}} \tau_t \omega_t C_t}{\tau_c C}, \quad
+        g_c = \frac{\sum_{t \in \text{type}} \tau_t \omega_t g_t C_t}{\tau_c \omega_c C}
+        $$
+    </p>
+</body>
+</html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.10.3 辐射通量与加热率</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h2>4.10.3 辐射通量与加热率 (Radiative Fluxes and Heating Rates)</h2>
+    <p>
+        CAM 5.0 使用 RRTMG[Iacono et al., 2008] 计算辐射通量与加热率。该模型利用相关 \( k \)-分布技术，在宽光谱区间内高效地计算辐射率和加热率，同时保持与测量值和高分辨率逐线模型的高精度一致性。
+    </p>
+    <p>
+        RRTMG 在长波和短波光谱区使用基于最大随机云重叠假设的 Monte-Carlo 独立列近似 (McICA) [Pincus and Morcrette, 2003] 来处理次网格云的特性。
+    </p>
+    <p>
+        热力学状态、气体浓度、云分数、凝结相光学特性以及气溶胶特性在其他部分定义。CAM 5.0 表面模型提供输入辐射计算的表面反照率（针对每个大气柱的面积平均值）和向上的长波表面通量（包含表面发射率）。
+    </p>
+    <p>
+        RRTMG 在模型顶部添加一个额外层，扩展至 \(10^{-4}\) hPa，以提供顶层辐射通量。这一层复制了最高 CAM 层的组成，但不处理非局部热力学平衡（non-LTE）效应。
+        RRTMG 在 0.1 hPa 以下能提供高精度的通量与加热率，但在更高层次非 LTE 效应变得显著。
+    </p>
+
+    <h3>短波辐射传输 (Shortwave Radiative Transfer)</h3>
+    <p>
+        RRTMG 将太阳光谱划分为 14 个短波波段，覆盖 0.2 µm 到 12.2 µm 的光谱范围（820 cm\(^{-1}\) 到 50000 cm\(^{-1}\)）。
+        吸收和散射的源包括 \( \text{H}_2\text{O} \)、\( \text{O}_3 \)、\( \text{CO}_2 \)、\( \text{O}_2 \)、\( \text{CH}_4 \)、\( \text{N}_2 \)、云、气溶胶和瑞利散射。
+    </p>
+    <p>
+        模型使用两流 \( \delta\)-Eddington 近似假设层均匀混合，同时考虑吸收和散射来计算反射率与透射率。
+        散射相位函数通过 Henyey-Greenstein 近似参数化，表示为不对称因子的前向散射分量。此 δ 缩放方法应用于总辐射率以及直射和漫射辐射分量。
+    </p>
+    <p>
+        CAM5 使用的 RRTMG 短波模型基于 RRTM SW[Clough et al., 2005]。该版本使用 112 个 \( g \)-点（比标准 RRTM SW 的 224 个 \( g \)-点减少一半）以提高计算性能，同时对精度的影响极小。
+    </p>
+    <p>
+        对于清空和气溶胶存在的情况下，总通量的精度在 1-2 W/m\(^2\) 范围内，与覆盖天空下的精度差距在 6 W/m\(^2\) 以内。
+        输入的吸收系数数据来自逐线辐射模型 LBLRTM [Clough et al., 2005]。
+    </p>
+    <table>
+        <caption>RRTMG SW 波段边界与太阳辐射通量 (单位：W/m²)</caption>
+        <thead>
+            <tr>
+                <th>波段索引</th>
+                <th>波长最小值 (µm)</th>
+                <th>波长最大值 (µm)</th>
+                <th>波数最小值 (cm\(^{-1}\))</th>
+                <th>波数最大值 (cm\(^{-1}\))</th>
+                <th>太阳辐射</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>3.077</td><td>3.846</td><td>2600</td><td>3250</td><td>12.11</td></tr>
+            <tr><td>2</td><td>2.500</td><td>3.077</td><td>3250</td><td>4000</td><td>20.36</td></tr>
+            <tr><td>3</td><td>2.150</td><td>2.500</td><td>4000</td><td>4650</td><td>23.73</td></tr>
+            <tr><td>4</td><td>1.942</td><td>2.150</td><td>4650</td><td>5150</td><td>22.43</td></tr>
+            <tr><td>...</td><td colspan="5">表格略，请参见原文档</td></tr>
+        </tbody>
+    </table>
+
+    <h3>长波辐射传输 (Longwave Radiative Transfer)</h3>
+    <p>
+        长波光谱划分为 16 个波段，覆盖 3.1 µm 到 1000 µm 范围（10 cm\(^{-1}\) 到 3250 cm\(^{-1}\)）。
+        吸收与发射的分子来源包括 \( \text{H}_2\text{O} \)、\( \text{CO}_2 \)、\( \text{O}_3 \)、\( \text{N}_2\text{O} \)、\( \text{CH}_4 \)、\( \text{O}_2 \)、\( \text{N}_2 \) 和卤代烃如 \( \text{CFC-11} \) 和 \( \text{CFC-12} \)。
+    </p>
+    <p>
+        CAM 5 使用 RRTMG 的长波版本，具有较高计算效率，精度损失极小。整体辐射通量的精度在 1.0 W/m\(^2\) 范围内，冷却率在对流层的误差为 0.1 K/day，在平流层误差为 0.3 K/day。
+    </p>
+    <table>
+        <caption>RRTMG LW 波段边界 (单位：µm 与 cm\(^{-1}\))</caption>
+        <thead>
+            <tr>
+                <th>波段索引</th>
+                <th>波长最小值 (µm)</th>
+                <th>波长最大值 (µm)</th>
+                <th>波数最小值 (cm\(^{-1}\))</th>
+                <th>波数最大值 (cm\(^{-1}\))</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>28.57</td><td>1000.0</td><td>10</td><td>350</td></tr>
+            <tr><td>2</td><td>20.00</td><td>28.57</td><td>350</td><td>500</td></tr>
+            <tr><td>3</td><td>15.87</td><td>20.00</td><td>500</td><td>630</td></tr>
+            <tr><td>...</td><td colspan="4">表格略，请参见原文档</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.10.7 太阳光谱辐照度与4.11 地表交换公式</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h2>4.10.7 太阳光谱辐照度 (Solar Spectral Irradiance)</h2>
+    <p>
+        RRTMG 假设的参考光谱为 Kurucz 光谱。CAM 5.0 使用基于 Lean 数据 [Wang et al., 2005] 的文件指定太阳光谱辐照度。
+        Kurucz 光谱见图 4.5，Lean 数据见图 4.6，后者是一个太阳周期内的平均值。这两种光谱对总太阳辐照度的假设值有所不同，其相对差异如图 4.7 所示。
+    </p>
+    <h3>光谱与辐照度比较</h3>
+    <p>
+        表 4.8 显示了 Kurucz 和 Lean 光谱在 RRTMG 不同波段下的辐照度比。Lean 光谱是随时间变化的，而表中值为一个太阳周期内的平均值。
+        Lean(t) 表示时间相关的 Lean 辐照度，Lean(t)<sub>14</sub> 包括了超过 12195 nm 的远红外辐照度。
+    </p>
+    <table>
+        <caption>表 4.8：RRTMG 不同波段下太阳辐照度的比例 (W/m²)</caption>
+        <thead>
+            <tr>
+                <th>波段索引</th>
+                <th>波长范围 (nm)</th>
+                <th>Kurucz 辐照度</th>
+                <th>Lean 辐照度</th>
+                <th>相对差异 (%)</th>
+                <th>最大变化</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>14</td><td>12195-3846</td><td>12.79</td><td>12.78</td><td>-0.01</td><td>0.16</td></tr>
+            <tr><td>1</td><td>3846-3077</td><td>12.11</td><td>11.99</td><td>-1.00</td><td>0.02</td></tr>
+            <tr><td>...</td><td colspan="5">更多波段请参考原文</td></tr>
+        </tbody>
+    </table>
+    <h3>图示</h3>
+    <p>
+        图 4.5 Kurucz 光谱：单位为 W/m²/nm，光谱范围 [20, 20000] nm。<br>
+        图 4.6 Lean 光谱：单位为 W/m²/nm，光谱范围 [120, 99975] nm。<br>
+        图 4.7 相对差异：\((\text{Lean} - \text{Kurucz}) / (0.5 \times (\text{Lean} + \text{Kurucz}))\)。
+    </p>
+
+    <h2>4.11 地表交换公式 (Surface Exchange Formulations)</h2>
+    <p>
+        在 CAM 5.0 中，地表与大气之间的热量、湿度和动量交换采用整体交换公式处理。本文将分别描述不同表面（陆地、海洋、冰）的交换过程。
+        尽管公式的功能形式一致，但在不同子模块中的实现可能有所不同，主要差异体现在粗糙度长度和交换系数的定义上。
+    </p>
+
+    <h3>4.11.1 陆地</h3>
+    <p>
+        CAM 5.0 使用社区陆地模型 CLM2 [Bonan et al., 2002] 代替 NCAR 陆地表面模型 (LSM) [Bonan, 1996]。该模型包括水文、生物地球化学过程、动态植被和生物物理过程。
+        因模型的复杂性完整描述请参考 <a href="http://www.cgd.ucar.edu/tss/clm/">CLM 文档</a>。
+    </p>
+    <p>
+        地表动量、感热和潜热通量由 Monin-Obukhov 相似理论计算，应用于地表常通量层。具体公式如下：
+    </p>
+    <div>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mi>τ<sub>x</sub></mi> = -ρ₁ (u’w’) = -ρ₁ u²<sub>*</sub>(u₁/Vₐ)
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mi>τ<sub>y</sub></mi> = -ρ₁ (v’w’) = -ρ₁ u²<sub>*</sub>(v₁/Vₐ)
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mi>H</mi> = ρ₁ cp (w’θ’) = -ρ₁ cp u<sub>*</sub>θ<sub>*</sub>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mi>E</mi> = ρ₁ (w’q’) = -ρ₁ u<sub>*</sub>q<sub>*</sub>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </div>
+    <p>
+        其中 \( \rho₁, u₁, v₁, θ₁, q₁ \) 分别为密度 (kg/m³)、纬向风速 (m/s)、经向风速 (m/s)、位温 (K)、比湿 (kg/kg)；表面风速 \( u_s = 0, v_s = 0 \)。
+    </p>
+
+    <h3>Monin-Obukhov 相似理论</h3>
+    <p>
+        稳定参数：
+        \[
+        ζ = \frac{z₁ - d}{L}
+        \]
+        式中：
+        \( L \) 为 Monin-Obukhov 长度，用于确定稳定状态。
+    </p>
+    <p>
+        完整的地表交换公式请参考 [Zeng et al., 1998]。
+    </p>
+</body>
+</html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.11 海洋和干绝热调整公式</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h2>4.11.2 海洋 (Ocean)</h2>
+    <p>
+        海洋表面与大气之间的湍流通量，包括动量（应力）、水分（蒸发或潜热）以及感热通量，按如下整体公式计算：
+    </p>
+    <div>
+        \[
+        (\tau, E, H) = \rho_A |\Delta v| (C_D \Delta v, C_E \Delta q, C_p C_H \Delta \theta),
+        \]
+    </div>
+    <p>
+        其中 \( \rho_A \) 是大气表面密度，\( C_p \) 是比热容。由于 CAM 5.0 不允许海洋表面运动，因此表面与大气之间的速度差为
+        \( \Delta v = v_A \)，即最低模型层的速度。势温差 \( \Delta \theta = \theta_A - T_s \)，
+        \( \Delta q = q_A - q_s(T_s) \)，其中 \( q_s(T_s) \) 是海表温度 \( T_s \) 下的饱和比湿。
+    </p>
+    <p>
+        在 (4.277) 式中，海洋表面与大气之间的传输系数 \( C(D,E,H) \) 按以下公式计算：
+    </p>
+    <div>
+        \[
+        C(D,E,H) = \frac{\kappa^2}{\left(\ln\frac{Z_A}{Z_{0m}} - \psi_m\right)\left(\ln\frac{Z_A}{Z_{0(m,e,h)}} - \psi_s\right)},
+        \]
+    </div>
+    <p>
+        其中 \( \kappa = 0.4 \) 是 von Kármán 常数，\( Z_0(m,e,h) \) 是动量、蒸发或热量的粗糙度长度。稳定条件下 (\( \zeta > 0 \)) 的通量剖面为：
+    </p>
+    <div>
+        \[
+        \psi_m(\zeta) = \psi_s(\zeta) = -5\zeta.
+        \]
+    </div>
+    <p>
+        不稳定条件下 (\( \zeta < 0 \)) 的通量剖面为：
+    </p>
+    <div>
+        \[
+        \psi_m(\zeta) = 2\ln\left[0.5(1 + X)\right] + \ln\left[0.5(1 + X^2)\right] - 2\arctan X + 0.5\pi,
+        \]
+        \[
+        \psi_s(\zeta) = 2\ln\left[0.5(1 + X^2)\right],
+        \]
+        \[
+        X = (1 - 16\zeta)^{1/4}.
+        \]
+    </div>
+    <p>
+        稳定参数 \( \zeta \) 为：
+    </p>
+    <div>
+        \[
+        \zeta = \frac{\kappa g Z_A}{u_*^2 \theta^* \theta_v},
+        \]
+    </div>
+    <p>
+        其中虚拟势温 \( \theta_v = \theta_A(1 + \epsilon q_A) \)，\( q_A \) 和 \( \theta_A \) 分别为最低层的大气比湿和势温。
+    </p>
+
+    <h2>4.12 干绝热调整 (Dry Adiabatic Adjustment)</h2>
+    <p>
+        如果某层的层结不稳定，即相对于干绝热直减率满足：
+    </p>
+    <div>
+        \[
+        \frac{\partial T}{\partial p} < \kappa \frac{T}{p},
+        \]
+    </div>
+    <p>
+        则需进行干绝热调整。在有限差分形式下，此条件表示为：
+    </p>
+    <div>
+        \[
+        T_{k+1} - T_k < C_{1,k+1}(T_{k+1} + T_k) + \delta,
+        \]
+    </div>
+    <p>
+        其中 \( C_{1,k+1} = \frac{\kappa(p_{k+1} - p_k)}{2p_{k+1/2}} \)。
+    </p>
+    <p>
+        若在模型顶部的前三层中存在不稳定层，则调整温度以满足上述条件，同时保持感热守恒：
+    </p>
+    <div>
+        \[
+        c_p(\hat{T}_k\Delta p_k + \hat{T}_{k+1}\Delta p_{k+1}) = c_p(T_k\Delta p_k + T_{k+1}\Delta p_{k+1}),
+        \]
+    </div>
+    <p>
+        并使该层达到中性稳定性：
+    </p>
+    <div>
+        \[
+        \hat{T}_{k+1} - \hat{T}_k = C_{1,k+1}(\hat{T}_{k+1} + \hat{T}_k).
+        \]
+    </div>
+
+    <h2>4.13 预测温室气体 (Prognostic Greenhouse Gases)</h2>
+    <p>
+        CAM 5.0 包括的主要温室气体的长波辐射效应有 H<sub>2</sub>O、CO<sub>2</sub>、O<sub>3</sub>、CH<sub>4</sub>、N<sub>2</sub>O、CFC11 和 CFC12。
+        水汽的预测在本章其他部分描述，CO<sub>2</sub> 假设为充分混合状态，臭氧按月场输入。
+    </p>
+    <p>
+        对于 CH<sub>4</sub> 和其他气体，其传输由 Boville et al. [2001] 描述，丧失由 Garcia 和 Solomon [1994] 的模型参数化。
+    </p>
+</body>
+</html>
