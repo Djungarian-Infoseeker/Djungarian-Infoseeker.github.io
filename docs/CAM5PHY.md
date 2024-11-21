@@ -283,3 +283,81 @@
     </p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.8 气溶胶 - 生成、凝结、混合与垂直输送</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h2>4.8.4 生成 (Nucleation)</h2>
+    <p>
+        新粒子的生成通过二元 (H<sub>2</sub>SO<sub>4</sub>-H<sub>2</sub>O) 和三元 (H<sub>2</sub>SO<sub>4</sub>-NH<sub>3</sub>-H<sub>2</sub>O) 均相核化，
+        以及边界层核化的参数化来计算。
+    </p>
+    <p>
+        MAM-3 中采用了二元核化的参数化 [Vehkamaki 等人, 2002]，因为该模式不预测 NH<sub>3</sub>；
+        而在 MAM-7 中采用了三元核化的参数化 [Merikanto 等人, 2007]。
+        边界层核化的参数化在两种模式中均使用，参考 Sihto 等人 [2006]，H<sub>2</sub>SO<sub>4</sub> 的一级核化速率系数为 \(1.0 \times 10^{-6}\ s^{-1}\) [Wang 等人, 2009]。
+        新生成的粒子被加入到艾肯模式中，并使用 Kerminen 和 Kulmala [2002] 的参数化来计算粒子在从临界簇大小生长到艾肯模式大小期间因凝并导致的损失。
+    </p>
+
+    <h2>4.8.5 凝结 (Condensation)</h2>
+    <p>
+        H<sub>2</sub>SO<sub>4</sub> 蒸汽、NH<sub>3</sub>（仅 MAM-7）和 SOA（气相）对不同模式的凝结以动态方式处理，
+        使用标准的质量传输表达式 [Seinfeld 和 Pandis, 1998]，并在每种模式的粒径分布上积分 [Binkowski 和 Shankar, 1995]。
+    </p>
+    <p>
+        对于 H<sub>2</sub>SO<sub>4</sub> 和其他物种，假设吸附系数为 0.65 [Poschl 等人, 1998]。
+        H<sub>2</sub>SO<sub>4</sub> 和 NH<sub>3</sub> 的凝结被视为不可逆，NH<sub>3</sub> 的吸收在模式的 NH<sub>4</sub>/SO<sub>4</sub> 摩尔比达到 2 时停止。
+        SOA（气相）的凝结是可逆的，其平衡蒸汽压通过以下公式计算：
+    </p>
+    <p>
+        $$
+        P^*_m = \left( \frac{A^{\text{SOA}}_m}{A^{\text{SOA}}_m + 0.1 A^{\text{POA}}_m} \right) P^0_m
+        $$
+    </p>
+    <p>
+        其中 \(P^0(T)\) 的温度依赖性为：
+    </p>
+    <p>
+        $$
+        P^0(T) = P^0(298K) \times \exp \left[ -\frac{\Delta H_{\text{vap}}}{R} \left( \frac{1}{T} - \frac{1}{298} \right) \right]
+        $$
+    </p>
+    <p>
+        在 MAM-7 中，凝结到初级碳模式上的硫酸盐会使颗粒发生老化。使用的老化标准是 3 个硫酸盐分子层厚度。
+        这种老化过程会将颗粒从初级碳模式转移到积聚模式。
+    </p>
+
+    <h2>4.8.6 凝并 (Coagulation)</h2>
+    <p>
+        MAM 模式中处理了艾肯模式、积聚模式和初级碳模式的凝并。模式内部的凝并只会减少粒子数量，而不会改变总质量。
+        对于艾肯模式和积聚模式之间，以及初级碳模式和积聚模式之间的凝并，质量从艾肯或初级碳模式转移到积聚模式。
+        凝并速率使用 CMAQ 模型的快速近似算法计算 [Binkowski 和 Roselle, 2003]。
+    </p>
+
+    <h2>4.8.7 水分吸收 (Water Uptake)</h2>
+    <p>
+        水分吸收基于平衡 Kohler 理论 [Ghan 和 Zaveri, 2007]，使用相对湿度和模式的体积平均吸湿性来诊断湿体积平均半径。
+        每种成分的吸湿性列于表 4.3 中，这些吸湿性等价于 Petters 和 Kreidenweis [2007] 的 κ 参数。
+    </p>
+    <p>
+        注意：尘埃的溶解度测量值范围较宽，从 0.03 到 0.26 [Koehler 等人, 2009a]。
+    </p>
+
+    <h2>4.8.8 亚网格垂直输送与激活/再悬浮</h2>
+    <p>
+        通过深对流云的上升和下降气流质量通量对气溶胶和痕量气体的垂直输送基于 Zhang-McFarlane 参数化 [Collins 等人, 2004a]。
+        这种垂直输送目前与湿清除分开计算，但未来计划整合处理。
+    </p>
+    <p>
+        气溶胶的激活使粒子从气溶胶态转变为云载态。激活与云滴成核一致，并通过 Abdul-Razzak 和 Ghan [2000b] 的参数化处理，
+        使用上升速度和所有气溶胶模式的属性进行估算。假设上升速度为湍流动能的平方根，最小值为 0.2 m/s。
+    </p>
+</body>
+</html>
