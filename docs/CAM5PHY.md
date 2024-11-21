@@ -25,7 +25,6 @@
         \(S\) 提供从陆地、海洋和海冰模型获得的地表通量，或者基于指定的地表条件（如海表温度和海冰分布）计算通量。
         这些地表通量为湍流混合 \(T\) 提供了下边界条件，\(T\) 包括行星边界层参数化、垂直扩散和重力波拖曳。
     </p>
-    <hr>
     <p>
         上述段落中提到的变量更新（除温度外）是直接的。
         然而，温度的更新稍微复杂一些，它遵循 Boville 和 Bretherton [2003a] 描述的基于干静能的通用方法。
@@ -46,7 +45,6 @@
     <p>
         $$ Q_i = \frac{T_i - T_{i-1}}{C_p \Delta t}. $$
     </p>
-    <hr>
     <p>
         温度 \(T_i\) 和重力势能 \(\Phi_i\) 通过以下公式从干静能 \(s_i\) 中反算得到：
     </p>
@@ -62,7 +60,6 @@
     <p>
         （4.3, 4.4）
     </p>
-    <hr>
     <p>
         每个过程的温度倾向也在整个过程中累积。
         对于基于干静能公式化的过程，温度倾向由干静能的倾向计算得到。
@@ -86,7 +83,6 @@
         这种变化未计入上述公式中。
         对于不基于干静能而是基于温度倾向公式化的过程，这种倾向会直接累积。
     </p>
-    <hr>
     <p>
         在最后一个参数化完成后，最后更新的干静能会被保存下来。
         这个最终的列能量会在下一次物理计算开始时用于计算与动力核心相关的全局能量修正。
@@ -109,7 +105,6 @@
     </p>
 </body>
 </html>
-<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -137,34 +132,73 @@
         每种模式的粒径分布假定为对数正态分布，模式干或湿半径随粒子数量和总干或湿体积的变化而变化，标准偏差按照图 4.3 所示设定。对于 MAM-7 模式，总共传输的气溶胶种类为 31 种，而传输的气态物种包括 SO<sub>2</sub>、H<sub>2</sub>O<sub>2</sub>、DMS、H<sub>2</sub>SO<sub>4</sub>、NH<sub>3</sub> 和 SOA（气态）。
     </p>
     <p>
-        对于长期（多个世纪）气候模拟，MAM 的 3 模式版本 (MAM-3) 也被开发出来，它仅包含艾肯模式、积聚模式和粗模式（见图 4.4）。对于 MAM-3 模式，假设包括：
-    </p>
-    <ol>
-        <li>初级碳与次生气溶胶内部混合，通过将初级碳模式与积聚模式合并实现；</li>
-        <li>粗尘和海盐模式合并为一个粗模式，基于尘埃和海盐地理上分离的假设。这一假设会影响从撒哈拉沙漠运输到中大西洋的尘埃，因为假定的尘埃和海盐的内部混合会提高尘埃的吸湿性，从而增加湿清除；</li>
-        <li>细尘和海盐模式同样合并到积聚模式中；</li>
-        <li>硫酸盐通过铵部分中和，以 NH<sub>4</sub>HSO<sub>4</sub> 的形式存在，因此铵的含量被有效地规定，NH<sub>3</sub> 不被模拟。</li>
-    </ol>
-    <p>
-        我们注意到，在 MAM-3 中预测的是以 NH<sub>4</sub>HSO<sub>4</sub> 形式的硫酸气溶胶，而在 MAM-7 中是以 SO<sub>4</sub> 形式存在。MAM-3 模式中总共传输的气溶胶种类为 15 种。
-    </p>
-    <p>
         对于 i-th 物种和 j-th 模式的间质气溶胶质量 (\(M_a^{i,j}\)) 和数量 (\(N_a^j\)) 的时间演化如下：
     </p>
     <p>
-        $$\frac{\partial M_a^{i,j}}{\partial t} + \frac{1}{\rho} \nabla \cdot (\rho u M_a^{i,j}) = \frac{\partial M_a^{i,j}}{\partial t}_{\text{conv}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{diffus}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{nuc}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{cond}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{activ}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{resus}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{emis}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{sedime}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{drydep}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{impscav}}$$
+        $$
+        \begin{aligned}
+        \frac{\partial M_a^{i,j}}{\partial t} &+ \frac{1}{\rho} \nabla \cdot (\rho u M_a^{i,j}) = 
+        \frac{\partial M_a^{i,j}}{\partial t}_{\text{conv}} + 
+        \frac{\partial M_a^{i,j}}{\partial t}_{\text{diffus}} + 
+        \frac{\partial M_a^{i,j}}{\partial t}_{\text{nuc}} \\
+        &+ \frac{\partial M_a^{i,j}}{\partial t}_{\text{cond}} + 
+        \frac{\partial M_a^{i,j}}{\partial t}_{\text{activ}} + 
+        \frac{\partial M_a^{i,j}}{\partial t}_{\text{resus}} \\
+        &+ \frac{\partial M_a^{i,j}}{\partial t}_{\text{emis}} + 
+        \frac{\partial M_a^{i,j}}{\partial t}_{\text{sedime}} + 
+        \frac{\partial M_a^{i,j}}{\partial t}_{\text{drydep}} \\
+        &+ \frac{\partial M_a^{i,j}}{\partial t}_{\text{impscav}}
+        \end{aligned}
+        $$
     </p>
     <p>
-        $$\frac{\partial N_a^j}{\partial t} + \frac{1}{\rho} \nabla \cdot (\rho u N_a^j) = \frac{\partial N_a^j}{\partial t}_{\text{conv}} + \frac{\partial N_a^j}{\partial t}_{\text{diffus}} + \frac{\partial N_a^j}{\partial t}_{\text{nuc}} + \frac{\partial N_a^j}{\partial t}_{\text{coag}} + \frac{\partial N_a^j}{\partial t}_{\text{activ}} + \frac{\partial N_a^j}{\partial t}_{\text{resus}} + \frac{\partial N_a^j}{\partial t}_{\text{emis}} + \frac{\partial N_a^j}{\partial t}_{\text{sedime}} + \frac{\partial N_a^j}{\partial t}_{\text{drydep}} + \frac{\partial N_a^j}{\partial t}_{\text{impscav}}$$
+        $$
+        \begin{aligned}
+        \frac{\partial N_a^j}{\partial t} &+ \frac{1}{\rho} \nabla \cdot (\rho u N_a^j) = 
+        \frac{\partial N_a^j}{\partial t}_{\text{conv}} + 
+        \frac{\partial N_a^j}{\partial t}_{\text{diffus}} + 
+        \frac{\partial N_a^j}{\partial t}_{\text{nuc}} \\
+        &+ \frac{\partial N_a^j}{\partial t}_{\text{coag}} + 
+        \frac{\partial N_a^j}{\partial t}_{\text{activ}} + 
+        \frac{\partial N_a^j}{\partial t}_{\text{resus}} \\
+        &+ \frac{\partial N_a^j}{\partial t}_{\text{emis}} + 
+        \frac{\partial N_a^j}{\partial t}_{\text{sedime}} + 
+        \frac{\partial N_a^j}{\partial t}_{\text{drydep}} \\
+        &+ \frac{\partial N_a^j}{\partial t}_{\text{impscav}}
+        \end{aligned}
+        $$
     </p>
     <p>
         类似地，云携带气溶胶质量 (\(M_c^{i,j}\)) 和数量 (\(N_c^j\)) 的时间演化如下：
     </p>
     <p>
-        $$\frac{\partial M_c^{i,j}}{\partial t} = \frac{\partial M_c^{i,j}}{\partial t}_{\text{conv}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{diffus}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{chem}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{activ}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{resus}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{sedime}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{drydep}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{nucscav}}$$
+        $$
+        \begin{aligned}
+        \frac{\partial M_c^{i,j}}{\partial t} &= 
+        \frac{\partial M_c^{i,j}}{\partial t}_{\text{conv}} + 
+        \frac{\partial M_c^{i,j}}{\partial t}_{\text{diffus}} + 
+        \frac{\partial M_c^{i,j}}{\partial t}_{\text{chem}} \\
+        &+ \frac{\partial M_c^{i,j}}{\partial t}_{\text{activ}} + 
+        \frac{\partial M_c^{i,j}}{\partial t}_{\text{resus}} + 
+        \frac{\partial M_c^{i,j}}{\partial t}_{\text{sedime}} \\
+        &+ \frac{\partial M_c^{i,j}}{\partial t}_{\text{drydep}} + 
+        \frac{\partial M_c^{i,j}}{\partial t}_{\text{nucscav}}
+        \end{aligned}
+        $$
     </p>
     <p>
-        $$\frac{\partial N_c^j}{\partial t} = \frac{\partial N_c^j}{\partial t}_{\text{conv}} + \frac{\partial N_c^j}{\partial t}_{\text{diffus}} + \frac{\partial N_c^j}{\partial t}_{\text{activ}} + \frac{\partial N_c^j}{\partial t}_{\text{resus}} + \frac{\partial N_c^j}{\partial t}_{\text{sedime}} + \frac{\partial N_c^j}{\partial t}_{\text{drydep}} + \frac{\partial N_c^j}{\partial t}_{\text{nucscav}}$$
+        $$
+        \begin{aligned}
+        \frac{\partial N_c^j}{\partial t} &= 
+        \frac{\partial N_c^j}{\partial t}_{\text{conv}} + 
+        \frac{\partial N_c^j}{\partial t}_{\text{diffus}} + 
+        \frac{\partial N_c^j}{\partial t}_{\text{activ}} \\
+        &+ \frac{\partial N_c^j}{\partial t}_{\text{resus}} + 
+        \frac{\partial N_c^j}{\partial t}_{\text{sedime}} + 
+        \frac{\partial N_c^j}{\partial t}_{\text{drydep}} \\
+        &+ \frac{\partial N_c^j}{\partial t}_{\text{nucscav}}
+        \end{aligned}
+        $$
     </p>
     <p>
         其中 \(t\) 表示时间，\(u\) 是三维风速向量，\(\rho\) 是空气密度。右侧符号项表示质量和数量的源/汇项。
