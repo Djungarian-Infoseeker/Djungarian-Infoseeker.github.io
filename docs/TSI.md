@@ -1,36 +1,93 @@
-2024年11月21日
-因为在跑模型的过程中总是出现“参数化”这个名词，由于我之前没接触过这部分内容，看过很多简单的名词解释只是在强调说“由于一些现象比网格尺度要小，所以需要用参数进行表示”，让人看得云里雾里。而且这部分中文内容在网上不好找，所以准备自己汇总一下使得理解更深刻一点。
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>什么是参数化？</title>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
-</head>
-<body>
-    <h1>什么是参数化？</h1>
-    <p>参数化（Parameterization）是指通过简化的数学公式来描述那些无法直接解析的小尺度物理过程。它广泛应用于科学计算和数值建模中，特别是在气候模型和天气预报模型中。其具体的工作原理为通过将小尺度的过程表示为大尺度变量的函数关系来实现。</p>
+<h1>修改 TSI（总太阳辐照度）教程</h1>
 
-    <h2>为什么需要参数化？</h2>
-    <p>参数化的必要性主要体现在以下几个方面：</p>
-    <ol>
-        <li><strong>数值模型的分辨率有限：</strong> 模型的网格通常在几十公里甚至更大，小尺度的物理过程（如对流、湍流）无法直接模拟。</li>
-        <li><strong>计算资源有限：</strong> 显式模拟所有的小尺度过程会耗费巨大的计算资源。</li>
-        <li><strong>物理过程的复杂性：</strong> 许多自然现象（如辐射传输、云微物理）难以通过完整的公式化精确描述。</li>
-    </ol>
+<h2>1. 背景和原理</h2>
+<p>
+<strong>TSI（Total Solar Irradiance，单位 W/m²）</strong> 是描述太阳辐射强度的关键参数。在气候模拟中，TSI 决定了行星表面接收到的能量，进而影响大气和海洋的热力过程。TSI 的改变不仅适用于研究地球气候，还对其他行星的宜居性研究具有重要意义。例如，由于行星距恒星的距离不同，以及恒星在其演化过程中光度的变化，不同的 TSI 水平可能决定一颗行星是否处于宜居带内。通过模拟 TSI 的变化，研究人员可以探索不同条件下的气候稳定性与宜居性特征。
+</p>
+<ul>
+  <li><strong>CAM4:</strong> 可以直接通过命名列表参数 <code>solar_const</code> 修改 TSI，无需额外准备输入文件。</li>
+  <li><strong>CAM5:</strong> 由于 RRTMG 辐射方案的限制，<code>solar_const</code> 不再适用，必须通过修改光谱辐照度文件（<code>solar spectral irradiance file</code>）来实现 TSI 的调整。</li>
+</ul>
 
-    <h2>参数化的应用场景</h2>
-    <p>在气候和天气建模中，参数化用于以下关键场景：</p>
-    <ul>
-        <li><strong>云和降水：</strong> 描述云滴凝结、碰并和雨滴形成等复杂过程。</li>
-        <li><strong>湍流混合：</strong> 模拟行星边界层中热量、动量和湿度的垂直传输。</li>
-        <li><strong>辐射传输：</strong> 简化计算大气对太阳辐射（短波）和地球辐射（长波）的吸收和散射。</li>
-        <li><strong>地表过程：</strong> 计算地表与大气之间的热量和动量交换。</li>
-    </ul>
-    <h1>参数化的原因：离散化</h1>
-    <h2>离散化的概念</h2>
-    <p>离散化是将连续的物理过程分解为模型网格中可处理的离散单元（如图中的 3D 网格框）。</p>
-</body>
-</html>
+<h2>2. CAM4 中修改 TSI</h2>
+<h3>2.1 修改方法</h3>
+<p>在 CAM4 的物理包中（如使用 <code>B1850CN</code> 配置集），TSI 可以直接通过 <code>user_nl_cam</code> 文件的 <code>solar_const</code> 参数设置。</p>
+
+<h3>2.2 实现步骤</h3>
+<ol>
+  <li>在案例目录中找到 <code>user_nl_cam</code> 文件。</li>
+  <li>添加或修改以下参数：
+    <pre><code>solar_const = 1300.0</code></pre>
+    其中 <code>1300.0</code> 为目标 TSI 值（单位 W/m²）。
+  </li>
+  <li>运行 <code>./preview_namelist</code> 验证更改。</li>
+  <li>编译和运行模型：
+    <pre><code>./case.build
+./case.submit</code></pre>
+  </li>
+</ol>
+
+<h2>3. CAM5 中修改 TSI</h2>
+<h3>3.1 问题说明</h3>
+<p>
+在 CAM5 物理包中，RRTMG 辐射方案使用光谱辐照度文件（<code>solar_data_file</code>）计算辐射强度，而不是直接使用 <code>solar_const</code>。
+</p>
+<p>
+若同时设置 <code>solar_const</code> 和 <code>solar_data_file</code>，会报如下警告：
+<pre><code>WARNING: It is not allowed to set both solar_const and solar_data_file. solar_const will be ignored.</code></pre>
+</p>
+<p>
+此外，尝试切换回 CAMRT 辐射方案可能导致模型组件不兼容的错误。
+</p>
+
+<h3>3.2 解决方案</h3>
+<p>
+要在 CAM5 中修改 TSI，需通过修改光谱辐照度文件（<code>solar spectral irradiance file</code>）来实现。这涉及以下步骤：
+</p>
+<ol>
+  <li>准备原始光谱辐照度文件，例如 <code>ape_solar_ave_tsi_1365.nc</code>。</li>
+  <li>编写 Python 脚本调整文件（见下文）。</li>
+  <li>在案例中指定新文件，并更新 <code>user_nl_cam</code> 文件。</li>
+</ol>
+
+<h3>3.3 Python 脚本</h3>
+<p>以下脚本用于生成新的光谱辐照度文件：</p>
+<pre><code>import xarray as xr
+
+# 原始文件路径
+input_file = "ape_solar_ave_tsi_1365.nc"
+
+# 目标 TSI 值
+target_tsi_values = [1300, 1200, 1100]
+
+# 循环生成新文件
+for target_tsi in target_tsi_values:
+    # 打开原始文件
+    ds = xr.open_dataset(input_file)
+
+    # 计算缩放因子
+    scale_factor = target_tsi / ds["tsi"].max().item()
+
+    # 缩放 SSI 和更新 TSI
+    ds["ssi"] = ds["ssi"] * scale_factor
+    ds["tsi"][:] = target_tsi
+
+    # 保存新文件
+    output_file = f"ape_solar_ave_tsi_{target_tsi}.nc"
+    ds.to_netcdf(output_file)
+
+    print(f"生成新文件：{output_file}，目标 TSI = {target_tsi} W/m²")
+</code></pre>
+
+<h3>3.4 在案例中指定新文件</h3>
+<ol>
+  <li>编辑案例目录中的 <code>user_nl_cam</code> 文件，指定新的光谱辐照度文件：
+    <pre><code>solar_data_file = '/path/to/ape_solar_ave_tsi_1300.nc'</code></pre>
+  </li>
+  <li>运行 <code>./preview_namelist</code> 检查更改。</li>
+  <li>编译和运行模型：
+    <pre><code>./case.build
+./case.submit</code></pre>
+  </li>
+</ol>
+
