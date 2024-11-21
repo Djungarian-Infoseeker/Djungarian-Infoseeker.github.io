@@ -15,6 +15,8 @@
 - [如何在CESM1里的Aquaplanet模拟中开启slab ocean模块中文版本（作者：Brian Medeiros） / Aquaplanets with slab ocean in CESM1（Brian Medeiros November13,2013）](https://infoseeker.cn/docs/Aquaplanets with slab ocean in CESM1)<span style="color:green;">（更新日期2024/11/15，已完结）</span>
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/translation/planetaryclimate) <span style="color:red;">（更新日期2024/11/20，未完结） 
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/11/20，未完结） 
+## 气候学初学者的知识辨析 / Knowledge Analysis for Climate Science Beginners
+- [什么是参数化？/What is parameterization?](https://infoseeker.cn/docs/Knowledge/parameterization) <span style="color:green;">（撰写日期：2024/11/21，已完结）</span>
 # 资料 / Resources
 - [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)<span style="color:green;">（更新日期2024/10/20）</span>
 
