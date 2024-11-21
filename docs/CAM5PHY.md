@@ -205,3 +205,81 @@
     </p>
 </body>
 </html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.8 气溶胶排放、化学和次生有机气溶胶</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h2>4.8.1 排放 (Emissions)</h2>
+    <p>
+        人为排放（此处定义为来源于工业、家庭和农业活动领域）使用的是 Lamarque 等人 [2010a] 提供的 IPCC AR5 排放数据集。
+        黑碳 (BC) 和有机碳 (OC) 的排放基于 Bond 等人 [2007] 和 Junker 和 Liousse [2008] 的更新版本。
+        二氧化硫 (SO<sub>2</sub>) 的排放更新自 Smith 等人 [2001, 2004] 的研究。
+    </p>
+    <p>
+        IPCC AR5 排放数据集包括人为气溶胶和前体气体（SO<sub>2</sub>、初级有机物 (POM) 和 BC）的排放，
+        但未提供一次排放粒子和前体气体的注入高度和粒径分布。
+        我们根据 AEROCOM 协议 [Dentener 等人, 2006a] 假定 2.5% 的硫排放以一次硫酸盐气溶胶形式直接排放，其余以 SO<sub>2</sub> 形式排放。
+    </p>
+    <p>
+        不同排放源的硫排放高度不同：农业、家庭、交通、废物和航运部门的硫在地表排放；
+        能源和工业部门的硫在距地表 100-300 米高度排放；
+        森林火灾和草原火灾的硫排放在较高的高度（0-6 公里）。
+        硫酸盐颗粒根据排放源的不同分配到积聚模式（accumulation mode）或艾肯模式（Aitken mode）。
+    </p>
+
+    <h2>4.8.2 化学 (Chemistry)</h2>
+    <p>
+        简单的气相化学被用于硫酸盐气溶胶的模拟，具体包括以下过程：
+        (1) DMS 与 OH 和 NO<sub>3</sub> 的氧化反应生成 SO<sub>2</sub>；
+        (2) SO<sub>2</sub> 与 OH 的氧化反应生成 H<sub>2</sub>SO<sub>4</sub>（气态）；
+        (3) H<sub>2</sub>O<sub>2</sub> 的生成反应（HO<sub>2</sub> + HO<sub>2</sub>）；
+        (4) H<sub>2</sub>O<sub>2</sub> 的损失反应（包括 H<sub>2</sub>O<sub>2</sub> 光解和 H<sub>2</sub>O<sub>2</sub> + OH）。
+    </p>
+    <p>
+        氧化剂浓度（O<sub>3</sub>、OH、HO<sub>2</sub> 和 NO<sub>3</sub>）从 MOZART 模型 [Emmons, 2010] 提供的月平均值进行时间插值。
+        SO<sub>2</sub> 在云水中的氧化基于 MOZART 模型中的处理方法 [Tie 等人, 2001]。
+        云水的 pH 值根据电中性方程计算，该方程考虑了云中硫酸根和铵根离子浓度以及溶解和解离的微量气体。
+    </p>
+
+    <h2>4.8.3 次生有机气溶胶 (Secondary Organic Aerosol)</h2>
+    <p>
+        次生有机气溶胶 (SOA) 的简单处理方法通常假设人为和生物源挥发性有机化合物 (VOC) 的固定质量产率，
+        然后直接将这些质量作为一次气溶胶粒子排放。
+    </p>
+    <p>
+        MAM 模式增加了一个额外的复杂步骤，即模拟单一汇总的气相 SOA 物种。
+        根据 MOZART-4 化学机制的 5 种 VOC 类别，假定固定的质量产率，具体如下：
+    </p>
+    <p>
+        $$
+        P^*_m = \left( \frac{A^{\text{SOA}}_m}{A^{\text{SOA}}_m + 0.1 A^{\text{POA}}_m} \right) P^0_m
+        $$
+    </p>
+    <p>
+        其中：
+        \(A^{\text{SOA}}_m\) 表示模式 \(m\) 中的 SOA 质量浓度，
+        \(A^{\text{POA}}_m\) 表示模式 \(m\) 中的一次有机气溶胶 (POA) 质量浓度（10% 被假设为氧化状态），
+        \(P^0_m\) 是 SOA 的饱和蒸汽压，其温度依赖性如下：
+    </p>
+    <p>
+        $$
+        P^0(T) = P^0(298K) \times \exp \left[ -\frac{\Delta H_{\text{vap}}}{R} \left( \frac{1}{T} - \frac{1}{298} \right) \right]
+        $$
+    </p>
+    <p>
+        其中 \(P^0(298K) = 1 \times 10^{-10}\ \text{atm}\)，
+        \(\Delta H_{\text{vap}}\) 表示蒸发焓，取值为 156 kJ/mol。
+    </p>
+    <p>
+        此处理方法提供了以下优点：
+        (1) 计算 SOA 在不同模式间分布的现实方法；
+        (2) 提供了气体/气溶胶分配的温度依赖性。
+    </p>
+</body>
+</html>
