@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -107,6 +106,68 @@
         这个温度被转换为虚拟位温并传递给有限体积动力核心。
         温度倾向本身被传递给谱变换欧拉和半拉格朗日动力核心。
         上述温度和干静能使用中的不一致性在模型的未来版本中应被消除。
+    </p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>气溶胶 - 章节 4.8</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h2>4.8 气溶胶</h2>
+    <p>
+        在 CAM5 中实现了两种不同的气溶胶模式表示法。一个是具有 7 模式的气溶胶模式模型 (MAM-7)，作为进一步简化的基准。它包括艾肯模式、积聚模式、初级碳模式、细尘模式、海盐模式，以及粗尘和粗海盐模式（见图 4.3）。在单个模式中，例如积聚模式，内部混合的硫酸盐、铵盐、次生有机气溶胶 (SOA)、从初级碳模式中老化的初级有机物质 (POM) 和黑碳 (BC)、海盐的质量混合比，以及积聚模式粒子的数量混合比都被预测。
+    </p>
+    <p>
+        初级碳 (OM 和 BC) 粒子被排放到初级碳模式，并通过硫酸 (H<sub>2</sub>SO<sub>4</sub>)、氨 (NH<sub>3</sub>) 和次生有机气溶胶 (SOA) 凝结以及与艾肯和积聚模式的凝并而老化（详见以下章节）。
+    </p>
+    <p>
+        气溶胶粒子存在于不同的附着状态中。我们通常认为悬浮在空气中的气溶胶粒子（清洁或云空气），这些被称为“间质气溶胶粒子”。气溶胶粒子还可以附着在或包含于不同的水成物（如云滴）中。在 CAM5 中，“间质气溶胶粒子”以及层状云中的气溶胶粒子（称为云携带气溶胶粒子）都被明确预测（Easter et al., 2004）。间质气溶胶物种存储在状态变量的 <code>q</code> 数组中，并在三维空间中传输；而云携带气溶胶物种存储在物理缓冲区的 <code>qqcw</code> 数组中，且不进行三维传输（除了垂直湍流混合），以节省计算时间，同时对其预测值影响较小（Ghan 和 Easter, 2006）。
+    </p>
+    <p>
+        每种模式与间质气溶胶相关的气溶胶水混合比根据 Kohler 理论诊断得出（参见以下章节中的吸湿性），假设与环境相对湿度处于平衡状态。这些混合比同样不进行三维传输，存储在物理缓冲区的 <code>qaerwat</code> 数组中。
+    </p>
+    <p>
+        每种模式的粒径分布假定为对数正态分布，模式干或湿半径随粒子数量和总干或湿体积的变化而变化，标准偏差按照图 4.3 所示设定。对于 MAM-7 模式，总共传输的气溶胶种类为 31 种，而传输的气态物种包括 SO<sub>2</sub>、H<sub>2</sub>O<sub>2</sub>、DMS、H<sub>2</sub>SO<sub>4</sub>、NH<sub>3</sub> 和 SOA（气态）。
+    </p>
+    <p>
+        对于长期（多个世纪）气候模拟，MAM 的 3 模式版本 (MAM-3) 也被开发出来，它仅包含艾肯模式、积聚模式和粗模式（见图 4.4）。对于 MAM-3 模式，假设包括：
+    </p>
+    <ol>
+        <li>初级碳与次生气溶胶内部混合，通过将初级碳模式与积聚模式合并实现；</li>
+        <li>粗尘和海盐模式合并为一个粗模式，基于尘埃和海盐地理上分离的假设。这一假设会影响从撒哈拉沙漠运输到中大西洋的尘埃，因为假定的尘埃和海盐的内部混合会提高尘埃的吸湿性，从而增加湿清除；</li>
+        <li>细尘和海盐模式同样合并到积聚模式中；</li>
+        <li>硫酸盐通过铵部分中和，以 NH<sub>4</sub>HSO<sub>4</sub> 的形式存在，因此铵的含量被有效地规定，NH<sub>3</sub> 不被模拟。</li>
+    </ol>
+    <p>
+        我们注意到，在 MAM-3 中预测的是以 NH<sub>4</sub>HSO<sub>4</sub> 形式的硫酸气溶胶，而在 MAM-7 中是以 SO<sub>4</sub> 形式存在。MAM-3 模式中总共传输的气溶胶种类为 15 种。
+    </p>
+    <p>
+        对于 i-th 物种和 j-th 模式的间质气溶胶质量 (\(M_a^{i,j}\)) 和数量 (\(N_a^j\)) 的时间演化如下：
+    </p>
+    <p>
+        $$\frac{\partial M_a^{i,j}}{\partial t} + \frac{1}{\rho} \nabla \cdot (\rho u M_a^{i,j}) = \frac{\partial M_a^{i,j}}{\partial t}_{\text{conv}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{diffus}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{nuc}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{cond}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{activ}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{resus}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{emis}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{sedime}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{drydep}} + \frac{\partial M_a^{i,j}}{\partial t}_{\text{impscav}}$$
+    </p>
+    <p>
+        $$\frac{\partial N_a^j}{\partial t} + \frac{1}{\rho} \nabla \cdot (\rho u N_a^j) = \frac{\partial N_a^j}{\partial t}_{\text{conv}} + \frac{\partial N_a^j}{\partial t}_{\text{diffus}} + \frac{\partial N_a^j}{\partial t}_{\text{nuc}} + \frac{\partial N_a^j}{\partial t}_{\text{coag}} + \frac{\partial N_a^j}{\partial t}_{\text{activ}} + \frac{\partial N_a^j}{\partial t}_{\text{resus}} + \frac{\partial N_a^j}{\partial t}_{\text{emis}} + \frac{\partial N_a^j}{\partial t}_{\text{sedime}} + \frac{\partial N_a^j}{\partial t}_{\text{drydep}} + \frac{\partial N_a^j}{\partial t}_{\text{impscav}}$$
+    </p>
+    <p>
+        类似地，云携带气溶胶质量 (\(M_c^{i,j}\)) 和数量 (\(N_c^j\)) 的时间演化如下：
+    </p>
+    <p>
+        $$\frac{\partial M_c^{i,j}}{\partial t} = \frac{\partial M_c^{i,j}}{\partial t}_{\text{conv}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{diffus}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{chem}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{activ}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{resus}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{sedime}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{drydep}} + \frac{\partial M_c^{i,j}}{\partial t}_{\text{nucscav}}$$
+    </p>
+    <p>
+        $$\frac{\partial N_c^j}{\partial t} = \frac{\partial N_c^j}{\partial t}_{\text{conv}} + \frac{\partial N_c^j}{\partial t}_{\text{diffus}} + \frac{\partial N_c^j}{\partial t}_{\text{activ}} + \frac{\partial N_c^j}{\partial t}_{\text{resus}} + \frac{\partial N_c^j}{\partial t}_{\text{sedime}} + \frac{\partial N_c^j}{\partial t}_{\text{drydep}} + \frac{\partial N_c^j}{\partial t}_{\text{nucscav}}$$
+    </p>
+    <p>
+        其中 \(t\) 表示时间，\(u\) 是三维风速向量，\(\rho\) 是空气密度。右侧符号项表示质量和数量的源/汇项。
     </p>
 </body>
 </html>
