@@ -161,7 +161,7 @@ tr_iage = .true.</code></pre>
     <pre><code>&lt;!-- DOCN mode, valid values: prescribed, som, copyall, null (char) --&gt;
 &lt;entry id="DOCN_MODE" value="som" /&gt;
 &lt;!-- Sets SOM forcing data filename for pres runs, only used in D and E compset (char) --&gt;
-&lt;entry id="DOCN_SOM_FILENAME" value="[forcing file]" /&gt;</code></pre>
+&lt;entry id="DOCN_SOM_FILENAME" value="/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc" /&gt;</code></pre>
 
     <p>然后按照正常步骤继续操作。</p>
     <p>这种方法对包含热力海冰的水星球-SOM模式不完全适用。问题在于配置集假设存在陆地区域，即使指定了域文件，模型仍可能崩溃。</p>
