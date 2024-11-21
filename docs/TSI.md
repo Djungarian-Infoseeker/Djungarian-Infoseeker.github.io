@@ -11,7 +11,7 @@
 
 <h2>2. CAM4 中修改 TSI</h2>
 <h3>2.1 修改方法</h3>
-<p>在 CAM4 的物理包中（如使用 <code>B1850CN</code> 配置集），TSI 可以直接通过 <code>user_nl_cam</code> 文件的 <code>solar_const</code> 参数设置。</p>
+<p>在 CAM4 的物理包中，TSI 可以直接通过 <code>user_nl_cam</code> 文件的 <code>solar_const</code> 参数设置。</p>
 
 <h3>2.2 实现步骤</h3>
 <ol>
