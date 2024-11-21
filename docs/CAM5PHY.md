@@ -205,34 +205,65 @@
     </p>
 </body>
 </html>
-<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4.8 气溶胶排放、化学和次生有机气溶胶</title>
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
 </head>
 <body>
     <h2>4.8.1 排放 (Emissions)</h2>
-    <p>
-        人为排放（此处定义为来源于工业、家庭和农业活动领域）使用的是 Lamarque 等人 [2010a] 提供的 IPCC AR5 排放数据集。
-        黑碳 (BC) 和有机碳 (OC) 的排放基于 Bond 等人 [2007] 和 Junker 和 Liousse [2008] 的更新版本。
-        二氧化硫 (SO<sub>2</sub>) 的排放更新自 Smith 等人 [2001, 2004] 的研究。
-    </p>
-    <p>
-        IPCC AR5 排放数据集包括人为气溶胶和前体气体（SO<sub>2</sub>、初级有机物 (POM) 和 BC）的排放，
-        但未提供一次排放粒子和前体气体的注入高度和粒径分布。
-        我们根据 AEROCOM 协议 [Dentener 等人, 2006a] 假定 2.5% 的硫排放以一次硫酸盐气溶胶形式直接排放，其余以 SO<sub>2</sub> 形式排放。
-    </p>
-    <p>
-        不同排放源的硫排放高度不同：农业、家庭、交通、废物和航运部门的硫在地表排放；
-        能源和工业部门的硫在距地表 100-300 米高度排放；
-        森林火灾和草原火灾的硫排放在较高的高度（0-6 公里）。
-        硫酸盐颗粒根据排放源的不同分配到积聚模式（accumulation mode）或艾肯模式（Aitken mode）。
-    </p>
+    <p><strong>人类活动排放</strong>（这里定义为来源于工业、家庭和农业活动部门的排放）基于 <strong>Lamarque et al. [2010a]</strong> 的 IPCC 第五次评估报告（AR5）排放数据集。黑碳 (BC) 和有机碳 (OC) 的排放数据是对 <strong>Bond et al. [2007]</strong> 和 <strong>Junker and Liousse [2008]</strong> 的更新，二氧化硫 (SO₂) 的排放数据是对 <strong>Smith et al. [2001, 2004]</strong> 的更新。</p>
+    <p>IPCC AR5 排放数据集包括以下人类活动产生的气溶胶及其前体气体的排放：SO₂、初级有机物 (POM) 和黑碳 (BC)。然而，该数据集并未提供主要排放粒子及其前体气体的注入高度和粒径分布，因此我们采用了 <strong>AEROCOM</strong> 协议 [<strong>Dentener et al., 2006a</strong>]。我们假设硫排放中有 2.5%（以摩尔计算）直接以初级硫酸盐气溶胶的形式排放，其余以 SO₂ 的形式排放 [<strong>Dentener et al., 2006a</strong>]。</p>
+    <ul>
+        <li><strong>硫排放来源：</strong>
+            <ul>
+                <li>农业、家庭、交通、废弃物和航运部门的硫排放发生在地表。</li>
+                <li>能源和工业部门的硫排放发生在地表以上 100-300 m。</li>
+                <li>森林火灾和草原火灾的硫排放发生在更高的海拔（0-6 km）。</li>
+            </ul>
+        </li>
+        <li><strong>硫酸盐粒子分布：</strong>
+            <ul>
+                <li>农业、废弃物和航运（地表来源）以及能源、工业、森林火灾和草原火灾（高空来源）的硫酸盐粒子分布在累积模式中。</li>
+                <li>来自家庭和交通的硫酸盐粒子分布在艾肯模式中。</li>
+            </ul>
+        </li>
+    </ul>
+    <p>森林火灾和草原火灾产生的 POM 和 BC 被排放到 0-6 km 高度，而其他来源（家庭、能源、工业、交通、废弃物和航运）的 POM 和 BC 则排放到地表。火灾排放的注入高度分布基于相应的 AEROCOM 数据，具有空间和时间变化。硫酸盐、POM 和 BC 的质量排放通量被转换为基于 AEROCOM 规定对数正态粒径分布的数量排放通量，具体如表 4.1 所示。</p>
+    <h3>自然气溶胶和前体气体排放</h3>
+    <p>自然气溶胶和前体气体排放（如火山硫、DMS、NH₃ 和生物挥发性有机化合物 VOCs）不包括在 IPCC AR5 数据集中。因此，使用了 <strong>AEROCOM</strong> 数据中关于火山 SO₂ 和硫酸盐的排放通量、注入高度和粒径分布，以及表面 DMS 的通量。NH₃ 的排放通量基于 <strong>MOZART-4</strong> 数据集 [<strong>Emmons, 2010</strong>]。</p>
+    <p>用于推导 SOA（气体）排放的异戊二烯、单萜、甲苯、大烯烃和大烷烃的排放通量基于 <strong>MOZART-2</strong> 数据集 [<strong>Horowitz, 2003</strong>]。这些排放数据代表了 1990 年代末的条件。</p>
+    <p>对于 2000 年之前的年份，我们使用 IPCC AR5 数据集中的人为非甲烷挥发性有机化合物（NMVOC）排放数据，并按目标年份 NMVOC 排放与 2000 年 NMVOC 排放的比例调整 MOZART 中的甲苯、大烯烃和大烷烃的排放。</p>
+    <h3>海盐气溶胶排放</h3>
+    <p>海盐气溶胶排放来源于海洋，遵循 <strong>Martensson et al. [2003]</strong> 的参数化方法，用于几何直径小于 2.8 μm 的气溶胶。总粒子通量 \( F_0 \) 表达为：</p>
+    <p>\[
+        \frac{dF_0}{d\log D_p} = \Phi W = (A_k T_w + B_k) W
+    \]</p>
+    <p>其中：</p>
+    <ul>
+        <li>\( D_p \)：粒子直径</li>
+        <li>\( T_w \)：水温</li>
+        <li>\( A_k \) 和 \( B_k \)：与粒径范围相关的系数</li>
+        <li>\( W \)：白浪面积，定义为：  
+            \[
+            W = 3.84 \times 10^{-4} U_{10}^{3.41}
+            \]
+            其中，\( U_{10} \) 是 10 m 高度处的风速。
+        </li>
+    </ul>
+    <!-- 其余内容省略，根据要求扩展 -->
+</body>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
     <h2>4.8.2 化学 (Chemistry)</h2>
     <p>
         简单的气相化学被用于硫酸盐气溶胶的模拟，具体包括以下过程：
