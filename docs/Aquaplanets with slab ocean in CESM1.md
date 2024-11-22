@@ -182,8 +182,8 @@ tr_fy = .true.
 tr_iage = .true.
 grid_file = '/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/domain.ocn.1.9x2.5_aquaplanet.nc'
 kmt_file = '/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/domain.ocn.1.9x2.5_aquaplanet.nc'
-grid_type = ‘latlon’
-grid_format = ‘nc’
+grid_type = 'latlon'
+grid_format = 'nc'
 kstrength = 0</code></pre>
 
     <p>与上述相比，这是更广泛的设置。现在需要指定 <code>grid_file</code> 和 <code>kmt_file</code> 为域文件。添加 <code>kdyn</code> 参数只是为了明确说明。此外，<code>grid_type</code>、<code>grid_format</code> 和 <code>kstrength</code> 参数是通过试验和错误确定为必要的。</p>
