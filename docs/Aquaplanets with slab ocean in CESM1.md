@@ -157,7 +157,7 @@ tr_iage = .true.</code></pre>
     <p>参数 <code>kitd</code> 控制是否使用海冰热力学。我们也可以包含 <code>kdyn = 0</code> 来明确指定不使用海冰动力学（虽然在这个配置集中它已经默认被设为 0）。</p>
 
     <p>将模式更改为平板海洋模式，通过修改 <code>env_run.xml</code>：</p>
-
+&lt;entry id="CAM_NML_USE_CASE" value="SOM_aquaplanet_cam5" /&gt;
     <pre><code>&lt;!-- DOCN mode, valid values: prescribed, som, copyall, null (char) --&gt;
 &lt;entry id="DOCN_MODE" value="som" /&gt;
 &lt;!-- Sets SOM forcing data filename for pres runs, only used in D and E compset (char) --&gt;
