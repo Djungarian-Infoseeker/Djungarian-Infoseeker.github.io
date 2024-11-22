@@ -82,7 +82,7 @@ for target_tsi in target_tsi_values:
 <h3>3.4 在案例中指定新文件</h3>
 <ol>
   <li>编辑案例目录中的 <code>user_nl_cam</code> 文件，指定新的光谱辐照度文件：
-    <pre><code>solar_data_file = '/path/to/ape_solar_ave_tsi_1300.nc'</code></pre>
+    <pre><code>solar_data_file = '/work/home/yinjiewang/inputdata/atm/cam/solar/ape_solar_ave_tsi_1100.nc'</code></pre>
   </li>
   <li>运行 <code>./preview_namelist</code> 检查更改。</li>
   <li>编译和运行模型：
