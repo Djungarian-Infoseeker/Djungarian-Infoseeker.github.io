@@ -157,8 +157,9 @@ tr_iage = .true.</code></pre>
     <p>参数 <code>kitd</code> 控制是否使用海冰热力学。我们也可以包含 <code>kdyn = 0</code> 来明确指定不使用海冰动力学（虽然在这个配置集中它已经默认被设为 0）。</p>
 
     <p>将模式更改为平板海洋模式，通过修改 <code>env_run.xml</code>：</p>
+    <pre><code>
 &lt;entry id="CAM_NML_USE_CASE" value="SOM_aquaplanet_cam5" /&gt;
-    <pre><code>&lt;!-- DOCN mode, valid values: prescribed, som, copyall, null (char) --&gt;
+&lt;!-- DOCN mode, valid values: prescribed, som, copyall, null (char) --&gt;
 &lt;entry id="DOCN_MODE" value="som" /&gt;
 &lt;!-- Sets SOM forcing data filename for pres runs, only used in D and E compset (char) --&gt;
 &lt;entry id="DOCN_SOM_FILENAME" value="/work/home/yinjiewang/ExoCAM/cesm1.2.1/initial_files/cam_aqua_fv/pop_frc.1.9x2.5d.090130_aquaplanet_0OHT_Earth.nc" /&gt;</code></pre>
@@ -201,7 +202,7 @@ kstrength = 0</code></pre>
 <p>在水星球的大气中应使用哪种气溶胶？这一选择是任意的，但可能会影响模拟的某些方面。对于 CAM4 物理模块，有一个更明确的约定，即气溶胶不与辐射相互作用；同时，在 CAM4 中气溶胶也不与云相互作用，因此结果是一个“无气溶胶”的水星球。这是 CFMIP2 水星球实验的推荐做法，遵循 APE。对于 CAM5，气溶胶对云有间接影响，但没有标准方法可以“关闭”气溶胶效应。以下是一些可在 CAM5 水星球配置中应用的选项。每个选项都可以在 <code>env_build.xml</code> 中控制，如下所示：</p>
 
 <pre><code>env_build.xml
-&lt;entry id="CAM_CONFIG_OPTS" value="-phys cam5-chem OPTION" /&gt;</code></pre>
+&lt;entry id="CAM_CONFIG_OPTS" value="-phys cam5 -chem OPTION" /&gt;</code></pre>
 
 <p>其中，<code>OPTION</code> 可以填充多个值，但这里需要考虑的只有 <code>none</code> 和 <code>trop_mam3</code>。</p>
 
