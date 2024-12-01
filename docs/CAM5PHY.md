@@ -413,8 +413,45 @@
         (1) 计算 SOA 在不同模式间分布的现实方法；
         (2) 提供了气体/气溶胶分配的温度依赖性。
     </p>
+    <table>
+    <caption>表 4.2: 假定的 SOA（气体）产率</caption>
+    <thead>
+        <tr>
+            <th>物种</th>
+            <th>质量产率</th>
+            <th>参考文献</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>大烷烃</td>
+            <td>5%</td>
+            <td><a href="https://doi.org/10.1021/es048715v" target="_blank">Lim 和 Ziemann [2005]</a></td>
+        </tr>
+        <tr>
+            <td>大烯烃</td>
+            <td>5%</td>
+            <td>假定值</td>
+        </tr>
+        <tr>
+            <td>甲苯</td>
+            <td>15%</td>
+            <td><a href="https://doi.org/10.1021/es950943+">Odum 等人 [1997a]</a></td>
+        </tr>
+        <tr>
+            <td>异戊二烯</td>
+            <td>4%</td>
+            <td><a href="https://doi.org/10.1021/es052269u" target="_blank">Kroll 等人 [2006]</a></td>
+        </tr>
+        <tr>
+            <td>单萜</td>
+            <td>25%</td>
+            <td><a href="https://doi.org/10.1021/es052269u" target="_blank">Ng 等人 [2007a]</a></td>
+        </tr>
+    </tbody>
+    </table>
+
 </body>
-</html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
