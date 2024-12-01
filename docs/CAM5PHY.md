@@ -141,10 +141,11 @@
     我们注意到，在MAM-3中，我们预测硫酸盐气溶胶的质量混合比为NH₄HSO₄形式，而在MAM-7中为SO₄形式。MAM-3中传输的气溶胶示踪物总数为15种。
     </p>
 
-        <figure>
+    <figure>
         <img src="CAM5PHYDOC/4.4.png" alt="Figure 4.3: Predicted species for interstitial and cloud-borne component of each aerosol mode in MAM-3">
         <figcaption>图 4.4: 每种气溶胶模式在MAM-3中间质和云生组分的预测物种。每种模式的标准偏差分别为1.6（艾肯模式）、1.8（积聚模式）和1.8（粗模式）。</figcaption>
     </figure>
+    
     <p>
     间质气溶胶质量（<i>M<sub>ai,j</sub></i>）和数量（<i>N<sub>aj</sub></i>）的时间演变过程对于第<i>i</i>个物种和第<i>j</i>个模式由以下方程描述：
     </p>
