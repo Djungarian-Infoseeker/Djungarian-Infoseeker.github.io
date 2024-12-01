@@ -128,6 +128,10 @@
     <p>
         每种模式的粒径分布假定为对数正态分布，模式干或湿半径随粒子数量和总干或湿体积的变化而变化，标准偏差按照图 4.3 所示设定。对于 MAM-7 模式，总共传输的气溶胶种类为 31 种，而传输的气态物种包括 SO<sub>2</sub>、H<sub>2</sub>O<sub>2</sub>、DMS、H<sub>2</sub>SO<sub>4</sub>、NH<sub>3</sub> 和 SOA（气态）。
     </p>
+    <figure>
+        <img src="docs/CAM5PHYDOC/4.3.png" alt="Figure 4.3: Predicted species for interstitial and cloud-borne component of each aerosol mode in MAM-7">
+        <figcaption>图 4.3: MAM-7 模式中每种气溶胶模式下的间质和云生成分的预测物种。每种模式的标准偏差分别为 1.6（艾肯模式）、1.8（积聚模式）、1.6（初级碳模式）、1.8（细尘和粗尘）、2.0（细海盐和粗海盐）。</figcaption>
+    </figure>
     <p>
         对于 i-th 物种和 j-th 模式的间质气溶胶质量 (\(M_a^{i,j}\)) 和数量 (\(N_a^j\)) 的时间演化如下：
     </p>
