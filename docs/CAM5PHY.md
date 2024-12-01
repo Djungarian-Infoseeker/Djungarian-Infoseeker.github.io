@@ -473,34 +473,13 @@
         边界层核化的参数化在两种模式中均使用，参考 Sihto 等人 [2006]，H<sub>2</sub>SO<sub>4</sub> 的一级核化速率系数为 \(1.0 \times 10^{-6}\ s^{-1}\) [Wang 等人, 2009]。
         新生成的粒子被加入到艾肯模式中，并使用 Kerminen 和 Kulmala [2002] 的参数化来计算粒子在从临界簇大小生长到艾肯模式大小期间因凝并导致的损失。
     </p>
+    <p>
+        边界层核化的参数化在两种模式中均使用，参考 <strong>Sihto 等人 [2006]</strong>，H<sub>2</sub>SO<sub>4</sub> 的一级核化速率系数为 \(1.0 \times 10^{-6}\ s^{-1}\) [<strong>Wang 等人, 2009</strong>]。
+    </p>
+    <p>
+        新生成的粒子被加入到艾肯模式中，并使用 <strong>Kerminen 和 Kulmala [2002]</strong> 的参数化来计算粒子在从临界簇大小生长到艾肯模式大小期间因凝并导致的损失。
+    </p>
 
-    <h2>4.8.5 凝结 (Condensation)</h2>
-    <p>
-        H<sub>2</sub>SO<sub>4</sub> 蒸汽、NH<sub>3</sub>（仅 MAM-7）和 SOA（气相）对不同模式的凝结以动态方式处理，
-        使用标准的质量传输表达式 [Seinfeld 和 Pandis, 1998]，并在每种模式的粒径分布上积分 [Binkowski 和 Shankar, 1995]。
-    </p>
-    <p>
-        对于 H<sub>2</sub>SO<sub>4</sub> 和其他物种，假设吸附系数为 0.65 [Poschl 等人, 1998]。
-        H<sub>2</sub>SO<sub>4</sub> 和 NH<sub>3</sub> 的凝结被视为不可逆，NH<sub>3</sub> 的吸收在模式的 NH<sub>4</sub>/SO<sub>4</sub> 摩尔比达到 2 时停止。
-        SOA（气相）的凝结是可逆的，其平衡蒸汽压通过以下公式计算：
-    </p>
-    <p>
-        $$
-        P^*_m = \left( \frac{A^{\text{SOA}}_m}{A^{\text{SOA}}_m + 0.1 A^{\text{POA}}_m} \right) P^0_m
-        $$
-    </p>
-    <p>
-        其中 \(P^0(T)\) 的温度依赖性为：
-    </p>
-    <p>
-        $$
-        P^0(T) = P^0(298K) \times \exp \left[ -\frac{\Delta H_{\text{vap}}}{R} \left( \frac{1}{T} - \frac{1}{298} \right) \right]
-        $$
-    </p>
-    <p>
-        在 MAM-7 中，凝结到初级碳模式上的硫酸盐会使颗粒发生老化。使用的老化标准是 3 个硫酸盐分子层厚度。
-        这种老化过程会将颗粒从初级碳模式转移到积聚模式。
-    </p>
 
     <h2>4.8.6 凝并 (Coagulation)</h2>
     <p>
