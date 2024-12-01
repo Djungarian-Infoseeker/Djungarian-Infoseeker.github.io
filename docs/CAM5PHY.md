@@ -129,7 +129,7 @@
         每种模式的粒径分布假定为对数正态分布，模式干或湿半径随粒子数量和总干或湿体积的变化而变化，标准偏差按照图 4.3 所示设定。对于 MAM-7 模式，总共传输的气溶胶种类为 31 种，而传输的气态物种包括 SO<sub>2</sub>、H<sub>2</sub>O<sub>2</sub>、DMS、H<sub>2</sub>SO<sub>4</sub>、NH<sub>3</sub> 和 SOA（气态）。
     </p>
     <figure>
-        <img src="CAM5PHYDOC/4.4.jpg" alt="Figure 4.4: Predicted species for interstitial and cloud-borne component of each aerosol mode in MAM-7">
+        <img src="CAM5PHYDOC/4.3.png" alt="Figure 4.3: Predicted species for interstitial and cloud-borne component of each aerosol mode in MAM-7">
         <figcaption>图 4.3: MAM-7 模式中每种气溶胶模式下的间质和云生成分的预测物种。每种模式的标准偏差分别为 1.6（艾肯模式）、1.8（积聚模式）、1.6（初级碳模式）、1.8（细尘和粗尘）、2.0（细海盐和粗海盐）。</figcaption>
     </figure>
     <p>
@@ -140,12 +140,10 @@
     <br>（4）硫酸盐部分被铵盐中和，以NH₄HSO₄的形式存在，因此铵盐被有效地规定，NH₃不被模拟。
     我们注意到，在MAM-3中，我们预测硫酸盐气溶胶的质量混合比为NH₄HSO₄形式，而在MAM-7中为SO₄形式。MAM-3中传输的气溶胶示踪物总数为15种。
     </p>
-
     <figure>
-        <img src="CAM5PHYDOC/4.4.png" alt="Figure 4.3: Predicted species for interstitial and cloud-borne component of each aerosol mode in MAM-3">
+        <img src="CAM5PHYDOC/4.4.jpg" alt="Figure 4.4: Predicted species for interstitial and cloud-borne component of each aerosol mode in MAM-3">
         <figcaption>图 4.4: 每种气溶胶模式在MAM-3中间质和云生组分的预测物种。每种模式的标准偏差分别为1.6（艾肯模式）、1.8（积聚模式）和1.8（粗模式）。</figcaption>
     </figure>
-    
     <p>
     间质气溶胶质量（<i>M<sub>ai,j</sub></i>）和数量（<i>N<sub>aj</sub></i>）的时间演变过程对于第<i>i</i>个物种和第<i>j</i>个模式由以下方程描述：
     </p>
@@ -251,6 +249,83 @@
         </li>
     </ul>
     <p>森林火灾和草原火灾产生的 POM 和 BC 被排放到 0-6 km 高度，而其他来源（家庭、能源、工业、交通、废弃物和航运）的 POM 和 BC 则排放到地表。火灾排放的注入高度分布基于相应的 AEROCOM 数据，具有空间和时间变化。硫酸盐、POM 和 BC 的质量排放通量被转换为基于 AEROCOM 规定对数正态粒径分布的数量排放通量，具体如表 4.1 所示。</p>
+    <table>
+    <caption>表 4.1: 初级排放的粒径分布</caption>
+    <thead>
+        <tr>
+            <th>排放源</th>
+            <th>几何标准偏差, <i>s<sub>g</sub></i></th>
+            <th>数量模式直径, <i>D<sub>gn</sub></i>(μm)</th>
+            <th><i>D<sub>emit</sub></i>(μm)<sup>1</sup></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>BC/OM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>森林火灾/草原火灾</td>
+            <td>1.8</td>
+            <td>0.080</td>
+            <td>0.134</td>
+        </tr>
+        <tr>
+            <td>家庭/能源/工业/交通/航运/废物</td>
+            <td>见注释<sup>2</sup></td>
+            <td>见注释<sup>2</sup></td>
+            <td>0.134</td>
+        </tr>
+        <tr>
+            <td>SO<sub>4</sub></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>森林火灾/草原火灾/废物</td>
+            <td>1.8</td>
+            <td>0.080</td>
+            <td>0.134</td>
+        </tr>
+        <tr>
+            <td>能源/工业/航运</td>
+            <td>见注释<sup>3</sup></td>
+            <td>见注释<sup>3</sup></td>
+            <td>0.261</td>
+        </tr>
+        <tr>
+            <td>家庭/交通</td>
+            <td>1.8</td>
+            <td>0.030</td>
+            <td>0.0504</td>
+        </tr>
+        <tr>
+            <td>连续火山, 50% 在艾肯模式</td>
+            <td>1.8</td>
+            <td>0.030</td>
+            <td>0.0504</td>
+        </tr>
+        <tr>
+            <td>连续火山, 50% 在积聚模式</td>
+            <td>1.8</td>
+            <td>0.080</td>
+            <td>0.134</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <p><sup>1</sup><i>D<sub>emit</sub></i> 是体积平均直径 = <i>D<sub>gn</sub></i>exp(1.5×ln(<i>s<sub>g</sub></i>)²)，用于数量排放计算: <i>E<sub>number</sub></i> = <i>E<sub>mass</sub></i>/(π/6×ρ<i>D<sub>emit</sub></i>³)</p>
+                <p><sup>2</sup>该值介于Dentener等人 [2006a] <i>D<sub>emit</sub></i> = 0.0504m 和 Liu等人 [2005] <i>D<sub>emit</sub></i> = 0.206m 之间</p>
+                <p><sup>3</sup>改编自Stier等人 [2005]，其中50%的质量进入积聚模式，<i>D<sub>emit</sub></i> = 0.207 m，50%进入粗模式，<i>D<sub>emit</sub></i> = 3.08m。我们将所有质量放入积聚模式，<i>D<sub>emit</sub></i> = 0.261m，给出的数量排放与Stier等人 [2005] 一致。[Dentener等人, 2006a] 将所有质量放入粗模式，<i>D<sub>emit</sub></i> = 2.06 m</p>
+            </td>
+        </tr>
+    </tfoot>
+    </table>
+
     <h3>自然气溶胶和前体气体排放</h3>
     <p>自然气溶胶和前体气体排放（如火山硫、DMS、NH₃ 和生物挥发性有机化合物 VOCs）不包括在 IPCC AR5 数据集中。因此，使用了 <strong>AEROCOM</strong> 数据中关于火山 SO₂ 和硫酸盐的排放通量、注入高度和粒径分布，以及表面 DMS 的通量。NH₃ 的排放通量基于 <strong>MOZART-4</strong> 数据集 [<strong>Emmons, 2010</strong>]。</p>
     <p>用于推导 SOA（气体）排放的异戊二烯、单萜、甲苯、大烯烃和大烷烃的排放通量基于 <strong>MOZART-2</strong> 数据集 [<strong>Horowitz, 2003</strong>]。这些排放数据代表了 1990 年代末的条件。</p>
