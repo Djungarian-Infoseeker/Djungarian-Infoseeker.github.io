@@ -89,3 +89,54 @@ Louise H. KeLLogg1, HarsHa LoKavarapu2, and donaLd L. TurcoTTe2,*,†
     <p>（Kasting 和 Ackerman，1986年）</p>
 </body>
 </html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳从大气到大陆地壳的转移</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h1>碳从大气到大陆地壳的转移</h1>
+
+    <p>关于大陆地壳中碳的来源，一种假设是碳是在地球历史的早期直接从大气中提取的。上述给出的早期大气中碳的质量（\(cM_a0 = 1.57 \times 10^8 \, \text{Gt}\)）远大于大陆地壳中碳的总质量（\(cM_{\text{ccp}} = 5 \times 10^7 \, \text{Gt}\)）。这种从大气中直接提取的假设已被Kramers（2002年）和Lowe与Tice（2004年）详细讨论过。</p>
+
+    <p>基本假设是，大气到大陆地壳的碳质量通量（\(cJ_{a-cc}\)）受钙硅酸盐的可用性控制。为了使尤里反应能够从大气中提取二氧化碳，早期地球必须拥有大陆地壳，从而生成钙硅酸盐的表面沉积物。此外，地球必须拥有海洋，才能使酸雨催化大气二氧化碳与钙硅酸盐沉积物之间的尤里反应。关于二氧化碳从大气中提取的启动时间，几乎没有数据可用。我们假设该过程始于早期撞击和约44亿年前地幔海洋的固化后的一段时间（\(t_0\)）。我们进一步假设，在大气中二氧化碳浓度减少到极低水平之前，尤里反应以恒定速率从大气中提取碳（\(cJ_{a-cc}\)）。在此期间（\(t_0 < t < t_0 + t_{a-cc}\)），尤里反应将大气中的碳提取到大陆地壳。</p>
+
+    <p>我们将指定从大气中提取的碳的质量，并得出如下结论：</p>
+
+    <h2>图1：大陆地壳中碳的质量（\(cM_{\text{cc}}\)）随时间的变化</h2>
+
+    <p>对于添加当前质量（\(cM_{\text{ccp}} = 5 \times 10^7 \, \text{Gt}\)），给出了两种极限模型：</p>
+    <ol>
+        <li>从大气中开始添加，\(t_0 = 1 \, \text{Gyr}\)。所有大气中的碳在\(t_{a-cc} = 1 \, \text{Gyr}\)内以恒定的通量（\(cJ_{a-cc} = 50 \, \text{Mt/yr}\)）转移。</li>
+        <li>从地幔中开始添加，\(t_0 = 1 \, \text{Gyr}\)。碳以恒定的通量（\(cJ_{m-cc} = 14.7 \, \text{Mt/yr}\)）添加至现在。</li>
+    </ol>
+
+    <p>我们假设，大气中的碳质量（\(cM_a\)）在时间上呈线性下降，从\(cM_{a0}\)降至零，而大陆地壳中的碳质量则在时间上呈线性增加。</p>
+
+    <p>假设大陆地壳中的所有碳（\(cM_{\text{ccp}}\)）都是从大气中提取的，那么碳质量随时间的变化关系为：</p>
+
+    <div>
+        $$ 
+        cM_{\text{cc}} = 0, \quad 0 \leq t \leq t_0
+        $$
+    </div>
+
+    <div>
+        $$ 
+        cM_{\text{cc}} = cM_{\text{ccp}} \left[ \frac{t - t_0}{t_{a-cc}} \right], \quad t_0 \leq t \leq t_0 + t_{a-cc}
+        $$
+    </div>
+
+    <div>
+        $$ 
+        cM_{\text{cc}} = cM_{\text{ccp}}, \quad t_0 + t_{a-cc} \leq t \leq t_p
+        $$
+    </div>
+
+    <p>取\(cM_{\text{ccp}} = 5 \times 10^7 \, \text{Gt}\)，\(t_0 = 1 \, \text{Gyr}\)，以及\(t_{a-cc} = 1 \, \text{Gyr}\)，则\(cM_{\text{cc}}\)与时间\(t\)的关系如图1所示。所需的大气到大陆地壳的碳通量为\(cJ_{a-cc} = 50 \, \text{Mt/yr}\)。需要强调的是，\(t_{a-cc}\)的值存在不确定性，且通量\(cJ_{a-cc}\)的变化在时间上可能会有较大波动。然而，很显然，从大气中提取碳到大陆地壳的过程是在地球历史的早期完成的。</p>
+</body>
+</html>
