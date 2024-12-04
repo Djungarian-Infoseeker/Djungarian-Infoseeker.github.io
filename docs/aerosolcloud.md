@@ -126,3 +126,120 @@ S = \left( \frac{w}{2\pi G} \frac{d q_l}{dz} \right)^{1/3} \left( \frac{1}{N_d^2
 <p>激活过程可以通过像密歇根理工大学的Pi腔室（Prabhakaran等，2020；Shaw等，2020）这样的实验室实验来更好地观察。</p>
 
 <p>这种云物理研究技术经受住了时间的考验（Aitken，1881），并且仍然为未来更多定量研究气流与微物理之间的关键相互作用提供了巨大潜力。</p>
+
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暖云反照率</title>
+    <!-- 引入 MathJax 插件 -->
+    <script type="text/javascript" async 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+
+<h2>2.4 暖云反照率</h2>
+
+<p>在前面的章节中，我们描述了气溶胶如何激活为云滴。在这里，我们描述了气溶胶通过控制云滴数浓度（Nd）如何直接影响云的反照率（𝛼）。通过改变云滴的数量浓度，气溶胶对云反照率的改变，独立于任何云凝结量的变化，被称为第一间接效应或Twomey效应（Twomey，1977）。</p>
+
+<p>基于Lorenz-Mie理论，云的光学厚度（𝜏）是液态云滴集合体的消光截面，其几何半径为（r），云滴的尺寸分布为（nd(r)）。其表达式为：</p>
+
+<div id="mathjax">
+\[
+\tau = \int_0^h \int_0^\infty Q_e \pi r^2 n_d(r) \, dr \, dz \quad (2.3)
+\]
+</div>
+
+<p>其中，Qe是消光效率，z是垂直距离，h是几何云高，Qe≈2对于液态云滴。有效半径（re）与散射面积成比例，其公式为：</p>
+
+<div id="mathjax">
+\[
+r_e = \frac{\int_0^\infty r \pi r^2 n_d(r) \, dr}{\int_0^\infty \pi r^2 n_d(r) \, dr} \quad (2.4)
+\]
+</div>
+
+<p>云内某一体积的液态水含量（LWC）为：</p>
+
+<div id="mathjax">
+\[
+LWC = \frac{4\pi}{3} \rho_{liq} \int_0^\infty r^3 n_d(r) \, dr \quad (2.5)
+\]
+</div>
+
+<p>将方程（2.5）除以方程（2.3）中的积分项，并假设Qe≈2，重新排列并对高度积分，得到：</p>
+
+<div id="mathjax">
+\[
+\tau = \int_0^h \frac{3}{2 \rho_{liq}} \frac{LWC(z)}{r_e(z)} \, dz \quad (2.6)
+\]
+</div>
+
+<p>按照S. Twomey（1977）原始的表述方式，我们希望将其表示为云滴数量浓度Nd的函数。这是有用的，因为Nd主要取决于云凝结核（CCN）的数量浓度，且与有效半径（re）相比，Nd在第一近似下与LWC无关。Nd是LWC除以云滴质量，公式为：</p>
+
+<div id="mathjax">
+\[
+N_d(z) = LWC(z) \cdot \left( \frac{\rho_{liq}}{4\pi r(z)^3 3} \right)^{-1} \quad (2.7)
+\]
+</div>
+
+<p>为了从卫星数据中计算Nd，插入一个常数因子k = \( \frac{r^3}{r_e^3} \) 允许使用有效半径而不是实际半径来计算。测量从太空中获得的Nd时，还必须考虑云的亚绝热程度（fad）。我们可以将云的LWC表示为绝热性和云的垂直扩展的函数：</p>
+
+<div id="mathjax">
+\[
+LWC(z) = f_{ad} \Gamma_{ad} z \quad (2.8)
+\]
+</div>
+
+<p>其中，Γad是LWC随高度增加的绝热率，它是压力和温度的函数。使用方程（2.8）和（2.7）代入方程（2.6），我们可以将云的光学厚度表示为Nd、云的几何深度和绝热性的函数：</p>
+
+<div id="mathjax">
+\[
+\tau = A \cdot \left( f_{ad} \Gamma_{ad} \right)^{2/3} N_d^{1/3} h^{5/3} \quad (2.9)
+\]
+</div>
+
+<p>其中A是常数，等于 \( \left( \frac{243\pi}{250 \rho_{liq}^2} \right)^{1/3} \)。因此，云的光学厚度是Nd的弱函数。它也可以用LWP而不是云厚度来表示，通过方程（2.8）的积分版本：</p>
+
+<div id="mathjax">
+\[
+\tau = N_d^{1/3} \cdot LWP^{5/6} \cdot A \cdot \left( \frac{32}{f_{ad} \Gamma_{ad}} \right)^{1/6} \quad (2.10)
+\]
+</div>
+
+<p>增加Nd会增加云的光学厚度，并产生第一个间接效应，即气溶胶-云辐射效应。云反照率或反射率（𝛼）与Nd的依赖关系进一步减弱：假设保守散射允许我们近似为（Lacis & Hansen，1974）：</p>
+
+<div id="mathjax">
+\[
+\alpha \sim \frac{\tau}{\tau + \eta} \quad (2.11)
+\]
+</div>
+
+<p>其中𝜂是常数，根据非对称性参数（通常用符号g表示）的值以及在推导方程时的假设而变化。非对称性参数是散射角余弦的强度加权平均值。对于典型的g值为0.85时，𝜂的范围是7（Petty，2006）到13.3（Tornow等，2020）。</p>
+
+<p>公式的10/3次方中，Nd的变化以及𝛼与𝜏之间的关系显示，在高Nd时，增加Nd的效应会减小。其后果之一是前工业状态在决定ERFaci时的重要性（Carslaw等，2013）。</p>
+
+<p>𝜏与Nd的依赖关系以及𝛼与𝜏的关系在图2.2中有所展示。</p>
+
+<p>气溶胶引起的云反照率变化会转化为大气顶层辐射平衡的变化：</p>
+
+<div id="mathjax">
+\[
+dR = d \left( R_{in}^{SW} [A_{cldc} + (1 - c) A_{clr}] - R_{out}^{LW} \right) \quad (2.12)
+\]
+</div>
+
+<p>其中，Rin<sup>SW</sup>表示入射短波辐射，Rout<sup>LW</sup>表示出射长波辐射，c为云量，Aclr/cld为大气顶层的晴空和云空反照率。长波部分可以忽略，除非气溶胶变化影响到云顶温度，或者云层较薄（例如Garrett等，2002年2月1日）。</p>
+
+<p>此外，Rin<sup>SW</sup>的变化通常也可以忽略，至少在亚十年时间尺度上。Diamond等（2020）提供了一个食谱来将辐射平衡变化与部分云覆盖下的反照率相关联，考虑了大气层以上云层的透射率和反照率。在污染较少的海洋地区，当地表反照率和大气反照率较小，且云量变化不大时，方程（2.12）可以近似为：</p>
+
+<div id="mathjax">
+\[
+dR \propto d(\alpha \cdot c) \quad (2.13)
+\]
+</div>
+
+<p>其中𝛼是云反照率。然而，在陆地或海冰上，在污染条件下，或者对于高云或厚云（因为近似假设大气反照率与晴空反照率相似），方程（2.13）不再有效。</p>
+
+</body>
+</html>
