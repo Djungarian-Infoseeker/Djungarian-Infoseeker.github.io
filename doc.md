@@ -18,7 +18,7 @@
 - [如何修改CAM当中的太阳辐照量？/ How to modify the TSI in CESM?](https://infoseeker.cn/docs/TSI)<span style="color:green;">（更新日期2024/11/21，已完结）</span>
 
 - [气溶胶-云相互作用概述中文翻译/An Overview of Aerosol-Cloud Interactions（Chinese ver）by  Hamish Gordon, Franziska Glassmeier, and Daniel T. McCoy](https://infoseeker.cn/docs/aerosolcloud)<span style="color:red;">（更新日期2024/12/3，未完结） </span>
-- [什么是乌雷反应？中文翻译/Carbonation and the Urey reaction（Chinese ver）by  Louise H. KeLLogg, HarsHa LoKavarapu, and donaLd L. TurcoTTe](https://infoseeker.cn/docs/urey)<span style="color:red;">（更新日期2024/12/4，未完结） </span>
+- [什么是乌雷反应？中文翻译/Carbonation and the Urey reaction（Chinese ver）by  Louise H. KeLLogg, HarsHa LoKavarapu, and donaLd L. TurcoTTe](https://infoseeker.cn/docs/urey)<span style="color:green;">（更新日期2024/12/4，已完结） </span>
 # 资料 / Resources
 - [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)<span style="color:green;">（更新日期2024/10/20）</span>
 # 有趣的经历 / Fun & Exploration
