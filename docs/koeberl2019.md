@@ -58,3 +58,79 @@
     </p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Impact Action and its Modeling</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <h1>撞击作用及其建模</h1>
+
+    <h2>引言</h2>
+    <p>
+        Toon 等人（1997）描述了高速撞击对地球环境的影响总体情景。在列举大规模撞击对环境的各种影响机制时，
+        他们简要讨论了气候相关气体和尘埃的产生。在海洋撞击的情况下，最显著的影响是大量水蒸气注入高于大气规模高度的层次（Birks 等人，2007）。
+        虽然估算蒸发水的总量相对简单，但水蒸气羽流在全球的初始分布则不那么显而易见。
+    </p>
+
+    <h2>水蒸气的产生</h2>
+    <p>
+        Toon 等人（1997）基于 Zahnle（1990）提出的形式，发布了关于高速度撞击导致的水蒸气蒸发量的基本估算，
+        作为撞击物初始动能的函数。Kring（2003）估算，在雪球地球时期可能发生的撞击事件中，水蒸气的注入量大约为 \(10^4\) 千亿吨（\(10^{16}\) 千克）。
+    </p>
+
+    <h2>模型问题 #1：撞击模拟</h2>
+    <p>
+        模型问题 #1 的目标是模拟岩质小行星撞击具有分层目标的情况：在晶体基底上的 H2O 层（海洋）。
+        状态方程使用 ANEOS 计算的多相 H2O（包括水、蒸汽和七种冰相）、花岗岩以及橄榄岩（Benz 等人，1989；Pierazzo 等人，1997；Ivanov，2005）。
+        本模型不考虑大气层，从而估算在给定高度以上的最大 H2O 抛射量。
+    </p>
+    <p>
+        典型的初始模型几何如图 2 和图 3 所示：
+    </p>
+    <p>
+        <img src="https://onlinelibrary.wiley.com/cms/asset/d1a9a99d-76a6-4c4e-a8d4-106baf2bb24f/maps13294-fig-0002-m.jpg" alt="图 2: Set #1a 模型的几何结构" style="max-width: 100%; height: auto;">
+        <br><strong>图 2</strong>: Set #1a 模型的几何结构：3 公里海洋层覆盖在晶体基底上。右侧面板显示了目标的垂直密度分布。
+        海洋的上层 800 米冻结成冰（冰相 I h，温度 -10°C），其余目标温度为 +10°C。分辨率为每撞击物半径 50 个单元。
+        撞击速度为 18 km/s。
+    </p>
+    <p>
+        <img src="https://onlinelibrary.wiley.com/cms/asset/d140b950-7dfe-478b-9d6e-f1474198737a/maps13294-fig-0003-m.jpg" alt="图 3: Set #1b 模型的几何结构" style="max-width: 100%; height: auto;">
+        <br><strong>图 3</strong>: Set #1b 模型的几何结构：目标为 800 米冰层覆盖在晶体基底上。撞击速度为 18 km/s。
+    </p>
+
+    <h2>分辨率比较</h2>
+    <p>
+        数值模型通常难以用高分辨率计算大体积的空间。在本模拟中，我们在早期阶段以 50 CPPR 的分辨率计算，
+        并在后期阶段降低分辨率。图 4 比较了不同分辨率下同一时间点的模拟结果：
+    </p>
+    <p>
+        <img src="https://onlinelibrary.wiley.com/cms/asset/474e7b96-de23-4d83-a4b4-e11a4b9d9290/maps13294-fig-0004-m.jpg" alt="图 4: 不同分辨率下的撞击模拟" style="max-width: 100%; height: auto;">
+        <br><strong>图 4</strong>: Set #1a 模型在撞击后 2 秒的分辨率比较：50 CPPR (\(Δx = 50 \text{ m}\))，
+        25 CPPR (\(Δx = 100 \text{ m}\))，和 13 CPPR (\(Δx = 200 \text{ m}\))。撞击物直径 5 km，撞击速度 18 km/s。
+    </p>
+
+    <h2>水蒸气质量的估算</h2>
+    <p>
+        抛射到特定高度以上的水蒸气量由其体积 \(V_{ej}\) 和初始密度 \(ρ_0\) 计算得出：\(M_{ej} = ρ_0 V_{ej}\)。
+        图 5 显示了在没有大气的情况下，抛射到 10 公里以上的水蒸气质量变化。
+    </p>
+    <p>
+        <img src="https://onlinelibrary.wiley.com/cms/asset/0354bf0b-62f8-48a5-a6b2-f6e964e83fbc/maps13294-fig-0005-m.jpg" alt="图 5: 抛射的水蒸气体积和质量估算" style="max-width: 100%; height: auto;">
+        <br><strong>图 5</strong>: Set #1a 模型中抛射的 H2O 体积和质量随高度的变化。
+    </p>
+
+    <h2>不同目标的比较</h2>
+    <p>
+        模型 Set #1b 的目标为 800 米冰层覆盖晶体基底，产生的水蒸气量约为 Set #1a 的一半（见图 6）。
+    </p>
+    <p>
+        <img src="https://onlinelibrary.wiley.com/cms/asset/96339ba9-b151-4202-9dcf-0c80ce45b5b5/maps13294-fig-0006-m.jpg" alt="图 6: Set #1a 和 #1b 的水蒸气比较" style="max-width: 100%; height: auto;">
+        <br><strong>图 6</strong>: Set #1a 和 Set #1b 在不同高度上的 H2O 抛射量的比较。
+    </p>
+</body>
+</html>
