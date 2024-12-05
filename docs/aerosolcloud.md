@@ -127,7 +127,7 @@ S = \left( \frac{w}{2\pi G} \frac{d q_l}{dz} \right)^{1/3} \left( \frac{1}{N_d^2
 
 <p>这种云物理研究技术经受住了时间的考验（Aitken，1881），并且仍然为未来更多定量研究气流与微物理之间的关键相互作用提供了巨大潜力。</p>
 
-# 暖云反照率
+<h1>暖云反照率</h1>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -242,5 +242,83 @@ dR \propto d(\alpha \cdot c) \quad (2.13)
 
 <p>其中𝛼是云反照率。然而，在陆地或海冰上，在污染条件下，或者对于高云或厚云（因为近似假设大气反照率与晴空反照率相似），方程（2.13）不再有效。</p>
 
+</body>
+</html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>确定灵敏度的方法</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h1>2.5 确定灵敏度的方法</h1>
+    <p>气溶胶对云辐射特性的影响可以通过将场景反照率变化</p>
+    <div>
+        $$ dR = d(\alpha \cdot c) $$
+    </div>
+    <p>(方程 2.13) 与导致场景反照率变化的云滴浓度扰动 \(dN_d\) 相关联来量化：</p>
+    <div>
+        $$ \frac{d \ln R}{d \ln N_d} = \frac{d \ln \alpha}{d \ln N_d} + \frac{d \ln c}{d \ln N_d}, $$
+    </div>
+    <p>(方程 2.14)。其中，引入对数导数</p>
+    <div>
+        $$ \frac{d \ln R}{d \ln N_d} = \frac{(dR / R)}{(dN_d / N_d)} $$
+    </div>
+    <p>作为方便的标记，并按照 Platnick 和 Twomey (1994) 的方法广泛称为灵敏度。</p>
+
+    <p>假设云滴数浓度的扰动是由于气溶胶数浓度的变化 \(dN_a\) 引起的，而不是由降水或云内热力变化引起的。其数值对应于 \(R\) 对 \(N_d\) 的 1% 变化所产生的百分比变化。</p>
+
+    <p>将云反照率表示为 \(N_d\) 的嵌套函数：</p>
+    <div>
+        $$ \alpha = \alpha\{\tau[N_d, \text{LWP}(N_d)]\}, $$
+    </div>
+    <p>其中，\(\alpha(\tau)\) 由方程 (2.11) 给出，而 \(\tau(N_d, \text{LWP})\) 由方程 (2.10) 给出。应用链式法则可对暖云提供以下简化：</p>
+    <div>
+        $$ 
+        \frac{d \ln \alpha}{d \ln N_d} = 
+        \frac{\partial \ln \alpha}{\partial \ln \tau} \cdot \frac{d \ln \tau}{d \ln N_d} =
+        \frac{\partial \ln \alpha}{\partial \ln \tau} 
+        \left(
+        \frac{\partial \ln \tau}{\partial \ln N_d} +
+        \frac{\partial \ln \tau}{\partial \ln \text{LWP}} \cdot \frac{d \ln \text{LWP}}{d \ln N_d}
+        \right)
+        $$
+    </div>
+    <div>
+        $$ 
+        = (1 - \alpha) 
+        \left(
+        \frac{1}{3} + \frac{5}{6} \cdot \frac{d \ln \text{LWP}}{d \ln N_d}
+        \right).
+        $$
+    </div>
+
+    <p>请注意，偏导数 (符号：\(\partial\)) 量化了相对于一个特定变量的变化，同时将其他所有变量保持固定。类似方程 (2.10) 的幂函数的偏对数导数对应于其指数，因此与任何常数预因子无关。</p>
+
+    <p>总结方程 (2.14) 和 (2.16)，得到部分云场景的总体灵敏度 (Bellouin et al., 2020)：</p>
+    <div>
+        $$ 
+        \frac{d \ln R}{d \ln N_d} = \frac{1 - \alpha}{3} + \frac{5(1 - \alpha)}{6} \cdot \frac{d \ln \text{LWP}}{d \ln N_d} + \frac{d \ln c}{d \ln N_d}.
+        $$
+    </div>
+    <div>
+        $$ 
+        = \frac{\partial \ln R}{\partial \ln N_d} + 
+        \frac{\partial \ln R}{\partial \ln \text{LWP}} \cdot \frac{d \ln \text{LWP}}{d \ln N_d} +
+        \frac{\partial \ln R}{\partial \ln c} \cdot \frac{d \ln c}{d \ln N_d}.
+        $$
+    </div>
+
+    <p>其中，第一等式(如方程 2.16) 严格适用于暖云。第二等式假设更普遍适合基于函数关系 \(R = f(N_d, \text{LWP}, c)\) 量化 \(R\) 的变异性。</p>
+
+    <h2>线性回归的局限性</h2>
+    <p>传统上，对数导数通过对数空间中的线性回归斜率进行经验量化。</p>
+    <p>线性回归进一步假设量与量之间具有恒定指数的幂律关系。然而，这种关系可能仅在某些条件下作为有效近似。</p>
+
+    <h2>灵敏度的时间依赖性</h2>
+    <p>最后，\(\text{LWP}\) 对 \(\text{N}_d\) 的响应可能不是瞬时的，而是随时间演变，从而使灵敏度具有时间依赖性 (Glassmeier et al., 2021)。</p>
 </body>
 </html>
