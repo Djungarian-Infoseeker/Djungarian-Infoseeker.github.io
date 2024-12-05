@@ -5,7 +5,7 @@ $section-headings-color: rosybrown;
 @import"{{ site.theme }}";
 
 .page-header {
-  background: url("{{ page.header_image | default: '/assets/images/Mars_evolution.jpg' }}");
+  background: url("{{ page.header_image | default: '../../Mars_evolution.jpg' }}");
   background-size: cover;
 }
 

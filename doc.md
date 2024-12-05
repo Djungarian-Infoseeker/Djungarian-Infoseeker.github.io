@@ -1,6 +1,6 @@
 ---
 title: "Page Title"
-header_image: "evolution.jpg"
+header_image: "../../evolution.jpg"
 ---
 
 # 为什么我要写博客？
