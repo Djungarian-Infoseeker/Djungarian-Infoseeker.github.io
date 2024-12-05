@@ -1,6 +1,4 @@
-<script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
-</script>
+
 Asteroid impact effects on Snowball Earth 
 
 Christian KOEBERL 1,2* and Boris A. IVANOV 3 
