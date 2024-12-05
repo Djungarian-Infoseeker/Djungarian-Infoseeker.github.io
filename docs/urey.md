@@ -107,13 +107,13 @@ Louise H. KeLLogg1, HarsHa LoKavarapu2, and donaLd L. TurcoTTe2,*,†
 
     <p>我们将指定从大气中提取的碳的质量，并得出如下结论：</p>
     <div>
-    <img src="/urey/am-2019-6880_fig01.png" alt="大陆地壳中碳质量 cMcc 对时间的依赖性图">
-    <p>
-        大陆地壳中碳质量 <em>cMcc</em> 对时间的依赖性。给出了两个极限模型，用于添加当前质量 <em>cMccp</em> = 5 × 10<sup>7</sup> Gt。
-        （1）从大气中加入，从 <em>t<sub>0</sub></em> = 1 Gyr。所有大气碳都以恒定通量 <em>cJa-cc</em> = 50 Mtyr<sup>-1</sup> 
-        以 <em>τa-cc</em> = 1 Gyr 的形式转移。
-        （2）从地幔开始添加，从 <em>t<sub>0</sub></em> = 1 Gyr。碳以恒定通量 <em>cJm-cc</em> = 14.7 Mtyr<sup>-1</sup> 添加到现在。
-    </p>
+        <img src="/urey/am-2019-6880_fig01.png" alt="大陆地壳中碳质量 cMcc 对时间的依赖性图">
+        <p>
+            大陆地壳中碳质量 <em>cMcc</em> 对时间的依赖性。给出了两个极限模型，用于添加当前质量 <em>cMccp</em> = 5 × 10<sup>7</sup> Gt。
+            （1）从大气中加入，从 <em>t<sub>0</sub></em> = 1 Gyr。所有大气碳都以恒定通量 <em>cJa-cc</em> = 50 Mtyr<sup>-1</sup> 
+            以 <em>τa-cc</em> = 1 Gyr 的形式转移。
+            （2）从地幔开始添加，从 <em>t<sub>0</sub></em> = 1 Gyr。碳以恒定通量 <em>cJm-cc</em> = 14.7 Mtyr<sup>-1</sup> 添加到现在。
+        </p>
     </div>
 
     <h2>图1：大陆地壳中碳的质量（\(cM_{\text{cc}}\)）随时间的变化</h2>
@@ -276,11 +276,11 @@ Louise H. KeLLogg1, HarsHa LoKavarapu2, and donaLd L. TurcoTTe2,*,†
 
     <p>第二个问题是关于大气中碳注入后恢复到平衡值的过程。我们通过研究古新世—始新世温度极大期（PETM）对这一过程进行了量化。这对恢复当前人为碳注入到大气中的过程具有明显的启示。我们发现，恢复时间大约为 5 万年。</p>
     <div>
-    <img src="/urey/am-2019-6880_fig02.png" alt="PETM 异常的大气碳质量值 cMa 对时间 tPETM 的依赖性图">
-    <p>
-        PETM 异常的大气碳质量值 <em>cMa</em> 对时间 <em>tPETM</em> 相对于异常开始的依赖性。
-        这些值来自公式 11 中给出的松弛模型，其中 <em>cMab</em> = 1400 Gt 和 <em>cMa0</em> = 3050 Gt，<em>τu</em> = 100 kyr。
-    </p>
+        <img src="/urey/am-2019-6880_fig02.png" alt="PETM 异常的大气碳质量值 cMa 对时间 tPETM 的依赖性图">
+        <p>
+            PETM 异常的大气碳质量值 <em>cMa</em> 对时间 <em>tPETM</em> 相对于异常开始的依赖性。
+            这些值来自公式 11 中给出的松弛模型，其中 <em>cMab</em> = 1400 Gt 和 <em>cMa0</em> = 3050 Gt，<em>τu</em> = 100 kyr。
+        </p>
     </div>
 
     <h2>图2：PETM异常期间大气中碳质量随时间变化的依赖关系</h2>
