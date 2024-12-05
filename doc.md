@@ -21,7 +21,8 @@
 - [什么是乌雷反应？中文翻译/Carbonation and the Urey reaction（Chinese ver）by  Louise H. KeLLogg, HarsHa LoKavarapu, and donaLd L. TurcoTTe](https://infoseeker.cn/docs/urey)<span style="color:green;">（更新日期2024/12/4，已完结） </span>
 
 # 资料 / Resources
-- [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works)<span style="color:green;">（更新日期2024/10/20）</span>
+- [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works) <span style="color:green;">（更新日期2024/10/20）</span>
+
 # 有趣的经历 / Fun & Exploration
 - [2023 年夏季海洋地质国重室 KPP-YEC 科考航次 / The 2023 Summer Marine Geology KPP-YEC Expedition of the State Key Laboratory of Marine Geology.](https://infoseeker.cn/docs/Fieldwork)<span style="color:red;">（更新日期2024/10/20）</span>
 
