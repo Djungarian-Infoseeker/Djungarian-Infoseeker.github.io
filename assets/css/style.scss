@@ -5,9 +5,10 @@ $section-headings-color: rosybrown;
 @import"{{ site.theme }}";
 
 .page-header {
-  background:url("../../Mars_evolution.jpg");
-  background-size:cover;
+  background: url("{{ page.header_image | default: '/assets/images/Mars_evolution.jpg' }}");
+  background-size: cover;
 }
+
 
 #Nav a{
      color: #f2f2f2;
