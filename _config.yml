@@ -7,4 +7,6 @@ navigation:
   sanitize: true
   h_max: 3
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
 highlighter: rouge
