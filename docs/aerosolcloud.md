@@ -254,7 +254,7 @@ dR \propto d(\alpha \cdot c) \quad (2.13)
     </script>
 </head>
 <body>
-    <h1>2.5 确定灵敏度的方法</h1>
+    <h1>确定灵敏度的方法</h1>
     <p>气溶胶对云辐射特性的影响可以通过将场景反照率变化</p>
     <div>
         $$ dR = d(\alpha \cdot c) $$
