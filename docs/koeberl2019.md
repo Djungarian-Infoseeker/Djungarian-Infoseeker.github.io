@@ -45,7 +45,16 @@
         对于直径在 \( 60 \, \text{km} \) 至 \( 120 \, \text{km} \) 的地球撞击坑，其能量范围在 \( 10^{22} \, \text{J} \) 至 \( 10^{23} \, \text{J} \)。
     </p>
 
-    <h2>图例</h2>
-    <p><strong>图1</strong>. 全球撞击产生数量的累积分布，以等效的陆地撞击坑直径衡量。</p>
+    <p>
+        <strong>图1</strong>. 全球撞击产生数量的累积分布，以等效的陆地撞击坑直径衡量。
+        <br>
+        <img src="https://onlinelibrary.wiley.com/cms/asset/5f6f9db4-8de3-4ff5-9124-68356dc6ce31/maps13294-fig-0001-m.jpg" alt="Cumulative global production number of impacts" style="max-width: 100%; height: auto;">
+    </p>
+    <p>
+        累计的全球撞击数量，以等效的陆地撞击坑直径衡量，针对不同的时间间隔进行分析。估算的准确度约为2倍。
+        在典型的1000万年时间尺度内，可能发生的撞击事件数量为 2 ± 1，其能量足以在陆地上形成直径约60公里的撞击坑；
+        而在6000万年时间尺度内，可能形成直径约120公里的陆地撞击坑（图中D轴虚线表示）。
+        黑色三角形表示年代小于约1.25亿年的地球撞击坑数据（Hughes，2000）。图片改编自 Ivanov（2007）。
+    </p>
 </body>
 </html>
