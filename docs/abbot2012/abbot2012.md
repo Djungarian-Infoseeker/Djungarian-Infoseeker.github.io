@@ -56,7 +56,6 @@
     此外，低陆地比例的行星可能会比高陆地比例的行星有较弱的对辐照度变化的缓冲作用，这将导致其可居住带变窄。</p>
 </body>
 </html>
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
