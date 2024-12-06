@@ -131,16 +131,21 @@
     <p>方程（2）可以无量纲化，得到如下形式：</p>
 
     <p>
-    W_l = P^a \phi^b e^T,
+        \( W_l = P^a \phi^b e^T \)
     </p>
 
-    <p>其中Wₗ = \(\frac{W_{\tilde{l}}}{W_{l0}}\)，P = \(\frac{P}{\tilde{P_0}}\)，φ = \(\frac{\phi}{\tilde{\phi_0}}\)，T = \(\frac{\tilde{T} - T_0}{T_u}\)。</p>
+    <p>
+        其中 \( W_l = \frac{W_{\tilde{l}}}{W_{l0}} \)，
+        \( P = \frac{P}{\tilde{P_0}} \)，
+        \( \phi = \frac{\phi}{\tilde{\phi_0}} \)，
+        \( T = \frac{\tilde{T} - T_0}{T_u} \)。
+    </p>
 
     <p>我们将降水量参数化为温度的函数：</p>
 
-    <p><mathjax>
-    \frac{\tilde{P}}{P_0} = 1 + \tilde{\alpha}_p(\tilde{T} - T_0),
-    </mathjax></p>
+    <p>
+        \( \frac{\tilde{P}}{P_0} = 1 + \tilde{\alpha}_p (\tilde{T} - T_0) \)
+    </p>
 
     <p>其中\(\tilde{\alpha}_p\)表示每升高1K温度时降水量的百分比增加。各种全球气候模型的气候变化模拟表明，当\(\tilde{T} \approx T_0\)时，\(\tilde{\alpha}_p = 0.02–0.03\)是一个合适的值，对应每升高1K全球平均温度时全球平均降水量增加2%–3%（Schneider et al. 2010）。然而，理想化的全球气候模型中的模拟表明，降水量随着大气光学厚度的增加，在温度大约为300–310 K时渐近趋向一个能量决定的常数极限（O’Gorman & Schneider 2008）。然而，降水量的能量限制会发生变化，如果辐照度变化，这也是我们将要考虑的情况。为了简化，我们将在以下假设\(\tilde{\alpha}_p = 0.025\)。由于大陆风化对T的指数依赖性，方程（3）中，我们的结果对\(\tilde{\alpha}_p\)的影响极小，因此即使我们通过设定\(\tilde{\alpha}_p = 0\)来消除降水量对温度的依赖，我们的结果也不会发生实质性改变（第4节）。我们将定义\(\alpha_p = \tilde{\alpha}_p T_u = 0.25\)，并可以无量纲化方程（4）以得到：</p>
 </body>
