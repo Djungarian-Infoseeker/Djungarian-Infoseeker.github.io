@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +31,7 @@
 
 <p><strong>图1：</strong>早期始新世的模拟与重建温度。</p>
     <figure>
-        <img src="figure1.jpg" alt="Early Eocene temperatures" style="width:100%; max-width:600px;">
+        <img src="https://pic.imgdb.cn/item/6756db89d0e0a243d4e0ac2e.webp" alt="Early Eocene temperatures" style="width:100%; max-width:600px;">
         <figcaption>典型的模型预测早期始新世的年平均地表温度（背景色），与来自多种代理古气候温度估计的重建值（标签）在热带纬度大致一致。然而，在高纬度地区，模型与古气候数据之间的温差可能超过20°C。</figcaption>
     </figure>
   <p>大约5500年前，北非的快速沙漠化是一个地质学上更为近期的急剧变化事件。在早期和中期全新世时期，大约9000年到5500年前，北非的季节性温暖程度超过今天，现今的撒哈拉沙漠地区曾更加湿润并有植被（有时称为“绿色撒哈拉”）。而转变为今天干燥的撒哈拉沙漠的过程相对迅速，发生在几十年到几百年之间。同样，这一现象对下个世纪的潜在影响也显而易见——然而，全复杂气候模型（如IPCC评估中通常使用的模型）并没有充分模拟急剧变化发生前的气候条件。特别是，这些模拟无法再现早期和中期全新世时期北非的植被覆盖。但如果模拟中的中期全新世撒哈拉原本就没有植被，那么模拟它大约5500年前的快速沙漠化也就无从谈起。</p>
