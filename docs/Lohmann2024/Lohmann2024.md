@@ -50,7 +50,7 @@
 <p>
 (A) 在滞后实验中，北大西洋经向翻转环流（AMOC）最大强度与淡水强迫之间的关系（材料与方法部分）。黑色（灰色）交叉点表示在滞后实验的增加（减少）阶段，每次强迫增量后的50年平均值。蓝色曲线表示在增加参数变化过程中，以5年为平均值的实际轨迹。在红色交叉点处，我们开始固定强迫的平衡模拟，这些模拟是稳定性景观构建的基础（材料与方法部分）。插图显示了崩溃轨迹的特写，似乎由三个步骤组成。(B 至 E) 在1年平均值下对轨迹的特写，显示了AMOC强度的均值和变异性的间断性变化，作为对强迫逐渐变化的响应。
 </p>
-<a href="https://www.science.org/cms/10.1126/sciadv.adi4253/asset/9b325cac-3b65-401b-a1a7-d2ecf7a3301b/assets/images/large/sciadv.adi4253-f1.jpg"><img src="https://s21.ax1x.com/2024/12/09/pAHkdvn.jpg" alt="pAHkdvn.jpg" border="0" /></a>
+<a href="https://www.science.org/cms/10.1126/sciadv.adi4253/asset/9b325cac-3b65-401b-a1a7-d2ecf7a3301b/assets/images/large/sciadv.adi4253-f1.jpg"><img src="https://www.science.org/cms/10.1126/sciadv.adi4253/asset/9b325cac-3b65-401b-a1a7-d2ecf7a3301b/assets/images/large/sciadv.adi4253-f1.jpg" alt="pAHkdvn.jpg" border="0" /></a>
 <h2>轨迹（蓝色）显示了在图 1A 中的均值和变异性的细微但离散变化。在中等强迫下，我们看到接近20年的十年尺度的准周期性动态。这些振荡的时空模式与北大西洋的西行罗斯贝波传播一致（图 S1），这些波被以前认为是多年代大西洋变率的机制（51–54）。振荡的均值和幅度，以及其周期成分的相对强度，在多个参数值处的中间临界点（ITP）中发生突变[例如，图 1（B 和 C）和图 S2中的小波分析]。在更大的强迫下，周期大约为11年的几乎周期性振荡突然出现（图 1D），然后迅速消失，留下本质上是混沌的低幅度变率，没有主导的周期性（见图 1E 和图 S3中的谱）。
 </h2>
 
