@@ -50,6 +50,6 @@
 <p>
 (A) 在滞后实验中，北大西洋经向翻转环流（AMOC）最大强度与淡水强迫之间的关系（材料与方法部分）。黑色（灰色）交叉点表示在滞后实验的增加（减少）阶段，每次强迫增量后的50年平均值。蓝色曲线表示在增加参数变化过程中，以5年为平均值的实际轨迹。在红色交叉点处，我们开始固定强迫的平衡模拟，这些模拟是稳定性景观构建的基础（材料与方法部分）。插图显示了崩溃轨迹的特写，似乎由三个步骤组成。(B 至 E) 在1年平均值下对轨迹的特写，显示了AMOC强度的均值和变异性的间断性变化，作为对强迫逐渐变化的响应。
 </p>
-<a href="https://imgse.com/i/pAHkdvn"><img src="https://s21.ax1x.com/2024/12/09/pAHkdvn.jpg" alt="pAHkdvn.jpg" border="0" /></a>
+<a href="https://www.science.org/cms/10.1126/sciadv.adi4253/asset/9b325cac-3b65-401b-a1a7-d2ecf7a3301b/assets/images/large/sciadv.adi4253-f1.jpg"><img src="https://s21.ax1x.com/2024/12/09/pAHkdvn.jpg" alt="pAHkdvn.jpg" border="0" /></a>
 </body>
 </html>
