@@ -152,3 +152,90 @@
     </p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>非平衡气候热力学</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>2. 非平衡气候热力学</h1>
+    <p>
+        本节简要介绍本文所使用的热力学诊断工具，以分析类地行星的多稳定性特性。关于此形式化方法及其在研究非平衡系统的全局性质中的应用，详见其他文献
+        （Fraedrich & Lunkeit 2008; Lucarini 2009; Lucarini et al. 2010, 2010b）。
+    </p>
+    <p>
+        大气的总能量预算可以表示为 \(E = P + K\)，其中：
+    </p>
+    <ul>
+        <li>\(K = \int_V \rho \frac{v^2}{2} \, dV\) 表示总动能；</li>
+        <li>\(P = \int_V \left( c_p T + gz + Lq \right) \rho \, dV\) 表示湿静势能（由显热、势能和潜热之和组成）；</li>
+        <li>\(V\) 表示大气的空间域。</li>
+    </ul>
+    <p>
+        可以证明（Peixoto & Oort 1992）：
+    </p>
+    <p>
+        \[
+        \dot{K} = -D + W,
+        \]
+    </p>
+    <p>
+        \[
+        \dot{P} = \dot{\Psi} + D - W,
+        \]
+    </p>
+    <p>
+        其中：
+    </p>
+    <ul>
+        <li>\(D = \int_V dV \, \rho \varepsilon_2\) 为因摩擦引起的动能耗散（\(\varepsilon_2 > 0\) 表示与动能耗散相关的局部加热率）；</li>
+        <li>\(W = -\int_V v \cdot \nabla p \, \rho \, dV\) 为系统所做的瞬时功；</li>
+        <li>\(\dot{\Psi} = \int_V dV \, \left( -\nabla \cdot H \right)\) 为因显热、潜热和辐射通量汇聚所致的总加热。</li>
+    </ul>
+    <p>
+        方程 (1) 和 (2) 表明：
+    </p>
+    <p>
+        \[
+        \dot{E} = \dot{\Psi},
+        \]
+    </p>
+    <p>
+        因此，摩擦加热 \(\varepsilon_2\) 不会增加总能量，因为它只是动能与势能之间的内部转换。
+    </p>
+    <p>
+        将气候视为非平衡稳态系统（NESS，参见 Gallavotti 2006），我们有：
+    </p>
+    <p>
+        \[
+        \dot{E} = \dot{P} = \dot{K} = 0,
+        \]
+    </p>
+    <p>
+        （此处及以下的横线表示长时间平均），因此 \(\dot{\Psi} = 0\)。若定义总绝热加热为 \(\dot{Q} = \rho \varepsilon_2 - \nabla \cdot H\)，并将域 \(V\) 分为子域 \(V^+\)（其中 \(\dot{Q} = \dot{Q}^+ > 0\））和 \(V^-\)（其中 \(\dot{Q} = \dot{Q}^- < 0\）），根据方程 (2) 可得：
+    </p>
+    <p>
+        \[
+        \dot{\Psi} + D = \dot{P} + W = \int_{V^+} dV \, \rho Q^+ + \int_{V^-} dV \, \rho Q^- = \dot{\Phi}^+ + \dot{\Phi}^-,
+        \]
+    </p>
+    <p>
+        其中 \(\dot{\Phi}^+ > 0\) 且 \(\dot{\Phi}^- < 0\)（根据定义）。根据方程 (1)、(2) 和 (3)，可直接得出：
+    </p>
+    <p>
+        \[
+        D = W = \dot{\Phi}^+ + \dot{\Phi}^- > 0,
+        \]
+    </p>
+    <p>
+        这总结了 Lorenz (1967) 的能量循环。因此，大气可以被解释为一个热机，其中 \(\dot{\Phi}^+\) 和 \(\dot{\Phi}^-\) 是产生机械功 \(W\) 所需的净热增益和损失（按代数和计算）。大气热机的效率，即在给定热输入情况下产生机械功的能力，可以定义为：
+    </p>
+    <p>
+        \[
+        \eta = \frac{\dot{\Phi}^+ + \dot{\Phi}^-}{\dot{\Phi}^+} = \frac{W}{\dot{\Phi}^+}.
+        \]
+    </p>
+</body>
+</html>
