@@ -29,7 +29,7 @@ header_image: "../../evolution.jpg"
  - [大西洋环流的多重稳态和中间倾翻 中文翻译/ Multistability and intermediate tipping of the AtlanticOcean circulation by Johannes Lohmann , Henk A. Dijkstra, Markus Jochum, Valerio Lucarini , and Peter D. Ditlevsen ](https://infoseeker.cn/docs/Lohmann2024/Lohmann2024)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
   - [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
   - [地球气候系统的临界因素 中文翻译/ Tipping elements in the Earth's climate system by Timothy M. Lenton , Hermann Held, Elmar Kriegler, Jim W. Hall, Wolfgang Lucht, Stefan Rahmstorf, and Hans Joachim Schellnhuber](https://infoseeker.cn/docs/Lenton2008/Lenton2008)<span style="color:green;">（更新日期2024/12/10，已完结） </span>
-
+  - [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
 # 资料 / Resources
 
 - [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works) <span style="color:green;">（更新日期2024/10/20）</span>
