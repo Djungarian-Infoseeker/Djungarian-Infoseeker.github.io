@@ -1,5 +1,4 @@
 ---
-title: "Page Title"
 header_image: "../../evolution.jpg"
 ---
 
