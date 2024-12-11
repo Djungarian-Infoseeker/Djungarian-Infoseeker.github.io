@@ -44,5 +44,4 @@ header_image: "../../evolution.jpg"
 - [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)<span style="color:orange;">（还未开始）</span>
 - [找到你生日那天的亚太地球遥感图像 /Find the Asia-Pacific Earth remote sensing image on your birthday](https://infoseeker.cn/docs/Qzone)<span style="color:orange;">（还未开始）</span>
 
-# 其他 / Miscellaneous
-- [闲话 / Trivialness](https://infoseeker.cn/docs/Trivialness)<span style="color:red;">（更新日期2024/12/9）</span>
+
