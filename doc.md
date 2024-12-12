@@ -41,7 +41,7 @@ header_image: "../../evolution.jpg"
 - [从MIT到Princeton  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/02_MyPostDoctor.pdf) 
 - [我的大学生活 黄瑞新著 2022 年 11 月 15 日](http://www.cresgdou.com.cn/PicDetail.aspx?ID=168) 
 - [我所知道的芝加哥学派 胡永云著 2007 年8月15日](https://faculty.pku.edu.cn/_resources/group1/M00/00/21/cxv0BF-AIwiASKS0ABmZEEDBjCQ708.pdf) 
-
+- [科学之路 -- 我的启悟 献给青年科学工作者 黄瑞新著 2012年9月28日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/01_MyRoadToScience.pdf) 
 ## 科学评论/Science Comment
 - [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
 
