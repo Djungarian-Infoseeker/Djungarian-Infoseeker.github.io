@@ -30,10 +30,10 @@ header_image: "../../evolution.jpg"
 - [地球气候系统的临界因素 中文翻译/ Tipping elements in the Earth's climate system by Timothy M. Lenton , Hermann Held, Elmar Kriegler, Jim W. Hall, Wolfgang Lucht, Stefan Rahmstorf, and Hans Joachim Schellnhuber](https://infoseeker.cn/docs/Lenton2008/Lenton2008)<span style="color:green;">（更新日期2024/12/10，已完结） </span>
 - [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
 - [气候系统的复杂动力学 中文翻译/ THE COMPLEX DYANMICS OF THE CLIMATE SYSTEM: CONSTRAINTS ON OUR KNOWLEDGE, POLICY IMPLICATIONS AND THE NECESSITY OF SYSTEMS THINKING Carolyn W. Snyder, Michael D. Mastrandrea, and Stephen H.Schneider](https://infoseeker.cn/docs/Snyder2011/Snyder2011)<span style="color:green;">（更新日期2024/12/12，已完结） </span>
-- [Stommel 如何做开创性研究  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/04_Stommel.pdf) </span>
-- [我转行做海洋  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/03_MyWayToOcean.pdf) </span>
-- [我的第一篇文章  黄瑞新著 2012 年 9 月 20 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/08_MyFirstPaper.pdf) </span>
-- [从MIT到Princeton  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/02_MyPostDoctor.pdf) </span>
+- [Stommel 如何做开创性研究  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/04_Stommel.pdf) 
+- [我转行做海洋  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/03_MyWayToOcean.pdf) 
+- [我的第一篇文章  黄瑞新著 2012 年 9 月 20 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/08_MyFirstPaper.pdf) 
+- [从MIT到Princeton  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/02_MyPostDoctor.pdf) 
 # 资料 / Resources
 
 - [Stommel 如何做开创性研究 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works) <span style="color:green;">（更新日期2024/10/20）</span>
