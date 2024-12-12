@@ -30,9 +30,11 @@ header_image: "../../evolution.jpg"
 - [地球气候系统的临界因素 中文翻译/ Tipping elements in the Earth's climate system by Timothy M. Lenton , Hermann Held, Elmar Kriegler, Jim W. Hall, Wolfgang Lucht, Stefan Rahmstorf, and Hans Joachim Schellnhuber](https://infoseeker.cn/docs/Lenton2008/Lenton2008)<span style="color:green;">（更新日期2024/12/10，已完结） </span>
 - [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
 - [气候系统的复杂动力学 中文翻译/ THE COMPLEX DYANMICS OF THE CLIMATE SYSTEM: CONSTRAINTS ON OUR KNOWLEDGE, POLICY IMPLICATIONS AND THE NECESSITY OF SYSTEMS THINKING Carolyn W. Snyder, Michael D. Mastrandrea, and Stephen H.Schneider](https://infoseeker.cn/docs/Snyder2011/Snyder2011)<span style="color:green;">（更新日期2024/12/12，已完结） </span>
+- [Stommel 如何做开创性研究  黄瑞新著](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/04_Stommel.pdf) </span>
+- [我转行做海洋  黄瑞新著](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/03_MyWayToOcean.pdf) </span>
 # 资料 / Resources
 
-- [本科阶段做的质量尚可的工作 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works) <span style="color:green;">（更新日期2024/10/20）</span>
+- [Stommel 如何做开创性研究 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works) <span style="color:green;">（更新日期2024/10/20）</span>
 
 # 有趣的经历 / Fun & Exploration
 - [2023 年夏季海洋地质国重室 KPP-YEC 科考航次 / The 2023 Summer Marine Geology KPP-YEC Expedition of the State Key Laboratory of Marine Geology.](https://infoseeker.cn/docs/Fieldwork)<span style="color:red;">（更新日期2024/10/20）</span>
