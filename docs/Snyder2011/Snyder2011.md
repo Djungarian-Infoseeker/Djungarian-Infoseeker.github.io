@@ -130,6 +130,12 @@
 
     <h4>3.1 气候数据的限制</h4>
     <p>由于无法对地球进行重复实验，过去气候行为的数据在气候科学中尤其重要，因为它们是我们对系统动力学唯一的观测。因此，现有气候数据的局限性对气候科学整体构成了严重限制。需要高精度和高准确度的数据来帮助表征气候系统的动力学，特别是考虑到复杂动力学中数据不确定性的潜在指数增长。</p>
+    <figure>
+    <img src="https://www.researchgate.net/profile/George-Divoky/publication/5290725/figure/fig11/AS:279253175291936@1443590554102/September-Arctic-sea-ice-extent-from-1979-to-2007-showing-a-precipitous-decline-The.png" alt="北极海冰覆盖面积的下降趋势">
+    <figcaption>
+        图3. 2008年。观测到的1979年至2007年9月北极海冰覆盖面积的下降趋势。x轴表示年份（1978-2008），y轴表示9月海冰覆盖面积（单位：百万平方公里）。蓝线表示1979年至2005年间海冰覆盖面积下降的平均速率。（国家冰雪数据中心，<a href="http://nsidc.org/arcticseaicenews/index.html" target="_blank">http://nsidc.org/arcticseaicenews/index.html</a>）
+    </figcaption>
+    </figure>
 
     <p>然而，可用的气候系统数据并不完整，许多记录包含相当大的不确定性。许多变量同时变化，且重要强迫（如云中的气溶胶效应或卫星时代之前的太阳变化）的观测值通常知之甚少。在缺乏足够数据的情况下，难以区分多重压力源和不同的潜在动力学。</p>
 
