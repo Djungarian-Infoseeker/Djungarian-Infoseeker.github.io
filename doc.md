@@ -19,21 +19,32 @@ header_image: "../../evolution.jpg"
 - [如何修改CAM当中的太阳辐照量？/ How to modify the TSI in CESM?](https://infoseeker.cn/docs/TSI)<span style="color:green;">（更新日期2024/11/21，已完结）</span>
 
 # 文献与知识 / Thesis & Knowledge
+## 研究类文章/Research Articles
+- [行星风化行为与可居住带对地表陆地比例的敏感性指示 中文翻译/ INDICATION OF INSENSITIVITY OF PLANETARY WEATHERINGBEHAVIORAND HABITABLE ZONETOSURFACELANDFRACTION by Brian Medeiros](https://infoseeker.cn/docs/abbot2012/abbot2012)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
+- [Aquaplanets作为气溶胶效应研究的框架 中文翻译/ Aquaplanets as a Frameworkfor Examination of Aerosol Effects by Dorian S. Abbot, Nicolas B. Cowan, and Fred J. Ciesla](https://infoseeker.cn/docs/Medeiros2019/Medeiros2019)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
+ - [大西洋环流的多重稳态和中间倾翻 中文翻译/ Multistability and intermediate tipping of the AtlanticOcean circulation by Johannes Lohmann , Henk A. Dijkstra, Markus Jochum, Valerio Lucarini , and Peter D. Ditlevsen ](https://infoseeker.cn/docs/Lohmann2024/Lohmann2024)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
+
+- [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
+
+## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/translation/planetaryclimate) <span style="color:red;">（更新日期2024/11/20，未完结） 
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
 - [气溶胶-云相互作用概述中文翻译/An Overview of Aerosol-Cloud Interactions（Chinese ver）by  Hamish Gordon, Franziska Glassmeier, and Daniel T. McCoy](https://infoseeker.cn/docs/aerosolcloud)<span style="color:red;">（更新日期2024/12/3，未完结） </span>
 - [什么是乌雷反应？中文翻译/Carbonation and the Urey reaction（Chinese ver）by  Louise H. KeLLogg, HarsHa LoKavarapu, and donaLd L. TurcoTTe](https://infoseeker.cn/docs/urey)<span style="color:green;">（更新日期2024/12/4，已完结） </span>
-- [行星风化行为与可居住带对地表陆地比例的敏感性指示 中文翻译/ INDICATION OF INSENSITIVITY OF PLANETARY WEATHERINGBEHAVIORAND HABITABLE ZONETOSURFACELANDFRACTION by Brian Medeiros](https://infoseeker.cn/docs/abbot2012/abbot2012)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
-- [Aquaplanets作为气溶胶效应研究的框架 中文翻译/ Aquaplanets as a Frameworkfor Examination of Aerosol Effects by Dorian S. Abbot, Nicolas B. Cowan, and Fred J. Ciesla](https://infoseeker.cn/docs/Medeiros2019/Medeiros2019)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
- - [大西洋环流的多重稳态和中间倾翻 中文翻译/ Multistability and intermediate tipping of the AtlanticOcean circulation by Johannes Lohmann , Henk A. Dijkstra, Markus Jochum, Valerio Lucarini , and Peter D. Ditlevsen ](https://infoseeker.cn/docs/Lohmann2024/Lohmann2024)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
-- [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
-- [地球气候系统的临界因素 中文翻译/ Tipping elements in the Earth's climate system by Timothy M. Lenton , Hermann Held, Elmar Kriegler, Jim W. Hall, Wolfgang Lucht, Stefan Rahmstorf, and Hans Joachim Schellnhuber](https://infoseeker.cn/docs/Lenton2008/Lenton2008)<span style="color:green;">（更新日期2024/12/10，已完结） </span>
-- [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
 - [气候系统的复杂动力学 中文翻译/ THE COMPLEX DYANMICS OF THE CLIMATE SYSTEM: CONSTRAINTS ON OUR KNOWLEDGE, POLICY IMPLICATIONS AND THE NECESSITY OF SYSTEMS THINKING Carolyn W. Snyder, Michael D. Mastrandrea, and Stephen H.Schneider](https://infoseeker.cn/docs/Snyder2011/Snyder2011)<span style="color:green;">（更新日期2024/12/12，已完结） </span>
+ - [地球气候系统的临界因素 中文翻译/ Tipping elements in the Earth's climate system by Timothy M. Lenton , Hermann Held, Elmar Kriegler, Jim W. Hall, Wolfgang Lucht, Stefan Rahmstorf, and Hans Joachim Schellnhuber](https://infoseeker.cn/docs/Lenton2008/Lenton2008)<span style="color:green;">（更新日期2024/12/10，已完结） </span>
+## 科学家的故事/Stories of Scientists
 - [Stommel 如何做开创性研究  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/04_Stommel.pdf) 
 - [我转行做海洋  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/03_MyWayToOcean.pdf) 
 - [我的第一篇文章  黄瑞新著 2012 年 9 月 20 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/08_MyFirstPaper.pdf) 
 - [从MIT到Princeton  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/02_MyPostDoctor.pdf) 
+- [我的大学生活 黄瑞新著 2022 年 11 月 15 日](http://www.cresgdou.com.cn/PicDetail.aspx?ID=168) 
+- [我所知道的芝加哥学派 胡永云著 2007 年8月15日](https://faculty.pku.edu.cn/_resources/group1/M00/00/21/cxv0BF-AIwiASKS0ABmZEEDBjCQ708.pdf) 
+## 科学评论/Science Comment
+
+- [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
+
+
 # 资料 / Resources
 
 - [Stommel 如何做开创性研究 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works) <span style="color:green;">（更新日期2024/10/20）</span>
