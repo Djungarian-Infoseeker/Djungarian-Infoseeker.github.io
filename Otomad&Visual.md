@@ -91,6 +91,12 @@
                 <td>三辰音MAD学会</td>
                 <td><a href="https://www.bilibili.com/video/BV1Es411s7zk/">BV1Es411s7zk</a></td>
             </tr>
+                                <tr>
+                <td>2017我巨爽鬼畜组曲 (2017年acfun春晚节目)</td>
+                <td>2017-02-02</td>
+                <td>★开心熊猫★</td>
+                <td><a href="https://www.bilibili.com/video/BV18s411876c/">BV18s411876c</a></td>
+            </tr>
             <tr>
                 <td>【合作】The OTOMAD Remix</td>
                 <td>2017-02-08</td>
@@ -145,12 +151,7 @@
                 <td>MoonTDN</td>
                 <td><a href="https://www.bilibili.com/video/BV1ub4y177ML/">BV1ub4y177ML</a></td>
             </tr>
-                    <tr>
-                <td>2017我巨爽鬼畜组曲 (2017年acfun春晚节目)</td>
-                <td>2017-02-02</td>
-                <td>★开心熊猫★</td>
-                <td><a href="https://www.bilibili.com/video/BV18s411876c/">BV18s411876c</a></td>
-            </tr>
+
         </tbody>
     </table>
 </body>
