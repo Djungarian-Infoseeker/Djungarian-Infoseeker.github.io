@@ -33,6 +33,7 @@ header_image: "../../evolution.jpg"
 - [什么是乌雷反应？中文翻译/Carbonation and the Urey reaction（Chinese ver）by  Louise H. KeLLogg, HarsHa LoKavarapu, and donaLd L. TurcoTTe](https://infoseeker.cn/docs/urey)<span style="color:green;">（更新日期2024/12/4，已完结） </span>
 - [气候系统的复杂动力学 中文翻译/ THE COMPLEX DYANMICS OF THE CLIMATE SYSTEM: CONSTRAINTS ON OUR KNOWLEDGE, POLICY IMPLICATIONS AND THE NECESSITY OF SYSTEMS THINKING Carolyn W. Snyder, Michael D. Mastrandrea, and Stephen H.Schneider](https://infoseeker.cn/docs/Snyder2011/Snyder2011)<span style="color:green;">（更新日期2024/12/12，已完结） </span>
  - [地球气候系统的临界因素 中文翻译/ Tipping elements in the Earth's climate system by Timothy M. Lenton , Hermann Held, Elmar Kriegler, Jim W. Hall, Wolfgang Lucht, Stefan Rahmstorf, and Hans Joachim Schellnhuber](https://infoseeker.cn/docs/Lenton2008/Lenton2008)<span style="color:green;">（更新日期2024/12/10，已完结） </span>
+
 ## 科学家的故事/Stories of Scientists
 - [Stommel 如何做开创性研究  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/04_Stommel.pdf) 
 - [我转行做海洋  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/03_MyWayToOcean.pdf) 
@@ -40,8 +41,8 @@ header_image: "../../evolution.jpg"
 - [从MIT到Princeton  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/02_MyPostDoctor.pdf) 
 - [我的大学生活 黄瑞新著 2022 年 11 月 15 日](http://www.cresgdou.com.cn/PicDetail.aspx?ID=168) 
 - [我所知道的芝加哥学派 胡永云著 2007 年8月15日](https://faculty.pku.edu.cn/_resources/group1/M00/00/21/cxv0BF-AIwiASKS0ABmZEEDBjCQ708.pdf) 
-## 科学评论/Science Comment
 
+## 科学评论/Science Comment
 - [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
 
 
