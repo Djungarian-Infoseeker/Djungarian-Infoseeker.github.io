@@ -4,7 +4,8 @@
 
 <p><strong>研究领域与院校的选择：</strong> 研究方向的选择将深刻影响你未来的研究生涯与职业规划。在高中到大学阶段，大多数学生在选择专业时常常存在极大的盲目性，因此在本科到研究生的过渡阶段，务必对自我定位进行彻底反思和完善，这是个人成长与职业规划中至关重要的一步。在选择院校时，不仅要评估学校在相关领域的科研实力，还应结合自身的长远规划。通过全面了解各机构的研究方向，你可以更好地匹配自己的兴趣与职业目标，做出更加明智的选择。</p>
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQkLXfzvmcnfo6Q0DVES5zNbZOhDXEUKM1EuLKc-6fpCmXhlU0NSbuJDtLhWplSM6v76hC1F7Edp_Dd/pubhtml?widget=true&amp;headers=false"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQkLXfzvmcnfo6Q0DVES5zNbZOhDXEUKM1EuLKc-6fpCmXhlU0NSbuJDtLhWplSM6v76hC1F7Edp_Dd/pubhtml?widget=true&amp;headers=false" style="width: 100vw; height: 100vh; border: none;"></iframe>
+
 <a href="{{site.baseurl}}/地学院校研究机构名单.xlsx" download>地学研究机构名单</a>
 
 可以利用EXCEL制作自己的目标院校清单，之后进一步浏览各个院校网页与导师主页来逐一筛选，汇总成类似如下清单。
