@@ -1,4 +1,4 @@
-## Nymphaea（Waterlily）
+## Nymphaea（Waterlily）睡莲属
 
 <div class="gallery" id="gallery-1">
   <a href="/photos/albert.jpg" data-lightbox="mygallery" data-title="Albert"><img src="/photos/albert.jpg" alt="Albert" width="1200"></a>
@@ -23,4 +23,16 @@
   <a href="/photos/thermarum.jpg" data-lightbox="mygallery" data-title="Thermarum"><img src="/photos/thermarum.jpg" alt="Thermarum" width="1200"></a>
   <a href="/photos/tina.jpg" data-lightbox="mygallery" data-title="Tina"><img src="/photos/tina.jpg" alt="Tina" width="1200"></a>
   <a href="/photos/ultraviolet.jpg" data-lightbox="mygallery" data-title="Ultraviolet"><img src="/photos/ultraviolet.jpg" alt="Ultraviolet" width="1200"></a>
+</div>
+
+## Nelumbo（Lotus）莲属
+<div class="gallery" id="gallery-1">
+  <a href="/photos/jiangnanchun.jpg" data-lightbox="mygallery" data-title="jiangnanchun"><img src="/photos/jiangnanchun.jpg" alt="jiangnanchun" width="1200"></a>
+  <a href="/photos/luoshennv.jpg" data-lightbox="mygallery" data-title="luoshennv"><img src="/photos/luoshennv.jpg" alt="luoshennv" width="1200"></a>
+  <a href="/photos/yaochihuanying.jpg" data-lightbox="mygallery" data-title="yaochihuanying"><img src="/photos/yaochihuanying.jpg" alt="yaochihuanying" width="1200"></a>
+</div>
+
+## Sarracenia（Pitcherplant）瓶子草属
+<div class="gallery" id="gallery-1">
+  <a href="/photos/Sarracenia flava.jpg" data-lightbox="mygallery" data-title="Sarracenia flava"><img src="/photos/Sarracenia flava.jpg" alt="Sarracenia flava" width="1200"></a>
 </div>
