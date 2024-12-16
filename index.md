@@ -24,3 +24,4 @@ During my childhood and teenage years, I had a wide range of interests, which ha
 ### 研究领域/Research Areas
 - **宜居带外边界行星气候动力理论与模拟/Theory and Simulation of Planetary Climate Dynamics at the Outer Edge of the Habitable Zone**
 - **系外行星高层大气的观测/Observations of the Upper Atmosphere of Exoplanets**
+- **人工智能大气海洋预测模型降尺度方法的开发/Development of downscaling methods for AI atmosphere-ocean forecasting models**
