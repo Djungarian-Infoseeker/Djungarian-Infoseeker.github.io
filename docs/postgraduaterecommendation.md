@@ -80,7 +80,8 @@
 <a href="{{site.baseurl}}/assets/css/物理学院大气与海洋科学系概况.pdf" download>北京大学物理学院大气与海洋科学系概况</a><br>
 <a href="{{site.baseurl}}/assets/css/芝加哥学派.pdf" download>我所知道的芝加哥学派</a><br>
 <a href="{{site.baseurl}}/assets/css/北京大学大气科学系历史.pdf" download>北京大学大气科学系历史</a><br>
-<a href="{{site.baseurl}}/assets/css/学术道路的选择、信念与方法——访物理学院胡永云老师.pdf" download>学术道路的选择、信念与方法——访物理学院胡永云老师</a>
+<a href="{{site.baseurl}}/assets/css/学术道路的选择、信念与方法——访物理学院胡永云老师.pdf" download>学术道路的选择、信念与方法——访物理学院胡永云老师</a><br>
+
 该系每年招收的研究生名额基本上每位导师只招收一名直博生，而绝大部分的招生工作会在夏令营阶段完成。在预推免阶段，主要是招收夏令营未录取的名额，以及部分由有科研经费的导师购买的科研博士名额。
 
 在夏令营正式开始前几天，学院会通过邮件发送心理测试的相关链接。两个测试均为学院从才储网购买的题库，在网上可以找到原题提前预演看结果。系方发送的链接只能做一次题目，且看不到具体结果。
@@ -220,35 +221,18 @@
 4. **师生交流**：这个部分是互选的辅助阶段，在交流时注意导师态度，及时调整志愿顺序。<br>
 
 <style>
-  #custom-style {
-    color: #565656; /* 字体颜色设置为中灰色，稍微比深灰色亮一点 */
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  .section-title {
+    font-size: 1.1em; /* 调整标题大小，匹配上方的字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    color: #a0a0a0; /* 与上方一致的暗灰色 */
+    margin-top: 1em; /* 设置段落间距 */
   }
-  #custom-style h2, #custom-style h3 {
-    color: #444444; /* 标题颜色稍微比正文深 */
-  }
-  #custom-style a {
-    color: #0066cc; /* 超链接为柔和的暗蓝色 */
-    text-decoration: none;
-  }
-  #custom-style a:hover {
-    text-decoration: underline;
-  }
-  #custom-style table {
-    border-collapse: collapse;
-    width: 100%;
-    background-color: #ffffff; /* 表格背景为白色 */
-    color: #565656;
-  }
-  #custom-style th, #custom-style td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  #custom-style th {
-    background-color: #f4f4f4;
-    color: #444444; /* 表头颜色稍深 */
+
+  .section-content {
+    font-size: 1em; /* 正文字体大小 */
+    color: #b0b0b0; /* 正文的颜色设置为较淡的灰色 */
+    text-indent: 2em; /* 首行缩进，匹配格式 */
+    line-height: 1.6; /* 增加行间距 */
   }
 </style>
 
