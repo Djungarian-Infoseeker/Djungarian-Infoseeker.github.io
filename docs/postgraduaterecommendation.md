@@ -45,8 +45,6 @@
 
 另外一般需要提交自我陈述，建议准备两份不同长度的版本。一份1500字的详尽自述，用来深入展示你的学术背景、研究经历和未来的研究规划；另一份800字的简短自述，用于简要概述你的主要成就与研究兴趣。
 
-除了文书材料，英语口语和表达能力的提升也非常重要。我推荐可以在大三下学期进行一次雅思考试，并尽可能的提高分数。有相关需求的也可以通过教育资格考试进行训练。在面试中，大部分机构会特别考察你的英语沟通能力，因此在准备阶段，建议多进行模拟面试，反复练习学术问题的英文回答。同时，表达能力本身也不可忽视，你需要能够清晰、逻辑地表达自己的研究思路。
-
 在科研与专业知识准备方面，针对你所申请的导师和研究方向。结合自己的研究兴趣，提前构思一些学术问题，展示你对该领域的理解。同时，也要准备常见的面试问题，例如“为什么选择该导师或领域？”、“你的研究优势是什么？”等。
 
 最后，面试时所需的资料也要提前准备好。通常，学校或导师会要求你在面试时展示科研成果或研究计划，因此建议准备一个简洁明了的PPT，突出你的研究背景、方法、成果和未来规划。此外，提前准备好一份流畅的自我介绍稿，分别用中文和英文各准备一份。自我介绍时，尽量简洁明了，尽可能结构性的、有说服力的突出你的学术兴趣、研究经历以及与你所申请的方向的契合度。
@@ -193,26 +191,26 @@
 ·得到了什么主要结论<br>
 ·文章的新意在什么地方<br>
 ·拓展:例如，你对文章有什么评论性的看法，文章结果是否存在不确定性，等等<br>
-<span style="color: orange;">如何准备？关注 <a href="https://www.nature.com/" target="_blank" style="text-decoration: underline; color: orange;">Nature</a>, 
-<a href="https://www.science.org/journals" target="_blank" style="text-decoration: underline; color: orange;">Science</a>, 
-<a href="https://www.pnas.org/" target="_blank" style="text-decoration: underline; color: orange;">PNAS</a>, 
-<a href="https://www.nature.com/ngeo/" target="_blank" style="text-decoration: underline; color: orange;">Nature Geoscience</a>, 
-<a href="https://www.nature.com/natastron/" target="_blank" style="text-decoration: underline; color: orange;">Nature Astronomy</a>, 
-<a href="https://www.nature.com/nclimate/" target="_blank" style="text-decoration: underline; color: orange;">Nature Climate Change</a>, 
-<a href="https://agupubs.onlinelibrary.wiley.com/" target="_blank" style="text-decoration: underline; color: orange;">Publish with AGU</a>, 
-<a href="https://journals.ametsoc.org/view/journals/clim/clim-overview.xml" target="_blank" style="text-decoration: underline; color: orange;">Journal of Climate</a>, 
-<a href="https://www.science.org/journal/sciadv" target="_blank" style="text-decoration: underline; color: orange;">Science Advances</a>, 
-<a href="https://agupubs.onlinelibrary.wiley.com/journal/21698996" target="_blank" style="text-decoration: underline; color: orange;">Journal of Geophysical Research: Atmospheres</a>, 
-<a href="https://agupubs.onlinelibrary.wiley.com/journal/21699291" target="_blank" style="text-decoration: underline; color: orange;">Journal of Geophysical Research: Oceans</a>, 
-<a href="https://link.springer.com/journal/382" target="_blank" style="text-decoration: underline; color: orange;">Climate Dynamics</a>, 
-<a href="https://journals.ametsoc.org/view/journals/atsc/atsc-overview.xml" target="_blank" style="text-decoration: underline; color: orange;">Journal of the Atmospheric Sciences</a>, 
-<a href="https://agupubs.onlinelibrary.wiley.com/journal/19448007?journalRedirectCheck=true" target="_blank" style="text-decoration: underline; color: orange;">Geophysical Research Letters</a> 等杂志相关研究领域的论文，并在日常当中进行训练。</span> <br>
+<span style="color: orange;">如何准备？关注 <a href="https://www.nature.com/" target="_blank" style="text-decoration: underline; color: orange;">Nature</a>, <br>
+<a href="https://www.science.org/journals" target="_blank" style="text-decoration: underline; color: orange;">Science</a>, <br>
+<a href="https://www.pnas.org/" target="_blank" style="text-decoration: underline; color: orange;">PNAS</a>, <br>
+<a href="https://www.nature.com/ngeo/" target="_blank" style="text-decoration: underline; color: orange;">Nature Geoscience</a>, <br>
+<a href="https://www.nature.com/natastron/" target="_blank" style="text-decoration: underline; color: orange;">Nature Astronomy</a>, <br>
+<a href="https://www.nature.com/nclimate/" target="_blank" style="text-decoration: underline; color: orange;">Nature Climate Change</a>, <br>
+<a href="https://agupubs.onlinelibrary.wiley.com/" target="_blank" style="text-decoration: underline; color: orange;">Publish with AGU</a>, <br>
+<a href="https://journals.ametsoc.org/view/journals/clim/clim-overview.xml" target="_blank" style="text-decoration: underline; color: orange;">Journal of Climate</a>, <br>
+<a href="https://www.science.org/journal/sciadv" target="_blank" style="text-decoration: underline; color: orange;">Science Advances</a>, <br>
+<a href="https://agupubs.onlinelibrary.wiley.com/journal/21698996" target="_blank" style="text-decoration: underline; color: orange;">Journal of Geophysical Research: Atmospheres</a>, <br>
+<a href="https://agupubs.onlinelibrary.wiley.com/journal/21699291" target="_blank" style="text-decoration: underline; color: orange;">Journal of Geophysical Research: Oceans</a>, <br>
+<a href="https://link.springer.com/journal/382" target="_blank" style="text-decoration: underline; color: orange;">Climate Dynamics</a>, <br>
+<a href="https://journals.ametsoc.org/view/journals/atsc/atsc-overview.xml" target="_blank" style="text-decoration: underline; color: orange;">Journal of the Atmospheric Sciences</a>, <br>
+<a href="https://agupubs.onlinelibrary.wiley.com/journal/19448007?journalRedirectCheck=true" target="_blank" style="text-decoration: underline; color: orange;">Geophysical Research Letters</a> <br> 等杂志相关研究领域的论文，并在日常当中进行训练。</span> <br>
 
 
 2. **综合面试**：用文献阅读时制作的PPT进行汇报，汇报时间每人15分钟，包含10分钟报告和5分钟提问。第1分钟需用英文汇报，后续可中英文混合。<br>
 
 3. **个人展示**：提前制作个人展示PPT，汇报内容包括个人基本情况、主要课程成绩、排名、外语成绩、获奖荣誉、科研经历及其他相关信息。每人展示时间15分钟，报告10分钟，提问5分钟。前2分钟需进行英文自我介绍，提问环节中会有英文听说能力的考察。<br>
-<span style="color: orange;">在综合面试阶段和个人展示阶段会穿插问你专业知识，千万要复习！我参加时候以为完全不会问就完全没准备，一问一个不吱声。个人展示阶段阶段会抓着你的科研经历问专业知识，当然综合面试阶段老师们问的闲聊问题的含量会很多。</span> <br>
+<span style="color: orange;">在综合面试阶段和个人展示阶段会穿插问你专业知识，千万要复习！我参加时候以为完全不会问就完全没准备，一问一个不吱声。个人展示阶段阶段会抓着你的科研经历问专业知识，当然综合面试阶段老师们问的闲聊问题的含量会很多。着重复习物理海洋学，有条件尽量学习气候动力学、大气辐射学、大气物理学。</span> <br>
 
 4. **师生交流**：这个部分是互选的辅助阶段，在交流时注意导师态度，及时调整志愿顺序。<br>
 
