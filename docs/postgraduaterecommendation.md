@@ -221,18 +221,35 @@
 4. **师生交流**：这个部分是互选的辅助阶段，在交流时注意导师态度，及时调整志愿顺序。<br>
 
 <style>
-  .section-title {
-    font-size: 1.1em; /* 调整标题大小，匹配上方的字体大小 */
-    font-weight: bold; /* 字体加粗 */
-    color: #a0a0a0; /* 与上方一致的暗灰色 */
-    margin-top: 1em; /* 设置段落间距 */
+  #custom-style {
+    color: #565656; /* 字体颜色设置为中灰色，稍微比深灰色亮一点 */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
   }
-
-  .section-content {
-    font-size: 1em; /* 正文字体大小 */
-    color: #b0b0b0; /* 正文的颜色设置为较淡的灰色 */
-    text-indent: 2em; /* 首行缩进，匹配格式 */
-    line-height: 1.6; /* 增加行间距 */
+  #custom-style h2, #custom-style h3 {
+    color: #444444; /* 标题颜色稍微比正文深 */
+  }
+  #custom-style a {
+    color: #0066cc; /* 超链接为柔和的暗蓝色 */
+    text-decoration: none;
+  }
+  #custom-style a:hover {
+    text-decoration: underline;
+  }
+  #custom-style table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff; /* 表格背景为白色 */
+    color: #565656;
+  }
+  #custom-style th, #custom-style td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  #custom-style th {
+    background-color: #f4f4f4;
+    color: #444444; /* 表头颜色稍深 */
   }
 </style>
 
