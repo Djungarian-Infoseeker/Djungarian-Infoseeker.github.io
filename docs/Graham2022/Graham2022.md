@@ -1,8 +1,9 @@
 <html>
 <head>
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML">
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在岩石行星上的二氧化碳海洋双稳态大</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 <body>
     <h1>CO<sub>2</sub> Ocean Bistability on Terrestrial Exoplanets</h1>
