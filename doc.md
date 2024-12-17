@@ -9,7 +9,7 @@ header_image: "../../evolution.jpg"
 4.练练文笔，个人平时不太说话，语言锻炼很欠缺。<br>
 5.写点实实在在的东西出来蛮有成就感，给自己添加一点正向反馈，让我更有动力做事情。<br>
 # 学校事务 / School Affairs
-- [推荐免试 / Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation) <span style="color:red;">（更新日期2024/12/16，未完结）</span>
+- [推荐免试 / Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation)<span style="color:green;">（更新日期2024/12/17，已完结）</span>
 - [东京科学大学（东京工业大学）交换 / Science Tokyo (Tokyo Tech) Exchange](https://infoseeker.cn/docs/Exchange)<span style="color:red;">（更新日期2024/10/21，未完结）</span>
 
 # 专业学习 / Academic Learning
