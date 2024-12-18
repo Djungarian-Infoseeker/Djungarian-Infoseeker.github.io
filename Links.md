@@ -38,6 +38,7 @@
     <a href="https://ocean.tongji.edu.cn/space/ywzhang/" target="_blank" style="text-decoration: underline;"><strong>Yanwei Zhang</strong> Tongji University (It may be necessary to access the Tongji intranet)</a><br>
     <a href="https://huang-cl.github.io/" target="_blank" style="text-decoration: underline;"><strong>Chenliang Huang </strong> Shanghai Astronomical Observatory, Chinese Academy of Sciences</a><br>
     <a href="https://www.physics.ox.ac.uk/our-people/pierrehumbert" target="_blank" style="text-decoration: underline;"><strong>Raymond Pierrehumbert</strong> University of Oxford</a><br>
+    <a href="https://personal.ems.psu.edu/~jfk4/PersonalPage/Kasting.htm" target="_blank" style="text-decoration: underline;"><strong>James F. Kasting</strong> Penn State</a><br>
     <a href="https://qiuyang50.github.io/" target="_blank" style="text-decoration: underline;"><strong>Qiu Yang </strong> Peking University</a><br>
     <a href="https://danielkoll.github.io/" target="_blank" style="text-decoration: underline;"><strong>Daniel Koll</strong> Peking University</a><br>
     <a href="https://faculty.pku.edu.cn/dingfeng/zh_CN/index/46557/list/index.htm" target="_blank" style="text-decoration: underline;"><strong>Feng Ding </strong> Peking University</a><br>
