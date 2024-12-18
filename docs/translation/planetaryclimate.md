@@ -259,17 +259,23 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
 </head>
-正如太阳的光度随时间增加，其他主序星的光度在其主序阶段也会增加。然而，恒星在主序上的寿命因其质量而异。恒星的质量决定了其可用核燃料的总量，而光度则决定了燃料的消耗速度。一颗质量为 \(M\) 、光度为 \(L\) 的恒星，其主序寿命（相对于太阳的值）可通过以下公式估算：
+<script type="text/javascript" id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-\[
-\tau = \tau_{\odot} \frac{M}{M_{\odot}} \frac{L_{\odot}}{L}
-\]
+正如太阳的光度随时间增加，其他主序星的光度在其主序阶段也会增加。然而，恒星在主序上的寿命因其质量而异。恒星的质量决定了其可用核燃料的总量，而光度则决定了燃料的消耗速度。
+<p>一颗质量为 \(M\) 、光度为 \(L\) 的恒星，其主序寿命（相对于太阳的值）可通过以下公式估算：</p>
+<div>
+  \[
+  \tau = \tau_{\odot} \frac{M}{M_{\odot}} \frac{L_{\odot}}{L}
+  \]
+</div>
+<p>主序星的质量与光度关系遵循幂律关系 \(L \propto M^{3.5}\)，因此主序寿命与光度的关系为：</p>
+<div>
+  \[
+  \tau = \tau_{\odot} \left(\frac{L_{\odot}}{L}\right)^{1.29}
+  \]
+</div>
 
-主序星的质量与光度关系遵循幂律关系 \(L \propto M^{3.5}\)，因此主序寿命与光度的关系为：
-
-\[
-\tau = \tau_{\odot} \left(\frac{L_{\odot}}{L}\right)^{1.29}
-\]
 
 较亮、较热的蓝色大质量恒星在主序上的寿命比较暗、较冷的红矮星短得多。太阳的主序寿命大约为100亿年，目前已接近其主序寿命的一半。
 
