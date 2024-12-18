@@ -26,6 +26,8 @@ header_image: "../../evolution.jpg"
 
 - [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
  - [在岩石行星上的二氧化碳海洋双稳态 中文翻译/ CO2 Ocean Bistability on Terrestrial Exoplanets R. J. Graham, Tim Lichtenberg, and Raymond T. Pierrehumbert](https://infoseeker.cn/docs/Graham2022/Graham2022)<span style="color:green;">（更新日期2024/12/17，已完结） </span>
+
+  - [由于失控温室效应和云反馈导致宜居带内缘的气候双稳态 中文翻译/ Climate Bistability at the Inner Edge of the Habitable Zone due to Runaway Greenhouse and Cloud Feedbacks Bowen Fan , Da Yang , and Dorian S. Abbot](https://infoseeker.cn/docs/Fan2024/Fan2024)<span style="color:green;">（更新日期2024/12/18，已完结） </span>
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/translation/planetaryclimate) <span style="color:red;">（更新日期2024/11/20，未完结） 
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
