@@ -199,22 +199,30 @@
     <h2>碳循环</h2>
     <p>为了研究非生物类地行星在极高 \(p_{\text{CO}_2}\) 条件下的碳循环行为，我们采用了理想化的全球平均风化公式（Graham & Pierrehumbert, 2020），该公式基于黏土沉淀对风化溶质浓度影响的研究（Maher & Chamberlain, 2014）。全球平均风化通量可以表示为：</p>
 
-    <p>$$
-    W = \gamma \cdot \alpha \cdot W_{\text{eff}} \cdot \frac{m \cdot A}{t_s} \cdot \frac{q}{C_{\text{eq}}}
-    $$</p>
-
-    <p>其中：</p>
-    <ul>
-        <li>\(W\)（\(\text{mol} \, \text{m}^{-2} \, \text{yr}^{-1}\)）：全球平均风化通量，即从陆地和/或海底输送到海洋的二价阳离子的总量除以行星表面积。这些离子与海洋中的碳反应形成碳酸盐矿物，最终从大气中移除 \(CO_2\)。</li>
-        <li>\(\gamma\)：可风化的行星表面积比例。</li>
-        <li>\(\alpha\)：风化带特性参数，表示水流尺度、多孔性、矿物质量与流体体积之比及可风化矿物的质量分数。</li>
-        <li>\(W_{\text{eff}}\)（\(\text{mol} \, \text{m}^{-2} \, \text{yr}^{-1}\)）：有效风化速率，在无黏土沉淀化学平衡的情况下的风化速率。</li>
-        <li>\(m\)（\(\text{kg} \, \text{mol}^{-1}\)）：被风化矿物的平均摩尔质量。</li>
-        <li>\(A\)（\(\text{m}^2 \, \text{kg}^{-1}\)）：被风化矿物的平均比表面积。</li>
-        <li>\(t_s\)（\(\text{yr}\)）：被风化材料的平均年龄。</li>
-        <li>\(q = q_{\text{ref}}(1 + \epsilon (T_{\text{surf}} - T_{\text{surf,ref}}))\)（\(\text{m} \, \text{yr}^{-1}\)）：通过行星风化带的体积加权全球平均水流量。本研究中我们假设径流与温度呈线性关系，这种设定基于地球上表面水分降水的行为。</li>
-        <li>\(C_{\text{eq}}\)（\(\text{mol} \, \text{m}^{-3}\)）：通过硅酸盐溶解与黏土沉淀的化学平衡确定的风化水中二价阳离子的最大浓度。</li>
-    </ul>
+   <p>
+    \[
+    W = \gamma \frac{\alpha}{\left[k_{\text{eff}}^{-1} + m A t_s + \alpha \left( q C_{\text{eq}} \right)^{-1} \right]},
+    \]
+  </p>
+  <ul>
+    <li><b>\( W \)</b>：全球平均风化通量，单位为 \( \text{mol m}^{-2} \text{yr}^{-1} \)，表示从陆地或海底输送到海洋并与碳反应形成碳酸盐矿物的二价阳离子数量。</li>
+    <li><b>\( \gamma \)</b>：可风化的行星表面比例。</li>
+    <li><b>\( \alpha \)</b>：参数，描述了风化带的特性，如水流的长度尺度、孔隙率、矿物质量与流体体积的比率，以及可风化矿物的质量分数。</li>
+    <li><b>\( k_{\text{eff}} \)</b>：有效动力学风化速率，单位为 \( \text{mol m}^{-2} \text{yr}^{-1} \)，表示在没有与粘土沉淀发生化学平衡时的风化速率。</li>
+    <li><b>\( m \)</b>：被风化矿物的平均摩尔质量，单位为 \( \text{kg mol}^{-1} \)。</li>
+    <li><b>\( A \)</b>：被风化矿物的平均比表面积，单位为 \( \text{m}^2 \text{kg}^{-1} \)。</li>
+    <li><b>\( t_s \)</b>：被风化材料的平均年龄，单位为 \( \text{yr} \)。</li>
+    <li><b>\( q \)</b>：全球平均水通量，单位为 \( \text{m yr}^{-1} \)，给出如下关系：
+      \[
+      q = q_{\text{ref}} \left( 1 + \epsilon \left( T_{\text{surf}} - T_{\text{surf,ref}} \right) \right),
+      \]
+      其中 \( q_{\text{ref}} \) 为参考水通量，\(\epsilon\) 表示温度依赖系数，\(T_{\text{surf}}\) 和 \(T_{\text{surf,ref}}\) 分别是当前和参考的地表温度。</li>
+    <li><b>\( C_{\text{eq}} \)</b>：水在风化带与矿物溶解达到化学平衡时的二价阳离子最大浓度，给出如下关系：
+      \[
+      C_{\text{eq}} = \mathcal{A} \left( \text{pCO}_2 \right)^n,
+      \]
+      其中 \(\mathcal{A}\) 和 \(n\) 是常数，\(\text{pCO}_2\) 表示二氧化碳分压。</li>
+  </ul>
 
     <p>表 2 中给出了所有常数的取值。</p>
 
