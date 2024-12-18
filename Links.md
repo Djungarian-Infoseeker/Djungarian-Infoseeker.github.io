@@ -41,6 +41,7 @@
     <a href="https://qiuyang50.github.io/" target="_blank" style="text-decoration: underline;"><strong>Qiu Yang </strong> Peking University</a><br>
     <a href="https://danielkoll.github.io/" target="_blank" style="text-decoration: underline;"><strong>Daniel Koll</strong> Peking University</a><br>
     <a href="https://faculty.pku.edu.cn/dingfeng/zh_CN/index/46557/list/index.htm" target="_blank" style="text-decoration: underline;"><strong>Feng Ding </strong> Peking University</a><br>
+    <a href="https://geosci.uchicago.edu/people/dorian-abbot/" target="_blank" style="text-decoration: underline;"><strong>Dorian Abbot</strong>University of Chicago</a><br>
     <a href="https://atmoschem.org.cn/index.php?title=Main_Page" target="_blank" style="text-decoration: underline;"><strong>Tzung-May FU </strong> Atmospheric Chemistry and Climate Group at Southern University of Science and Technology</a><br>
     <a href="http://pkuclimate.free.nf/group" target="_blank" style="text-decoration: underline;"><strong>Xinyu Wen </strong> Climate Group at Peking Univeristy</a><br>
     <a href="https://www.weizmann.ac.il/EPS/kaspi/" target="_blank" style="text-decoration: underline;"><strong>Yohai Kaspi</strong> Weizmann Institute of Science </a><br>
