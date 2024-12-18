@@ -20,9 +20,9 @@ header_image: "../../evolution.jpg"
 
 # 文献与知识 / Thesis & Knowledge
 ## 知识/Knowledges
-- [赫罗图 维基百科/ Hertzsprung–Russell diagram wikipedia](https://zh.wikipedia.org/wiki/%E8%B5%AB%E7%BE%85%E5%9C%96) </span>
-- [赫罗图/ Hertzsprung–Russell diagram](https://image.xmcdn.com/group38/M07/A1/B7/wKgJolpoLzGj0qldAACjyO_JG9A910.jpg?op_type=4&device_type=ios&upload_type=attachment&name=mobile_large) </span>
-- [瑞利散射 维基百科/ Rayleigh scattering wikipedia](https://zh.wikipedia.org/wiki/%E7%91%9E%E5%88%A9%E6%95%A3%E5%B0%84) </span>
+- [赫罗图 维基百科/ Hertzsprung–Russell diagram wikipedia](https://zh.wikipedia.org/wiki/%E8%B5%AB%E7%BE%85%E5%9C%96) 
+- [赫罗图/ Hertzsprung–Russell diagram](https://image.xmcdn.com/group38/M07/A1/B7/wKgJolpoLzGj0qldAACjyO_JG9A910.jpg?op_type=4&device_type=ios&upload_type=attachment&name=mobile_large) 
+- [瑞利散射 维基百科/ Rayleigh scattering wikipedia](https://zh.wikipedia.org/wiki/%E7%91%9E%E5%88%A9%E6%95%A3%E5%B0%84) 
 ## 研究类文章/Research Articles
 - [行星风化行为与可居住带对地表陆地比例的敏感性指示 中文翻译/ INDICATION OF INSENSITIVITY OF PLANETARY WEATHERINGBEHAVIORAND HABITABLE ZONETOSURFACELANDFRACTION by Brian Medeiros](https://infoseeker.cn/docs/abbot2012/abbot2012)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
 - [Aquaplanets作为气溶胶效应研究的框架 中文翻译/ Aquaplanets as a Frameworkfor Examination of Aerosol Effects by Dorian S. Abbot, Nicolas B. Cowan, and Fred J. Ciesla](https://infoseeker.cn/docs/Medeiros2019/Medeiros2019)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
