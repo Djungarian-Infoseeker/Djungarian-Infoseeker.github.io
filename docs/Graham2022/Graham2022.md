@@ -226,67 +226,155 @@
 
     <p>表 2 中给出了所有常数的取值。</p>
 
-    <h3>表 2：本研究中使用的模型参数</h3>
-    <table border="1" cellspacing="0" cellpadding="5">
-        <tr>
-            <th>参数</th>
-            <th>单位</th>
-            <th>定义</th>
-            <th>默认值</th>
-        </tr>
-        <tr>
-            <td>\(\gamma\)</td>
-            <td>–</td>
-            <td>陆地面积比例</td>
-            <td>0.3</td>
-        </tr>
-        <tr>
-            <td>\(a_g\)</td>
-            <td>–</td>
-            <td>表面反照率</td>
-            <td>0.0</td>
-        </tr>
-        <tr>
-            <td>\(R_{\text{planet}}\)</td>
-            <td>\(\text{m}\)</td>
-            <td>行星半径</td>
-            <td>\(6.37 \times 10^6\)</td>
-        </tr>
-        <tr>
-            <td>\(T_{\text{ref}}\)</td>
-            <td>\(\text{K}\)</td>
-            <td>参考全球平均温度</td>
-            <td>288</td>
-        </tr>
-        <tr>
-            <td>\(p_{\text{CO}_2,\text{ref}}\)</td>
-            <td>\(\text{bar}\)</td>
-            <td>参考 \(CO_2\) 分压</td>
-            <td>\(280 \times 10^{-6}\)</td>
-        </tr>
-        <tr>
-            <td>\(q_{\text{ref}}\)</td>
-            <td>\(\text{m} \, \text{yr}^{-1}\)</td>
-            <td>现代全球平均径流</td>
-            <td>0.20</td>
-        </tr>
-    </table>
+ <div>
+  <p><b>表2. 本研究中使用的模型参数</b></p>
+  <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%; text-align: center;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th>参数</th>
+        <th>单位</th>
+        <th>定义</th>
+        <th>默认值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>γ</td>
+        <td>–</td>
+        <td>陆地比例</td>
+        <td>0.3</td>
+      </tr>
+      <tr>
+        <td>ag</td>
+        <td>–</td>
+        <td>地表反照率</td>
+        <td>0.0</td>
+      </tr>
+      <tr>
+        <td>Rplanet</td>
+        <td>米 (m)</td>
+        <td>行星半径</td>
+        <td>6.37 × 10<sup>6</sup></td>
+      </tr>
+      <tr>
+        <td>Tref</td>
+        <td>开尔文 (K)</td>
+        <td>参考全球平均温度</td>
+        <td>288</td>
+      </tr>
+      <tr>
+        <td>pCO2,ref</td>
+        <td>巴 (bar)</td>
+        <td>参考CO₂分压</td>
+        <td>280 × 10<sup>-6</sup></td>
+      </tr>
+      <tr>
+        <td>qref</td>
+        <td>米/年 (m yr<sup>-1</sup>)</td>
+        <td>现代全球平均径流</td>
+        <td>0.20 (Oki et al., 2001)</td>
+      </tr>
+      <tr>
+        <td>ϵ</td>
+        <td>1/K</td>
+        <td>温度变化每K导致降水的分数变化</td>
+        <td>0.03</td>
+      </tr>
+      <tr>
+        <td>Vref</td>
+        <td>摩尔/年 (mol yr<sup>-1</sup>)</td>
+        <td>现代全球CO₂释放通量</td>
+        <td>7.5 × 10<sup>12</sup> (Gerlach, 2011; Haqq-Misra et al., 2016)</td>
+      </tr>
+      <tr>
+        <td>v</td>
+        <td>摩尔/m²/年 (mol m<sup>-2</sup> yr<sup>-1</sup>)</td>
+        <td>每单位行星表面积的现代CO₂释放</td>
+        <td>0.0147</td>
+      </tr>
+      <tr>
+        <td>Λ</td>
+        <td>变量</td>
+        <td>Ceq 的热力学系数</td>
+        <td>1.4 × 10<sup>-3</sup></td>
+      </tr>
+      <tr>
+        <td>n</td>
+        <td>–</td>
+        <td>热力学CO₂分压依赖</td>
+        <td>0.316</td>
+      </tr>
+      <tr>
+        <td>α*</td>
+        <td>–</td>
+        <td>LϕρsfAXrμ (见第2.2节及以下)</td>
+        <td>3.39 × 10<sup>5</sup></td>
+      </tr>
+      <tr>
+        <td>keff,ref*</td>
+        <td>摩尔/m²/年 (mol m<sup>-2</sup> yr<sup>-1</sup>)</td>
+        <td>参考反应速率常数</td>
+        <td>8.7 × 10<sup>-6</sup></td>
+      </tr>
+      <tr>
+        <td>β</td>
+        <td>–</td>
+        <td>动力学风化CO₂分压依赖</td>
+        <td>0.2 (Rimstidt et al., 2012)</td>
+      </tr>
+      <tr>
+        <td>Te</td>
+        <td>开尔文 (K)</td>
+        <td>动力学风化温度依赖</td>
+        <td>11.1 (Berner, 1994)</td>
+      </tr>
+    </tbody>
+  </table>
+    <p style="font-size: 14px; margin-top: 10px;">
+    <b>Note.</b> 本表列出了我们计算中使用的参数、单位、定义及其默认值。单个星号 (*) 表示该默认参数值取自 Maher 和 Chamberlain (2014) 的补充材料 Table S1。对于从其他来源获得的默认参数，相关引用已在“默认值”列中给出。
+  </p>
+</div>
+<div>
+  <p>
+    假设行星表面存在可风化的硅酸盐，进入海洋的二价阳离子的全球风化通量（在平衡状态下与全球 CO<sub>2</sub> 消耗通量相等，并假设不存在 CO<sub>2</sub> 表面冷凝）依赖于背景 CO<sub>2</sub> 浓度和表面温度 T<sub>surf</sub>。当 pCO<sub>2</sub> 或 T<sub>surf</sub> 增加时，风化速率增加，这种变化通过硅酸盐溶解动力学或全球径流通量的变化来调节，具体取决于方程 (6) 中哪个项占主导地位。
+  </p>
+  <p>
+    CO<sub>2</sub> 消耗的这种与气候相关的性质意味着硅酸盐风化可以对行星气候产生稳定的负反馈作用（Walker et al., 1981）。如果来自火山等源头的 CO<sub>2</sub> 释放通量 V 大于风化的 CO<sub>2</sub> 消耗通量 W（即 V &gt; W），并且不存在 CO<sub>2</sub> 表面冷凝，CO<sub>2</sub> 将在大气中积累，而在类地条件下，这种积累往往会导致行星变暖。更高的 pCO<sub>2</sub> 和更高的 T<sub>surf</sub> 都会导致更大的 W，从而将 CO<sub>2</sub> 消耗速率逐渐接近 V，直到 CO<sub>2</sub> 消耗与 CO<sub>2</sub> 产生平衡，最终大气 CO<sub>2</sub> 总量稳定下来。同样，在 W &gt; V 的情况下，这一过程反向进行，可以冷却行星并平衡碳循环。因此，至少在上述情况下，具有硅酸盐风化的行星的气候将趋于找到由硅酸盐风化与 CO<sub>2</sub> 释放之间的平衡所决定的平衡 T<sub>surf</sub> 和 pCO<sub>2</sub>，这一点可以简单地表示为：
+  </p>
 
-    <p>在假设行星表面存在可风化硅酸盐的前提下，全球风化通量 \(W\) 取决于背景 \(p_{\text{CO}_2}\) 和 \(T_{\text{surf}}\)。增加 \(p_{\text{CO}_2}\) 或 \(T_{\text{surf}}\) 会导致风化速率增加，其变化主要由硅酸盐溶解动力学或全球径流通量的变化所主导，具体取决于方程 (6) 中的哪个项占主导地位。</p>
-
-    <p>这表明，硅酸盐风化可以作为行星气候的稳定负反馈机制（Walker 等, 1981）。如果火山及其他来源的 \(CO_2\) 排放通量 \(V\) 大于风化消耗通量 \(W\)，即 \(V > W\)，并且表面没有 \(CO_2\) 冷凝，则大气中的 \(CO_2\) 将持续累积，这会导致行星变暖。</p>
-
-    <p>同时，随着 \(p_{\text{CO}_2}\) 和 \(T_{\text{surf}}\) 的增加，风化速率 \(W\) 也会增加，直到 \(W\) 接近 \(V\)，最终使得 \(CO_2\) 的消耗与生产达到平衡。简而言之，气候可以找到一个由硅酸盐风化与 \(CO_2\) 排放平衡所决定的平衡状态：</p>
-    <p>$$
+  <p>
+    <span style="font-weight: bold;">方程 (7)：</span>
+  </p>
+  <p>
+    \[
     V = W
-    $$</p>
-    <p>其中 \(V\) 是 \(CO_2\) 排放通量，\(W\) 是风化通量。</p>
+    \]
+  </p>
+  <p>
+    其中，V（摩尔·m<sup>-2</sup>·年<sup>-1</sup>）是假设的 CO<sub>2</sub> 释放通量，而 W 是方程 (6) 中定义的风化通量。由方程 (4) 和 (7) 给出的零净变化线在 T<sub>surf</sub>–pCO<sub>2</sub> 空间中的交点是能量和碳通量都达到平衡的气候状态。
+  </p>
 
-    <p>此外，在 \(CO_2\) 冷凝条件下，即使 \(W\) 不能与排放通量 \(V\) 匹配，碳循环仍然可以达到平衡，因为表面冷凝通量 \(F_{\text{cond}}\) 可以弥补两者之间的差额：</p>
-    <p>$$
-    V = W + F_{\text{cond}}
-    $$</p>
-    <p>其中 \(F_{\text{cond}}\)（\(\text{mol} \, \text{m}^{-2} \, \text{yr}^{-1}\)）是大气中 \(CO_2\) 冷凝到表面的通量。</p>
+  <p>
+    方程 (6) 和 (7) 所代表的风化参数化假设了类地构造机制，在这种机制下，快速的地表硅酸盐再生足以维持与 CO<sub>2</sub> 释放平衡的风化通量。但这并非必然：例如，如果一个行星处于“迟缓盖板”、“间歇盖板”或“停滞盖板”的构造状态（如 Foley, 2015; Kite et al., 2009; Korenaga, 2010; Lenardic, 2018; Lichtenberg et al., 2022; Valencia & O’Connell, 2007），地表的再生可能不足以使风化速率跟上释放速率，导致可风化材料的全球耗尽，这一现象称为“供给限制”（West et al., 2005）或“传输限制”（Kump et al., 2000）。这反过来会导致火山 CO<sub>2</sub> 的积累。
+  </p>
+
+  <p>
+    此外，即使在快速的构造再生条件下，特定的气候和/或陆地分布可能仍无法产生足够高的风化通量以匹配释放速率，正如我们将要展示的那样。在这些情况下，必须注意到表面 CO<sub>2</sub> 冷凝可以作为大气 CO<sub>2</sub> 的另一个主要汇（Kasting, 1991; Wordsworth, Forget, Selsis, et al., 2010; von Paris et al., 2013; Turbet et al., 2017; Kadoya & Tajika, 2019; Bonati & Ramirez, 2021）。因此，在 CO<sub>2</sub> 冷凝条件下，即使释放速率不等于风化速率，碳循环仍可以达到平衡，因为冷凝可以弥补这一差异，其关系为：
+  </p>
+
+  <p>
+    <span style="font-weight: bold;">方程 (8)：</span>
+  </p>
+  <p>
+    \[
+    F_{\text{cond}} = V - W
+    \]
+  </p>
+  <p>
+    其中，F<sub>cond</sub>（摩尔·m<sup>-2</sup>·年<sup>-1</sup>）是从大气中冷凝到表面的 CO<sub>2</sub> 的通量。
+  </p>
+</div>
+
   <h2>结果</h2>
 
     <p><strong>3.1 温度依赖的 H<sub>2</sub>O 吸收引起的气候滞后现象</strong></p>
