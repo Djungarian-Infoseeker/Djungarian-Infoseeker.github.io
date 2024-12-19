@@ -85,6 +85,8 @@
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
     <strong style="font-size: 20px;">Others</strong><br>
     <a href="https://tokyotechtoresen.wixsite.com/toresen/" target="_blank" style="text-decoration: underline;">Science Tokyo's GYM</a><br>
+    <a href="http://www.mue.titech.ac.jp/index.html" target="_blank" style="text-decoration: underline;">Museum of Evolving Earth - Science Tokyo</a><br>
+
     </td>
 </tr>
 </table>
