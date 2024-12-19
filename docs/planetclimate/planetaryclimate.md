@@ -1,35 +1,88 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown章节导航</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    #toc {
+      margin-bottom: 20px;
+    }
+    #toc ul {
+      list-style: none;
+      padding: 0;
+    }
+    #toc ul li {
+      margin: 5px 0;
+    }
+    #toc ul li a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    #toc ul li a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
 <div id="toc">
+  <h2>目录</h2>
   <ul>
     <li><a href="#section1">概述</a></li>
     <li><a href="#section2">近距离观察</a></li>
     <li><a href="#section3">深入远古：微弱的年轻太阳与地球的宜居性</a></li>
     <li><a href="#section4">太空中的“金发姑娘”：地球、火星和金星</a></li>
     <li><a href="#section5">太阳系中的其他行星和卫星</a></li>
-    <li><a href="#section6">更遥远的领域：系外行星</a></li>
-    <li><a href="#section7">关于气候代用指标的讨论</a></li>
-    <ul>
-      <li><a href="#section7.1">代用数据概述</a></li>
-      <li><a href="#section7.2">同位素代用指标</a></li>
-      <li><a href="#section7.3">海水与海洋沉积物中的氢氧同位素</a></li>
-      <li><a href="#section7.4">有孔虫的贡献</a></li>
-    </ul>
-    <li><a href="#section8">再探前寒武纪气候：雪球地球</a></li>
-    <li><a href="#section9">温室与冰室的二分法</a></li>
-    <ul>
-      <li><a href="#section9.1">过去7000万年</a></li>
-      <li><a href="#section9.2">显生宙的温室和冰室气候</a></li>
-    </ul>
-    <li><a href="#section10">更新世的冰川-间冰期循环</a></li>
-    <ul>
-      <li><a href="#section10.1">海洋沉积物记录</a></li>
-      <li><a href="#section10.2">冰芯记录</a></li>
-    </ul>
-    <li><a href="#section11">全新世的气候变化</a></li>
-    <li><a href="#section12">回到最初：全球气候变暖</a></li>
-    <li><a href="#section13">地球的命运，生物圈的寿命</a></li>
-    <li><a href="#section14">进一步阅读</a></li>
   </ul>
 </div>
+
+<div id="content">
+  <div id="section1" class="section">
+    <h2>概述</h2>
+    <p>这是概述部分的内容。</p>
+  </div>
+  <div id="section2" class="section">
+    <h2>近距离观察</h2>
+    <p>这是近距离观察部分的内容。</p>
+  </div>
+  <div id="section3" class="section">
+    <h2>深入远古：微弱的年轻太阳与地球的宜居性</h2>
+    <p>这是深入远古部分的内容。</p>
+  </div>
+  <div id="section4" class="section">
+    <h2>太空中的“金发姑娘”：地球、火星和金星</h2>
+    <p>这是太空中的“金发姑娘”部分的内容。</p>
+  </div>
+  <div id="section5" class="section">
+    <h2>太阳系中的其他行星和卫星</h2>
+    <p>这是太阳系中的其他行星和卫星部分的内容。</p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('#toc a').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const targetId = link.getAttribute('href').substring(1); // 获取目标ID
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        // 滚动到目标位置
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+
 本文是我的学术祖师爷Pierrehumbet（我的导师的导师的导师），所著《Principles of Planetary Climate》教材的第一章中文翻译.适用于了解古气候与行星气候学入门者，我使用了GPT-4o进行翻译以自用。
 
 该教材购买链接：<a href="https://users.physics.ox.ac.uk/~pierrehumbert/PrinciplesPlanetaryClimate/index.html" target="_blank" style="text-decoration: underline;">购买链接
