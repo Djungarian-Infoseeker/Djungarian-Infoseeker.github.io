@@ -117,13 +117,13 @@
     <p>
         我们引入了水蒸气的瑞利散射，因为它在波长达 1 μm 时可能变得重要（低质量恒星的维恩峰处于该范围内）。之前的研究（Kasting 1988；Kasting 等 1993）因未掌握 H<sub>2</sub>O 的散射系数，而使用空气的散射系数。我们采用以下散射截面公式（Allen 1976；Vardavas & Carver 1984；Von Paris 等 2010）：
     </p>
-    <pre>
+    <p>
     \[
     \sigma _\mathrm{R,\rm {H_{2}O}} (\lambda) = 4.577 \times 10^{-28} \left(\frac{6+3D}{6-7D} \right) \left(\frac{r}{\lambda }\right)^4 \, \mathrm{cm^{2}}
     \]
-    </pre>
+    </p>
     <p>
-        其中 \(D\) 为去偏因子（H<sub>2</sub>O 为 0.17；Marshall & Smith 1990）；\(r\) 为波长 \(\lambda\) 相关的折射率，由 \(r = 0.85r_\text{dryair}\) 计算（Edlén 1996）；\(r_\text{dryair}\) 来自 Bucholtz（1995）方程（4）。注意 Von Paris 等（2010）给出的瑞利散射截面的系数应比上式小七个数量级。
+        其中 \(D\) 为去偏因子（H<sub>2</sub>O 为 0.17；Marshall & Smith 1990）；\(r\) 为波长 \(\lambda\) 相关的折射率，由 \(r = 0.85r_\text{dryair}\) 计算（Edlén 1996）；\(r_\text{dryair}\) 来自 Bucholtz（1995）方程（4）。
     </p>
     <h2>3. 碰撞诱导吸收（CIA）更新</h2>
     <p>
@@ -134,3 +134,4 @@
         我们使用 Shomate 方程计算了新的 CO<sub>2</sub> 和 H<sub>2</sub>O 的比热关系。在低温下，CO<sub>2</sub> 的比热相较之前模型的值下降了约 30%，这提高了干绝热层结率 \(g/c_p\)（其中 \(g\) 为重力加速度），但对计算的表面温度影响较小。这是因为对流层顶部高度的下降基本抵消了对流层上部更陡的层结率。
     </p>
 </div>
+
