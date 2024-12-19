@@ -137,7 +137,7 @@
         这种差异源于对控制风化速率的气候因素以及这些气候因素如何对pCO<sub>2</sub>变化作出响应的不确定性。
     </p>
     <figure>
-        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0012825220303445-gr1.jpg" alt="风化曲线图">
+        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0012825220303445-gr1_lrg.jpg" alt="风化曲线图">
         <figcaption>
             图1. 
             <br>
