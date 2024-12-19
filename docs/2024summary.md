@@ -259,7 +259,7 @@
                 <td>25</td>
                 <td>探索者的海洋</td>
                 <td>斯托梅尔自传</td>
-                <td>美］亨利·斯托梅尔</td>
+                <td>[美]亨利·斯托梅尔</td>
                 <td>海洋出版社</td>
                 <td>The Sea of Beholder</td>
                 <td>贾复、黄瑞新</td>
