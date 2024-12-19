@@ -337,7 +337,14 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 如果沉积物样本的化学成分在形成后某个时间点因与海水的相互作用发生了改变，那么该沉积物提供的气候信息将受到严重干扰。这种沉积后期改变被称为成岩作用（Diagenesis），它是困扰地球化学沉积代用指标解释的一大难题。古海洋学家需要成为非常聪明的“沉积侦探”，以检测成岩作用的影响，特别是在处理数百万年以上的样本时。在某些情况下，成岩作用的存在未被发现可能长达十年或更久，这将在讨论温室气候问题时进一步提到。
 
 ## 1.7.2 同位素代用指标
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
     <p>
         元素的化学性质主要由原子核中的质子数（即原子序数）决定，这也决定了电子云的配置。
         原子核还包含中子，具有相同原子序数但中子数不同的原子形式称为该元素的同位素。
@@ -392,7 +399,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <p>
         我们利用这些转换关系可以更精确地分析氧和碳同位素比值，并将其用于重建过去的气候变化。
     </p>
-
+</body>
 ## 1.7.3 海水与海洋沉积物中的氢氧同位素
 
 我们现在将注意力转向水体以及从水体中沉淀的沉积物所含的氢氧同位素，了解这些同位素的浓度如何揭示冰川体积和海洋不同区域的温度。“普通”水是 \( \text{H}_2^{16}\text{O} \)，但氢或氧的其他同位素可以取代最常见的同位素，形成不同形式的重水，例如 \( \text{HD}^{16}\text{O} \) 和 \( \text{H}_2^{18}\text{O} \)。
