@@ -33,7 +33,7 @@ header_image: "../../evolution.jpg"
 
   - [由于失控温室效应和云反馈导致宜居带内缘的气候双稳态 中文翻译/ Climate Bistability at the Inner Edge of the Habitable Zone due to Runaway Greenhouse and Cloud Feedbacks Bowen Fan , Da Yang , and Dorian S. Abbot](https://infoseeker.cn/docs/Fan2024/Fan2024)<span style="color:green;">（更新日期2024/12/18，已完结） </span>
 ## 综述类文章/Review Articles
-- [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/translation/planetaryclimate) <span style="color:red;">（更新日期2024/11/20，未完结） 
+- [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:red;">（更新日期2024/11/20，未完结） 
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
 - [气溶胶-云相互作用概述中文翻译/An Overview of Aerosol-Cloud Interactions（Chinese ver）by  Hamish Gordon, Franziska Glassmeier, and Daniel T. McCoy](https://infoseeker.cn/docs/aerosolcloud)<span style="color:red;">（更新日期2024/12/3，未完结） </span>
 - [什么是乌雷反应？中文翻译/Carbonation and the Urey reaction（Chinese ver）by  Louise H. KeLLogg, HarsHa LoKavarapu, and donaLd L. TurcoTTe](https://infoseeker.cn/docs/urey)<span style="color:green;">（更新日期2024/12/4，已完结） </span>
