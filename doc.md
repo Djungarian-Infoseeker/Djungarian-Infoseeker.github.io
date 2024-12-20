@@ -61,6 +61,7 @@ header_image: "../../evolution.jpg"
 
 # 资料 / Resources
 - [本科阶段做的还不错的作业 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works) <span style="color:green;">（更新日期2024/10/20）</span>
+
 ## 汇报 / Presentations
 - [实习汇报：巢湖市地球科学产业发展可能性探讨 2024年7月30日 同济大学](assets/css/Chaohu_2024.7.30.pdf)
 - [文献阅读：Carbon Cycle Instability for High-CO2 Exoplanets: Implications for Habitability 2024年7月31日 北京大学](assets/Graham2024_2024.7.31.pdf)
