@@ -32,12 +32,10 @@ header_image: "../../evolution.jpg"
 ## 研究类文章/Research Articles
 - [行星风化行为与可居住带对地表陆地比例的敏感性指示 中文翻译/ INDICATION OF INSENSITIVITY OF PLANETARY WEATHERINGBEHAVIORAND HABITABLE ZONETOSURFACELANDFRACTION by Brian Medeiros](https://infoseeker.cn/docs/abbot2012/abbot2012)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
 - [Aquaplanets作为气溶胶效应研究的框架 中文翻译/ Aquaplanets as a Frameworkfor Examination of Aerosol Effects by Dorian S. Abbot, Nicolas B. Cowan, and Fred J. Ciesla](https://infoseeker.cn/docs/Medeiros2019/Medeiros2019)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
- - [大西洋环流的多重稳态和中间倾翻 中文翻译/ Multistability and intermediate tipping of the AtlanticOcean circulation by Johannes Lohmann , Henk A. Dijkstra, Markus Jochum, Valerio Lucarini , and Peter D. Ditlevsen ](https://infoseeker.cn/docs/Lohmann2024/Lohmann2024)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
-
+- [大西洋环流的多重稳态和中间倾翻 中文翻译/ Multistability and intermediate tipping of the AtlanticOcean circulation by Johannes Lohmann , Henk A. Dijkstra, Markus Jochum, Valerio Lucarini , and Peter D. Ditlevsen ](https://infoseeker.cn/docs/Lohmann2024/Lohmann2024)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
 - [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
  - [在岩石行星上的二氧化碳海洋双稳态 中文翻译/ CO2 Ocean Bistability on Terrestrial Exoplanets R. J. Graham, Tim Lichtenberg, and Raymond T. Pierrehumbert](https://infoseeker.cn/docs/Graham2022/Graham2022)<span style="color:green;">（更新日期2024/12/17，已完结） </span>
-
-  - [由于失控温室效应和云反馈导致宜居带内缘的气候双稳态 中文翻译/ Climate Bistability at the Inner Edge of the Habitable Zone due to Runaway Greenhouse and Cloud Feedbacks Bowen Fan , Da Yang , and Dorian S. Abbot](https://infoseeker.cn/docs/Fan2024/Fan2024)<span style="color:green;">（更新日期2024/12/18，已完结） </span>
+- [由于失控温室效应和云反馈导致宜居带内缘的气候双稳态 中文翻译/ Climate Bistability at the Inner Edge of the Habitable Zone due to Runaway Greenhouse and Cloud Feedbacks Bowen Fan , Da Yang , and Dorian S. Abbot](https://infoseeker.cn/docs/Fan2024/Fan2024)<span style="color:green;">（更新日期2024/12/18，已完结） </span>
 
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:green;">（更新日期2024/12/20，已完结） </span>
@@ -46,7 +44,6 @@ header_image: "../../evolution.jpg"
 - [什么是乌雷反应？中文翻译/Carbonation and the Urey reaction（Chinese ver）by  Louise H. KeLLogg, HarsHa LoKavarapu, and donaLd L. TurcoTTe](https://infoseeker.cn/docs/urey)<span style="color:green;">（更新日期2024/12/4，已完结） </span>
  - [地球气候系统的临界因素 中文翻译/ Tipping elements in the Earth's climate system by Timothy M. Lenton , Hermann Held, Elmar Kriegler, Jim W. Hall, Wolfgang Lucht, Stefan Rahmstorf, and Hans Joachim Schellnhuber](https://infoseeker.cn/docs/Lenton2008/Lenton2008)<span style="color:green;">（更新日期2024/12/10，已完结） </span>
  - [气候系统的复杂动力学 中文翻译/ THE COMPLEX DYANMICS OF THE CLIMATE SYSTEM: CONSTRAINTS ON OUR KNOWLEDGE, POLICY IMPLICATIONS AND THE NECESSITY OF SYSTEMS THINKING Carolyn W. Snyder, Michael D. Mastrandrea, and Stephen H.Schneider](https://infoseeker.cn/docs/Snyder2011/Snyder2011)<span style="color:green;">（更新日期2024/12/12，已完结） </span>
-
 - [硅酸盐风化在地球气候与碳循环中的反馈与作用 中文翻译/ Silicate weathering as a feedback and forcing in Earth's climate and carbon cycle Donald E. Penman,, Jeremy K. Caves Rugensteinc, Daniel E. Ibarrad, Matthew J. Winnick](https://infoseeker.cn/docs/Penman2020/Penman2020)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
 
 ## 科学家的故事/Stories of Scientists
@@ -64,6 +61,9 @@ header_image: "../../evolution.jpg"
 
 # 资料 / Resources
 - [本科阶段做的还不错的作业 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works) <span style="color:green;">（更新日期2024/10/20）</span>
+## 汇报 / Presentations
+- [实习汇报：巢湖市地球科学产业发展可能性探讨 2024年7月30日 同济大学](assets/css/Chaohu_2024.7.30.pdf)
+- [文献阅读：Carbon Cycle Instability for High-CO2 Exoplanets: Implications for Habitability 2024年7月31日 北京大学](assets/Graham2024_2024.7.31.pdf)
 
 # 有趣的经历 / Fun & Exploration
 - [2023 年夏季海洋地质国重室 KPP-YEC 科考航次 / The 2023 Summer Marine Geology KPP-YEC Expedition of the State Key Laboratory of Marine Geology.](https://infoseeker.cn/docs/Fieldwork)<span style="color:red;">（更新日期2024/10/20）</span>
