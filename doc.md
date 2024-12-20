@@ -37,6 +37,7 @@ header_image: "../../evolution.jpg"
 - [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
  - [在岩石行星上的二氧化碳海洋双稳态 中文翻译/ CO2 Ocean Bistability on Terrestrial Exoplanets R. J. Graham, Tim Lichtenberg, and Raymond T. Pierrehumbert](https://infoseeker.cn/docs/Graham2022/Graham2022)<span style="color:green;">（更新日期2024/12/17，已完结） </span>
 - [由于失控温室效应和云反馈导致宜居带内缘的气候双稳态 中文翻译/ Climate Bistability at the Inner Edge of the Habitable Zone due to Runaway Greenhouse and Cloud Feedbacks Bowen Fan , Da Yang , and Dorian S. Abbot](https://infoseeker.cn/docs/Fan2024/Fan2024)<span style="color:green;">（更新日期2024/12/18，已完结） </span>
+- [高二氧化碳系外行星的碳循环不稳定性：对宜居性的影响 中文翻译/ Carbon Cycle Instability for High-CO2 Exoplanets: Implications for Habitability R. J. Graham and R. T. Pierrehumbert](https://infoseeker.cn/docs/Graham2024/Graham2024)<span style="color:green;">（更新日期2024/12/21，已完结） </span>
 
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:green;">（更新日期2024/12/20，已完结） </span>
@@ -47,6 +48,9 @@ header_image: "../../evolution.jpg"
  - [气候系统的复杂动力学 中文翻译/ THE COMPLEX DYANMICS OF THE CLIMATE SYSTEM: CONSTRAINTS ON OUR KNOWLEDGE, POLICY IMPLICATIONS AND THE NECESSITY OF SYSTEMS THINKING Carolyn W. Snyder, Michael D. Mastrandrea, and Stephen H.Schneider](https://infoseeker.cn/docs/Snyder2011/Snyder2011)<span style="color:green;">（更新日期2024/12/12，已完结） </span>
 - [硅酸盐风化在地球气候与碳循环中的反馈与作用 中文翻译/ Silicate weathering as a feedback and forcing in Earth's climate and carbon cycle Donald E. Penman,, Jeremy K. Caves Rugensteinc, Daniel E. Ibarrad, Matthew J. Winnick](https://infoseeker.cn/docs/Penman2020/Penman2020)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
 
+## 科学评论/Science Comment
+- [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
+
 ## 科学家的故事/Stories of Scientists
 - [Stommel 如何做开创性研究  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/04_Stommel.pdf) 
 - [我转行做海洋  黄瑞新著 2012 年 9 月 29 日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/03_MyWayToOcean.pdf) 
@@ -56,8 +60,6 @@ header_image: "../../evolution.jpg"
 - [我所知道的芝加哥学派 胡永云著 2007 年8月15日](https://faculty.pku.edu.cn/_resources/group1/M00/00/21/cxv0BF-AIwiASKS0ABmZEEDBjCQ708.pdf) 
 - [科学之路 -- 我的启悟 献给青年科学工作者 黄瑞新著 2012年9月28日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/01_MyRoadToScience.pdf) 
 
-## 科学评论/Science Comment
-- [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
 
 
 # 资料 / Resources
