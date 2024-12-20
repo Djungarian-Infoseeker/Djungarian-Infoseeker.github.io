@@ -27,7 +27,7 @@ header_image: "../../evolution.jpg"
 - [瑞利散射 维基百科/ Rayleigh scattering wikipedia](https://zh.wikipedia.org/wiki/%E7%91%9E%E5%88%A9%E6%95%A3%E5%B0%84) 
 
 ## 经典文章/Classical Articles
-- [可居住带围绕主序星：新估算 中文翻译/ HABITABLE ZONES AROUND MAIN-SEQUENCE STARS: NEW ESTIMATES Ravi Kumar Kopparapu, Ramses Ramirez, James F. Kasting, Vincent Eymet, Tyler D. Robinson, Suvrath Mahadevan, Ryan C. Terrien, Shawn Domagal-Goldman, Victoria Meadows, and Rohit Deshpande](https://infoseeker.cn/docs/Kopparapu2013/Kopparapu2013)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
+- [主序星周围的宜居带 中文翻译/ Habitable Zones Around Main Sequence Stars by James F. Kasting, Daniel P. Whitmire, Ray T. Reynolds](https://infoseeker.cn/docs/Kasting1993/Kasting1993)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
 - [可居住带围绕主序星：新估算 中文翻译/ HABITABLE ZONES AROUND MAIN-SEQUENCE STARS: NEW ESTIMATES Ravi Kumar Kopparapu, Ramses Ramirez, James F. Kasting, Vincent Eymet, Tyler D. Robinson, Suvrath Mahadevan, Ryan C. Terrien, Shawn Domagal-Goldman, Victoria Meadows, and Rohit Deshpande](https://infoseeker.cn/docs/Kopparapu2013/Kopparapu2013)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
 
 ## 研究类文章/Research Articles
