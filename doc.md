@@ -8,6 +8,7 @@ header_image: "../../evolution.jpg"
 3.方便给大家看，希望能够让大家遇到相同问题时少走弯路。<br>
 4.练练文笔，个人平时不太说话，语言锻炼很欠缺。<br>
 5.写点实实在在的东西出来蛮有成就感，给自己添加一点正向反馈，让我更有动力做事情。<br>
+
 # 学校事务 / School Affairs
 - [推荐免试 / Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation)<span style="color:green;">（更新日期2024/12/17，已完结）</span>
 - [东京科学大学（东京工业大学）交换 / Science Tokyo (Tokyo Tech) Exchange](https://infoseeker.cn/docs/Exchange)<span style="color:red;">（更新日期2024/10/21，未完结）</span>
@@ -24,6 +25,7 @@ header_image: "../../evolution.jpg"
 - [赫罗图 维基百科/ Hertzsprung–Russell diagram wikipedia](https://zh.wikipedia.org/wiki/%E8%B5%AB%E7%BE%85%E5%9C%96) 
 - [赫罗图/ Hertzsprung–Russell diagram](https://image.xmcdn.com/group38/M07/A1/B7/wKgJolpoLzGj0qldAACjyO_JG9A910.jpg?op_type=4&device_type=ios&upload_type=attachment&name=mobile_large) 
 - [瑞利散射 维基百科/ Rayleigh scattering wikipedia](https://zh.wikipedia.org/wiki/%E7%91%9E%E5%88%A9%E6%95%A3%E5%B0%84) 
+
 ## 经典文章/Classical Articles
 - [可居住带围绕主序星：新估算 中文翻译/ HABITABLE ZONES AROUND MAIN-SEQUENCE STARS: NEW ESTIMATES Ravi Kumar Kopparapu, Ramses Ramirez, James F. Kasting, Vincent Eymet, Tyler D. Robinson, Suvrath Mahadevan, Ryan C. Terrien, Shawn Domagal-Goldman, Victoria Meadows, and Rohit Deshpande](https://infoseeker.cn/docs/Kopparapu2013/Kopparapu2013)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
 
@@ -38,7 +40,7 @@ header_image: "../../evolution.jpg"
   - [由于失控温室效应和云反馈导致宜居带内缘的气候双稳态 中文翻译/ Climate Bistability at the Inner Edge of the Habitable Zone due to Runaway Greenhouse and Cloud Feedbacks Bowen Fan , Da Yang , and Dorian S. Abbot](https://infoseeker.cn/docs/Fan2024/Fan2024)<span style="color:green;">（更新日期2024/12/18，已完结） </span>
 
 ## 综述类文章/Review Articles
-- [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:red;">（更新日期2024/11/20，未完结） 
+- [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:green;">（更新日期2024/12/20，已完结） </span>
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
 - [气溶胶-云相互作用概述中文翻译/An Overview of Aerosol-Cloud Interactions（Chinese ver）by  Hamish Gordon, Franziska Glassmeier, and Daniel T. McCoy](https://infoseeker.cn/docs/aerosolcloud)<span style="color:red;">（更新日期2024/12/3，未完结） </span>
 - [什么是乌雷反应？中文翻译/Carbonation and the Urey reaction（Chinese ver）by  Louise H. KeLLogg, HarsHa LoKavarapu, and donaLd L. TurcoTTe](https://infoseeker.cn/docs/urey)<span style="color:green;">（更新日期2024/12/4，已完结） </span>
@@ -61,7 +63,6 @@ header_image: "../../evolution.jpg"
 
 
 # 资料 / Resources
-
 - [本科阶段做的还不错的作业 / Work of Reasonably Good Quality Done During the Undergraduate Phase](https://infoseeker.cn/docs/works) <span style="color:green;">（更新日期2024/10/20）</span>
 
 # 有趣的经历 / Fun & Exploration
