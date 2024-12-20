@@ -19,10 +19,14 @@ header_image: "../../evolution.jpg"
 - [如何修改CAM当中的太阳辐照量？/ How to modify the TSI in CESM?](https://infoseeker.cn/docs/TSI)<span style="color:green;">（更新日期2024/11/21，已完结）</span>
 
 # 文献与知识 / Thesis & Knowledge
+
 ## 知识/Knowledges
 - [赫罗图 维基百科/ Hertzsprung–Russell diagram wikipedia](https://zh.wikipedia.org/wiki/%E8%B5%AB%E7%BE%85%E5%9C%96) 
 - [赫罗图/ Hertzsprung–Russell diagram](https://image.xmcdn.com/group38/M07/A1/B7/wKgJolpoLzGj0qldAACjyO_JG9A910.jpg?op_type=4&device_type=ios&upload_type=attachment&name=mobile_large) 
 - [瑞利散射 维基百科/ Rayleigh scattering wikipedia](https://zh.wikipedia.org/wiki/%E7%91%9E%E5%88%A9%E6%95%A3%E5%B0%84) 
+## 经典文章/Classical Articles
+- [可居住带围绕主序星：新估算 中文翻译/ HABITABLE ZONES AROUND MAIN-SEQUENCE STARS: NEW ESTIMATES Ravi Kumar Kopparapu, Ramses Ramirez, James F. Kasting, Vincent Eymet, Tyler D. Robinson, Suvrath Mahadevan, Ryan C. Terrien, Shawn Domagal-Goldman, Victoria Meadows, and Rohit Deshpande](https://infoseeker.cn/docs/Kopparapu2013/Kopparapu2013)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
+
 ## 研究类文章/Research Articles
 - [行星风化行为与可居住带对地表陆地比例的敏感性指示 中文翻译/ INDICATION OF INSENSITIVITY OF PLANETARY WEATHERINGBEHAVIORAND HABITABLE ZONETOSURFACELANDFRACTION by Brian Medeiros](https://infoseeker.cn/docs/abbot2012/abbot2012)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
 - [Aquaplanets作为气溶胶效应研究的框架 中文翻译/ Aquaplanets as a Frameworkfor Examination of Aerosol Effects by Dorian S. Abbot, Nicolas B. Cowan, and Fred J. Ciesla](https://infoseeker.cn/docs/Medeiros2019/Medeiros2019)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
@@ -32,6 +36,7 @@ header_image: "../../evolution.jpg"
  - [在岩石行星上的二氧化碳海洋双稳态 中文翻译/ CO2 Ocean Bistability on Terrestrial Exoplanets R. J. Graham, Tim Lichtenberg, and Raymond T. Pierrehumbert](https://infoseeker.cn/docs/Graham2022/Graham2022)<span style="color:green;">（更新日期2024/12/17，已完结） </span>
 
   - [由于失控温室效应和云反馈导致宜居带内缘的气候双稳态 中文翻译/ Climate Bistability at the Inner Edge of the Habitable Zone due to Runaway Greenhouse and Cloud Feedbacks Bowen Fan , Da Yang , and Dorian S. Abbot](https://infoseeker.cn/docs/Fan2024/Fan2024)<span style="color:green;">（更新日期2024/12/18，已完结） </span>
+
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:red;">（更新日期2024/11/20，未完结） 
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
@@ -39,7 +44,7 @@ header_image: "../../evolution.jpg"
 - [什么是乌雷反应？中文翻译/Carbonation and the Urey reaction（Chinese ver）by  Louise H. KeLLogg, HarsHa LoKavarapu, and donaLd L. TurcoTTe](https://infoseeker.cn/docs/urey)<span style="color:green;">（更新日期2024/12/4，已完结） </span>
  - [地球气候系统的临界因素 中文翻译/ Tipping elements in the Earth's climate system by Timothy M. Lenton , Hermann Held, Elmar Kriegler, Jim W. Hall, Wolfgang Lucht, Stefan Rahmstorf, and Hans Joachim Schellnhuber](https://infoseeker.cn/docs/Lenton2008/Lenton2008)<span style="color:green;">（更新日期2024/12/10，已完结） </span>
  - [气候系统的复杂动力学 中文翻译/ THE COMPLEX DYANMICS OF THE CLIMATE SYSTEM: CONSTRAINTS ON OUR KNOWLEDGE, POLICY IMPLICATIONS AND THE NECESSITY OF SYSTEMS THINKING Carolyn W. Snyder, Michael D. Mastrandrea, and Stephen H.Schneider](https://infoseeker.cn/docs/Snyder2011/Snyder2011)<span style="color:green;">（更新日期2024/12/12，已完结） </span>
-- [可居住带围绕主序星：新估算 中文翻译/ HABITABLE ZONES AROUND MAIN-SEQUENCE STARS: NEW ESTIMATES Ravi Kumar Kopparapu, Ramses Ramirez, James F. Kasting, Vincent Eymet, Tyler D. Robinson, Suvrath Mahadevan, Ryan C. Terrien, Shawn Domagal-Goldman, Victoria Meadows, and Rohit Deshpande](https://infoseeker.cn/docs/Kopparapu2013/Kopparapu2013)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
+
 - [硅酸盐风化在地球气候与碳循环中的反馈与作用 中文翻译/ Silicate weathering as a feedback and forcing in Earth's climate and carbon cycle Donald E. Penman,, Jeremy K. Caves Rugensteinc, Daniel E. Ibarrad, Matthew J. Winnick](https://infoseeker.cn/docs/Penman2020/Penman2020)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
 
 ## 科学家的故事/Stories of Scientists
@@ -50,6 +55,7 @@ header_image: "../../evolution.jpg"
 - [我的大学生活 黄瑞新著 2022 年 11 月 15 日](http://www.cresgdou.com.cn/PicDetail.aspx?ID=168) 
 - [我所知道的芝加哥学派 胡永云著 2007 年8月15日](https://faculty.pku.edu.cn/_resources/group1/M00/00/21/cxv0BF-AIwiASKS0ABmZEEDBjCQ708.pdf) 
 - [科学之路 -- 我的启悟 献给青年科学工作者 黄瑞新著 2012年9月28日](https://www2.whoi.edu/staff/rhuang/wp-content/uploads/sites/248/2021/03/01_MyRoadToScience.pdf) 
+
 ## 科学评论/Science Comment
 - [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
 
