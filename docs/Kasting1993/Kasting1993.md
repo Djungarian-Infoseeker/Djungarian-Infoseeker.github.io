@@ -65,35 +65,35 @@
         CO₂ 通过岩石中钙镁硅酸盐的风化反应被从大气中移除，并通过碳酸盐沉积物的沉淀和埋藏过程被固定。
         如果用矿物硅灰石（CaSiO₃）代表所有硅酸盐岩石，其初始风化反应可表示为：
     </p>
-    <pre>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <msub><mi>CaSiO</mi><mn>3</mn></msub> + 2<msub><mi>CO</mi><mn>2</mn></msub> + <msub><mi>H</mi><mn>2</mn></msub>O →
-            <msub><mi>Ca</mi></msub><sup>2+</sup> + 2<msub><mi>HCO</mi><mn>3</mn></msub><sup>-</sup> + <msub><mi>SiO</mi><mn>2</mn></msub>
-        </math>
-    </pre>
-    <p>
-        风化产物通过河流进入海洋，海洋生物利用它们生成碳酸钙壳体，反应如下：
-    </p>
-    <pre>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <msub><mi>Ca</mi></msub><sup>2+</sup> + 2<msub><mi>HCO</mi><mn>3</mn></msub><sup>-</sup> →
-            <msub><mi>CaCO</mi><mn>3</mn></msub> + <msub><mi>CO</mi><mn>2</mn></msub> + <msub><mi>H</mi><mn>2</mn></msub>O
-        </math>
-    </pre>
-    <p>
-        尽管如今大多数碳酸钙的沉淀是生物驱动的，但即使没有生物，这一反应也会发生。
-        当这些生物死亡后，壳体沉降到海底。大部分壳体会在沉降过程中溶解，
-        但部分（尤其是埋藏在较浅深度的部分）保留下来并形成碳酸盐沉积物。
-    </p>
-    <p>
-        结合上述两步反应，总反应可表示为：
-    </p>
-    <pre>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <msub><mi>CaSiO</mi><mn>3</mn></msub> + <msub><mi>CO</mi><mn>2</mn></msub> →
-            <msub><mi>CaCO</mi><mn>3</mn></msub> + <msub><mi>SiO</mi><mn>2</mn></msub>
-        </math>
-    </pre>
+<p>
+    风化反应可以通过以下公式表示：
+</p>
+<p>
+    \[
+    \text{CaSiO}_3 + 2\text{CO}_2 + \text{H}_2\text{O} \rightarrow \text{Ca}^{2+} + 2\text{HCO}_3^- + \text{SiO}_2
+    \]
+</p>
+<p>
+    风化产物通过河流进入海洋，海洋生物利用它们生成碳酸钙壳体，反应如下：
+</p>
+<p>
+    \[
+    \text{Ca}^{2+} + 2\text{HCO}_3^- \rightarrow \text{CaCO}_3 + \text{CO}_2 + \text{H}_2\text{O}
+    \]
+</p>
+<p>
+    尽管如今大多数碳酸钙的沉淀是生物驱动的，但即使没有生物，这一反应也会发生。
+    当这些生物死亡后，壳体沉降到海底。大部分壳体会在沉降过程中溶解，
+    但部分（尤其是埋藏在较浅深度的部分）保留下来并形成碳酸盐沉积物。
+</p>
+<p>
+    结合上述两步反应，总反应可表示为：
+</p>
+<p>
+    \[
+    \text{CaSiO}_3 + \text{CO}_2 \rightarrow \text{CaCO}_3 + \text{SiO}_2
+    \]
+</p>
     <p>
         这一反应形式类似于 Urey（1952年）认为控制大气 CO₂ 含量的平衡反应，
         但在这里，它代表的是一个非平衡地球化学循环的一部分。
