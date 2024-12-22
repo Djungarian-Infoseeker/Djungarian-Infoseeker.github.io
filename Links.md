@@ -59,7 +59,7 @@
     <a href="https://www.cesm.ucar.edu/" target="_blank" style="text-decoration: underline;">CESM</a><br>
     <a href="https://www2.cesm.ucar.edu/events/tutorials/2020/coursework.html" target="_blank" style="text-decoration: underline;">CESM Tutorial</a><br>
     <a href="https://mitgcm.org/" target="_blank" style="text-decoration: underline;">MITgcm</a><br>
-    
+    <a href="https://www.iflyrec.com/" target="_blank" style="text-decoration: underline;">讯飞听见</a><br>
     </td>
 </tr>
 <tr>
