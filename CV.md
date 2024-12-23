@@ -1,3 +1,7 @@
+---
+header_image: '../../yangquan.jpg'
+---
+
 ## Curriculum Vitae:
 
 <table>
