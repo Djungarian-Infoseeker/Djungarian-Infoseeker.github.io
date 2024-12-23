@@ -8,7 +8,6 @@ $section-headings-color: rosybrown;
 .page-header {
   background: url("{{ page.header_image | default: '../../Mars_evolution.jpg' }}') no-repeat center center;
   background-size: cover;
-  height: 400px;
 }
 
 
