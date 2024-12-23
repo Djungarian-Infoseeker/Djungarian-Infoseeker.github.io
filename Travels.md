@@ -1,3 +1,7 @@
+---
+header_image: '../../hakone.jpg'
+---
+
 ## Travels
 <html lang="zh">
 <head>
