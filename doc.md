@@ -1,5 +1,5 @@
 ---
-header_image: '../../evolution.jpg'
+header_image: '../../atmos.jpg'
 ---
 
 # 为什么我要写博客？
