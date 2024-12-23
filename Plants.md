@@ -1,3 +1,6 @@
+---
+header_image: '../../waterlily.jpg'
+---
 ## Nymphaea（Waterlily）睡莲属
 
 <div class="gallery" id="gallery-1">
