@@ -22,6 +22,8 @@ header_image: '../../yangquan.jpg'
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
         <strong style="font-size: 20px;">简介/Intro</strong><br>
+        <span style="color: white;">籍贯：山西盂县</span><br>
+        <span style="color: gray;">Native Place：Yu County, Shanxi Province</span><br>
         <span style="color: white;">2002年4月 山西省阳泉市矿区 出生</span><br>
         <span style="color: gray;">April 2002, Born in Mining District, Yangquan City, Shanxi Province</span><br>
         <span style="color: white;">2014年9月 山西省阳泉市第三中学校 初中</span><br>
