@@ -23,11 +23,9 @@
     <script src="js/lightbox-plus-jquery.min.js"></script>
   </head>
   <body>
-    <header class="page-header" role="banner" style="background: url('{{ page.header_image | default: '/Mars_evolution.jpg' }}') no-repeat center center; background-size: cover; height: 300px;">
-      <h1 class="project-name">{{ site.title }}</h1>
-      <h2 class="project-tagline">
-        {{ page.description | default: site.description | default: site.github.project_tagline }}
-      </h2>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{site.title}}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
