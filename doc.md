@@ -8,7 +8,8 @@ header_image: "../../evolution.jpg"
 3.方便给大家看，希望能够让大家遇到相同问题时少走弯路。<br>
 4.练练文笔，个人平时不太说话，语言锻炼很欠缺。<br>
 5.写点实实在在的东西出来蛮有成就感，给自己添加一点正向反馈，让我更有动力做事情。<br>
-
+6.我现在认为从学徒状态开始就记录自己的内容对其他人借鉴意义更大，这样会缩小很多gap，而不是让人觉得一开始就在那里，从而打消入门某些东西的念头。<br>
+7.通过完成项目的方式来诱导自己的爱欲完成一项自己需要/感兴趣的课题。写作也是一种很小型的项目，能够为人带来满足感，从而促使其完整、成体系的完成。<br>
 # 学校事务 / School Affairs
 - [推荐免试 / Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation)<span style="color:green;">（更新日期2024/12/17，已完结）</span>
 - [东京科学大学（东京工业大学）交换 / Science Tokyo (Tokyo Tech) Exchange](https://infoseeker.cn/docs/Exchange)<span style="color:red;">（更新日期2024/10/21，未完结）</span>
