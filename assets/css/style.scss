@@ -4,9 +4,11 @@ $section-headings-color: rosybrown;
 
 @import"{{ site.theme }}";
 
+
 .page-header {
-  background: url("{{ page.header_image | default: '../../Mars_evolution.jpg' }}");
+  background: url("{{ page.header_image | default: '../../Mars_evolution.jpg' }}') no-repeat center center;
   background-size: cover;
+  height: 400px;
 }
 
 
