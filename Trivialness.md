@@ -1,5 +1,5 @@
 ---
-header_image: '../../Tokyotech.jpg'
+header_image: '../../tongji.jpg'
 ---
 
 # 闲话
