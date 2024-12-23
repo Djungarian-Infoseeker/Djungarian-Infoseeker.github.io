@@ -9,32 +9,6 @@ $section-headings-color: rosybrown;
   background-size: cover;
   height: 600px;
 }
-/* === Header 文字灰色化 === */
-.page-header {
-  color: #808080; /* 设置整体文字颜色为 50% 灰色 */
-}
-
-.page-header h1,
-.page-header h2,
-.page-header p,
-.page-header a {
-  color: #808080 !important; /* 强制所有标题、段落、链接为灰色 */
-}
-
-/* 确保按钮、链接悬停时也为灰色 */
-.page-header a.btn:hover {
-  color: #808080 !important;
-  background-color: transparent !important;
-  border-color: #808080 !important;
-}
-
-/* 如果存在特定样式覆盖了颜色，这里强制统一 */
-.page-header .project-name,
-.page-header .project-tagline,
-.page-header .header-nav a {
-  color: #808080 !important;
-  text-shadow: none; /* 移除阴影，防止影响灰色效果 */
-}
 
 
 
