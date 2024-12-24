@@ -19,6 +19,7 @@ header_image: '../../atmos.jpg'
 - [自学气候动力学 / SelfStudying Climate Dynamics](https://infoseeker.cn/docs/ClimateDynamic)<span style="color:orange;">（还未开始）</span>
 - [如何在CESM1里的Aquaplanet模拟中开启slab ocean模块中文版本（作者：Brian Medeiros） / Aquaplanets with slab ocean in CESM1（Brian Medeiros November13,2013）](https://infoseeker.cn/docs/Aquaplanets with slab ocean in CESM1)<span style="color:green;">（更新日期2024/11/15，已完结）</span>
 - [如何修改CAM当中的太阳辐照量？/ How to modify the TSI in CESM?](https://infoseeker.cn/docs/TSI)<span style="color:green;">（更新日期2024/11/21，已完结）</span>
+- [东华理工大学 陈童 经典力学系列文章/ East China University of Technology Chen Tong Classical Mechanics Series](https://newquanta.com/%e3%80%8a%e7%90%86%e8%ae%ba%e5%8a%9b%e5%ad%a6%e6%96%b0%e8%ae%b2%e3%80%8b%e4%b8%8b%e8%bd%bd/)
 
 # 文献与知识 / Thesis & Knowledge
 
