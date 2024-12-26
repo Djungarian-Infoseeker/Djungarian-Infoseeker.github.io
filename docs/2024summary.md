@@ -392,6 +392,15 @@
                 <td>The Prince</td>
                 <td>吕健忠</td>
             </tr>
+            <tr>
+                <td>27</td>
+                <td>为什么</td>
+                <td>关于因果关系的新科学</td>
+                <td>[美]朱迪亚·珀尔、[美]达纳·麦肯齐</td>
+                <td>中信出版社</td>
+                <td>The book of why ：The new science of cause and effect</td>
+                <td>江生 / 于华</td>
+            </tr>
         </tbody>
     </table>
     </div>
