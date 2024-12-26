@@ -96,23 +96,23 @@
             display: flex;
             justify-content: center; /* 水平居中 */
             align-items: center; /* 垂直居中 */
-            margin: 20px 0;
+            margin: 10px 0;
             overflow-x: auto; /* 防止内容溢出 */
         }
 
         .table-container table {
-            width: 80%; /* 表格宽度 */
-            max-width: 1000px; /* 最大宽度 */
+            width: 90%; /* 表格宽度减少 */
+            max-width: 800px; /* 最大宽度更小 */
             border-collapse: collapse;
             table-layout: fixed;
-            font-size: 14px; /* 字体大小 */
-            line-height: 1.2; /* 行距缩短 */
+            font-size: 12px; /* 字体缩小 */
+            line-height: 1.1; /* 行距更紧凑 */
         }
 
         .table-container th,
         .table-container td {
             border: 1px solid #000;
-            padding: 4px 6px; /* 单元格内边距 */
+            padding: 2px 4px; /* 单元格内边距更小 */
             text-align: left;
             word-wrap: break-word;
             word-break: break-word;
@@ -120,6 +120,25 @@
 
         .table-container th {
             background-color: #f4f4f4;
+            font-size: 12px; /* 表头字体稍小 */
+        }
+
+        /* 滚动条美化 */
+        .table-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .table-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .table-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
     </style>
 </head>
