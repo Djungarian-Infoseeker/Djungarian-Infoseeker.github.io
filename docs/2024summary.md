@@ -92,16 +92,6 @@
         <p>参与东京科学大学水文气候实验室的科研交流，提升了国际科研合作与沟通能力。</p>
     </div>
 
-    <div class="section">
-        <h2>3. 个人成长与反思</h2>
-        <p>2024年不仅是学术成长的一年，也是个人综合能力提升的重要阶段。在科研、团队协作及国际交流中积累了宝贵经验。</p>
-    </div>
-
-    <div class="section">
-        <h2>4. 结论与展望</h2>
-        <p>展望2025年，作者将继续深入气候动力学与行星气候可居性研究，推动AI在气候建模中的应用，并加强国际科研合作，为全球气候变化研究贡献力量。</p>
-    </div>
-
     <footer>
         <p>* 通讯作者</p>
         <p>版权所有 © 2024 王胤杰</p>
@@ -125,14 +115,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>本年度阅读书籍汇总</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
         table {
-            width: 100%;
+            width: 80%; /* 缩小表格宽度 */
             border-collapse: collapse;
             table-layout: fixed;
+            font-size: 14px; /* 缩小字体 */
+            line-height: 1.2; /* 缩短行距 */
+            margin: 20px 0; /* 上下留白 */
         }
         th, td {
             border: 1px solid #000;
-            padding: 8px;
+            padding: 4px 6px; /* 缩小单元格内边距 */
             text-align: left;
             word-wrap: break-word;
             word-break: break-word;
@@ -142,6 +142,7 @@
         }
     </style>
 </head>
+
 <body>
     <table>
         <thead>
