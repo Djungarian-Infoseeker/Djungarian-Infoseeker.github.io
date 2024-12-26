@@ -85,6 +85,38 @@
 在2024年4月19日我决定放弃知乎作为日常信息的获取途径，因为在大数据对人类爱欲的操控下，现在一切大型网络论坛的推送信息流里很难再获得高质量的知识，充满了抖机灵、八卦、开车、偏激、煽动性的情绪，从大量低质量数据会让本来灵光的大脑不停的退行，我可以说这已经在当代从高中生做题家直接转换成大学生的群体里面成了重病，我也受其影响，所以现在以更为愤怒的决心彻底洗掉遗毒，我认为也是现代人类应该克服的一关。<br>
 在2024年8月开始使用得到app进行电子书听书阅读，经过实际体验认为听书形式对于传记社科、历史、人文、科普内容适合，但是对于理工图书较难以理解。因为你需要经常动笔进行公式推导，因此我使用两管齐下的阅读方式。<br>
 以下为在得到app上以及实体书和pdf电子书阅读的名单：
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本年度阅读书籍汇总</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        table {
+            width: 80%; /* 缩小表格宽度 */
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: 14px; /* 缩小字体 */
+            line-height: 1.2; /* 缩短行距 */
+            margin: 20px 0; /* 上下留白 */
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 4px 6px; /* 缩小单元格内边距 */
+            text-align: left;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
 <body>
     <table>
         <thead>
