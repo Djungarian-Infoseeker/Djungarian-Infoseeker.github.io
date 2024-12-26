@@ -90,34 +90,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>本年度阅读书籍汇总</title>
     <style>
-        body {
+        /* 表格专用容器 */
+        .table-container {
+            width: 100%;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            margin: 20px 0;
+            overflow-x: auto; /* 防止内容溢出 */
         }
-        table {
-            width: 80%; /* 缩小表格宽度 */
+
+        .table-container table {
+            width: 80%; /* 表格宽度 */
+            max-width: 1000px; /* 最大宽度 */
             border-collapse: collapse;
             table-layout: fixed;
-            font-size: 14px; /* 缩小字体 */
-            line-height: 1.2; /* 缩短行距 */
-            margin: 20px 0; /* 上下留白 */
+            font-size: 14px; /* 字体大小 */
+            line-height: 1.2; /* 行距缩短 */
         }
-        th, td {
+
+        .table-container th,
+        .table-container td {
             border: 1px solid #000;
-            padding: 4px 6px; /* 缩小单元格内边距 */
+            padding: 4px 6px; /* 单元格内边距 */
             text-align: left;
             word-wrap: break-word;
             word-break: break-word;
         }
-        th {
+
+        .table-container th {
             background-color: #f4f4f4;
         }
     </style>
 </head>
 <body>
+    <div class="table-container">
     <table>
         <thead>
             <tr>
@@ -367,9 +374,9 @@
             </tr>
         </tbody>
     </table>
-</body>
     </div>
-
+</body>
+<body>
     <footer>
         <p>* 通讯作者</p>
         <p>版权所有 © 2024 王胤杰</p>
