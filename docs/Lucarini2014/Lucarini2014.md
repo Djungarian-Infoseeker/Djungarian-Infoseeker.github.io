@@ -47,7 +47,7 @@
     
     <p>最后，在第7节中，我们总结全文并展望未来的研究方向。</p>
     
-    <h2>超越哈密顿范式：地球物理流体动力学的南部表述</h2>
+    <h2>2.超越哈密顿范式：地球物理流体动力学的南部表述</h2>
     
     <p>哈密顿形式主义构成了大多数物理理论的基础。在离散自治系统的情况下，其基本思想是通过定义一组正则变量 \( q \) 和相关动量 \( p \) （\( q, p ∈ \mathbb{R}^N \)，即它们是N维向量）来全面描述自由度，并将时间演化识别为相空间中的流动，使得正则哈密顿函数 \( \mathcal{H} \) 充当流函数：</p>
     
@@ -84,56 +84,92 @@
     <p>南部方法在数学和物理的各个领域中具有深远影响，并且可以扩展到连续的情况，从而转化为场论。在地球物理流体动力学中构建南部场论经历了两个决定性步骤。首先是发现了二维和三维不可压缩流体动力学的南部表述（Névir 和 Blender, 1993）。其次，发现南部表述可以用来在地球物理模型中设计保守的数值算法，并且Arakawa为构建精确数值模型而设计的经典启发式方法，实际上反映了来自流动基础动力学的南部结构的深层对称性（Salmon, 2005）。</p>
     
     <p>南部理论在描述和模拟保守地球物理流体动力学中的重要性来自于除了能量之外，还存在其他相关的守恒量。这种特性在许多与地球物理流动相关的模型中存在，适用于二维和三维流体动力学、Rayleigh-Bénard对流、准地转流和浅水模型，并扩展到完全正压三维大气中。</p>
+    <h2>2.1 二维与三维的流体动力学</h2>
     <p>在不可压缩的流体动力学中，除能量外，二维的涡度守恒和三维的螺旋度是已知的积分守恒量 [Kuroda, 1991]。Névir 和 Blender [1993] 采用南部的形式主义，将其应用于不可压缩、无粘性流体动力学，利用涡度和螺旋度引入到动力学方程中。</p>
     
-    <h2>2.1.1. 二维流体动力学</h2>
+    <h3>2.1.1. 二维流体动力学</h3>
     <p>由速度场 \( u \) 描述的二维不可压缩、无粘性、无外力流动的演化由涡度方程控制：</p>
     <p>
     \[
     \frac{\partial \omega}{\partial t} = -u \cdot \nabla \omega,
     \]
     </p>
-    <p>这里，常规符号表示偏导数，涡度 \( \omega \) 在笛卡尔坐标系 \((x,y)\) 中可表示为 \( \omega = v_x - u_y \)。不可压缩性由方程 \( \nabla \cdot u = 0 \) 描述，这里 \( \nabla \cdot u = \frac{\partial u_x}{\partial x} + \frac{\partial u_y}{\partial y} \) 表示向量场 \( U \) 的散度。</p>
-    <p>因此，可以写为 \( u = S \nabla \psi = (-\frac{\partial \psi}{\partial y}, \frac{\partial \psi}{\partial x}) \)，其中 \( S \) 是辛矩阵 \([0, -1; 1, 0]\)，\( \psi \) 是流函数，\( \nabla \phi = (\frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y}) \) 是函数 \( \phi \) 的梯度。注意到 \( \omega = \nabla^2 \psi \)。在本节中，我们考虑一个具有周期性边界条件的紧致区域（例如边长为 L 的正方形）。</p>
+    <p>在这里，常规符号用于表示偏导数。涡度 \( \omega \) 在笛卡尔坐标系 \((x,y)\) 中可以表示为：</p>
+    <p>
+    \[
+    \omega = \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y},
+    \]
+    </p>
+    <p>不可压缩性由方程 \( \nabla \cdot u = 0 \) 描述，其中：</p>
+    <p>
+    \[
+    \nabla \cdot u = \frac{\partial u_x}{\partial x} + \frac{\partial u_y}{\partial y},
+    \]
+    </p>
+    <p>表示向量场 \( U \) 的散度。因此，我们可以将速度场表示为：</p>
+    <p>
+    \[
+    u = S \nabla \psi = \left(-\frac{\partial \psi}{\partial y}, \frac{\partial \psi}{\partial x}\right),
+    \]
+    </p>
+    <p>其中，\( S \) 是辛矩阵：</p>
+    <p>
+    \[
+    S = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix},
+    \]
+    </p>
+    <p>\( \psi \) 是流函数，\( \nabla \phi = \left(\frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y}\right) \) 是函数 \( \phi \) 的梯度。注意到：</p>
+    <p>
+    \[
+    \omega = \nabla^2 \psi.
+    \]
+    </p>
+    <p>在本节中，我们考虑一个紧致区域（例如边长为 \( L \) 的正方形），并设定周期性边界条件。</p>
     
-    <p>哈密顿量 \( \mathcal{H} \) 是速度的动能泛函，可以表示为：</p>
+    <p>哈密顿量 \( \mathcal{H} \) 是速度的动能泛函，定义如下：</p>
     <p>
     \[
     \mathcal{H} = \frac{1}{2} \int u^2 dA = \frac{1}{2} \int \nabla \psi \cdot \nabla \psi dA = -\frac{1}{2} \int \omega \psi dA,
     \]
     </p>
-    <p>这里我们使用了分部积分。一般来说，泛函 \( \mathcal{F}[\phi] \) 将相空间函数 \( \phi \) 映射到一个数值上。泛函导数 \( \frac{\delta \mathcal{F}}{\delta \phi} \) 表示泛函 \( \mathcal{F} \) 对函数 \( \phi \) 变化的敏感性。可以通过以下展开定义泛函导数：</p>
+    <p>这里我们使用了分部积分。</p>
+    
+    <p>一般来说，泛函 \( \mathcal{F}[\phi] \) 将相空间函数 \( \phi \) 映射到一个数值上。泛函导数 \( \frac{\delta \mathcal{F}}{\delta \phi} \) 表示泛函 \( \mathcal{F} \) 对函数 \( \phi \) 变化的敏感性。泛函导数可以通过以下展开定义：</p>
     <p>
     \[
-    \mathcal{F}[\phi + \delta \phi] - \mathcal{F}[\phi] = \delta \mathcal{F}[\phi] = \int \frac{\delta \mathcal{F}}{\delta \phi(x)} \delta \phi(x) dx + \cdots
+    \mathcal{F}[\phi + \delta \phi] - \mathcal{F}[\phi] = \int \frac{\delta \mathcal{F}}{\delta \phi(x)} \delta \phi(x) dx + \cdots
     \]
     </p>
     
-    <p>对于上式，泛函导数 \( \frac{\delta \mathcal{H}}{\delta \omega} \) 可以显式计算为：</p>
+    <p>对于哈密顿量泛函 (3)，其泛函导数可以显式计算为：</p>
     <p>
     \[
     \delta \mathcal{H} = \int \nabla \psi \cdot \delta \nabla \psi dA = \int \nabla \cdot (\psi \delta \nabla \psi) dA - \int \psi \delta \omega dA.
     \]
     </p>
-    <p>由于第一个积分在边界条件下消失，且 \( \omega = \nabla^2 \psi \)，我们得到：</p>
+    
+    <p>由于第一个积分在边界条件下为零，且因为 \( \omega = \nabla^2 \psi \)，我们得到：</p>
     <p>
     \[
     \frac{\delta \mathcal{H}}{\delta \omega} = -\psi.
     \]
     </p>
     
-    <p>方程 (2) 表明涡度由无散流动传输。可以很容易地证明涡度的任何泛函都是守恒的：</p>
+    <p>因此，涡度方程表明涡度由无散流动在区域内传输。</p>
+    
+    <p>可以证明，任何关于涡度的泛函都是守恒的，其形式为：</p>
     <p>
     \[
     \mathcal{C} = \int s(\omega) dA,
     \]
     </p>
-    <p>其中积分在系统的整个区域上进行。这些泛函中最常见的是流动的总涡度能量：</p>
+    <p>其中积分在整个系统区域上进行。最常见的这种泛函是流动的总涡度能量：</p>
     <p>
     \[
     \mathcal{E} = \frac{1}{2} \int \omega^2 dA.
     \]
     </p>
+    
     <p>涡度能量的泛函导数简单为：</p>
     <p>
     \[
@@ -141,23 +177,16 @@
     \]
     </p>
     
-    <p>由于 \( u = S \nabla \psi = (-\frac{\partial \psi}{\partial y}, \frac{\partial \psi}{\partial x}) \)，二维涡度方程可表示为：</p>
+    <p>最终，二维涡度方程可重新表达为：</p>
     <p>
     \[
     \frac{\partial \omega}{\partial t} = -\mathcal{J}(\psi, \omega) = \mathcal{J}(\omega, \psi) = -\mathcal{J},
     \]
     </p>
-    <p>其中反对称雅可比算子定义为：</p>
+    <p>其中，反对称雅可比算子定义为：</p>
     <p>
     \[
     \mathcal{J}(a, b) = \frac{\partial a}{\partial x} \frac{\partial b}{\partial y} - \frac{\partial a}{\partial y} \frac{\partial b}{\partial x}.
-    \]
-    </p>
-    
-    <p>任意涡度泛函 \( \mathcal{F} = \mathcal{F}[\omega] \) 的时间演化由下式决定：</p>
-    <p>
-    \[
-    \frac{d \mathcal{F}}{dt} = -\int \frac{\delta \mathcal{F}}{\delta \omega} \mathcal{J}\left(\frac{\delta \mathcal{E}}{\delta \omega}, \frac{\delta \mathcal{H}}{\delta \omega}\right) dA = \{\mathcal{F}, \mathcal{E}, \mathcal{H}\}.
     \]
     </p>
 </body>
