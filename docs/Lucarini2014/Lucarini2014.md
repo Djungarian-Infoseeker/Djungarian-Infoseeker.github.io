@@ -37,7 +37,7 @@
     
     <p>我们将首先集中探讨无黏性和无强迫地球流体动力学的特性。接着，我们将从 Onsager 的经典研究出发，展示如何为地球物理流体动力学的湍流现象构建一个平衡统计力学理论，并探讨其在解释观测到的气候现象中的重要性。</p>
     
-    <p>平衡方法允许我们研究地球流体动力学（GFD）流动的许多特性。然而，此时我们不能再忽略一个显而易见的事实：气候系统的动力学无法简单地被视为无粘性和无外力的地球流体动力学流动，因为强迫和耗散过程具有极其重要的意义。</p>
+    <p>平衡方法允许我们研究地球流体动力学（GFD）流动的许多特性。然而，此时我们不能再忽略一个显而易见的事实：<mark>气候系统的动力学无法简单地被视为无粘性和无外力的地球流体动力学流动，因为强迫和耗散过程具有极其重要的意义。</mark></p>
     
     <p>因此，我们转向非平衡系统的范式。在第4节中，借鉴Prigogine（1961）和Lorenz（1967）的观点，我们探讨如何通过经典非平衡热力学构建工具来评估气候系统的能量收支和传输，定义和估算气候机器的效率，并通过评估气候物质熵的产生来研究不可逆过程。这使我们能够表征气候的大尺度特性，开发气候模型审计工具，收集有关临界点的信息，并探索一般行星大气的性质。</p>
     
@@ -84,5 +84,81 @@
     <p>南部方法在数学和物理的各个领域中具有深远影响，并且可以扩展到连续的情况，从而转化为场论。在地球物理流体动力学中构建南部场论经历了两个决定性步骤。首先是发现了二维和三维不可压缩流体动力学的南部表述（Névir 和 Blender, 1993）。其次，发现南部表述可以用来在地球物理模型中设计保守的数值算法，并且Arakawa为构建精确数值模型而设计的经典启发式方法，实际上反映了来自流动基础动力学的南部结构的深层对称性（Salmon, 2005）。</p>
     
     <p>南部理论在描述和模拟保守地球物理流体动力学中的重要性来自于除了能量之外，还存在其他相关的守恒量。这种特性在许多与地球物理流动相关的模型中存在，适用于二维和三维流体动力学、Rayleigh-Bénard对流、准地转流和浅水模型，并扩展到完全正压三维大气中。</p>
+    <p>在不可压缩的流体动力学中，除能量外，二维的涡度守恒和三维的螺旋度是已知的积分守恒量 [Kuroda, 1991]。Névir 和 Blender [1993] 采用南部的形式主义，将其应用于不可压缩、无粘性流体动力学，利用涡度和螺旋度引入到动力学方程中。</p>
+    
+    <h2>2.1.1. 二维流体动力学</h2>
+    <p>由速度场 \( u \) 描述的二维不可压缩、无粘性、无外力流动的演化由涡度方程控制：</p>
+    <p>
+    \[
+    \frac{\partial \omega}{\partial t} = -u \cdot \nabla \omega,
+    \]
+    </p>
+    <p>这里，常规符号表示偏导数，涡度 \( \omega \) 在笛卡尔坐标系 \((x,y)\) 中可表示为 \( \omega = v_x - u_y \)。不可压缩性由方程 \( \nabla \cdot u = 0 \) 描述，这里 \( \nabla \cdot u = \frac{\partial u_x}{\partial x} + \frac{\partial u_y}{\partial y} \) 表示向量场 \( U \) 的散度。</p>
+    <p>因此，可以写为 \( u = S \nabla \psi = (-\frac{\partial \psi}{\partial y}, \frac{\partial \psi}{\partial x}) \)，其中 \( S \) 是辛矩阵 \([0, -1; 1, 0]\)，\( \psi \) 是流函数，\( \nabla \phi = (\frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y}) \) 是函数 \( \phi \) 的梯度。注意到 \( \omega = \nabla^2 \psi \)。在本节中，我们考虑一个具有周期性边界条件的紧致区域（例如边长为 L 的正方形）。</p>
+    
+    <p>哈密顿量 \( \mathcal{H} \) 是速度的动能泛函，可以表示为：</p>
+    <p>
+    \[
+    \mathcal{H} = \frac{1}{2} \int u^2 dA = \frac{1}{2} \int \nabla \psi \cdot \nabla \psi dA = -\frac{1}{2} \int \omega \psi dA,
+    \]
+    </p>
+    <p>这里我们使用了分部积分。一般来说，泛函 \( \mathcal{F}[\phi] \) 将相空间函数 \( \phi \) 映射到一个数值上。泛函导数 \( \frac{\delta \mathcal{F}}{\delta \phi} \) 表示泛函 \( \mathcal{F} \) 对函数 \( \phi \) 变化的敏感性。可以通过以下展开定义泛函导数：</p>
+    <p>
+    \[
+    \mathcal{F}[\phi + \delta \phi] - \mathcal{F}[\phi] = \delta \mathcal{F}[\phi] = \int \frac{\delta \mathcal{F}}{\delta \phi(x)} \delta \phi(x) dx + \cdots
+    \]
+    </p>
+    
+    <p>对于上式，泛函导数 \( \frac{\delta \mathcal{H}}{\delta \omega} \) 可以显式计算为：</p>
+    <p>
+    \[
+    \delta \mathcal{H} = \int \nabla \psi \cdot \delta \nabla \psi dA = \int \nabla \cdot (\psi \delta \nabla \psi) dA - \int \psi \delta \omega dA.
+    \]
+    </p>
+    <p>由于第一个积分在边界条件下消失，且 \( \omega = \nabla^2 \psi \)，我们得到：</p>
+    <p>
+    \[
+    \frac{\delta \mathcal{H}}{\delta \omega} = -\psi.
+    \]
+    </p>
+    
+    <p>方程 (2) 表明涡度由无散流动传输。可以很容易地证明涡度的任何泛函都是守恒的：</p>
+    <p>
+    \[
+    \mathcal{C} = \int s(\omega) dA,
+    \]
+    </p>
+    <p>其中积分在系统的整个区域上进行。这些泛函中最常见的是流动的总涡度能量：</p>
+    <p>
+    \[
+    \mathcal{E} = \frac{1}{2} \int \omega^2 dA.
+    \]
+    </p>
+    <p>涡度能量的泛函导数简单为：</p>
+    <p>
+    \[
+    \frac{\delta \mathcal{E}}{\delta \omega} = \omega.
+    \]
+    </p>
+    
+    <p>由于 \( u = S \nabla \psi = (-\frac{\partial \psi}{\partial y}, \frac{\partial \psi}{\partial x}) \)，二维涡度方程可表示为：</p>
+    <p>
+    \[
+    \frac{\partial \omega}{\partial t} = -\mathcal{J}(\psi, \omega) = \mathcal{J}(\omega, \psi) = -\mathcal{J},
+    \]
+    </p>
+    <p>其中反对称雅可比算子定义为：</p>
+    <p>
+    \[
+    \mathcal{J}(a, b) = \frac{\partial a}{\partial x} \frac{\partial b}{\partial y} - \frac{\partial a}{\partial y} \frac{\partial b}{\partial x}.
+    \]
+    </p>
+    
+    <p>任意涡度泛函 \( \mathcal{F} = \mathcal{F}[\omega] \) 的时间演化由下式决定：</p>
+    <p>
+    \[
+    \frac{d \mathcal{F}}{dt} = -\int \frac{\delta \mathcal{F}}{\delta \omega} \mathcal{J}\left(\frac{\delta \mathcal{E}}{\delta \omega}, \frac{\delta \mathcal{H}}{\delta \omega}\right) dA = \{\mathcal{F}, \mathcal{E}, \mathcal{H}\}.
+    \]
+    </p>
 </body>
 </html>
