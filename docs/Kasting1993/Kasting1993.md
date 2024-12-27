@@ -19,7 +19,7 @@
     <p>在线日期：<strong>25 May 2002</strong></p>
     <p>DOI 链接：<a href="https://doi.org/10.1006/icar.1993.1010" target="_blank">https://doi.org/10.1006/icar.1993.1010</a></p>
 
-    <h2>简介</h2>
+    <h2>1.简介</h2>
     <p>
         本文利用一维气候模型估算了太阳系及其他主序星周围宜居带（Habitable Zone, HZ）的宽度。研究的基础假设是这些行星具有类似地球的大气层（CO₂/H₂O/N₂），
         且宜居性的前提是行星表面存在液态水。
