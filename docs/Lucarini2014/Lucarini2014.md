@@ -189,5 +189,167 @@
     \mathcal{J}(a, b) = \frac{\partial a}{\partial x} \frac{\partial b}{\partial y} - \frac{\partial a}{\partial y} \frac{\partial b}{\partial x}.
     \]
     </p>
+    <h2>2.1.2. 三维不可压缩流体动力学</h2>
+    <p>三维不可压缩、无外力、无粘性流体流动的动力学由涡度方程控制：</p>
+    <p>
+    \[
+    \frac{\partial \boldsymbol{\omega}}{\partial t} = \boldsymbol{\omega} \cdot \nabla \boldsymbol{u} - \boldsymbol{u} \cdot \nabla \boldsymbol{\omega},
+    \]
+    </p>
+    <p>其中，\( \boldsymbol{u} \) 是速度场，且满足不可压缩性条件：</p>
+    <p>
+    \[
+    \nabla \cdot \boldsymbol{u} = 0.
+    \]
+    </p>
+    <p>在笛卡尔坐标系中，速度场的旋度（curl）可以表示为：</p>
+    <p>
+    \[
+    (\nabla \times \boldsymbol{u})_i = \epsilon_{ijk} \frac{\partial u_k}{\partial x_j},
+    \]
+    </p>
+    <p>其中，\( \epsilon_{ijk} \) 是完全反对称的Levi-Civita符号，\( \nabla \cdot \boldsymbol{u} = \frac{\partial u_x}{\partial x} + \frac{\partial u_y}{\partial y} + \frac{\partial u_z}{\partial z} \) 是三维空间中的散度。</p>
+    
+    <p>与二维情况类似，总能量守恒，其形式为：</p>
+    <p>
+    \[
+    \mathcal{H} = \frac{1}{2} \int u^2 dV = -\frac{1}{2} \int \boldsymbol{\omega} \cdot \boldsymbol{A} dV,
+    \]
+    </p>
+    <p>其中，\( \boldsymbol{A} \) 是矢量势，使得：</p>
+    <p>
+    \[
+    \boldsymbol{u} = -\nabla \times \boldsymbol{A}.
+    \]
+    </p>
+    <p>在推导第二个等式时，我们使用了分部积分，并假设周期性边界条件。</p>
+    
+    <p>重要的是，总螺旋度也被守恒，其形式为：</p>
+    <p>
+    \[
+    h = \frac{1}{2} \int \boldsymbol{\omega} \cdot \boldsymbol{u} dV.
+    \]
+    </p>
+    <p>然而，例如，涡度能量却不是守恒量。按照方程 (4) 的过程，我们可以推导出能量关于涡度的泛函导数为：</p>
+    <p>
+    \[
+    \frac{\delta \mathcal{H}}{\delta \boldsymbol{\omega}} = -\boldsymbol{A},
+    \]
+    </p>
+    <p>对于螺旋度，有：</p>
+    <p>
+    \[
+    \frac{\delta h}{\delta \boldsymbol{\omega}} = \boldsymbol{u}.
+    \]
+    </p>
+    
+    <p>涡度方程的南部形式为：</p>
+    <p>
+    \[
+    \frac{\partial \boldsymbol{\omega}}{\partial t} = K \left(\frac{\delta h}{\delta \boldsymbol{\omega}}, \frac{\delta \mathcal{H}}{\delta \boldsymbol{\omega}}\right) = -K(\boldsymbol{u}, \boldsymbol{A}),
+    \]
+    </p>
+    <p>其中：</p>
+    <p>
+    \[
+    K(\boldsymbol{u}, \boldsymbol{v}) = -\nabla \times \left[(\nabla \times \boldsymbol{u}) \times (\nabla \times \boldsymbol{v})\right].
+    \]
+    </p>
+    <p>考虑到 \( \boldsymbol{\omega} = \nabla \times \boldsymbol{u} \)，并使用一些标准的向量微积分恒等式，我们可以验证方程 (16) 与方程 (13) 一致。</p>
+    
+    <p>任意涡度泛函 \( \mathcal{F} = \mathcal{F}[\boldsymbol{\omega}] \) 的演化可以表示为：</p>
+    <p>
+    \[
+    \frac{d \mathcal{F}}{dt} = -\int \nabla \times \frac{\delta \mathcal{F}}{\delta \boldsymbol{\omega}} \cdot \left[\nabla \times \frac{\delta h}{\delta \boldsymbol{\omega}} \times \nabla \times \frac{\delta \mathcal{H}}{\delta \boldsymbol{\omega}}\right] dV = \{\mathcal{F}, h, \mathcal{H}\}.
+    \]
+    </p>
+    
+    <p>该方程定义了基于涡度方程的三维不可压缩流体动力学的南部括号。螺旋度不再是一个隐藏的守恒量，而是在动力学中与哈密顿量具有同等地位。因此，南部力学能够明确地反映系统的守恒定律及其对应的对称性。</p>
+    
+    <h2>2.2. 地球物理流体动力学</h2>
+    <p>南部表述还可以用于一些在大尺度地球物理流体动力学中非常重要的数学模型，例如准地转位涡方程 [Névir 和 Sommer, 2009]，浅水模型 [Salmon, 2005; Sommer 和 Névir, 2009]，以及正压分层大气模型 [Névir 和 Sommer, 2009]。</p>
+    <p>其他具有地球物理相关性的模型也可以通过这种方式进行处理，其中最显著的是二维对流的 Rayleigh-Bénard 方程，这一模型已被 Bihlo [2008] 和 Salazar 与 Kurgansky [2010] 详细研究。然而，我们在本综述中不会涉及这一案例。</p>
+    <h3>2.2.1. 准地转近似</h3>
+    <p>准地转（QG）理论是地球物理流体动力学中最重要且被广泛研究的部分之一，对于研究地球大气和海洋的大尺度动力学，以及近年来的行星大气动力学至关重要 [Holton, 2004; Pedlosky, 1987; Klein, 2010]。</p>
+    <p>当流体运动满足以下两个条件时，QG 动力学是有效的近似：</p>
+    <ul>
+        <li>(1) 流体运动是静力平衡的；</li>
+        <li>(2) 科里奥利加速度与水平压力梯度相平衡。</li>
+    </ul>
+    <p>这种情况通常出现在大气的中纬度地区。在没有耗散过程和外部强迫的情况下，QG 动力学由 QG 位涡的物质守恒描述。</p>
+    
+    <p>我们采用笛卡尔坐标系和时间 \( (x, y, z, t) \)，其中 \( x \) 表示纬向方向，\( y \) 表示经向方向，\( z \) 表示由重力定义的垂直方向 [Holton, 2004]。演化方程如下所示：</p>
+    <p>
+    \[
+    \frac{\partial Q}{\partial t} + \frac{1}{f_0} \mathcal{J}(\Phi, Q) = 0,
+    \]
+    </p>
+    <p>其中，\( \mathcal{J} \) 是雅可比算子，\( Q \) 是埃尔泰位涡的 QG 近似，表达为：</p>
+    <p>
+    \[
+    Q = \omega_g + f_0 \frac{1}{N^2} \frac{\partial^2 \Phi}{\partial z^2} + f,
+    \]
+    </p>
+    <p>其中：</p>
+    <ul>
+        <li>\( \omega_g = \frac{1}{f_0} \nabla_h^2 \Phi \) 是地转涡度；</li>
+        <li>\( \Phi \) 是重力势；</li>
+        <li>\( \nabla_h^2 \) 是限制在 \( x \) 和 \( y \) 方向上的拉普拉斯算子；</li>
+        <li>\( N \) 是布朗-瓦西拉频率；</li>
+        <li>\( f = f_0 + \beta y \) 是科里奥利参数，包含了纬度依赖的行星涡度效应（β 效应）。</li>
+    </ul>
+    
+    <p>地转速度 \( u_g \) 只有在 \( x \) 和 \( y \) 方向上有非零分量，因此我们可以写成：</p>
+    <p>
+    \[
+    u_g = (u_h^g, 0),
+    \]
+    </p>
+    <p>其中：</p>
+    <p>
+    \[
+    u_h^g = \frac{1}{f_0} S \nabla_h \Phi = \frac{1}{f_0} \left(-\frac{\partial \Phi}{\partial y}, \frac{\partial \Phi}{\partial x}\right),
+    \]
+    </p>
+    <p>这里 \( \nabla_h \) 是限制在 \( x \) 和 \( y \) 方向的梯度算子。</p>
+    
+    <p>第一个守恒积分是系统的总能量，表达为：</p>
+    <p>
+    \[
+    \mathcal{H} = \frac{1}{2} \int \left[\left(\nabla_h \Phi\right)^2 + \frac{1}{N^2} \left(\frac{\partial \Phi}{\partial z}\right)^2\right] dV,
+    \]
+    </p>
+    <p>其中，第一个项是动能密度，第二项是势能密度。</p>
+    <p>在每个高度 \( z \) 上，重力势充当定义地转速度场的流函数，而重力势的垂直导数与系统的温度波动成正比 [Holton, 2004]。</p>
+    
+    <p>第二个守恒积分是位涡能量，定义为：</p>
+    <p>
+    \[
+    \mathcal{E} = \frac{1}{2} \int Q^2 dV,
+    \]
+    </p>
+    <p>这个定义类似于方程 (6) 中的涡度能量。</p>
+    
+    <p>可以证明，QG 动力学可以以南部形式写成：</p>
+    <p>
+    \[
+    \frac{\partial Q}{\partial t} = -\mathcal{J}\left(\frac{\delta \mathcal{E}}{\delta Q}, \frac{\delta \mathcal{H}}{\delta Q}\right),
+    \]
+    </p>
+    <p>其中，数学结构类似于二维涡度方程 (9)。</p>
+    
+    <p>此外，我们可以定义任意泛函 \( \mathcal{F}[Q] \) 的演化方程，使用以下南部括号：</p>
+    <p>
+    \[
+    \frac{d \mathcal{F}}{dt} = -\int \frac{\delta \mathcal{F}}{\delta Q} \mathcal{J}\left(\frac{\delta \mathcal{E}}{\delta Q}, \frac{\delta \mathcal{H}}{\delta Q}\right) dV = \{\mathcal{F}, \mathcal{E}, \mathcal{H}\},
+    \]
+    </p>
+    <p>其中：</p>
+    <ul>
+        <li>\( \frac{\delta \mathcal{E}}{\delta Q} = Q \)</li>
+        <li>\( \frac{\delta \mathcal{H}}{\delta Q} = -\frac{\Phi}{f_0} \)</li>
+    </ul>
+    
+    <p>这个南部括号定义了 QG 理论的数学框架，并与二维涡度方程密切相关。</p>
 </body>
 </html>
