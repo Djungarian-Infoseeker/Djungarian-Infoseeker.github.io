@@ -607,6 +607,177 @@ d \mathbf{F}_p = - p \, d \mathbf{s}.
 </ul>
 
 </body>
+<body>
 
+<h2>1.4 状态方程</h2>
+
+<h3>1.4.1 理想气体</h3>
+
+<p>
+摩尔是指含有精确的**阿伏伽德罗常数 (\(N_A\))** 个基本单元（通常是原子或分子）的物质量。阿伏伽德罗常数的数值为：
+</p>
+
+<div class="formula">
+\[
+N_A = 6.02214076 \times 10^{23} \, \text{mol}^{-1}
+\]
+</div>
+
+<p>
+摩尔质量（或摩尔分子量）通常以克为单位进行表示。例如，一个分子氧（\(O_2\)）的摩尔质量接近 **32 克**。
+</p>
+
+<p>
+对于理想气体，状态方程可以表示为：
+</p>
+
+<div class="formula">
+\[
+pV = N k_B T = n R T
+\]
+</div>
+
+<p>
+其中：
+</p>
+<ul>
+    <li>\( p \)：压强</li>
+    <li>\( V \)：体积</li>
+    <li>\( N \)：分子数</li>
+    <li>\( k_B \)：玻尔兹曼常数，\(1.38 \times 10^{-23} \, \text{J K}^{-1}\)</li>
+    <li>\( T \)：温度</li>
+    <li>\( R \)：理想气体常数，\(287 \, \text{J kg}^{-1} \text{K}^{-1}\)</li>
+</ul>
+
+<p>
+该方程还可以写成：
+</p>
+
+<div class="formula">
+\[
+p = \rho R T
+\]
+</div>
+
+<p>
+这里的 \( \rho \) 是密度，\( R \) 是气体常数，对于**干空气**来说：
+</p>
+
+<div class="formula">
+\[
+R = 287 \, \text{J kg}^{-1} \text{K}^{-1}
+\]
+</div>
+
+<h3>表1.1: 理想气体的热力学参数</h3>
+<table>
+    <caption>理想气体的热力学参数</caption>
+    <tr>
+        <th>符号</th>
+        <th>描述</th>
+        <th>数值</th>
+    </tr>
+    <tr>
+        <td>\( k_B \)</td>
+        <td>玻尔兹曼常数</td>
+        <td>\( 1.38 \times 10^{-23} \, \text{J K}^{-1} \)</td>
+    </tr>
+    <tr>
+        <td>\( N_A \)</td>
+        <td>阿伏伽德罗常数</td>
+        <td>\( 6.022 \times 10^{23} \, \text{mol}^{-1} \)</td>
+    </tr>
+    <tr>
+        <td>\( R \)</td>
+        <td>比气体常数</td>
+        <td>\( 287 \, \text{J kg}^{-1} \text{K}^{-1} \)</td>
+    </tr>
+    <tr>
+        <td>\( C_p \)</td>
+        <td>定压热容</td>
+        <td>\( 1004 \, \text{J kg}^{-1} \text{K}^{-1} \)</td>
+    </tr>
+</table>
+
+<h3>1.4.2 海水的状态方程</h3>
+
+<p>
+海水的密度对温度、盐度和压力的变化反应较小，但这些变化在海洋学中却至关重要，因为它们驱动了大规模的洋流运动。海水的状态方程可近似表示为：
+</p>
+
+<div class="formula">
+\[
+\rho = \rho_0 \left[1 - \beta_T (T - T_0) + \beta_S (S - S_0) + \beta_P (P - P_0)\right]
+\]
+</div>
+
+<p>
+其中：
+</p>
+<ul>
+    <li>\( \beta_T \)：温度膨胀系数</li>
+    <li>\( \beta_S \)：盐度膨胀系数</li>
+    <li>\( \beta_P \)：压力膨胀系数</li>
+</ul>
+
+<h3>表1.2: 海水的热力学参数</h3>
+<table>
+    <caption>海水的热力学参数</caption>
+    <tr>
+        <th>符号</th>
+        <th>描述</th>
+        <th>数值</th>
+    </tr>
+    <tr>
+        <td>\( \rho_0 \)</td>
+        <td>参考密度</td>
+        <td>\( 1027 \, \text{kg m}^{-3} \)</td>
+    </tr>
+    <tr>
+        <td>\( T_0 \)</td>
+        <td>参考温度</td>
+        <td>\( 283 \, \text{K} \)</td>
+    </tr>
+    <tr>
+        <td>\( S_0 \)</td>
+        <td>参考盐度</td>
+        <td>\( 35 \, \text{ppt} \)</td>
+    </tr>
+    <tr>
+        <td>\( C_p \)</td>
+        <td>定压热容</td>
+        <td>\( 3986 \, \text{J kg}^{-1} \text{K}^{-1} \)</td>
+    </tr>
+</table>
+
+<h2>1.5 热力学</h2>
+
+<h3>1.5.1 热力学第一定律</h3>
+<p>
+热力学第一定律指出，物体的内部能量 \( I \) 的变化由热输入和对物体做的功引起：
+</p>
+
+<div class="formula">
+\[
+dI = dQ + dW
+\]
+</div>
+
+<h3>1.5.2 热力学基本关系</h3>
+<p>
+流体的热力学关系可表示为：
+</p>
+
+<div class="formula">
+\[
+dI = T d\eta - p d\alpha
+\]
+</div>
+
+<p>
+这个方程将温度、熵、压强和体积联系在一起，被称为<strong>热力学基本关系</strong>。
+</p>
+
+</body>
 </html>
 
