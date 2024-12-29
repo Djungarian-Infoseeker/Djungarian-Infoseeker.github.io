@@ -573,5 +573,179 @@
 这就是不可压缩流体的质量连续性方程，满足这个方程可以被视为不可压缩流体的定义特性。
 </p>
 
+<h2>1.3 动量方程</h2>
+<p>
+动量方程是一个偏微分方程，用于描述流体单元响应于内力和外力的速度或动量变化。在本书中，我们将单独处理表示压力和粘性力的项。
+</p>
+
+<h3>1.3.1 平流 (Advection)</h3>
+<p>
+设 \( x_i \) 是单位体积内的动量密度场（每单位体积的动量）。那么，通过积分可以得到流体的总动量：
+</p>
+<p>
+\[
+\frac{D}{Dt} \int_V \rho \mathbf{u} \, dV = \int_V \mathbf{F} \, dV
+\]
+</p>
+<p>
+其中，\( V \) 表示积分体积，\(\mathbf{F}\) 表示每单位体积的力。现在，使用(1.7b)将左侧的导数展开，我们得到：
+</p>
+<p>
+\[
+\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{u} = \frac{\mathbf{F}}{\rho}
+\]
+</p>
+<p>
+或者更简洁地写成：
+</p>
+<p>
+\[
+\frac{D \mathbf{u}}{D t} = \mathbf{F}
+\]
+</p>
+<p>
+使用(1.5)将材料导数展开，我们得到流体单元的加速度表达式。我们观察到，力的来源有两个主要方面：压力和粘性力，有时被称为接触力。
+</p>
+
+<h3>1.3.2 压力和粘性力 (Pressure and Viscous Forces)</h3>
+<p>
+流体边界上的压力力是由分子运动的集体作用产生的。压力力是一个简单的概念，通过压力在流体边界上的积分可以得到总的压力力：
+</p>
+<p>
+\[
+d \mathbf{F}_p = -p \, d\mathbf{S}
+\]
+</p>
+<p>
+总的压力力可以表示为：
+</p>
+<p>
+\[
+\mathbf{F}_p = \int_S -p \, d\mathbf{S}
+\]
+</p>
+<p>
+其中，\( p \) 是压力，\( d\mathbf{S} \) 是一个微小的表面积元。如果我们应用散度定理，该积分可以转化为体积分：
+</p>
+<p>
+\[
+\mathbf{F}_p = -\int_V \nabla p \, dV
+\]
+</p>
+<p>
+因此，每单位体积的压力梯度力为：
+</p>
+<p>
+\[
+-\nabla p
+\]
+</p>
+<p>
+粘性力在许多情况下显而易见，例如糖浆或熔岩的流动。单位体积的粘性力大约等于：
+</p>
+<p>
+\[
+\mu \nabla^2 \mathbf{u}
+\]
+</p>
+<p>
+其中，\( \mu \) 是粘性系数。结合压力和粘性力，动量方程变为：
+</p>
+<p>
+\[
+\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{u} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{F}_b
+\]
+</p>
+<p>
+其中，\( \nu = \mu / \rho \) 是动力粘性系数，\( \mathbf{F}_b \) 表示体积力（例如重力 \(\mathbf{g}\)）。
+</p>
+
+<h3>1.3.3 静力近似 (The Hydrostatic Approximation)</h3>
+<p>
+在忽略粘性力的情况下，动量方程在垂直方向（与重力平行方向）可以写成：
+</p>
+<p>
+\[
+\frac{Dw}{Dt} = -\frac{1}{\rho} \frac{\partial p}{\partial z} - g
+\]
+</p>
+<p>
+其中，\( w \) 是速度在垂直方向的分量，\( g = -g \mathbf{k} \) 是重力加速度。如果流体处于静止状态，重力项与压力项平衡，得到：
+</p>
+<p>
+\[
+\frac{\partial p}{\partial z} = -\rho g
+\]
+</p>
+<p>
+这个关系称为**静力平衡**（或静水压力平衡）。在这种情况下，某一点的压力由其上方流体的重量确定，假设顶部压力为零：
+</p>
+<p>
+\[
+p = \int_z^\infty \rho g \, dz
+\]
+</p>
+<p>
+静水压力平衡是一个很好的近似，尤其适用于大尺度的水平流动。对于大气和海洋，除了强风暴情况下，这种近似几乎总是成立。水平动量方程中的压力项在这种近似下能够提供足够的精度，以确定水平压力梯度。
+</p>
+<p>
+更多内容将在第3.2节中详细讨论。
+</p>
 
 
+<h3>表 1.1: 理想气体理论中使用的各种热力学参数</h3>
+<p>
+表格中列出了理想气体理论中使用的各种热力学参数，具体数值适用于干燥空气。
+</p>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <thead>
+    <tr>
+      <th>符号 (Symbol)</th>
+      <th>描述 (Description)</th>
+      <th>数值 (Value)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\( k_B \)</td>
+      <td>玻尔兹曼常数 (Boltzmann constant)</td>
+      <td>\( 1.38 \times 10^{-23} \, \mathrm{J \, K^{-1}} \)</td>
+    </tr>
+    <tr>
+      <td>\( N_A \)</td>
+      <td>阿伏伽德罗常数 (Avogadro constant)</td>
+      <td>\( 6.02214076 \times 10^{23} \, \mathrm{mol^{-1}} \)</td>
+    </tr>
+    <tr>
+      <td>\( R^* \)</td>
+      <td>通用气体常数 (Universal gas constant = \( k_B N_A \))</td>
+      <td>\( 8.31 \, \mathrm{J \, K^{-1} \, mol^{-1}} \)</td>
+    </tr>
+    <tr>
+      <td>\( \mu \)</td>
+      <td>干燥空气的摩尔质量 (Molar mass of dry air)</td>
+      <td>\( 29 \times 10^{-3} \, \mathrm{kg \, mol^{-1}} \)</td>
+    </tr>
+    <tr>
+      <td>\( R \)</td>
+      <td>比气体常数 (Specific gas constant = \( R^* / \mu \))</td>
+      <td>\( 287 \, \mathrm{J \, kg^{-1} \, K^{-1}} \)</td>
+    </tr>
+    <tr>
+      <td>\( c_v \)</td>
+      <td>定容热容 (Specific heat capacity at constant volume)</td>
+      <td>\( 717 \, \mathrm{J \, kg^{-1} \, K^{-1}} \)</td>
+    </tr>
+    <tr>
+      <td>\( c_p \)</td>
+      <td>定压热容 (Specific heat capacity at constant pressure)</td>
+      <td>\( 1004 \, \mathrm{J \, kg^{-1} \, K^{-1}} \)</td>
+    </tr>
+    <tr>
+      <td>\( c_s \)</td>
+      <td>声速 (Sound speed at \( T = 273 \, \mathrm{K} \))</td>
+      <td>\( 331 \, \mathrm{m \, s^{-1}} \)</td>
+    </tr>
+  </tbody>
+</table>
