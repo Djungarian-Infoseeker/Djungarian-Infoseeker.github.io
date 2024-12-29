@@ -206,5 +206,184 @@
 </ul>
 
 </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流体动力学时间导数</title>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'SimSun', serif;
+            line-height: 1.8;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        p {
+            text-indent: 2em;
+        }
+        .formula {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .note {
+            font-style: italic;
+            color: gray;
+        }
+        ul {
+            margin-left: 2em;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>1.1 流体的时间导数</h1>
+
+<h2>1.1.2 矢量场的物质导数</h2>
+
+<p>
+物质导数可以作用于一个<strong>矢量场 \( b \)</strong>，在这种情况下，有以下表达式：
+</p>
+
+<div class="formula">
+\[
+\frac{D b}{D t} = \frac{\partial b}{\partial t} + (\mathbf{v} \cdot \nabla) b.
+\]
+</div>
+
+<p>
+在<strong>笛卡尔坐标系</strong>中，这个方程可以写成：
+</p>
+
+<div class="formula">
+\[
+\frac{D b}{D t} = \frac{\partial b}{\partial t} + u \frac{\partial b}{\partial x} + v \frac{\partial b}{\partial y} + w \frac{\partial b}{\partial z}.
+\]
+</div>
+
+<p>
+对于矢量场 \( b \) 的特定分量 \( b^x \)，我们有：
+</p>
+
+<div class="formula">
+\[
+\frac{D b^x}{D t} = \frac{\partial b^x}{\partial t} + u \frac{\partial b^x}{\partial x} + v \frac{\partial b^x}{\partial y} + w \frac{\partial b^x}{\partial z}.
+\]
+</div>
+
+<p>
+对于 \( b^y \) 和 \( b^z \) 的分量，也有类似的表达式。在非笛卡尔坐标系中，矢量的对流导数不仅仅是其各个分量的对流导数之和，因为坐标矢量本身的位置变化会引起方向的改变。这一点在我们处理<strong>球坐标系</strong>时将变得重要。
+</p>
+
+<h2>1.1.3 体积的物质导数</h2>
+
+<p>
+一个给定的、不变质量的流体所占据的<strong>体积</strong>在流体运动的作用下会发生变形和对流，并且没有理由保持恒定。相反，由于其边界材料表面各个元素的移动，体积将发生变化，特别是当流体表面速度的法向分量不为零时，体积将发生改变。
+</p>
+
+<p>
+假设某一流体的体积为 \( V \)，那么：
+</p>
+
+<div class="formula">
+\[
+\frac{D}{D t} \int_V dV = \int_S \mathbf{v} \cdot d\mathbf{s}.
+\]
+</div>
+
+<p>
+这里的下标 \( V \) 表示积分是对一个有限体积 \( V \) 进行的，并且积分的上限是时间的函数，因为体积在变化。右侧的积分是在包围该体积的<strong>封闭表面 \( S \)</strong>上进行的。
+</p>
+
+<p>
+使用<strong>散度定理</strong>，上式可以写成：
+</p>
+
+<div class="formula">
+\[
+\frac{D}{D t} \int_V dV = \int_V \nabla \cdot \mathbf{v} \, dV.
+\]
+</div>
+
+<p>
+一个无限小流体元的体积变化率可以通过将上述表达式取极限，当体积趋于零时，得到：
+</p>
+
+<div class="formula">
+\[
+\lim_{\Delta V \to 0} \frac{1}{\Delta V} \frac{D (\Delta V)}{D t} = \nabla \cdot \mathbf{v}.
+\]
+</div>
+
+<h2>1.1.4 物质导数的性质</h2>
+
+<p>
+对于一个标量场 \(\varphi\) 及其物质导数，我们有：
+</p>
+
+<div class="formula">
+\[
+\frac{D (\varphi dV)}{D t} = \varphi \frac{D (dV)}{D t} + dV \frac{D \varphi}{D t}.
+\]
+</div>
+
+<p>
+同样，对于有限体积的情况，可以写成：
+</p>
+
+<div class="formula">
+\[
+\frac{D (\varphi V)}{D t} = V \frac{D \varphi}{D t} + \varphi \frac{D V}{D t}.
+\]
+</div>
+
+<p>
+对于流体属性（如质量密度 \(\rho\)），我们有：
+</p>
+
+<div class="formula">
+\[
+\frac{D (\rho V)}{D t} = \rho \frac{D V}{D t} + V \frac{D \rho}{D t}.
+\]
+</div>
+
+<p>
+将以上公式代入，我们可以得到：
+</p>
+
+<div class="formula">
+\[
+\frac{D (\rho V)}{D t} = V \frac{D \rho}{D t} + \rho V (\nabla \cdot \mathbf{v}).
+\]
+</div>
+
+<p>
+通过这些表达式，我们看到物质导数在处理<strong>体积、密度和流体属性</strong>时的重要性。
+</p>
+
+<h2>1.2 质量连续性方程</h2>
+
+<p>
+在<strong>经典力学</strong>中，质量是绝对守恒的。在固体力学中，我们通常不需要显式的质量守恒方程。然而，在流体力学中，流体可以从特定位置流入或流出，流体密度也可能发生变化，因此我们需要一个方程来描述这种变化。
+</p>
+
+<h3>1.2.1 欧拉推导</h3>
+
+<p>
+我们首先从<strong>欧拉视角</strong>推导质量守恒方程。在这个视角下，我们的参考框架固定在空间中，流体在其中流动。考虑一个无限小的、矩形立方体的控制体积 \(\Delta V = \Delta x \Delta y \Delta z\)，它固定在空间中。
+</p>
+
+<p>
+流体可以通过其表面从体积中流入或流出，包括通过其在 \( y-z \) 平面上的各个面。通过对这些流动进行积分，我们可以得到质量连续性方程的初步形式。
+</p>
+
+</body>
+
 </html>
 
