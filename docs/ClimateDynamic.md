@@ -279,505 +279,135 @@
 <p>
 对于 \( b^y \) 和 \( b^z \) 的分量，也有类似的表达式。在非笛卡尔坐标系中，矢量的对流导数不仅仅是其各个分量的对流导数之和，因为坐标矢量本身的位置变化会引起方向的改变。这一点在我们处理<strong>球坐标系</strong>时将变得重要。
 </p>
-
-<h3>1.1.3 体积的物质导数</h3>
-
+<h3>1.1.3 体积的物质导数 (Material Derivative of a Volume)</h3>
 <p>
-一个给定的、不变质量的流体所占据的<strong>体积</strong>在流体运动的作用下会发生变形和对流，并且没有理由保持恒定。相反，由于其边界材料表面各个元素的移动，体积将发生变化，特别是当流体表面速度的法向分量不为零时，体积将发生改变。
+当一个具有不变质量的流体单元的体积受到流体运动的变形和平流影响时，没有理由认为其体积应保持不变。相反，体积将随着其边界物质表面上每个元素的移动而发生变化，特别是当流体表面法向速度分量不为零时，体积将发生变化。也就是说，如果某些流体的体积为 \( \int dV \)，那么：
 </p>
 
 <p>
-假设某一流体的体积为 \( V \)，那么：
-</p>
-
-<div class="formula">
 \[
-\frac{D}{D t} \int_V dV = \int_S \mathbf{v} \cdot d\mathbf{s}.
+\frac{D}{Dt} \int_V dV = \int_S \mathbf{v} \cdot d\mathbf{s}, \quad (1.8)
 \]
-</div>
-
-<p>
-这里的下标 \( V \) 表示积分是对一个有限体积 \( V \) 进行的，并且积分的上限是时间的函数，因为体积在变化。右侧的积分是在包围该体积的<strong>封闭表面 \( S \)</strong>上进行的。
 </p>
 
 <p>
-使用<strong>散度定理</strong>，上式可以写成：
+其中，下标 \( V \) 表示积分是针对某个有限体积 \( V \) 进行的，积分的限值是时间的函数，因为体积在变化。右侧的积分是针对包围该体积的封闭表面 \( S \) 进行的。虽然这个表达式在直觉上很明显（对某些人来说），但它可以通过莱布尼茨公式（Leibniz's Formula）更正式地推导出来，莱布尼茨公式用于积分限随时间变化的情况。利用散度定理，右侧的积分可转换为：
 </p>
 
-<div class="formula">
+<p>
 \[
-\frac{D}{D t} \int_V dV = \int_V \nabla \cdot \mathbf{v} \, dV.
+\frac{D}{Dt} \int_V dV = \int_V \nabla \cdot \mathbf{v} \, dV. \quad (1.9)
 \]
-</div>
-
-<p>
-一个无限小流体元的体积变化率可以通过将上述表达式取极限，当体积趋于零时，得到：
 </p>
 
-<div class="formula">
+<p>
+一个无限小流体单元的体积变化率是通过将上述表达式取体积趋于零的极限而得到的，表示为：
+</p>
+
+<p>
 \[
-\lim_{\Delta V \to 0} \frac{1}{\Delta V} \frac{D (\Delta V)}{D t} = \nabla \cdot \mathbf{v}.
+\lim_{\Delta V \to 0} \frac{1}{\Delta V} \frac{D (\Delta V)}{Dt} = \nabla \cdot \mathbf{v}. \quad (1.10)
 \]
-</div>
-
-<h3>1.1.4 物质导数的性质</h3>
-
-<p>
-对于一个标量场 \(\varphi\) 及其物质导数，我们有：
 </p>
 
-<div class="formula">
+<hr>
+
+<h3>物质导数的进一步推导</h3>
+<p>
+但是，\( \Delta V \) 仅表示流体单元的一个定义常量。流体单元的第二项在右侧表示为：
+</p>
+
+<p>
 \[
-\frac{D (\varphi dV)}{D t} = \varphi \frac{D (dV)}{D t} + dV \frac{D \varphi}{D t}.
+\frac{D(\phi \rho \Delta V)}{Dt} = \rho \Delta V \frac{D\phi}{Dt} + \phi \Delta V \frac{D\rho}{Dt}. \quad (1.11)
 \]
-</div>
-
-<p>
-同样，对于有限体积的情况，可以写成：
 </p>
 
-<div class="formula">
+<p>
+使用 (1.11) 式，这个表达式变为：
+</p>
+
+<p>
 \[
-\frac{D (\varphi V)}{D t} = V \frac{D \varphi}{D t} + \varphi \frac{D V}{D t}.
+\frac{D(\Delta V)}{Dt} = \Delta V (\nabla \cdot \mathbf{v}) + \Delta V \frac{D \phi}{Dt}. \quad (1.12)
 \]
-</div>
-
-<p>
-对于流体属性（如质量密度 \(\rho\)），我们有：
 </p>
 
-<div class="formula">
+<p>
+在有限体积的情况下，类似的结果可以写为：
+</p>
+
+<p>
 \[
-\frac{D (\rho V)}{D t} = \rho \frac{D V}{D t} + V \frac{D \rho}{D t}.
+\frac{D(\Delta V)}{Dt} = \Delta V (\nabla \cdot \mathbf{v}). \quad (1.13)
 \]
-</div>
-
-<p>
-将以上公式代入，我们可以得到：
 </p>
 
-<div class="formula">
+<p>
+在极限下，这种表达可简写为：
+</p>
+
+<p>
 \[
-\frac{D (\rho V)}{D t} = V \frac{D \rho}{D t} + \rho V (\nabla \cdot \mathbf{v}).
+\frac{D V}{Dt} = \Delta V \nabla \cdot \mathbf{v}. \quad (1.14)
 \]
-</div>
-
-<p>
-通过这些表达式，我们看到物质导数在处理<strong>体积、密度和流体属性</strong>时的重要性。
 </p>
 
-<h2>1.2 质量连续性方程</h2>
+<hr>
 
+<h3>物质导数与欧拉导数 (Material and Eulerian Derivatives)</h3>
 <p>
-在<strong>经典力学</strong>中，质量是绝对守恒的。在固体力学中，我们通常不需要显式的质量守恒方程。然而，在流体力学中，流体可以从特定位置流入或流出，流体密度也可能发生变化，因此我们需要一个方程来描述这种变化。
-</p>
-
-<h3>1.2.1 欧拉推导</h3>
-
-<p>
-我们首先从<strong>欧拉视角</strong>推导质量守恒方程。在这个视角下，我们的参考框架固定在空间中，流体在其中流动。考虑一个无限小的、矩形立方体的控制体积 \(\Delta V = \Delta x \Delta y \Delta z\)，它固定在空间中。
+标量 \( \phi \) 和矢量场 \( \mathbf{b} \) 的物质导数分别为：
 </p>
 
 <p>
-流体可以通过其表面从体积中流入或流出，包括通过其在 \( y-z \) 平面上的各个面。通过对这些流动进行积分，我们可以得到质量连续性方程的初步形式。
-</p>
-
-</body>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>质量连续性方程与动量方程</title>
-    <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        body {
-            font-family: 'SimSun', serif;
-            line-height: 1.8;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            text-align: center;
-            margin-top: 30px;
-        }
-        p {
-            text-indent: 2em;
-        }
-        .formula {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .note {
-            font-style: italic;
-            color: gray;
-        }
-        ul {
-            margin-left: 2em;
-        }
-        li {
-            margin-bottom: 0.5em;
-        }
-    </style>
-</head>
-<body>
-
-<h1>1.2 质量连续性方程</h1>
-
-<h2>1.2.2 通过物质导数推导质量连续性</h2>
-
-<p>
-我们现在从<strong>物质视角</strong>推导质量连续性方程 (1.23)。这是最基本的方法，因为质量守恒原理简单地表明：
-</p>
-
-<div class="formula">
 \[
-\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0.
+\frac{D \phi}{Dt} = \frac{\partial \phi}{\partial t} + \mathbf{v} \cdot \nabla \phi, \quad \frac{D \mathbf{b}}{Dt} = \frac{\partial \mathbf{b}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{b}. \quad (D.1)
 \]
-</div>
-
-<p>
-这被称为<strong>质量连续性方程</strong>，它反映了质量场的连续性特征。没有质量会凭空产生或消失。这是因为质量守恒是每个分子运动（甚至是宏观分子运动）的基本特性。
 </p>
 
 <p>
-对于一个无限小的控制体积，质量的净积累必须伴随来自控制体积表面的流动，考虑到：
+各种积分形式的物质导数为：
 </p>
 
-<div class="formula">
+<p>
 \[
-\Delta x \Delta y \Delta z \left[\frac{\partial (\rho u)}{\partial x} + \frac{\partial (\rho v)}{\partial y} + \frac{\partial (\rho w)}{\partial z}\right] = 0.
+\frac{D}{Dt} \int_V \phi \, dV = \int_V \left(\frac{D \phi}{Dt} + \phi \nabla \cdot \mathbf{v}\right) \, dV = \int_V \left(\frac{\partial \phi}{\partial t} + \nabla \cdot (\phi \mathbf{v})\right) \, dV, \quad (D.2)
 \]
-</div>
-
-<p>
-根据上述方程，我们可以得到：
 </p>
 
-<div class="formula">
+<p>
 \[
-\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0.
+\frac{D}{Dt} \int_V dV = \int_V \nabla \cdot \mathbf{v} \, dV, \quad (D.3)
 \]
-</div>
-
-<h2>1.2.3 不可压缩流体</h2>
-
-<p>
-流体的一个几乎普遍的性质是其密度几乎是常数；也就是说，它们基本上是<strong>不可压缩的</strong>。如果我们将密度表示为：
 </p>
 
-<div class="formula">
+<p>
 \[
-\rho(x, y, z, t) = \rho_0 + \delta \rho (x, y, z, t),
+\frac{D}{Dt} \int_V \rho \phi \, dV = \int_V \rho \frac{D \phi}{Dt} \, dV. \quad (D.4)
 \]
-</div>
-
-<p>
-其中 \(\rho_0\) 是常数。如果一个流体是真正不可压缩的，那么 \(\delta \rho = 0\)。但实际上，没有完全不可压缩的流体。因此我们放宽这一假设，仅要求 \(|\delta \rho| \ll \rho_0\)。
 </p>
 
 <p>
-当这一条件满足时，质量连续性方程 (1.27a) 变为：
+这些公式在 \( \phi \) 是一个矢量的情况下同样成立。积分的欧拉导数为：
 </p>
 
-<div class="formula">
+<p>
 \[
-\nabla \cdot \mathbf{v} = 0.
+\frac{d}{dt} \int_V \phi \, dV = \int_V \frac{\partial \phi}{\partial t} \, dV, \quad (D.5)
 \]
-</div>
-
-<p>
-这是不可压缩流体的质量连续性方程。它表明不可压缩流体的密度不会随着时间变化。
 </p>
 
-<h1>1.3 动量方程</h1>
-
-<h2>1.3.1 平流项</h2>
-
 <p>
-让 \( m = \rho \mathbf{v} \) 代表<strong>动量密度场</strong>（单位体积内的动量）。因此，总动量由以下积分给出：
+因此：
 </p>
 
-<div class="formula">
+<p>
 \[
-\frac{D}{D t} \int_V \rho \mathbf{v} \, dV = \int_V \mathbf{F} \, dV.
+\frac{d}{dt} \int_V dV = 0, \quad \frac{d}{dt} \int_V \rho \phi \, dV = \int_V \frac{\partial (\rho \phi)}{\partial t} \, dV. \quad (D.6)
 \]
-</div>
-
-<p>
-这里，\( \mathbf{F} \) 是单位体积内的力。通过转换方程的左侧，我们得到：
 </p>
 
-<div class="formula">
-\[
-\int_V \left(\rho \frac{D \mathbf{v}}{D t} - \mathbf{F}\right) \, dV = 0.
-\]
-</div>
 
-<p>
-因为体积是任意的，积分项本身必须为零。因此有：
-</p>
-
-<div class="formula">
-\[
-\rho \frac{D \mathbf{v}}{D t} = \mathbf{F}.
-\]
-</div>
-
-<h2>1.3.2 压力与粘性力</h2>
-
-<p>
-在流体的边界内，压力是由分子运动的集体作用引起的。压力力可以通过以下方式表示：
-</p>
-
-<div class="formula">
-\[
-d \mathbf{F}_p = - p \, d \mathbf{s}.
-\]
-</div>
-
-<p>
-对整个表面进行积分，得到：
-</p>
-
-<div class="formula">
-\[
-\mathbf{F}_p = \int_S - p \, d \mathbf{s}.
-\]
-</div>
-
-<p>
-应用散度定理，压强力可以写为：
-</p>
-
-<div class="formula">
-\[
-\mathbf{F}_p = - \int_V \nabla p \, dV.
-\]
-</div>
-
-<p>
-因此，单位体积的压力梯度力为：
-</p>
-
-<div class="formula">
-\[
-- \nabla p.
-\]
-</div>
-
-<p>
-对于粘性力，粘性力的单位体积表示为：
-</p>
-
-<div class="formula">
-\[
-\mu \nabla^2 \mathbf{v}.
-\]
-</div>
-
-<h2>1.3.3 静力近似</h2>
-
-<p>
-在忽略粘性力的情况下，动量方程的垂直分量可以写为：
-</p>
-
-<div class="formula">
-\[
-\frac{D w}{D t} = -\frac{1}{\rho} \frac{\partial p}{\partial z} - g.
-\]
-</div>
-
-<p>
-如果流体处于静止状态，重力项与压强项平衡，我们得到：
-</p>
-
-<div class="formula">
-\[
-\frac{\partial p}{\partial z} = - \rho g.
-\]
-</div>
-
-<p>
-这个关系被称为<strong>静力平衡</strong>或<strong>静水假设</strong>。它在大气和海洋的大尺度流动中非常有效，尤其是当垂直加速度远小于重力时。
-</p>
-
-<h2>附注</h2>
-<ul>
-    <li><strong>Navier-Stokes方程</strong>：在包含粘性力的情况下，动量方程被称为纳维-斯托克斯方程。</li>
-    <li><strong>欧拉方程</strong>：当忽略粘性力时，动量方程被称为欧拉方程。</li>
-</ul>
-
-</body>
-<body>
-
-<h2>1.4 状态方程</h2>
-
-<h3>1.4.1 理想气体</h3>
-
-<p>
-摩尔是指含有精确的**阿伏伽德罗常数 (\(N_A\))** 个基本单元（通常是原子或分子）的物质量。阿伏伽德罗常数的数值为：
-</p>
-
-<div class="formula">
-\[
-N_A = 6.02214076 \times 10^{23} \, \text{mol}^{-1}
-\]
-</div>
-
-<p>
-摩尔质量（或摩尔分子量）通常以克为单位进行表示。例如，一个分子氧（\(O_2\)）的摩尔质量接近 **32 克**。
-</p>
-
-<p>
-对于理想气体，状态方程可以表示为：
-</p>
-
-<div class="formula">
-\[
-pV = N k_B T = n R T
-\]
-</div>
-
-<p>
-其中：
-</p>
-<ul>
-    <li>\( p \)：压强</li>
-    <li>\( V \)：体积</li>
-    <li>\( N \)：分子数</li>
-    <li>\( k_B \)：玻尔兹曼常数，\(1.38 \times 10^{-23} \, \text{J K}^{-1}\)</li>
-    <li>\( T \)：温度</li>
-    <li>\( R \)：理想气体常数，\(287 \, \text{J kg}^{-1} \text{K}^{-1}\)</li>
-</ul>
-
-<p>
-该方程还可以写成：
-</p>
-
-<div class="formula">
-\[
-p = \rho R T
-\]
-</div>
-
-<p>
-这里的 \( \rho \) 是密度，\( R \) 是气体常数，对于**干空气**来说：
-</p>
-
-<div class="formula">
-\[
-R = 287 \, \text{J kg}^{-1} \text{K}^{-1}
-\]
-</div>
-
-<h3>表1.1: 理想气体的热力学参数</h3>
-<table>
-    <caption>理想气体的热力学参数</caption>
-    <tr>
-        <th>符号</th>
-        <th>描述</th>
-        <th>数值</th>
-    </tr>
-    <tr>
-        <td>\( k_B \)</td>
-        <td>玻尔兹曼常数</td>
-        <td>\( 1.38 \times 10^{-23} \, \text{J K}^{-1} \)</td>
-    </tr>
-    <tr>
-        <td>\( N_A \)</td>
-        <td>阿伏伽德罗常数</td>
-        <td>\( 6.022 \times 10^{23} \, \text{mol}^{-1} \)</td>
-    </tr>
-    <tr>
-        <td>\( R \)</td>
-        <td>比气体常数</td>
-        <td>\( 287 \, \text{J kg}^{-1} \text{K}^{-1} \)</td>
-    </tr>
-    <tr>
-        <td>\( C_p \)</td>
-        <td>定压热容</td>
-        <td>\( 1004 \, \text{J kg}^{-1} \text{K}^{-1} \)</td>
-    </tr>
-</table>
-
-<h3>1.4.2 海水的状态方程</h3>
-
-<p>
-海水的密度对温度、盐度和压力的变化反应较小，但这些变化在海洋学中却至关重要，因为它们驱动了大规模的洋流运动。海水的状态方程可近似表示为：
-</p>
-
-<div class="formula">
-\[
-\rho = \rho_0 \left[1 - \beta_T (T - T_0) + \beta_S (S - S_0) + \beta_P (P - P_0)\right]
-\]
-</div>
-
-<p>
-其中：
-</p>
-<ul>
-    <li>\( \beta_T \)：温度膨胀系数</li>
-    <li>\( \beta_S \)：盐度膨胀系数</li>
-    <li>\( \beta_P \)：压力膨胀系数</li>
-</ul>
-
-<h3>表1.2: 海水的热力学参数</h3>
-<table>
-    <caption>海水的热力学参数</caption>
-    <tr>
-        <th>符号</th>
-        <th>描述</th>
-        <th>数值</th>
-    </tr>
-    <tr>
-        <td>\( \rho_0 \)</td>
-        <td>参考密度</td>
-        <td>\( 1027 \, \text{kg m}^{-3} \)</td>
-    </tr>
-    <tr>
-        <td>\( T_0 \)</td>
-        <td>参考温度</td>
-        <td>\( 283 \, \text{K} \)</td>
-    </tr>
-    <tr>
-        <td>\( S_0 \)</td>
-        <td>参考盐度</td>
-        <td>\( 35 \, \text{ppt} \)</td>
-    </tr>
-    <tr>
-        <td>\( C_p \)</td>
-        <td>定压热容</td>
-        <td>\( 3986 \, \text{J kg}^{-1} \text{K}^{-1} \)</td>
-    </tr>
-</table>
-
-<h2>1.5 热力学</h2>
-
-<h3>1.5.1 热力学第一定律</h3>
-<p>
-热力学第一定律指出，物体的内部能量 \( I \) 的变化由热输入和对物体做的功引起：
-</p>
-
-<div class="formula">
-\[
-dI = dQ + dW
-\]
-</div>
-
-<h3>1.5.2 热力学基本关系</h3>
-<p>
-流体的热力学关系可表示为：
-</p>
-
-<div class="formula">
-\[
-dI = T d\eta - p d\alpha
-\]
-</div>
-
-<p>
-这个方程将温度、熵、压强和体积联系在一起，被称为<strong>热力学基本关系</strong>。
-</p>
-
-</body>
 </html>
 
