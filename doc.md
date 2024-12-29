@@ -28,6 +28,7 @@ header_image: '../../atmos.jpg'
 - [赫罗图/ Hertzsprung–Russell diagram](https://image.xmcdn.com/group38/M07/A1/B7/wKgJolpoLzGj0qldAACjyO_JG9A910.jpg?op_type=4&device_type=ios&upload_type=attachment&name=mobile_large) 
 - [瑞利散射 维基百科/ Rayleigh scattering wikipedia](https://zh.wikipedia.org/wiki/%E7%91%9E%E5%88%A9%E6%95%A3%E5%B0%84) 
 - [大气辐射与物理的补课 / Atmosphere Radiation & Physics addtion](https://infoseeker.cn/docs/radiation1227) 
+
 ## 经典文章/Classical Articles
 - [主序星周围的宜居带 中文翻译/ Habitable Zones Around Main Sequence Stars by James F. Kasting, Daniel P. Whitmire, Ray T. Reynolds](https://infoseeker.cn/docs/Kasting1993/Kasting1993)<span style="color:green;">（更新日期2024/12/21，已完结） </span> 
 - [可居住带围绕主序星：新估算 中文翻译/ HABITABLE ZONES AROUND MAIN-SEQUENCE STARS: NEW ESTIMATES Ravi Kumar Kopparapu, Ramses Ramirez, James F. Kasting, Vincent Eymet, Tyler D. Robinson, Suvrath Mahadevan, Ryan C. Terrien, Shawn Domagal-Goldman, Victoria Meadows, and Rohit Deshpande](https://infoseeker.cn/docs/Kopparapu2013/Kopparapu2013)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
@@ -50,6 +51,7 @@ header_image: '../../atmos.jpg'
  - [气候系统的复杂动力学 中文翻译/ THE COMPLEX DYANMICS OF THE CLIMATE SYSTEM: CONSTRAINTS ON OUR KNOWLEDGE, POLICY IMPLICATIONS AND THE NECESSITY OF SYSTEMS THINKING Carolyn W. Snyder, Michael D. Mastrandrea, and Stephen H.Schneider](https://infoseeker.cn/docs/Snyder2011/Snyder2011)<span style="color:green;">（更新日期2024/12/12，已完结） </span>
 - [硅酸盐风化在地球气候与碳循环中的反馈与作用 中文翻译/ Silicate weathering as a feedback and forcing in Earth's climate and carbon cycle Donald E. Penman,, Jeremy K. Caves Rugensteinc, Daniel E. Ibarrad, Matthew J. Winnick](https://infoseeker.cn/docs/Penman2020/Penman2020)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
 - [气候科学的数学和物理思想 中文翻译/  Mathematical andphysical ideas for climate science Valerio Lucarini1,2,3, Richard Blender1, Corentin Herbert4, Francesco Ragone1,5, Salvatore Pascale1,and JeroenWouters1,6](https://infoseeker.cn/docs/Lucarini2014/Lucarini2014)<span style="color:green;">（更新日期2024/12/27，已完结） </span> 
+
 ## 科学评论/Science Comment
 - [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
 
