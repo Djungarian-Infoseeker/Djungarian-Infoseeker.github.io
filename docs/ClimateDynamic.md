@@ -310,7 +310,6 @@
 \]
 </p>
 
-<hr>
 
 <h3>物质导数的进一步推导</h3>
 <p>
@@ -353,7 +352,6 @@
 \]
 </p>
 
-<hr>
 
 <h3>物质导数与欧拉导数 (Material and Eulerian Derivatives)</h3>
 <p>
@@ -407,7 +405,173 @@
 \frac{d}{dt} \int_V dV = 0, \quad \frac{d}{dt} \int_V \rho \phi \, dV = \int_V \frac{\partial (\rho \phi)}{\partial t} \, dV. \quad (D.6)
 \]
 </p>
+<h2>1.2 质量连续性方程</h2>
+
+<p>
+在经典力学中，质量是绝对守恒的，而在固体力学中，我们通常不需要显式的质量守恒方程。然而，在流体力学中，流体可能会流入或流出某个特定位置，并且流体的密度可能会发生变化，因此我们需要一个方程来描述这种变化。
+</p>
+
+<h3>1.2.1 欧拉推导</h3>
+
+<p>
+我们首先从欧拉视角推导质量守恒方程，也就是说，我们的参考系固定在空间中，流体通过这个参考系流动。考虑一个无限小的、固定在空间中的长方体控制体积，体积为：
+</p>
+
+<p>
+\[
+\Delta V = \Delta x \Delta y \Delta z
+\]
+</p>
+
+<p>
+如图1.1所示。流体通过其表面流入或流出体积，包括通过在 \(y-z\) 平面上的面，面积为：
+</p>
+
+<p>
+\[
+\Delta A = \Delta y \Delta z
+\]
+</p>
+
+<p>
+坐标在 \(x\) 和 \(x + \Delta x\) 之间。由于流体在 \(x\) 方向的运动，控制体积内的流体积累量是：
+</p>
+
+<p>
+\[
+\Delta y \Delta z \left[\rho u(x,y,z) - \rho u(x+\Delta x,y,z)\right] = -\frac{\partial (\rho u)}{\partial x} \Delta x \Delta y \Delta z
+\]
+</p>
+
+<p>
+显然，还必须加上在 \(y\) 和 \(z\) 方向的运动效应，即：
+</p>
+
+<p>
+\[
+-\left[\frac{\partial (\rho v)}{\partial y} + \frac{\partial (\rho w)}{\partial z}\right] \Delta x \Delta y \Delta z
+\]
+</p>
+
+<p>
+这种流体的净积累必须伴随着控制体积内流体质量的相应增加。这表示为：
+</p>
+
+<p>
+\[
+\frac{\partial}{\partial t} (\text{密度} \times \text{体积}) = \Delta x \Delta y \Delta z \frac{\partial \rho}{\partial t}
+\]
+</p>
+
+<p>
+由于体积是常数，因此，由质量守恒，方程 (1.19) 和 (1.21) 给出：
+</p>
+
+<p>
+\[
+\Delta x \Delta y \Delta z \left[\frac{\partial \rho}{\partial t} + \frac{\partial (\rho u)}{\partial x} + \frac{\partial (\rho v)}{\partial y} + \frac{\partial (\rho w)}{\partial z}\right] = 0
+\]
+</p>
+
+<p>
+方括号中的量必须为零，因此我们得到：
+</p>
+
+<p>
+\[
+\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0
+\]
+</p>
+
+<p>
+这被称为<strong>质量连续性方程</strong>，因为它认识到流体中质量场的连续性质。在方程 (1.23) 中没有扩散项，也没有像 \(\kappa \nabla^2 \rho\) 这样的项。这是因为质量是由分子宏观运动传输的；即使这种运动看起来像扩散，任何宏观的分子运动本质上构成了一个速度场。
+</p>
+
+<p>
+方程 (1.23) 及其推导与笛卡尔几何无关，更一般的向量推导可以使用任意控制体积完成，这留给读者作为练习。
+</p>
+
+<h3>1.2.2 使用物质导数的质量连续性</h3>
+
+<p>
+我们现在从物质视角推导质量连续性方程 (1.23)。这是所有质量守恒方法中最基础的一个，因为质量守恒的原理简单地指出，给定流体元素的质量是守恒的。
+</p>
+
+<p>
+考虑一个密度为 \(\rho\)、体积为 \(\Delta V\) 的小质量流体单元。则质量守恒可以表示为：
+</p>
+
+<p>
+\[
+\frac{D}{Dt} (\rho \Delta V) = 0
+\]
+</p>
+
+<p>
+密度和体积可能会随时间变化，因此：
+</p>
+
+<p>
+\[
+\Delta V \frac{D \rho}{Dt} + \frac{D (\Delta V)}{Dt} = \Delta V \left(\frac{D \rho}{Dt} + \rho \nabla \cdot \mathbf{v}\right) = 0
+\]
+</p>
+
+<p>
+由于体积元不为零，括号内的项必须消失，因此得到：
+</p>
+
+<p>
+\[
+\frac{D \rho}{Dt} + \rho \nabla \cdot \mathbf{v} = 0
+\]
+</p>
+
+<p>
+展开第一项，这变得与方程 (1.23) 完全相同。总结起来，代表质量守恒的等效偏微分方程为：
+</p>
+
+<p>
+\[
+\frac{D \rho}{Dt} + \rho \nabla \cdot \mathbf{v} = 0, \quad \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0
+\]
+</p>
+
+<h3>1.2.3 不可压缩流体</h3>
+
+<p>
+液体的一个几乎普遍的特性是它们的密度几乎是常数，即，它们本质上是不可压缩的。如果我们将密度写成：
+</p>
+
+<p>
+\[
+\rho(x,y,z,t) = \rho_0 + \delta \rho(x,y,z,t)
+\]
+</p>
+
+<p>
+其中 \(\rho_0\) 是常数，则真正不可压缩的流体有 \(\delta \rho = 0\)。在严格意义上没有流体是不可压缩的，因此我们稍微放宽这个含义，只需满足 \(|\delta \rho| \ll \rho_0\)。当满足这一条件时，质量连续性方程 (1.27a) 变为：
+</p>
+
+<p>
+\[
+\frac{D \delta \rho}{Dt} + (\rho_0 + \delta \rho) \nabla \cdot \mathbf{v} = 0
+\]
+</p>
+
+<p>
+如果流体是不可压缩的，则涉及 \(\delta \rho\) 的项远小于涉及 \(\rho_0\) 的项，因此可以忽略，得到：
+</p>
+
+<p>
+\[
+\nabla \cdot \mathbf{v} = 0
+\]
+</p>
+
+<p>
+这就是不可压缩流体的质量连续性方程，满足这个方程可以被视为不可压缩流体的定义特性。
+</p>
 
 
-</html>
 
