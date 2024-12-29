@@ -577,88 +577,93 @@
 <p>
 动量方程是一个偏微分方程，用于描述流体单元响应于内力和外力的速度或动量变化。在本书中，我们将单独处理表示压力和粘性力的项。
 </p>
-
 <h3>1.3.1 平流 (Advection)</h3>
 <p>
-设 \( x_i \) 是单位体积内的动量密度场（每单位体积的动量）。那么，通过积分可以得到流体的总动量：
-</p>
-<p>
-\[
-\frac{D}{Dt} \int_V \rho \mathbf{u} \, dV = \int_V \mathbf{F} \, dV
-\]
-</p>
-<p>
-其中，\( V \) 表示积分体积，\(\mathbf{F}\) 表示每单位体积的力。现在，使用(1.7b)将左侧的导数展开，我们得到：
-</p>
-<p>
-\[
-\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{u} = \frac{\mathbf{F}}{\rho}
-\]
-</p>
-<p>
-或者更简洁地写成：
-</p>
-<p>
-\[
-\frac{D \mathbf{u}}{D t} = \mathbf{F}
-\]
-</p>
-<p>
-使用(1.5)将材料导数展开，我们得到流体单元的加速度表达式。我们观察到，力的来源有两个主要方面：压力和粘性力，有时被称为接触力。
+设 \( m(x, y, z, t) \) 表示流体的动量密度场（每单位体积的动量）。因此，\( m = \rho v \)，一个体积为 \( V \) 的流体的总动量由体积分 
+\( \int_V m \, dV \) 给出。现在，对于一个流体，某个可识别流体质量的动量变化率由物质导数给出，根据牛顿第二定律，这等于作用在其上的力。因此：
 </p>
 
-<h3>1.3.2 压力和粘性力 (Pressure and Viscous Forces)</h3>
-<p>
-流体边界上的压力力是由分子运动的集体作用产生的。压力力是一个简单的概念，通过压力在流体边界上的积分可以得到总的压力力：
-</p>
 <p>
 \[
-d \mathbf{F}_p = -p \, d\mathbf{S}
+\frac{D}{Dt} \int_V \rho v \, dV = \int_V F \, dV, \quad (1.31)
 \]
 </p>
+
 <p>
-总的压力力可以表示为：
+其中 \( F \) 是单位体积上的力。现在，使用方程 (1.17b)（将 \( \varphi \) 替换为 \( v \)），将(1.31)左侧转换，我们得到：
 </p>
+
 <p>
 \[
-\mathbf{F}_p = \int_S -p \, d\mathbf{S}
+\int_V \left(\rho \frac{D v}{Dt} - F\right) dV = 0. \quad (1.32)
 \]
 </p>
+
 <p>
-其中，\( p \) 是压力，\( d\mathbf{S} \) 是一个微小的表面积元。如果我们应用散度定理，该积分可以转化为体积分：
+由于体积是任意的，积分项本身必须为零，因此我们得到：
 </p>
+
 <p>
 \[
-\mathbf{F}_p = -\int_V \nabla p \, dV
+\rho \frac{D v}{Dt} = F \quad \text{或} \quad \frac{\partial v}{\partial t} + (v \cdot \nabla)v = \frac{F}{\rho}, \quad (1.33a,b)
 \]
 </p>
+
 <p>
-因此，每单位体积的压力梯度力为：
+使用方程 (1.5) 展开物质导数，我们得到了一个关于流体在已知力作用下如何加速的表达式。除了外部力（如重力）外，由流体微团之间直接接触产生的应力还会引起压力和黏性力，这些力有时被称为 <strong>接触力 (contact forces)</strong>。
 </p>
+<h3>1.3.2 压力与粘性力</h3>
+
+<h4><i>压力</i></h4>
+<p>
+在流体内部或边界处，压力是由分子运动的集体作用在单位面积上产生的法向力。因此：
+</p>
+
 <p>
 \[
--\nabla p
+d\vec{F_p} = -p \, dS, \quad (1.34)
 \]
 </p>
+
 <p>
-粘性力在许多情况下显而易见，例如糖浆或熔岩的流动。单位体积的粘性力大约等于：
+其中，\( p \) 是压力，\( \vec{F_p} \) 是压力力，\( dS \) 是一个无限小的表面元。
+如果我们接受这个直观概念，那么评估压力对流体的影响就变得简单了。因为流体上的压力力是压力在其边界上的积分，所以我们有：
 </p>
+
 <p>
 \[
-\mu \nabla^2 \mathbf{u}
+\vec{F_p} = - \int_S p \, dS. \quad (1.35)
 \]
 </p>
+
+<hr>
+
+<h4><i>粘性</i></h4>
 <p>
-其中，\( \mu \) 是粘性系数。结合压力和粘性力，动量方程变为：
+粘性效应在许多情况下是显而易见的，例如糖浆或火山熔岩的流动。单位体积上的粘性力大致等于 \( \mu \nabla^2 \mathbf{v} \)，其中 \( \mu \) 是粘性系数。
 </p>
+
+<p>
+结合压力和粘性项，动量方程变为：
+</p>
+
 <p>
 \[
-\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{u} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{F}_b
+\frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{v} + \mathbf{F_b}, \quad (1.37)
 \]
 </p>
+
 <p>
-其中，\( \nu = \mu / \rho \) 是动力粘性系数，\( \mathbf{F}_b \) 表示体积力（例如重力 \(\mathbf{g}\)）。
+其中，\( \nu = \frac{\mu}{\rho} \) 是运动粘性系数，\( \mathbf{F_b} \) 表示体积力（单位质量的力），例如重力 \( g \)。
+在大多数大尺度大气和海洋流动中，粘性项实际上可以忽略不计。
 </p>
+
+<blockquote>
+<p>
+方程 (1.37) 有时被称为纳维-斯托克斯方程。如果忽略粘性项，则该方程变为欧拉方程。有时，这些名称被用来指代完整的运动方程组。
+</p>
+</blockquote>
+
 
 <h3>1.3.3 静力近似 (The Hydrostatic Approximation)</h3>
 <p>
