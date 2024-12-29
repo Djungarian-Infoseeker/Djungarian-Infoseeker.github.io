@@ -243,9 +243,8 @@
 </head>
 <body>
 
-<h1>1.1 流体的时间导数</h1>
 
-<h2>1.1.2 矢量场的物质导数</h2>
+<h3>1.1.2 矢量场的物质导数</h3>
 
 <p>
 物质导数可以作用于一个<strong>矢量场 \( b \)</strong>，在这种情况下，有以下表达式：
@@ -281,7 +280,7 @@
 对于 \( b^y \) 和 \( b^z \) 的分量，也有类似的表达式。在非笛卡尔坐标系中，矢量的对流导数不仅仅是其各个分量的对流导数之和，因为坐标矢量本身的位置变化会引起方向的改变。这一点在我们处理<strong>球坐标系</strong>时将变得重要。
 </p>
 
-<h2>1.1.3 体积的物质导数</h2>
+<h3>1.1.3 体积的物质导数</h3>
 
 <p>
 一个给定的、不变质量的流体所占据的<strong>体积</strong>在流体运动的作用下会发生变形和对流，并且没有理由保持恒定。相反，由于其边界材料表面各个元素的移动，体积将发生变化，特别是当流体表面速度的法向分量不为零时，体积将发生改变。
@@ -321,7 +320,7 @@
 \]
 </div>
 
-<h2>1.1.4 物质导数的性质</h2>
+<h3>1.1.4 物质导数的性质</h3>
 
 <p>
 对于一个标量场 \(\varphi\) 及其物质导数，我们有：
@@ -382,6 +381,230 @@
 <p>
 流体可以通过其表面从体积中流入或流出，包括通过其在 \( y-z \) 平面上的各个面。通过对这些流动进行积分，我们可以得到质量连续性方程的初步形式。
 </p>
+
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>质量连续性方程与动量方程</title>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'SimSun', serif;
+            line-height: 1.8;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        p {
+            text-indent: 2em;
+        }
+        .formula {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .note {
+            font-style: italic;
+            color: gray;
+        }
+        ul {
+            margin-left: 2em;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>1.2 质量连续性方程</h1>
+
+<h2>1.2.2 通过物质导数推导质量连续性</h2>
+
+<p>
+我们现在从<strong>物质视角</strong>推导质量连续性方程 (1.23)。这是最基本的方法，因为质量守恒原理简单地表明：
+</p>
+
+<div class="formula">
+\[
+\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0.
+\]
+</div>
+
+<p>
+这被称为<strong>质量连续性方程</strong>，它反映了质量场的连续性特征。没有质量会凭空产生或消失。这是因为质量守恒是每个分子运动（甚至是宏观分子运动）的基本特性。
+</p>
+
+<p>
+对于一个无限小的控制体积，质量的净积累必须伴随来自控制体积表面的流动，考虑到：
+</p>
+
+<div class="formula">
+\[
+\Delta x \Delta y \Delta z \left[\frac{\partial (\rho u)}{\partial x} + \frac{\partial (\rho v)}{\partial y} + \frac{\partial (\rho w)}{\partial z}\right] = 0.
+\]
+</div>
+
+<p>
+根据上述方程，我们可以得到：
+</p>
+
+<div class="formula">
+\[
+\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0.
+\]
+</div>
+
+<h2>1.2.3 不可压缩流体</h2>
+
+<p>
+流体的一个几乎普遍的性质是其密度几乎是常数；也就是说，它们基本上是<strong>不可压缩的</strong>。如果我们将密度表示为：
+</p>
+
+<div class="formula">
+\[
+\rho(x, y, z, t) = \rho_0 + \delta \rho (x, y, z, t),
+\]
+</div>
+
+<p>
+其中 \(\rho_0\) 是常数。如果一个流体是真正不可压缩的，那么 \(\delta \rho = 0\)。但实际上，没有完全不可压缩的流体。因此我们放宽这一假设，仅要求 \(|\delta \rho| \ll \rho_0\)。
+</p>
+
+<p>
+当这一条件满足时，质量连续性方程 (1.27a) 变为：
+</p>
+
+<div class="formula">
+\[
+\nabla \cdot \mathbf{v} = 0.
+\]
+</div>
+
+<p>
+这是不可压缩流体的质量连续性方程。它表明不可压缩流体的密度不会随着时间变化。
+</p>
+
+<h1>1.3 动量方程</h1>
+
+<h2>1.3.1 平流项</h2>
+
+<p>
+让 \( m = \rho \mathbf{v} \) 代表<strong>动量密度场</strong>（单位体积内的动量）。因此，总动量由以下积分给出：
+</p>
+
+<div class="formula">
+\[
+\frac{D}{D t} \int_V \rho \mathbf{v} \, dV = \int_V \mathbf{F} \, dV.
+\]
+</div>
+
+<p>
+这里，\( \mathbf{F} \) 是单位体积内的力。通过转换方程的左侧，我们得到：
+</p>
+
+<div class="formula">
+\[
+\int_V \left(\rho \frac{D \mathbf{v}}{D t} - \mathbf{F}\right) \, dV = 0.
+\]
+</div>
+
+<p>
+因为体积是任意的，积分项本身必须为零。因此有：
+</p>
+
+<div class="formula">
+\[
+\rho \frac{D \mathbf{v}}{D t} = \mathbf{F}.
+\]
+</div>
+
+<h2>1.3.2 压力与粘性力</h2>
+
+<p>
+在流体的边界内，压力是由分子运动的集体作用引起的。压力力可以通过以下方式表示：
+</p>
+
+<div class="formula">
+\[
+d \mathbf{F}_p = - p \, d \mathbf{s}.
+\]
+</div>
+
+<p>
+对整个表面进行积分，得到：
+</p>
+
+<div class="formula">
+\[
+\mathbf{F}_p = \int_S - p \, d \mathbf{s}.
+\]
+</div>
+
+<p>
+应用散度定理，压强力可以写为：
+</p>
+
+<div class="formula">
+\[
+\mathbf{F}_p = - \int_V \nabla p \, dV.
+\]
+</div>
+
+<p>
+因此，单位体积的压力梯度力为：
+</p>
+
+<div class="formula">
+\[
+- \nabla p.
+\]
+</div>
+
+<p>
+对于粘性力，粘性力的单位体积表示为：
+</p>
+
+<div class="formula">
+\[
+\mu \nabla^2 \mathbf{v}.
+\]
+</div>
+
+<h2>1.3.3 静力近似</h2>
+
+<p>
+在忽略粘性力的情况下，动量方程的垂直分量可以写为：
+</p>
+
+<div class="formula">
+\[
+\frac{D w}{D t} = -\frac{1}{\rho} \frac{\partial p}{\partial z} - g.
+\]
+</div>
+
+<p>
+如果流体处于静止状态，重力项与压强项平衡，我们得到：
+</p>
+
+<div class="formula">
+\[
+\frac{\partial p}{\partial z} = - \rho g.
+\]
+</div>
+
+<p>
+这个关系被称为<strong>静力平衡</strong>或<strong>静水假设</strong>。它在大气和海洋的大尺度流动中非常有效，尤其是当垂直加速度远小于重力时。
+</p>
+
+<h2>附注</h2>
+<ul>
+    <li><strong>Navier-Stokes方程</strong>：在包含粘性力的情况下，动量方程被称为纳维-斯托克斯方程。</li>
+    <li><strong>欧拉方程</strong>：当忽略粘性力时，动量方程被称为欧拉方程。</li>
+</ul>
 
 </body>
 
