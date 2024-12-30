@@ -2,7 +2,6 @@
 气候动力学是气候学、大气动力学、物理海洋学等方面研究最基础的课程，所以我将其选为重点学习的科目。自己在本科阶段曾经学过《物理海洋学》课程，但是一直觉得还应该再深入一点，打好基本功。
 这里使用的是英国埃克斯特大学Geoffrey K. Vallis撰写的Essentials of Atmospheric and Oceanic Dynamics作为基本参考。
 
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
