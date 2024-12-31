@@ -19,11 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大气与海洋动力学引言</title>
     <style>
-        body {
-            font-family: 'SimSun', serif;
-            line-height: 1.8;
-            margin: 20px;
-        }
         h1, h2, h3 {
             text-align: center;
             margin-top: 30px;
