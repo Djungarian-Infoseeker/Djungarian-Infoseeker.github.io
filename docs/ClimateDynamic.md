@@ -945,7 +945,6 @@ p = \int_z^\infty \rho g \, dz
     <p>
         流体的完整运动方程将在下一页中总结。
     </p>
-    <h4>理想气体 (An Ideal Gas)</h4>
     <p>
         在理想气体中，\( c_p \)、\( c_v \) 和 \( R \) 仅是温度的函数，它们之间的关系为：
     </p>
@@ -956,4 +955,141 @@ p = \int_z^\infty \rho g \, dz
     </p>
     <p>
         在地球大气中，这些参数实际上几乎是常数。
+    </p>
+        <h2>1.6 势温与熵 (Potential Temperature and Entropy)</h2>
+    <p>
+        当流体被加热时，其熵增加，遵循以下关系：
+    </p>
+    <p>
+        \[
+        T d\eta = dQ \quad \text{如式} (1.44).
+        \]
+    </p>
+    <p>
+        对其进行物质导数，得到：
+    </p>
+    <p>
+        \[
+        T \frac{D \eta}{D t} = \dot{Q}. \quad (1.54)
+        \]
+    </p>
+
+    <h2>流体的运动方程 (The Equations of Motion for a Fluid)</h2>
+    
+    <h3>动量方程 (The Momentum Equation)</h3>
+    <p>
+        动量方程是关于速度的演化方程，体现了牛顿第二定律，即力等于质量乘以加速度。其表达式为：
+    </p>
+    <p>
+        \[
+        \frac{D \mathbf{v}}{D t} = -\frac{1}{\rho} \nabla p + \mathbf{v} \cdot \nabla \mathbf{v} + \mathbf{g}, \quad (F.1)
+        \]
+    </p>
+    <p>
+        其中，\( \mathbf{g} \) 是单位质量的重力。
+    </p>
+
+    <h3>质量连续性方程 (The Mass Continuity Equation)</h3>
+    <p>
+        质量连续性方程体现了质量守恒原理。两种等效形式为：
+    </p>
+    <p>
+        \[
+        \frac{D \rho}{D t} + \rho \nabla \cdot \mathbf{v} = 0, \quad \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0. \quad (F.2)
+        \]
+    </p>
+    <p>
+        如果流体是不可压缩的，上述方程变为：
+    </p>
+    <p>
+        \[
+        \nabla \cdot \mathbf{v} = 0. \quad (F.3)
+        \]
+    </p>
+
+    <h3>热力学方程 (The Thermodynamic Equation)</h3>
+    <p>
+        热力学方程是热力学第一定律的陈述，表达为：
+    </p>
+    <p>
+        \[
+        \frac{D I}{D t} + \frac{p}{\rho} \nabla \cdot \mathbf{v} = \dot{Q}. \quad (F.4)
+        \]
+    </p>
+    <p>
+        其中，\( \dot{Q} \) 是总加热量。对于理想气体，\( I = c_v T \) 且 \( p = \rho R T \)，方程变为：
+    </p>
+    <p>
+        \[
+        \frac{D T}{D t} + \frac{R T}{c_v} \nabla \cdot \mathbf{v} = \frac{\dot{Q}}{c_v} = \kappa \nabla^2 T + J. \quad (F.5)
+        \]
+    </p>
+    <p>
+        在这里，我们将加热分为温度扩散和外部热源 \( J \)。
+    </p>
+
+    <h3>状态方程 (Equation of State)</h3>
+    <p>
+        状态方程是一个诊断方程，连接压力、密度、温度，以及（如果流体成分变化）组成。对于单组分理想气体，状态方程为：
+    </p>
+    <p>
+        \[
+        p = \rho R T. \quad (F.6)
+        \]
+    </p>
+    <p>
+        对于海水，一个密度关于压力、温度和盐度的近似状态方程为：
+    </p>
+    <p>
+        \[
+        \rho = \rho_0 \left[1 - \beta_T (T - T_0) + \beta_S (S - S_0) + \beta_p (p - p_0) \right]. \quad (F.7)
+        \]
+    </p>
+    <p>
+        对于定量海洋学，我们需要更精确的状态方程，并包含非线性项。
+    </p>
+
+    <h3>熵的热力学方程 (The Thermodynamic Equation for Entropy)</h3>
+    <p>
+        使用理想气体状态方程，可以将热力学第一定律写为：
+    </p>
+    <p>
+        \[
+        c_v dT + p d\alpha = dQ, \quad c_p dT - \alpha dp = dQ. \quad (1.56a,b)
+        \]
+    </p>
+    <p>
+        由于熵增加遵循 \( T d\eta = dQ \)，我们有：
+    </p>
+    <p>
+        \[
+        c_v dT + p d\alpha = T d\eta, \quad c_p dT - \alpha dp = T d\eta. \quad (1.57a,b)
+        \]
+    </p>
+    <p>
+        将其积分得到：
+    </p>
+    <p>
+        \[
+        \eta = c_v \log T - R \log p + \text{常数}, \quad \eta = c_p \log T - R \log p + \text{常数}. \quad (1.59)
+        \]
+    </p>
+    <p>
+        为方便起见，我们定义势温 \( \theta \)：
+    </p>
+    <p>
+        \[
+        \eta = c_p \ln \theta, \quad \theta = T \left(\frac{p_R}{p}\right)^{R/c_p}. \quad (1.60, 1.62)
+        \]
+    </p>
+    <p>
+        因此：
+    </p>
+    <p>
+        \[
+        c_p \frac{D \theta}{D t} = \frac{\theta}{T} \dot{Q}. \quad (1.63)
+        \]
+    </p>
+    <p>
+        这个形式的热力学方程等价于 (1.51)，在某些方面更简单。
     </p>
