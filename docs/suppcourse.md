@@ -28,17 +28,17 @@
     <table>
         <thead>
             <tr>
-                <th>课程名</th>
+                <th>学科</th>
                 <th>日期</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>大气动力基础</td>
+                <td>大气动力学</td>
                 <td>1-3月</td>
             </tr>
             <tr>
-                <td>大气物理基础</td>
+                <td>大气物理学</td>
                 <td>3-5月</td>
             </tr>
             <tr>
@@ -50,7 +50,7 @@
                 <td>7-9月</td>
             </tr>
             <tr>
-                <td>数学物理方程</td>
+                <td>偏微分方程</td>
                 <td>1-9月</td>
             </tr>
         </tbody>
