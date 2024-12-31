@@ -1,7 +1,18 @@
 # 前言
 气候动力学是气候学、大气动力学、物理海洋学等方面研究最基础的课程，所以我将其选为重点学习的科目。自己在本科阶段曾经学过《物理海洋学》课程，但是一直觉得还应该再深入一点，打好基本功。
 这里使用的是英国埃克斯特大学Geoffrey K. Vallis撰写的Essentials of Atmospheric and Oceanic Dynamics作为基本参考。
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .abstract {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -973,7 +984,7 @@ p = \int_z^\infty \rho g \, dz
         T \frac{D \eta}{D t} = \dot{Q}. \quad (1.54)
         \]
     </p>
-
+    <div class="abstract">
     <h2>流体的运动方程 (The Equations of Motion for a Fluid)</h2>
     
     <h3>动量方程 (The Momentum Equation)</h3>
@@ -1048,7 +1059,7 @@ p = \int_z^\infty \rho g \, dz
     <p>
         对于定量海洋学，我们需要更精确的状态方程，并包含非线性项。
     </p>
-
+    </div>
     <p>
         这是热力学方程的另一种形式，可以**代替**内部能量方程 (1.49)，但这样做涉及使用状态方程将熵与其他热力学变量联系起来，其形式为：
     </p>
