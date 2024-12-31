@@ -1229,9 +1229,9 @@ p = \int_z^\infty \rho g \, dz
         由于声速是一个可测量的量，方程 (1.66) 是一个非常有用的势密度表达式。然而，由于声速的微小变化，该表达式在涉及较大深度变化的问题中可能不够准确。
     </p>
 
-    <h3>1.7 能量收支 (The Energy Budget)</h3>
+        <h3>1.7 能量收支 (The Energy Budget)</h3>
     <p>
-        流体的总能量包括动能、势能和内能。流体流动和压力力都会将能量从一个位置传输到另一个位置，但我们依然期望总能量是守恒的。
+        流体的总能量包括**动能**、**势能**和**内能**。流体的流动和压力力都会将能量从一个位置传输到另一个位置，但我们仍然期望总能量是守恒的。
     </p>
     <p>
         让我们看看能量守恒在流体中是如何体现的。
@@ -1242,31 +1242,126 @@ p = \int_z^\infty \rho g \, dz
         我们从一个时间不变势能 \( \Phi \) 的无粘动量方程开始：
     </p>
     <p>
-        \[
+        $$
         \rho \frac{D \mathbf{v}}{D t} = -\nabla p - \rho \nabla \Phi. \quad (1.67)
-        \]
+        $$
     </p>
     <p>
         在均匀重力场中，\( \Phi = gz \)。对方程 (1.67) 两边取点积 \( \mathbf{v} \)，得到动能方程：
     </p>
     <p>
-        \[
-        \frac{1}{2} \frac{D \mathbf{v}^2}{D t} = -\mathbf{v} \cdot \nabla p + \mathbf{v} \cdot (\rho \mathbf{g}) - \rho \mathbf{v} \cdot \nabla \Phi. \quad (1.68)
-        \]
+        $$
+        \frac{1}{2} \rho \frac{D \mathbf{v}^2}{D t} = -\mathbf{v} \cdot \nabla p - \rho \mathbf{v} \cdot \nabla \Phi. \quad (1.68)
+        $$
     </p>
     <p>
         对于绝热流动，内能方程为：
     </p>
     <p>
-        \[
-        \frac{D I}{D t} = -p \nabla \cdot \mathbf{v}. \quad (1.69)
-        \]
+        $$
+        \rho \frac{D I}{D t} = -p \nabla \cdot \mathbf{v}. \quad (1.69)
+        $$
     </p>
     <p>
         最后，势能满足：
     </p>
     <p>
-        \[
+        $$
         \rho \frac{D \Phi}{D t} = \rho \mathbf{v} \cdot \nabla \Phi. \quad (1.70)
-        \]
+        $$
+    </p>
+    <p>
+        将 (1.68)、(1.69) 和 (1.70) 相加，得到：
+    </p>
+    <p>
+        $$
+        \frac{D}{D t} \left(\frac{1}{2} \mathbf{v}^2 + I + \Phi \right) = -\nabla \cdot (\mathbf{v} p). \quad (1.71)
+        $$
+    </p>
+    <p>
+        展开材料导数并使用质量连续性方程，可以得到：
+    </p>
+    <p>
+        $$
+        \frac{\partial}{\partial t} \left[\rho \left(\frac{1}{2} v^2 + I + \Phi \right)\right] + \nabla \cdot \left[\rho \mathbf{v} \left(\frac{1}{2} v^2 + I + \Phi + \frac{p}{\rho}\right)\right] = 0. \quad (1.72)
+        $$
+    </p>
+    <p>
+        可以将其写为：
+    </p>
+    <p>
+        $$
+        \frac{\partial E}{\partial t} + \nabla \cdot [\mathbf{v}(E + p)] = 0. \quad (1.73)
+        $$
+    </p>
+    <p>
+        其中：
+    </p>
+    <p>
+        $$
+        E = \rho \left(\frac{1}{2} v^2 + I + \Phi \right)
+        $$
+    </p>
+    <p>
+        是单位体积流体的总能量，包括动能 (\( \rho v^2/2 \))，内能 (\( \rho I \)) 和势能 (\( \rho \Phi \))。
+    </p>
+    <blockquote>
+        能量通过速度项传输，伯努利函数是动能、势能、内能和压强之和。在稳态流动中，伯努利函数在流线上是常数。
+    </blockquote>
+
+    <h4>伯努利定理 (Bernoulli's Theorem)</h4>
+    <p>
+        伯努利函数是总能量与压力的总和，其定义为：
+    </p>
+    <p>
+        $$
+        B = \left(E + \frac{p}{\rho}\right) = \left(\frac{1}{2} v^2 + I + \Phi + \frac{p}{\rho}\right) = \left(\frac{1}{2} v^2 + h + \Phi \right). \quad (1.75)
+        $$
+    </p>
+    <p>
+        在稳态流动中，伯努利函数在流线上保持不变：
+    </p>
+    <p>
+        $$
+        \frac{\partial E}{\partial t} + \nabla \cdot (\rho \mathbf{v} B) = 0. \quad (1.76)
+        $$
+    </p>
+
+    <h4>1.7.2 恒定密度下的能量守恒 (Energy Conservation for Constant Density Fluids)</h4>
+    <p>
+        如果流体密度恒定，推导过程几乎没有变化，但有一个重要的简化。速度散度项为零，动能方程变为：
+    </p>
+    <p>
+        $$
+        \frac{\partial K}{\partial t} + \nabla \cdot (\mathbf{v} (B)) = 0. \quad (1.78)
+        $$
+    </p>
+
+    <h4>1.7.3 粘性效应 (Viscous Effects)</h4>
+    <p>
+        粘性会减少流体的动能，动量方程变为：
+    </p>
+    <p>
+        $$
+        \rho \frac{D \mathbf{v}}{D t} = -\nabla (\Phi + p) + \nu \nabla^2 \mathbf{v}. \quad (1.79)
+        $$
+    </p>
+    <p>
+        能量方程为：
+    </p>
+    <p>
+        $$
+        \frac{d E}{d t} = \int_V \mu (\mathbf{v} \cdot \nabla^2 \mathbf{v}) dV. \quad (1.80)
+        $$
+    </p>
+    <p>
+        通过矢量恒等式，可以得到：
+    </p>
+    <p>
+        $$
+        \int_V \mathbf{v} (\nabla \times \omega) dV = \int_V \omega^2 dV. \quad (1.82)
+        $$
+    </p>
+    <p>
+        这表明粘性作用将动能转化为热能，使得流体不可逆地升温。
     </p>
