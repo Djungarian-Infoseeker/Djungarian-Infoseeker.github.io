@@ -1231,7 +1231,7 @@ p = \int_z^\infty \rho g \, dz
 
         <h3>1.7 能量收支 (The Energy Budget)</h3>
     <p>
-        流体的总能量包括**动能**、**势能**和**内能**。流体的流动和压力力都会将能量从一个位置传输到另一个位置，但我们仍然期望总能量是守恒的。
+        流体的总能量包括动能、势能和内能。流体的流动和压力力都会将能量从一个位置传输到另一个位置，但我们仍然期望总能量是守恒的。
     </p>
     <p>
         让我们看看能量守恒在流体中是如何体现的。
@@ -1270,16 +1270,16 @@ p = \int_z^\infty \rho g \, dz
         \rho \frac{D \Phi}{D t} = \rho \mathbf{v} \cdot \nabla \Phi. \quad (1.70)
         $$
     </p>
-    <p>
-        将 (1.68)、(1.69) 和 (1.70) 相加，得到：
+     <p>
+        将方程 (1.68)、(1.69) 和 (1.70) 相加，我们得到：
     </p>
     <p>
         $$
-        \frac{D}{D t} \left(\frac{1}{2} \mathbf{v}^2 + I + \Phi \right) = -\nabla \cdot (\mathbf{v} p). \quad (1.71)
+        \rho \frac{D}{D t} \left(\frac{1}{2} v^2 + I + \Phi \right) = -\nabla \cdot (\mathbf{v} p). \quad (1.71)
         $$
     </p>
     <p>
-        展开材料导数并使用质量连续性方程，可以得到：
+        对材料导数进行展开，并使用质量守恒方程，可以得到：
     </p>
     <p>
         $$
@@ -1287,11 +1287,11 @@ p = \int_z^\infty \rho g \, dz
         $$
     </p>
     <p>
-        可以将其写为：
+        可以将其简写为：
     </p>
     <p>
         $$
-        \frac{\partial E}{\partial t} + \nabla \cdot [\mathbf{v}(E + p)] = 0. \quad (1.73)
+        \frac{\partial E}{\partial t} + \nabla \cdot \left[\mathbf{v} (E + p)\right] = 0. \quad (1.73)
         $$
     </p>
     <p>
@@ -1303,15 +1303,51 @@ p = \int_z^\infty \rho g \, dz
         $$
     </p>
     <p>
-        是单位体积流体的总能量，包括动能 (\( \rho v^2/2 \))，内能 (\( \rho I \)) 和势能 (\( \rho \Phi \))。
+        是单位体积流体的**总能量**，包括：
+    </p>
+    <ul>
+        <li><strong>动能</strong> (\( \rho v^2 / 2 \))</li>
+        <li><strong>内能</strong> (\( \rho I \))</li>
+        <li><strong>势能</strong> (\( \rho \Phi \))</li>
+    </ul>
+    <p>
+        方程 (1.73) 是一个针对**无外力、无粘性和绝热**可压缩流体的能量方程。当对封闭区域进行积分时，能量通量项消失，意味着**总能量守恒**。
+    </p>
+    <p>
+        然而，动能、内能和势能之间可以进行能量交换。这种交换通过**散度项** \( \nabla \cdot \mathbf{v} \) 连接动能方程 (1.68) 和内能方程 (1.69)。
+    </p>
+    <p>
+        对于不可压缩流体，这个项消失，内能与其他能量成分解耦。这一点在第2.5节的**布辛涅斯克方程**中将变得重要。
     </p>
     <blockquote>
-        能量通过速度项传输，伯努利函数是动能、势能、内能和压强之和。在稳态流动中，伯努利函数在流线上是常数。
+        能量通过速度项传输，能量通量 \( F_E = \mathbf{v}(E + p) \) 并不等于速度与能量之积。能量还通过**压力**进行传输。
     </blockquote>
-
-    <h4>伯努利定理 (Bernoulli's Theorem)</h4>
     <p>
-        伯努利函数是总能量与压力的总和，其定义为：
+        我们可以将能量通量写为：
+    </p>
+    <p>
+        $$
+        F_E = \rho \mathbf{v} \left(\frac{1}{2} v^2 + \Phi + h \right). \quad (1.74)
+        $$
+    </p>
+    <p>
+        其中：
+    </p>
+    <p>
+        $$
+        h = I + \frac{p}{\rho}
+        $$
+    </p>
+    <p>
+        是<strong>焓 (Enthalpy)</strong>。
+    </p>
+    <p>
+        焓描述的是由动能、势能和焓通量决定的局部能量变化率，而不是内能，因为焓考虑了**压力所做的功**。
+    </p>
+
+    <h3>伯努利定理 (Bernoulli's Theorem)</h3>
+    <p>
+        伯努利方程定义为：
     </p>
     <p>
         $$
@@ -1327,41 +1363,9 @@ p = \int_z^\infty \rho g \, dz
         $$
     </p>
 
-    <h4>1.7.2 恒定密度下的能量守恒 (Energy Conservation for Constant Density Fluids)</h4>
+    <blockquote>
+        伯努利函数表示为总能量与压强之和。在稳态流动中，它在流线上是常数。
+    </blockquote>
     <p>
-        如果流体密度恒定，推导过程几乎没有变化，但有一个重要的简化。速度散度项为零，动能方程变为：
-    </p>
-    <p>
-        $$
-        \frac{\partial K}{\partial t} + \nabla \cdot (\mathbf{v} (B)) = 0. \quad (1.78)
-        $$
-    </p>
-
-    <h4>1.7.3 粘性效应 (Viscous Effects)</h4>
-    <p>
-        粘性会减少流体的动能，动量方程变为：
-    </p>
-    <p>
-        $$
-        \rho \frac{D \mathbf{v}}{D t} = -\nabla (\Phi + p) + \nu \nabla^2 \mathbf{v}. \quad (1.79)
-        $$
-    </p>
-    <p>
-        能量方程为：
-    </p>
-    <p>
-        $$
-        \frac{d E}{d t} = \int_V \mu (\mathbf{v} \cdot \nabla^2 \mathbf{v}) dV. \quad (1.80)
-        $$
-    </p>
-    <p>
-        通过矢量恒等式，可以得到：
-    </p>
-    <p>
-        $$
-        \int_V \mathbf{v} (\nabla \times \omega) dV = \int_V \omega^2 dV. \quad (1.82)
-        $$
-    </p>
-    <p>
-        这表明粘性作用将动能转化为热能，使得流体不可逆地升温。
+        这表明在理想条件下，动能、势能、内能和压力相互联系，并且能量在流体的不同部分之间进行交换。
     </p>
