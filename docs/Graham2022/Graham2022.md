@@ -465,7 +465,7 @@ S_{\text{eff}}(T, pCO_2) = \frac{S}{S_{\text{Earth}}} = \frac{4 F_{\text{out}}(T
   </p>
 
   <p>
-    虽然 H<sub>2</sub>O 的瑞利散射在高 <i>pCO<sub>2</sub></i> 下不再重要，但 H<sub>2</sub>O 对短波和近红外辐射的吸收仍然重要，因此随着温度升高导致的水含量增加，会引起对入射辐射的吸收增加：在高 <i>pCO<sub>2</sub></i> 下，反照率和平衡的 <i>S<sub>eff</sub></i> 随温度增加而降低，这体现在图 1a 和 1c 右上象限中 <i>S<sub>eff</sub></i> 和反照率等值线向右倾斜。
+    <mark>虽然 H<sub>2</sub>O 的瑞利散射在高 <i>pCO<sub>2</sub></i> 下不再重要，但 H<sub>2</sub>O 对短波和近红外辐射的吸收仍然重要，因此随着温度升高导致的水含量增加，会引起对入射辐射的吸收增加：在高 <i>pCO<sub>2</sub></i> 下，反照率和平衡的 <i>S<sub>eff</sub></i> 随温度增加而降低，这体现在图 1a 和 1c 右上象限中 <i>S<sub>eff</sub></i> 和反照率等值线向右倾斜。</mark>
   </p>
 
   <p>

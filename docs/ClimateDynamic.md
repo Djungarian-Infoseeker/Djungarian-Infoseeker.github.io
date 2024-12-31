@@ -315,49 +315,73 @@
 \]
 </p>
 
-
-<h3>物质导数的进一步推导</h3>
+<p>我们经常将这样的表达式非正式地写成：</p>
 <p>
-但是，\( \Delta V \) 仅表示流体单元的一个定义常量。流体单元的第二项在右侧表示为：
+$$
+\frac{D (\Delta V)}{D t} = \Delta V \nabla \cdot \mathbf{v},
+$$
+</p>
+<p>其中极限是隐含的。</p>
+
+<p>现在考虑某种流体特性 ξ（例如单位体积 ξ-物质的量——质量密度或单位体积染料的量）与流体单元体积 ΔV 的乘积的物质导数。这种导数在 ξ 是单位体积 ξ-物质的量时产生。我们有：</p>
+<p>
+$$
+\frac{D (\xi \Delta V)}{D t} = \xi \frac{D (\Delta V)}{D t} + \Delta V \frac{D \xi}{D t}.
+$$
 </p>
 
+<p>使用 (1.11) 式，这个表达式变为：</p>
 <p>
-\[
-\frac{D(\phi \rho \Delta V)}{Dt} = \rho \Delta V \frac{D\phi}{Dt} + \phi \Delta V \frac{D\rho}{Dt}. \quad (1.11)
-\]
-</p>
-
-<p>
-使用 (1.11) 式，这个表达式变为：
-</p>
-
-<p>
-\[
-\frac{D(\Delta V)}{Dt} = \Delta V (\nabla \cdot \mathbf{v}) + \Delta V \frac{D \phi}{Dt}. \quad (1.12)
-\]
-</p>
-
-<p>
-在有限体积的情况下，类似的结果可以写为：
-</p>
-
-<p>
-\[
-\frac{D(\Delta V)}{Dt} = \Delta V (\nabla \cdot \mathbf{v}). \quad (1.13)
-\]
-</p>
-
-<p>
-在极限下，这种表达可简写为：
-</p>
-
-<p>
-\[
-\frac{D V}{Dt} = \Delta V \nabla \cdot \mathbf{v}. \quad (1.14)
-\]
+$$
+\frac{D (\xi \Delta V)}{D t} = \Delta V \left( \xi \nabla \cdot \mathbf{v} + \frac{D \xi}{D t} \right).
+$$
 </p>
 
 
+<p>对于有限体积，类似的结果可以写为：</p>
+<p>
+$$
+\frac{D}{D t} \int_V \xi dV = \int_V \left( \xi \nabla \cdot \mathbf{v} + \frac{D \xi}{D t} \right) dV.
+$$
+</p>
+<p>这个表达式与欧拉导数形成对比，在欧拉导数中，积分的体积是固定的，积分的极限也是固定的。</p>
+
+<p>对于欧拉导数，我们有：</p>
+<p>
+$$
+\frac{d}{d t} \int_V \xi dV = \int_V \frac{\partial \xi}{\partial t} dV.
+$$
+</p>
+
+<p>现在考虑流体性质 φ 的物质导数，该性质由流体单元的质量 ρΔV 加权，其中 ρ 是流体密度。这样一个导数在 φ 是单位质量 φ-物质的量时产生（例如，流体单元的动量是 ρuΔV）。φρΔV 的物质导数为：</p>
+<p>
+$$
+\frac{D (\varphi \rho \Delta V)}{D t} = \rho \Delta V \frac{D \varphi}{D t} + \varphi \frac{D (\rho \Delta V)}{D t}.
+$$
+</p>
+
+<p>但 ρΔV 只是流体单元的质量，这是一个常量——这是如何定义流体单元的。因此，右侧的第二项消失，化简为：</p>
+<p>
+$$
+\frac{D (\varphi \rho \Delta V)}{D t} = \rho \Delta V \frac{D \varphi}{D t}.
+$$
+</p>
+
+<p>对于有限体积，有以下关系：</p>
+<p>
+$$
+\frac{D}{D t} \int_V \varphi \rho dV = \int_V \rho \frac{D \varphi}{D t} dV.
+$$
+</p>
+
+<p>该表达式也可以更正式地使用**莱布尼茨公式**推导出来，对于物质导数的积分形式，结果也适用于当 φ 是一个矢量时。在欧拉导数的情况下，体积保持固定，我们有：</p>
+<p>
+$$
+\frac{d}{d t} \int_V \varphi \rho dV = \int_V \frac{\partial (\varphi \rho)}{\partial t} dV.
+$$
+</p>
+
+<p>在相邻页面的阴影框中，总结了各种物质导数和欧拉导数。</p>
 <h3>物质导数与欧拉导数 (Material and Eulerian Derivatives)</h3>
 <p>
 标量 \( \phi \) 和矢量场 \( \mathbf{b} \) 的物质导数分别为：
