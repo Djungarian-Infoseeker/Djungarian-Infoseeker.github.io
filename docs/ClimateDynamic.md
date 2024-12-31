@@ -1369,3 +1369,82 @@ p = \int_z^\infty \rho g \, dz
     <p>
         这表明在理想条件下，动能、势能、内能和压力相互联系，并且能量在流体的不同部分之间进行交换。
     </p>
+        <p>
+        如果流体的密度是恒定的，推导过程与之前相同，但有一个重要的简化。速度的散度项为零，因此在动能方程的右侧 (1.68) 中，\( \nabla \cdot \mathbf{v} \) 项不会出现。
+    </p>
+    <p>
+        内能方程的右侧 (1.69) 变为零，内能与动能之间解耦。动能方程变为：
+    </p>
+    <p>
+        $$
+        \frac{\partial K}{\partial t} + \nabla \cdot (\mathbf{v} (B)) = 0. \quad (1.78)
+        $$
+    </p>
+    <p>
+        其中：
+    </p>
+    <p>
+        \( K = \frac{v^2}{2} \) 是动能，\( B = \Phi + \Phi + \frac{v^2}{2} \) 其中 \( \Phi = \frac{p}{\rho_0} \) 是**动力压强**。
+    </p>
+    <p>
+        伯努利函数不包含内能，而**总动能**是守恒的。
+    </p>
+
+    <h3>1.7.3 粘性效应 (Viscous Effects)</h3>
+    <p>
+        我们可以预期，粘性总是会减少流体流动的动能。我们在恒定密度流体的情况下证明这一点，该流体满足以下条件：
+    </p>
+    <p>
+        $$
+        \frac{D \mathbf{v}}{D t} = -\nabla (\phi + \Phi) + \nu \nabla^2 \mathbf{v}. \quad (1.79)
+        $$
+    </p>
+    <p>
+        能量方程变为：
+    </p>
+    <p>
+        $$
+        \frac{d E}{d t} = \int_V \mu \int_V \mathbf{v} \cdot \nabla^2 \mathbf{v} \, dV. \quad (1.80)
+        $$
+    </p>
+    <p>
+        右侧的项是一个负定值。为了证明这一点，我们使用以下矢量恒等式：
+    </p>
+    <p>
+        $$
+        \nabla \times (\nabla \times \mathbf{v}) = \nabla (\nabla \cdot \mathbf{v}) - \nabla^2 \mathbf{v}. \quad (1.81)
+        $$
+    </p>
+    <p>
+        因为 \( \nabla \cdot \mathbf{v} = 0 \)，我们有：
+    </p>
+    <p>
+        $$
+        \nabla^2 \mathbf{v} = -\nabla \times \omega, \quad \text{其中} \, \omega = \nabla \times \mathbf{v}.
+        $$
+    </p>
+    <p>
+        因此：
+    </p>
+    <p>
+        $$
+        \frac{d E}{d t} = -\mu \int_V \mathbf{v} \cdot (\nabla \times \omega) \, dV = -\mu \int_V \omega \cdot (\nabla \times \mathbf{v}) \, dV = -\mu \int_V \omega^2 \, dV. \quad (1.82)
+        $$
+    </p>
+    <p>
+        通过分部积分，如果在边界处 \( \mathbf{v} \times \omega \) 消失，那么粘性会从流动中提取动能。
+    </p>
+    <p>
+        动能的损失会重新以不可逆的流体加热形式出现，并且流体的总能量仍然是守恒的。
+    </p>
+    <p>
+        在地球大气层中，这种加热效应较小，但在其他大行星中可能较大。
+    </p>
+
+    <blockquote>
+        粘性效应导致流体动能减少，能量以不可逆的热量形式重新分配，且总能量守恒。
+    </blockquote>
+
+    <p>
+        由此可见，粘性效应在高雷诺数流动和行星大气动力学中具有重要意义。
+    </p>
