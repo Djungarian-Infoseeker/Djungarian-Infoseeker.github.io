@@ -1511,3 +1511,67 @@ $$
 \delta C = |C||\Omega| \sin \vartheta \mathbf{m} \delta t = \Omega \times C \delta t. \quad (2.2)
 $$
 </p>
+<h2>使用矢量叉积的定义</h2>
+
+<p>其中，<strong>ϑ = (π/2 − ϑ)</strong> 是 <strong>Ω</strong> 和 <strong>C</strong> 之间的角度。因此，有：</p>
+
+<p>
+$$
+\left(\frac{d \mathbf{C}}{d t}\right)_I = \mathbf{\Omega} \times \mathbf{C}, \quad (2.3)
+$$
+</p>
+
+<p>这里，左侧表示在惯性参考系中观察到的向量 <strong>C</strong> 的变化率。</p>
+
+<p>现在，考虑一个在惯性参考系中变化的向量 <strong>B</strong>。在一个小时间间隔 <strong>δt</strong> 内，旋转参考系中观察到的 <strong>B</strong> 的变化与惯性参考系中的变化相关，关系如下：</p>
+
+<p>
+$$
+(\delta \mathbf{B})_I = (\delta \mathbf{B})_R + (\delta \mathbf{B})_{rot}, \quad (2.4)
+$$
+</p>
+
+<p>其中，这些项分别表示：</p>
+<ul>
+  <li><strong>(\(\delta \mathbf{B})_I\)</strong>：在惯性参考系中观察到的变化。</li>
+  <li><strong>(\(\delta \mathbf{B})_R\)</strong>：在旋转参考系中测量到的向量本身的变化。</li>
+  <li><strong>(\(\delta \mathbf{B})_{rot}\)</strong>：由旋转引起的变化。</li>
+</ul>
+
+<p>根据公式 (2.2)，我们有：</p>
+
+<p>
+$$
+(\delta \mathbf{B})_{rot} = \mathbf{\Omega} \times \mathbf{B} \delta t,
+$$
+</p>
+
+<p>因此，向量 <strong>B</strong> 在惯性参考系和旋转参考系中的变化率之间的关系为：</p>
+
+<p>
+$$
+\left(\frac{d \mathbf{B}}{d t}\right)_I = \left(\frac{d \mathbf{B}}{d t}\right)_R + \mathbf{\Omega} \times \mathbf{B}. \quad (2.5)
+$$
+</p>
+
+<p>这个关系适用于向量 <strong>B</strong>，在任何时间点测量时，它在惯性参考系和旋转参考系中是相同的。</p>
+
+<h3>2.1.2 旋转参考系中的速度与加速度</h3>
+
+<p>物体的速度在惯性参考系和旋转参考系中并不一定相同，因此在将公式 (2.5) 应用于速度时必须小心。</p>
+
+<p>首先将公式 (2.5) 应用于粒子的位置向量 <strong>r</strong>，得到：</p>
+
+<p>
+$$
+\left(\frac{d \mathbf{r}}{d t}\right)_I = \left(\frac{d \mathbf{r}}{d t}\right)_R + \mathbf{\Omega} \times \mathbf{r}. \quad (2.6)
+$$
+</p>
+
+<p>以上公式表明，在惯性参考系中测得的位置向量变化率包括两个部分：</p>
+<ul>
+  <li>在旋转参考系中测得的位置向量变化率。</li>
+  <li>由于旋转参考系的角速度 <strong>Ω</strong> 引起的附加变化。</li>
+</ul>
+
+<p>这个结果是研究旋转参考系中速度和加速度变化的基础。</p>
