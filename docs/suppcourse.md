@@ -1,14 +1,25 @@
 本科相对于研究生缺了很多内容，现在需要补充内容。我认为这个部分不能像本科混绩点那样投机取巧，所以希望以入学考试为机会把自己彻底吃透这部分基础课程内容，同时我也将会重新以学徒的身份学东西，来以现在的认知和心智再次分析一些有关于教育学的内容，从而获知一些大众学习上存在的问题。（因为我一直想不通为什么中学学的很吃力，各种无根据的归因是不严谨的，所以找个机会也从学徒开始对自己进行观察分析）时间安排如下。
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>课程安排</title>
     <style>
+        /* 全局页面样式，使页面内容垂直和水平居中 */
+        body {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            height: 100vh; /* 让 body 占满整个视口高度 */
+            margin: 0; /* 移除默认外边距 */
+            background-color: #fdfdfd; /* 可选：设置背景颜色 */
+        }
+
+        /* 表格样式 */
         table {
             width: 50%;
             border-collapse: collapse;
-            margin: 20px auto;
         }
         th, td {
             border: 1px solid #000;
@@ -24,7 +35,6 @@
     </style>
 </head>
 <body>
-    <h2 style="text-align: center;">课程安排</h2>
     <table>
         <thead>
             <tr>
