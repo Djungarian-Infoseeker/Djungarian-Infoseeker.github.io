@@ -556,15 +556,23 @@ $$
 \]
 </p>
 
+<p>在展开第一项后，这个结果与(1.23)完全相同。(一种稍微更正式的推导方式是使用(1.14)，将ξ替换为ρ。)</p>
+<p>总结起来，表示质量守恒的等效偏微分方程为：</p>
+
 <p>
-展开第一项，这变得与方程 (1.23) 完全相同。总结起来，代表质量守恒的等效偏微分方程为：
+$$
+\frac{D \rho}{D t} + \rho \nabla \cdot \mathbf{v} = 0,
+$$
 </p>
 
 <p>
-\[
-\frac{D \rho}{Dt} + \rho \nabla \cdot \mathbf{v} = 0, \quad \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0
-\]
+$$
+\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0.
+$$
 </p>
+
+<p>(1.27a, b)</p>
+
 
 <h3>1.2.3 不可压缩流体</h3>
 
