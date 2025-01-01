@@ -5,32 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>课程安排</title>
     <style>
-        /* 页面整体布局，垂直和水平居中 */
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center; /* 水平居中 */
-            align-items: center; /* 垂直居中 */
-            min-height: 100vh; /* 占满视口高度 */
-            background-color: #f8f8f8;
-        }
-
-        /* 表格样式 */
         table {
             width: 50%;
             border-collapse: collapse;
+            margin: 20px auto;
         }
-
         th, td {
             border: 1px solid #000;
             text-align: center;
             padding: 8px;
         }
-
         th {
             background-color: #f2f2f2;
         }
-
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
