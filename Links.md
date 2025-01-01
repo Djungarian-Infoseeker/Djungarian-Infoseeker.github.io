@@ -90,6 +90,8 @@ header_image: '../../Tokyotech.jpg'
     <strong style="font-size: 20px;">Others</strong><br>
     <a href="https://tokyotechtoresen.wixsite.com/toresen/" target="_blank" style="text-decoration: underline;">Science Tokyo's GYM</a><br>
     <a href="http://www.mue.titech.ac.jp/index.html" target="_blank" style="text-decoration: underline;">Museum of Evolving Earth - Science Tokyo</a><br>
+    <a href="https://www.zotero.org/groups/2744619/extracurricularphysical_oceanography/library" target="_blank" style="text-decoration: underline;">Extracurricular Physical Oceanography</a><br>
+    
     </td>
 </tr>
 </table>
