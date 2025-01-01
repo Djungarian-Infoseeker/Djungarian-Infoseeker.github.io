@@ -1475,3 +1475,39 @@ p = \int_z^\infty \rho g \, dz
     <p>
         由此可见，粘性效应在高雷诺数流动和行星大气动力学中具有重要意义。
     </p>
+<h1>第2章：旋转行星方程</h1>
+<h2>2.1 旋转参考系中的运动方程</h2>
+
+<p>牛顿第二定律指出，物体动量变化的速率与所施加的力成正比，这一定律适用于所谓的<strong>惯性参考系</strong>，这些参考系要么是静止的，要么仅以相对于遥远星系的恒定直线速度运动。</p>
+
+<p>现在，地球每天绕其轴自转一次，因此地球表面并<strong>不是</strong>一个惯性参考系。然而，相对于地球表面来描述大气或海洋的运动比在某个惯性参考系中描述要方便得多。本节的主题就是讨论我们如何做到这一点。</p>
+
+<h3>2.1.1 向量的变化率</h3>
+
+<p>首先，考虑一个相对于惯性参考系以恒定角速度 <strong>Ω</strong> 旋转的恒定长度向量 <strong>C</strong>。在以相同角速度旋转的参考系中，它看起来是静止且恒定的。</p>
+
+<p>如果在一个小时间间隔 <strong>δt</strong> 内，向量 <strong>C</strong> 绕一个小角度 <strong>δλ</strong> 旋转，那么在惯性参考系中感知到的 <strong>C</strong> 的变化由下式给出（见图2.1）：</p>
+
+<p>
+$$
+\delta C = |C| \cos \vartheta \delta \lambda \mathbf{m}, \quad (2.1)
+$$
+</p>
+
+<p>其中，向量 <strong>m</strong> 是指向 <strong>C</strong> 变化方向的单位向量，该方向垂直于 <strong>C</strong> 和 <strong>Ω</strong>。</p>
+
+<p>但是，角度 <strong>λ</strong> 的变化率由角速度定义，因此：</p>
+
+<p>
+$$
+\delta \lambda = |\Omega| \delta t,
+$$
+</p>
+
+<p>并且有：</p>
+
+<p>
+$$
+\delta C = |C||\Omega| \sin \vartheta \mathbf{m} \delta t = \Omega \times C \delta t. \quad (2.2)
+$$
+</p>
