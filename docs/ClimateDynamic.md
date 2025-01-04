@@ -1671,3 +1671,103 @@ $$
 </ul>
 
 <p>这个结果是研究旋转参考系中速度和加速度变化的基础。</p>
+
+<p>
+如果 <i>r<sub>⊥</sub></i> 是到旋转轴的垂直距离（参见图2.1），将 <i>r</i> 替换到：
+</p>
+
+\[
+\mathbf{F}_{ce} = \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
+\]
+
+<p>
+因为 \(\mathbf{\Omega}\) 垂直于 \(\mathbf{r}\)，使用向量恒等式：
+</p>
+
+\[
+\mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r}) = \Omega^2 \mathbf{r}_{\perp}
+\]
+
+<p>
+注意到第一个项为零，我们看到离心力每单位质量可表示为：
+</p>
+
+\[
+F_{ce} = \Omega^2 r_{\perp}
+\]
+
+<p>
+这个表达式可以写成一个标量势的梯度形式：
+</p>
+
+\[
+F_{ce} = -\nabla \Phi_{ce}
+\]
+
+<p>
+其中：
+</p>
+
+\[
+\Phi_{ce} = -\frac{1}{2} (\mathbf{\Omega} \times \mathbf{r})^2
+\]
+
+<h3>📘 旋转参考系中的加速度方程</h3>
+
+<p>
+这个方程可以解释如下：左侧是旋转参考系中相对速度的变化率。右侧第一项是惯性参考系中速度的变化率。  
+</p>
+
+\[
+\left(\frac{d \mathbf{v}}{dt}\right)_I = \left(\frac{d \mathbf{v}}{dt}\right)_R - 2 \mathbf{\Omega} \times \mathbf{v}_R - \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
+\]
+
+<p>
+然后注意到：
+</p>
+
+\[
+\left(\frac{d \mathbf{v}}{dt}\right)_R = \frac{d}{dt} (\mathbf{v}_R - \mathbf{\Omega} \times \mathbf{r})
+\]
+
+<p>
+或者：
+</p>
+
+\[
+\frac{d}{dt} \left(\mathbf{v}_R - \mathbf{\Omega} \times \mathbf{r}\right)
+\]
+
+<p>
+并假设旋转速率是恒定的，该方程变为：
+</p>
+
+\[
+\left(\frac{d \mathbf{v}}{dt}\right)_I = \left(\frac{d \mathbf{v}}{dt}\right)_R + \mathbf{\Omega} \times \mathbf{v}_R + \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
+\]
+
+<p>
+或使用 (2.7)：
+</p>
+
+\[
+\left(\frac{d \mathbf{v}}{dt}\right)_I = \frac{d \mathbf{v}_R}{dt} + \mathbf{\Omega} \times \mathbf{v}_R + \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
+\]
+
+<h3>📘 旋转与惯性速度的关系</h3>
+
+<p>
+我们将速度分为惯性速度 \(\mathbf{v}_I\) 和相对速度 \(\mathbf{v}_R\)，根据 (2.5) 和 (2.7)：
+</p>
+
+\[
+\mathbf{v} = \mathbf{v}_R + \mathbf{\Omega} \times \mathbf{r}
+\]
+
+<p>
+再次将其代入，得：
+</p>
+
+\[
+\left(\frac{d \mathbf{v}}{dt}\right)_I = \left(\frac{d \mathbf{v}}{dt}\right)_R + \mathbf{\Omega} \times \mathbf{v}_R + \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
+\]
