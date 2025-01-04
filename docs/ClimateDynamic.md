@@ -1957,3 +1957,168 @@ $$
 \nabla^2 \varphi = \frac{1}{r^2 \cos \theta} \left[\frac{1}{\cos \theta} \frac{\partial^2 \varphi}{\partial \lambda^2} + \frac{\partial}{\partial \theta} \left(\cos \theta \frac{\partial \varphi}{\partial \theta}\right) + \cos \theta \frac{\partial}{\partial r} \left(r^2 \frac{\partial \varphi}{\partial r}\right)\right]
 \]
 </p>
+<h3>向量的旋度</h3>
+
+<p>
+向量的旋度表示为：
+</p>
+
+<p>
+\[
+\mathbf{curl} \, \mathbf{B} = \nabla \times \mathbf{B} = \frac{1}{r^2 \cos \theta} 
+\begin{vmatrix}
+\mathbf{i} & r \cos \theta & \frac{\partial}{\partial \lambda} \\
+\mathbf{j} & r & \frac{\partial}{\partial \theta} \\
+\mathbf{k} & 1 & \frac{\partial}{\partial r}
+\end{vmatrix}
+\]
+</p>
+
+<p>
+向量拉普拉斯 \(\nabla^2 \mathbf{B}\)（例如在计算动量方程中黏性项时使用）可以由以下向量恒等式得到：
+</p>
+
+<p>
+\[
+\nabla^2 \mathbf{B} = \nabla (\nabla \cdot \mathbf{B}) - \nabla \times (\nabla \times \mathbf{B})
+\]
+</p>
+
+<p>
+只有在笛卡尔坐标系中，它才具有简单的形式：
+</p>
+
+<p>
+\[
+\nabla^2 \mathbf{B} = \frac{\partial^2 \mathbf{B}}{\partial x^2} + \frac{\partial^2 \mathbf{B}}{\partial y^2} + \frac{\partial^2 \mathbf{B}}{\partial z^2}
+\]
+</p>
+
+<p>
+球坐标系中的展开式本身对大多数人来说缺乏直观性。
+</p>
+
+<h4>单位向量的变化率</h4>
+
+<p>
+在球坐标中，定义单位向量为：
+</p>
+<ul>
+    <li><strong>\(\mathbf{i}\)</strong>：指向东方，平行于纬度线。</li>
+    <li><strong>\(\mathbf{j}\)</strong>：指向北方，平行于子午线。</li>
+    <li><strong>\(\mathbf{k}\)</strong>：径向指向外侧。</li>
+</ul>
+
+<p>
+这些向量的方向随着位置而变化，这在几乎所有坐标系中都成立，唯独在笛卡尔坐标系中例外。因此，它们的物质导数不为零。
+</p>
+
+<h4>有效旋转速率</h4>
+
+<p>
+一种评估这些变化的方法是首先确定相对于地球的单位向量的有效旋转速率 \(\Omega_{flow}\)，即向量随流动而变化的速率，然后应用(2.3)。
+</p>
+
+<p>
+具体来说，设流体速度为：
+</p>
+<p>
+\[
+\mathbf{v} = (u, v, w)
+\]
+</p>
+
+<p>
+其中：
+<ul>
+    <li><strong>u</strong>：纬向速度</li>
+    <li><strong>v</strong>：经向速度</li>
+    <li><strong>w</strong>：垂直速度</li>
+</ul>
+</p>
+
+<p>
+经向分量 \(v\) 产生一个位移：
+</p>
+<p>
+\[
+r δθ = v δt
+\]
+</p>
+
+<p>
+这导致局部有效旋转速率围绕局部纬向轴为：
+</p>
+<p>
+\[
+-\frac{v}{r} \mathbf{i}
+\]
+</p>
+
+<p>
+同样，纬向分量 \(u\) 产生一个位移：
+</p>
+<p>
+\[
+δλ r \cos \theta = u δt
+\]
+</p>
+
+<p>
+从而产生一个绕地球旋转轴的有效旋转速率：
+</p>
+<p>
+\[
+\frac{u}{r \cos \theta}
+\]
+</p>
+
+<p>
+因此，围绕地球旋转轴的旋转可以表示为：
+</p>
+<p>
+\[
+\mathbf{\Omega} = \Omega (\mathbf{j} \cos \theta + \mathbf{k} \sin \theta)
+\]
+</p>
+
+<p>
+如果标量旋转速率不是 \(\Omega\) 而是 \(\frac{u}{r \cos \theta}\)，则向量旋转速率为：
+</p>
+
+<p>
+\[
+\frac{u}{r \cos \theta} (\mathbf{j} \cos \theta + \mathbf{k} \sin \theta) = \mathbf{j} \frac{u}{r} + \mathbf{k} \frac{u \tan \theta}{r}
+\]
+</p>
+
+<p>
+因此，随流动移动的向量的总旋转速率为：
+</p>
+<p>
+\[
+\mathbf{\Omega}_{flow} = -\mathbf{i} \frac{v}{r} + \mathbf{j} \frac{u}{r} + \mathbf{k} \frac{u \tan \theta}{r}
+\]
+</p>
+
+<p>
+将(2.3)应用于(2.31)，我们得到：
+</p>
+
+<p>
+\[
+\frac{D \mathbf{i}}{Dt} = \Omega_{flow} \times \mathbf{i} = \frac{u}{r \cos \theta} (\mathbf{j} \sin \theta - \mathbf{k} \cos \theta)
+\]
+</p>
+
+<p>
+\[
+\frac{D \mathbf{j}}{Dt} = \Omega_{flow} \times \mathbf{j} = -\mathbf{i} \frac{u}{r} \tan \theta - \mathbf{k} \frac{v}{r}
+\]
+</p>
+
+<p>
+\[
+\frac{D \mathbf{k}}{Dt} = \Omega_{flow} \times \mathbf{k} = \mathbf{i} \frac{u}{r} + \mathbf{j} \frac{v}{r}
+\]
+</p>
