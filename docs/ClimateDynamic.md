@@ -1757,3 +1757,105 @@ $$
 \Phi_{ce} = -\frac{(\mathbf{\Omega}^2 r⊥^2)}{2} = -\frac{(\mathbf{\Omega} r⊥)^2}{2}
 \]
 </p>
+<h4><em>科里奥利力</em></h4>
+<p>
+科里奥利力的单位质量形式为：
+</p>
+
+<p>
+\[
+\mathbf{F}_{co} = -2\mathbf{\Omega} \times \mathbf{v}_R
+\]
+</p>
+<p>
+我们将广泛讨论科里奥利力的影响，但现在仅需注意三个基本性质：
+</p>
+<ol>
+  <li>在旋转参考系中静止的物体不会受到科里奥利力的作用。</li>
+  <li>科里奥利力会使运动物体的轨迹发生偏转，其方向与物体的运动方向成直角。</li>
+  <li>科里奥利力对物体不做功，因为它与速度成垂直方向。因此：
+  \[
+  \mathbf{v}_R \cdot (\mathbf{\Omega} \times \mathbf{v}_R) = 0
+  \]</li>
+</ol>
+
+<h3>2.1.3 旋转参考系中的运动方程</h3>
+
+<h4><em>动量方程</em></h4>
+<p>
+由于(2.12)简单地关联了惯性系和旋转系中粒子的加速度，那么在旋转参考系中，三维动量方程可写为：
+</p>
+
+<p>
+\[
+\frac{D\mathbf{v}}{Dt} + 2\mathbf{\Omega} \times \mathbf{v} = -\frac{1}{\rho} \nabla p - \nabla \Phi_{ce} + \mathbf{g}
+\]
+</p>
+
+<p>
+所有的速度和加速度均相对于惯性系进行测量。由于离心项不会随着流体的运动而变化，我们可以将其纳入重力项 <em>g</em> 中，从而得到一个随地球表面位置略有变化的“有效重力”。
+</p>
+
+<h4><em>质量连续性方程与热力学方程</em></h4>
+<p>
+质量守恒方程和热力学方程在旋转参考系中不会发生改变。为了证明这一点，请考虑某个变量 φ（例如温度或密度）的物质导数。物质导数只是某个可识别的流体单元中 φ 的变化率，这显然不依赖于参考系。因此，可以写成：
+</p>
+
+<p>
+\[
+\left(\frac{D\varphi}{Dt}\right)_R = \left(\frac{D\varphi}{Dt}\right)_I
+\]
+</p>
+
+<p>
+其中，物质导数可表示为：
+</p>
+<p>
+\[
+\left(\frac{D\varphi}{Dt}\right)_R = \left(\frac{\partial \varphi}{\partial t}\right)_R + \mathbf{v}_R \cdot \nabla \varphi
+\]
+</p>
+<p>
+\[
+\left(\frac{D\varphi}{Dt}\right)_I = \left(\frac{\partial \varphi}{\partial t}\right)_I + \mathbf{v}_I \cdot \nabla \varphi
+\]
+</p>
+
+<p>
+这两个参考系中的各个项有所不同：在旋转系中为 \(\left(\frac{\partial \varphi}{\partial t}\right)_R\)，而在惯性系中为 \(\left(\frac{\partial \varphi}{\partial t}\right)_I\)，但物质导数是相等的。
+</p>
+
+<p>
+此外，散度算子在惯性系和旋转系中是相同的。根据(2.7)，我们有：
+</p>
+
+<p>
+\[
+\nabla \cdot \mathbf{v}_I = \nabla \cdot (\mathbf{v}_R + \mathbf{\Omega} \times \mathbf{r}) = \nabla \cdot \mathbf{v}_R
+\]
+</p>
+
+<p>
+因为：
+</p>
+<p>
+\[
+\nabla \cdot (\mathbf{\Omega} \times \mathbf{r}) = 0
+\]
+</p>
+
+<p>
+因此，结合(2.17)和(2.18)，质量守恒方程(1.27b)可写为：
+</p>
+
+<p>
+\[
+\frac{D\rho}{Dt} + \rho \nabla \cdot \mathbf{v}_R = 0
+\]
+</p>
+
+
+<h4><em>历史背景</em></h4>
+<p>
+科里奥利力以加斯帕尔-古斯塔夫·德·科里奥利（Gaspard-Gustave de Coriolis，1792-1843）的名字命名，他在1835年首次在工程背景下讨论了这一效应，尽管这一基本效应最早由莱昂哈德·欧拉（Leonhard Euler，1707-1783）在数学中识别出来。拉普拉斯（Laplace）在1776年的潮汐方程中也包含了这一项，后于1832年以英文出版。威廉·费雷尔（William Ferrel，1817-1891）或许是第一个认识到科里奥利力对地球环流影响的人，并在拉普拉斯方程中识别和讨论了相关项 \((2\Omega u \sin \theta)\)。
+</p>
