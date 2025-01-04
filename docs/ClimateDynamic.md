@@ -1651,123 +1651,84 @@ $$
 </p>
 
 <p>这个关系适用于向量 <strong>B</strong>，在任何时间点测量时，它在惯性参考系和旋转参考系中是相同的。</p>
+<h3>2.1.2 旋转参考系中的速度和加速度</h3>
 
-<h3>2.1.2 旋转参考系中的速度与加速度</h3>
-
-<p>物体的速度在惯性参考系和旋转参考系中并不一定相同，因此在将公式 (2.5) 应用于速度时必须小心。</p>
-
-<p>首先将公式 (2.5) 应用于粒子的位置向量 <strong>r</strong>，得到：</p>
+<p>物体在惯性系和旋转系中测得的速度并不相同，因此在将公式 (2.5) 应用到速度时必须小心。</p>
+<p>首先，将 (2.5) 应用于粒子的位置 \( \mathbf{r} \)，得到：</p>
 
 <p>
-$$
-\left(\frac{d \mathbf{r}}{d t}\right)_I = \left(\frac{d \mathbf{r}}{d t}\right)_R + \mathbf{\Omega} \times \mathbf{r}. \quad (2.6)
-$$
+\[
+\left(\frac{d\mathbf{r}}{dt}\right)_I = \left(\frac{d\mathbf{r}}{dt}\right)_R + \boldsymbol{\Omega} \times \mathbf{r} \quad (2.6)
+\]
 </p>
 
-<p>以上公式表明，在惯性参考系中测得的位置向量变化率包括两个部分：</p>
+<h3>离心力</h3>
+
+<p>如果 \( r_\perp \) 是到旋转轴的垂直距离 (参见图 2.1)，并将其代入 \( \boldsymbol{\Omega} \times (\boldsymbol{\Omega} \times \mathbf{r}) \) 中。</p>
+<p>因为 \( \boldsymbol{\Omega} \) 垂直于 \( r_\perp \)，使用矢量恒等式 \( \boldsymbol{\Omega} \times (\boldsymbol{\Omega} \times \mathbf{r}) = \Omega^2 r_\perp \)，第一项为零，因此离心力可以表示为：</p>
+
+<p>
+\[
+\mathbf{F}_{ce} = \boldsymbol{\Omega} \times (\boldsymbol{\Omega} \times \mathbf{r}) = \Omega^2 r_\perp \quad (2.13)
+\]
+</p>
+
+<p>这可以方便地写成标量势能的梯度形式：</p>
+
+<p>
+\[
+\mathbf{F}_{ce} = -\nabla \Phi_{ce}
+\]
+</p>
+
+<p>其中：</p>
+<p>
+\[
+\Phi_{ce} = -\frac{(\boldsymbol{\Omega} \times \mathbf{r})^2}{2}
+\]
+</p>
+
+<p>或者：</p>
+<p>
+\[
+\Phi_{ce} = -\frac{\Omega^2 r_\perp^2}{2} \quad (2.14)
+\]
+</p>
+
+<h3>旋转系中的速度关系</h3>
+
+<p>我们将相对速度 \( v_R \) 和惯性速度 \( v_I \) 之间的关系写为：</p>
+
+<p>
+\[
+v_I = v_R + \boldsymbol{\Omega} \times \mathbf{r}
+\]
+</p>
+
+<p>将公式 (2.5) 再次应用于速度 \( v_R \) 时，得到：</p>
+
+<p>
+\[
+\left(\frac{d\mathbf{v}}{dt}\right)_I = \left(\frac{d\mathbf{v}}{dt}\right)_R + \boldsymbol{\Omega} \times \mathbf{v}_R + \frac{d\boldsymbol{\Omega}}{dt} \times \mathbf{r}
+\]
+</p>
+
+<p>在假设旋转速率为常数的情况下，公式简化为：</p>
+
+<p>
+\[
+\left(\frac{d\mathbf{v}}{dt}\right)_I = \left(\frac{d\mathbf{v}}{dt}\right)_R + 2\boldsymbol{\Omega} \times \mathbf{v}_R + \boldsymbol{\Omega} \times (\boldsymbol{\Omega} \times \mathbf{r})
+\]
+</p>
+
+<p>这个方程可以解释为：</p>
 <ul>
-  <li>在旋转参考系中测得的位置向量变化率。</li>
-  <li>由于旋转参考系的角速度 <strong>Ω</strong> 引起的附加变化。</li>
+    <li>左侧项表示惯性系中测得的加速度。</li>
+    <li>右侧第一项是旋转系中相对速度的变化率。</li>
+    <li>第二项是科里奥利加速度。</li>
+    <li>第三项是离心加速度。</li>
 </ul>
 
-<p>这个结果是研究旋转参考系中速度和加速度变化的基础。</p>
+<h3>总结</h3>
 
-<p>
-如果 <i>r<sub>⊥</sub></i> 是到旋转轴的垂直距离（参见图2.1），将 <i>r</i> 替换到：
-</p>
-
-\[
-\mathbf{F}_{ce} = \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
-\]
-
-<p>
-因为 \(\mathbf{\Omega}\) 垂直于 \(\mathbf{r}\)，使用向量恒等式：
-</p>
-
-\[
-\mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r}) = \Omega^2 \mathbf{r}_{\perp}
-\]
-
-<p>
-注意到第一个项为零，我们看到离心力每单位质量可表示为：
-</p>
-
-\[
-F_{ce} = \Omega^2 r_{\perp}
-\]
-
-<p>
-这个表达式可以写成一个标量势的梯度形式：
-</p>
-
-\[
-F_{ce} = -\nabla \Phi_{ce}
-\]
-
-<p>
-其中：
-</p>
-
-\[
-\Phi_{ce} = -\frac{1}{2} (\mathbf{\Omega} \times \mathbf{r})^2
-\]
-
-<h3>📘 旋转参考系中的加速度方程</h3>
-
-<p>
-这个方程可以解释如下：左侧是旋转参考系中相对速度的变化率。右侧第一项是惯性参考系中速度的变化率。  
-</p>
-
-\[
-\left(\frac{d \mathbf{v}}{dt}\right)_I = \left(\frac{d \mathbf{v}}{dt}\right)_R - 2 \mathbf{\Omega} \times \mathbf{v}_R - \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
-\]
-
-<p>
-然后注意到：
-</p>
-
-\[
-\left(\frac{d \mathbf{v}}{dt}\right)_R = \frac{d}{dt} (\mathbf{v}_R - \mathbf{\Omega} \times \mathbf{r})
-\]
-
-<p>
-或者：
-</p>
-
-\[
-\frac{d}{dt} \left(\mathbf{v}_R - \mathbf{\Omega} \times \mathbf{r}\right)
-\]
-
-<p>
-并假设旋转速率是恒定的，该方程变为：
-</p>
-
-\[
-\left(\frac{d \mathbf{v}}{dt}\right)_I = \left(\frac{d \mathbf{v}}{dt}\right)_R + \mathbf{\Omega} \times \mathbf{v}_R + \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
-\]
-
-<p>
-或使用 (2.7)：
-</p>
-
-\[
-\left(\frac{d \mathbf{v}}{dt}\right)_I = \frac{d \mathbf{v}_R}{dt} + \mathbf{\Omega} \times \mathbf{v}_R + \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
-\]
-
-<h3>📘 旋转与惯性速度的关系</h3>
-
-<p>
-我们将速度分为惯性速度 \(\mathbf{v}_I\) 和相对速度 \(\mathbf{v}_R\)，根据 (2.5) 和 (2.7)：
-</p>
-
-\[
-\mathbf{v} = \mathbf{v}_R + \mathbf{\Omega} \times \mathbf{r}
-\]
-
-<p>
-再次将其代入，得：
-</p>
-
-\[
-\left(\frac{d \mathbf{v}}{dt}\right)_I = \left(\frac{d \mathbf{v}}{dt}\right)_R + \mathbf{\Omega} \times \mathbf{v}_R + \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
-\]
+<p>在旋转参考系中观测到的物体运动表现为有额外的科里奥利力和离心力，这两者可以看作是准力（即假想力），它们不是实际存在的力，而是由于旋转参考系的存在而产生的效应。</p>
