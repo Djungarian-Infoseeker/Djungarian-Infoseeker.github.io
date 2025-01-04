@@ -1963,13 +1963,16 @@ $$
 向量的旋度表示为：
 </p>
 
+
+
 <p>
 \[
 \mathbf{curl} \, \mathbf{B} = \nabla \times \mathbf{B} = \frac{1}{r^2 \cos \theta} 
 \begin{vmatrix}
 \mathbf{i} & r \cos \theta & \frac{\partial}{\partial \lambda} \\
 \mathbf{j} & r & \frac{\partial}{\partial \theta} \\
-\mathbf{k} & 1 & \frac{\partial}{\partial r}
+\mathbf{k} & 1 & \frac{\partial}{\partial r} \\
+B^\lambda r \cos \theta & B^\theta r & B^r
 \end{vmatrix}
 \]
 </p>
