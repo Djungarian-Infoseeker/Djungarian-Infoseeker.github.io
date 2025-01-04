@@ -1607,7 +1607,6 @@ $$
 \delta C = |C||\Omega| \sin \vartheta \mathbf{m} \delta t = \Omega \times C \delta t. \quad (2.2)
 $$
 </p>
-<h2>使用矢量叉积的定义</h2>
 
 <p>其中，<strong>ϑ = (π/2 − ϑ)</strong> 是 <strong>Ω</strong> 和 <strong>C</strong> 之间的角度。因此，有：</p>
 
