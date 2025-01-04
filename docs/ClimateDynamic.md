@@ -1652,83 +1652,108 @@ $$
 
 <p>这个关系适用于向量 <strong>B</strong>，在任何时间点测量时，它在惯性参考系和旋转参考系中是相同的。</p>
 <h3>2.1.2 旋转参考系中的速度和加速度</h3>
-
-<p>物体在惯性系和旋转系中测得的速度并不相同，因此在将公式 (2.5) 应用到速度时必须小心。</p>
-<p>首先，将 (2.5) 应用于粒子的位置 \( \mathbf{r} \)，得到：</p>
+<p>
+物体在惯性系和旋转系中的速度测量结果并不相同，因此在将(2.5)应用于速度时必须格外小心。首先将(2.5)应用于粒子的位置 <em>r</em>，可得到：
+</p>
 
 <p>
 \[
-\left(\frac{d\mathbf{r}}{dt}\right)_I = \left(\frac{d\mathbf{r}}{dt}\right)_R + \boldsymbol{\Omega} \times \mathbf{r} \quad (2.6)
+\left(\frac{d\mathbf{r}}{dt}\right)_I = \left(\frac{d\mathbf{r}}{dt}\right)_R + \mathbf{\Omega} \times \mathbf{r}
 \]
 </p>
-
-<h3>离心力</h3>
-
-<p>如果 \( r_\perp \) 是到旋转轴的垂直距离 (参见图 2.1)，并将其代入 \( \boldsymbol{\Omega} \times (\boldsymbol{\Omega} \times \mathbf{r}) \) 中。</p>
-<p>因为 \( \boldsymbol{\Omega} \) 垂直于 \( r_\perp \)，使用矢量恒等式 \( \boldsymbol{\Omega} \times (\boldsymbol{\Omega} \times \mathbf{r}) = \Omega^2 r_\perp \)，第一项为零，因此离心力可以表示为：</p>
 
 <p>
+或者：
+</p>
+<p>
 \[
-\mathbf{F}_{ce} = \boldsymbol{\Omega} \times (\boldsymbol{\Omega} \times \mathbf{r}) = \Omega^2 r_\perp \quad (2.13)
+\mathbf{v}_I = \mathbf{v}_R + \mathbf{\Omega} \times \mathbf{r}
+\]
+</p>
+<p>
+我们将 <em>v_R</em> 和 <em>v_I</em> 分别称为相对速度和惯性速度，公式(2.7)将两者联系起来。再次将(2.5)应用于速度 <em>v_R</em>，可得：
+</p>
+<p>
+\[
+\left(\frac{d\mathbf{v}_R}{dt}\right)_I = \left(\frac{d\mathbf{v}_R}{dt}\right)_R + \mathbf{\Omega} \times \mathbf{v}_R
+\]
+</p>
+<p>
+或者，使用(2.7)：
+</p>
+<p>
+\[
+\left(\frac{d}{dt}(\mathbf{v}_I - \mathbf{\Omega} \times \mathbf{r})\right)_I = \left(\frac{d\mathbf{v}_R}{dt}\right)_R + \mathbf{\Omega} \times \mathbf{v}_R
+\]
+</p>
+<p>
+或：
+</p>
+<p>
+\[
+\left(\frac{d\mathbf{v}_I}{dt}\right)_I = \left(\frac{d\mathbf{v}_R}{dt}\right)_R + \mathbf{\Omega} \times \mathbf{v}_R + \frac{d\mathbf{\Omega}}{dt} \times \mathbf{r} + \mathbf{\Omega} \times \left(\frac{d\mathbf{r}}{dt}\right)_I
+\]
+</p>
+<p>
+然后，注意到：
+</p>
+<p>
+\[
+\left(\frac{d\mathbf{r}}{dt}\right)_I = \left(\frac{d\mathbf{r}}{dt}\right)_R + \mathbf{\Omega} \times \mathbf{r} = (\mathbf{v}_R + \mathbf{\Omega} \times \mathbf{r})
+\]
+</p>
+<p>
+并假设旋转速率是恒定的，(2.10)变为：
+</p>
+<p>
+\[
+\left(\frac{d\mathbf{v}_R}{dt}\right)_R = \left(\frac{d\mathbf{v}_I}{dt}\right)_I - 2\mathbf{\Omega} \times \mathbf{v}_R - \mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r})
 \]
 </p>
 
-<p>这可以方便地写成标量势能的梯度形式：</p>
+<h4>解释</h4>
+<p>
+该方程可以解释如下：左侧项是在旋转参考系中测量的相对速度的变化率。右侧第一项是惯性系中测得的惯性速度的变化率（惯性加速度，根据牛顿第二定律，等于流体单元所受的力除以其质量）。右侧第二和第三项（包括负号）分别是<strong>科里奥利力</strong>和<strong>离心力</strong>（单位质量）。这两者通常不被视为真正的力——它们可以看作是准力（即“仿佛”的力）；也就是说，当从旋转参考系观察物体时，它表现得好像有某些看不见的力在影响其运动。
+</p>
 
+<h4>离心力</h4>
+<p>
+如果 <em>r⊥</em> 是到旋转轴的垂直距离（参见图2.1，并将 <em>r</em> 替换为 <em>r⊥</em>），因为 <em>Ω</em> 垂直于 <em>r⊥</em>，有：
+</p>
+<p>
+\[
+\mathbf{\Omega} \times \mathbf{r} = \mathbf{\Omega} \times \mathbf{r⊥}
+\]
+</p>
+<p>
+然后，使用向量恒等式：
+</p>
+<p>
+\[
+\mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r}) = (\mathbf{\Omega} \cdot \mathbf{r}) \mathbf{\Omega} - (\mathbf{\Omega} \cdot \mathbf{\Omega}) \mathbf{r}
+\]
+</p>
+<p>
+注意到第一项为零，可以得出单位质量的离心力为：
+</p>
+<p>
+\[
+\mathbf{F}_{ce} = -\mathbf{\Omega} \times (\mathbf{\Omega} \times \mathbf{r}) = \mathbf{\Omega}^2 r⊥
+\]
+</p>
+<p>
+这个公式可以写成标量势的梯度：
+</p>
 <p>
 \[
 \mathbf{F}_{ce} = -\nabla \Phi_{ce}
 \]
 </p>
-
-<p>其中：</p>
+<p>
+其中：
+</p>
 <p>
 \[
-\Phi_{ce} = -\frac{(\boldsymbol{\Omega} \times \mathbf{r})^2}{2}
+\Phi_{ce} = -\frac{(\mathbf{\Omega}^2 r⊥^2)}{2} = -\frac{(\mathbf{\Omega} r⊥)^2}{2}
 \]
 </p>
-
-<p>或者：</p>
-<p>
-\[
-\Phi_{ce} = -\frac{\Omega^2 r_\perp^2}{2} \quad (2.14)
-\]
-</p>
-
-<h3>旋转系中的速度关系</h3>
-
-<p>我们将相对速度 \( v_R \) 和惯性速度 \( v_I \) 之间的关系写为：</p>
-
-<p>
-\[
-v_I = v_R + \boldsymbol{\Omega} \times \mathbf{r}
-\]
-</p>
-
-<p>将公式 (2.5) 再次应用于速度 \( v_R \) 时，得到：</p>
-
-<p>
-\[
-\left(\frac{d\mathbf{v}}{dt}\right)_I = \left(\frac{d\mathbf{v}}{dt}\right)_R + \boldsymbol{\Omega} \times \mathbf{v}_R + \frac{d\boldsymbol{\Omega}}{dt} \times \mathbf{r}
-\]
-</p>
-
-<p>在假设旋转速率为常数的情况下，公式简化为：</p>
-
-<p>
-\[
-\left(\frac{d\mathbf{v}}{dt}\right)_I = \left(\frac{d\mathbf{v}}{dt}\right)_R + 2\boldsymbol{\Omega} \times \mathbf{v}_R + \boldsymbol{\Omega} \times (\boldsymbol{\Omega} \times \mathbf{r})
-\]
-</p>
-
-<p>这个方程可以解释为：</p>
-<ul>
-    <li>左侧项表示惯性系中测得的加速度。</li>
-    <li>右侧第一项是旋转系中相对速度的变化率。</li>
-    <li>第二项是科里奥利加速度。</li>
-    <li>第三项是离心加速度。</li>
-</ul>
-
-<h3>总结</h3>
-
-<p>在旋转参考系中观测到的物体运动表现为有额外的科里奥利力和离心力，这两者可以看作是准力（即假想力），它们不是实际存在的力，而是由于旋转参考系的存在而产生的效应。</p>
