@@ -1868,3 +1868,92 @@ $$
 <p>
 更一般地说，<strong>标量演化方程</strong>在<strong>旋转参考系</strong>和<strong>惯性参考系</strong>中是相同的，不受旋转的影响。
 </p>
+<h3>2.2 球坐标系中的运动方程</h3>
+
+<p>
+由于地球以及我们所知的大多数其他行星非常接近球形，我们通常在球坐标系中表示方程。我们很少完全使用方程的球坐标形式，但我们的近似值直接源自这些方程。信任的读者可以跳过推导，直接查看主要结果，如(2.34)、(2.35)和(2.40)所示。
+</p>
+
+<h4>2.2.1 球坐标系中的一些恒等式</h4>
+
+<p>
+一个点的位置由坐标 \((λ, θ, r)\) 给出，其中：
+</p>
+<ul>
+    <li><strong>λ</strong> 是向东的角度距离（即，经度）。</li>
+    <li><strong>θ</strong> 是向极点的角度距离（即，纬度）。</li>
+    <li><strong>r</strong> 是从地球中心到该点的径向距离。</li>
+</ul>
+
+<p>
+（在其他一些研究领域中，余纬度也被用作球面坐标）。如果 <em>a</em> 是地球半径，则我们还可以定义 <em>z = r - a</em>。在给定位置，我们也可以定义笛卡尔增量 \((δx, δy, δz) = (r \cos θ δλ, r δθ, δr)\)。
+</p>
+
+<p>
+对于一个标量变量 \(\varphi\)，其在球坐标系中的物质导数为：
+</p>
+
+<p>
+\[
+\frac{D \varphi}{Dt} = \frac{\partial \varphi}{\partial t} + \frac{u}{r \cos \theta} \frac{\partial \varphi}{\partial \lambda} + \frac{v}{r} \frac{\partial \varphi}{\partial \theta} + w \frac{\partial \varphi}{\partial r}
+\]
+</p>
+
+<p>
+其中，速度分量与坐标 \((λ, θ, r)\) 对应为：
+</p>
+
+<p>
+\[
+(u, v, w) \equiv \left(r \cos \theta \frac{D \lambda}{Dt}, r \frac{D \theta}{Dt}, \frac{D r}{Dt}\right)
+\]
+</p>
+
+<p>
+也就是说，<em>u</em> 是纬向速度，<em>v</em> 是经向速度，<em>w</em> 是垂直速度。如果我们将 \((\mathbf{i}, \mathbf{j}, \mathbf{k})\) 定义为沿着 \((λ, θ, r)\) 增加方向的单位向量，那么：
+</p>
+
+<p>
+\[
+\mathbf{v} = \mathbf{i} u + \mathbf{j} v + \mathbf{k} w
+\]
+</p>
+
+<p>
+还要注意：
+</p>
+<p>
+\[
+\frac{Dr}{Dt} = \frac{Dz}{Dt}
+\]
+</p>
+
+<p>
+向量 \(\mathbf{B} = \mathbf{i} B^\lambda + \mathbf{j} B^\theta + \mathbf{k} B^r\) 的散度为：
+</p>
+
+<p>
+\[
+\nabla \cdot \mathbf{B} = \frac{1}{\cos \theta} \left[\frac{1}{r} \frac{\partial (B^\lambda r \cos \theta)}{\partial \lambda} + \frac{1}{r} \frac{\partial (B^\theta \cos \theta)}{\partial \theta} + \frac{\cos \theta}{r^2} \frac{\partial (r^2 B^r)}{\partial r}\right]
+\]
+</p>
+
+<p>
+标量的梯度为：
+</p>
+
+<p>
+\[
+\nabla \varphi = \mathbf{i} \frac{1}{r \cos \theta} \frac{\partial \varphi}{\partial \lambda} + \mathbf{j} \frac{1}{r} \frac{\partial \varphi}{\partial \theta} + \mathbf{k} \frac{\partial \varphi}{\partial r}
+\]
+</p>
+
+<p>
+标量的拉普拉斯为：
+</p>
+
+<p>
+\[
+\nabla^2 \varphi = \frac{1}{r^2 \cos \theta} \left[\frac{1}{\cos \theta} \frac{\partial^2 \varphi}{\partial \lambda^2} + \frac{\partial}{\partial \theta} \left(\cos \theta \frac{\partial \varphi}{\partial \theta}\right) + \cos \theta \frac{\partial}{\partial r} \left(r^2 \frac{\partial \varphi}{\partial r}\right)\right]
+\]
+</p>
