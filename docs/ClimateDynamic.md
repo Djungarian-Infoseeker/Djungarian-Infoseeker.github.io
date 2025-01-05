@@ -1968,9 +1968,8 @@ $$
 \[
 \mathbf{curl} \, \mathbf{B} = \nabla \times \mathbf{B} = \frac{1}{r^2 \cos \vartheta} 
 \begin{vmatrix}
-\mathbf{\hat{i}} & r \cos \vartheta & \frac{\partial}{\partial \lambda} \\
-\mathbf{\hat{j}} & r & \frac{\partial}{\partial \vartheta} \\
-\mathbf{\hat{k}} & 1 & \frac{\partial}{\partial r} \\
+\mathbf{\hat{i}} r \cos \vartheta & \mathbf{\hat{j}}r & \mathbf{\hat{k}} \\
+\frac{\partial}{\partial \lambda} & \frac{\partial}{\partial \vartheta} & \frac{\partial}{\partial r} \\
 B^\lambda r \cos \vartheta & B^\vartheta r & B^r
 \end{vmatrix}
 \]
