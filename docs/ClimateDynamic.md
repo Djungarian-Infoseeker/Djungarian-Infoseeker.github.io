@@ -1966,15 +1966,16 @@ $$
 
 <p>
 \[
-\mathbf{curl} \, \mathbf{B} = \nabla \times \mathbf{B} = \frac{1}{r^2 \cos \theta} 
+\mathbf{curl} \, \mathbf{B} = \nabla \times \mathbf{B} = \frac{1}{r^2 \cos \vartheta} 
 \begin{vmatrix}
-\mathbf{i} & r \cos \theta & \frac{\partial}{\partial \lambda} \\
-\mathbf{j} & r & \frac{\partial}{\partial \theta} \\
-\mathbf{k} & 1 & \frac{\partial}{\partial r} \\
-B^\lambda r \cos \theta & B^\theta r & B^r
+\mathbf{\hat{i}} & r \cos \vartheta & \frac{\partial}{\partial \lambda} \\
+\mathbf{\hat{j}} & r & \frac{\partial}{\partial \vartheta} \\
+\mathbf{\hat{k}} & 1 & \frac{\partial}{\partial r} \\
+B^\lambda r \cos \vartheta & B^\vartheta r & B^r
 \end{vmatrix}
 \]
 </p>
+
 
 <p>
 向量拉普拉斯 \(\nabla^2 \mathbf{B}\)（例如在计算动量方程中黏性项时使用）可以由以下向量恒等式得到：
