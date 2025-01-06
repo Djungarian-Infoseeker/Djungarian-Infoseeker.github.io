@@ -2124,3 +2124,116 @@ r δθ = v δt
 \frac{D \mathbf{k}}{Dt} = \Omega_{flow} \times \mathbf{k} = \mathbf{i} \frac{u}{r} + \mathbf{j} \frac{v}{r}
 \]
 </p>
+<h3>2.2.2 运动方程 (Equations of Motion)</h3>
+
+<p>我们现在可以写出球形星球上的运动方程。</p>
+
+<h4>质量守恒和热力学方程 (Mass conservation and the thermodynamic equation)</h4>
+
+<p>质量守恒方程 (1.27a) 在球坐标系中展开为：</p>
+
+<p>
+\[
+\frac{\partial \rho}{\partial t} + \frac{u}{r \cos \theta} \frac{\partial \rho}{\partial \lambda} + \frac{v}{r} \frac{\partial \rho}{\partial \theta} + w \frac{\partial \rho}{\partial r} + \frac{\rho}{r \cos \theta} \left[\frac{\partial u}{\partial \lambda} + \frac{\partial (v \cos \theta)}{\partial \theta} + \frac{1}{r} \frac{\partial (w r^2 \cos \theta)}{\partial r}\right] = 0. \quad (2.33)
+\]
+</p>
+
+<p>等价地，使用形式 (1.27b)，该方程可写为：</p>
+
+<p>
+\[
+\frac{\partial \rho}{\partial t} + \frac{1}{r \cos \theta} \frac{\partial (u \rho)}{\partial \lambda} + \frac{1}{r \cos \theta} \frac{\partial (v \rho \cos \theta)}{\partial \theta} + \frac{1}{r^2} \frac{\partial (r^2 w \rho)}{\partial r} = 0. \quad (2.34)
+\]
+</p>
+
+<h4>热力学方程 (Thermodynamic Equation)</h4>
+
+<p>热力学方程在势温形式下是一个平流方程。因此，使用 (2.20)，其绝热球坐标形式为：</p>
+
+<p>
+\[
+\frac{D \theta}{D t} = \frac{\partial \theta}{\partial t} + \frac{u}{r \cos \theta} \frac{\partial \theta}{\partial \lambda} + \frac{v}{r} \frac{\partial \theta}{\partial \theta} + w \frac{\partial \theta}{\partial r} = 0. \quad (2.35)
+\]
+</p>
+
+<p>对于水蒸气或盐等示踪物质，也有类似的方程。</p>
+
+<h4>动量方程 (Momentum Equation)</h4>
+
+<p>回顾无粘动量方程：</p>
+
+<p>
+\[
+\frac{D \mathbf{v}}{D t} + 2 \mathbf{\Omega} \times \mathbf{v} = -\frac{1}{\rho} \nabla p - \nabla \Phi. \quad (2.36)
+\]
+</p>
+
+<p>其中，\(\Phi\) 是位势。在球坐标系中，坐标轴方向随位置变化，因此 (2.36) 的分量展开为：</p>
+
+<p>
+\[
+\frac{D \mathbf{v}}{D t} = \frac{D u}{D t} \mathbf{i} + \frac{D v}{D t} \mathbf{j} + \frac{D w}{D t} \mathbf{k} + u \frac{D \mathbf{i}}{D t} + v \frac{D \mathbf{j}}{D t} + w \frac{D \mathbf{k}}{D t}. \quad (2.37a)
+\]
+</p>
+
+<p>或者：</p>
+
+<p>
+\[
+\frac{D \mathbf{v}}{D t} = \frac{D u}{D t} \mathbf{i} + \frac{D v}{D t} \mathbf{j} + \frac{D w}{D t} \mathbf{k} + \mathbf{\Omega}_{\text{flow}} \times \mathbf{v}. \quad (2.37b)
+\]
+</p>
+
+<p>使用 (2.32) 和单位向量的变化率表达式，以及 (2.31) 中给出的 \(\mathbf{\Omega}_{\text{flow}}\)，(2.37) 变为：</p>
+
+<p>
+\[
+\frac{D \mathbf{v}}{D t} = \mathbf{i} \left(\frac{D u}{D t} - \frac{w v \tan \theta}{r} + \frac{u v}{r}\right) + \mathbf{j} \left(\frac{D v}{D t} + \frac{u^2 \tan \theta}{r} + \frac{w u}{r}\right) + \mathbf{k} \left(\frac{D w}{D t} - \frac{u^2 + v^2}{r}\right). \quad (2.38)
+\]
+</p>
+
+<p>使用向量叉积的定义，科里奥利项为：</p>
+
+<p>
+\[
+2 \mathbf{\Omega} \times \mathbf{v} = 
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+0 & 2 \Omega \cos \theta & 2 \Omega \sin \theta \\
+u & v & w
+\end{vmatrix}
+= \mathbf{i} (2 \Omega w \cos \theta - 2 \Omega v \sin \theta) + \mathbf{j} (2 \Omega u \sin \theta) - \mathbf{k} (2 \Omega u \cos \theta). \quad (2.39)
+\]
+</p>
+
+<h4>2.2.3 原始方程 (Primitive Equations)</h4>
+
+<p>在考虑大尺度大气流动时，(2.40) 可以简化为三种方式：</p>
+
+<ol>
+<li>通过静力学假设。</li>
+<li>忽略垂直速度项，因为 \(|w| \ll |u|, |v|\)。</li>
+<li>将到地心的距离 \(r\) 视为常数 \(a\)，并将 \(r\) 替换为 \(a\) 且 \(\partial / \partial r\) 替换为 \(\partial / \partial z\)。</li>
+</ol>
+
+<p>这些简化最终源于大气相对于地球半径的薄壳特性。</p>
+
+<p>方程变为：</p>
+
+<p>
+\[
+\frac{D u}{D t} - 2 \Omega v \sin \theta + \frac{u v \tan \theta}{a} = -\frac{1}{\rho a \cos \theta} \frac{\partial p}{\partial \lambda}. \quad (2.41a)
+\]
+</p>
+
+<p>
+\[
+\frac{D v}{D t} + 2 \Omega u \sin \theta + \frac{u^2 \tan \theta}{a} = -\frac{1}{\rho a} \frac{\partial p}{\partial \theta}. \quad (2.41b)
+\]
+</p>
+
+<p>
+\[
+\frac{\partial p}{\partial z} = -\rho g. \quad (2.41c)
+\]
+</p>
