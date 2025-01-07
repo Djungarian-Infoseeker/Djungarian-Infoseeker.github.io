@@ -2270,7 +2270,7 @@ u & v & w
 </p>
 
 <p>
-其中，旋转向量可以写作 <i>Ω = Ω<sub>x</sub> i + Ω<sub>y</sub> j + Ω<sub>z</sub> k</i>，并令 Ω<sup>X</sup> = Ω cos ϑ<sub>0</sub>，Ω<sup>Y</sup> = Ω sin ϑ<sub>0</sub>。我们现在忽略 Ω 在局部垂直方向之外的所有分量，这称为“传统近似 (the traditional approximation)”，在这里它可以被视为对应于浅薄大气近似的一种笛卡尔类比 (Cartesian analogue)。注意，所有被忽略的项都要么被乘以或被投影到一个垂直速度上，因此并未明确列出。
+其中，旋转向量可以写作 <i>Ω = Ω<sub>x</sub> i + Ω<sub>y</sub> j + Ω<sub>z</sub> k</i>，并令Ω<sup>X</sup> =0 Ω<sup>Y</sup> = Ω cos ϑ<sub>0</sub>，Ω<sup>Z</sup> = Ω sin ϑ<sub>0</sub>。我们现在忽略 Ω 在局部垂直方向之外的所有分量，这称为“传统近似 (the traditional approximation)”，在这里它可以被视为对应于浅薄大气近似的一种笛卡尔类比 (Cartesian analogue)。注意，所有被忽略的项都要么被乘以或被投影到一个垂直速度上，因此并未明确列出。
 </p>
 
 <p>
