@@ -2290,7 +2290,7 @@ u & v & w
 其中 <i>f<sub>0</sub> = 2Ω sin ϑ<sub>0</sub></i>。定义水平速度向量 
 </p>
 <p>
-\[<i>\mathbf{u} = (u, v)</i>\]
+<i>f<sub>(u)</sub> = (u, v)</i>
 </p>，
 <p>则第一个方程可写为：
 </p>
