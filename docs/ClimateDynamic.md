@@ -2371,6 +2371,85 @@ f = f_0 + \beta y, \quad \text{其中} \ f_0 = 2 \Omega \sin \vartheta_0, \ \bet
 \]
 </p>
 <p>其中，<em>Hₚ = RT₀ / g</em> 是大气的 <em>尺度高度（scale height）</em>。这种计算在温度随高度显著变化时并不精确，但定性结果仍然成立，即如果我们只关注远小于尺度高度的运动，密度变化可以忽略。在气象学的一个分支中，不可压缩性条件在边界层气象学中得到了定量的应用。</p>
+<div class="abstract">
+<!-- 1.1.3 标题：切平面上的方程 -->
+<h3>1.1.3 切平面上的方程</h3>
+
+<!-- 引言部分 -->
+<p><strong>在切平面上，并使用笛卡尔坐标系，没有强迫或摩擦的情况下，运动方程如下：</strong></p>
+
+<!-- x动量方程 -->
+<p><strong>x-动量：</strong></p>
+<p>
+\[
+\frac{Du}{Dt} - fv = -\frac{1}{\rho} \frac{\partial p}{\partial x}, \quad (T.1)
+\]
+</p>
+<p>在x方向，物体的动量变化由科氏力、压强梯度和密度的相互作用决定。</p>
+
+<!-- y动量方程 -->
+<p><strong>y-动量：</strong></p>
+<p>
+\[
+\frac{Dv}{Dt} + fu = -\frac{1}{\rho} \frac{\partial p}{\partial y}, \quad (T.2)
+\]
+</p>
+<p>在y方向，物体的动量变化由科氏力、压强梯度和密度的相互作用决定。</p>
+
+<!-- z动量方程 -->
+<p><strong>z-动量：</strong></p>
+<p>
+\[
+\frac{Dw}{Dt} = -\frac{1}{\rho} \frac{\partial p}{\partial z} - g, \quad (T.3a)
+\]
+</p>
+<p>在z方向，物体的动量变化受到压强梯度、密度以及重力加速度的影响。</p>
+
+<!-- 静力平衡方程 -->
+<p><strong>或静力平衡：</strong></p>
+<p>
+\[
+\frac{\partial p}{\partial z} = -\rho g, \quad (T.3b)
+\]
+</p>
+<p>静力平衡条件下，压强的垂直梯度与密度和重力之间存在平衡关系。</p>
+
+<!-- 质量连续性方程 -->
+<p><strong>质量连续性：</strong></p>
+<p>
+\[
+\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0, \quad (T.3)
+\]
+</p>
+<p>质量连续性方程表明，系统中的质量是守恒的，密度的变化由流体的速度场决定。</p>
+
+<!-- 热力学方程 -->
+<p><strong>热力学：</strong></p>
+<p>
+\[
+\frac{D\theta}{Dt} = 0. \quad (T.4)
+\]
+</p>
+<p>在理想情况下，位温是守恒的。</p>
+
+<!-- 额外说明 -->
+<p><strong>补充说明：</strong></p>
+<p>在这些方程中：</p>
+<ul>
+  <li>
+    \( \frac{D}{Dt} = \frac{\partial}{\partial t} + u \frac{\partial}{\partial x} + v \frac{\partial}{\partial y} + w \frac{\partial}{\partial z} \)
+  </li>
+  <li>
+    \( \nabla \cdot (\rho \mathbf{v}) = \frac{\partial (\rho u)}{\partial x} + \frac{\partial (\rho v)}{\partial y} + \frac{\partial (\rho w)}{\partial z} \)
+  </li>
+</ul>
+</div>
+<p>在 f 平面上，\( f = f_0 \)，而在 β 平面上，\( f = f_0 + \beta y \)。</p>
+<ul>
+  <li>\( \frac{D}{Dt} \)：物质导数，描述了随流体元素运动的物理量变化。</li>
+  <li>\( \nabla \cdot (\rho \mathbf{v}) \)：密度乘以速度场的散度，表示流体的密度通量。</li>
+  <li>在 f 平面上，科氏参数 \( f \) 是常数；在 β 平面上，科氏参数 \( f \) 随纬度线性变化。</li>
+</ul>
 
 <h3>2.4.2 海洋中的密度变化</h3>
 <p>海洋中密度的变化主要由三种效应引起：</p>
@@ -2445,3 +2524,141 @@ f = f_0 + \beta y, \quad \text{其中} \ f_0 = 2 \Omega \sin \vartheta_0, \ \bet
 
 <p>显然，海洋中由于压力、温度和盐度变化引起的密度分数变化确实非常小。（在海洋和大气中，还有另一个与密度变化相关的过程，那就是声波。然而，声波在海洋学和气象学中几乎总是被视为不重要的，因此我们将在后续讨论中忽略它们。）</p>
 
+<h2>2.5 布辛涅斯克方程 (The Boussinesq Equations)</h2>
+
+<p>布辛涅斯克方程以法国科学家约瑟夫·布辛涅斯克（Joseph Boussinesq）的名字命名，他在1903年提出了这一近似方法，尽管类似的近似在1879年由德国科学家安东·奥贝克（Anton Oberbeck）使用。</p>
+
+<p>在海洋中，密度的变化虽然很小，但这些变化对于海洋洋流的形成至关重要。我们希望利用水几乎不可压缩的特性，但也希望在必要时允许密度发生变化。<em>Boussinesq approximation</em>（布辛涅斯克近似）引出的布辛涅斯克方程，是一种能够实现这一目标的近似方法。</p>
+
+<p>事实上，尽管在大气中密度变化很大，但即使在那里，布辛涅斯克方程也能够以一种非常经济的方式捕捉许多重要的大尺度大气现象。</p>
+
+<p>由于密度变化假定较小，我们写成：</p>
+
+<p>
+\[
+\rho = \rho_0 + \delta \rho(x, y, z, t),
+\]
+</p>
+<p>其中，\(\rho_0\) 是一个常数，我们假设 \(|\delta \rho| \ll \rho_0\)；这是该近似中的关键假设。</p>
+
+<p>与恒定密度相关的是一个参考压力 \(p_0(z)\)，它在静力平衡下与该密度保持平衡，因此：</p>
+
+<p>
+\[
+p = p_0(z) + \delta p(x, y, z, t),
+\quad \text{其中} \quad
+\frac{dp_0}{dz} = -g \rho_0.
+\]
+</p>
+
+<h3>2.5.1 动量方程 (Momentum Equations)</h3>
+
+<p>在没有近似的情况下，动量方程可以写成：</p>
+
+<p>
+\[
+(\rho_0 + \delta \rho) \frac{D\mathbf{u}}{Dt} = -\nabla \delta p - \frac{\partial p_0}{\partial z} \mathbf{k} - g(\rho_0 + \delta \rho) \mathbf{k}.
+\]
+</p>
+
+<p>使用上式的静力平衡关系，这个方程变为：</p>
+
+<p>
+\[
+(\rho_0 + \delta \rho) \frac{D\mathbf{u}}{Dt} = -\nabla \delta p - g \delta \rho \mathbf{k}.
+\]
+</p>
+
+<p>如果密度变化很小，该方程简化为：</p>
+
+<p>
+\[
+\frac{D\mathbf{u}}{Dt} = -\nabla \phi + b \mathbf{k},
+\]
+</p>
+<p>其中：</p>
+<ul>
+  <li>\(\phi = \delta \rho / \rho_0\) 是运动压力（忽略基本静力压力的贡献）。</li>
+  <li>\(b = -g \delta \rho / \rho_0\) 是浮力。</li>
+</ul>
+<p>我们不应忽略 \(\delta \rho g\) 项，因为没有理由认为它很小：\(\delta \rho\) 可能很小，但 \(g\) 很大！</p>
+<p>方程 (2.59) 是布辛涅斯克近似下的动量方程。</p>
+
+<h3>2.5.2 质量连续性 (Mass Continuity)</h3>
+
+<p>未经近似的质量连续性方程为：</p>
+
+<p>
+\[
+\frac{D \delta \rho}{Dt} + (\rho_0 + \delta \rho) \nabla \cdot \mathbf{u} = 0.
+\]
+</p>
+
+<p>因为密度变化被假定很小，我们可以将该方程近似为：</p>
+
+<p>
+\[
+\nabla \cdot \mathbf{u} = 0,
+\]
+</p>
+<p>这与恒定密度流体的情况相同。</p>
+<p>这个方程<strong>绝不</strong>意味着可以回到 \(\frac{D \delta \rho}{Dt} = 0\)；密度的演变由热力学方程以及状态方程给出，不应与质量守恒方程混淆。</p>
+
+<h3>2.5.3 布辛涅斯克热力学 (Boussinesq Thermodynamics)</h3>
+
+<p>布辛涅斯克方程通过增加一个状态方程、热力学方程，以及在需要时增加一个盐度演化方程而闭合。热力学方程有不同的近似级别，最简单的是：</p>
+
+<p>
+\[
+\frac{D T}{Dt} = \dot{T}.
+\]
+</p>
+
+<h3>2.5.4 布辛涅斯克系统的能量 (Energetics of the Boussinesq System)</h3>
+
+<p>在均匀重力场中，没有其他强制或耗散的情况下，我们将布辛涅斯克方程写成：</p>
+
+<p>
+\[
+\frac{D\mathbf{u}}{Dt} = b \mathbf{k} - \nabla \phi, \quad \nabla \cdot \mathbf{u} = 0, \quad \frac{D b}{Dt} = 0.
+\]
+</p>
+
+<p>动能演化为：</p>
+
+<p>
+\[
+\frac{1}{2} \frac{D v^2}{Dt} = bw - \nabla \cdot (\phi \mathbf{v}).
+\]
+</p>
+
+<p>物质导数的展开给出：</p>
+
+<p>
+\[
+\frac{\partial}{\partial t} \left(\frac{1}{2} v^2 - bz \right) + \nabla \cdot \left[\mathbf{v}\left(\frac{1}{2} v^2 - bz + \phi\right)\right] = 0.
+\]
+</p>
+
+<p>该方程构成了布辛涅斯克系统的能量方程。</p>
+
+<h3>2.5.5 弹性方程 (Anelastic Equations)</h3>
+
+<p>布辛涅斯克的不可压缩性假设对于涉及垂直尺度在一个或多个尺度高度的定量大气计算来说过于强烈。弹性方程通过假设密度具有一个仅随垂直方向变化的背景状态 \(\bar{\rho}(z)\) 部分地放松了这个假设。</p>
+
+<p>质量连续性方程变为：</p>
+
+<p>
+\[
+\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{1}{\bar{\rho}} \frac{\partial (\bar{\rho} w)}{\partial z} = 0.
+\]
+</p>
+
+<p>对于理想气体，浮力与位势温度的关系为：</p>
+
+<p>
+\[
+b = g \delta \theta / \theta_0,
+\]
+</p>
+<p>其中 \(\theta_0\) 是一个常数。</p>
