@@ -2292,12 +2292,12 @@ u & v & w
 
 <p>
 \[
-\frac{D \mathbf{u}}{D t} + f_0 \hat{\mathbf{k}} \times \mathbf{u} = -\frac{1}{\rho} \nabla_p p, \quad (2.44)
+\frac{D \mathbf{u}}{D t} + f_0  \times \mathbf{u} = -\frac{1}{\rho} \nabla_p p, \quad (2.44)
 \]
 </p>
 
 <p>
-其中 \(\nabla_p\) 表示只对 <i>x</i> 和 <i>y</i> 进行偏导的水平梯度算子。这样，这些方程与一个旋转向量与局部垂直方向对齐的系统中的动量方程是相同的，如图2.3 (b) 所示；我们进行了所谓的 <b>f</b>-平面近似。在垂直方向上，常常会有一个较好的平衡关系：压力梯度力与重力相互平衡；如果满足静力近似，那么 (2.43c) 变为 <i>\partial p / \partial z = -\rho g</i>。该方程加上 (2.43a,b) 则为 <b>f</b>-平面上的原始方程 (primitive equations)。 
+其中 \(\nabla_p\) 表示只对 <i>x</i> 和 <i>y</i> 进行偏导的水平梯度算子。这样，这些方程与一个旋转向量与局部垂直方向对齐的系统中的动量方程是相同的，如图2.3 (b) 所示；我们进行了所谓的 <b>f</b>-平面近似。在垂直方向上，常常会有一个较好的平衡关系：压力梯度力与重力相互平衡；如果满足静力近似，那么 (2.43c) 变为 <i>\[\partial p / \partial z = -\rho g\]</i>。该方程加上 (2.43a,b) 则为 <b>f</b>-平面上的原始方程 (primitive equations)。 
 </p>
 
 <h3>2.3.2 β-平面 (The Beta-Plane)</h3>
