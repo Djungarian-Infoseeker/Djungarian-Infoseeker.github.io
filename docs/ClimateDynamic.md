@@ -2253,19 +2253,19 @@ u & v & w
 
 <p>
 \[
-\frac{\partial u}{\partial t} + ( \mathbf{v} \cdot \nabla ) u + 2 \Omega \left( v \sin \vartheta_0 - w \cos \vartheta_0 \right) = -\frac{1}{\rho} \frac{\partial p}{\partial x}, \quad (2.42a)
+\frac{\partial u}{\partial t} + (\mathbf{v} \cdot \nabla) u + 2(\Omega^y w - \Omega^z v) = -\frac{1}{\rho} \frac{\partial p}{\partial x},(2.42a)
 \]
 </p>
 
 <p>
 \[
-\frac{\partial v}{\partial t} + ( \mathbf{v} \cdot \nabla ) v + 2 \Omega \left( w \sin \vartheta_0 - u \sin \vartheta_0 \right) = -\frac{1}{\rho} \frac{\partial p}{\partial y}, \quad (2.42b)
+\frac{\partial v}{\partial t} + (\mathbf{v} \cdot \nabla) v + 2(\Omega^z u - \Omega^x w) = -\frac{1}{\rho} \frac{\partial p}{\partial y},(2.42b)
 \]
 </p>
 
 <p>
 \[
-\frac{\partial w}{\partial t} + ( \mathbf{v} \cdot \nabla ) w + 2 \Omega \left( u \cos \vartheta_0 - v \cdot 0 \right) = -\frac{1}{\rho} \frac{\partial p}{\partial z} - g, \quad (2.42c)
+\frac{\partial w}{\partial t} + (\mathbf{v} \cdot \nabla) w + 2(\Omega^x v - \Omega^y u) = -\frac{1}{\rho} \frac{\partial p}{\partial z} - g,(2.42c)
 \]
 </p>
 
