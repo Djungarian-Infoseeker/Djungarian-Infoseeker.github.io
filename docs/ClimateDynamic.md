@@ -4776,3 +4776,276 @@ f_0 \times u_g = -g \nabla \eta, \quad (5.20)
 </p>
 
 <p>其中 \(L_d = \sqrt{\frac{g H}{f_0^2}}\)，变量 \(q\) 是准地转位涡。</p>
+<h3>5.2.3 准地转位涡度</h3>
+<h4><em>与浅水位涡度的联系</em></h4>
+
+<p>由(5.27)给出的量<span style="font-style: italic;">q</span>是一个近似值（除了对动态无关紧要的常数加性和乘性因子之外），对于浅水位涡度。</p>
+
+<h4>浅水位涡度的表达式</h4>
+<p>为了验证这一陈述的真实性，我们从浅水位涡度的表达式开始：</p>
+
+<p>
+\[
+Q = \frac{f + \zeta}{h}
+\]
+</p>
+
+<p>为了简化，我们将底部地形设为零，然后假设 \( H = H(1 + \eta_T / H) \) 并假设 \( \eta_T / H \) 很小，以获得：</p>
+
+<p>
+\[
+Q = \frac{f + \zeta}{H(1 + \eta_T / H)} = \frac{1}{H}(f + \zeta)\left(1 - \frac{\eta_T}{H}\right) = \frac{1}{H}\left(f_0 + \beta y + \zeta - f_0 \frac{\eta_T}{H}\right)
+\]
+</p>
+
+<p>因为 \( f_0 / H \) 是一个常数，它对演化方程没有影响，因此由下式给出的量：</p>
+
+<p>
+\[
+q = \beta y + \zeta - f_0 \frac{\eta_T}{H}
+\]
+</p>
+
+<p>在物质上是守恒的。使用地转平衡，我们有 \( \zeta = \nabla^2 \psi \) 并且 \( \eta_T = f_0 \psi / g \)，因此(5.30)与(5.27)是相同的（除了对\( \eta_T \) 的近似）。</p>
+
+<p>推导所需的近似与从(5.28)到(5.30)的推导相同，这些方程与我们之前的准地转方程推导是相同的。可以认为 \( f \) 是几乎常数的，并且 \( f_0 \) 远大于 \( \zeta \)，相当于一个低罗斯贝数假设。还需要假设 \( H \gg \eta_T \) 来实现高度场的展开，这一近似相当于要求运动的尺度不能显著大于变形尺度。</p>
+
+<p>推导完成时，可以注意到位涡度的平流应仅由地转速度决定，并且我们重新得到了(5.27)。</p>
+
+<h3>5.3 在连续分层系统中的缩放</h3>
+<p>我们现在将相同的缩放思想应用于原始方程，并使用静力Boussinesq方程，我们将其写为：</p>
+
+<p>
+\[
+\frac{D\mathbf{u}}{Dt} + f \times \mathbf{u} = -\nabla \phi,
+\]
+</p>
+
+<p>
+\[
+\frac{\partial \phi}{\partial z} = b,
+\]
+</p>
+
+<p>
+\[
+\frac{Db}{Dt} = 0,
+\]
+</p>
+
+<p>
+\[
+\nabla \cdot \mathbf{u} = 0.
+\]
+</p>
+
+<p>我们只考虑平底的情况，但地形是一个相对简单的扩展。预期平均分层可能不会以相同的方式缩放，因此我们将分离平均分层的平流贡献，将(5.31c)写为：</p>
+
+<p>
+\[
+b = \bar{b}(z) + b'(x, y, z, t).
+\]
+</p>
+
+<h4>热力学方程</h4>
+<p>热力学方程变为：</p>
+
+<p>
+\[
+\frac{Db'}{Dt} + N^2 w = 0,
+\]
+</p>
+
+<p>其中 \( N^2 = \partial \bar{b} / \partial z \) 并且平流导数仍然是三维的。然后我们设 \( \phi = \bar{\phi}(z) + \phi' \)，其中 \( \bar{\phi} \) 在静水力学上由 \( \bar{b} \) 平衡，静水方程变为：</p>
+
+<p>
+\[
+\frac{\partial \phi'}{\partial z} = b'.
+\]
+</p>
+
+<p>方程(5.33)和(5.34)取代了(5.31c)和(5.31b)，并且在(5.31a)中使用了 \( \phi' \)。</p>
+
+<h4>5.3.1 缩放方程</h4>
+<p>我们假设基本变量的缩放如下：</p>
+
+<p>
+\[
+(x, y) \sim L, \quad (u, v) \sim U, \quad t \sim \frac{L}{U}, \quad z \sim H, \quad f \sim f_0, \quad N \sim N_0.
+\]
+</p>
+
+
+<p>其中，除了 \( f_0 \) 之外，所有变量的缩放（大写字母）都被选择，使得无量纲变量的量级约为1，并且常数 \( N_0 \) 是分层的代表性值。</p>
+
+<p>我们假设所选的尺度使得罗斯贝数很小，即 \( Ro = \frac{U}{f_0 L} \ll 1 \)。在动量方程中，压力项与科里奥利力平衡，因此有：</p>
+
+<p>
+\[
+|f \times u| \sim |\nabla \phi'|,
+\]
+</p>
+
+<p>因此压力缩放为：</p>
+
+<p>
+\[
+\phi' \sim \Phi = f_0 U L.
+\]
+</p>
+
+<p>使用静力学关系，(5.37) 意味着浮力缩放为：</p>
+
+<p>
+\[
+b' \sim \frac{f_0 U L}{H}.
+\]
+</p>
+
+<p>由此我们得到：</p>
+
+<p>
+\[
+\frac{\partial b'}{\partial z} \sim \frac{f_0 U L}{H^2}.
+\]
+</p>
+
+<p>并且：</p>
+
+<p>
+\[
+N^2 \sim \frac{f_0^2 L^2}{H^2}.
+\]
+</p>
+
+<p>其中：</p>
+
+<p>
+\[
+L_d = \frac{N_0 H}{f_0}.
+\]
+</p>
+
+<p>这是连续分层流动中的变形半径，类似于浅水系统中的 \( \sqrt{g H} / f_0 \)，我们使用相同的符号来表示两者。</p>
+
+<h4>垂直速度缩放</h4>
+
+<p>接下来，我们使用质量连续性方程，将垂直速度无量纲化：</p>
+
+<p>
+\[
+\frac{\partial w}{\partial z} = -\left(\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}\right),
+\]
+</p>
+
+<p>并进行缩放：</p>
+
+<p>
+\[
+w \sim \frac{U H}{L}.
+\]
+</p>
+
+<p>这一缩放不一定在地转平衡流动中是正确的。在这种情况下，我们可以通过交叉微分地转平衡（假设 \( \bar{\rho} \) 恒定以简化）来估算线性地转涡度方程及相应的缩放：</p>
+
+<p>
+\[
+\beta v \approx \frac{\partial w}{\partial z}, \quad w \sim \frac{\beta U H}{f_0}.
+\]
+</p>
+
+<p>如果科里奥利参数的变化很大，且 \( \beta \sim f_0 / L \)，那么(5.43b)与(5.42)相同，但如果 \( f \) 在局部区域是恒定的，那么我们有 \( w \ll \frac{U H}{L} \)。</p>
+
+<h4>无量纲化变量</h4>
+
+<p>根据上述缩放（使用(5.42)的缩放关系），我们将变量进行无量纲化，设定：</p>
+
+<p>
+\[
+(\hat{x}, \hat{y}) = L^{-1}(x, y), \quad \hat{z} = H^{-1} z, \quad (\hat{u}, \hat{v}) = U^{-1} (u, v), \quad \hat{t} = \frac{U}{L} t,
+\]
+</p>
+
+<p>
+\[
+\hat{w} = \frac{L}{U H} w, \quad \hat{f} = f_0^{-1} f, \quad \hat{\phi} = \frac{\phi'}{f_0 U L}, \quad \hat{b'} = \frac{H}{f_0 U L} b'.
+\]
+</p>
+
+<p>现在所有的变量都是无量纲的。水平动量方程和静力方程变为：</p>
+
+<p>
+\[
+Ro \frac{D \hat{\mathbf{u}}}{D \hat{t}} + \hat{f} \times \hat{\mathbf{u}} = -\nabla \hat{\phi},
+\]
+</p>
+
+<p>
+\[
+\frac{\partial \hat{\phi}}{\partial \hat{z}} = \hat{b}.
+\]
+</p>
+
+<p>无量纲质量连续性方程简化为：</p>
+
+<p>
+\[
+\nabla \cdot \hat{\mathbf{u}} = 0.
+\]
+</p>
+
+<p>无量纲热力学方程为：</p>
+
+<p>
+\[
+\frac{f_0 U L}{H} \frac{D \hat{b}}{D \hat{t}} + N_0^2 N_0^2 \frac{H U}{L} \hat{w} = 0,
+\]
+</p>
+
+<p>或重新排列为：</p>
+
+<p>
+\[
+Ro \frac{D \hat{b}}{D \hat{t}} + \left(\frac{L_d}{L}\right)^2 N^2 \hat{w} = 0.
+\]
+</p>
+
+<div class="abstract">
+<h3>无量纲布辛涅斯克原始方程</h3>
+
+<p>在旋转参考系中，无量纲、静力、布辛涅斯克方程为：</p>
+
+<h4>水平动量：</h4>
+
+<p>
+\[
+Ro \frac{D \hat{\mathbf{u}}}{D \hat{t}} + \hat{f} \times \hat{\mathbf{u}} = -\nabla \hat{\phi}, \quad (\text{PE.1})
+\]
+</p>
+
+<h4>静力学：</h4>
+
+<p>
+\[
+\frac{\partial \hat{\phi}}{\partial \hat{z}} = \hat{b}, \quad (\text{PE.2})
+\]
+</p>
+
+<h4>质量连续性：</h4>
+
+<p>
+\[
+\frac{\partial \hat{u}}{\partial \hat{x}} + \frac{\partial \hat{v}}{\partial \hat{y}} + \frac{\partial \hat{w}}{\partial \hat{z}} = 0, \quad (\text{PE.3})
+\]
+</p>
+
+<h4>热力学：</h4>
+
+<p>
+\[
+Ro \frac{D \hat{b}}{D \hat{t}} + \left(\frac{L_d}{L}\right)^2 \hat{N}^2 \hat{w} = 0. \quad (\text{PE.4})
+\]
+</p>
+
+<p>以上是无量纲布辛涅斯克原始方程，包括水平动量方程、静力学方程、质量连续性方程和热力学方程。</p>
+</div>
