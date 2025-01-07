@@ -3809,3 +3809,721 @@ N^2 = -g \left[\frac{g}{c_s^2} + \frac{1}{\bar{\rho}} \left(\frac{\partial \bar{
 
 <p>地球物理流体动力学的两本经典教材分别是Gill (1982) 和Pedlosky (1987a)。</p>
 <p>Cushman-Roisin & Beckers (2011) 的著作也包含一些数值方法相关内容。</p>
+<h2>第4章 浅水方程</h2>
+
+<p><strong>浅水方程</strong> 是一组描述流体层运动的方程，顾名思义，这是一层较浅的流体，特别是在静水压力平衡状态下，且密度恒定。这些方程有两个重要原因：</p>
+<ol>
+  <li>它们比完整的三维方程更简单，因此可以更直接地分析一些有时较复杂的问题。</li>
+  <li>尽管它们很简单，但这些方程提供了对大气和海洋动力学中各种现象的合理逼真表述。</li>
+</ol>
+
+<p>简而言之，浅水方程是地球物理流体动力学中一个非常有用的模型。让我们深入探讨这些方程，看看它们能为我们做些什么。</p>
+
+<h3>4.1 浅水运动方程</h3>
+
+<p>根据定义，浅水方程适用于一层密度恒定的流体，其水平尺度远大于层深，并且顶部（或有时底部）具有自由表面。由于流体密度恒定，流体运动完全由动量方程和质量连续性方程决定，并且由于假设的小纵横比，静水近似得到了很好的满足（如3.2.2节所讨论的那样）。</p>
+
+<p>因此，考虑上层是一个密度可以忽略的流体，如图4.1所示。我们的符号约定如下：</p>
+<ul>
+  <li><strong>v = uî + vĵ + wk̂</strong> 表示三维速度。</li>
+  <li><strong>u = uî + vĵ</strong> 表示水平速度。</li>
+  <li><strong>h(x, y)</strong> 是液柱的厚度。</li>
+  <li><strong>H</strong> 是其平均高度。</li>
+  <li><strong>η</strong> 是自由表面的高度。</li>
+  <li>在平底容器中，<strong>η = h</strong>，而在一般情况下，<strong>h = η − η_B</strong>，其中 <strong>η_B</strong> 是容器底部的高度。</li>
+</ul>
+
+<h4>4.1.1 动量方程</h4>
+
+<p>垂向动量方程是静水压力方程：</p>
+<p>\[
+\frac{\partial p}{\partial z} = -\rho_0 g, \quad (4.1)
+\]</p>
+
+<p>由于假设密度恒定，我们可以将其积分得到：</p>
+<p>\[
+\rho(x, y, z, t) = -\rho_0 g z + p_0. \quad (4.2)
+\]</p>
+
+<p>在流体顶部，<strong>z = η</strong>，压力由上覆流体的重量决定，可以忽略。因此，当 <strong>z = η</strong> 时，<strong>p = 0</strong>，得到：</p>
+<p>\[
+\rho(x, y, z, t) = \rho_0 g (\eta(x, y, t) - z). \quad (4.3)
+\]</p>
+
+<p>因此，压力的水平梯度与高度无关，即：</p>
+<p>\[
+\nabla_z p = \rho_0 g \nabla_z \eta, \quad \text{其中} \quad \nabla_z = \hat{i} \frac{\partial}{\partial x} + \hat{j} \frac{\partial}{\partial y}. \quad (4.4)
+\]</p>
+
+<p>在本章的其余部分，如果不会引起歧义，我们将省略下标 <strong>z</strong>，并使用笛卡尔坐标表示三维梯度算子 <strong>∇</strong>。水平动量方程因此变为：</p>
+<p>\[
+\frac{D u}{D t} = -\frac{1}{\rho_0} \nabla p = -g \nabla \eta. \quad (4.5)
+\]</p>
+
+<p>该方程的右侧与垂直坐标 <strong>z</strong> 无关。因此，如果流动在初始状态下与 <strong>z</strong> 无关，它必须保持如此（这种情况与快速旋转引起的 <strong>Taylor–Proudman效应</strong> 相关）。水平速度 <strong>u</strong> 和 <strong>v</strong> 仅为 <strong>(x, y, t)</strong> 的函数，因此水平动量方程为：</p>
+<p>\[
+\frac{D u}{D t} = \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = -g \nabla \eta. \quad (4.6)
+\]</p>
+
+<p>在存在旋转的情况下，(4.6) 可推广为：</p>
+<p>\[
+\frac{D u}{D t} + f \times u = -g \nabla \eta. \quad (4.7)
+\]</p>
+
+<p>其中，<strong>f = f \hat{k}</strong>。与完整的三维方程一样，<strong>f</strong> 可以是常数，也可以随纬度变化，因此在球形地球上，<strong>f = 2\Omega \sin \theta</strong>，在β平面上，<strong>f = f_0 + \beta y</strong>。</p>
+
+<h4>4.1.2 质量连续性方程</h4>
+
+<p>具有高度 <strong>h</strong> 和横截面积 <strong>A</strong> 的液柱所包含的质量由下式给出：</p>
+<p>\[
+F_m = \text{质量通量} = - \iint_S \rho_0 u \cdot dS. \quad (4.8)
+\]</p>
+
+<p>其中，<strong>S</strong> 是液柱垂直边界的表面积，表面积由 <strong>h n δl</strong> 的元素组成，其中 <strong>δl</strong> 是包围柱体的线元素，<strong>n</strong> 是垂直于边界指向外部的单位向量。因此，(4.8) 变为：</p>
+<p>\[
+F_m = - \oint \rho_0 h u \cdot n d l. \quad (4.9)
+\]</p>
+
+<p>使用二维散度定理，(4.9) 简化为：</p>
+<p>\[
+F_m = - \iint_A \nabla \cdot (\rho_0 u h) dA. \quad (4.10)
+\]</p>
+
+<p>其中积分在液柱的横截面积 <strong>A</strong> 上进行。这与水柱高度的局部增加平衡，表示为：</p>
+<p>\[
+F_m = \frac{d}{dt} \iint_A \rho_0 dV = \frac{d}{dt} \iint_A \rho_0 h dA = \iint_A \rho_0 \frac{\partial h}{\partial t} dA. \quad (4.11)
+\]</p>
+
+<p>至此，浅水方程的基础方程已经建立。</p>
+
+<div class="abstract">
+<h2>浅水方程</h2>
+
+<p>对于单层流体，并包括科里奥利项，无粘性浅水方程为：</p>
+
+<h3>动量方程</h3>
+<p>
+\[
+\frac{Du}{Dt} + f \times u = -g \nabla \eta, \quad (\text{SW.1})
+\]
+</p>
+
+<h3>质量连续性方程</h3>
+<p>
+\[
+\frac{Dh}{Dt} + h \nabla \cdot u = 0, \quad (\text{SW.2})
+\]
+</p>
+<p>
+\[
+\frac{\partial h}{\partial t} + \nabla \cdot (hu) = 0, \quad (\text{SW.3})
+\]
+</p>
+
+<p>其中，\( u \) 是水平速度，\( h \) 是总流体厚度，\( \eta \) 是上部自由表面的高度，\( h \) 和 \( \eta \) 的关系为：</p>
+
+<p>
+\[
+h(x, y, t) = \eta(x, y, t) - \eta_B(x, y), \quad (\text{SW.4})
+\]
+</p>
+
+<p>其中，\( \eta_B \) 是下表面的高度（底部地形）。</p>
+
+<h3>物质导数</h3>
+<p>
+\[
+\frac{D}{Dt} = \frac{\partial}{\partial t} + u \cdot \nabla = \frac{\partial}{\partial t} + u \frac{\partial}{\partial x} + v \frac{\partial}{\partial y}, \quad (\text{SW.5})
+\]
+</p>
+
+<p>最右边的表达式在笛卡尔坐标系中成立。</p>
+</div>
+<h2>4.1.3 简化重力方程</h2>
+
+<p>现在考虑一个单独的浅层流体，位于一个深层、几乎静止的流体层之上（见图4.3），并在一个惯性可以忽略的流体层之下。这种配置通常用作上层海洋的模型：上层代表海洋的上部几百米的流动，而下层则是几乎静止的深海深渊。如果将该模型颠倒，我们可以得到一个稍微不太真实的大气模型，其中下层代表平流层以上对流层的运动。</p>
+
+<p>上层的压力通过从上表面向下积分静力平衡方程给出。因此，在上层高度 <em>z</em> 处，有：</p>
+<p>$$
+p_1(z) = g\rho_1(\eta_0 - z), \quad (4.14)
+$$</p>
+
+<p>其中，<em>η₀</em> 是上表面的高度。因此，在上层的任何位置，都有：</p>
+<p>$$
+\frac{1}{\rho_1} \nabla p_1 = g \nabla \eta_0. \quad (4.15)
+$$</p>
+
+<p>动量方程为：</p>
+<p>$$
+\frac{Du}{Dt} + f \times u = -g \nabla \eta_0. \quad (4.16)
+$$</p>
+
+<p>在下层，压力同样由上方流体的重量决定。因此，在下层的某个水平面 <em>z</em> 处，有：</p>
+<p>$$
+p_2(z) = \rho_1 g (\eta_0 - \eta_1) + \rho_2 g (\eta_1 - z). \quad (4.17)
+$$</p>
+
+<p>但如果这一层是静止的，那么其中的水平压强梯度为零，因此：</p>
+<p>$$
+\rho_1 g \eta_0 = -\rho_1 g' \eta_1 + \text{constant}, \quad (4.18)
+$$</p>
+
+<p>其中，<em>g'</em> 是有效重力，由下式定义：</p>
+<p>$$
+g' = g \frac{\rho_2 - \rho_1}{\rho_1}. 
+$$</p>
+
+<p>在海洋中，<em>ρ₂ - ρ₁</em> 相对于 <em>ρ</em> 很小，因此 <em>g'</em> 远小于 <em>g</em>。动量方程变为：</p>
+<p>$$
+\frac{Du}{Dt} + f \times u = g' \nabla \eta_1. \quad (4.19)
+$$</p>
+
+<p>方程通过通常的质量守恒方程得到补充：</p>
+<p>$$
+\frac{Dh}{Dt} + h \nabla \cdot u = 0. \quad (4.20)
+$$</p>
+
+<p>其中 <em>h = η₀ - η₁</em>。由于 <em>g \gg g'</em>，方程 (4.18) 表明，表面位移远小于内部界面处的位移。在真实的海洋中，平均内部等密度位移可能有几十米，但海洋表面平均高度的变化大约在厘米量级。</p>
+<h3>4.2 保守性质</h3>
+<p>在流体中，有两种常见的守恒性质：(i) 物质不变量；(ii) 积分不变量。当某个属性（例如 φ）在每个流体单元上保持守恒时，称为物质不变量，并满足方程：\( \frac{Dφ}{Dt} = 0 \)。积分不变量是指在某个封闭体积（通常是封闭的）上进行积分后，该性质保持守恒，例如能量。浅水方程的简单性使我们能够清晰地看到这些性质是如何产生的。</p>
+
+<h4>4.2.1 能量守恒：一个积分不变量</h4>
+<p>在推导浅水系统时，我们进行了多种简化，因此能量是否应该守恒，或者能量以何种形式存在并不显而易见。动能密度（KE）表示每单位面积的动能，为 \( \frac{ρ_0 h u^2}{2} \)。势能密度（PE）为：</p>
+<p>\[
+PE = \int_0^h ρ_0 g z \, dz = \frac{1}{2} ρ_0 g h^2.
+\] (4.21)</p>
+<p>因子 \( ρ_0 \) 同时出现在动能和势能中，由于它是常数，我们将忽略它。为了代数上的简便性，我们假设底面是平坦的，\( z = 0 \)。</p>
+<p>利用质量守恒方程 (4.13b)，我们得到势能密度演化方程：</p>
+<p>\[
+\frac{D}{Dt} \frac{g h^2}{2} + g h^2 \nabla \cdot u = 0,
+\] (4.22a)</p>
+<p>或</p>
+<p>\[
+\frac{\partial}{\partial t} \frac{g h^2}{2} + \nabla \cdot \left(u \frac{g h^2}{2}\right) + \frac{g h^2}{2} \nabla \cdot u = 0.
+\] (4.22b)</p>
+
+<p>从动量和质量连续性方程中，我们得到动能密度的演化方程：</p>
+<p>\[
+\frac{D}{Dt} \frac{h u^2}{2} + u^2 h \nabla \cdot u = -g u \cdot \nabla \frac{h^2}{2},
+\] (4.23a)</p>
+<p>或</p>
+<p>\[
+\frac{\partial}{\partial t} \frac{h u^2}{2} + \nabla \cdot \left(u \frac{h u^2}{2}\right) + g u \cdot \nabla \frac{h^2}{2} = 0.
+\] (4.23b)</p>
+<p>将(4.22b)和(4.23b)相加，我们得到：</p>
+<p>\[
+\frac{\partial}{\partial t} \frac{1}{2} (h u^2 + g h^2) + \nabla \cdot \left(\frac{1}{2} u (g h^2 + h u^2 + g h^2)\right) = 0.
+\] (4.24)</p>
+<p>或</p>
+<p>\[
+\frac{\partial E}{\partial t} + \nabla \cdot F = 0,
+\] (4.25)</p>
+<p>其中 \( E = KE + PE = \frac{h u^2 + g h^2}{2} \) 是总能量密度，\( F = u \left(\frac{h u^2}{2} + g h^2\right) \) 是能量通量。如果流体被限制在一个由刚性墙壁包围的区域内，并且速度的法向分量消失，那么通过对(4.24)在该区域上积分，并使用高斯定理，总能量被证明是守恒的，即：</p>
+<p>\[
+\frac{d E}{d t} = \frac{1}{2} \frac{d}{d t} \int_A (h u^2 + g h^2) \, dA = 0.
+\] (4.26)</p>
+
+<h4>4.2.2 潜在涡度：一个物质不变量</h4>
+<p>流体的涡度，记为 \( \omega \)，被定义为速度场的旋度。我们还定义浅水涡度 \( \omega^* \)，它是水平速度的旋度。因此我们有：</p>
+<p>\[
+\omega \equiv \nabla \times v, \quad \omega^* \equiv \nabla \times u.
+\] (4.27)</p>
+<p>由于 \( \partial u / \partial z = \partial v / \partial z = 0 \)，因此 \( \omega^* \) 的唯一非零分量是垂直分量：</p>
+<p>\[
+\omega^* = \hat{k} \left(\frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}\right) = \hat{k} \zeta.
+\] (4.28)</p>
+<p>首先考虑非旋转情况，使用矢量恒等式：</p>
+<p>\[
+(u \cdot \nabla) u = \frac{1}{2} \nabla (u \cdot u) - u \times (\nabla \times u),
+\] (4.29)</p>
+<p>我们将动量方程 (4.7) 写成：</p>
+<p>\[
+\frac{\partial u}{\partial t} + \omega^* \times u + f \times u = -\nabla \left(g \eta + \frac{1}{2} u^2\right).
+\] (4.30)</p>
+
+<p>取(4.30)的旋度，我们得到：</p>
+<p>\[
+\frac{D}{Dt} (\zeta + f) = - (\zeta + f) \nabla \cdot u.
+\] (4.33)</p>
+
+<p>质量守恒方程(4.13b)可以写成：</p>
+<p>\[
+- (\zeta + f) \nabla \cdot u = \frac{\zeta + f}{h} \frac{Dh}{Dt},
+\] (4.34)</p>
+<p>结合以上方程我们得到：</p>
+<p>\[
+\frac{D}{Dt} (\zeta + f) = \frac{\zeta + f}{h} \frac{Dh}{Dt}.
+\] (4.35)</p>
+<p>这等价于：</p>
+<p>\[
+\frac{DQ}{Dt} = 0, \quad Q = \left(\frac{\zeta + f}{h}\right).
+\] (4.36)</p>
+<p>重要的量 \( Q \) 称为潜在涡度，(4.36) 是潜在涡度方程。</p>
+<h3>4.3 浅水波</h3>
+<p>现在我们来看发生在浅水中的重力波。为了提炼其本质，我们考虑一个单层流体层，底部是平坦的，上层是自由的表面，其中重力提供了唯一的恢复力。</p>
+
+<h4>4.3.1 非旋转浅水波</h4>
+<p>假设底部是平坦的，流体厚度等于自由表面位移（图 4.1），并将流体的基本静止状态设为：</p>
+<p>\[
+h(x, y, t) = H + h'(x, y, t) = H + \eta'(x, y, t) \quad (4.37a)
+\]</p>
+<p>\[
+u(x, y, t) = u'(x, y, t) \quad (4.37b)
+\]</p>
+
+<p>质量守恒方程 (4.13b) 变为：</p>
+<p>\[
+\frac{\partial \eta'}{\partial t} + (H + \eta') \nabla \cdot u' + u' \cdot \nabla \eta' = 0 \quad (4.38)
+\]</p>
+
+<p>忽略小量的平方项，这会得到线性方程：</p>
+<p>\[
+\frac{\partial \eta'}{\partial t} + H \nabla \cdot u' = 0 \quad (4.39)
+\]</p>
+
+<p>类似地，将动量方程 (4.7) 线性化，并假设 \( f = 0 \)，得到：</p>
+<p>\[
+\frac{\partial u'}{\partial t} = -g \nabla \eta' \quad (4.40)
+\]</p>
+
+<p>通过对 (4.39) 进行时间求导并取 (4.40) 的散度，可以得到：</p>
+<p>\[
+\frac{\partial^2 \eta'}{\partial t^2} - g H \nabla^2 \eta' = 0 \quad (4.41)
+\]</p>
+
+<p>这是一个波动方程。我们可以通过代入试探解来找到色散关系：</p>
+<p>\[
+\eta' = Re \left[ \eta_0 e^{i(kx - \omega t)} \right] \quad (4.42)
+\]</p>
+
+<p>其中 \( \eta_0 \) 是一个复常数，\( k = k \mathbf{i} + l \mathbf{j} \) 是水平波数向量，\( Re \) 表示取解的实部。简化为单维问题，假设 y 方向没有变化，代入 (4.41) 可得色散关系：</p>
+<p>\[
+\omega = \pm ck, \quad c = \sqrt{g H} \quad (4.43)
+\]</p>
+
+<p>即波速与平均流体深度的平方根成正比，并且与波数无关，表明波是无色散的。一般解为：</p>
+<p>\[
+\eta'(x, t) = \frac{1}{2} \left[ F(x - ct) + F(x + ct) \right] \quad (4.44)
+\]</p>
+
+<p>其中 \( F(x) \) 是 t = 0 时的高度场。从中可以很容易看出初始扰动的形态在传播过程中得以保留。</p>
+
+<h4>4.3.2 旋转浅水波（庞加莱波）</h4>
+<p>我们现在考虑旋转对浅水波的影响。对旋转平底 \( f \)-平面浅水方程（SW.1）和（SW.2）进行线性化，静止状态如下：</p>
+<p>\[
+\frac{\partial u'}{\partial t} - f_0 v' = -g \frac{\partial \eta'}{\partial x}, \quad \frac{\partial v'}{\partial t} + f_0 u' = -g \frac{\partial \eta'}{\partial y} \quad (4.45a,b)
+\]</p>
+<p>\[
+\frac{\partial \eta'}{\partial t} + H \left( \frac{\partial u'}{\partial x} + \frac{\partial v'}{\partial y} \right) = 0 \quad (4.45c)
+\]</p>
+
+<p>为了得到色散关系，我们假设：</p>
+<p>\[
+(u, v, \eta) = (\bar{u}, \bar{v}, \bar{\eta}) e^{i(kx - \omega t)} \quad (4.46)
+\]</p>
+
+<p>代入 (4.45)，得到矩阵形式：</p>
+<p>\[
+\begin{vmatrix}
+-i \omega & -f_0 & i g k \\
+f_0 & -i \omega & i g l \\
+i H k & i H l & -i \omega
+\end{vmatrix}
+= 0 \quad (4.47)
+\]</p>
+
+<p>只有当矩阵的行列式为零时，此方程才有非平凡解。因此可得：</p>
+<p>\[
+\omega (\omega^2 - f_0^2 - c^2 K^2) = 0 \quad (4.48)
+\]</p>
+
+<p>其中 \( K^2 = k^2 + l^2 \) 和 \( c^2 = g H \)。该方程有两类解：</p>
+<p>\[
+\omega^2 = f_0^2 + c^2 (k^2 + l^2) \quad (4.49)
+\]</p>
+<p>\[
+\omega^2 = f_0^2 + g H (k^2 + l^2) \quad (4.50)
+\]</p>
+
+<p>这些波被称为庞加莱波，其色散关系由上式给出。注意，频率总是大于科里奥利频率 \( f_0 \)。</p>
+
+<h5>短波极限</h5>
+<p>如果：</p>
+<p>\[
+K^2 \gg \frac{f_0^2}{g H}, \quad L_d = \frac{\sqrt{g H}}{f} \quad (4.51, 4.52)
+\]</p>
+
+<h5>长波极限</h5>
+<p>如果：</p>
+<p>\[
+K^2 \ll \frac{f_0^2}{g H}, \quad \omega = f_0 \quad (4.53, 4.54)
+\]</p>
+
+<p>这些波被称为惯性振荡，其运动方程为：</p>
+<p>\[
+\frac{\partial u'}{\partial t} - f_0 v' = 0, \quad \frac{\partial v'}{\partial t} + f_0 u' = 0 \quad (4.55)
+\]</p>
+<h3>4.3.3 开尔文波</h3>
+<p>
+开尔文波是一种特殊的重力波，它存在于<strong>旋转效应</strong>和<strong>侧边边界</strong>的共同作用下。假设在 <i>y = 0</i> 处有一堵<strong>固体墙</strong>。在 <i>y</i> 方向上的一般谐波解是不被允许的，因为它们无法满足边界上<strong>无法流动</strong>的条件。那么，是否存在满足条件的波浪解呢？答案是肯定的。
+</p>
+<p>
+为了验证这一点，我们从线性化的浅水方程开始，具体如下：
+</p>
+<p>
+动量方程：
+\[
+\frac{\partial u'}{\partial t} - f_0 v' = -g \frac{\partial \eta'}{\partial x}, \quad \frac{\partial v'}{\partial t} + f_0 u' = -g \frac{\partial \eta'}{\partial y}, 
+\]
+</p>
+<p>
+质量连续性方程：
+\[
+\frac{\partial \eta'}{\partial t} + H \left( \frac{\partial u'}{\partial x} + \frac{\partial v'}{\partial y} \right) = 0.
+\]
+</p>
+<p>
+事实上，当 \( v' = 0 \) 在 \( y = 0 \) 处时，这表明我们要寻找一个解，其中 \( v' = 0 \) 在所有地方都是成立的。因此，这些方程变为：
+</p>
+<p>
+\[
+\frac{\partial u'}{\partial t} = -g \frac{\partial \eta'}{\partial x}, \quad f_0 u' = -g \frac{\partial \eta'}{\partial y}, \quad \frac{\partial \eta'}{\partial t} + H \frac{\partial u'}{\partial x} = 0.
+\]
+</p>
+<p>
+方程 (4.57a) 和 (4.57c) 可以导出一个标准的波动方程：
+\[
+\frac{\partial^2 u'}{\partial t^2} = c^2 \frac{\partial^2 u'}{\partial x^2},
+\]
+</p>
+<p>
+其中 \( c = \sqrt{gH} \) 是浅水波的常规波速。方程 (4.58) 的解为：
+\[
+u' = F_1(x + ct, y) + F_2(x - ct, y),
+\]
+</p>
+<p>
+对应的自由表面位移为：
+\[
+\eta' = \sqrt{\frac{H}{g}} \left[-F_1(x + ct, y) + F_2(x - ct, y)\right].
+\]
+</p>
+<p>
+该解表示两个波的叠加：一个波（\( F_1 \)）沿负 \( x \) 方向传播，另一个波（\( F_2 \)）沿正 \( x \) 方向传播。
+</p>
+<p>
+为了得到这些函数在 \( y \) 方向的依赖性，我们使用方程 (4.57b)，得到：
+\[
+\frac{\partial F_1}{\partial y} = \frac{f_0}{\sqrt{gH}} F_1, \quad \frac{\partial F_2}{\partial y} = -\frac{f_0}{\sqrt{gH}} F_2,
+\]
+</p>
+<p>
+解为：
+\[
+F_1 = F(x + ct) e^{y / L_d}, \quad F_2 = G(x - ct) e^{-y / L_d},
+\]
+</p>
+<p>
+其中 \( L_d = \frac{\sqrt{gH}}{f_0} \) 是<strong>变形半径</strong>。如果我们考虑在 \( y > 0 \) 的半平面中流动，那么对于正的 \( f_0 \) ，解 \( F_1 \) 会在远离墙壁时呈指数增长，因此不满足无穷远处的有界性条件，必须将其排除，得到一般解：
+</p>
+<p>
+\[
+u' = e^{-y / L_d} G(x - ct), \quad v' = 0,
+\]
+\[
+\eta' = \sqrt{\frac{H}{g}} e^{-y / L_d} G(x - ct).
+\]
+</p>
+<p>
+这些就是<strong>开尔文波</strong>，它们在远离边界时呈指数衰减。一般来说，对于正的 \( f_0 \)，边界位于波传播方向的右侧；对于负的 \( f_0 \)，边界位于波传播方向的左侧。在恒定的科里奥利参数下，我们还可以在<strong>子午墙</strong>上得到解，同样开尔文波会沿着墙向东传播，并在两侧衰减，如图 4.5 所示。
+</p>
+
+<h3>4.4 地转调整</h3>
+<p>
+地转平衡发生在浅水方程中，当<strong>罗盘数</strong> \( U / fL \) 很小时，科里奥利项主导动量方程中的平流项时。在单层浅水方程中，地转流满足：
+\[
+f \times u_g = -g \nabla \eta.
+\]
+</p>
+<p>
+因此，地转速度与表面斜率成正比。这个结果是由于<strong>静力平衡</strong>，界面表面的斜率直接与两侧压力梯度的差异相关，因此在地转平衡中，速度与斜率成比例。
+</p>
+<p>
+然而，更普遍的问题是：<strong>为什么大气和海洋接近地转平衡？</strong> 假设初始状态不平衡，存在小尺度运动和剧烈的压力梯度。系统将如何演化？事实证明，所有这些剧烈的梯度都会辐射出去，留下一个<strong>地转平衡状态</strong>。这个过程被称为<strong>地转调整</strong>，它在旋转流体中普遍发生，无论是分层的还是非分层的。浅水方程是一组理想的方程，用于探索这个过程。
+</p>
+<h3>4.4 地转平衡调整</h3>
+
+<p>地转平衡发生在浅水方程中，当罗斯贝数 \( U / fL \) 较小且科里奥利项在动量方程中占主导地位时。对于单层浅水方程，地转流动可以表示为：</p>
+
+<p>
+\[
+f \times u_g = -g \nabla \eta.
+\]
+</p>
+
+<p>(4.64)</p>
+
+<p>因此，地转速度与表面坡度成正比，如图4.6所示。该结果产生的原因是，由于静力平衡，界面表面的坡度直接与两侧的压强梯度差异相关，因此在地转平衡中，速度与坡度有关。</p>
+
+<p>但是，考虑一个更普遍的问题：<em>为什么大气和海洋接近地转平衡？</em> 假设初始状态明显不平衡，存在小尺度运动和显著的压强梯度。系统将如何演变？事实证明，这些急剧的梯度将逐渐消散，最终留下一个地转平衡的状态。这个过程称为<em>地转调整</em>，它普遍存在于旋转流体中，无论是分层的还是非分层的。浅水方程是一套理想的方程组，用于探索这一过程，正如我们将看到的那样。</p>
+
+<h4>4.4.1 提出问题</h4>
+
+<p>我们考虑一个单层浅水层流体的自由演化，其初始状态明显不平衡，并假设表面位移较小，因此系统的演化可以由线性化的浅水运动方程描述。这些方程为：</p>
+
+<p>
+\[
+\frac{\partial u}{\partial t} + f \times u = -g \nabla \eta,
+\]
+</p>
+
+<p>
+\[
+\frac{\partial \eta}{\partial t} + H \nabla \cdot u = 0,
+\]
+</p>
+
+<p>(4.65a,b)</p>
+
+<p>其中，\(\eta\) 是自由表面的位移，\(H\) 是平均流体深度，我们在线性化变量上省略了撇号。</p>
+
+<h4>4.4.2 非旋转流动</h4>
+
+<p>我们首先考虑非旋转问题集，在一维情况下，几乎没有普遍性损失。我们假设最初流体处于静止状态，但高度场存在简单的不连续性，因此：</p>
+
+<p>
+\[
+\eta(x, t = 0) = 
+\begin{cases} 
++\eta_0, & x < 0, \\ 
+-\eta_0, & x > 0. 
+\end{cases}
+\]
+</p>
+
+<p>(4.66)</p>
+
+<p>并且 \( u(x, t = 0) = 0 \) 在所有位置都成立。我们可以通过物理方式实现这些初始条件，将两块不同深度的流体质量用一堵薄墙隔开，然后迅速移除墙壁。流体的后续演化是什么？线性问题的一般解由方程 (4.44) 给出，其中函数形式由初始条件决定，因此：</p>
+
+<p>
+\[
+F(x) = \eta(x, t = 0) = -\eta_0 \operatorname{sgn}(x).
+\]
+</p>
+
+<p>(4.67)</p>
+
+<p>方程 (4.44) 表明，这个初始模式以速度 \( c = \sqrt{gH} \) 向右和向左传播。具体解为：</p>
+
+<p>
+\[
+\eta(x, t) = -\frac{1}{2} \eta_0 \left[\operatorname{sgn}(x + ct) + \operatorname{sgn}(x - ct)\right].
+\]
+</p>
+
+<p>(4.68)</p>
+
+<p>初始条件可能比简单的前沿要复杂得多，但由于波是无色散的，解仍然只是一个简单的叠加。</p>
+
+<h4>4.4.3 旋转流动</h4>
+
+<p>旋转对浅水系统的调整问题产生了深远的影响，因为一个稳定、平衡的解可以存在于高度场中存在非零梯度的情况下——相关的压强梯度由科里奥利力平衡，并且势涡度守恒为流体演化提供了强大的约束。</p>
+
+<p>在旋转情况下，这种现象与非旋转情况有显著差异，特别是在时间和空间尺度上，地转效应和势涡度约束共同塑造了流体的演化过程。</p>
+
+<h4>4.4.4 速度场的演化</h4>
+
+<p>在这种情况下，速度场的演化可以通过以下方程描述：</p>
+
+<p>
+\[
+\frac{\partial u}{\partial t} = -g \frac{\partial \eta}{\partial x},
+\]
+</p>
+
+<p>(4.69)</p>
+
+<p>由此得到：</p>
+
+<p>
+\[
+u = -\frac{g}{2c} \left[F(x + ct) - F(x - ct)\right].
+\]
+</p>
+
+<p>(4.70)</p>
+
+<p>考虑初始条件由 (4.66) 给出。在距离初始扰动较远的某个位置，流体保持静止，直到前沿到达。前沿通过后，流体表面再次保持静止，速度均匀且非零。具体表现为：</p>
+
+<p>
+\[
+\eta = 
+\begin{cases}
+-\eta_0 \operatorname{sgn}(x), & |x| > ct,\\
+0, & |x| < ct.
+\end{cases}
+\]
+</p>
+
+<p>
+\[
+u = 
+\begin{cases}
+0, & |x| > ct,\\
+\frac{\eta_0 g}{c}, & |x| < ct.
+\end{cases}
+\]
+</p>
+
+<p>(4.71)</p>
+
+<p>具有高度场不连续性和零初始速度的解在图4.7的右侧面板中进行了说明。前沿从不连续性向两个方向传播，在这种情况下，最终速度以及流体位移均为零。也就是说，扰动被完全辐射掉。</p>
+
+<p>以上是关于地转调整和非旋转、旋转流动情况下的浅水系统演化的详细描述。</p>
+
+
+<h4>4.4.3 旋转流动</h4>
+<p>旋转对浅水系统的调整问题产生深远影响，因为在高度场中存在非零梯度的情况下，可以存在稳定的调整解 —— 相关的压力梯度由科里奥利力平衡，而位涡守恒为流体演化提供了强大的约束。</p>
+<p>在这种情况下，流体的守恒可以表示为：</p>
+<p>
+\[
+\frac{\partial Q}{\partial t} + u \cdot \nabla Q = 0, \quad (4.72)
+\]
+</p>
+<p>其中 \(Q = (\zeta + f) / H\)。在常数科里奥利参数的线性情况下，(4.72)变为：</p>
+<p>
+\[
+\frac{\partial q}{\partial t} = 0, \quad q = (\zeta - f_0 \frac{\eta}{H}). \quad (4.73)
+\]
+</p>
+<p>将初始条件带入，位涡守恒得出：</p>
+<p>
+\[
+q(x, y) = 
+\begin{cases} 
+-f_0 \eta_0 / H, & x < 0, \\
+f_0 \eta_0 / H, & x > 0.
+\end{cases}
+\quad (4.75)
+\]
+</p>
+<p>这一状态在整个调整过程中保持不变。最终的稳态解为：</p>
+<p>
+\[
+\zeta - f_0 \frac{\eta}{H} = q(x, y), \quad f_0 u = -g \frac{\partial \eta}{\partial y}, \quad f_0 v = g \frac{\partial \eta}{\partial x}. \quad (4.76a,b,c)
+\]
+</p>
+<p>将这些方程化简得到：</p>
+<p>
+\[
+\left(\frac{\partial^2}{\partial x^2} - \frac{1}{L_d^2}\right) \psi = \frac{f_0 \eta_0}{H} \text{sgn}(x). \quad (4.78)
+\]
+</p>
+<p>解析解为：</p>
+<p>
+\[
+\psi = 
+\begin{cases} 
+-\frac{g \eta_0}{f_0} (1 - e^{-x / L_d}), & x > 0, \\
+\frac{g \eta_0}{f_0} (1 - e^{x / L_d}), & x < 0.
+\end{cases}
+\quad (4.79)
+\]
+</p>
+<p>相应的速度场为：</p>
+<p>
+\[
+u = 0, \quad v = -\frac{g \eta_0}{f_0 L_d} e^{-|x| / L_d}. \quad (4.80)
+\]
+</p>
+<p>这个过程称为<strong>地转调整</strong>，其特性由位涡守恒和变形半径 \(L_d\) 决定。</p>
+<p>
+锋面以速度 \( \sqrt{gH} = 1 \) 向外传播，就像在非旋转情况下那样，但在旋转流中，它们留下了一个具有非零子午线速度的地转平衡状态。
+</p>
+
+<h3>4.5 一种关于调整的变分视角</h3>
+<p>
+在非旋转问题中，所有初始势能最终都会辐射到无限远处。在旋转问题中，最终状态同时包含势能和动能，这些能量大多被困在初始扰动的变形半径内，因为对流守恒使得所有能量无法完全分散。这表明，从一个变分问题的角度来看地转调整问题可能会更具启发性：我们试图在保持势涡度守恒的前提下最小化能量。我们停留在线性近似中，因为忽略了势涡度的平流效应，因此势涡度在每个点保持恒定。
+</p>
+<p>
+流动的能量 \( \hat{E} \) 由势能和动能之和给出，具体如下：
+</p>
+<p>
+\[
+\hat{E} = \int (H u^2 + g \eta^2) \, dA,
+\]
+</p>
+<p>
+（其中 \( dA = dx \, dy \)），而势涡度场为：
+</p>
+<p>
+\[
+q = \zeta - f_0 \frac{\eta}{H} = (v_x - u_y) - f_0 \frac{\eta}{H},
+\]
+</p>
+<p>
+其中下标 \( x \) 和 \( y \) 表示导数。该问题是要在保持势涡度守恒的约束下极小化能量。这是一个受限变分法问题，有时也被称为<strong>等周问题</strong>，因为它起源于在给定周长下最大化表面积。
+</p>
+<p>
+数学问题是极小化以下积分：
+</p>
+<p>
+\[
+I = \int \left\{ H(u^2 + v^2) + g \eta^2 + \lambda(x, y) \left[ (v_x - u_y) - f_0 \frac{\eta}{H} \right] \right\} dA,
+\]
+</p>
+<p>
+其中 \( \lambda(x, y) \) 是一个拉格朗日乘子，此阶段下尚未确定。它是一个空间函数：如果它是一个常数，积分只会在给定势涡度积分的条件下极小化，并重新排列势涡度的分布（在这里我们希望避免）将保持积分不变。
+</p>
+<p>
+由于有三个独立变量，需要求解三个欧拉-拉格朗日方程，以使 \( I \) 最小化。这些方程为：
+</p>
+<p>
+\[
+\frac{\partial L}{\partial \eta} - \frac{\partial}{\partial x} \frac{\partial L}{\partial \eta_x} - \frac{\partial}{\partial y} \frac{\partial L}{\partial \eta_y} = 0,
+\]
+</p>
+<p>
+\[
+\frac{\partial L}{\partial u} - \frac{\partial}{\partial x} \frac{\partial L}{\partial u_x} - \frac{\partial}{\partial y} \frac{\partial L}{\partial u_y} = 0,
+\]
+</p>
+<p>
+\[
+\frac{\partial L}{\partial v} - \frac{\partial}{\partial x} \frac{\partial L}{\partial v_x} - \frac{\partial}{\partial y} \frac{\partial L}{\partial v_y} = 0.
+\]
+</p>
+<p>
+其中 \( L \) 是积分的被积函数，将 \( L \) 的表达式代入上述方程后，经过一些代数变换，得到：
+</p>
+<p>
+\[
+2g \eta - \frac{\lambda f_0}{H} = 0,
+\]
+</p>
+<p>
+\[
+2Hu + \frac{\partial \lambda}{\partial y} = 0,
+\]
+</p>
+<p>
+\[
+2Hv - \frac{\partial \lambda}{\partial x} = 0.
+\]
+</p>
+<p>
+消去 \( \lambda \) 后，得到简单的关系：
+</p>
+<p>
+\[
+u = -\frac{g}{f_0} \frac{\partial \eta}{\partial y}, \quad v = \frac{g}{f_0} \frac{\partial \eta}{\partial x}.
+\]
+</p>
+<p>
+这些就是地转平衡方程！因此，在线性近似下，<strong>地转平衡是给定势涡度场下的最小能量状态。</strong>
+</p>
+
+<h4>注释与参考文献</h4>
+<p>
+浅水方程有时被称为<strong>圣维南方程</strong>，以阿德马尔·让·克劳德·巴雷·德·圣维南（1797–1886）的名字命名，他在1871年写下了这些方程的一种形式。皮埃尔-西蒙·拉普拉斯（1749–1825）此前在球面上写下了这些方程的线性版本，现在被称为<strong>拉普拉斯潮汐方程</strong>，在1776年。人们不会感到惊讶，甚至欧拉在那之前就已经知道这些方程。
+</p>
