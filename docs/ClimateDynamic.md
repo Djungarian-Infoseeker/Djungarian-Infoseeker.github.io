@@ -2700,6 +2700,7 @@ p = -\rho_0 g z
 </p>
 <p>静水压力与深度成正比，由密度和重力决定。</p>
 </div>
+
 <!-- 盐度变化方程 -->
 <p>如果盐度变化也需要考虑（如在海洋中），我们可以引入盐度的演化方程：</p>
 <p>
@@ -2799,3 +2800,279 @@ b = g \delta \theta / \theta_0,
 \]
 </p>
 <p>其中 \(\theta_0\) 是一个常数。</p>
+<h2>2.6 压力坐标系</h2>
+<p>尽管使用 <em>z</em> 作为垂直坐标是一个自然的选择，但它并不是唯一的选择。任何与 <em>z</em> 存在一一对应关系并且在垂直方向上单调变化的变量都可以用作坐标。在大气中，压力几乎总是随着高度单调下降，使用压力代替 <em>z</em> 作为垂直坐标，可以显著简化质量守恒方程和地转关系，同时也更直接地与观测结果联系起来，这些观测结果通常是在固定压力值下获得的。</p>
+
+<h3>2.6.1 一般垂直坐标</h3>
+<p>首先考虑一个通用的垂直坐标，记为 <em>&xi;</em>。任何作为坐标 <em>(x, y, z, t)</em> 的函数 <em>&Psi;</em>，可以通过将 <em>&xi;</em> 看作 <em>(x, y, z, t)</em> 的函数，改用 <em>(x, y, &xi;, t)</em> 来表示。关于 <em>z</em> 和 <em>&xi;</em> 的导数之间的关系为：</p>
+<p>\[
+\frac{\partial \Psi}{\partial \xi} = \frac{\partial \Psi}{\partial z} \frac{\partial z}{\partial \xi}, \quad \frac{\partial \Psi}{\partial z} = \frac{\partial \Psi}{\partial \xi} \frac{\partial \xi}{\partial z}
+\]</p>
+<p>水平导数在这两个坐标系中的关系由链式法则给出：</p>
+<p>\[
+\left(\frac{\partial \Psi}{\partial x}\right)_{\xi} = \left(\frac{\partial \Psi}{\partial x}\right)_z + \left(\frac{\partial z}{\partial x}\right)_{\xi} \frac{\partial \Psi}{\partial z}
+\]</p>
+<p>在 <em>&xi;</em> 坐标中，物质导数可以通过注意到“垂直速度”在 <em>&xi;</em> 坐标中是 <em>D&xi;/Dt</em>，就像在 <em>z</em> 坐标中的垂直速度是 <em>w = Dz/Dt</em>。因此，我们可以写成：</p>
+<p>\[
+\frac{D \Psi}{D t} = \left(\frac{\partial \Psi}{\partial t}\right)_{x, y, \xi} + u \cdot \nabla_{\xi} \Psi + \dot{\xi} \frac{\partial \Psi}{\partial \xi}
+\]</p>
+<p>其中 <em>∇&xi;</em> 是在恒定 <em>&xi;</em> 条件下的梯度算子。算子 <em>D/Dt</em> 在物理上在 <em>z</em> 或 <em>&xi;</em> 坐标中是相同的，因为它是流体微团某一性质的总导数，这独立于坐标系统。然而，其各个项在不同坐标系统中有所不同。</p>
+
+<h3>2.6.2 在压力坐标中的应用</h3>
+<p>在压力坐标中，垂直速度的对应量是 <em>&omega; = Dp/Dt</em>，并且平流导数本身可表示为：</p>
+<p>\[
+\frac{D}{D t} = \frac{\partial}{\partial t} + u \cdot \nabla_p + \omega \frac{\partial}{\partial p}
+\]</p>
+<p>注意，平流导数在高度坐标和压力坐标中是相同的运算，因为它只是给定流体微团的总导数；它仅以不同的坐标表示。</p>
+
+<p>为了得到压力力的表达式，现在让 <em>&xi; = p</em> 并将关系应用于 <em>p</em> 本身，得到：</p>
+<p>\[
+0 = \left(\frac{\partial p}{\partial x}\right)_z + \left(\frac{\partial z}{\partial x}\right)_p \frac{\partial p}{\partial z}
+\]</p>
+<p>使用静力学关系，得到：</p>
+<p>\[
+\left(\frac{\partial p}{\partial x}\right)_z = \rho \left(\frac{\partial \Phi}{\partial x}\right)_p
+\]</p>
+<p>其中，<em>&Phi; = gz</em> 是重力位势。因此，水平压力力方程变为：</p>
+<p>\[
+\frac{1}{\rho} \nabla_z p = \nabla_p \Phi
+\]</p>
+<p>其中，梯度算子的下标表示水平导数是在恒定 <em>z</em> 或恒定 <em>p</em> 条件下取的。水平动量方程变为：</p>
+<p>\[
+\frac{D u}{D t} + f \times u = -\nabla_p \Phi
+\]</p>
+<p>其中 <em>D/Dt</em> 由上式定义。静力方程在高度坐标中为 <em>∂p/∂z = -ρg</em>，在压力坐标中变为：</p>
+<p>\[
+\frac{\partial \Phi}{\partial p} = -\alpha \quad \text{或} \quad \frac{\partial \Phi}{\partial p} = -\frac{p}{RT}
+\]</p>
+<p>在静力学近似下，质量守恒方程在压力坐标中简化为：</p>
+<p>\[
+\frac{D}{D t}(\rho \delta V) = 0
+\]</p>
+<p>其中，<em>δV = δx δy δz</em> 是体积元。但根据静力关系 <em>ρδz = -(1/g)δp</em>，因此：</p>
+<p>\[
+\frac{D}{D t}(\delta x \delta y \delta p) = 0
+\]</p>
+<p>这与不可压缩流体中体积守恒表达式完全类似。因此，在压力坐标中，质量守恒方程可写为：</p>
+<p>\[
+\left(\frac{\partial u}{\partial x}\right)_p + \left(\frac{\partial v}{\partial y}\right)_p + \frac{\partial \omega}{\partial p} = 0 \quad \text{或} \quad \nabla_p \cdot u + \frac{\partial \omega}{\partial p} = 0
+\]</p>
+<p>其中，水平导数在恒定压力条件下取值。</p>
+
+<p>(绝热)热力学方程仍然是：</p>
+
+<p>\[
+\frac{D \Theta}{D t} = 0
+\]</p>
+
+<p>并且 \(\Theta\) 可以使用其定义与压力和温度相关联。</p>
+
+<p>为了完成方程组，我们从理想气体方程开始：</p>
+
+<p>\[
+c_p \frac{D T}{D t} - \alpha \frac{D p}{D t} = 0
+\]</p>
+
+<p>由于 \(\omega = \frac{D p}{D t}\)，该方程变为：</p>
+
+<p>\[
+c_p \frac{D T}{D t} - \frac{R T}{p} \omega = 0
+\]</p>
+
+<div class="abstract">
+<h2>压力坐标与对数压力坐标下的运动方程</h2>
+
+<p>在压力坐标下，绝热、无黏性的基本方程如下：</p>
+
+<p><strong>水平动量方程：</strong></p>
+<p>\[
+\frac{D u}{D t} + f \times u = -\nabla_p \Phi,
+\]</p>
+<p>(P.1)</p>
+
+<p><strong>静力方程：</strong></p>
+<p>\[
+\frac{\partial \Phi}{\partial p} = -\frac{R T}{p},
+\]</p>
+<p>(P.2)</p>
+
+<p><strong>质量连续性方程：</strong></p>
+<p>\[
+\nabla_p \cdot u + \frac{\partial \omega}{\partial p} = 0,
+\]</p>
+<p>(P.3)</p>
+
+<p><strong>热力学方程：</strong></p>
+<p>\[
+\frac{\partial T}{\partial t} + u \frac{\partial T}{\partial x} + v \frac{\partial T}{\partial y} + \omega S_p = 0 \quad \text{或} \quad \frac{D \Theta}{D t} = 0,
+\]</p>
+<p>(P.4)</p>
+
+<p>其中，\(S_p = \kappa T / p - \partial T / \partial p\)，\(\kappa = R / c_p\)，\(\Theta = T(p_0 / p)^\kappa\) 是位温。</p>
+<p>上述方程分别为水平动量方程、静力方程、质量守恒方程和热力学方程。</p>
+<p>使用静力和理想气体关系，热力学方程也可以写成：</p>
+
+<p>\[
+\frac{\partial T}{\partial t} + u \frac{\partial T}{\partial x} + v \frac{\partial T}{\partial y} + \omega \frac{\partial T}{\partial p} + \frac{\partial s}{\partial p} = 0,
+\]</p>
+<p>(P.5)</p>
+
+<p>其中，\(s = T + gz / c_p\) 是干静能除以 \(c_p\)。</p>
+
+<h3>对数压力坐标下的相应方程</h3>
+
+<p><strong>水平动量方程：</strong></p>
+<p>\[
+\frac{D u}{D t} + f \times u = -\nabla_p \Phi,
+\]</p>
+<p>(P.6)</p>
+
+<p><strong>静力方程：</strong></p>
+<p>\[
+\frac{\partial \Phi}{\partial z} = -\frac{R T}{H},
+\]</p>
+<p>(P.7)</p>
+
+<p><strong>质量连续性方程：</strong></p>
+<p>\[
+\nabla_z \cdot u + \frac{1}{P_n} \frac{\partial P_n W}{\partial z} = 0,
+\]</p>
+<p>(P.8)</p>
+
+<p><strong>热力学方程：</strong></p>
+<p>\[
+\frac{\partial T}{\partial t} + u \frac{\partial T}{\partial x} + v \frac{\partial T}{\partial y} + W S_z = 0 \quad \text{或} \quad \frac{D \Theta}{D t} = 0,
+\]</p>
+<p>(P.9)</p>
+
+<p>其中，\(P_n = \rho_0 \exp(-Z / H)\)，\(S_z = \kappa T / H + \partial T / \partial Z\)。</p>
+
+<p>热力学方程也可以写成：</p>
+
+<p>\[
+\frac{\partial \Phi}{\partial z} + u \frac{\partial \Phi}{\partial x} + v \frac{\partial \Phi}{\partial y} + W \frac{\partial \Phi}{\partial z} + W N^2 = 0,
+\]</p>
+<p>(P.10)</p>
+
+<p>其中，\(N^2_z = (R / H S_z)\)。</p>
+</div>
+<p>在压力坐标中，适当的热力学方程可以写成：</p>
+
+<p>\[
+\frac{\partial T}{\partial t} + u \frac{\partial T}{\partial x} + v \frac{\partial T}{\partial y} - \omega S_p = 0,
+\]</p>
+
+<p>其中：</p>
+
+<p>\[
+S_p = \kappa \frac{T}{p} \frac{\partial T}{\partial p} = \frac{T}{\theta} \frac{\partial \theta}{\partial p},
+\]</p>
+
+<p>(2.84a,b)</p>
+
+<p>使用理想气体方程和位温的定义，\( \kappa = R / c_p \)。</p>
+
+<p>量 \( S_p \) 是静态稳定性的一种衡量标准，它与浮力频率 \( N \) 密切相关。</p>
+
+<p>压力坐标方程的主要实际难点是下边界条件。</p>
+
+<p>使用：</p>
+
+<p>\[
+w \equiv \frac{Dz}{Dt} = \frac{\partial z}{\partial t} + u \cdot \nabla_p z + \omega \frac{\partial z}{\partial p},
+\]</p>
+
+<p>(2.85)</p>
+
+<p>并使用(2.79)，当 \( w = 0 \) 在 \( z = z_s \) 时，下边界条件变为：</p>
+
+<p>\[
+\frac{\partial \phi}{\partial t} + u \cdot \nabla_p \phi - \alpha \omega = 0,
+\]</p>
+
+<p>(2.86)</p>
+
+<p>在 \( p(x, y, z_s, t) \) 上。</p>
+
+<p>在理论或理想化研究中，通常假设下边界实际上是一个恒定压力表面，并简单地假设 \( \omega = 0 \)。</p>
+
+<p>压力坐标方程（在前一页的阴影框中收集在一起）在结构上与静力广义Boussinesq方程非常相似（参见第38页的阴影框）。</p>
+
+<p>事实上，可以建立一个正式的一一对应关系，但我们在这里不再深入探讨。</p>
+<h3>2.6.3 对数压力坐标 (Log-Pressure Coordinates)</h3>
+
+<p><em>对数压力坐标</em>是压力坐标的一种变体，其中垂直坐标定义为：</p>
+
+<p>\[
+Z = -H \ln\left(\frac{p}{p_R}\right)
+\]</p>
+
+<p>其中，\( p_R \) 是一个参考压力（例如1000 hPa），\( H \) 是一个常数（例如比例高度 \( RT_0 / g \)，其中 \( T_0 \) 也是一个常数）。因此，\( Z \) 具有长度的单位。（对数压力坐标中，通常使用大写字母来表示某些变量，不要与缩放参数混淆。）</p>
+
+<p>系统的“垂直速度”定义为：</p>
+
+<p>\[
+W \equiv \frac{DZ}{Dt}
+\]</p>
+<p>（2.87）</p>
+
+<p>对流导数定义为：</p>
+
+<p>\[
+\frac{D}{Dt} = \frac{\partial}{\partial t} + u \cdot \nabla_p + W \frac{\partial}{\partial Z}
+\]</p>
+<p>（2.88）</p>
+
+<p>水平动量方程与（2.78）相同，尽管我们使用（2.88）来评估对流导数。</p>
+
+<p><strong>显然可以看出，静力方程变为：</strong></p>
+
+<p>\[
+\frac{\partial \Phi}{\partial Z} = \frac{RT}{H}
+\]</p>
+<p>（2.89）</p>
+
+<p>质量连续性方程（2.82）变为：</p>
+
+<p>\[
+\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial W}{\partial Z} - \frac{W}{H} = 0
+\]</p>
+<p>（2.90）</p>
+
+<p>这可以写成：</p>
+
+<p>\[
+\nabla_Z \cdot u + \frac{1}{\rho_R} \frac{\partial (\rho_R W)}{\partial Z} = 0
+\]</p>
+<p>（2.91）</p>
+
+<p>其中，\( \nabla_Z \) 是在恒定 \( Z \) 下的散度，\( \rho_R = \rho_0 \exp(-Z / H) \)。</p>
+
+<p>与压力坐标一样，将热力学方程以温度而非位温的形式表示更为方便。因此，由于 \( W = -\left(\frac{H}{p}\right)\frac{Dp}{Dt} \)，（1.53b）变为：</p>
+
+<p>\[
+c_p \frac{DT}{Dt} + W \frac{RT}{H} = 0
+\]</p>
+<p>（2.92）</p>
+
+<p>这个方程可以写成：</p>
+
+<p>\[
+\frac{\partial T}{\partial t} + u \frac{\partial T}{\partial x} + v \frac{\partial T}{\partial y} + W S_Z = 0
+\]</p>
+<p>（2.93）</p>
+
+<p>其中，\( S_Z = \kappa \frac{T}{H} + \frac{\partial T}{\partial Z} \)。</p>
+
+<p>以对数压力形式书写方程可以揭示很多内容。例如，积分静力方程（2.89）可得：</p>
+
+<p>\[
+z(p_2) - z(p_1) = -\frac{R}{g} \int_{p_1}^{p_2} T d \ln p
+\]</p>
+<p>（2.94）</p>
+
+<p>因此，两层之间的厚度与其平均温度成正比。此外，我们看到在恒定温度下，几何高度与压力的对数成线性关系。在240 K时，比例高度 \( RT / g \) 大约为7 km，而在280 K时约为8.2 km。一个有用的经验法则是，在地球大气中，每当压力减少一个数量级（例如从1000 hPa到100 hPa），几何高度大约增加16 km。因此，1000 hPa、100 hPa 和10 hPa 分别对应约0 km、16 km 和32 km 的高度，依此类推。</p>
+
+<h4>笔记和参考文献 (Notes and References)</h4>
+
+<p>在气象和海洋学中使用的方程组由Phillips（1963）和White（2002）回顾。两本讨论旋转流体动力学的书籍，风格和主题选择各异，分别是Salmon（1998）和Holton & Hakim（2012）。有关更多参考资料，请参见第3章末尾的笔记部分。</p>
