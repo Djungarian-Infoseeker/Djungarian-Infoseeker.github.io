@@ -2237,3 +2237,109 @@ u & v & w
 \frac{\partial p}{\partial z} = -\rho g. \quad (2.41c)
 \]
 </p>
+<h3>2.3 笛卡尔近似：切平面 (Cartesian Approximations: The Tangent Plane)</h3>
+
+<p>
+虽然地球的自转对于许多动力学现象都至关重要，但地球的球形特性并不总是那么重要，尤其当研究尺度小于全球范围时；在这种情况下，使用局部笛卡尔形式来表示这些方程将变得十分便利。参考图2.3中的红色线段，我们在某个纬度 <i>ϑ<sub>0</sub></i> 处定义了一个与地球表面相切的平面，然后使用一个笛卡尔坐标系 (<i>x, y, z</i>) 来描述该平面上的运动。
+</p>
+
+<p>
+对于在该平面上的小范围运动，我们将 (<i>x, y, z</i>) = (<i>λΔ, θΔ, z</i>) 之类的形式进行一致设定，从而让 <i>u</i>、<i>v</i>、<i>w</i> 分别代表在这个切平面上近似为东西向、南北向以及垂直方向的速度分量。这样一来，不使用浅薄大气近似的情况下，该平面内的流动动量方程就可以写为 (2.42a)、(2.42b) 和 (2.42c)：
+</p>
+
+<p>
+\[
+\frac{\partial u}{\partial t} + ( \mathbf{v} \cdot \nabla ) u + 2 \Omega \left( v \sin \vartheta_0 - w \cos \vartheta_0 \right) = -\frac{1}{\rho} \frac{\partial p}{\partial x}, \quad (2.42a)
+\]
+</p>
+
+<p>
+\[
+\frac{\partial v}{\partial t} + ( \mathbf{v} \cdot \nabla ) v + 2 \Omega \left( w \sin \vartheta_0 - u \sin \vartheta_0 \right) = -\frac{1}{\rho} \frac{\partial p}{\partial y}, \quad (2.42b)
+\]
+</p>
+
+<p>
+\[
+\frac{\partial w}{\partial t} + ( \mathbf{v} \cdot \nabla ) w + 2 \Omega \left( u \cos \vartheta_0 - v \cdot 0 \right) = -\frac{1}{\rho} \frac{\partial p}{\partial z} - g, \quad (2.42c)
+\]
+</p>
+
+<p>
+其中，旋转向量可以写作 <i>Ω = Ω<sub>x</sub> i + Ω<sub>y</sub> j + Ω<sub>z</sub> k</i>，并令 Ω<sup>X</sup> = Ω cos ϑ<sub>0</sub>，Ω<sup>Y</sup> = Ω sin ϑ<sub>0</sub>。我们现在忽略 Ω 在局部垂直方向之外的所有分量，这称为“传统近似 (the traditional approximation)”，在这里它可以被视为对应于浅薄大气近似的一种笛卡尔类比 (Cartesian analogue)。注意，所有被忽略的项都要么被乘以或被投影到一个垂直速度上，因此并未明确列出。
+</p>
+
+<p>
+在此近似下，这些方程变为：
+</p>
+
+<p>
+\[
+\frac{D u}{D t} - f_0 v = -\frac{1}{\rho} \frac{\partial p}{\partial x}, 
+\quad \frac{D v}{D t} + f_0 u = -\frac{1}{\rho} \frac{\partial p}{\partial y}, 
+\quad \frac{D w}{D t} = -\frac{1}{\rho} \frac{\partial p}{\partial z} - g, 
+\quad (2.43a,b,c)
+\]
+</p>
+
+<p>
+其中 <i>f<sub>0</sub> = 2Ω sin ϑ<sub>0</sub></i>。定义水平速度向量 <i>\mathbf{u} = (u, v)</i>，则第一个方程可写为：
+</p>
+
+<p>
+\[
+\frac{D \mathbf{u}}{D t} + f_0 \hat{\mathbf{k}} \times \mathbf{u} = -\frac{1}{\rho} \nabla_p p, \quad (2.44)
+\]
+</p>
+
+<p>
+其中 \(\nabla_p\) 表示只对 <i>x</i> 和 <i>y</i> 进行偏导的水平梯度算子。这样，这些方程与一个旋转向量与局部垂直方向对齐的系统中的动量方程是相同的，如图2.3 (b) 所示；我们进行了所谓的 <b>f</b>-平面近似。在垂直方向上，常常会有一个较好的平衡关系：压力梯度力与重力相互平衡；如果满足静力近似，那么 (2.43c) 变为 <i>\partial p / \partial z = -\rho g</i>。该方程加上 (2.43a,b) 则为 <b>f</b>-平面上的原始方程 (primitive equations)。 
+</p>
+
+<h3>2.3.2 β-平面 (The Beta-Plane)</h3>
+
+<p>
+地球自转的垂直分量随纬度而变化，这对动力学有重要影响。我们可以通过让切平面上有效的旋转矢量随位置变化来近似这一效应，从而引入所谓的“β-平面近似 (beta-plane approximation)”。也就是说，对于纬度的微小变化，可以写作：
+</p>
+
+<p>
+\[
+f = 2\Omega \sin \vartheta = 2\Omega \sin \vartheta_0 + 2\Omega (\vartheta - \vartheta_0) \cos \vartheta_0, \quad (2.45)
+\]
+</p>
+
+<p>
+如果将这个平面视为允许柯里奥利参数随 <i>y</i> 变化，我们可以将柯里奥利参数写为：
+</p>
+
+<p>
+\[
+f = f_0 + \beta y, \quad \text{其中} \ f_0 = 2 \Omega \sin \vartheta_0, \ \beta = \frac{\partial f}{\partial y} = \frac{2\Omega \cos \vartheta_0}{a}.
+\]
+</p>
+
+<p>
+这种重要的近似称为 <b>β-平面近似</b>；它捕捉了球形特性最重要的动力学效应，同时不必考虑复杂的几何因素，这些因素并非在许多现象的描述中不可或缺。这样，球形与自转相结合在动力学上等价于一个差异自转系统。为了在后面引用，我们将 β-平面水平动量方程写为：
+</p>
+
+<p>
+\[
+\frac{D \mathbf{u}}{D t} + f \hat{\mathbf{k}} \times \mathbf{u} = -\frac{1}{\rho} \nabla_p p, \quad (2.47)
+\]
+</p>
+
+<p>
+其中 <i>f = (f_0 + \beta y)\hat{\mathbf{k}}</i>。用分量形式表示，该方程变为：
+</p>
+
+<p>
+\[
+\frac{D u}{D t} - f v = -\frac{1}{\rho} \frac{\partial p}{\partial x}, 
+\quad \frac{D v}{D t} + f u = -\frac{1}{\rho} \frac{\partial p}{\partial y}. 
+\quad (2.48a,b)
+\]
+</p>
+
+<p>
+质量守恒方程、热力学方程以及静力方程在 β-平面近似中与通常的笛卡尔 <b>f</b>-平面形式相同，这些方程的形式在下一页的框内给出。
+</p>
