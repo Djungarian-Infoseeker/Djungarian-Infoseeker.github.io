@@ -1933,7 +1933,7 @@ $$
 
 <p>
 \[
-\nabla \cdot \mathbf{B} = \frac{1}{\cos \theta} \left[\frac{1}{r} \frac{\partial (B^\lambda r \cos \theta)}{\partial \lambda} + \frac{1}{r} \frac{\partial (B^\theta \cos \theta)}{\partial \theta} + \frac{\cos \theta}{r^2} \frac{\partial (r^2 B^r)}{\partial r}\right]
+\nabla \cdot \mathbf{B} = \frac{1}{\cos \theta} \left[\frac{1}{r} \frac{\partial (B^\lambda )}{\partial \lambda} + \frac{1}{r} \frac{\partial (B^\theta \cos \theta)}{\partial \theta} + \frac{\cos \theta}{r^2} \frac{\partial (r^2 B^r)}{\partial r}\right]
 \]
 </p>
 
