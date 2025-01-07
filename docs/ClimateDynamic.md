@@ -3710,3 +3710,102 @@ N^2 = -\frac{g}{\tilde{\rho}_\theta} \left(\frac{\partial \tilde{\rho}_\theta}{\
 <p>
 量 \( \tilde{\rho}_\theta \) 是环境的局部参考势密度。对于大气层，参考水平并不重要，但对于海洋，特别是在存在盐度的情况下，它很重要：在相同水平面上，具有相同<i>原位</i>密度的微团可能具有不同的势密度。如果淡水进入冷却环境，水蒸气可能凝结，释放更多热量，导致更多上升；因此，大气可能不稳定，而海洋可能稳定。
 </p>
+<h3>3.4.2 气态大气层</h3>
+
+<p><em>浮力频率</em></p>
+
+<p>在大气中，位势密度与位温有关，关系为：</p>
+<p>\[
+\rho_\theta = \rho_{R}(\theta / \theta_R)
+\]</p>
+<p>其中，\(\rho_R\) 是位温的参考水平。</p>
+<p>将此表达式代入(3.55)式，得到：</p>
+<p>\[
+N^2 = \frac{g}{\bar{\theta}} \left(\frac{\partial \bar{\theta}}{\partial z}\right)
+\]</p>
+<p>(3.56)</p>
+
+<p>这里，\(\bar{\theta}\) 指的是位温的环境剖面。参考值 \(\rho_R\) 不会显现，因此我们可以任意选择这个值——表面气压是一个常见选择。(3.53)的稳定性条件对应于 \(N^2 > 0\) 为稳定，\(N^2 < 0\) 为不稳定。</p>
+
+<p>平均而言，大气是稳定的。在对流层（大气的最低几公里），平均 \(N\) 大约为 \(0.01 \, s^{-1}\)，相应的周期（\(2\pi / N\)）约为10分钟。在平流层（位于对流层之上），\(N^2\) 通常是这个值的几倍。</p>
+
+<h4><em>干绝热线率</em></h4>
+
+<p>在垂直方向上（实际）温度的变化率被称为<em>温度递减率</em>，或简称为<em>递减率</em>，记为 \( \Gamma \)。</p>
+
+<p>当 \(\partial \theta / \partial z = 0\) 时，相应的递减率称为<em>干绝热线率</em>，记为 \(\Gamma_d\)。</p>
+
+<p>使用 \(\theta = T(p_0 / p)^{R / c_p}\) 和 \(\partial p / \partial z = -\rho g\)，我们发现递减率与位温递减率的关系为：</p>
+<p>\[
+T \frac{\partial \theta}{\partial z} = \frac{\partial T}{\partial z} + \frac{g}{c_p}
+\]</p>
+<p>(3.57)</p>
+
+<p>因此，干绝热线率由以下公式给出：</p>
+<p>\[
+\Gamma_d = \frac{g}{c_p}
+\]</p>
+<p>(3.58)</p>
+
+<h4>静力稳定性条件</h4>
+<p>与(3.53)对应的静力稳定性条件如下：</p>
+
+<table>
+  <tr>
+    <th>稳定性：</th>
+    <td>\(\frac{\partial \bar{\theta}}{\partial z} > 0\)</td>
+    <td>或</td>
+    <td>\(\frac{\partial T}{\partial z} < \Gamma_d\)</td>
+  </tr>
+  <tr>
+    <th>不稳定性：</th>
+    <td>\(\frac{\partial \bar{\theta}}{\partial z} < 0\)</td>
+    <td>或</td>
+    <td>\(\frac{\partial T}{\partial z} > \Gamma_d\)</td>
+  </tr>
+</table>
+<p>(3.59a,b)</p>
+
+<p>在地球大气中，观察到的递减率 \(\Gamma\) 通常小于 \(6 \, K \, km^{-1}\)，而干绝热线率约为 \(10 \, K \, km^{-1}\)。</p>
+
+<p>为什么存在这种差异？为什么大气看起来如此稳定？</p>
+<p>一个原因是大气中含有水汽。如果湿空气包上升，它进入更冷的环境中，水汽可能凝结并释放更多的热量，导致更多的上升运动。因此，湿绝热线率远小于干绝热线率。</p>
+<p>我们将在第11章中对这一现象进行更详细的探讨。</p>
+
+<h3>3.4.3 液态海洋</h3>
+
+<p>在海洋中，由于状态方程的复杂性，没有简单、准确的解析表达式可以用来计算静力稳定性。</p>
+<p>然而，我们可以得到一个近似表达式，捕捉主要的影响。在绝热位移下：</p>
+<p>\[
+\delta \rho_\theta = \delta \rho - \frac{1}{c_s^2} \delta p = 0
+\]</p>
+<p>(3.60)</p>
+
+<p>如果流体处于静力平衡状态，\(\delta p = -\rho g \delta z\)，则密度的变化可以表示为：</p>
+<p>\[
+\left(\frac{\partial \rho}{\partial z}\right)_{\rho_\theta} = -\frac{\rho g}{c_s^2}
+\]</p>
+<p>(3.61)</p>
+
+<p>如果一个小包裹向上位移 \(\delta z\)，它与新环境之间的密度差异为：</p>
+<p>\[
+\delta \rho = -\left[\left(\frac{\partial \rho}{\partial z}\right)_{\rho_\theta} - \left(\frac{\partial \bar{\rho}}{\partial z}\right)\right] \delta z = \left[\frac{\rho g}{c_s^2} + \left(\frac{\partial \bar{\rho}}{\partial z}\right)\right] \delta z
+\]</p>
+<p>(3.62)</p>
+
+<p>因此，层结的稳定性由以下表达式给出：</p>
+<p>\[
+N^2 = -g \left[\frac{g}{c_s^2} + \frac{1}{\bar{\rho}} \left(\frac{\partial \bar{\rho}}{\partial z}\right)\right]
+\]</p>
+<p>(3.63)</p>
+
+<p>该表达式适用于液体和气体，对于理想气体，它与(3.56)相同。</p>
+
+<p>在海洋中，\(\frac{g}{c_s^2}\) 的因子较小但不可忽略。</p>
+
+<p>总之，只有当密度随深度的增加速度超过位势密度梯度的增加时，剖面才是稳定的。</p>
+
+<h4><em>注释与参考文献</em></h4>
+
+<p>地球物理流体动力学的两本经典教材分别是Gill (1982) 和Pedlosky (1987a)。</p>
+<p>Cushman-Roisin & Beckers (2011) 的著作也包含一些数值方法相关内容。</p>
