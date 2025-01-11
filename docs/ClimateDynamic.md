@@ -5236,3 +5236,408 @@ q_2 = \nabla^2 \psi_2 + \beta y + \frac{k_d^2}{2} (\psi_1 - \psi_2) + \frac{f_0 
 
 <p>这些方程展示了不同层次之间的相互作用，并揭示了涡度与浮力之间的联系。</p>
 </div>
+<h2>第6章 Rossby 波</h2>
+
+<h3>简介</h3>
+
+<p>波浪对几乎所有人都很熟悉。重力波覆盖海洋表面，声波使我们能够交谈，而光波使我们能够看见。这一章介绍了它们的性质，特别关注一种对海洋和大气中的大尺度流动尤其重要的波——Rossby 波。我们从波动力学的基本介绍开始，讨论相速度和群速度等概念。然后，从第 6.3 节开始，我们讨论 Rossby 波的动力学，这部分可以被视为上一章地转理论的自然延续。Rossby 波随后在后续章节中频繁出现。</p>
+
+<h3>6.1 基础与形式</h3>
+
+<h4>6.1.1 定义与运动学</h4>
+
+<p>波更容易被识别而不是被定义。宽泛地说，波是具有频率和尺度特征关系的传播扰动，这种关系被称为<em>色散关系</em>。为了更好地理解这个概念，我们假设某种扰动满足以下方程：</p>
+
+<p>
+\[
+L(\psi) = 0,
+\tag{6.1}
+\]
+</p>
+
+<p>其中 \( L \) 是一个线性算子，通常是时间和空间导数的多项式；一个例子是 \( L(\psi) = \partial^2 \psi / \partial t + \beta \partial \psi / \partial x \)。如果 (6.1) 中的系数是常数（如在此示例中 \( \beta \) 是常数），则可以找到谐波解，这些解是平面波的叠加形式，满足：</p>
+
+<p>
+\[
+\psi = \text{Re} \tilde{\psi} e^{i\theta(x, t)} = \text{Re} \tilde{\psi} e^{i(k \cdot x - \omega t)},
+\tag{6.2}
+\]
+</p>
+
+<p>其中 \( \tilde{\psi} \) 是复常数，\( \theta \) 是相位，\( \omega \) 是波的频率，\( k \) 是矢量波数（\( k, l, m \) 的向量，或 \( k_x, k_y, k_z \) 的简化标记）。前缀 \( \text{Re} \) 表示表达式的实部，如果没有歧义，我们将省略它。</p>
+
+<p>波的特征在于频率和波矢之间的特定关系，称为<em>色散关系</em>。这关系为以下形式的方程：</p>
+
+<p>
+\[
+\omega = \Omega(k),
+\tag{6.3}
+\]
+</p>
+
+<p>其中 \( \Omega(k) \) 或 \( \Omega(k, l, m) \) 是某种函数，由 (6.1) 的形式决定，并因此取决于特定的波类型——声音波、光波和 Rossby 波及重力波的函数均不同。本书中我们将遇到这些波。除非有必要明确区分 \( \Omega \) 和频率 \( \omega \) 的函数，我们通常写作 \( \omega = \omega(k) \)。</p>
+
+<h4>6.1.2 波的传播与相速度</h4>
+
+<p>波的一个常见性质是，它们以某种速度通过空间传播，在某些特殊情况下该速度可能为零。在流体中，波可能携带能量和动量，但通常不会传输流体本身。此外，事实证明，属性如能量的传播速度（群速度）可能与波峰本身的移动速度（相速度）不同。让我们从相速度开始尝试理解这一点。第 107 页给出了关键结果的总结。</p>
+
+<h4>相速度</h4>
+
+<p>考虑单色平面波的传播，这是引入相速度所需的一切。由 (6.2) 可知，波将在 \( k \) 的方向上传播（如图 6.1 所示）。在给定时刻和位置，我们可以将坐标轴对齐到 \( k \) 的方向，写作 \( k \cdot x = K x^* \)，其中 \( x^* \) 增加的方向为 \( k \)，且 \( K^2 = |k|^2 \) 是波数的模。通过这种方式，我们可以将 (6.2) 写作：</p>
+
+<p>
+\[
+\psi = \text{Re} \tilde{\psi} e^{i(K x^* - \omega t)} = \text{Re} \tilde{\psi} e^{i(K x^* - ct)}.
+\tag{6.4}
+\]</p>
+
+<p>由此可见，相位 \( \theta \) 以速度 \( c \) 在 \( k \) 的方向上传播，我们定义相速度为：</p>
+
+<p>
+\[
+\begin{aligned}
+ c_p = \frac{\omega}{K}.
+\tag{6.5}
+\end{aligned}
+\]</p>
+
+<p>波长 \( \lambda \) 是两波峰之间的距离，即沿传播线两点之间的距离，其相位差为 \( 2\pi \)。显然这可以表示为：</p>
+
+<p>
+\[
+\lambda = \frac{2\pi}{K}.
+\tag{6.6}
+\]</p>
+
+<p>为简单起见，考虑二维波，并参考图 6.1，\( x \)-和 \( y \)-方向的波长和波矢表示为：</p>
+
+<p>
+\[
+\lambda^x = \frac{\lambda}{\cos \phi}, \quad \lambda^y = \frac{\lambda}{\sin \phi}, \quad k^x = K \cos \phi, \quad k^y = K \sin \phi.
+\tag{6.7}
+\]</p>
+
+<p>通常，等相线与坐标轴相交并沿着它们传播。沿这些轴的传播速度为：</p>
+
+<p>
+\[
+\begin{aligned}
+ c_p^x &= \frac{l^x}{l} c_p = \frac{c_p}{\cos \phi} = \frac{\omega}{k^x}, \\
+ c_p^y &= \frac{l^y}{l} c_p = \frac{c_p}{\sin \phi} = \frac{\omega}{k^y}.
+\tag{6.8}
+\end{aligned}
+\]</p>
+
+<p>使用 (6.5) 和 (6.7)，并再次参考图 6.1 的符号。波沿任一坐标轴的相位传播速度通常大于波的主传播方向上的相速度。相速度显然不是一个向量的分量：例如，\( c_p^x \neq c_p \cos \phi \)。相应地，波矢 \( k \) 是一个真向量，而波长 \( \lambda \) 不是。</p>
+
+<p>总结，相速度及其分量如下：</p>
+
+<p>
+\[
+ c_p = \frac{\omega}{K}, \quad c_p^x = \frac{\omega}{k^x}, \quad c_p^y = \frac{\omega}{k^y}.
+\tag{6.9}
+\]</p>
+<div class="abstract">
+  <h3>波的基本原理</h3>
+  <p>波是一种传播的扰动，其频率和大小之间存在特定关系，被称为色散关系。波通常作为形式为 \( L(\psi) = 0 \) 的线性问题的解出现，其中 \( L \) 通常是空间和时间中的线性算子。</p>
+  
+  <p>两个示例为：</p>
+  
+  <p>
+  \[
+  \frac{\partial^2 \psi}{\partial t^2} - c^2 \nabla^2 \psi = 0
+  \]
+  </p>
+  <p>
+  \[
+  \frac{\partial}{\partial t} \nabla^2 \psi + \beta \frac{\partial \psi}{\partial x} = 0,
+  \]
+  </p>
+  
+  <p>其中第二个示例对应 Rossby 波。</p>
+  
+  <ul>
+    <li>控制方程的解通常以平面波的形式寻找，形式为：
+      <p>
+      \[
+      \psi = \text{Re} \, A e^{i(k \cdot x - \omega t)},
+      \]
+      </p>
+      <p>其中 \( A \) 是波幅，\( k = (k, l, m) \) 是波矢，\( \omega \) 是频率。</p>
+    </li>
+    <li>色散关系通过形式为 \( \omega = \Omega(k) \) 的方程连接频率和波矢，其中 \( \Omega \) 是某个函数。色散关系通常通过将试探解（如 (WF.2)）代入控制方程推导出来。例如，对 (WF.1) 的两个示例，我们得到：</li>
+    <p>
+    \[
+    \omega = c^2 K^2, \quad \omega = -\frac{\beta k}{K^2},
+    \]
+    </p>
+    <p>其中 \( K^2 = k^2 + l^2 + m^2 \)，在二维情况下为 \( K^2 = k^2 + l^2 \)。</p>
+    <li>相速度是波峰移动的速度。在传播方向上，相速度为：
+      <p>
+      \[
+      c_p = \frac{\omega}{K}, \quad c_p^x = \frac{\omega}{k}, \quad c_p^y = \frac{\omega}{l}, \quad c_p^z = \frac{\omega}{m}.
+      \tag{WF.3}
+      \]
+      </p>
+    </li>
+    <li>群速度是波包或波群移动的速度，是一个向量，由下式给出：
+      <p>
+      \[
+      c_g = \frac{\partial \omega}{\partial k}, \quad c_g^x = \frac{\partial \omega}{\partial k}, \quad c_g^y = \frac{\partial \omega}{\partial l}, \quad c_g^z = \frac{\partial \omega}{\partial m}.
+      \tag{WF.4}
+      \]
+      </p>
+    </li>
+    <li>大多数物理量都以群速度传递。</li>
+  </ul>
+</div>
+<h3>6.1.3 色散关系</h3>
+
+<p>上述描述是运动学上的，因为它适用于几乎所有具有波矢和频率的扰动。波的特定动力学由波矢与频率之间的关系决定，即色散关系。一旦知道了色散关系，波的许多属性便可以以或多或少直接的方式推导出来。从(6.3)开始，色散关系是频率与波矢之间的函数关系，通式为：</p>
+
+<p>\[
+\omega = \Omega(\mathbf{k}).
+\tag{6.10}
+\]</p>
+
+<p>也许最简单的线性算子示例是产生波动的一维方程：</p>
+
+<p>\[
+\frac{\partial \psi}{\partial t} + c \frac{\partial \psi}{\partial x} = 0.
+\tag{6.11}
+\]</p>
+
+<p>将形式为 \( \psi = Re(A e^{i(kx-\omega t)}) \) 的试探解代入(6.11)，得到色散关系：</p>
+
+<p>\[
+\omega = c k.
+\tag{6.12}
+\]</p>
+
+<p>此波的相速为 \( c_p = \omega / k = c \)。其他一些控制方程、色散关系和相速度的例子为：</p>
+
+<p>\[
+\frac{\partial^2 \psi}{\partial t^2} - c^2 \nabla^2 \psi = 0, \quad \omega^2 = c^2 K^2, \quad c_p = \pm c, \quad c_p^x = \pm \frac{c K_x}{K}, \quad c_p^y = \pm \frac{c K_y}{K},
+\tag{6.13a}
+\]</p>
+
+<p>\[
+\frac{\partial}{\partial t} \nabla^2 \psi + \beta \frac{\partial \psi}{\partial x} = 0, \quad \omega = -\frac{\beta k}{K^2}, \quad c_p = \frac{\omega}{k}, \quad c_p^x = -\frac{\beta}{K^2}, \quad c_p^y = -\frac{\beta l}{K^2}.
+\tag{6.13b}
+\]</p>
+
+<h4>波的叠加</h4>
+
+<p>如图 6.2 所示，不同波数 \( k \) 和 \( k + \delta k \) 的波的叠加产生一个调制波包。调制波包的传播速度为群速度 \( c_g = \partial \omega / \partial k \)，而相速度为 \( c_p = \omega / k \)。</p>
+
+<p>对于二维波，其中 \( K^2 = k^2 + l^2 \)。</p>
+
+<p>若波的相速度与波长无关，则称为非色散波。这一条件适用于简单的例子(6.11)，但显然不适用于(6.13b)的例子。这些波（例如罗斯贝波）实际上是色散波。</p>
+
+<p>具有不同波长的波以不同速度传播，因此一组波会扩展——即使介质是均匀的。当波是色散波时，还存在另一种传播速度，即群速度，这将在下一节详细讨论。</p>
+
+<p>大多数介质是不均匀的，但如果介质随空间和时间缓慢变化，特别是变化相对于波长和周期较慢，则仍可以具有频率与波矢之间的局部色散关系：</p>
+
+<p>\[
+\omega = \Omega(\mathbf{k}; x, t),
+\tag{6.14}
+\]</p>
+
+<p>其中 \( x \) 和 \( t \) 是缓慢变化的参数。我们将在6.5节中继续讨论这一主题，但在此之前，我们先介绍群速度。</p>
+<h3>6.2 群速度</h3>
+
+<p>信息和能量通常并不以相速度传播。相反，大多数感兴趣的量是以“群速度”传播的，群速度是波动理论中一个极其重要的量。大致而言，群速度是波包或波群传播的速度，而单个波峰是以相速度传播的。</p>
+
+<p>为了介绍这个概念，我们将考虑平面波的叠加，值得注意的是，一个真正的单色平面波已经均匀填满了整个空间，因此不可能存在能量从一个地方传播到另一个地方的情况。</p>
+
+<h4>6.2.1 两个波的叠加</h4>
+
+<p>考虑两个波的线性叠加。将注意力限制在一维情况，考虑一个由两个波叠加而成的扰动：</p>
+
+<p>\[
+\psi = \Re \tilde{\psi} \left( e^{i(k_1 x - \omega_1 t)} + e^{i(k_2 x - \omega_2 t)} \right).
+\tag{6.15}
+\]</p>
+
+<p>进一步假设这两个波具有相似的波数和频率，特别是，设 \( k_2 = k + \Delta k \) 和 \( \omega_2 = \omega + \Delta \omega \)。这样，式 (6.15) 变为：</p>
+
+<p>\[
+\psi = \Re \tilde{\psi} e^{i(kx - \omega t)} \left( e^{-i\Delta k x + \Delta \omega t} + e^{i\Delta k x - \Delta \omega t} \right),
+\tag{6.16}
+\]</p>
+
+<p>经过化简可以得到扰动包括两个部分：一个快速变化的部分和一个缓慢变化的包络。包络以速度 \( \Delta \omega / \Delta k \) 移动，这就是群速度：</p>
+
+<p>\[
+c_g = \frac{\partial \omega}{\partial k}.
+\tag{6.17}
+\]</p>
+
+<p>群速度等于相速度 \( \omega / k \) 仅当频率是波数的线性函数时。</p>
+
+<h3>6.3 罗氏波的基本要素</h3>
+
+<p>罗氏波是大气和海洋中最重要的波动之一，其作用范围较大，尽管重力波有时与之匹敌。罗氏波的最佳描述可以通过准地转方程实现，如下所示。</p>
+
+<h4>6.3.1 运动方程的线性化</h4>
+
+<p>相关的运动方程是不可压缩、绝热潜在涡度方程，在第 5 章讨论的准地转系统中为：</p>
+
+<p>\[
+\frac{\partial q}{\partial t} + \mathbf{u} \cdot \nabla q = 0,
+\tag{6.18}
+\]</p>
+
+<p>其中，\( q(x, y, z, t) \) 是潜在涡度，\( \mathbf{u}(x, y, z, t) \) 是水平速度，速度由流函数 \( \psi \) 决定，且</p>
+
+<p>\[
+\mathbf{u} = (-\frac{\partial \psi}{\partial y}, \frac{\partial \psi}{\partial x}).
+\]</p>
+
+<p>潜在涡度由下式给出：</p>
+
+<p>\[
+q = f + \zeta + \frac{\partial}{\partial z} \left( \frac{f_0^2}{N^2} \frac{\partial \psi}{\partial z} \right),
+\tag{6.19a,b}
+\]</p>
+
+<p>其中，\( \zeta = \nabla^2 \psi \) 是相对涡度，\( k_d = 1 / L_d \) 是浅水系统中变形的逆半径。</p>
+
+<p>通过线性化 (6.18)，可以进一步得到：</p>
+
+<p>\[
+\frac{\partial q'}{\partial t} + U \frac{\partial q'}{\partial x} + v' \frac{\partial \bar{q}}{\partial y} = 0,
+\tag{6.22}
+\]</p>
+
+<p>其中 \( U = \bar{u} \)。</p>
+<p>我们现在对方程 (6.18) 进行线性化处理，即假设流场由时间不变的分量（“基本态”）和扰动组成，且扰动相对于平均流动较小。基本态必须满足时间不变的运动方程，而将其线性化到一个纬向流 \( \bar{u}(y, z) \) 是常见且有用的。基本态仅是 \( y \) 的函数，因此我们可以写为：</p>
+
+<p>\[
+q = \bar{q}(y, z) + q'(x, y, t), \quad \psi = \bar{\psi}(y, z) + \psi'(x, y, z, t),
+\tag{6.20}
+\]</p>
+
+<p>对于其他变量使用类似的符号，且 \( \bar{u} = -\partial \bar{\psi}/\partial y \) 且 \( \bar{v} = 0 \)。将这些代入方程 (6.18)，不进行简化，可得：</p>
+
+<p>\[
+\frac{\partial q'}{\partial t} + \bar{\mathbf{u}} \cdot \nabla q' + \mathbf{u}' \cdot \nabla \bar{q} + \mathbf{u}' \cdot \nabla q' = 0,
+\tag{6.21}
+\]</p>
+
+<p>假定扰动量较小，因此忽略涉及其乘积的项。此外，我们假设线性化时状态是运动方程的解，因此 \( \bar{\mathbf{u}} \cdot \nabla \bar{q} = 0 \)。最后，由于 \( \bar{u} = 0 \)（因为 \( \partial \bar{v}/\partial x = 0 \) 且 \( \partial \bar{q}/\partial x = 0 \)），我们得到：</p>
+
+<p>\[
+\frac{\partial q'}{\partial t} + U \frac{\partial q'}{\partial x} + v' \frac{\partial \bar{q}}{\partial y} = 0,
+\tag{6.22}
+\]</p>
+
+<p>其中 \( U \equiv \bar{u} \)。该方程或类似的方程在单层罗氏波研究中非常常见。让我们首先考虑单层罗氏波的简单情况。</p>
+<h3>6.3.2 单层中的波动</h3>
+
+<p>考虑满足方程 (6.18) 和 (6.19b) 的系统。其动力学在笛卡尔 \(\beta\)-平面中更容易被解释，这里 \(f = f_0 + \beta y\)，且由于 \(f_0\) 是常数，它不会出现在后续推导中。</p>
+
+<h4>无限形变半径</h4>
+<p>当运动尺度远小于形变尺度时，我们可以近似认为 \(k_d = 0\)。此时，涡度方程可以写为：</p>
+
+<p>\[
+\frac{\partial \zeta}{\partial t} + \mathbf{u} \cdot \nabla \zeta + \beta v = 0.
+\tag{6.23}
+\]</p>
+
+<h3>6.3 Rossby 波的基本特性</h3>
+
+<p>通过以下方式对一个恒定纬向流 \(U\) 进行线性化：</p>
+
+<p>\[
+\frac{\partial \nabla^2 \psi'}{\partial t} + U \frac{\partial \nabla^2 \psi'}{\partial x} + \beta \frac{\partial \psi'}{\partial x} = 0.
+\tag{6.24}
+\]</p>
+
+<p>该方程是 (6.22) 的单层版本，其中 \(\bar{q} = \beta y\)，\(q' = \nabla^2 \psi'\)。</p>
+
+<p>在方程 (6.24) 中，系数与 \(y\) 或 \(z\) 无关。这并不是波动存在的必要条件，但确实使得求解更加简便。我们尝试以平面波形式寻找解：</p>
+
+<p>\[
+\psi' = \Re\left[\tilde{\psi} e^{i(kx + ly - \omega t)}\right],
+\tag{6.25}
+\]</p>
+
+<p>其中 \(\tilde{\psi}\) 是复常数。此类解在具有双周期边界条件的领域中有效；在通道中可以通过纬度变化 \(\sin ly\) 实现解，而这对动力学并无实质性影响。</p>
+
+<p>将方程 (6.25) 代入 (6.24)，得到：</p>
+
+<p>\[
+\left[(-\omega + Uk)(-K^2) + \beta k\right] \tilde{\psi} = 0,
+\tag{6.26}
+\]</p>
+
+<p>其中 \(K^2 = k^2 + l^2\)。为了非平凡解成立，需满足：</p>
+
+<p>\[
+\omega = Uk - \frac{\beta k}{K^2}.
+\tag{6.27}
+\]</p>
+
+<p>这就是正压 Rossby 波的色散关系。显然，速度 \(U\) 通过项 \(Uk\) 对频率产生了多普勒频移。</p>
+
+<h4>相速度与群速度</h4>
+
+<p>相速度和群速度的分量分别为：</p>
+
+<p>\[
+c_p^x = \frac{\omega}{k} = U - \frac{\beta}{K^2}, \quad c_p^y = \frac{\omega}{l} = U \frac{k}{l} - \frac{\beta k}{K^2 l},
+\tag{6.28a,b}
+\]</p>
+
+<p>以及：</p>
+
+<p>\[
+c_g^x = \frac{\partial \omega}{\partial k} = U + \frac{\beta(k^2 - l^2)}{(k^2 + l^2)^2}, \quad c_g^y = \frac{\partial \omega}{\partial l} = \frac{2 \beta kl}{(k^2 + l^2)^2}.
+\tag{6.29a,b}
+\]</p>
+
+<p>在没有平均流的情况下，相速度是向西传播的，且具有更长波长的波传播速度更快。向东的流速需要满足特定波数的波保持静止（即 \(c_p^x = 0\)）。背景流 \(U\) 显然仅对相速度提供了统一偏移，并且（在这种情况下）可以通过坐标变换消去。群速度的 \(x\)-分量可以表示为相速度加上一个正量，即：</p>
+
+<p>\[
+c_g^x = c_p^x + \frac{2 \beta k^2}{(k^2 + l^2)^2}.
+\tag{6.30}
+\]</p>
+
+<p>这意味着 Rossby 波包的纬向群速度相对于其纬向相速度向东移动。</p>
+
+<h4>有限形变半径</h4>
+
+<p>对于有限形变半径，基本状态 \(\Psi = -Uy\) 仍然是原始运动方程的解，但对应于该状态的涡度为：</p>
+
+<p>\[
+q = Uy k_d^2 + \beta y,
+\]</p>
+
+<p>其梯度为：</p>
+
+<p>\[
+\nabla q = (\beta + U k_d^2)\mathbf{j}.
+\]</p>
+
+<p>线性化后的运动方程为：</p>
+
+<p>\[
+\left(\frac{\partial}{\partial t} + U\frac{\partial}{\partial x}\right)\left(\nabla^2 \psi' - k_d^2 \psi'\right) + \left(\beta + U k_d^2\right)\frac{\partial \psi'}{\partial x} = 0.
+\tag{6.31}
+\]</p>
+
+<p>代入平面波解：</p>
+
+<p>\[
+\psi' = \tilde{\psi} e^{i(kx + ly - \omega t)},
+\]</p>
+
+<p>得到色散关系：</p>
+
+<p>\[
+\omega = k \frac{(Uk^2 - \beta)}{k^2 + k_d^2}.
+\tag{6.32}
+\]</p>
+
+<p>这说明均匀流不仅仅是简单的多普勒频移，而是通过改变基本的潜在涡度梯度来调整波动特性。</p>
