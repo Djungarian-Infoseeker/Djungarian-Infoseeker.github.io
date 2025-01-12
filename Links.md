@@ -55,7 +55,7 @@ header_image: '../../Tokyotech.jpg'
     <a href="https://163wangyue.wordpress.com/" target="_blank" style="text-decoration: underline;"><strong>Yue Wang</strong>，Tongji University</a><br>
     <a href="https://wanyingkang.com/" target="_blank" style="text-decoration: underline;"><strong>Wanying Kang</strong>，Massachusetts Institute of Technology</a><br>
     <a href="https://groups.seas.harvard.edu/climate/eli/index.html" target="_blank" style="text-decoration: underline;"><strong>E Tziperman</strong>，Harvard University</a><br>
-    
+    <a href="https://habitableplanets.wordpress.com/" target="_blank" style="text-decoration: underline;"><strong>Ramses M. Ramirez</strong>University of Central Florida</a><br>
     </td>
 </tr>
 <tr>
