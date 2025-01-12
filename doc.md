@@ -42,7 +42,7 @@ header_image: '../../atmos.jpg'
 - [由于失控温室效应和云反馈导致宜居带内缘的气候双稳态 中文翻译/ Climate Bistability at the Inner Edge of the Habitable Zone due to Runaway Greenhouse and Cloud Feedbacks Bowen Fan , Da Yang , and Dorian S. Abbot](https://infoseeker.cn/docs/Fan2024/Fan2024)<span style="color:green;">（更新日期2024/12/18，已完结） </span>
 - [高二氧化碳系外行星的碳循环不稳定性：对宜居性的影响 中文翻译/ Carbon Cycle Instability for High-CO2 Exoplanets: Implications for Habitability R. J. Graham and R. T. Pierrehumbert](https://infoseeker.cn/docs/Graham2024/Graham2024)<span style="color:green;">（更新日期2024/12/21，已完结） </span>
 - [长太阳日行星气候滞后现象减少 中文翻译/ Decrease in Hysteresis of Planetary Climate for Planets with Long Solar Days Dorian S. Abbot , Jonah Bloch-Johnson, Jade Checlair, Navah X. Farahat, R. J. Graham, David Plotkin, Predrag Popovic, and Francisco Spaulding-Astudillo](https://infoseeker.cn/docs/Abbot2018/Abbot2018)<span style="color:green;">（更新日期2025/1/2，已完结） </span>
-
+- [从雪球地球到潮湿或失控温室的气候跃变 中文翻译/Abrupt climate transition of icy worlds from snowball to moist or runaway greenhouse Jun Yang, Feng Ding, Ramses M. Ramirez, W. R. Peltier, Yongyun Hu & Yonggang Liu ](https://infoseeker.cn/docs/Yang2018/Yang2018)<span style="color:green;">（更新日期2025/1/13，已完结） </span>
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:green;">（更新日期2024/12/20，已完结） </span>
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
