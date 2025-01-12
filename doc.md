@@ -12,7 +12,7 @@ header_image: '../../atmos.jpg'
 7.通过完成项目的方式来诱导自己的爱欲完成一项自己需要/感兴趣的课题。写作也是一种很小型的项目，能够为人带来满足感，从而促使其完整、成体系的完成。<br>
 # 学校事务 / School Affairs
 - [推荐免试 / Postgraduate Recommendation](https://infoseeker.cn/docs/postgraduaterecommendation)<span style="color:green;">（更新日期2024/12/17，已完结）</span>
-- [东京科学大学（东京工业大学）交换 / Science Tokyo (Tokyo Tech) Exchange](https://infoseeker.cn/docs/Exchange)<span style="color:red;">（更新日期2024/10/21，未完结）</span>
+- [东京科学大学（东京工业大学）交换 / Science Tokyo (Tokyo Tech) Exchange](https://infoseeker.cn/docs/Exchange)<span style="color:red;">（更新日期2025/1/13，未完结）</span>
 
 # 专业学习 / Academic Learning
 - [CESM1.2.1学习 / CESM1.2.1 Learning](https://infoseeker.cn/docs/CESM1.2.1Learning)<span style="color:red;">（更新日期2024/11/15，未完结）</span>
