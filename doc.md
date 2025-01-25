@@ -21,6 +21,7 @@ header_image: '../../atmos.jpg'
 - [如何修改CAM当中的太阳辐照量？/ How to modify the TSI in CESM?](https://infoseeker.cn/docs/TSI)<span style="color:green;">（更新日期2024/11/21，已完结）</span>
 - [东华理工大学 陈童 经典力学系列文章/ East China University of Technology Chen Tong Classical Mechanics Series](https://newquanta.com/%e3%80%8a%e7%90%86%e8%ae%ba%e5%8a%9b%e5%ad%a6%e6%96%b0%e8%ae%b2%e3%80%8b%e4%b8%8b%e8%bd%bd/)
 - [研究生第0学期的大补课](https://infoseeker.cn/docs/suppcourse)
+- [如何将 CAM 移植到同步自转的系外行星上/How to transplant CAM to synchronously rotating exoplanets](https://infoseeker.cn/docs/tidallocking)
 # 文献与知识 / Thesis & Knowledge
 
 ## 知识/Knowledges
