@@ -66,6 +66,10 @@ header_image: '../../yangquan.jpg'
         <strong style="font-size: 20px;">个人兴趣/Personal Interest</strong><br>
         <span style="color: white;">喜欢的音乐（Vocaloid、Dubstep、VaporWave、Future Funk等）</span><br>
         <span style="color: gray;">Favorite Music (Vocaloid, Dubstep, VaporWave, Future Funk, etc)</span><br>
+        <span style="color: white;">喜欢的饮料（咖啡☕️和茶🍵，很少喝酒🍺，因为有点酒精过敏）</span><br>
+        <span style="color: gray;">Favorite beverage (coffee☕️ and tea🍵)</span><br>
+        <span style="color: white;">健身（长跑🏃、骑自行车🚴与肌肉训练🏋️）</span><br>
+        <span style="color: gray;">Fitness (long-distance running 🏃, cycling 🚴 and muscle training 🏋️，I rarely drink alcohol🍺 because I am allergic to it.)</span><br>
         <span style="color: white;"><a href="https://infoseeker.cn/Travels" target="_blank" style="color: white;">旅游</a>（“大面积感受气氛类型”）</span><br>
         <span style="color: gray;"><a href="https://infoseeker.cn/Travels" target="_blank" style="color: gray;">Travel</a> ("Wide-range immersive experience")</span><br>
         <span style="color: white;"><a href="https://infoseeker.cn/Otomad&Visual" target="_blank" style="color: white;">音mad</a>（现在不怎么会做了）</span><br>

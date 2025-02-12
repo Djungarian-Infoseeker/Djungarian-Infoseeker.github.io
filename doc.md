@@ -84,5 +84,6 @@ header_image: '../../atmos.jpg'
 - [自育广热带睡莲杂交种展示（未命名）/Exhibition of self-cultivated hybrid tropical water lilies (unnamed)](https://infoseeker.cn/docs/hybrid)<span style="color:green;">（撰写日期：2014/10/26，已完结）</span>
 - [基于QQ空间的个人演化分析 / Personal Evolution Analysis Based on Qzone](https://infoseeker.cn/docs/Qzone)<span style="color:orange;">（还未开始）</span>
 - [找到你生日那天的亚太地球遥感图像 /Find the Asia-Pacific Earth remote sensing image on your birthday](https://infoseeker.cn/docs/Qzone)<span style="color:orange;">（还未开始）</span>
+- [日本航空与全日空航空的25岁以下人士优惠机票 /Japan Airlines and All Nippon Airways discount tickets for people under 25](https://infoseeker.cn/docs/jalanaticket)<span style="color:green;">（撰写日期：2025/2/12，已完结）</span><span style="color:red;">
 
 
