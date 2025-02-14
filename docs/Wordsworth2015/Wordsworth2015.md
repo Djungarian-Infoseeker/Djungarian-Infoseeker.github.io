@@ -140,5 +140,164 @@
         <strong>3.</strong> 近期，Wang &amp; Read (2014) 以及 Kaspi &amp; Showman (2014) 利用GCM模拟了不同参数（包括地表气压）所引起的环流变化。不过，他们研究的行星在经向平均入射辐射分布上呈现轴对称，因而比本文讨论的潮汐锁定情形更不容易发生大气坍缩。<br/>
         <strong>4.</strong> CO<sub>2</sub> 在光解后会生成 CO 和 O，这可能导致形成混合CO/O<sub>2</sub>的大气。然而在火星和金星等行星大气中，由于存在催化循环，该过程并未大规模发生 (Yung et al. 1999)。纯O<sub>2</sub>或N<sub>2</sub>的大气在坍缩行为上与CO总体相似，只是对于这些气体而言，碰撞诱导吸收是其红外不透明度的主要来源 (Frommhold 2006)。
     </p>
+
+    <h2>2. 方法（METHOD）</h2>
+    <p>
+        在三维（3D）GCM模拟中，作者使用了Laboratoire de Météorologie Dynamique（LMD）通用模型
+        （Wordsworth et al. 2011, 2013；Forget et al. 2013；Charnay et al. 2013）。
+        该模型的主要参数列于表1中。LMD模型基于有限差分法在球面上求解原始方程（primitive equations），
+        并在辐射传输中采用相关-k（correlated-k）方法（Goody &amp; Yung 1989；Wordsworth et al. 2010a）。
+    </p>
+    <p>
+        在所有模拟中，空间分辨率取为经度&times;纬度&times;高度 = 64 &times; 48 &times; 18，垂直方向采用
+        经缩放的σ坐标系（与Wordsworth et al. 2013一致），顶层大气压强则根据地表压强的不同在2–200 Pa之间。
+        这种缩放σ坐标方法在高空使用恒定的σ间隔，但在近地表提高垂直分辨率，从而提高模型稳定性，并更精细地刻画
+        大气边界层（PBL）。
+    </p>
+    <p>
+        用于相关-k模型的高分辨率谱线吸收数据由开源软件
+        <em>kspectrum</em>和HITRAN谱线数据库（Rothman et al. 2013）提供。虽然也曾考虑过使用HITEMP谱线列表，
+        但对比在本文所关注成分、温度及压强范围内的HITRAN与HITEMP吸收光谱后发现，即使在最高研究温度（约550 K）条件下，
+        额外的不透明度对结果的影响也并不显著。CO<sub>2</sub>的碰撞诱导吸收（collision-induced absorption）采用
+        GBB参数化方案（Gruszka &amp; Borysow 1998；Baranov et al. 2004；Wordsworth et al. 2010a），
+        并在温度高于400 K时对相关数据进行了外插。随后，逐线（line-by-line）数据被转换为相关-k格式，
+        栅格覆盖温度范围100–500 K、对数压强范围10<sup>−3</sup>–10<sup>5</sup> mbar（共14 &times; 9个温度-对数压强节点）。
+        红外与可见光波段分别划分为38 &times; 36个子带，<em>g</em>-space积分使用了16个离散点。
+    </p>
+    <p>
+        在所有模拟中，假设地表地形平坦，并假设仅含单组分理想气体。大气冷凝过程的处理方式与Wordsworth et al. (2010b)一致。
+        对于CO<sub>2</sub>，其凝结温度<em>T<sub>cond,CO2</sub></em>（单位：K）与压强<em>p</em>（单位：Pa）之间的关系
+        在<em>p &lt; 518000 Pa</em>（低于CO<sub>2</sub>三相点压强）时由下式给出：
+    </p>
+    <p style="text-align:center;">
+        <em>T<sub>cond,CO2</sub></em> = 3167.8 – 23.23 &minus; ln[ 0.01 <em>p</em> ],
+    </p>
+    <p>
+        而在<em>p &ge; 518000 Pa</em>时（即高于三相点压强），则由下式给出（Fanale et al. 1982；Wordsworth et al. 2010b）：
+    </p>
+    <p style="text-align:center;">
+        <em>T<sub>cond,CO2</sub></em> = 684.2 &minus; 92.3 ln[ <em>p</em> ] + 4.32 (ln[ <em>p</em> ])<sup>2</sup>.
+    </p>
+    <p>
+        对于CO，利用Clausius–Clayperon理想气体关系式并结合Lide (2000)中的参数来计算其饱和蒸汽压曲线。
+        同时忽略地表水平热传输（例如海洋对热量的输运）。这两种简化都有助于减少问题复杂度，
+        也使得我们在模拟中获得相对保守的<em>大气坍缩临界压强上限</em><sup>5</sup>。
+    </p>
+    <p>
+        与Wordsworth et al. (2011)不同的是，这里忽略了云辐射强迫的影响。第4节将对云和气溶胶辐射强迫
+        可能带来的影响进行讨论。地表反照率A取0.2，这是对岩质行星有代表性的一种数值。
+        对于M型恒星参数（包括恒星光谱），我们使用了AD Leo（Gliese 388）相关数据（Segura et al. 2003；Wordsworth et al. 2010b）。
+        AD Leo在XUV波段表现活跃且经常爆发耀斑（Shkolnik et al. 2009），但由于本文主要关注大气低层的辐射过程，
+        这些高能特性对当前研究并无直接影响。瑞利散射（Rayleigh scattering）的处理方式与Wordsworth et al. (2010a)相同，
+        不过在M型恒星发射谱向红端偏移的情况下，其影响相对较小。
+    </p>
+    <p>
+        我们假设行星轨道为圆形，且自转轴倾角取零（Heller et al. 2011）。在所有模拟中，模型均运行至热平衡状态。
+        假设行星处于完全潮汐锁定状态，这意味着可根据开普勒第三定律通过轨道距离来确定自转角速度
+        <em>Ω</em>：
+    </p>
+    <p style="text-align:center;">
+        \(\Omega^2 = \pi \left(\frac{M}{M_{\odot}}\right)^{\tfrac{3}{4}} \left(\frac{L}{L_{\odot}}\right)^{\tfrac{3}{4}} \left(\frac{F}{F_E}\right)^{-\tfrac{3}{4}} \times \frac{1}{\text{year}}.\)
+    </p>
+    <p>
+        其中<em>M</em>、<em>L</em>、<em>F</em>分别表示恒星质量、恒星光度以及行星所接收的恒星辐射通量，
+        <em>M<sub>⊙</sub></em>、<em>L<sub>⊙</sub></em>及<em>F<sub>E</sub></em>则分别表示太阳质量、太阳光度以及地球所接收的太阳辐射通量。
+        考虑到<em>L = 0.024 L<sub>⊙</sub></em>且<em>M = 0.4 M<sub>⊙</sub></em>（Pettersen &amp; Coleman 1981；Reiners et al. 2009），
+        上式可写为：
+    </p>
+    <p style="text-align:center;">
+        \(\Omega \approx 9.2 \times 10^{-9} \, F^{\tfrac{3}{4}},\)
+    </p>
+    <p>
+        因此，即便围绕典型M矮星运行，若行星接收的恒星辐射通量为2<em>F<sub>E</sub></em>（2732 W m<sup>−2</sup>），
+        其自转速度也仅为地球的1/20。这也是为什么对于环绕M型恒星的类地行星而言，自转对大气环流的影响
+        远小于地球本身的关键原因。
+    </p>
+    <p>
+        关于大气边界层（PBL），本文采用Mellor–Yamada方案（Mellor &amp; Yamada 1982），并参考Galperin et al. (1988)中提出的修正。
+        该方案已在火星大气研究中得到较好的验证（Haberle et al. 1993；Forget et al. 1999），
+        其动力学特征与本文所考察的情形有一定相似性。简而言之，Mellor–Yamada/Galperin（MYG）方案通过对雷诺平均方程进行
+        2.5级闭合来表示大气与地表之间的动量和热量湍流交换。湍流动能<em>q</em>以预报形式计算，
+        假设其在大尺度流动的浮力驱动对流或切变引起的湍流生成，以及湍流耗散之间达到平衡。
+        大气中的垂直交换系数及地表整体交换系数则由<em>q</em>、<em>∂Θ / ∂z</em>（势温梯度）、
+        湍流混合长度<em>l</em>以及根据实验数据得到的无量纲经验常数计算（Mellor &amp; Yamada 1982）。
+    </p>
+    <p>
+        湍流混合长度<em>l</em>遵循Blackadar (1962)的经验标度关系：
+    </p>
+    <p style="text-align:center;">
+        <em>l = \(\frac{\kappa z}{1 + \frac{z}{l_0}}\)</em>,
+    </p>
+    <p>
+        其中<em>\(\kappa\)</em> = 0.4为冯·卡门常数，<em>l<sub>0</sub></em>是边界层中最大可达的混合长度。
+        在每个时间步和每个网格点上都会计算湍流交换系数，然后根据下式分别计算大气中水平动量<em>u</em>和势温<em>Θ</em>
+        的垂直湍流扩散：
+    </p>
+    <p style="text-align:center;">
+        \(\frac{\partial u}{\partial t}\bigg|_{\text{turb}} = \frac{\partial}{\partial z}\left( K_M \frac{\partial u}{\partial z} \right),\) <br/>
+        \(\frac{\partial \Theta}{\partial t}\bigg|_{\text{turb}} = \frac{\partial}{\partial z}\left( K_H \frac{\partial \Theta}{\partial z} \right),\)
+    </p>
+    <p>
+        其中<em>t</em>为时间，<em>z</em>为高度，<em>u = (u, v)</em>是水平速度矢量，<em>K<sub>M</sub></em>和<em>K<sub>H</sub></em>
+        分别是动量和热量的湍流扩散系数。动量和热量的垂直交换系数可利用Monin–Obukhov相似理论（Garratt 1994），
+        通过<em>q</em>、<em>l</em>以及<em>Ri</em>（梯度理查森数）来确定。理查森数定义为平均流中势能与动能之比：
+    </p>
+    <p style="text-align:center;">
+        \(\mathrm{Ri} = \frac{g}{\Theta} \frac{\partial \Theta}{\partial z} \bigg/ \left( \frac{\partial u}{\partial z}^2 + \frac{\partial v}{\partial z}^2 \right),\)
+    </p>
+    <p>
+        在离散形式下，可定义整体（bulk）理查森数：
+    </p>
+    <p style="text-align:center;">
+        \(\mathrm{Ri}_B = \frac{g\,\Delta \Theta}{\Theta\,\Delta z \, \Delta u^2},\)
+    </p>
+    <p>
+        其中<em>Δz</em>为从地表到考察大气区域的高度差，<em>ΔΘ</em>为该高度差内地表与该大气层之间的势温差。
+        实际中，当理查森数较低（对流不稳定）时，湍流扩散在大范围的大气层内都很强；
+        当理查森数较高（稳定分层）时，除边界层极薄的一部分外，其余区域湍流扩散都很弱。
+    </p>
+    <p>
+        在地表处，整体交换通量<em>f</em>按照下式计算：
+    </p>
+    <p style="text-align:center;">
+        \(\mathcal{F} = \rho_a C_D \lvert u \rvert (f_s - f_a),\)
+    </p>
+    <p>
+        其中<em>\(\mathcal{F}\)</em>为物理量<em>f</em>（如热量、动量等）的通量，<em>C<sub>D</sub></em>为整体阻力系数（bulk drag coefficient），
+        <em>\(\rho_a\)</em>和<em>\(\lvert u \rvert\)</em>分别是第一层大气的密度和风速，<em>f<sub>a</sub></em>和<em>f<sub>s</sub></em>
+        分别为第一层大气和地表对应的<em>f</em>数值。对于<em>f = \(\lvert u \rvert\)</em>，<em>f<sub>s</sub> = 0</em>。
+    </p>
+    <p>
+        最后，整体阻力系数<em>C<sub>D</sub></em>由下式给出：
+    </p>
+    <p style="text-align:center;">
+        \(C_D = \kappa^2 \Bigg/\left[\ln\Big(\frac{z}{z_0}\Big)\right]^2,\)
+    </p>
+    <p>
+        其中<em>z<sub>0</sub></em>为地表粗糙度高度。对于系外行星而言，<em>z<sub>0</sub></em>本质上是个自由参数，
+        但若参考太阳系内对类地行星的雷达观测（例如 Downs et al. 1975；Head et al. 1985；Rosenburg et al. 2011），
+        则可对其进行一定程度的限定。本文取一个典型的岩质地表数值（见表1）。需要注意的是，
+        <em>C<sub>D</sub></em>对<em>z<sub>0</sub></em>的依赖关系并不敏感，因此即使粗糙度高度相差一个数量级，
+        对边界层过程的影响也相对有限（Wordsworth et al. 2011）。
+    </p>
+
+    <!-- 注释5 -->
+    <p style="font-size:0.9em;">
+        <strong>注5：</strong><br/>
+        忽略非凝结的背景气体之所以会使得到的临界坍缩压强成为保守上限，主要是因为背景气体会压力加宽活性气体的吸收谱线，
+        从而提升大气对红外辐射的不透明度并增加行星的增温效应。然而，由于M型恒星的发射谱向红端偏移，瑞利散射的影响并不显著；
+        因此，即便考虑背景气体，其对行星反照率的直接影响也很小（例如 von Paris et al. 2010；Wordsworth et al. 2010b）。
+    </p>
+
+    <h3>图1</h3>
+    <p>
+        图1显示了在0.1 bar灰气模拟中，对流层中部（<em>p ≈ 0.5 p<sub>s</sub></em>）以及地表处的时间平均温度（彩色阴影）
+        和风场（黑色箭头）。为了清晰起见，部分风矢量被省略。
+    </p>
+    <p>
+        <img src="https://content.cld.iop.org/journals/0004-637X/806/2/180/revision1/apj512977f1_lr.jpg" alt="Figure 1: Temperature and wind fields">
+        <br/>
+        <em>图1. 在0.1 bar灰气模拟中，<strong>p ≈ 0.5 p<sub>s</sub></strong>（上）和地表（下）的时间平均温度场（彩色）与风场（箭头）。</em>
+    </p>
 </body>
 </html>
