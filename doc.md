@@ -75,7 +75,7 @@ header_image: '../../atmos.jpg'
 ## 汇报 / Presentations
 - [实习汇报：巢湖市地球科学产业发展可能性探讨 2024年7月30日 同济大学](assets/css/Chaohu_2024.7.30.pdf)
 - [文献阅读：Carbon Cycle Instability for High-CO2 Exoplanets: Implications for Habitability 2024年7月31日 北京大学](assets/Graham2024_2024.7.31.pdf)
-
+- [文献阅读：Carbon Cycle Instability for High-CO2 Exoplanets: Implications for Habitability 2025年1月17日 北京大学](assets/1.17WANG-groupmeet.pdf)
 # 有趣的经历 / Fun & Exploration
 - [2023 年夏季海洋地质国重室 KPP-YEC 科考航次 / The 2023 Summer Marine Geology KPP-YEC Expedition of the State Key Laboratory of Marine Geology.](https://infoseeker.cn/docs/Fieldwork)<span style="color:red;">（更新日期2024/10/20）</span>
 
