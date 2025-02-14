@@ -93,7 +93,7 @@ header_image: '../../Tokyotech.jpg'
     <a href="https://tokyotechtoresen.wixsite.com/toresen/" target="_blank" style="text-decoration: underline;">Science Tokyo's GYM</a><br>
     <a href="http://www.mue.titech.ac.jp/index.html" target="_blank" style="text-decoration: underline;">Museum of Evolving Earth - Science Tokyo</a><br>
     <a href="https://www.zotero.org/groups/2744619/extracurricularphysical_oceanography/library" target="_blank" style="text-decoration: underline;">Extracurricular Physical Oceanography</a><br>
-    
+    <a href="https://mp.weixin.qq.com/s/LGETyJKufr64OZOsxH9Y-Q" target="_blank" style="text-decoration: underline;">Tongji University Fund Reimbursement Guide</a><br>
     </td>
 </tr>
 </table>
