@@ -46,6 +46,7 @@ header_image: '../../atmos.jpg'
 - [从雪球地球到潮湿或失控温室的气候跃变 中文翻译/Abrupt climate transition of icy worlds from snowball to moist or runaway greenhouse Jun Yang, Feng Ding, Ramses M. Ramirez, W. R. Peltier, Yongyun Hu & Yonggang Liu ](https://infoseeker.cn/docs/Yang2018/Yang2018)<span style="color:green;">（更新日期2025/1/13，已完结） </span>
 - [潮汐锁定类地行星从眼球到雪球状态的转变：海冰漂移的驱动作用 中文翻译/Transition from eyeball to snowball driven by sea-ice drift on tidally locked terrestrial planets  Jun Yang *, Weiwen Ji and Yaoxuan Zeng](https://infoseeker.cn/docs/Yang2020/Yang2020)<span style="color:green;">（更新日期2025/2/17，已完结） </span>
 
+
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:green;">（更新日期2024/12/20，已完结） </span>
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
