@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,6 @@
     </script>
 </head>
 <body>
-    <h1>文章 • 以下文章为免费文章</h1>
     <h2>Kepler-186 系统的形成、潮汐演化及宜居性</h2>
     <p><strong>作者：</strong>Emeline Bolmont, Sean N. Raymond, Philip von Paris, Franck Selsis, Franck Hersant, Elisa V. Quintana, Thomas Barclay</p>
     <p><strong>发布时间：</strong>2014年8月27日 • © 2014 美国天文学会。保留所有权利。</p>
@@ -17,18 +16,7 @@
     <p><strong>引用：</strong>Emeline Bolmont et al 2014 ApJ 793 3</p>
     <p><strong>DOI：</strong> <a href="https://doi.org/10.1088/0004-637X/793/1/3">10.1088/0004-637X/793/1/3</a></p>
     
-    <h3>下载文章 PDF</h3>
-    <ul>
-        <li><a href="#">下载 PDF</a></li>
-        <li>作者信息</li>
-        <li>图表</li>
-        <li>表格</li>
-        <li>参考文献</li>
-        <li>文章指标：6672 次总下载</li>
-        <li>总引用次数：39 次（Dimensions 数据）</li>
-        <li><a href="#">获取权限以重复使用此文章</a></li>
-        <li><a href="#">分享此文章</a></li>
-    </ul>
+
     
     <h2>摘要</h2>
     <p>Kepler-186 系统由五颗围绕早期 M 型矮星运行的行星组成。这些行星的物理半径介于 1.0–1.50 R⊕ 之间，公转周期为 4–130 天。其中，直径约 1.1 R⊕，周期为 130 天的 Kepler-186f 特别值得关注。其太阳常数约为 0.32 S⊕，使其处于表面液态水宜居带 (HZ) 内。</p>
