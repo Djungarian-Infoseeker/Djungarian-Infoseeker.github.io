@@ -56,8 +56,8 @@ header_image: '../../yangquan.jpg'
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
         <strong style="font-size: 20px;">学术领域/Research Domain</strong><br>
 
-        <span style="color: white;">行星气候, 大气与海洋动力学, 复杂系统</span><br>
-        <span style="color: gray;">Planetary Climate, Atmospheric and Oceanic Dynamics, Complex Systems</span><br>
+        <span style="color: white;">行星气候, 大气与海洋动力学, 系外行星，复杂系统</span><br>
+        <span style="color: gray;">Planetary Climate, Atmospheric and Oceanic Dynamics, Exoplanet，Complex Systems</span><br>
     </td>
 </tr>
 
