@@ -82,6 +82,89 @@
   <p>
     其中，对角线上方的元素与下方的对称元素相等。特别地，有 \(\dot{\varepsilon}_{qz} = \dot{\varepsilon}_{fz} \approx 0\)，因此 \(t_{qz} \approx 0\) 且 \(t_{fz} \approx 0\)。
   </p>
+    <h2>[12] 垂直积分与球面冰架方程</h2>
+  <p>
+    按照 Morland [1987] 和 MacAyeal [1997] 的方法，我们将上述动量方程从冰顶到冰底进行积分，并利用边界条件 (2) 得到球面坐标下冰架方程的最终形式（参见附录 A2）：
+  </p>
+  <div class="equation">
+    $$\begin{aligned}
+    0 =\ & \frac{1}{r\sin q}\frac{\partial}{\partial f}\Bigl(B^{1/2}\Bigr)
+    + \frac{1}{r\sin q}\frac{\partial u}{\partial f}
+    + v\cos q + \frac{\partial v}{\partial q}\\[1mm]
+    & + \frac{1}{\sin q}\frac{\partial}{\partial q}\Bigl(B^{1/2}\frac{\partial v}{\partial f}
+    + \sin^2q\,\frac{\partial u}{\partial q}\Bigr)
+    + \cot q\,B^{1/2}\Bigl(\frac{1}{\sin q}\frac{\partial v}{\partial f}
+    + \sin q\,\frac{\partial u}{\partial q}\Bigr)\\[1mm]
+    & - \frac{1}{\sin q}\,g\,\rho_I\,(1-m)\,h_h^f.
+    \end{aligned}
+    \tag{4}$$
+  </div>
+  <div class="equation">
+    $$\begin{aligned}
+    0 =\ & \frac{1}{r\sin q}\frac{\partial}{\partial f}\Bigl(B^{1/2}\Bigr)
+    + \frac{1}{r\sin q}\frac{\partial v}{\partial f}
+    + \frac{1}{\sin q}\frac{\partial}{\partial q}\Bigl(B\sin q\,\frac{\partial v}{\partial q}\Bigr)\\[1mm]
+    & + \frac{\partial}{\partial q}\Bigl(B^{1/2}\frac{\partial}{\partial q}(v\sin q)\Bigr)
+    + \frac{\partial}{\partial q}\Bigl(B^{1/2}\frac{\partial u}{\partial f}\cot q\Bigr)
+    + v\cos q\\[1mm]
+    & - \frac{1}{\sin q}\,g\,\rho_I\,(1-m)\,h_h^q.
+    \end{aligned}
+    \tag{5}$$
+  </div>
+  <div class="equation">
+    $$B^{1/4} = \frac{1}{r\,h\,A(T)^{1/3}\,DE^{1/3}}.
+    \tag{6}$$
+  </div>
+  <div class="equation">
+    $$\dot{\varepsilon}^2 = \dot{\varepsilon}_{ff}^2 + \dot{\varepsilon}_{qq}^2
+    + \Bigl(\dot{\varepsilon}_{ff}+\dot{\varepsilon}_{qq}\Bigr)^2 + 2\,\dot{\varepsilon}_{fq}^2.
+    \tag{7}$$
+  </div>
+  <div class="equation">
+    $$h_t + \frac{1}{r\sin q}\frac{\partial}{\partial f}(u\,h)
+    + \frac{1}{r\sin q}\frac{\partial}{\partial q}(\sin q\,v\,h)
+    = k\,r^2\,h + S(f,q).
+    \tag{8}$$
+  </div>
+  <p>
+    其中 \(m=\frac{\rho_I}{\rho_w}\)，〈〉 表示沿垂直方向的平均（温度沿深度线性变化，如前所述 [Goodman and Pierrehumbert, 2003]）。Campbell 等人 [2011] 对垂直平均过程给出了更一致的处理方法。上述冰层厚度方程表达了质量守恒，并引入了扩散项以确保数值解平滑。虽然扩散项仅作为数值辅助，但它也可粗略地代表表面雪漂效应，从而平滑冰厚变化（尽管在雪球情景中降雪率应极低）。我们将扩散系数保持在数值允许的最小值，因此扩散项相对于冰厚平流在整个区域内可忽略。强迫项 \(S(f,q)\) 表示了表面及内部融化、升华，以及冰基冻结和融化的累积效应。
+  </p>
+  <h2>[13] 边界条件</h2>
+  <p>
+    上述方程的边界条件为：北界和南界无法向流入，东西方向采用周期边界条件；此外，在大陆边界处对速度场规定无法向流和无滑移条件，这相当于假设海岸边界垂直；同时，在北界、南界及大陆边界处，对冰厚的法向导数均规定为零。
+  </p>
+  <h2>[14] 一维轴对称模型（忽略大陆）</h2>
+  <p>
+    对于忽略大陆影响的一维轴对称模型，此时方程不依赖于 \(f\) 且假定经向速度 \(u=0\)，其方程为：
+  </p>
+  <div class="equation">
+    $$\begin{aligned}
+    0 =\ & \frac{1}{r\sin q}\frac{\partial}{\partial q}\Bigl(B\sin q\,\frac{\partial v}{\partial q}\Bigr)
+    + \frac{1}{r\sin q}\frac{\partial}{\partial q}\Bigl(v\sin q\Bigr)\cot^2q\,B\,v\\[1mm]
+    & + g\,\rho_I\,(1-m)\,h_h^q.
+    \end{aligned}
+    \tag{9}$$
+  </div>
+  <div class="equation">
+    $$B^{1/4} = \frac{1}{r\,h\,A(T)^{1/3}\,DE^{1/3}}.
+    \tag{10}$$
+  </div>
+  <div class="equation">
+    $$\dot{\varepsilon}^2 = \dot{\varepsilon}_{ff}^2 + \dot{\varepsilon}_{qq}^2 + \dot{\varepsilon}_{zz}^2 = 2.
+    \tag{11}$$
+  </div>
+  <div class="equation">
+    $$\dot{\varepsilon}_{zz} = \dot{\varepsilon}_{ff} + \dot{\varepsilon}_{qq}.
+    \tag{12}$$
+  </div>
+  <div class="equation">
+    $$h_t + \frac{1}{r\sin q}\frac{\partial}{\partial q}(\sin q\,v\,h)
+    = k\,r^2\,h + S(q).
+    \tag{13}$$
+  </div>
+  <p>
+    上述为忽略大陆影响的一维轴对称模型方程，其中 \(h_t\) 表示冰厚随时间的变化，其他符号含义同前。
+  </p>
     <h2>3. 数值模拟结果</h2>
     
     <h3>3.1 一维轴对称模型</h3>
