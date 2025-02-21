@@ -10,7 +10,7 @@
     <h2>Eli Tziperman<sup>1</sup>, Dorian S. Abbot<sup>2</sup>, Yosef Ashkenazy<sup>3</sup>, Hezi Gildor<sup>4</sup>, David Pollard<sup>5</sup>, Christian G. Schoof<sup>6</sup>, Daniel P. Schrag<sup>1</sup></h2>
     
     <p><strong>摘要</strong></p>
-    <p>近年研究表明，雪球地球情景下冰流能够有效均质化全球冰层厚度。先前研究均采用局地或一维全球（仅纬度）模型，其形式难以扩展至二维全球配置。本文使用二维全球冰流模型，结合新元古代陆块重建，研究大陆约束对雪球地球冰流及冰厚的影响。通过数值模拟和尺度分析表明，一维模型未体现的多种大陆与边缘海配置会导致显著冰厚变化，包括次大陆与入口受限的边缘海之间的狭窄区域。本研究忽略了许多已知重要因素（如热力学、光学效应、尘埃及其输运），因此作为聚焦特定效应的过程研究，而非对新元古代冰厚的真实模拟。</p>
+    <p>近年来的研究表明，雪球地球上的冰流能够非常有效地使全球冰层厚度均质化。以往的研究均采用局部模型或仅考虑纬度变化的一维全球模型，其建模方式难以推广到二维的全球配置。本文利用重构的新元古代陆块配置，采用二维全球冰流模型研究大陆收缩对雪球地球情景下冰流和冰层厚度的影响。数值模拟和尺度分析表明，各种大陆和边缘海的构型（这些构型在一维模型中无法体现）会导致冰层厚度出现较大变化，包括在次大陆与边缘海之间出现入口受限的狭窄区域。由于本研究忽略了热力学、光学效应、尘埃及尘埃输送等许多已知的重要因素，因此仅作为针对某一特定效应的过程研究，而非对新元古代冰层厚度进行逼真模拟。本文所开发的模型公式在多个方面推广和扩展了先前的成果，包括引入了球面坐标和横向几何的修正，因此，这项研究是向将雪球冰流模型与一般环流海洋和大气模型耦合、实现对新元古代雪球冰层厚度更定量模拟迈出的一步。</p>
 
     <p>模型公式在以下几方面推广并扩展了先前结果：引入球坐标系修正项和横向几何效应。本研究为耦合雪球冰流模型与海洋-大气环流模型、实现新元古代冰厚定量模拟迈出重要一步。</p>
 
@@ -259,5 +259,85 @@
             <!-- 其他行省略 -->
         </tbody>
     </table>
+<!-- 接续前文 -->
+    <h2>4. 冰厚变化的尺度估计</h2>
+    
+    <h3>4.1 受限海域冰厚梯度</h3>
+    <div class="scenario">
+        <div class="geom-params">
+            <p>考虑面积$A$的受限海域，通过长$L$、宽$W$的通道与开放海洋连接（$L \gg W$）：</p>
+            <ul>
+                <li>海域内冰厚$h_s$（均匀分布）</li>
+                <li>外海冰厚$h_o$</li>
+                <li>通道流速$V$，海域净消融率$b$</li>
+            </ul>
+        </div>
+
+        <div class="equation-group">
+            <div class="equation">
+                <span>质量守恒方程：</span>
+                $$ V h_o W \sim A b \tag{16} $$
+            </div>
+            <div class="equation">
+                <span>动量方程尺度分析：</span>
+                $$ \frac{B V}{2(W/2)^2} \sim \rho_I g (1 - m) h_o \frac{h_o - h_s}{L} \tag{17} $$
+            </div>
+        </div>
+
+        <div class="derivation">
+            <p>其中有效黏度$B$的尺度为：</p>
+            $$ B \sim h_o \left\langle A(T)^{-1/n} \right\rangle \left( \frac{V}{W/2} \right)^{1/(n-1)} \tag{18} $$
+            <p>联立方程(16)-(18)得厚度差估计式：</p>
+            $$ h_o - h_s \sim \frac{2L \left\langle A(T)^{-1/n} \right\rangle}{W \rho_I g (1 - \rho_I/\rho_w)} \left( \frac{A b}{h_o W^2} \right)^{1/n} \tag{19} $$
+        </div>
+
+        <div class="parameter-table">
+            <table>
+                <caption>表2. 典型参数取值（暖工况）</caption>
+                <tr><th>参数</th><th>取值</th><th>物理意义</th></tr>
+                <tr><td>$A$</td><td>$(4000\ \text{km})^2$</td><td>受限海域面积</td></tr>
+                <tr><td>$b$</td><td>$6 \times 10^{-3}\ \text{m/yr}$</td><td>净消融率</td></tr>
+                <tr><td>$L$</td><td>2500 km</td><td>通道长度</td></tr>
+                <tr><td>$W$</td><td>1000 km</td><td>通道宽度</td></tr>
+                <tr><td>$h_o$</td><td>1000 m</td><td>外海冰厚</td></tr>
+            </table>
+            <p>代入得$h_o - h_s \approx 108\ \text{m}$，与图2a数值结果量级一致</p>
+        </div>
+
+        <div class="key-factors">
+            <h4>关键影响因素：</h4>
+            <ul>
+                <li>通道几何：$L \uparrow$或$W \downarrow$ ⇒ 厚度差$\uparrow$</li>
+                <li>热力学：温度$T \downarrow$（$A(T) \downarrow$）⇒ 冰体刚度$\uparrow$ ⇒ 厚度差$\uparrow$</li>
+                <li>质量平衡：海域面积$A \uparrow$或消融率$b \uparrow$ ⇒ 厚度差$\uparrow$</li>
+            </ul>
+        </div>
+    </h3>
+
+    <h3>4.2 全球无大陆情形</h3>
+    <div class="global-scaling">
+        <div class="equation-system">
+            <p>一维动量方程与质量守恒方程尺度分析：</p>
+            $$ \begin{aligned}
+            \frac{2}{r} h \left\langle A(T)^{-1/3} \right\rangle \frac{v}{r} &\sim \rho_I g (1 - m) h \frac{\Delta h}{r} \\
+            \frac{v h}{r} &\sim \Delta S
+            \end{aligned} $$
+        </div>
+
+        <div class="result">
+            <p>联立得赤道-极地冰厚差估计：</p>
+            $$ \Delta h \sim \frac{2 \left\langle A(T)^{-1/3} \right\rangle (\Delta S / h)^{1/3}}{\rho_I g (1 - \rho_I/\rho_w)} \tag{20} $$
+            <p>代入$\Delta S = 12\ \text{m/yr}$得$\Delta h \approx 34\ \text{m}$，与图1暖工况数值解吻合</p>
+        </div>
+
+        <div class="comparison">
+            <h4>与受限海域对比：</h4>
+            <table>
+                <tr><th>场景</th><th>厚度差量级</th><th>主导机制</th></tr>
+                <tr><td>受限海域</td><td>$\sim 100\ \text{m}$</td><td>几何约束下的质量平衡</td></tr>
+                <tr><td>全球无大陆</td><td>$\sim 30\ \text{m}$</td><td>纬度相关消融率驱动</td></tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
