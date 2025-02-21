@@ -159,5 +159,105 @@
         $$
     </div>
     <p>其中末项为球面曲率引起的附加应力耦合项。</p>
+    <h2>3. 数值模拟结果</h2>
+    
+    <h3>3.1 一维轴对称模型</h3>
+    <p>:reference[]{#22} 表1所列实验的稳态结果显示（运行至少10万年）：</p>
+    <div class="figure">
+        <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/a602b446-a2ff-4082-afd1-dc306df29205/jgrc12409-fig-0001.png" alt="图1 一维模型稳态结果">
+        <p class="caption">图1. 一维模型稳态结果（方程(9)-(13)）<br>
+        (a,c,e) "暖"工况（实验3），(b,d,f) "冷"工况（实验4）<br>
+        冰厚与经向速度分布（a,b）、表面温度廓线（c,d）、连续性方程项平衡（e,f）</p>
+    </div>
+    <p>关键结论：</p>
+    <ul>
+        <li>赤道-极地冰厚差异：冷工况约100米，暖工况仅40米</li>
+        <li>温度升高导致冰体软化，进一步削弱厚度梯度</li>
+        <li>与Pollard与Kasting（2005）含气泡冰结果一致（虚线）</li>
+    </ul>
+
+    <h3>3.2 二维大陆配置模型</h3>
+    <div class="figure">
+        <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/b7e8359d-c667-44f0-92c8-8fe8f5c3d2bd/jgrc12409-fig-0002.png" alt="图2 二维模型结果">
+        <p class="caption">图2. 新元古代（630Myr）陆块配置下的二维模拟结果<br>
+        (a,b) 冰厚（色阶，米）与流速场（箭头，米/年，1/4采样）<br>
+        (c,d) 方程(14)定义的有效黏度对数分布</p>
+    </div>
+    <p>主要特征：</p>
+    <table class="observations">
+        <tr>
+            <th>区域</th>
+            <th>现象</th>
+            <th>物理机制</th>
+        </tr>
+        <tr>
+            <td>主大陆东/西侧</td>
+            <td>冰流加速通道</td>
+            <td>狭窄海峡限制冰通量，需平衡局地消融</td>
+        </tr>
+        <tr>
+            <td>主大陆中部边缘海</td>
+            <td>显著厚度梯度</td>
+            <td>冰流通过海峡需补偿蒸发/融化损失</td>
+        </tr>
+        <tr>
+            <td>主大陆南侧</td>
+            <td>人工边界效应</td>
+            <td>80°N边界条件引入的数值伪影</td>
+        </tr>
+    </table>
+
+    <h3>3.3 温度平流效应评估</h3>
+    <div class="equation">
+        <span>佩克莱数定义：</span>
+        $$ \mathcal{P} = \frac{v(r \sin\theta)^{-1} \partial(\sin\theta T)/\partial\theta}{\kappa_i (T_{\text{surf}} - T_{\text{freeze}})/h^2} $$
+    </div>
+    <div class="figure">
+        <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/831e5fc6-f5ac-4363-9423-6f1e701faa1c/jgrc12409-fig-0003.png" alt="图3 佩克莱数分布">
+        <p class="caption">图3. 温度平流与扩散效应比值（方程15）<br>
+        高值区（>1）出现在狭窄海峡等高速流动区域</p>
+    </div>
+
+    <h3>3.4 网格敏感性分析</h3>
+    <p>:reference[]{#27} 分辨率对比（176×176 vs 89×89网格）：</p>
+    <ul>
+        <li>受限海域冰厚差异约50米，反映数值收敛性未完全达成</li>
+        <li>海峡分辨率不足导致通量计算偏差，与海洋模型中直布罗陀海峡等经典问题类似</li>
+        <li>未来改进方向：局部网格加密或参数化海峡流动</li>
+    </ul>
+
+    <h3>表格数据重构</h3>
+    <table class="model-experiments">
+        <caption>表1. 模型实验参数表（更新）</caption>
+        <thead>
+            <tr>
+                <th>实验编号</th>
+                <th>模型维度</th>
+                <th>温度廓线</th>
+                <th>陆块年代</th>
+                <th>对应图示</th>
+                <th>网格分辨率</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9</td>
+                <td>2-D</td>
+                <td>暖</td>
+                <td>630Myr</td>
+                <td>图2a,c</td>
+                <td>176×176</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>2-D</td>
+                <td>冷</td>
+                <td>630Myr</td>
+                <td>图2b,d</td>
+                <td>176×176</td>
+            </tr>
+            <!-- 其他行省略 -->
+        </tbody>
+    </table>
 </body>
 </html>
