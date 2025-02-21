@@ -23,15 +23,34 @@
 
     <p>已有研究涉及冰流效应（Goodman与Pierrehumbert, 2003）、冰光学特性（McKay, 2000; Warren等, 2002）、海水冻结与积雪的光学差异（Pollard与Kasting, 2005, 2006; Warren与Brandt, 2006; Goodman, 2006）、动力与热力学海冰作用（Lewis等, 2007），以及雪球冰盖尘埃沉积（Abbot与Pierrehumbert, 2010; Le Hir等, 2010）和输运（Li与Pierrehumbert, 2011）。</p>
 
-    <p>Warren等（2002）与Pollard及Kasting（2005）提出受限边缘海可能导致显著冰厚变化，因冰流入海受限于海峡侧壁摩擦，可能无法平衡海内消融/融化。Campbell等（2011）基于Nye（1965）解析解，推导了侧壁摩擦下狭长矩形边缘海的冰入侵长度公式。</p>
+    <p>[5] Warren等（2002）与Pollard及Kasting（2005）提出受限边缘海可能导致显著冰厚变化，因冰流入海受限于海峡侧壁摩擦，可能无法平衡海内消融/融化。Campbell等（2011）基于Nye（1965）解析解，推导了侧壁摩擦下狭长矩形边缘海的冰入侵长度公式。</p>
 
-    <h3>模型公式扩展</h3>
-    <p>冰流控制方程基于Morland（1987）的冰架动量平衡（参见MacAyeal与Barcilon, 1988; MacAyeal, 1989, 1997），并引入球坐标系修正项。二维动量方程可表示为：</p>
+    <p>[6] 现有雪球冰流计算均采用一维（纬度）全球模型或理想化局地矩形边缘海。此外，一维全球模型基于冰架变形率公式（Weertman, 1957），该公式无法扩展至二维（经度-纬度）情形。</p>
+
+    <p>[7] 本文有两大目标：<br>
+    1. 研究存在大陆时球面冰流及受限海域引发的冰厚剧烈变化，展示基于新元古代陆块重建的数值解与冰厚尺度关系；<br>
+    2. 建立包含双水平维度的球面冰流模型，引入冰川学中未考虑的物理过程与数学项。通过直接推导Stokes方程，构建二维水平流动问题，突破早期研究（Goodman与Pierrehumbert, 2003; Pollard与Kasting, 2005）因依赖Weertman（1957）应变率公式而受限的框架。</p>
+
+    <p>[8] 模型创新体现在采用Morland（1987）冰架动量收支（参见MacAyeal与Barcilon, 1988; MacAyeal, 1989, 1997）及球坐标系，揭示二者即使在单维模型中亦会引入附加项。动量方程在球坐标系下的展开形式为：</p>
     <div>
-        $$ \nabla \cdot \sigma = \rho g \nabla h $$
+        $$ \frac{\partial}{\partial \theta}\left( \nu h \frac{\partial u}{\partial \theta} \right) + \frac{1}{\sin\theta}\frac{\partial}{\partial \phi}\left( \nu h \frac{\partial u}{\partial \phi} \right) = \rho g h \frac{\partial h}{\partial \theta} $$
     </div>
-    <p>其中$\sigma$为应力张量，$\rho$为冰密度，$g$为重力加速度，$h$为冰厚。</p>
+    <p>其中$\theta$为余纬，$\phi$为经度，$\nu$为冰黏度，$u$为流速分量。</p>
 
+    <p>[9] 尽管雪球地球冰厚受多重因素影响（如冰光学特性、尘埃输运等），本研究聚焦冰流与大陆配置的相互作用，暂忽略其他反馈机制。这种理想化处理虽简化了现实复杂性，但有助于深入解析流动动力学机制。需强调，本文计算结果不可直接用于验证热带无冰/薄冰假说（Chandler与Sohl, 2000; Hyde等, 2000等）。</p>
 
+    <p>后续章节结构如下：第二节概述模型方程推导（详细推导见附录），该方程系对经典冰架方程（Morland, 1987; MacAyeal, 1997）的球坐标扩展；第三节展示模型结果；第四节推导无大陆全球轴对称情形与受限海域的冰厚尺度律；第五节总结。关键尺度律表达式为：</p>
+    <div>
+        全球无陆冰厚： $ H \sim \left( \frac{\mu Q}{\rho g} \right)^{1/4} $ <br>
+        受限海域冰厚： $ H_{constricted} \sim \left( \frac{\tau_w L^2}{\mu} \right)^{1/3} $
+    </div>
+    <p>式中$\mu$为冰黏度系数，$Q$为冰通量，$\tau_w$为侧壁剪切应力，$L$为特征长度。</p>
+
+    <h3>附录：模型方程推导要点</h3>
+    <p>基于Stokes方程的三维动量平衡，通过垂直积分与浅冰近似简化，得到二维水平动量方程。球坐标系中需考虑曲率项，例如经向应力散度项包含附加曲率修正：</p>
+    <div>
+        $$ \frac{\partial \sigma_{\theta\theta}}{\partial \theta} + \frac{1}{\sin\theta}\frac{\partial \sigma_{\theta\phi}}{\partial \phi} + \cot\theta \, \sigma_{\theta\theta} = \rho g h \frac{\partial h}{\partial \theta} $$
+    </div>
+    <p>其中$\sigma_{ij}$为深度平均应力分量，$\cot\theta$项体现球面几何效应。</p>
 </body>
 </html>
