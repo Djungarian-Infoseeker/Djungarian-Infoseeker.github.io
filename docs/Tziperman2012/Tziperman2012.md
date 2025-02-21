@@ -195,261 +195,196 @@
     [21] 模型代码使用 Matlab 编写，可在
     <a href="http://www.seas.harvard.edu/climate/eli/Downloads" target="_blank">www.seas.harvard.edu/climate/eli/Downloads</a> 获取。
   </p>
-    <h2>3. 数值模拟结果</h2>
-    
-    <h3>3.1 一维轴对称模型</h3>
-    <p>:reference[]{#22} 表1所列实验的稳态结果显示（运行至少10万年）：</p>
-    <div class="figure">
-        <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/a602b446-a2ff-4082-afd1-dc306df29205/jgrc12409-fig-0001.png" alt="图1 一维模型稳态结果">
-        <p class="caption">图1. 一维模型稳态结果（方程(9)-(13)）<br>
-        (a,c,e) "暖"工况（实验3），(b,d,f) "冷"工况（实验4）<br>
-        冰厚与经向速度分布（a,b）、表面温度廓线（c,d）、连续性方程项平衡（e,f）</p>
-    </div>
-    <p>关键结论：</p>
-    <ul>
-        <li>赤道-极地冰厚差异：冷工况约100米，暖工况仅40米</li>
-        <li>温度升高导致冰体软化，进一步削弱厚度梯度</li>
-        <li>与Pollard与Kasting（2005）含气泡冰结果一致（虚线）</li>
-    </ul>
 
-    <h3>3.2 二维大陆配置模型</h3>
-    <div class="figure">
-        <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/b7e8359d-c667-44f0-92c8-8fe8f5c3d2bd/jgrc12409-fig-0002.png" alt="图2 二维模型结果">
-        <p class="caption">图2. 新元古代（630Myr）陆块配置下的二维模拟结果<br>
-        (a,b) 冰厚（色阶，米）与流速场（箭头，米/年，1/4采样）<br>
-        (c,d) 方程(14)定义的有效黏度对数分布</p>
-    </div>
-    <p>主要特征：</p>
-    <table class="observations">
-        <tr>
-            <th>区域</th>
-            <th>现象</th>
-            <th>物理机制</th>
-        </tr>
-        <tr>
-            <td>主大陆东/西侧</td>
-            <td>冰流加速通道</td>
-            <td>狭窄海峡限制冰通量，需平衡局地消融</td>
-        </tr>
-        <tr>
-            <td>主大陆中部边缘海</td>
-            <td>显著厚度梯度</td>
-            <td>冰流通过海峡需补偿蒸发/融化损失</td>
-        </tr>
-        <tr>
-            <td>主大陆南侧</td>
-            <td>人工边界效应</td>
-            <td>80°N边界条件引入的数值伪影</td>
-        </tr>
-    </table>
-
-    <h3>3.3 温度平流效应评估</h3>
-    <div class="equation">
-        <span>佩克莱数定义：</span>
-        $$ \mathcal{P} = \frac{v(r \sin\theta)^{-1} \partial(\sin\theta T)/\partial\theta}{\kappa_i (T_{\text{surf}} - T_{\text{freeze}})/h^2} $$
-    </div>
+  <h2>3. 数值结果</h2>
+  <p>
+    [22] 表 1 列出了我们所进行的不同模型实验。所有展示的结果均代表稳态模型解，这些解均通过运行模型至少十万年获得。忽略陆地影响的一维模型结果展示于图 1 中。与以往研究及第四节 2 部分给出的尺度分析一致，当不考虑光学/尘埃效应时，该模型预测极地与赤道之间的冰层厚度差异非常小（与 Pollard 和 Kasting [2005, 图 4f] 中虚线所表示的含气泡冰情况相当；另请参见 Li 和 Pierrehumbert [2011] 关于 Goodman 和 Pierrehumbert [2003] 中发现较大厚度差异的讨论）。模型结果表明，在冷型情况下赤道与极地之间的冰厚差约为 100 米，而在暖型情况下仅为 40 米。正如预期，较高温度使冰更柔软，从而导致更小的厚度梯度。两种情形下子午向冰厚梯度较小，证明了冰流在有效均质化冰层厚度方面的作用（参见 Goodman 和 Pierrehumbert, 2003）。如此均匀的冰层阻碍了光线穿透海洋，对光合作用产生了影响，如引言所述。当不包含大陆时（实验 5，见表 1），我们的二维模型与一维模型的结果完全一致。
+  </p>
+  
+  <h3>表 1. 模型实验列表<small>a</small></h3>
+  <table>
+    <thead>
+      <tr>
+        <th>实验</th>
+        <th>模型</th>
+        <th>T<sub>surf</sub></th>
+        <th>陆地</th>
+        <th>图示</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>3</td>
+        <td>1-D</td>
+        <td>warm</td>
+        <td>-</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>1-D</td>
+        <td>cold</td>
+        <td>-</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>2-D</td>
+        <td>warm</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>2-D</td>
+        <td>warm</td>
+        <td>630 Myr</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>2-D</td>
+        <td>cold</td>
+        <td>630 Myr</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>2-D X2</td>
+        <td>warm</td>
+        <td>630 Myr</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>2-D X2</td>
+        <td>cold</td>
+        <td>630 Myr</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    注：X2 表示采用 176 个网格点的分辨率，否则使用 89 个网格点。“warm”指图 1c 中所给的预定表面温度，而“cold”指图 1d 所示温度。
+  </p>
+  
+  <p>
+    图 1 显示了 1-D 模型的稳态结果（参见方程 (9)–(13)）。其中，图 1a 和 1b 显示了冰厚和子午向速度随纬度的变化；图 1c 和 1d 显示了预定的表面温度；图 1e 和 1f 则展示了连续性方程 (13) 中各项（图例中 “rhs” 表示平流和扩散项之和，应在稳态下精确平衡强迫项 \(S\)）。
+  </p>
+  
+  <p>
+    [23] 图 2 显示了基于约 630 Myr 的新元古代重构大陆配置的二维模型结果（参见 Li et al., 2008）。陆地配置经过修改以消除诸如仅有单个网格点的地形开口等可能导致数值问题的特征。图中展示了流场、冰厚以及对应于方程 (14) 的有效粘度 \( \log_{10} \, \nu_{\mathrm{eff}} = \bigl(A(T)\bigr)^{-1/3} DE^{-1/3} \)（对于 “warm” 表面温度，即高 CO₂ 近熔融情况，以及对于 “cold” 低 CO₂ 情况）。
+  </p>
+  
+  <p>
+    [24] 与轴对称模型相比，冰厚变化明显更大。由于受限海域面积较小，沿经向平均的冰厚和速度场可能与一维模型相差不大，但局部冰厚差异却明显增大。这在主大陆与其东西两侧小陆块之间，以及在全球海洋与位于主大陆中部的边缘（受限）海之间尤为明显。在后者情形中，通过狭窄通道的冰流需要平衡边缘海内的总融冰和蒸发。因此，海域面积越大且海峡越窄，预期冰流速度越快。这些结果与 Campbell 等人 [2011]（参见 Warren 等人, 2002）的总体观点一致，即当流动受大陆几何限制时，会产生显著的冰厚差异。此外，图 2 还显示，在主大陆以南（尤其在 “cold” 情形下，见图 2b）也存在显著的冰厚变化；该处冰厚变化可能受为避免极点奇点而在北界设定 80°N 人为边界的影响，但这表明几何与流动相互作用导致的冰厚变化情形比以往讨论的更为广泛。
+  </p>
+  
+  <p>
+    [25] 在冷型情况下，由于冰更硬，需要更大的压力（冰厚梯度）来驱动冰流以平衡边缘海内的净融冰/融化，因此冰厚变化再次更大。下一节将给出描述这种效应以及全球轴对称情形下冰厚变化的尺度表达式。值得注意的是，暖型和冷型情况下速度场差异不大（见图 2 中所示的最大速度），这可以解释为：预定的源/汇函数 \(S(\phi,\theta)\) 必须通过冰流收敛（即 \(\nabla\cdot(u\,h)\)）来平衡；若源函数在数值上保持不变，且冰厚场在零级近似下差异不大，则速度场基本由源函数决定。冰厚变化会引起由源函数决定的速度变化，而驱动该速度场所需的冰厚梯度又依赖于冰的粘度，从而依赖于温度（如图 1 与图 2 所示）。利用我们的模型结果可以识别并分析流场对温度的微弱依赖性，因为模型中不包含许多可能掩盖这一结果的其他过程。这是忽略冰基融化/冻结对冰厚影响以及非气泡冰对辐射吸收效应的一个优势。
+  </p>
+  
+  <p>
+    [26] 我们模型所隐含的温度场是由预定的子午向表面温度剖面（见图 1c 与 1d）与假定的沿深度线性温度剖面（从预定表面温度到冰基处的恒定熔融温度）组合而成的三维温度分布。冰流场将平流该温度场，原则上会形成复杂的三维温度分布。但在本研究中，我们忽略了这一平流效应、冰内产生的应变热以及水平扩散。只有当垂直扩散（决定线性温度剖面）的时间尺度短于子午向平流引起的温度变化时间尺度时，忽略平流才是合理的。为此，我们在图 3 中绘制了下面的无量纲比值（实质上是一个 Peclet 数）：
+  </p>
+  <div class="equation">
+    $$\mathrm{Pe} = \frac{v\, (r\sin q)^{-1}\, \partial(\sin q\,T)/\partial q}{\kappa_i\, \partial^2 T/\partial z^2}
+    \approx \frac{v\, (r\sin q)^{-1}\, \partial(\sin q\,T)/\partial q}{\kappa_i\, \left(\dfrac{T_{\mathrm{surface}}-T_{\mathrm{freezing}}}{h^2}\right)}.
+    \tag{15}$$
+  </div>
+  <p>
+    其中 \(\kappa_i\) 是冰中的分子热扩散率，与质量守恒/冰厚方程中出现的（主要为数值上的）水平扩散项不同。图 3 表明，在大部分区域（当该比值远小于 1 时）可以忽略温度平流，但在一些关键区域，尤其是具有较快流速的狭窄通道中，该比值可能接近甚至大于 1，因此不能忽略温度平流效应。
+  </p>
     <div class="figure">
         <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/831e5fc6-f5ac-4363-9423-6f1e701faa1c/jgrc12409-fig-0003.png" alt="图3 佩克莱数分布">
         <p class="caption">图3. 温度平流与扩散效应比值（方程15）<br>
         高值区（>1）出现在狭窄海峡等高速流动区域</p>
     </div>
 
-    <h3>3.4 网格敏感性分析</h3>
-    <p>:reference[]{#27} 分辨率对比（176×176 vs 89×89网格）：</p>
-    <ul>
-        <li>受限海域冰厚差异约50米，反映数值收敛性未完全达成</li>
-        <li>海峡分辨率不足导致通量计算偏差，与海洋模型中直布罗陀海峡等经典问题类似</li>
-        <li>未来改进方向：局部网格加密或参数化海峡流动</li>
-    </ul>
-
-    <h3>表格数据重构</h3>
-    <table class="model-experiments">
-        <caption>表1. 模型实验参数表（更新）</caption>
-        <thead>
-            <tr>
-                <th>实验编号</th>
-                <th>模型维度</th>
-                <th>温度廓线</th>
-                <th>陆块年代</th>
-                <th>对应图示</th>
-                <th>网格分辨率</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>9</td>
-                <td>2-D</td>
-                <td>暖</td>
-                <td>630Myr</td>
-                <td>图2a,c</td>
-                <td>176×176</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>2-D</td>
-                <td>冷</td>
-                <td>630Myr</td>
-                <td>图2b,d</td>
-                <td>176×176</td>
-            </tr>
-            <!-- 其他行省略 -->
-        </tbody>
-    </table>
-<!-- 接续前文 -->
-    <h2>4. 冰厚变化的尺度估计</h2>
-    
-    <h3>4.1 受限海域冰厚梯度</h3>
-    <div class="scenario">
-        <div class="geom-params">
-            <p>考虑面积$A$的受限海域，通过长$L$、宽$W$的通道与开放海洋连接（$L \gg W$）：</p>
-            <ul>
-                <li>海域内冰厚$h_s$（均匀分布）</li>
-                <li>外海冰厚$h_o$</li>
-                <li>通道流速$V$，海域净消融率$b$</li>
-            </ul>
-        </div>
-
-        <div class="equation-group">
-            <div class="equation">
-                <span>质量守恒方程：</span>
-                $$ V h_o W \sim A b \tag{16} $$
-            </div>
-            <div class="equation">
-                <span>动量方程尺度分析：</span>
-                $$ \frac{B V}{2(W/2)^2} \sim \rho_I g (1 - m) h_o \frac{h_o - h_s}{L} \tag{17} $$
-            </div>
-        </div>
-
-        <div class="derivation">
-            <p>其中有效黏度$B$的尺度为：</p>
-            $$ B \sim h_o \left\langle A(T)^{-1/n} \right\rangle \left( \frac{V}{W/2} \right)^{1/(n-1)} \tag{18} $$
-            <p>联立方程(16)-(18)得厚度差估计式：</p>
-            $$ h_o - h_s \sim \frac{2L \left\langle A(T)^{-1/n} \right\rangle}{W \rho_I g (1 - \rho_I/\rho_w)} \left( \frac{A b}{h_o W^2} \right)^{1/n} \tag{19} $$
-        </div>
-
-        <div class="parameter-table">
-            <table>
-                <caption>表2. 典型参数取值（暖工况）</caption>
-                <tr><th>参数</th><th>取值</th><th>物理意义</th></tr>
-                <tr><td>$A$</td><td>$(4000\ \text{km})^2$</td><td>受限海域面积</td></tr>
-                <tr><td>$b$</td><td>$6 \times 10^{-3}\ \text{m/yr}$</td><td>净消融率</td></tr>
-                <tr><td>$L$</td><td>2500 km</td><td>通道长度</td></tr>
-                <tr><td>$W$</td><td>1000 km</td><td>通道宽度</td></tr>
-                <tr><td>$h_o$</td><td>1000 m</td><td>外海冰厚</td></tr>
-            </table>
-            <p>代入得$h_o - h_s \approx 108\ \text{m}$，与图2a数值结果量级一致</p>
-        </div>
-
-        <div class="key-factors">
-            <h4>关键影响因素：</h4>
-            <ul>
-                <li>通道几何：$L \uparrow$或$W \downarrow$ ⇒ 厚度差$\uparrow$</li>
-                <li>热力学：温度$T \downarrow$（$A(T) \downarrow$）⇒ 冰体刚度$\uparrow$ ⇒ 厚度差$\uparrow$</li>
-                <li>质量平衡：海域面积$A \uparrow$或消融率$b \uparrow$ ⇒ 厚度差$\uparrow$</li>
-            </ul>
-        </div>
-    </h3>
-
-    <h3>4.2 全球无大陆情形</h3>
-    <div class="global-scaling">
-        <div class="equation-system">
-            <p>一维动量方程与质量守恒方程尺度分析：</p>
-            $$ \begin{aligned}
-            \frac{2}{r} h \left\langle A(T)^{-1/3} \right\rangle \frac{v}{r} &\sim \rho_I g (1 - m) h \frac{\Delta h}{r} \\
-            \frac{v h}{r} &\sim \Delta S
-            \end{aligned} $$
-        </div>
-
-        <div class="result">
-            <p>联立得赤道-极地冰厚差估计：</p>
-            $$ \Delta h \sim \frac{2 \left\langle A(T)^{-1/3} \right\rangle (\Delta S / h)^{1/3}}{\rho_I g (1 - \rho_I/\rho_w)} \tag{20} $$
-            <p>代入$\Delta S = 12\ \text{m/yr}$得$\Delta h \approx 34\ \text{m}$，与图1暖工况数值解吻合</p>
-        </div>
-
-        <div class="comparison">
-            <h4>与受限海域对比：</h4>
-            <table>
-                <tr><th>场景</th><th>厚度差量级</th><th>主导机制</th></tr>
-                <tr><td>受限海域</td><td>$\sim 100\ \text{m}$</td><td>几何约束下的质量平衡</td></tr>
-                <tr><td>全球无大陆</td><td>$\sim 30\ \text{m}$</td><td>纬度相关消融率驱动</td></tr>
-            </table>
-        </div>
-    </div>
-<!-- 接续前文 -->
-    <h2>附录A：模型方程推导</h2>
-    
-    <h3>A1. 表面与底部边界条件</h3>
-    <div class="boundary-conditions">
-        <div class="equation-group">
-            <p>:reference[]{#42} 冰盖上下边界动量条件可表述为：</p>
-            $$ \begin{cases}
-            \boldsymbol{\sigma} \cdot \mathbf{\hat{n}_s} = 0 & \text{(表面)} \\
-            \boldsymbol{\sigma} \cdot \mathbf{\hat{n}_b} = \mathbf{\hat{n}_b} p_w & \text{(底部)}
-            \end{cases} \tag{A1} $$
-            <p>其中偏应力张量分解为：</p>
-            $$ \boldsymbol{\sigma} = \boldsymbol{\tau} - p\mathbf{I} $$
-        </div>
-
-        <div class="normal-vector">
-            <p>表面高程$ s(\phi, \theta) $的法向量由梯度给出：</p>
-            $$ \mathbf{\hat{n}} = \frac{\nabla f}{\|\nabla f\|} = \frac{\left( -\frac{1}{r\sin\theta}\frac{\partial s}{\partial\phi}, -\frac{1}{r}\frac{\partial s}{\partial\theta}, 1 \right)}{\left\| \left( -\frac{1}{r\sin\theta}\frac{\partial s}{\partial\phi}, -\frac{1}{r}\frac{\partial s}{\partial\theta}, 1 \right) \right\|} \tag{A3} $$
-        </div>
-
-        <div class="spherical-coordinates">
-            <p>球坐标系下边界条件展开式：</p>
-            <div class="equation-table">
-                <table>
-                    <tr><th>表面条件（z = s）</th><th>底部条件（z = b）</th></tr>
-                    <tr>
-                        <td>
-                            $$ \begin{aligned}
-                            (\tau_{\phi\phi}-p)\frac{\partial s}{r\sin\theta\partial\phi} + \tau_{\phi\theta}\frac{\partial s}{r\partial\theta} - \tau_{\phi z} &= 0 \\
-                            \tau_{\theta\phi}\frac{\partial s}{r\sin\theta\partial\phi} + (\tau_{\theta\theta}-p)\frac{\partial s}{r\partial\theta} - \tau_{\theta z} &= 0 \\
-                            \tau_{z\phi}\frac{\partial s}{r\sin\theta\partial\phi} + \tau_{z\theta}\frac{\partial s}{r\partial\theta} - (\tau_{zz}-p) &= 0
-                            \end{aligned} $$
-                        </td>
-                        <td>
-                            $$ \begin{aligned}
-                            (\tau_{\phi\phi}-p)\frac{\partial b}{r\sin\theta\partial\phi} + \tau_{\phi\theta}\frac{\partial b}{r\partial\theta} - \tau_{\phi z} &= \frac{\rho_w g h}{r\sin\theta}\frac{\partial b}{\partial\phi} \\
-                            \tau_{\theta\phi}\frac{\partial b}{r\sin\theta\partial\phi} + (\tau_{\theta\theta}-p)\frac{\partial b}{r\partial\theta} - \tau_{\theta z} &= \frac{\rho_w g h}{r}\frac{\partial b}{\partial\theta} \\
-                            \tau_{z\phi}\frac{\partial b}{r\sin\theta\partial\phi} + \tau_{z\theta}\frac{\partial b}{r\partial\theta} - (\tau_{zz}-p) &= \rho_w g h
-                            \end{aligned} $$
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <p class="equation-label">(A4)</p>
-        </div>
-    </h3>
-
-    <h3>A2. 球坐标系冰架方程</h3>
-    <div class="ice-shelf-equations">
-        <div class="coordinates">
-            <p>:reference[]{#43} 采用球坐标系$ (\phi, \theta, r) $，薄壳近似下转为$ (\phi, \theta, z) $，主要微分算子：</p>
-            $$ \begin{aligned}
-            \nabla &\approx \left( \frac{1}{r\sin\theta}\partial_\phi, \frac{1}{r}\partial_\theta, \partial_z \right) \\
-            \nabla \cdot \mathbf{v} &\approx \frac{1}{r\sin\theta}\partial_\phi u + \frac{1}{r\sin\theta}\partial_\theta (v\sin\theta) + \partial_z w \\
-            \nabla^2 f &\approx \partial_z^2 f + \frac{1}{r^2\sin\theta}\partial_\theta (\sin\theta \partial_\theta f) + \frac{1}{r^2\sin^2\theta}\partial_\phi^2 f
-            \end{aligned} \tag{A5} $$
-        </div>
-
-        <div class="strain-rate">
-            <p>应变率张量在薄壳近似下的简化形式：</p>
-            $$ \dot{\boldsymbol{\epsilon}} \approx \begin{pmatrix}
-            \frac{\partial u}{r\sin\theta\partial\phi} + \frac{v\cos\theta}{r} & \frac{1}{2}\left( \frac{\partial v}{r\sin\theta\partial\phi} + \frac{\partial u}{r\partial\theta} - \frac{u\cot\theta}{r} \right) & 0 \\
-            \cdots & \frac{\partial v}{r\partial\theta} + \frac{w}{r} & 0 \\
-            0 & 0 & \partial_z w
-            \end{pmatrix} \tag{A7} $$
-        </div>
-
-        <div class="momentum-equations">
-            <p>动量方程在球坐标系下的展开式（薄壳近似）：</p>
-            $$ \begin{aligned}
-            0 &= \frac{1}{r\sin\theta}\partial_\phi p + \nabla \cdot \boldsymbol{\tau}_{\phi} + \frac{\cot\theta}{r}\tau_{\phi\theta} \\
-            0 &= \frac{1}{r}\partial_\theta p + \nabla \cdot \boldsymbol{\tau}_{\theta} - \frac{\cot\theta}{r}\tau_{\phi\phi} \\
-            0 &= \partial_z p - \rho_I g + \nabla \cdot \boldsymbol{\tau}_z - \frac{\tau_{\theta\theta} + \tau_{\phi\phi}}{r}
-            \end{aligned} \tag{A8} $$
-        </div>
-    </div>
+  <h2>[27] 数值分辨率影响及网格敏感性</h2>
+  <p>
+    将基于 176×176 网格的二维结果与基于 89×89 网格的解（实验 7、8 与实验 9、10，见表 1，图中未显示）进行比较表明，二者差异不大。在粗网格模拟中，受限海域内的冰厚大约比精细网格模拟薄 50 米，这表明解随模型分辨率变化的数值收敛尚未完全达到（这在全球气候模型中常见）。这很可能归因于导向受限海域通道的分辨率不足。此问题在那些无法分辨关键狭窄水道和暗礁（例如直布罗陀海峡）的海洋模型中经常出现，未来可通过局部网格加密或对通道流进行参数化（以替代试图显式求解该处流动）来解决，但这些方案均超出了本研究的范围。
+  </p>
+  
+  <h2>4. 冰层厚度变化的尺度估计</h2>
+  <p>
+    [28] 本节中，我们考虑两种情形下冰层厚度变化的尺度估计：一种是由一条长而窄的通道供给的受限海域，另一种是全球轴对称海洋情形。
+  </p>
+  
+  <h3>4.1 受限海域</h3>
+  <p>
+    [29] 设有一个面积为 \(A\) 的海域，通过一条长为 \(L\) 、宽为 \(W\) 的通道与海洋相连，其中 \(L \gg W\)。由于冰流高效均衡，受限海域内的冰厚 \(h_s\) 可近似看作均匀，而我们将通道外开放海洋的冰厚记为 \(h_o\)。记通道内冰流速度为 \(V\) ，海域内的平均升华/融化率为 \(b\) ，则该海域冰盖的质量守恒尺度关系可写为：
+  </p>
+  <div class="equation">
+    $$V\,h_o\,W \sim A\,b. \tag{16}$$
+  </div>
+  <p>
+    [30] 另一个关系可以从冰架动量平衡方程中获得 [Morland, 1987; MacAyeal, 1997]。令 \(y\) 为沿通道方向坐标，并假设 \(u=0\)；同时令 Glen 流变定律中的常数在本模型中取 \(n=3\)。冰架沿通道（\(v\)）动量方程为
+  </p>
+  <div class="equation">
+    $$0 = \frac{\partial}{\partial x}\Bigl(B^{1/2}\,u_y + v_x\Bigr)
+    + \frac{\partial}{\partial y}\Bigl(B\,u_x + 2\,v_y\Bigr)
+    - g\,\rho_I\,(1-m)\,h_h^y,
+    $$
+  </div>
+  <p>
+    其中定义
+  </p>
+  <div class="equation">
+    $$B \equiv h\,A(T)^{-1/n}\,DE^{-1/n}
+    \approx \frac{1}{2}\,u_x^2 + v_y^2 + (u_x+v_y)^2 + \frac{1}{2}\,(u_y+v_x)^2.
+    $$
+  </div>
+  <p>
+    简化后可得：
+  </p>
+  <div class="equation">
+    $$0 = \frac{\partial}{\partial x}\Bigl(B^{1/2}\,v_x\Bigr)
+    + \frac{\partial}{\partial y}\Bigl(B^2\,v_y\Bigr)
+    - g\,\rho_I\,(1-m)\,h_h^y,
+    $$
+  </div>
+  <p>
+    其中
+  </p>
+  <div class="equation">
+    $$B \equiv h\,A(T)^{-1/n}\,DE^{-1/n}
+    \approx \frac{1}{2}\Bigl(2\,v_y^2 + v_x^2\Bigr)
+    \approx \frac{1}{4}\,v_x^2.
+    $$
+  </div>
+  <p>
+    假定通道长宽比 \(L/W \gg 1\) 导致在上式中可近似取横向剪切 \(v_x\) 的量级为 \(v_x/2\)。此外，由于沿通道方向的第二项在尺度上与 \(L^2\) 成正比，而第一项与 \(W^2\) 成正比，故当 \(L \gg W\) 时可忽略第二项。假设通道侧边速度为零而中心速度最大，我们可按 \(v_x \sim \frac{V}{W/2}\) 对横向剪切进行量级估计，从而动量方程尺度关系为：
+  </p>
+  <div class="equation">
+    $$B\,V^2\left(\frac{W}{2}\right)^2 \sim \frac{g\,\rho_I\,h_o\,(h_o - h_s)}{L}. \tag{17}$$
+  </div>
+  <p>
+    [31] 将有效粘度的尺度设定为
+  </p>
+  <div class="equation">
+    $$B \sim h_o\,A(T)^{-1/n}\,DE\,\left(\frac{V}{W/2}\right)^{1/n}, \tag{18}$$
+  </div>
+  <p>
+    并代入质量守恒方程中得到的速度量级，我们得到沿通道的冰厚差估计为
+  </p>
+  <div class="equation">
+    $$h_o - h_s \sim \frac{2L\,A(T)^{-1/n}\,DE}{W\,g\,\rho_I\left(1-\frac{\rho_I}{\rho_w}\right)}
+    \left(\frac{A\,b}{h_o\,W^2}\right)^{1/n}. \tag{19}$$
+  </div>
+  <p>
+    这种尺度估计可与 Campbell 等人 [2011]（参照 Nye [1965] 所用的矩形（类似红海）边缘海冰入侵长度公式）进行比较。后者的优势在于基于精确公式，而这里则采用粗略的尺度估计。然而，此处的尺度估计考虑了受限海并非矩形，而是由窄通道供给较大面积的情况，这正是新元古代陆块重构（见图 2）所激发的情形。该尺度估计清楚地表明，位于低纬度且存在净冰升华和融化的受限海，如果通道更长（大 \(L\)）、更窄（小 \(W\)）、或海域本身面积更大（\(A\)）、融冰率更大（\(b\)）或冰温较低（通过 \(A(T)\) 的依赖性，注意 \(A(T)\) 随温度增大而增大，从而 \(A(T)^{-1/n}DE\) 变小；即温暖的温度使冰更软，导致冰厚差减小），则会产生更大的冰厚变化（受限海中的冰更薄）。
+  </p>
+  <p>
+    [32] 根据新元古代陆块构型下“暖型”受限海情形（见图 2），代入数量级参数：\(A = (4000 \times 10^3)^2 \, \text{m}^2\)；\(b = 6 \times 10^{-3}/(365 \times 24 \times 3600) \, \text{m/s}\)；\(L = 2500 \times 10^3 \, \text{m}\)；\(W = 1000 \times 10^3 \, \text{m}\)；\(h_o = 1000 \, \text{m}\)；\(g = 9.8 \, \text{m/s}^2\)；\(\rho_I = 900 \, \text{kg/m}^3\)；\(\rho_w = 1024 \, \text{kg/m}^3\)；\(T_f = 273.16 \, \text{K}\)；\(T_s = T_f - 30 \, \text{K}\)；\(n = 3\)。其中我们选择的表面温度代表图 2a 中通向受限海的主通道位置。由此得到
+  </p>
+  <div class="equation">
+    $$h_o - h_s \sim 10^8 \, \text{m}.$$
+    \tag{Derived}
+  </div>
+  <p>
+    此估计与数值解计算得到的数量级相同，但略小（可与图 2a 和 2c 中“暖型”解比较）。注意，我们的 \(L \gg W\) 假设并非严格成立。我们在单一通道情形下计算了沿通道的冰厚差，而实际上上述陆块构型中存在两个此类通道，因此比较结果存在一定模糊性。可能由于通向受限海的狭窄通道中网格分辨率不足而产生偏差，且尺度估计本身不可能给出精确结果，但该估计清楚表明，相较于忽略边缘海（即忽略大陆）的情形，受限边缘海将产生显著更大的冰厚差异。
+  </p>
+  
 </body>
 </html>
