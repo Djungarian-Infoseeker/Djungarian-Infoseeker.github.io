@@ -30,121 +30,58 @@
     <p>现已知许多因素在决定雪球地球冰层厚度中起着作用，其中一些因素（如冰的光学特性、不同的冰来源、尘埃及尘埃输送）已在上述论文中有所探讨。本文聚焦于冰流及其与大陆构型相互作用的效应，暂时忽略其他所有反馈。这种方法的优点在于使我们能够隔离并仔细研究相关流动动力学，但必然使本研究显得理想化且过于简化。我们认为这是一种有用的方法，但必须强调，因此本文计算得到的冰层厚度数值不应被视为对雪球冰层厚度的可靠定量预测。故此，本工作应被看作是一个过程研究，而非试图进行逼真的雪球模拟。特别地，我们假设海洋完全被厚冰覆盖（Warren 等人 [2002] 称之为“海冰川”），因此我们的结果无法用于确认或否定之前某些研究所提出的热带地区可能出现无冰或薄冰的可能性 [例如 Chandler & Sohl, 2000; Hyde et al., 2000; Pollard & Kasting, 2005; Liu & Peltier, 2010; Abbot et al., 2011]。</p>
 
     <p>接下来的各节中，我们首先给出模型方程的概要推导（第二节）。这些方程是在冰川学中长期使用的著名冰架方程向球面坐标的简单扩展 [Morland, 1987; MacAyeal, 1997]。随后，我们展示模型结果（第三节）、推导无大陆轴对称全球情况以及狭窄海域情况下冰层厚度的尺度定律（第四节），并在第五节进行总结。附录中则给出了模型方程的详细推导。</p>
-
-
-    <h3>附录：模型方程推导要点</h3>
-    <p>基于Stokes方程的三维动量平衡，通过垂直积分与浅冰近似简化，得到二维水平动量方程。球坐标系中需考虑曲率项，例如经向应力散度项包含附加曲率修正：</p>
-    <div>
-        $$ \frac{\partial \sigma_{\theta\theta}}{\partial \theta} + \frac{1}{\sin\theta}\frac{\partial \sigma_{\theta\phi}}{\partial \phi} + \cot\theta \, \sigma_{\theta\theta} = \rho g h \frac{\partial h}{\partial \theta} $$
-    </div>
-    <p>其中$\sigma_{ij}$为深度平均应力分量，$\cot\theta$项体现球面几何效应。</p>
-    <h2>2. 模型：球面二维冰架流动</h2>
-    <h3>2.1 控制方程推导</h3>
-    <p>模型推导概要如下（详见附录A）。设球坐标系（经度φ, 余纬θ, 垂向z）对应速度场(u, v, w)，动量方程为：</p>
-    <div>
-        $$
-        \begin{aligned}
-        0 &= \frac{1}{r \sin\theta} \partial_\phi p + (\nabla \cdot \tau) \cdot \hat{e}_\phi \\
-        0 &= \frac{1}{r} \partial_\theta p + (\nabla \cdot \tau) \cdot \hat{e}_\theta \\
-        0 &= \partial_z p - \rho_I g + (\nabla \cdot \tau) \cdot \hat{e}_z
-        \end{aligned}
-        $$
-    </div>
-    <p>其中$r$为地球半径，$p$为压力，$\tau = \{\tau_{ij}\}$为应力张量。采用Glen流动律（Glen, 1955）建立应力与应变率关系：</p>
-    <div>
-        $$
-        \tau_{ij} = A(T) \left( \frac{\dot{\varepsilon}_{ij}}{\dot{\varepsilon}^{1/3}} \right), \quad 
-        \dot{\varepsilon}^2 = \frac{1}{2}\dot{\varepsilon}_{mn}\dot{\varepsilon}_{mn}
-        $$
-    </div>
-    <p>温度$T$沿深度线性分布，表面温度采用NCAR CAM模型拟合的"暖"（高CO₂）与"冷"（低CO₂）廓线（Abbot等, 2012待发表）。边界条件为：</p>
-    <div>
-        $$
-        (\tau - p\mathbf{I}) \cdot \hat{n}_s = 0 \quad (\text{冰面}) \\
-        (\tau - p\mathbf{I}) \cdot \hat{n}_b = \hat{n}_b p_w \quad (\text{冰底})
-        $$
-    </div>
-
-    <h3>2.2 浅冰近似与球坐标修正</h3>
-    <p>基于水平流速不随深度变化假设（Weertman, 1957）及薄壳近似，应变率张量在球坐标系中表示为：</p>
-    <div>
-        $$
-        \dot{\varepsilon} \approx 
-        \begin{pmatrix}
-        \frac{1}{r \sin\theta} (\partial_\phi u + v \cos\theta) & \frac{1}{2r} \left[ \frac{1}{\sin\theta}\partial_\phi v + \sin\theta \partial_\theta\left(\frac{u}{\sin\theta}\right) \right] & 0 \\
-        \cdot & \frac{1}{r} \partial_\theta v & 0 \\
-        0 & 0 & \partial_z w
-        \end{pmatrix}
-        $$
-    </div>
-    <p>通过垂直积分动量方程并应用边界条件，得到球坐标下的冰架控制方程组：</p>
-    <div>
-        $$
-        \begin{aligned}
-        0 &= \frac{1}{\sin\theta} \partial_\phi \left[ B \left( \frac{2}{\sin\theta} (\partial_\phi u + v \cos\theta) + \partial_\theta v \right) \right] \\
-        &\quad + \frac{1}{\sin\theta} \partial_\theta \left[ B \sin\theta \partial_\theta v \right] - \rho_I g (1 - m) h \partial_\theta h \\
-        B &= \frac{1}{r} h \left\langle A(T)^{-1/3} \dot{\varepsilon}^{-2/3} \right\rangle \\
-        \dot{\varepsilon}^2 &= \frac{1}{2} \left( \dot{\varepsilon}_{\phi\phi}^2 + \dot{\varepsilon}_{\theta\theta}^2 + 2\dot{\varepsilon}_{\phi\theta}^2 \right)
-        \end{aligned}
-        $$
-    </div>
-
-    <h3>2.3 数值方法与边界条件</h3>
-    <p>采用有限差分法在近全球域（80°S-80°N）进行离散：</p>
-    <ul>
-        <li>空间分辨率：二维176×176网格，一维89网格</li>
-        <li>A网格布局（变量同位布置）</li>
-        <li>动量方程通过三对角矩阵迭代求解（MacAyeal, 1997）</li>
-        <li>厚度方程显式时间步进</li>
-    </ul>
-    <p>边界条件设置：</p>
-    <div>
-        $$
-        \begin{cases}
-        \text{南北边界无穿透} & v=0 \\
-        \text{大陆边界无滑移} & u=v=0 \\
-        \text{厚度方程零梯度} & \partial_n h = 0
-        \end{cases}
-        $$
-    </div>
-
-    <h3>2.4 模型实验设计</h3>
-    <p>表1总结了模型实验配置：</p>
-    <table border="1">
-        <caption>表1. 模型实验参数表</caption>
-        <tr>
-            <th>实验</th><th>模型</th><th>表面温度</th><th>陆块</th><th>对应图示</th>
-        </tr>
-        <tr>
-            <td>3</td><td>1-D</td><td>暖</td><td>-</td><td>图1</td>
-        </tr>
-        <tr>
-            <td>5</td><td>2-D</td><td>暖</td><td>630Myr</td><td>图8</td>
-        </tr>
-        <!-- 其他行省略 -->
-    </table>
-
-    <h3>2.5 模型限制与扩展</h3>
-    <p>:reference[]{#20} 当前模型未考虑的关键过程：</p>
-    <div>
-        $$
-        \begin{cases}
-        \text{冰光学特性反馈} & \text{(Pollard与Kasting, 2005)} \\
-        \text{基底融化-厚度耦合} & \text{(需耦合海洋环流模型)} \\
-        \text{尘埃传输效应} & \text{(Abbot与Pierrehumbert, 2010)}
-        \end{cases}
-        $$
-    </div>
-    <p>模型代码（Matlab）获取地址：<a href="http://www.seas.harvard.edu/climate/eli/Downloads">代码库链接</a></p>
-
-    <h3>附录B：球坐标张量散度修正</h3>
-    <p>二阶张量在曲线坐标系中的散度包含几何修正项，以经向动量方程为例：</p>
-    <div>
-        $$
-        (\nabla \cdot \tau)_\theta = \frac{1}{r \sin\theta} \partial_\phi \tau_{\phi\theta} + \frac{1}{r} \partial_\theta \tau_{\theta\theta} + \frac{\cot\theta}{r} (\tau_{\phi\phi} - \tau_{\theta\theta})
-        $$
-    </div>
-    <p>其中末项为球面曲率引起的附加应力耦合项。</p>
+  <h2>2. 模型：球面上二维冰架流动</h2>
+  <p>
+    [11] 在此我们给出模型推导的概要，完整细节请参见附录 A。令坐标（经度、副纬度、垂直）分别记作 
+    <code>(f, q, z)</code>，对应的速度为 <code>(u, v, w)</code>。动量方程为：
+  </p>
+  <div class="equation">
+    $$\begin{aligned}
+    0 &= \frac{1}{r\,\sin q}\frac{\partial p}{\partial f} + \Bigl(r\cdot t\Bigr)\cdot \hat{e}_f,\\[1mm]
+    0 &= \frac{1}{r}\frac{\partial p}{\partial q} + \Bigl(r\cdot t\Bigr)\cdot \hat{e}_q,\\[1mm]
+    0 &= \frac{\partial p}{\partial z} - g\,\rho_I + \Bigl(r\cdot t\Bigr)\cdot \hat{e}_z.
+    \end{aligned}
+    \tag{1}$$
+  </div>
+  <p>
+    其中，\(r\) 为取定为常数的地球半径；\(p\) 为压力；\(g\) 为重力加速度；\(\rho_I\) 为冰密度；\(t=\{t_{ij}\}\) 为应力张量。需要注意的是，在曲线坐标中，二阶张量的散度 \(r\cdot\) 除了包含矢量散度中的项之外，还包含一些度量项（参见附录 B）。三个坐标方向的单位向量分别记作 \(\hat{e}_f\)、\(\hat{e}_q\) 和 \(\hat{e}_z\)。
+  </p>
+  <p>
+    我们采用 Glen 流变定律 [Glen, 1955] 将应力与应变率 \(\dot{\varepsilon}_{ij}\) 联系起来，公式为：
+  </p>
+  <div class="equation">
+    $$\begin{aligned}
+    t_{ij} &= \Bigl(A(T)\Bigr)^{-1/3}\,\dot{\varepsilon}_{ij}^{1/3},\\[1mm]
+    \dot{\varepsilon}^2 &= \frac{1}{2}\,\dot{\varepsilon}_{mn}\,\dot{\varepsilon}_{mn}.
+    \end{aligned}
+    \tag{2}$$
+  </div>
+  <p>
+    其中，\(T\) 为冰温，\(A(T)\) 为冰粘度的温度依赖性，我们采用 Goodman 和 Pierrehumbert [2003] 中所用的 \(A(T)\)。我们假设温度沿深度线性变化，从预定的表面温度到冰基处的冻结温度（此处假定为常数）。另外，我们使用两种不同的预定表面温度纬度分布，分别称为“暖型”和“冷型”。这些表面温度是对 NCAR 社区大气模式计算结果的平滑拟合，计算时假定高 CO₂（105 ppm）和低 CO₂（100 ppm）条件下表面反照率均为 0.6。
+  </p>
+  <p>
+    边界条件为：冰顶处应力与法向量的点积为零，而冰底处等于垂直于冰底的静水压力 [MacAyeal, 1997]，即：
+  </p>
+  <div class="equation">
+    $$ (t - pI)\cdot \hat{n}_s = 0;\qquad (t - pI)\cdot \hat{n}_b = \hat{n}_b\,p_w. \tag{3} $$
+  </div>
+  <p>
+    其中，\(\hat{n}_s\) 和 \(\hat{n}_b\) 分别为冰表面和冰底的法向量，\(I\) 为单位张量（矩阵）。由于冰顶和冰底处平行于冰表面的应力分量均为零（海洋和大气的摩擦可忽略不计），故一个很好的近似是假设水平冰速度与深度无关 [例如，Weertman, 1957; MacAyeal 和 Barcilon, 1988]。此外，漂浮冰的垂直尺度远小于地球半径 \(r\)，因此我们采用“薄壳”近似，即将 \(r\) 视为常数。巨大的长宽比（水平尺寸达数千公里，而垂直仅数百米）意味着垂直速度可以近似为远小于水平速度。这些假设导出了在球面坐标下对称应变率张量的近似表达式（参见附录 A），即：
+  </p>
+  <div class="equation">
+    $$ 
+    \dot{\varepsilon} \approx 
+    \begin{pmatrix}
+      \dfrac{1}{r\,\sin q}\dfrac{\partial u}{\partial f} + \dfrac{v\,\cos q}{r\,\sin q} & \dfrac{1}{2r}\left(\dfrac{1}{\sin q}\dfrac{\partial v}{\partial f} + \sin q\,\dfrac{\partial u}{\partial q}\right) & 0 \\[2mm]
+      \dfrac{1}{2r}\left(\dfrac{1}{\sin q}\dfrac{\partial v}{\partial f} + \sin q\,\dfrac{\partial u}{\partial q}\right) & \dfrac{1}{r}\dfrac{\partial v}{\partial q} & 0 \\[2mm]
+      0 & 0 & \dfrac{\partial w}{\partial z}
+    \end{pmatrix}.
+    \tag{3}
+    $$ 
+  </div>
+  <p>
+    其中，对角线上方的元素与下方的对称元素相等。特别地，有 \(\dot{\varepsilon}_{qz} = \dot{\varepsilon}_{fz} \approx 0\)，因此 \(t_{qz} \approx 0\) 且 \(t_{fz} \approx 0\)。
+  </p>
     <h2>3. 数值模拟结果</h2>
     
     <h3>3.1 一维轴对称模型</h3>
