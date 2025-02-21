@@ -52,5 +52,112 @@
         $$ \frac{\partial \sigma_{\theta\theta}}{\partial \theta} + \frac{1}{\sin\theta}\frac{\partial \sigma_{\theta\phi}}{\partial \phi} + \cot\theta \, \sigma_{\theta\theta} = \rho g h \frac{\partial h}{\partial \theta} $$
     </div>
     <p>其中$\sigma_{ij}$为深度平均应力分量，$\cot\theta$项体现球面几何效应。</p>
+    <h2>2. 模型：球面二维冰架流动</h2>
+    <h3>2.1 控制方程推导</h3>
+    <p>:reference[]{#11} 模型推导概要如下（详见附录A）。设球坐标系（经度φ, 余纬θ, 垂向z）对应速度场(u, v, w)，动量方程为：</p>
+    <div>
+        $$
+        \begin{aligned}
+        0 &= \frac{1}{r \sin\theta} \partial_\phi p + (\nabla \cdot \tau) \cdot \hat{e}_\phi \\
+        0 &= \frac{1}{r} \partial_\theta p + (\nabla \cdot \tau) \cdot \hat{e}_\theta \\
+        0 &= \partial_z p - \rho_I g + (\nabla \cdot \tau) \cdot \hat{e}_z
+        \end{aligned}
+        $$
+    </div>
+    <p>其中$r$为地球半径，$p$为压力，$\tau = \{\tau_{ij}\}$为应力张量。采用Glen流动律（Glen, 1955）建立应力与应变率关系：</p>
+    <div>
+        $$
+        \tau_{ij} = A(T) \left( \frac{\dot{\varepsilon}_{ij}}{\dot{\varepsilon}^{1/3}} \right), \quad 
+        \dot{\varepsilon}^2 = \frac{1}{2}\dot{\varepsilon}_{mn}\dot{\varepsilon}_{mn}
+        $$
+    </div>
+    <p>温度$T$沿深度线性分布，表面温度采用NCAR CAM模型拟合的"暖"（高CO₂）与"冷"（低CO₂）廓线（Abbot等, 2012待发表）。边界条件为：</p>
+    <div>
+        $$
+        (\tau - p\mathbf{I}) \cdot \hat{n}_s = 0 \quad (\text{冰面}) \\
+        (\tau - p\mathbf{I}) \cdot \hat{n}_b = \hat{n}_b p_w \quad (\text{冰底})
+        $$
+    </div>
+
+    <h3>2.2 浅冰近似与球坐标修正</h3>
+    <p>基于水平流速不随深度变化假设（Weertman, 1957）及薄壳近似，应变率张量在球坐标系中表示为：</p>
+    <div>
+        $$
+        \dot{\varepsilon} \approx 
+        \begin{pmatrix}
+        \frac{1}{r \sin\theta} (\partial_\phi u + v \cos\theta) & \frac{1}{2r} \left[ \frac{1}{\sin\theta}\partial_\phi v + \sin\theta \partial_\theta\left(\frac{u}{\sin\theta}\right) \right] & 0 \\
+        \cdot & \frac{1}{r} \partial_\theta v & 0 \\
+        0 & 0 & \partial_z w
+        \end{pmatrix}
+        $$
+    </div>
+    <p>通过垂直积分动量方程并应用边界条件，得到球坐标下的冰架控制方程组：</p>
+    <div>
+        $$
+        \begin{aligned}
+        0 &= \frac{1}{\sin\theta} \partial_\phi \left[ B \left( \frac{2}{\sin\theta} (\partial_\phi u + v \cos\theta) + \partial_\theta v \right) \right] \\
+        &\quad + \frac{1}{\sin\theta} \partial_\theta \left[ B \sin\theta \partial_\theta v \right] - \rho_I g (1 - m) h \partial_\theta h \\
+        B &= \frac{1}{r} h \left\langle A(T)^{-1/3} \dot{\varepsilon}^{-2/3} \right\rangle \\
+        \dot{\varepsilon}^2 &= \frac{1}{2} \left( \dot{\varepsilon}_{\phi\phi}^2 + \dot{\varepsilon}_{\theta\theta}^2 + 2\dot{\varepsilon}_{\phi\theta}^2 \right)
+        \end{aligned}
+        $$
+    </div>
+
+    <h3>2.3 数值方法与边界条件</h3>
+    <p>:reference[]{#18} 采用有限差分法在近全球域（80°S-80°N）进行离散：</p>
+    <ul>
+        <li>空间分辨率：二维176×176网格，一维89网格</li>
+        <li>A网格布局（变量同位布置）</li>
+        <li>动量方程通过三对角矩阵迭代求解（MacAyeal, 1997）</li>
+        <li>厚度方程显式时间步进</li>
+    </ul>
+    <p>边界条件设置：</p>
+    <div>
+        $$
+        \begin{cases}
+        \text{南北边界无穿透} & v=0 \\
+        \text{大陆边界无滑移} & u=v=0 \\
+        \text{厚度方程零梯度} & \partial_n h = 0
+        \end{cases}
+        $$
+    </div>
+
+    <h3>2.4 模型实验设计</h3>
+    <p>表1总结了模型实验配置：</p>
+    <table border="1">
+        <caption>表1. 模型实验参数表</caption>
+        <tr>
+            <th>实验</th><th>模型</th><th>表面温度</th><th>陆块</th><th>对应图示</th>
+        </tr>
+        <tr>
+            <td>3</td><td>1-D</td><td>暖</td><td>-</td><td>图1</td>
+        </tr>
+        <tr>
+            <td>5</td><td>2-D</td><td>暖</td><td>630Myr</td><td>图8</td>
+        </tr>
+        <!-- 其他行省略 -->
+    </table>
+
+    <h3>2.5 模型限制与扩展</h3>
+    <p>:reference[]{#20} 当前模型未考虑的关键过程：</p>
+    <div>
+        $$
+        \begin{cases}
+        \text{冰光学特性反馈} & \text{(Pollard与Kasting, 2005)} \\
+        \text{基底融化-厚度耦合} & \text{(需耦合海洋环流模型)} \\
+        \text{尘埃传输效应} & \text{(Abbot与Pierrehumbert, 2010)}
+        \end{cases}
+        $$
+    </div>
+    <p>模型代码（Matlab）获取地址：<a href="http://www.seas.harvard.edu/climate/eli/Downloads">代码库链接</a></p>
+
+    <h3>附录B：球坐标张量散度修正</h3>
+    <p>二阶张量在曲线坐标系中的散度包含几何修正项，以经向动量方程为例：</p>
+    <div>
+        $$
+        (\nabla \cdot \tau)_\theta = \frac{1}{r \sin\theta} \partial_\phi \tau_{\phi\theta} + \frac{1}{r} \partial_\theta \tau_{\theta\theta} + \frac{\cot\theta}{r} (\tau_{\phi\phi} - \tau_{\theta\theta})
+        $$
+    </div>
+    <p>其中末项为球面曲率引起的附加应力耦合项。</p>
 </body>
 </html>
