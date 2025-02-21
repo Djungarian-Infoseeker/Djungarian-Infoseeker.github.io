@@ -562,5 +562,37 @@
     $$ \frac{1}{r\sin q}\frac{\partial p}{\partial f} + \frac{1}{r\sin q}\frac{\partial t_{ff}}{\partial f} + \frac{1}{r\sin q}\frac{\partial}{\partial q}\Bigl(\sin q\,t_{qf}\Bigr) + \cot q\,\frac{t_{qf}}{r} = 0. \tag{A9} $$
   </div>
   
+  <h2>附录 B：张量的散度</h2>
+  
+  <p>
+    [46] 写出散度算符为
+  </p>
+  <div class="equation">
+    $$ r\cdot = \hat{e}_f\,\frac{1}{r\sin q}\,\partial_f + \hat{e}_q\,\frac{1}{r}\,\partial_q + \hat{e}_r\,\partial_r, \tag{B1} $$
+  </div>
+  <p>
+    并注意，在球面坐标中单位向量并非常数，例如有
+    $$ \partial_q \hat{e}_q = \hat{e}_r \quad \text{[Greenberg, 1998]}. $$
+  </p>
+  
+  <p>
+    [47] 将上述散度算符作用于向量 \(\mathbf{v}\)，即
+  </p>
+  <div class="equation">
+    $$ r\cdot \mathbf{v} = \left(\hat{e}_f\,\frac{1}{r\sin q}\,\partial_f + \hat{e}_q\,\frac{1}{r}\,\partial_q + \hat{e}_r\,\partial_r\right) \cdot \left(\hat{e}_f\,u + \hat{e}_q\,v + \hat{e}_r\,w\right), \tag{B2} $$
+  </div>
+  <p>
+    我们发现单位向量的导数引入了一系列修正项，这是由于非笛卡尔坐标系的缘故。为了推导张量的散度（其结果为一个向量），可以写为
+  </p>
+  <div class="equation">
+    $$ r\cdot t = \left(\hat{e}_f\,\frac{1}{r\sin q}\,\partial_f + \hat{e}_q\,\frac{1}{r}\,\partial_q + \hat{e}_r\,\partial_r\right) \cdot \left(\hat{e}_f\,\hat{e}_f\,t_{ff} + \hat{e}_f\,\hat{e}_q\,t_{fq} + \cdots \right), \tag{B3} $$
+  </div>
+  <p>
+    其中，例如 \(\hat{e}_f\,\hat{e}_q\) 是一个仅在 \((f,q)=(1,2)\) 位置非零的张量。利用单位向量导数的表达式，我们发现导数项现在不仅包括张量分量（例如 \(t_{fq}\)）的导数，还包括乘在每个张量分量两侧的单位向量的导数。因此，我们预期由于单位向量的导数而产生两项修正项，而不是像向量散度中仅有一项修正。正是这些额外的修正项导致了文中讨论的动量方程中附加的项。
+  </p>
+  
+  <p>
+    [48] 致谢。我们感谢 Adam Campbell 以及两位匿名审稿人提出的极具建设性和帮助性的意见；同时感谢 Adam Campbell、Dawei Li 和 Ray Pierrehumbert 对早期草稿的评论。本研究得到了 NSF P2C2 气候动力学项目（资助号 ATM-0902844，支持人：ET 和 YA）的资助。ET 感谢魏茨曼研究所对本研究部分工作的热情接待。
+  </p>
 </body>
 </html>
