@@ -437,6 +437,130 @@
   <p>
     [41] 尽管存在明显局限性，本研究仍是将雪球冰流模型与海洋及大气一般环流模型耦合的第一步。这将有助于改进对冰基及冰面融化、冻结、升华和降雪积累的描述，并使这些模型更加准确。
   </p>
+
+  <h2>附录 A：模型方程的推导</h2>
+  
+  <h3>A1. 冰表与冰底边界条件</h3>
+  <p>
+    [42] 冰顶和冰底的动量边界条件可写为 [MacAyeal, 1997]：
+  </p>
+  <div class="equation">
+    $$ s\cdot \hat{n}_s = 0; \qquad s\cdot \hat{n}_b = \hat{n}_b\, p_w, \tag{A1} $$
+  </div>
+  <p>
+    其中，\(\hat{n}_s\) 与 \(\hat{n}_b\) 分别是指向外侧的冰表面和冰底法向量。应力张量元 \(s_{ij}\) 表示作用于垂直于 \(j\) 方向的面的 \(i\) 方向力，因此 \(s_{ij}n_j\) 表示作用于冰表面单位面积上的总力。该力在冰表面处为零，而在冰底处等于静水压力 \(p_w\)。
+  </p>
+  <p>
+    定义偏应力为
+  </p>
+  <div class="equation">
+    $$ t_{ij} = s_{ij} - d_{ij}\frac{1}{3}\,s_{kk} = s_{ij} + p\,d_{ij}, $$
+  </div>
+  <p>
+    （其中 \(d_{ij}\) 是 Kronecker δ，且压力定义为 \(p = \frac{1}{3}\,s_{kk}\)），这就得到边界条件的等效形式：
+  </p>
+  <div class="equation">
+    $$ (t - pI)\cdot \hat{n}_s = 0; \qquad (t - pI)\cdot \hat{n}_b = \hat{n}_b\, p_w. \tag{A2} $$
+  </div>
+  <p>
+    冰表面海拔 \(s(f,q)\) 的法向量由函数
+    $$ f(f,q,z) = z - s(f,q) $$
+    的梯度给出，即
+  </p>
+  <div class="equation">
+    $$ \hat{n} = \frac{\nabla f}{\|\nabla f\|} = \frac{\Bigl(\frac{1}{r\sin q}\,s_f,\;\frac{1}{r}\,s_q,\;1\Bigr)}{\left\|\Bigl(\frac{1}{r\sin q}\,s_f,\;\frac{1}{r}\,s_q,\;1\Bigr)\right\|}. \tag{A3} $$
+  </div>
+  <p>
+    则，球面坐标下边界条件 (2) 与 (A2) 可写为
+  </p>
+  <div class="equation">
+    $$ 
+    \begin{aligned}
+      \Bigl(t_{ff}-p\Bigr)\frac{1}{r\sin q}\,s_f + t_{fq}\frac{1}{r}\,s_q - t_{fz} &= 0 \quad \text{在 } z=s,\\[1mm]
+      t_{qf}\frac{1}{r\sin q}\,s_f + \Bigl(t_{qq}-p\Bigr)\frac{1}{r}\,s_q - t_{qz} &= 0 \quad \text{在 } z=s,\\[1mm]
+      t_{zf}\frac{1}{r\sin q}\,s_f + t_{zq}\frac{1}{r}\,s_q + \Bigl(t_{zz}-p\Bigr) &= 0 \quad \text{在 } z=s.
+    \end{aligned}
+    \tag{A4}
+    $$
+  </div>
+  <p>
+    类似地，在冰底处，将 \(s\) 替换为 \(b\) 并加入相应的静水压力项即可。其中，\(m=\frac{\rho_I}{\rho_w}\)。
+  </p>
+  
+  <h3>A2. 球面坐标下冰架方程</h3>
+  <p>
+    [43] 本推导遵循 Morland [1987] 与 MacAyeal [1997]，但这里使用了球面坐标（或者也可从 Schoof [2006] 的不变量公式出发，利用球面坐标下的协变导数表达式得到相同结果）。令坐标（经度、副纬度、垂直）记作 \((f,q,r)\)，对应速度为 \((u,v,w)\)。在采用“薄壳”近似时，我们转换为坐标 \((f,q,z)\)，并将 \(r\) 视为常数（即地球半径）。
+  </p>
+  <p>
+    向量的梯度、散度与拉普拉斯算子分别为：
+  </p>
+  <div class="equation">
+    $$ \nabla f = \left(\frac{1}{r\sin q}\frac{\partial f}{\partial f},\; \frac{1}{r}\frac{\partial f}{\partial q},\; \frac{\partial f}{\partial r}\right), $$
+  </div>
+  <div class="equation">
+    $$ 
+    \nabla\cdot \mathbf{v} = \frac{1}{r\sin q}\frac{\partial u}{\partial f} 
+    + \frac{1}{r\sin q}\frac{\partial}{\partial q}\Bigl(\sin q\,v\Bigr)
+    + \frac{1}{r^2}\frac{\partial}{\partial r}\Bigl(r^2\,w\Bigr)
+    \approx \frac{1}{r\sin q}\frac{\partial u}{\partial f} 
+    + \frac{1}{r\sin q}\frac{\partial}{\partial q}\Bigl(\sin q\,v\Bigr)
+    + \frac{\partial w}{\partial z},
+    \tag{A5}
+    $$
+  </div>
+  <p>
+    其中，我们作了薄壳近似，即冰厚远小于地球半径，将 \(r\) 的导数替换为关于局部垂直坐标 \(z\) 的导数，并令 \(r\) 为常数（即地球半径）。
+  </p>
+  <p>
+    对称应变率张量为
+  </p>
+  <div class="equation">
+    $$ 
+    \dot{\varepsilon} = 
+    \begin{pmatrix}
+      \dot{\varepsilon}_{ff} & \dot{\varepsilon}_{fq} & \dot{\varepsilon}_{fr}\\[1mm]
+      \dot{\varepsilon}_{qf} & \dot{\varepsilon}_{qq} & \dot{\varepsilon}_{qr}\\[1mm]
+      \dot{\varepsilon}_{rf} & \dot{\varepsilon}_{rq} & \dot{\varepsilon}_{rr}
+    \end{pmatrix},
+    \tag{A6}
+    $$
+  </div>
+  <p>
+    （以上对角线上方的分量省略，因其与下方相等）。
+  </p>
+  <p>
+    [44] 利用薄壳近似（例如，\(\frac{1}{r^2}\frac{\partial}{\partial r}(r^2w)\approx \frac{\partial w}{\partial z}\) 且忽略 \(wq/r\)）以及冰架近似（忽略 \(\dot{\varepsilon}_{qz}\) 与 \(\dot{\varepsilon}_{fz}\)，且假定水平速度 \(u, v\) 不随 \(z\) 变化且远大于垂直速度 \(w\)），可得近似形式：
+  </p>
+  <div class="equation">
+    $$ 
+    \dot{\varepsilon} \approx 
+    \begin{pmatrix}
+      \frac{1}{r\sin q}\frac{\partial u}{\partial f} + \frac{v\cos q}{r\sin q} & \frac{1}{2r}\left(\frac{1}{\sin q}\frac{\partial v}{\partial f} + \sin q\,\frac{\partial u}{\partial q}\right) & 0\\[2mm]
+      \frac{1}{2r}\left(\frac{1}{\sin q}\frac{\partial v}{\partial f} + \sin q\,\frac{\partial u}{\partial q}\right) & \frac{1}{r}\frac{\partial v}{\partial q} & 0\\[2mm]
+      0 & 0 & \frac{\partial w}{\partial z}
+    \end{pmatrix}.
+    \tag{A7}
+    $$
+  </div>
+  <p>
+    球面坐标下，动量方程的矢量形式 (1) 显式写为分量形式：
+  </p>
+  <div class="equation">
+    $$ 
+    \begin{aligned}
+    0 &= \frac{1}{r\sin q}\frac{\partial p}{\partial f} + \frac{1}{r\sin q}\frac{\partial t_{ff}}{\partial f} + \frac{1}{r\sin q}\frac{\partial}{\partial q}\Bigl(\sin q\,t_{qf}\Bigr) + \frac{1}{r^2}\frac{\partial}{\partial r}\Bigl(r^2\,t_{rf}\Bigr) + \frac{t_{rf}}{r} + \cot q\,\frac{t_{qf}}{r},\\[2mm]
+    0 &= \frac{1}{r}\frac{\partial p}{\partial q} + \frac{1}{r\sin q}\frac{\partial t_{tfq}}{\partial f} + \frac{1}{r\sin q}\frac{\partial}{\partial q}\Bigl(\sin q\,t_{qq}\Bigr) + \frac{1}{r^2}\frac{\partial}{\partial r}\Bigl(r^2\,t_{rq}\Bigr) + \frac{t_{rq}}{r} + \cot q\,\frac{t_{ff}}{r},\\[2mm]
+    0 &= \frac{\partial p}{\partial r} - g\,\rho_I + \frac{1}{r\sin q}\frac{\partial}{\partial f}\Bigl(t_{rf}\Bigr) + \frac{1}{r\sin q}\frac{\partial}{\partial q}\Bigl(\sin q\,t_{rq}\Bigr) + \frac{1}{r^2}\frac{\partial}{\partial r}\Bigl(r^2\,t_{rr}\Bigr) - t_{qq} - \frac{t_{ff}}{r}.
+    \end{aligned}
+    \tag{A8}
+    $$
+  </div>
+  <p>
+    注意，在曲线坐标中二阶张量的散度除了包含矢量散度的项外，还包含一系列度量修正项（详见附录 B 的数学证明概要，以及本文中方程 (9)–(13) 后的启发式讨论）。这些修正项出现在两个水平动量方程的最后两项以及垂直动量方程的最后一项。利用薄壳近似和冰架近似 \(t_{qz}\approx 0,\;t_{fz}\approx 0\)，我们得到
+  </p>
+  <div class="equation">
+    $$ \frac{1}{r\sin q}\frac{\partial p}{\partial f} + \frac{1}{r\sin q}\frac{\partial t_{ff}}{\partial f} + \frac{1}{r\sin q}\frac{\partial}{\partial q}\Bigl(\sin q\,t_{qf}\Bigr) + \cot q\,\frac{t_{qf}}{r} = 0. \tag{A9} $$
+  </div>
   
 </body>
 </html>
