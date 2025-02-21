@@ -12,39 +12,25 @@
     <p><strong>摘要</strong></p>
     <p>近年来的研究表明，雪球地球上的冰流能够非常有效地使全球冰层厚度均质化。以往的研究均采用局部模型或仅考虑纬度变化的一维全球模型，其建模方式难以推广到二维的全球配置。本文利用重构的新元古代陆块配置，采用二维全球冰流模型研究大陆收缩对雪球地球情景下冰流和冰层厚度的影响。数值模拟和尺度分析表明，各种大陆和边缘海的构型（这些构型在一维模型中无法体现）会导致冰层厚度出现较大变化，包括在次大陆与边缘海之间出现入口受限的狭窄区域。由于本研究忽略了热力学、光学效应、尘埃及尘埃输送等许多已知的重要因素，因此仅作为针对某一特定效应的过程研究，而非对新元古代冰层厚度进行逼真模拟。本文所开发的模型公式在多个方面推广和扩展了先前的成果，包括引入了球面坐标和横向几何的修正，因此，这项研究是向将雪球冰流模型与一般环流海洋和大气模型耦合、实现对新元古代雪球冰层厚度更定量模拟迈出的一步。</p>
 
-    <p>模型公式在以下几方面推广并扩展了先前结果：引入球坐标系修正项和横向几何效应。本研究为耦合雪球冰流模型与海洋-大气环流模型、实现新元古代冰厚定量模拟迈出重要一步。</p>
-
-
-
     <h2>1. 引言</h2>
-    <p>新元古代（7.5-5.8亿年前）期间，地球经历多次冰期事件，部分冰期在赤道海域沉积冰成岩，暗示可能存在全球性冰盖（Harland, 1964; Kirschvink, 1992; Hoffman et al., 1998）。理解这些事件对气候动力学认知提出挑战，相关争议详见Pierrehumbert等（2011）的综述。</p>
+    <p>在大约7.5亿年至5.8亿年前的新元古代时期，地球经历了多次冰期，其中一些冰期在赤道海域沉积了冰成沉积物，表明可能存在全球冰盖 [Harland, 1964; Kirschvink, 1992; Hoffman et al., 1998]。理解这些事件对于我们认识气候动力学构成了一个有趣的挑战。有关这些相关问题和争议，可参见 Pierrehumbert 等人 [2011] 的最新综述。</p>
 
-    <p>雪球地球海洋冰流近年备受关注。Goodman与Pierrehumbert（2003）证明冰流能有效均质化冰厚。冰厚对光合生物在雪球事件中的存活具有潜在重要影响（Hoffman与Schrag, 2002; Pollard与Kasting, 2005; McKay, 2000; Campbell等, 2011），超过数十米的冰层可能阻碍光合作用（McKay, 2000）。</p>
+    <p>近年来，雪球地球情景下冰在海洋上的流动受到广泛关注。Goodman 和 Pierrehumbert [2003] 表明，冰流能够在雪球地球情景下有效地均质化冰层厚度。而冰层厚度反过来可能在雪球事件期间光合生物的存活问题上发挥重要作用 [Hoffman and Schrag, 2002; Pollard and Kasting, 2005; McKay, 2000; Campbell et al., 2011]；超过数十米厚的冰盖甚至可能过于厚重，使光合作用无法进行 [McKay, 2000]。</p>
 
-    <p>已有研究涉及冰流效应（Goodman与Pierrehumbert, 2003）、冰光学特性（McKay, 2000; Warren等, 2002）、海水冻结与积雪的光学差异（Pollard与Kasting, 2005, 2006; Warren与Brandt, 2006; Goodman, 2006）、动力与热力学海冰作用（Lewis等, 2007），以及雪球冰盖尘埃沉积（Abbot与Pierrehumbert, 2010; Le Hir等, 2010）和输运（Li与Pierrehumbert, 2011）。</p>
+    <p>迄今为止，相关工作主要探讨了冰流的影响 [Goodman and Pierrehumbert, 2003]、冰的光学特性 [McKay, 2000; Warren et al., 2002]、冻结海水与积雪在光学性质上的差异效应 [Pollard and Kasting, 2005, 2006; Warren and Brandt, 2006; Goodman, 2006]、动力海冰与热力海冰的作用 [Lewis et al., 2007]，以及雪球冰盖上尘埃的积累 [Abbot and Pierrehumbert, 2010; Le Hir et al., 2010]与尘埃输送 [Li and Pierrehumbert, 2011]。</p>
 
-    <p>[5] Warren等（2002）与Pollard及Kasting（2005）提出受限边缘海可能导致显著冰厚变化，因冰流入海受限于海峡侧壁摩擦，可能无法平衡海内消融/融化。Campbell等（2011）基于Nye（1965）解析解，推导了侧壁摩擦下狭长矩形边缘海的冰入侵长度公式。</p>
+    <p>[5] Warren 等人 [2002] 和 Pollard & Kasting [2005] 指出，由于冰流进入海域受到引导通道侧壁摩擦的限制，可能无法平衡海内的消融或融化，因而导致冰层厚度出现较大变化。近期的一项与本工作密切相关的研究中，Campbell 等人 [2011] 考虑了冰流在侧壁摩擦作用下对一个狭长矩形边缘海的入侵过程，并基于 Nye [1965] 的解析解推导出了入侵长度的公式。</p>
 
-    <p>[6] 现有雪球冰流计算均采用一维（纬度）全球模型或理想化局地矩形边缘海。此外，一维全球模型基于冰架变形率公式（Weertman, 1957），该公式无法扩展至二维（经度-纬度）情形。</p>
+    <p>[6] 迄今为止，所有关于雪球冰流的计算均采用了一维（仅考虑纬度变化）的全球模型，或者理想化的局部矩形边缘海模型。此外，构建全球一维（仅纬度方向）模型的基础是一个冰架变形速率公式 [Weertman, 1957]，但遗憾的是，该公式无法推广到包含经度和纬度的二维情形。</p>
 
     <p>[7] 本文有两大目标：<br>
-    1. 研究存在大陆时球面冰流及受限海域引发的冰厚剧烈变化，展示基于新元古代陆块重建的数值解与冰厚尺度关系；<br>
-    2. 建立包含双水平维度的球面冰流模型，引入冰川学中未考虑的物理过程与数学项。通过直接推导Stokes方程，构建二维水平流动问题，突破早期研究（Goodman与Pierrehumbert, 2003; Pollard与Kasting, 2005）因依赖Weertman（1957）应变率公式而受限的框架。</p>
+    1. 第一个目标是研究在大陆存在条件下球面上的冰流，以及由于狭窄海域存在而可能导致大幅冰层厚度变化的情形。我们展示了基于新元古代重构大陆构型的数值解及冰层厚度变化的尺度关系，并分别推导了无大陆全球海洋与通过一条通道与海洋相连的狭窄海域的尺度关系。<br>
+    2. 建立一个涵盖水平两个维度的球面冰流模型。为此，我们引入了几个新颖的方面，并将迄今在雪球研究文献中被忽略的物理过程和数学项纳入其中。重要的是，我们直接从斯托克斯方程推导出模型方程，从而使得构建二维水平流动问题成为可能，而这一点是早期雪球冰流研究（如 Goodman & Pierrehumbert [2003] 和 Pollard & Kasting [2005]）所无法实现的，因为它们都是从 Weertman [1957] 的冰架应变率公式出发。特别地，我们采用了 Morland [1987] 的冰架动量预算（参见 MacAyeal & Barcilon, 1988; MacAyeal, 1989, 1997）以及球面坐标，并证明这两者即使在一维模型中也会引入额外的项。</p>
 
-    <p>[8] 模型创新体现在采用Morland（1987）冰架动量收支（参见MacAyeal与Barcilon, 1988; MacAyeal, 1989, 1997）及球坐标系，揭示二者即使在单维模型中亦会引入附加项。动量方程在球坐标系下的展开形式为：</p>
-    <div>
-        $$ \frac{\partial}{\partial \theta}\left( \nu h \frac{\partial u}{\partial \theta} \right) + \frac{1}{\sin\theta}\frac{\partial}{\partial \phi}\left( \nu h \frac{\partial u}{\partial \phi} \right) = \rho g h \frac{\partial h}{\partial \theta} $$
-    </div>
-    <p>其中$\theta$为余纬，$\phi$为经度，$\nu$为冰黏度，$u$为流速分量。</p>
+    <p>现已知许多因素在决定雪球地球冰层厚度中起着作用，其中一些因素（如冰的光学特性、不同的冰来源、尘埃及尘埃输送）已在上述论文中有所探讨。本文聚焦于冰流及其与大陆构型相互作用的效应，暂时忽略其他所有反馈。这种方法的优点在于使我们能够隔离并仔细研究相关流动动力学，但必然使本研究显得理想化且过于简化。我们认为这是一种有用的方法，但必须强调，因此本文计算得到的冰层厚度数值不应被视为对雪球冰层厚度的可靠定量预测。故此，本工作应被看作是一个过程研究，而非试图进行逼真的雪球模拟。特别地，我们假设海洋完全被厚冰覆盖（Warren 等人 [2002] 称之为“海冰川”），因此我们的结果无法用于确认或否定之前某些研究所提出的热带地区可能出现无冰或薄冰的可能性 [例如 Chandler & Sohl, 2000; Hyde et al., 2000; Pollard & Kasting, 2005; Liu & Peltier, 2010; Abbot et al., 2011]。</p>
 
-    <p>[9] 尽管雪球地球冰厚受多重因素影响（如冰光学特性、尘埃输运等），本研究聚焦冰流与大陆配置的相互作用，暂忽略其他反馈机制。这种理想化处理虽简化了现实复杂性，但有助于深入解析流动动力学机制。需强调，本文计算结果不可直接用于验证热带无冰/薄冰假说（Chandler与Sohl, 2000; Hyde等, 2000等）。</p>
+    <p>接下来的各节中，我们首先给出模型方程的概要推导（第二节）。这些方程是在冰川学中长期使用的著名冰架方程向球面坐标的简单扩展 [Morland, 1987; MacAyeal, 1997]。随后，我们展示模型结果（第三节）、推导无大陆轴对称全球情况以及狭窄海域情况下冰层厚度的尺度定律（第四节），并在第五节进行总结。附录中则给出了模型方程的详细推导。</p>
 
-    <p>后续章节结构如下：第二节概述模型方程推导（详细推导见附录），该方程系对经典冰架方程（Morland, 1987; MacAyeal, 1997）的球坐标扩展；第三节展示模型结果；第四节推导无大陆全球轴对称情形与受限海域的冰厚尺度律；第五节总结。关键尺度律表达式为：</p>
-    <div>
-        全球无陆冰厚： $ H \sim \left( \frac{\mu Q}{\rho g} \right)^{1/4} $ <br>
-        受限海域冰厚： $ H_{constricted} \sim \left( \frac{\tau_w L^2}{\mu} \right)^{1/3} $
-    </div>
-    <p>式中$\mu$为冰黏度系数，$Q$为冰通量，$\tau_w$为侧壁剪切应力，$L$为特征长度。</p>
 
     <h3>附录：模型方程推导要点</h3>
     <p>基于Stokes方程的三维动量平衡，通过垂直积分与浅冰近似简化，得到二维水平动量方程。球坐标系中需考虑曲率项，例如经向应力散度项包含附加曲率修正：</p>
@@ -337,6 +323,82 @@
                 <tr><td>受限海域</td><td>$\sim 100\ \text{m}$</td><td>几何约束下的质量平衡</td></tr>
                 <tr><td>全球无大陆</td><td>$\sim 30\ \text{m}$</td><td>纬度相关消融率驱动</td></tr>
             </table>
+        </div>
+    </div>
+<!-- 接续前文 -->
+    <h2>附录A：模型方程推导</h2>
+    
+    <h3>A1. 表面与底部边界条件</h3>
+    <div class="boundary-conditions">
+        <div class="equation-group">
+            <p>:reference[]{#42} 冰盖上下边界动量条件可表述为：</p>
+            $$ \begin{cases}
+            \boldsymbol{\sigma} \cdot \mathbf{\hat{n}_s} = 0 & \text{(表面)} \\
+            \boldsymbol{\sigma} \cdot \mathbf{\hat{n}_b} = \mathbf{\hat{n}_b} p_w & \text{(底部)}
+            \end{cases} \tag{A1} $$
+            <p>其中偏应力张量分解为：</p>
+            $$ \boldsymbol{\sigma} = \boldsymbol{\tau} - p\mathbf{I} $$
+        </div>
+
+        <div class="normal-vector">
+            <p>表面高程$ s(\phi, \theta) $的法向量由梯度给出：</p>
+            $$ \mathbf{\hat{n}} = \frac{\nabla f}{\|\nabla f\|} = \frac{\left( -\frac{1}{r\sin\theta}\frac{\partial s}{\partial\phi}, -\frac{1}{r}\frac{\partial s}{\partial\theta}, 1 \right)}{\left\| \left( -\frac{1}{r\sin\theta}\frac{\partial s}{\partial\phi}, -\frac{1}{r}\frac{\partial s}{\partial\theta}, 1 \right) \right\|} \tag{A3} $$
+        </div>
+
+        <div class="spherical-coordinates">
+            <p>球坐标系下边界条件展开式：</p>
+            <div class="equation-table">
+                <table>
+                    <tr><th>表面条件（z = s）</th><th>底部条件（z = b）</th></tr>
+                    <tr>
+                        <td>
+                            $$ \begin{aligned}
+                            (\tau_{\phi\phi}-p)\frac{\partial s}{r\sin\theta\partial\phi} + \tau_{\phi\theta}\frac{\partial s}{r\partial\theta} - \tau_{\phi z} &= 0 \\
+                            \tau_{\theta\phi}\frac{\partial s}{r\sin\theta\partial\phi} + (\tau_{\theta\theta}-p)\frac{\partial s}{r\partial\theta} - \tau_{\theta z} &= 0 \\
+                            \tau_{z\phi}\frac{\partial s}{r\sin\theta\partial\phi} + \tau_{z\theta}\frac{\partial s}{r\partial\theta} - (\tau_{zz}-p) &= 0
+                            \end{aligned} $$
+                        </td>
+                        <td>
+                            $$ \begin{aligned}
+                            (\tau_{\phi\phi}-p)\frac{\partial b}{r\sin\theta\partial\phi} + \tau_{\phi\theta}\frac{\partial b}{r\partial\theta} - \tau_{\phi z} &= \frac{\rho_w g h}{r\sin\theta}\frac{\partial b}{\partial\phi} \\
+                            \tau_{\theta\phi}\frac{\partial b}{r\sin\theta\partial\phi} + (\tau_{\theta\theta}-p)\frac{\partial b}{r\partial\theta} - \tau_{\theta z} &= \frac{\rho_w g h}{r}\frac{\partial b}{\partial\theta} \\
+                            \tau_{z\phi}\frac{\partial b}{r\sin\theta\partial\phi} + \tau_{z\theta}\frac{\partial b}{r\partial\theta} - (\tau_{zz}-p) &= \rho_w g h
+                            \end{aligned} $$
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p class="equation-label">(A4)</p>
+        </div>
+    </h3>
+
+    <h3>A2. 球坐标系冰架方程</h3>
+    <div class="ice-shelf-equations">
+        <div class="coordinates">
+            <p>:reference[]{#43} 采用球坐标系$ (\phi, \theta, r) $，薄壳近似下转为$ (\phi, \theta, z) $，主要微分算子：</p>
+            $$ \begin{aligned}
+            \nabla &\approx \left( \frac{1}{r\sin\theta}\partial_\phi, \frac{1}{r}\partial_\theta, \partial_z \right) \\
+            \nabla \cdot \mathbf{v} &\approx \frac{1}{r\sin\theta}\partial_\phi u + \frac{1}{r\sin\theta}\partial_\theta (v\sin\theta) + \partial_z w \\
+            \nabla^2 f &\approx \partial_z^2 f + \frac{1}{r^2\sin\theta}\partial_\theta (\sin\theta \partial_\theta f) + \frac{1}{r^2\sin^2\theta}\partial_\phi^2 f
+            \end{aligned} \tag{A5} $$
+        </div>
+
+        <div class="strain-rate">
+            <p>应变率张量在薄壳近似下的简化形式：</p>
+            $$ \dot{\boldsymbol{\epsilon}} \approx \begin{pmatrix}
+            \frac{\partial u}{r\sin\theta\partial\phi} + \frac{v\cos\theta}{r} & \frac{1}{2}\left( \frac{\partial v}{r\sin\theta\partial\phi} + \frac{\partial u}{r\partial\theta} - \frac{u\cot\theta}{r} \right) & 0 \\
+            \cdots & \frac{\partial v}{r\partial\theta} + \frac{w}{r} & 0 \\
+            0 & 0 & \partial_z w
+            \end{pmatrix} \tag{A7} $$
+        </div>
+
+        <div class="momentum-equations">
+            <p>动量方程在球坐标系下的展开式（薄壳近似）：</p>
+            $$ \begin{aligned}
+            0 &= \frac{1}{r\sin\theta}\partial_\phi p + \nabla \cdot \boldsymbol{\tau}_{\phi} + \frac{\cot\theta}{r}\tau_{\phi\theta} \\
+            0 &= \frac{1}{r}\partial_\theta p + \nabla \cdot \boldsymbol{\tau}_{\theta} - \frac{\cot\theta}{r}\tau_{\phi\phi} \\
+            0 &= \partial_z p - \rho_I g + \nabla \cdot \boldsymbol{\tau}_z - \frac{\tau_{\theta\theta} + \tau_{\phi\phi}}{r}
+            \end{aligned} \tag{A8} $$
         </div>
     </div>
 </body>
