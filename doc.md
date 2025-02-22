@@ -49,6 +49,7 @@ header_image: '../../atmos.jpg'
 FORMATION, TIDAL EVOLUTION, AND HABITABILITY OF THE KEPLER-186 SYSTEM
 Emeline Bolmont, Sean N. Raymond, Philip von Paris, Franck Selsis, Franck Hersant, Elisa V. Quintana, and Thomas Barclay](https://infoseeker.cn/docs/Bolmont2014/Bolmont2014)<span style="color:green;">（更新日期2025/2/18，已完结） </span>
 - [大陆收缩与雪球地球情景下海洋冰盖厚度 中文翻译/Continental constriction and oceanic ice-cover thickness  in a Snowball-Earth scenario  Eli Tziperman,1 Dorian S. Abbot,2 Yosef Ashkenazy,3 Hezi Gildor,4 David Pollard,5 Christian G. Schoof,6 and Daniel P. Schrag1](https://infoseeker.cn/docs/Tziperman2012/Tziperman2012)<span style="color:green;">（更新日期2025/2/21，已完结） </span>
+- [雪球地球上的海洋冰川流动与尘埃输运 中文翻译/Sea glacier flow and dust transport on Snowball Earth  Dawei Li1 and Raymond T. Pierrehumbert1](https://infoseeker.cn/docs/Li2011/Li2011)<span style="color:green;">（更新日期2025/2/23，已完结） </span>
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:green;">（更新日期2024/12/20，已完结） </span>
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
