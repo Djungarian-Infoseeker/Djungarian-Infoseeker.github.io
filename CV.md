@@ -4,7 +4,6 @@ header_image: '../../yangquan.jpg'
 
 ## Curriculum Vitae:
 
-<table>
 <tr>
     <td style="padding-right: 15px;">
     <img src="/avatar.jpg" alt="alt text">
@@ -16,7 +15,6 @@ header_image: '../../yangquan.jpg'
     <a href="https://mgg.tongji.edu.cn/mggen/main.htm" target="_blank">Department of Marine Science, School of Ocean and Earth Sciences</a>, <a href="https://en.tongji.edu.cn/" target="_blank">Tongji University</a><br> <!-- 添加超链接 -->
     <strong>Email:</strong><a href="mailto:wangyinjie@tongji.edu.cn">wangyinjie@tongji.edu.cn</a><br> <!-- 添加邮件链接 -->
     <strong>地址: </strong><a href="https://www.bing.com/maps?cp=31.283704%7E121.500936&lvl=16.0" target="_blank">NO.1239 Siping Road, Shanghai, P.R. China</a><br>
-    
 </tr>
 <tr>
     <td colspan="2" style="padding-left: 0px;"> <!-- 删除左侧空白，使文本对齐 -->
