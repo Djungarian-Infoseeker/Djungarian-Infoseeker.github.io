@@ -51,6 +51,7 @@ Emeline Bolmont, Sean N. Raymond, Philip von Paris, Franck Selsis, Franck Hersan
 - [大陆收缩与雪球地球情景下海洋冰盖厚度 中文翻译/Continental constriction and oceanic ice-cover thickness  in a Snowball-Earth scenario  Eli Tziperman,1 Dorian S. Abbot,2 Yosef Ashkenazy,3 Hezi Gildor,4 David Pollard,5 Christian G. Schoof,6 and Daniel P. Schrag1](https://infoseeker.cn/docs/Tziperman2012/Tziperman2012)<span style="color:green;">（更新日期2025/2/21，已完结） </span>
 - [雪球地球上的海洋冰川流动与尘埃输运 中文翻译/Sea glacier flow and dust transport on Snowball Earth  Dawei Li1 and Raymond T. Pierrehumbert1](https://infoseeker.cn/docs/Li2011/Li2011)<span style="color:green;">（更新日期2025/2/23，已完结） </span>
 - [雪球地球上的热带冰层厚度和光合作用 中文翻译/Thickness of tropical ice and photosynthesis on a snowball EarthChristopher P. McKay](https://infoseeker.cn/docs/Mckay2000/Mckay2000)<span style="color:green;">（更新日期2025/2/24，已完结） </span>
+- [永久冰覆盖的南极洲霍尔湖中光的透射与反射 中文翻译/Light transmission and reflection in perennially ice-covered Lake Hoare, Antarctica](https://infoseeker.cn/docs/Mckay1994/Mckay1994)<span style="color:green;">（更新日期2025/3/6，已完结） </span>
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:green;">（更新日期2024/12/20，已完结） </span>
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
