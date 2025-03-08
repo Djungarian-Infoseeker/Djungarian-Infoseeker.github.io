@@ -59,7 +59,17 @@
   
   <p>将这些替代项代入方程（1）并从冰水界面积分到表面，得到：</p>
   
-  <p>\( Z = b \ln\left( \frac{T_0}{T} \right) + c (T - T_0) - S_0 (1 - a)(1 - r) h \left( 1 - \exp\left( -\frac{Z}{h} \right) \right) \frac{vpl + F_g}{vpl} \)</p>
+  <p>\[
+Z \;=\; \frac{
+b \,\ln\!\bigl(\tfrac{T_{0}}{T_{s}}\bigr)
+\;+\; c\,\bigl(T_{s} - T_{0}\bigr)
+\;-\; S_{0}\,\bigl(1 - a\bigr)\bigl(1 - r\bigr)\,h\;\Bigl(1 - \exp\!\bigl(-\tfrac{Z}{h}\bigr)\Bigr)
+}{
+v\,p\,l \;+\; F_{g}
+}
+\tag{2}
+\]
+</p>
   
   <p>其中，\( T_0 \) 是冰水界面的温度，T 是表面的年平均温度（以 K 为单位），Z 是冰盖的平衡厚度。方程（2）是冰盖年均厚度的隐式表达式。</p>
   
