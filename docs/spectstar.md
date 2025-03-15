@@ -158,7 +158,7 @@
             <td>W–</td>
             <td>沃尔夫-拉叶星</td>
             <td>≥&nbsp;25000&nbsp;K</td>
-            <td><img src="IMG/Bhue.gif" width="60" height="20" alt="W型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Bhue.gif" width="60" height="20" alt="W型星色调"></td>
             <td>&lt; –3.0</td>
             <td>≥&nbsp;20&nbsp;M<sub>⊙</sub></td>
             <td>10–15&nbsp;R<sub>⊙</sub></td>
@@ -186,7 +186,7 @@
             <td>B</td>
             <td>大质量</td>
             <td>10000–30000&nbsp;K</td>
-            <td><img src="IMG/Bhue.gif" width="60" height="20" alt="B型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Bhue.gif" width="60" height="20" alt="B型星色调"></td>
             <td>–4.1 to 0.7</td>
             <td>2.9–18&nbsp;M<sub>⊙</sub></td>
             <td>1.8–6.6&nbsp;R<sub>⊙</sub></td>
@@ -200,7 +200,7 @@
             <td>A</td>
             <td>大型</td>
             <td>7300–10000&nbsp;K</td>
-            <td><img src="IMG/Ahue.gif" width="60" height="20" alt="A型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Ahue.gif" width="60" height="20" alt="A型星色调"></td>
             <td>1.4 to 2.5</td>
             <td>1.6–2.9&nbsp;M<sub>⊙</sub></td>
             <td>1.4–1.8&nbsp;R<sub>⊙</sub></td>
@@ -214,7 +214,7 @@
             <td>F</td>
             <td>太阳型</td>
             <td>6000–7300&nbsp;K</td>
-            <td><img src="IMG/Fhue.gif" width="60" height="20" alt="F型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Fhue.gif" width="60" height="20" alt="F型星色调"></td>
             <td>2.6 to 4.2</td>
             <td>1.05–1.60&nbsp;M<sub>⊙</sub></td>
             <td>1.15–1.4&nbsp;R<sub>⊙</sub></td>
@@ -228,7 +228,7 @@
             <td>G</td>
             <td>太阳型</td>
             <td>5300–6000&nbsp;K</td>
-            <td><img src="IMG/Ghue.gif" width="60" height="20" alt="G型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Ghue.gif" width="60" height="20" alt="G型星色调"></td>
             <td>4.4 to 5.7</td>
             <td>0.8–1.05&nbsp;M<sub>⊙</sub></td>
             <td>0.96–1.15&nbsp;R<sub>⊙</sub></td>
@@ -242,7 +242,7 @@
             <td>K</td>
             <td>太阳型</td>
             <td>3800–5300&nbsp;K</td>
-            <td><img src="IMG/Khue.gif" width="60" height="20" alt="K型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Khue.gif" width="60" height="20" alt="K型星色调"></td>
             <td>5.9 to 9.0</td>
             <td>0.5–0.8&nbsp;M<sub>⊙</sub></td>
             <td>0.7–0.96&nbsp;R<sub>⊙</sub></td>
@@ -256,7 +256,7 @@
             <td>M</td>
             <td>亚太阳型</td>
             <td>2500–3800&nbsp;K</td>
-            <td><img src="IMG/Mhue.gif" width="60" height="20" alt="M型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Mhue.gif" width="60" height="20" alt="M型星色调"></td>
             <td>9.2 to 16.1</td>
             <td>0.07–0.5&nbsp;M<sub>⊙</sub></td>
             <td>≤&nbsp;0.7&nbsp;R<sub>⊙</sub></td>
@@ -270,7 +270,7 @@
             <td>C</td>
             <td>碳星</td>
             <td>2400–3200&nbsp;K</td>
-            <td><img src="IMG/Chue.gif" width="60" height="20" alt="C型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Chue.gif" width="60" height="20" alt="C型星色调"></td>
             <td>.</td>
             <td>≤&nbsp;1.1&nbsp;M<sub>⊙</sub></td>
             <td>220–550&nbsp;R<sub>⊙</sub>†</td>
@@ -284,7 +284,7 @@
             <td>S</td>
             <td>亚碳星</td>
             <td>2400–3500&nbsp;K</td>
-            <td><img src="IMG/Shue.gif" width="60" height="20" alt="S型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Shue.gif" width="60" height="20" alt="S型星色调"></td>
             <td>.</td>
             <td>≤&nbsp;0.8&nbsp;M<sub>⊙</sub></td>
             <td>≤&nbsp;0.7&nbsp;R<sub>⊙</sub></td>
@@ -298,7 +298,7 @@
             <td>L</td>
             <td>热褐矮星</td>
             <td>1300–2100&nbsp;K</td>
-            <td><img src="IMG/Dhue.gif" width="60" height="20" alt="L型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Dhue.gif" width="60" height="20" alt="L型星色调"></td>
             <td>11.5 to 14.0</td>
             <td>0.075–0.45&nbsp;M<sub>⊙</sub></td>
             <td>≤&nbsp;0.2&nbsp;R<sub>⊙</sub></td>
@@ -312,7 +312,7 @@
             <td>T</td>
             <td>冷褐矮星</td>
             <td>600–1300&nbsp;K</td>
-            <td><img src="IMG/Lhue.gif" width="60" height="20" alt="T型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Lhue.gif" width="60" height="20" alt="T型星色调"></td>
             <td>&gt; 14.0</td>
             <td>0.012–0.075&nbsp;M<sub>⊙</sub></td>
             <td>≤&nbsp;0.2&nbsp;R<sub>⊙</sub></td>
@@ -340,7 +340,7 @@
             <td>D</td>
             <td>简并星；<br>白矮星</td>
             <td>≤&nbsp;100,000+&nbsp;K</td>
-            <td><img src="IMG/Whue.gif" width="60" height="20" alt="D型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Whue.gif" width="60" height="20" alt="D型星色调"></td>
             <td>10.0 to 15.0</td>
             <td>0.17–1.3&nbsp;M<sub>⊙</sub></td>
             <td>0.008–0.02&nbsp;R<sub>⊙</sub></td>
@@ -362,7 +362,7 @@
             <td>P</td>
             <td>行星状星云</td>
             <td>.</td>
-            <td><img src="IMG/PNhue.gif" width="60" height="20" alt="P型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/PNhue.gif" width="60" height="20" alt="P型星色调"></td>
             <td colspan="7" align="left">巨星坍缩成白矮星前抛出的气体壳</td>
         </tr>
 
