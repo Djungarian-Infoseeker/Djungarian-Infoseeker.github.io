@@ -29,7 +29,7 @@ header_image: '../../atmos.jpg'
 - [赫罗图/ Hertzsprung–Russell diagram](https://image.xmcdn.com/group38/M07/A1/B7/wKgJolpoLzGj0qldAACjyO_JG9A910.jpg?op_type=4&device_type=ios&upload_type=attachment&name=mobile_large) 
 - [瑞利散射 维基百科/ Rayleigh scattering wikipedia](https://zh.wikipedia.org/wiki/%E7%91%9E%E5%88%A9%E6%95%A3%E5%B0%84) 
 - [大气辐射与物理的补课 / Atmosphere Radiation & Physics addtion](https://infoseeker.cn/docs/radiation1227) 
-
+- [恒星光谱学分类 中文翻译 / Spectral Classification of Stars ASTRO index page](https://infoseeker.cn/docs/spectstar) 
 ## 经典文章/Classical Articles
 - [主序星周围的宜居带 中文翻译/ Habitable Zones Around Main Sequence Stars by James F. Kasting, Daniel P. Whitmire, Ray T. Reynolds](https://infoseeker.cn/docs/Kasting1993/Kasting1993)<span style="color:green;">（更新日期2024/12/21，已完结） </span> 
 - [可居住带围绕主序星：新估算 中文翻译/ HABITABLE ZONES AROUND MAIN-SEQUENCE STARS: NEW ESTIMATES Ravi Kumar Kopparapu, Ramses Ramirez, James F. Kasting, Vincent Eymet, Tyler D. Robinson, Suvrath Mahadevan, Ryan C. Terrien, Shawn Domagal-Goldman, Victoria Meadows, and Rohit Deshpande](https://infoseeker.cn/docs/Kopparapu2013/Kopparapu2013)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
