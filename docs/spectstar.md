@@ -133,6 +133,250 @@
 <p><a class="three" href="http://www.stargazing.net/david/spectroscopy/links.html"><b>天文光谱学</b></a>——信息链接的聚合页面。<a name="spectraltype"></a></p>
 
 <p><span style="color:#33EECC; font-style:italic;">光谱类型。</span> 下表列出了主序上每个光谱类型恒星的主要属性。表面温度、半径和光度的值不描述主序外的恒星（巨星和超巨星）。<a name="spectralcodes"></a></p>
+<table class="data" cellpadding="4" bgcolor="#111111" width="100%">
+    <tbody>
+        <tr><td colspan="11"><hr width="100%" size="1" noshade=""></td></tr>
+        <tr><td colspan="11" align="center"><b>摩根-基南光谱类型 <i>（主序星，扩展版）</i></b></td></tr>
+
+        <tr align="center">
+            <td><i>符号</i></td>
+            <td><i>描述</i></td>
+            <td><i>表面<br>温度</i></td>
+            <td><i>黑体<br>色调*</i></td>
+            <td><i>矮星（主序星）<br>绝对<br>星等</i></td>
+            <td><i>质量</i></td>
+            <td><i>半径</i></td>
+            <td><i>辐射<br>光度</i></td>
+            <td><i>B–V<br>颜色<br>指数</i></td>
+            <td><i>寿命<br>（年）</i></td>
+            <td><i>主序星<br>占比</i></td>
+        </tr>
+
+        <tr><td colspan="11"><hr width="100%" size="1" noshade=""></td></tr>
+
+        <tr align="center">
+            <td>W–</td>
+            <td>沃尔夫-拉叶星</td>
+            <td>≥&nbsp;25000&nbsp;K</td>
+            <td><img src="IMG/Bhue.gif" width="60" height="20" alt="W型星色调"></td>
+            <td>&lt; –3.0</td>
+            <td>≥&nbsp;20&nbsp;M<sub>⊙</sub></td>
+            <td>10–15&nbsp;R<sub>⊙</sub></td>
+            <td>≥&nbsp;10<sup>5</sup>&nbsp;L<sub>⊙</sub></td>
+            <td>~–0.25</td>
+            <td>W5 = 2.0x10<sup>5</sup></td>
+            <td>2x10<sup>–8</sup>%</td>
+        </tr>
+
+        <tr align="center">
+            <td>O</td>
+            <td>超大质量</td>
+            <td>≥&nbsp;30000 K</td>
+            <td><img src="IMG/Ohue.gif" width="60" height="20" alt="O型星色调"></td>
+            <td>–5.6 to –4.3</td>
+            <td>18–~150&nbsp;M<sub>⊙</sub></td>
+            <td>≥&nbsp;6.6&nbsp;R<sub>⊙</sub></td>
+            <td>53,000–~10<sup>6</sup>&nbsp;L<sub>⊙</sub></td>
+            <td>–0.33 to –0.31</td>
+            <td>O5 = 3.6x10<sup>5</sup></td>
+            <td>5x10<sup>-5</sup>%</td>
+        </tr>
+
+        <tr align="center">
+            <td>B</td>
+            <td>大质量</td>
+            <td>10000–30000&nbsp;K</td>
+            <td><img src="IMG/Bhue.gif" width="60" height="20" alt="B型星色调"></td>
+            <td>–4.1 to 0.7</td>
+            <td>2.9–18&nbsp;M<sub>⊙</sub></td>
+            <td>1.8–6.6&nbsp;R<sub>⊙</sub></td>
+            <td>54–52,500&nbsp;L<sub>⊙</sub></td>
+            <td>–0.30 to –0.08</td>
+            <td>B5 = 7.2x10<sup>7</sup></td>
+            <td>0.039%</td>
+        </tr>
+
+        <tr align="center">
+            <td>A</td>
+            <td>大型</td>
+            <td>7300–10000&nbsp;K</td>
+            <td><img src="IMG/Ahue.gif" width="60" height="20" alt="A型星色调"></td>
+            <td>1.4 to 2.5</td>
+            <td>1.6–2.9&nbsp;M<sub>⊙</sub></td>
+            <td>1.4–1.8&nbsp;R<sub>⊙</sub></td>
+            <td>6.5–54&nbsp;L<sub>⊙</sub></td>
+            <td>–0.02 to 0.28</td>
+            <td>A5 = 1.1x10<sup>9</sup></td>
+            <td>0.6%</td>
+        </tr>
+
+        <tr align="center">
+            <td>F</td>
+            <td>太阳型</td>
+            <td>6000–7300&nbsp;K</td>
+            <td><img src="IMG/Fhue.gif" width="60" height="20" alt="F型星色调"></td>
+            <td>2.6 to 4.2</td>
+            <td>1.05–1.60&nbsp;M<sub>⊙</sub></td>
+            <td>1.15–1.4&nbsp;R<sub>⊙</sub></td>
+            <td>1.5–6.5&nbsp;L<sub>⊙</sub></td>
+            <td>0.30 to 0.56</td>
+            <td>F5 = 3.5x10<sup>9</sup></td>
+            <td>2.9%</td>
+        </tr>
+
+        <tr align="center">
+            <td>G</td>
+            <td>太阳型</td>
+            <td>5300–6000&nbsp;K</td>
+            <td><img src="IMG/Ghue.gif" width="60" height="20" alt="G型星色调"></td>
+            <td>4.4 to 5.7</td>
+            <td>0.8–1.05&nbsp;M<sub>⊙</sub></td>
+            <td>0.96–1.15&nbsp;R<sub>⊙</sub></td>
+            <td>0.4–1.5&nbsp;L<sub>⊙</sub></td>
+            <td>0.58 to 0.78</td>
+            <td>G5 = 1.5x10<sup>10</sup></td>
+            <td>4.1%</td>
+        </tr>
+
+        <tr align="center">
+            <td>K</td>
+            <td>太阳型</td>
+            <td>3800–5300&nbsp;K</td>
+            <td><img src="IMG/Khue.gif" width="60" height="20" alt="K型星色调"></td>
+            <td>5.9 to 9.0</td>
+            <td>0.5–0.8&nbsp;M<sub>⊙</sub></td>
+            <td>0.7–0.96&nbsp;R<sub>⊙</sub></td>
+            <td>0.08–0.4&nbsp;L<sub>⊙</sub></td>
+            <td>0.81 to 1.36</td>
+            <td>K5 = 5.3x10<sup>10</sup></td>
+            <td>12.9%</td>
+        </tr>
+
+        <tr align="center">
+            <td>M</td>
+            <td>亚太阳型</td>
+            <td>2500–3800&nbsp;K</td>
+            <td><img src="IMG/Mhue.gif" width="60" height="20" alt="M型星色调"></td>
+            <td>9.2 to 16.1</td>
+            <td>0.07–0.5&nbsp;M<sub>⊙</sub></td>
+            <td>≤&nbsp;0.7&nbsp;R<sub>⊙</sub></td>
+            <td>10<sup>-3.5</sup>–0.08&nbsp;L<sub>⊙</sub></td>
+            <td>1.40 to ~2.00</td>
+            <td>M5 = 1.9x10<sup>11</sup></td>
+            <td>72.5%</td>
+        </tr>
+
+        <tr align="center">
+            <td>C</td>
+            <td>碳星</td>
+            <td>2400–3200&nbsp;K</td>
+            <td><img src="IMG/Chue.gif" width="60" height="20" alt="C型星色调"></td>
+            <td>.</td>
+            <td>≤&nbsp;1.1&nbsp;M<sub>⊙</sub></td>
+            <td>220–550&nbsp;R<sub>⊙</sub>†</td>
+            <td>≤&nbsp;10<sup>-3</sup>&nbsp;L<sub>⊙</sub></td>
+            <td>&gt;&nbsp;~3.0</td>
+            <td>.</td>
+            <td>.</td>
+        </tr>
+
+        <tr align="center">
+            <td>S</td>
+            <td>亚碳星</td>
+            <td>2400–3500&nbsp;K</td>
+            <td><img src="IMG/Shue.gif" width="60" height="20" alt="S型星色调"></td>
+            <td>.</td>
+            <td>≤&nbsp;0.8&nbsp;M<sub>⊙</sub></td>
+            <td>≤&nbsp;0.7&nbsp;R<sub>⊙</sub></td>
+            <td>≤&nbsp;10<sup>-3</sup>&nbsp;L<sub>⊙</sub></td>
+            <td>&gt;&nbsp;~2.2</td>
+            <td>.</td>
+            <td>0.14%</td>
+        </tr>
+
+        <tr align="center">
+            <td>L</td>
+            <td>热褐矮星</td>
+            <td>1300–2100&nbsp;K</td>
+            <td><img src="IMG/Dhue.gif" width="60" height="20" alt="L型星色调"></td>
+            <td>11.5 to 14.0</td>
+            <td>0.075–0.45&nbsp;M<sub>⊙</sub></td>
+            <td>≤&nbsp;0.2&nbsp;R<sub>⊙</sub></td>
+            <td>10<sup>-4.4</sup>–10<sup>-3.7</sup>&nbsp;L<sub>⊙</sub></td>
+            <td>n/a‡</td>
+            <td>.</td>
+            <td>.</td>
+        </tr>
+
+        <tr align="center">
+            <td>T</td>
+            <td>冷褐矮星</td>
+            <td>600–1300&nbsp;K</td>
+            <td><img src="IMG/Lhue.gif" width="60" height="20" alt="T型星色调"></td>
+            <td>&gt; 14.0</td>
+            <td>0.012–0.075&nbsp;M<sub>⊙</sub></td>
+            <td>≤&nbsp;0.2&nbsp;R<sub>⊙</sub></td>
+            <td>10<sup>-5.2</sup>–10<sup>-4.5</sup>&nbsp;L<sub>⊙</sub></td>
+            <td>n/a‡</td>
+            <td>.</td>
+            <td>.</td>
+        </tr>
+
+        <tr align="center">
+            <td>Y</td>
+            <td>气态巨行星</td>
+            <td>&lt; 600&nbsp;K</td>
+            <td>.</td>
+            <td>.</td>
+            <td>≤&nbsp;0.012&nbsp;M<sub>⊙</sub></td>
+            <td>≤&nbsp;0.15&nbsp;R<sub>⊙</sub></td>
+            <td>&lt; 10<sup>-5.2</sup>&nbsp;L<sub>⊙</sub></td>
+            <td>n/a</td>
+            <td>.</td>
+            <td>.</td>
+        </tr>
+
+        <tr align="center">
+            <td>D</td>
+            <td>简并星；<br>白矮星</td>
+            <td>≤&nbsp;100,000+&nbsp;K</td>
+            <td><img src="IMG/Whue.gif" width="60" height="20" alt="D型星色调"></td>
+            <td>10.0 to 15.0</td>
+            <td>0.17–1.3&nbsp;M<sub>⊙</sub></td>
+            <td>0.008–0.02&nbsp;R<sub>⊙</sub></td>
+            <td>&lt; 10<sup>-4</sup>–10<sup>2</sup>&nbsp;L<sub>⊙</sub></td>
+            <td>n/a</td>
+            <td>.</td>
+            <td>5.9%</td>
+        </tr>
+
+        <tr align="center">
+            <td>Q</td>
+            <td>再发新星</td>
+            <td>.</td>
+            <td>.</td>
+            <td colspan="7" align="left">白矮星伴星，接受质量捐赠的恒星</td>
+        </tr>
+
+        <tr align="center">
+            <td>P</td>
+            <td>行星状星云</td>
+            <td>.</td>
+            <td><img src="IMG/PNhue.gif" width="60" height="20" alt="P型星色调"></td>
+            <td colspan="7" align="left">巨星坍缩成白矮星前抛出的气体壳</td>
+        </tr>
+
+        <tr><td colspan="11"><hr width="100%" size="1" noshade=""></td></tr>
+
+        <tr><td colspan="11">
+            <p class="tabsmall">*来源：Mitchell Charity, <a class="small" href="http://www.vendian.org/mncharity/dir3/blackbody/"><b>黑体是什么颜色？</b></a> - 请注意，Charity将“颜色”表示为色度（色调和饱和度），但饱和度是亮度的函数，这导致恒星看起来比网页颜色样本更不饱和（更接近白色）。
+            <br>
+            †由于碳星的稀有性和极低的主序光度，几乎所有的碳星都以最亮的巨星和超巨星形式被观测到，半径在引用范围内。
+            <br>
+            ‡L和T型矮星的远红外光谱使用约翰逊-考辛斯系统的J-K滤光片测量。</p>
+        </td></tr>
+    </tbody>
+</table>
 
 </body>
 </html>
