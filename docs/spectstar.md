@@ -172,7 +172,7 @@
             <td>O</td>
             <td>超大质量</td>
             <td>≥&nbsp;30000 K</td>
-            <td><img src="IMG/Ohue.gif" width="60" height="20" alt="O型星色调"></td>
+            <td><img src="https://www.handprint.com/ASTRO/IMG/Ohue.gif" width="60" height="20" alt="O型星色调"></td>
             <td>–5.6 to –4.3</td>
             <td>18–~150&nbsp;M<sub>⊙</sub></td>
             <td>≥&nbsp;6.6&nbsp;R<sub>⊙</sub></td>
@@ -377,6 +377,1116 @@
         </td></tr>
     </tbody>
 </table>
+<a name="luminositycodes"></a>
+<p><span style="color:#33EECC; font-style:italic;">光度等级。</span> 光度是指恒星的总光输出。在温度恒定的情况下，表面积（半径）较大的天体会辐射更多的能量，因此显得更亮。</p>
+
+<table class="data" cellpadding="4" width="100%">
+    <tbody>
+        <tr><td colspan="4"><hr width="100%" size="1" noshade=""></td></tr>
+        <tr><td colspan="4" align="center"><b>摩根-基南光度等级</b></td></tr>
+        <tr><td colspan="4"><hr width="100%" size="1" noshade=""></td></tr>
+        <tr>
+            <td rowspan="5" valign="top">I</td>
+            <td colspan="2">超巨星</td>
+            <td rowspan="14">
+                <table>
+                    <tbody>
+                        <tr><td colspan="3"><i>光度等级的边际符号</i></td></tr>
+                        <tr>
+                            <td><font size="-1"><i>符号</i></font></td>
+                            <td><font size="-1"><i>示例</i></font></td>
+                            <td><font size="-1"><i>解释</i></font></td>
+                        </tr>
+                        <tr>
+                            <td>–</td>
+                            <td>G2 I-II</td>
+                            <td><i>介于：</i> 恒星介于超巨星和亮巨星之间。</td>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>O9.5 Ia+</td>
+                            <td><i>极超巨星</i></td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>M2 IV/V</td>
+                            <td><i>或：</i> 恒星是亚巨星或矮星。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr><td>Ia-0</td><td>极超巨星或极高光度超巨星</td></tr>
+        <tr><td>Ia</td><td>高光度超巨星</td></tr>
+        <tr><td>Iab</td><td>超巨星</td></tr>
+        <tr><td>Ib</td><td>较低光度超巨星</td></tr>
+        <tr><td>II</td><td colspan="2">亮巨星</td></tr>
+        <tr><td>III</td><td colspan="2">巨星</td></tr>
+        <tr><td>IV</td><td colspan="2">亚巨星</td></tr>
+        <tr>
+            <td rowspan="5" valign="top">V</td>
+            <td colspan="2">矮星（主序星）</td>
+        </tr>
+        <tr><td>Va</td><td>极高光度矮星</td></tr>
+        <tr><td>Vab</td><td>高光度矮星</td></tr>
+        <tr><td>Vb</td><td>普通矮星</td></tr>
+        <tr><td>Vz</td><td colspan="2">较低主序矮星</td></tr>
+        <tr><td>VI</td><td colspan="2">亚主序矮星</td></tr>
+        <tr><td>VII</td><td colspan="2">白矮星（用前缀sd或esd表示）</td></tr>
+        <tr><td colspan="4"><hr width="100%" size="1" noshade=""></td></tr>
+    </tbody>
+</table>
+
+<a name="criteria"></a>
+<p><span style="color:#33EECC; font-style:italic;">光谱特征。</span> 除了由黑体连续谱变化引起的光谱轮廓整体变化外，不同光谱类别还通过检查特定元素和电离状态的吸收或发射特征来区分。“中性”或能量最低的原子状态用罗马数字I表示，逐渐更高能量的电离状态用罗马数字II及以上表示。下表（波长以埃为单位）描述了这些特征，并列举了每种类型的几颗明亮恒星。请注意，由于K和M型恒星非常暗，它们大多以最亮的（巨星或超巨星）形式为人所知。</p>
+
+<table class="data" cellpadding="4" width="650">
+    <tbody>
+        <tr><td colspan="3"><hr width="100%" noshade="" size="1"></td></tr>
+        <tr>
+            <td><i>类型</i></td>
+            <td align="center"><i>光学分类标准</i></td>
+            <td><i>明亮恒星示例</i></td>
+        </tr>
+        <tr><td colspan="3"><hr width="100%" noshade="" size="1"></td></tr>
+
+        <tr valign="top">
+            <td valign="middle" align="center"><b>O</b></td>
+            <td>光谱显示出强烈的紫外发射，He&nbsp;I和He&nbsp;II（中性氦和单电离氦）线缺失或较弱，而Balmer（电离氢）线较强，随着温度升高，这些线在早期类型中变弱。N&nbsp;IV和N&nbsp;III（三重或双电离氮）以及Si&nbsp;III（双电离硅）线明显但较弱。光谱分类基于N&nbsp;IV（λ4058）的线强度（O2到O3.5）以及He&nbsp;II（λ4200）/He&nbsp;I（λ4026）（1.0 = O6）、He&nbsp;II（λ4541）/He&nbsp;I（λ4471）（1.0 = O7）和He&nbsp;II（λ4541）= Si&nbsp;III（λ4552）（1.0 = O9.7）的线强度比。光度通过N&nbsp;III发射和He&nbsp;II吸收的强度比来判断。温度分类基于氦电离；恒星风在早期子类型中变得越来越显著。</td>
+            <td>zeta Orionis (O9Ib)<br>zeta Puppis (O5)<br>iota Orionis (O9III)</td>
+        </tr>
+
+        <tr valign="top">
+            <td valign="middle" align="center"><b>B</b></td>
+            <td>强He&nbsp;I（中性氦）和Balmer氢线，Si&nbsp;I和Si&nbsp;II，O&nbsp;I（中性氧）和Mg&nbsp;I（中性镁）。光谱分类基于蓝紫色中He&nbsp;II的缺失，He&nbsp;I的减弱和Balmer氢线的增强，S&nbsp;IV/S&nbsp;III的比率（1.0 = B0.7）以及Mg&nbsp;II（λ4481）线的增强。光度通过Balmer氢线的“翼”（宽度与深度）和O&nbsp;II线相对于中性氦和氢的强度来判断。B型恒星的光谱和光度分类异常受光球层中氦比例的影响。</td>
+            <td>beta Orionis (B8Ia)<br>tau Scorpii (B0V)<br>alpha Virginis (B1III)<br>alpha&nbsp;Leonis (B7V)</td>
+        </tr>
+
+        <tr valign="top">
+            <td valign="middle" align="center"><b>A</b></td>
+            <td>非常强的Balmer氢线，在A2型中达到峰值强度，He&nbsp;I消失。许多中性金属（Fe&nbsp;I，Mg&nbsp;I，Ca&nbsp;I）微弱出现，但光谱整体由氢系列主导。光谱分类基于Balmer氢线的强度和宽度，Ca&nbsp;II K（λ3934）线的增强以及其他金属线的增强。光度通过Balmer氢线的“翼”来判断。A型恒星显示出许多表面异常，超过30%的恒星显示出特定金属元素的过量或不足；许多恒星还具有非常短的自转周期。</td>
+            <td>alpha&nbsp;Canis&nbsp;Majoris&nbsp;(A1V)<br>beta Aurigae (A5V)<br>alpha Ophiuchi (A5III)<br>eta Leonis (A5Ib)</td>
+        </tr>
+
+        <tr valign="top">
+            <td valign="middle" align="center"><b>F</b></td>
+            <td>强Balmer氢线，随着中性金属线（Ca&nbsp;I，Fe&nbsp;I，Cr&nbsp;I）的增强而减弱，首次出现少量分子（特别是CH，G带吸收在~λ4300）。光谱分类主要基于Balmer氢线的宽度和强度，这些线在后期子类型中减弱，金属吸收线如Fe&nbsp;I和Ca&nbsp;I的增强，以及CH G带（约F4）的出现。光度通过早期子类型中的电离铁和钛线以及后期子类型中这些金属与锶（Sr&nbsp;II λ4077）的比率来判断。F型从A型到G型恒星的过渡包括从主要分层、辐射恒星表面到充分混合、对流光球层、强磁场和更慢的自转速度的过渡。</td>
+            <td>alpha&nbsp;Canis&nbsp;Minoris&nbsp;(F5IV)<br>alpha Persei (F5Ib)<br>alpha Hydri (F0V)<br>pi3 Orionis (F6V)</td>
+        </tr>
+
+        <tr valign="top">
+            <td valign="middle" align="center"><b>G</b></td>
+            <td>Balmer氢线大大减弱，金属线和G带（CH）吸收线增强；中性金属原子和离子现在占主导地位。光谱分类基于中性金属线与氢的比率，特别是Ca&nbsp;I（λ4226）/Hδ和Fe&nbsp;I（λ4046）/Hδ，或彼此之间的比率，例如Cr&nbsp;I（λ4254）/Fe&nbsp;I（λ4271），红外特征变得明显诊断。光度通过Sr&nbsp;II（λ4077）/Fe&nbsp;I（λ4046）的比率，紫CN线的增强以及Ca&nbsp;II H和K线的“翼”变宽来判断。G型恒星在特征上从中型F型到中型K型形成连续过渡，形成了一个庞大但连贯的“太阳型”恒星群；金属丰度的增加与行星系统的更高频率相关，可能是由于金属丰度在原恒星周盘碎片化中的热和磁效应。</td>
+            <td>alpha Aurigae (G5III)<br>iota Persei (G0V)<br>tau Cetii (G8V)<br>epsilon Geminorum (G8Ib)</td>
+        </tr>
+
+        <tr valign="top">
+            <td valign="middle" align="center"><b>K</b></td>
+            <td>中性金属线增强，Balmer氢线减弱，延续了G型恒星的趋势；CH分子的G带在K2达到峰值，然后减弱。光度通过Ca&nbsp;II H和K线的变宽，λ4770附近的MgH和TiO线以及Sr&nbsp;II/Fe&nbsp;I的比率来判断。红外特征超过一微米（&gt;&nbsp;λ10000）成为光谱分类的更可靠基础，特别是使用一氧化碳（CO）的分子带。K型矮星的光度不到太阳的一半；大多数肉眼可见的例子是巨星或超巨星。</td>
+            <td>epsilon Pegasi (K2Ib)<br>alpha Bootis (K1III)<br>gamma Draconis (K5III)</td>
+        </tr>
+
+        <tr valign="top">
+            <td valign="middle" align="center"><b>M</b></td>
+            <td>许多中性金属和双原子分子的强线占主导地位；在后期子类型中，背景连续谱完全消失在分子吸收特征下，这也导致金属吸收线强度降低。光谱分类基于氧化钛（TiO）带，特别是TiO（λ4955）和MgH（λ4780）。光度通过Ca&nbsp;I（λ4226）线的减弱和λ4900以上的TiO带来判断。M型恒星通常由于非常大的色球耀斑而显示氢发射。</td>
+            <td>alpha Orionis (M1Ia)<br>mu Ursae Majoris (M0III)<br>alpha Herculis (M5Ib)</td>
+        </tr>
+
+        <tr><td colspan="3"><hr width="100%" noshade="" size="1"></td></tr>
+    </tbody>
+</table>
+
+<a name="absolute"></a>
+<p><span style="color:#33EECC; font-style:italic;">绝对星等与温度。</span> 绝对星等是恒星如果放置在距离地球10秒差距（32.6光年）的标准距离处时的视星等。恒星的视星等与其绝对星等不同，因为恒星距离地球比这个标准距离更近或更远。然而，这意味着视星等和绝对星等之间的差异可用于计算恒星的近似<a class="three" href="bineye5.html#spatial"><b>距离</b></a>，在恒星距离太远而无法通过天体测量视差测量的情况下。下表总结了当前对按光谱类型和光度等级分类的恒星平均绝对星等的最佳估计。</p>
+
+<table class="data" cellpadding="4" width="800">
+    <tbody>
+        <tr><td colspan="11"><hr width="100%" noshade="" size="1"></td></tr>
+        <tr align="right">
+            <td width="100" rowspan="2" align="center"><b>光谱<br>类型</b></td>
+            <td width="100" rowspan="2" align="center">V类<br>温度<br>（开尔文）</td>
+            <td colspan="9" align="center" width="630"><b>光度等级</b></td>
+        </tr>
+        <tr align="right">
+            <td width="70" height="15">V</td>
+            <td width="70">IV</td>
+            <td width="70">IIIb</td>
+            <td width="70">III/IIIab</td>
+            <td width="70">IIIa</td>
+            <td width="70">II</td>
+            <td width="70">Ib</td>
+            <td width="70">Iab</td>
+            <td width="70">Ia</td>
+        </tr>
+
+        <tr><td colspan="11"><hr width="100%" noshade="" size="1"></td></tr>
+
+        <tr align="right">
+            <td align="center">O1</td>
+            <td></td>
+            <td colspan="9"></td>
+        </tr>
+
+        <tr align="right" bgcolor="#333333">
+            <td align="center">O2</td>
+            <td></td>
+            <td>-5.6</td>
+            <td colspan="7"></td>
+            <td>-6.8</td>
+        </tr>
+        <tr align="right">
+            <td align="center">O3</td>
+            <td align="center">44850</td>
+            <td>-5.6</td>
+            <td colspan="2"></td>
+            <td>-6.0</td>
+            <td colspan="4"></td>
+            <td>-6.8</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">O4</td>
+            <td align="center">42860</td>
+            <td>-5.5</td>
+            <td colspan="2"></td>
+            <td>-6.4</td>
+            <td colspan="4"></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">O5</td>
+            <td align="center">40860</td>
+            <td>-5.5</td>
+            <td colspan="2"></td>
+            <td>-6.4</td>
+            <td colspan="4"></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">O6</td>
+            <td align="center">38870</td>
+            <td>-5.3</td>
+            <td colspan="2"></td>
+            <td>-5.6</td>
+            <td colspan="2"></td>
+            <td>-6.3</td>
+            <td></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">O7</td>
+            <td align="center">36870</td>
+            <td>-4.8</td>
+            <td colspan="2"></td>
+            <td>-5.6</td>
+            <td></td>
+            <td>-5.9</td>
+            <td>-6.3</td>
+            <td></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">O8</td>
+            <td align="center">34880</td>
+            <td>-4.4</td>
+            <td colspan="2"></td>
+            <td>-5.6</td>
+            <td></td>
+            <td>-5.9</td>
+            <td>-6.2</td>
+            <td>-6.5</td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">O9</td>
+            <td align="center">32880</td>
+            <td>-4.3</td>
+            <td>-5.0</td>
+            <td></td>
+            <td>-5.6</td>
+            <td></td>
+            <td>-5.9</td>
+            <td>-6.2</td>
+            <td>-6.5</td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">B0</td>
+            <td align="center">29000</td>
+            <td>-4.1</td>
+            <td>-4.6</td>
+            <td></td>
+            <td>-5.0</td>
+            <td></td>
+            <td>-5.6</td>
+            <td>-5.8</td>
+            <td></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">B1</td>
+            <td align="center">24500</td>
+            <td>-3.5</td>
+            <td>-3.9</td>
+            <td></td>
+            <td>-4.4</td>
+            <td></td>
+            <td>-5.1</td>
+            <td>-5.7</td>
+            <td></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">B2</td>
+            <td align="center">19500</td>
+            <td>-2.5</td>
+            <td>-3.0</td>
+            <td></td>
+            <td>-3.6</td>
+            <td></td>
+            <td>-4.4</td>
+            <td>-5.7</td>
+            <td></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">B3</td>
+            <td align="center">16500</td>
+            <td>-1.7</td>
+            <td>-2.3</td>
+            <td></td>
+            <td>-2.9</td>
+            <td></td>
+            <td>-3.9</td>
+            <td>-5.7</td>
+            <td></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">B4</td>
+            <td></td>
+            <td>-1.4</td>
+            <td>-2.0</td>
+            <td></td>
+            <td>-2.6</td>
+            <td></td>
+            <td>-3.9</td>
+            <td>-5.7</td>
+            <td></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">B5</td>
+            <td align="center">15000</td>
+            <td>-1.1</td>
+            <td>-1.6</td>
+            <td></td>
+            <td>-2.2</td>
+            <td></td>
+            <td>-3.7</td>
+            <td>-5.7</td>
+            <td></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">B6</td>
+            <td></td>
+            <td>-0.9</td>
+            <td>-1.3</td>
+            <td></td>
+            <td>-1.9</td>
+            <td></td>
+            <td>-3.7</td>
+            <td>-5.7</td>
+            <td></td>
+            <td>-7.1</td>
+        </tr>
+        <tr align="right">
+            <td align="center">B7</td>
+            <td align="center">13000</td>
+            <td>-0.4</td>
+            <td>-1.3</td>
+            <td></td>
+            <td>-1.6</td>
+            <td></td>
+            <td>-3.6</td>
+            <td>-5.6</td>
+            <td></td>
+            <td>-7.1</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">B8</td>
+            <td align="center">11500</td>
+            <td>0.0</td>
+            <td>-1.0</td>
+            <td></td>
+            <td>-1.4</td>
+            <td></td>
+            <td>-3.4</td>
+            <td>-5.6</td>
+            <td></td>
+            <td>-7.1</td>
+        </tr>
+        <tr align="right">
+            <td align="center">B9</td>
+            <td align="center">10700</td>
+            <td>0.7</td>
+            <td>-0.5</td>
+            <td></td>
+            <td>-0.8</td>
+            <td></td>
+            <td>-3.1</td>
+            <td>-5.5</td>
+            <td></td>
+            <td>-7.1</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">A0</td>
+            <td align="center">9800</td>
+            <td>1.4</td>
+            <td>0.3</td>
+            <td></td>
+            <td>-0.8</td>
+            <td></td>
+            <td>-2.8</td>
+            <td>-5.2</td>
+            <td></td>
+            <td>-7.1</td>
+        </tr>
+        <tr align="right">
+            <td align="center">A1</td>
+            <td align="center">9500</td>
+            <td>1.6</td>
+            <td>0.3</td>
+            <td></td>
+            <td>-0.4</td>
+            <td></td>
+            <td>-2.6</td>
+            <td>-5.1</td>
+            <td></td>
+            <td>-7.3</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">A2</td>
+            <td align="center">8900</td>
+            <td>1.9</td>
+            <td>0.5</td>
+            <td></td>
+            <td>-0.2</td>
+            <td></td>
+            <td>-2.4</td>
+            <td>-5.0</td>
+            <td></td>
+            <td>-7.5</td>
+        </tr>
+        <tr align="right">
+            <td align="center">A3</td>
+            <td align="center">8520</td>
+            <td>2.0</td>
+            <td>0.7</td>
+            <td></td>
+            <td>0.0</td>
+            <td></td>
+            <td>-2.3</td>
+            <td>-4.8</td>
+            <td></td>
+            <td>-7.6</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">A4</td>
+            <td></td>
+            <td>2.05</td>
+            <td>0.95</td>
+            <td></td>
+            <td>0.15</td>
+            <td></td>
+            <td>-2.2</td>
+            <td>-4.8</td>
+            <td></td>
+            <td>-7.65</td>
+        </tr>
+        <tr align="right">
+            <td align="center">A5</td>
+            <td align="center">8150</td>
+            <td>2.1</td>
+            <td>1.2</td>
+            <td></td>
+            <td>0.3</td>
+            <td></td>
+            <td>-2.1</td>
+            <td>-4.8</td>
+            <td></td>
+            <td>-7.7</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">A6</td>
+            <td></td>
+            <td>2.2</td>
+            <td>1.35</td>
+            <td></td>
+            <td>0.4</td>
+            <td></td>
+            <td>-2.05</td>
+            <td>-4.8</td>
+            <td></td>
+            <td>-7.75</td>
+        </tr>
+        <tr align="right">
+            <td align="center">A7</td>
+            <td align="center">7830</td>
+            <td>2.3</td>
+            <td>1.5</td>
+            <td></td>
+            <td>0.5</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.8</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">A8</td>
+            <td></td>
+            <td>2.4</td>
+            <td>1.55</td>
+            <td></td>
+            <td>0.55</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.8</td>
+            <td></td>
+            <td>-8.15</td>
+        </tr>
+        <tr align="right">
+            <td align="center">A9</td>
+            <td align="center">7380</td>
+            <td>2.5</td>
+            <td>1.6</td>
+            <td></td>
+            <td>0.6</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.8</td>
+            <td></td>
+            <td>-8.3</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">F0</td>
+            <td align="center">7250</td>
+            <td>2.6</td>
+            <td>1.7</td>
+            <td></td>
+            <td>0.6</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.7</td>
+            <td></td>
+            <td>-8.5</td>
+        </tr>
+        <tr align="right">
+            <td align="center">F1</td>
+            <td align="center">7120</td>
+            <td>2.8</td>
+            <td>1.8</td>
+            <td></td>
+            <td>0.6</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.7</td>
+            <td></td>
+            <td>-8.5</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">F2</td>
+            <td align="center">7000</td>
+            <td>3.0</td>
+            <td>1.9</td>
+            <td></td>
+            <td>0.6</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.6</td>
+            <td></td>
+            <td>-8.4</td>
+        </tr>
+        <tr align="right">
+            <td align="center">F3</td>
+            <td align="center">6750</td>
+            <td>3.1</td>
+            <td>1.9</td>
+            <td></td>
+            <td>0.6</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.6</td>
+            <td></td>
+            <td>-8.3</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">F4</td>
+            <td></td>
+            <td>3.3</td>
+            <td>2.0</td>
+            <td></td>
+            <td>0.7</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.6</td>
+            <td></td>
+            <td>-8.3</td>
+        </tr>
+        <tr align="right">
+            <td align="center">F5</td>
+            <td align="center">6550</td>
+            <td>3.4</td>
+            <td>2.1</td>
+            <td></td>
+            <td>0.7</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.4</td>
+            <td></td>
+            <td>-8.2</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">F6</td>
+            <td></td>
+            <td>3.7</td>
+            <td>2.2</td>
+            <td></td>
+            <td>0.7</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.4</td>
+            <td></td>
+            <td>-8.1</td>
+        </tr>
+        <tr align="right">
+            <td align="center">F7</td>
+            <td align="center">6250</td>
+            <td>3.8</td>
+            <td>2.3</td>
+            <td></td>
+            <td>0.6</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.4</td>
+            <td></td>
+            <td>-8.1</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">F8</td>
+            <td align="center">6170</td>
+            <td>4.0</td>
+            <td>2.4</td>
+            <td></td>
+            <td>0.6</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.3</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">F9</td>
+            <td align="center">6010</td>
+            <td>4.2</td>
+            <td>2.6</td>
+            <td></td>
+            <td>0.6</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.2</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">G0</td>
+            <td align="center">5900</td>
+            <td>4.4</td>
+            <td>2.8</td>
+            <td></td>
+            <td>0.6</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.1</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">G1</td>
+            <td align="center">5800</td>
+            <td>4.5</td>
+            <td>2.9</td>
+            <td></td>
+            <td>0.5</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.1</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">G2</td>
+            <td align="center">5750</td>
+            <td>4.7</td>
+            <td>3.0</td>
+            <td></td>
+            <td>0.4</td>
+            <td></td>
+            <td>-2.0</td>
+            <td>-4.0</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">G3</td>
+            <td></td>
+            <td>4.9</td>
+            <td>3.0</td>
+            <td></td>
+            <td>0.4</td>
+            <td></td>
+            <td>-1.9</td>
+            <td>-4.0</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">G4</td>
+            <td></td>
+            <td>5.0</td>
+            <td>3.1</td>
+            <td></td>
+            <td>0.4</td>
+            <td></td>
+            <td>-1.9</td>
+            <td>-3.9</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">G5</td>
+            <td align="center">5580</td>
+            <td>5.2</td>
+            <td>3.2</td>
+            <td></td>
+            <td>0.4</td>
+            <td></td>
+            <td>-1.9</td>
+            <td>-3.9</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">G6</td>
+            <td></td>
+            <td>5.3</td>
+            <td>3.2</td>
+            <td></td>
+            <td>0.4</td>
+            <td></td>
+            <td>-1.9</td>
+            <td>-3.8</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">G7</td>
+            <td></td>
+            <td>5.5</td>
+            <td>3.2</td>
+            <td></td>
+            <td>0.3</td>
+            <td></td>
+            <td>-1.9</td>
+            <td>-3.8</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">G8</td>
+            <td align="center">5430</td>
+            <td>5.6</td>
+            <td>3.2</td>
+            <td>0.8</td>
+            <td>0.3</td>
+            <td>-0.4</td>
+            <td>-1.9</td>
+            <td>-3.7</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">G9</td>
+            <td align="center">5350</td>
+            <td>5.7</td>
+            <td>3.2</td>
+            <td>0.8</td>
+            <td>0.25</td>
+            <td>-0.4</td>
+            <td>-2.0</td>
+            <td>-3.7</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">K0</td>
+            <td align="center">5280</td>
+            <td>5.9</td>
+            <td>3.2</td>
+            <td>0.7</td>
+            <td>0.2</td>
+            <td>-0.5</td>
+            <td>-2.0</td>
+            <td>-3.6</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">K1</td>
+            <td align="center">5110</td>
+            <td>6.1</td>
+            <td></td>
+            <td>0.6</td>
+            <td>0.1</td>
+            <td>-0.6</td>
+            <td>-2.1</td>
+            <td>-3.6</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">K2</td>
+            <td align="center">4940</td>
+            <td>6.3</td>
+            <td></td>
+            <td>0.6</td>
+            <td>0.1</td>
+            <td>-0.7</td>
+            <td>-2.1</td>
+            <td>-3.6</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">K3</td>
+            <td align="center">4700</td>
+            <td>6.9</td>
+            <td></td>
+            <td>0.4</td>
+            <td>-0.1</td>
+            <td>-0.8</td>
+            <td>-2.2</td>
+            <td>-3.6</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">K4</td>
+            <td></td>
+            <td>7.4</td>
+            <td></td>
+            <td>0.3</td>
+            <td>-0.2</td>
+            <td>-1.0</td>
+            <td>-2.3</td>
+            <td>-3.7</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">K5</td>
+            <td align="center">4400</td>
+            <td>8.0</td>
+            <td></td>
+            <td>0.1</td>
+            <td>-0.4</td>
+            <td>-1.1</td>
+            <td>-2.5</td>
+            <td>-3.8</td>
+            <td></td>
+            <td>-8.0</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">K6</td>
+            <td></td>
+            <td>8.2</td>
+            <td></td>
+            <td>0.05</td>
+            <td>-0.45</td>
+            <td>-1.15</td>
+            <td>-2.5</td>
+            <td>-3.8</td>
+            <td></td>
+            <td>-7.85</td>
+        </tr>
+        <tr align="right">
+            <td align="center">K7</td>
+            <td align="center">4130</td>
+            <td>8.5</td>
+            <td></td>
+            <td>0.0</td>
+            <td>-0.5</td>
+            <td>-1.2</td>
+            <td>-2.5</td>
+            <td>-3.8</td>
+            <td></td>
+            <td>-7.7</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">K8</td>
+            <td></td>
+            <td>8.7</td>
+            <td></td>
+            <td>-0.07</td>
+            <td>-0.57</td>
+            <td>-1.23</td>
+            <td>-2.53</td>
+            <td>-3.83</td>
+            <td></td>
+            <td>-7.6</td>
+        </tr>
+        <tr align="right">
+            <td align="center">K9</td>
+            <td></td>
+            <td>9.0</td>
+            <td></td>
+            <td>-0.14</td>
+            <td>-0.64</td>
+            <td>-1.26</td>
+            <td>-2.56</td>
+            <td>-3.86</td>
+            <td></td>
+            <td>-7.45</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">M0</td>
+            <td align="center">3760</td>
+            <td>9.2</td>
+            <td></td>
+            <td>-0.2</td>
+            <td>-0.7</td>
+            <td>-1.3</td>
+            <td>-2.6</td>
+            <td>-3.9</td>
+            <td></td>
+            <td>-7.3</td>
+        </tr>
+        <tr align="right">
+            <td align="center">M1</td>
+            <td align="center">3625</td>
+            <td>9.7</td>
+            <td></td>
+            <td>-0.3</td>
+            <td>-0.8</td>
+            <td>-1.5</td>
+            <td>-2.7</td>
+            <td>-4.1</td>
+            <td></td>
+            <td>-7.3</td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">M2</td>
+            <td align="center">3490</td>
+            <td>10.6</td>
+            <td></td>
+            <td>-0.6</td>
+            <td>-1.1</td>
+            <td>-1.7</td>
+            <td>-2.9</td>
+            <td>-4.2</td>
+            <td></td>
+            <td>-7.0</td>
+        </tr>
+        <tr align="right">
+            <td align="center">M3</td>
+            <td align="center">3355</td>
+            <td>11.6</td>
+            <td></td>
+            <td>-0.8</td>
+            <td>-1.3</td>
+            <td>-1.9</td>
+            <td colspan="4"></td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">M4</td>
+            <td align="center">3220</td>
+            <td>12.9</td>
+            <td></td>
+            <td>-1.1</td>
+            <td>-1.6</td>
+            <td>-2.2</td>
+            <td colspan="4"></td>
+        </tr>
+        <tr align="right">
+            <td align="center">M5</td>
+            <td align="center">3085</td>
+            <td>14.5</td>
+            <td colspan="8"></td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">M6</td>
+            <td align="center">2950</td>
+            <td>16.1</td>
+            <td colspan="8"></td>
+        </tr>
+        <tr align="right">
+            <td align="center">M7</td>
+            <td align="center">2815</td>
+            <td colspan="9"></td>
+        </tr>
+        <tr align="right" bgcolor="#333333">
+            <td align="center">M8</td>
+            <td align="center">2680</td>
+            <td colspan="9"></td>
+        </tr>
+        <tr align="right">
+            <td align="center">M9</td>
+            <td align="center">2545</td>
+            <td colspan="9"></td>
+        </tr>
+        <tr><td colspan="11"><hr width="100%" noshade="" size="1"></td></tr>
+        <tr><td colspan="11"><p class="tabsmall">来源：Gray &amp; Corbally，<i>恒星光谱分类，</i>附录B，插值星等值。</p></td></tr>
+    </tbody>
+</table>
+
+<a name="extensions"></a>
+<p><span style="color:#33EECC; font-style:italic;">扩展分类。</span> 原始MK系统中添加了许多新类别，既包括基本类别，也包括现有类别的细分或修订。</p>
+
+<p><b>W–：沃尔夫-拉叶星</b></p>
+
+<p><i>这些是演化的、非常热（&gt;25000 K）且最初质量非常大（20到100M<sub>⊙</sub>）的O型恒星，它们通过极强的恒星风失去了质量。这些恒星以“剥洋葱”的方式（<i>Conti情景</i>）首先暴露氢聚变的氮产物，然后是氦聚变的碳和氧产物。该类型最早由查尔斯·沃尔夫（Charles Wolf）和乔治·拉叶（Georges Rayet）于1867年发现，他们在天鹅座中发现了三颗具有几条宽发射线的恒星。1883年，沃格尔（Vogel）注意到其中一条带的位移，随后在哈佛分类中用于区分氮离子（WN）或碳离子（WC）过量的WR恒星。与MK系统中的其他类别不同，WR光谱是由星周风而不是稳定的光球层发射的，并且受风的深度和运动的强烈影响。这导致了多种分类方案的出现，尤其是WN对象的分类尚未完全确定。目前，最常用的分类基于电离氮、碳和氧的线强度比。</i></p>
+
+<p>•&nbsp;<b>WN</b>3到<b>WN</b>4.5：电离氮（N&nbsp;III）完全缺失或非常弱。<br>
+•&nbsp;<b>WN</b>5到<b>WN</b>6：电离氮（N&nbsp;III）存在，N&nbsp;V缺失或较弱。<br>
+•&nbsp;<b>WN</b>7到<b>WN</b>8：电离氮（N&nbsp;III）存在，中性氦（He&nbsp;I）存在。<br></p>
+
+<p>•&nbsp;<b>WC</b>4到<b>WC</b>9：基于C&nbsp;IV/C&nbsp;III和C&nbsp;III/O&nbsp;V的发射强度比进行分类。</p>
+
+<p>•&nbsp;<b>WO</b>1到<b>WO</b>4：基于C&nbsp;IV和（作为次要标准）O&nbsp;VI/O&nbsp;V和O&nbsp;VI/C&nbsp;IV的发射强度比的发射线全宽半高分布进行分类。</p>
+
+<p><b>C：碳星</b></p>
+
+<p><i>这些恒星具有晚G、K和M巨星的特征温度和光度，但由于光球层中碳相对于氧的丰度较高而与它们不同。许多碳星涉及双星系统，其中质量转移可能在它们的演化中起作用。光谱显示出强烈的CH、CN、C<sub>2</sub>分子带，在较冷的恒星中还有SiC<sub>2</sub>和C<sub>3</sub>；几乎所有的氧都以CO（一氧化碳）的形式结合，因此几乎没有剩余的氧形成其他金属氧化物如TiO。大多数已知的可见光谱中的例子是巨星，因为几乎所有的光度都在红外波段，而在近紫外波段几乎完全缺乏。它们形成了塞奇的IV型恒星，其中Y Canum Venaticorum是他的主要例子；许多是长周期变星。碳星最初在哈佛系统中被分类为R型或N型，取决于~500&nbsp;nm以下的通量量。</i></p>
+
+<p>•&nbsp;<b>C-R</b>：温度范围匹配G4到M2（巨星中5350到3655 K）的“温暖”碳星，在蓝紫波段（低于420 nm）有显著通量：S&nbsp;Camelopardalis。<br>
+•&nbsp;<b>C-N</b>：温度范围匹配G7到M8（巨星中5030到2940 K）的“冷”碳星，但强烈集中在3900 K左右，几乎在440 nm以下没有通量：R&nbsp;Leporis。<br>
+•&nbsp;<b>C-J</b>：温度介于C-R和C-N之间的碳星，具有高丰度的碳同位素<sup>13</sup>C，通常被富含氧的尘埃壳包围：Y&nbsp;Canum&nbsp;Venaticorum。<br>
+•&nbsp;<b>C-H</b>：具有增强的<i>s</i>-过程元素（锶、钇、钡、锆、锝、镧）的碳星，以前与Population II（银河晕）恒星相关：TT&nbsp;CVn。<br>
+•&nbsp;<b>C-Hd</b>：由于氢（CH，Balmer线）的带弱或完全缺失，CN和C<sub>2</sub>线比正常更强的碳星：R&nbsp;Coronae&nbsp;Borealis。</p>
+
+<p><b>S：锆巨星</b></p>
+
+<p><i>这些是与晚M巨星相关的恒星，其光谱中显示出氧化锆（ZrO）的吸收带，似乎形成了M巨星和碳星之间的桥梁，序列为</i></p><i>
+
+<p>M → MS → S → SC → C</p>
+
+</i><p><i>其中碳与氧的C/O比率在序列中从<b>S</b>1的&lt; 0.95到<b>SC</b>1的1.0，再到<b>SC</b>10恒星的&gt;1.1。</i></p>
+
+<p><b>D：简并星（白矮星）</b></p>
+
+<p><i>白矮星是恒星坍缩的核心，它失去了其原始质量的很大一部分（约20%），作为行星状星云或超新星爆炸的喷射物质，这是恒星演化的最后阶段。白矮星不再是恒星，因为它们不再维持核聚变，并且由于缺乏这种内部热源支持，恒星已经引力坍缩到非常小的半径。白矮星以简并核心的残余热量发光，坍缩时温度可能远高于100,000 K，并在数十亿年内冷却。D类进一步分为指示光球层元素组成的光谱类型。</i></p>
+
+<p>•&nbsp;<b>DA</b>：仅显示强Balmer系列氢吸收线；不存在氦或金属。<br>
+•&nbsp;<b>DB</b>：仅显示强He I（中性氦）吸收线；不存在氢或金属。<br>
+•&nbsp;<b>DC</b>：连续（黑体）光谱，在任何电磁波段中没有超过5%的吸收线。<br>
+•&nbsp;<b>DO</b>：强He II（电离氦）线，存在分子氢或氦。<br>
+•&nbsp;<b>DQ</b>：在任何电磁波段中存在碳吸收线，无论是原子还是分子。<br>
+•&nbsp;<b>DZ</b>：在氢和氦线都不存在的情况下存在金属（比氦重的元素）吸收线。<br></p>
+
+<p><i>附加到上述名称的符号</i></p>
+
+<p>–&nbsp;<b>P</b>：具有可检测极化的磁白矮星。<br>
+–&nbsp;<b>H</b>：没有极化的磁白矮星。<br>
+–&nbsp;<b>X</b>：特殊或无法分类的光谱。<br>
+–&nbsp;<b>E</b>：存在发射线（任何元素）。<br>
+–&nbsp;<b>?, :</b>：不确定的分类。<br>
+–&nbsp;<b>V</b>：光度可变。<br>
+–&nbsp;<b>d</b>：星周尘埃。<br>
+–&nbsp;C&nbsp;I, C&nbsp;II, O&nbsp;I, O&nbsp;II在括号内添加以指示DQ对象中这些元素的存在。</p>
+
+<p><i>当前的做法是附加白矮星温度和表面重力的数值指示符，用下划线“_”分隔。温度表示为有效表面温度除以50400并四舍五入到小数点后一位，例如DA.9 = 56000 K和DB1.2 = 42000 K。重力通过主导光谱线的宽度评估，log值范围为7到9。</i></p>
+
+<p><b>L：高温褐矮星</b></p>
+
+<p><i>这些恒星形成了M矮星和冷T矮星之间的中间类别。它们接近恒星质量，但未达到启动氢聚变所需的质量和半径，可能燃烧氘（H<sub>2</sub>）代替。光谱在红外波段（&gt;&nbsp;1000&nbsp;nm = &gt;&nbsp;1&nbsp;微米）进行评估，并显示出TiO线的减弱以及金属氢化物（CaH，CrH和FeH）、碱金属（Na&nbsp;I，K&nbsp;I，Cs&nbsp;I）和水（H<sub>2</sub>O）的特征分子线的出现。冷却序列</i></p><i>
+
+<p>M → L → T → Y</p>
+
+</i><p><i>是一个将M型和褐矮星类别统一起来的演化序列。</i></p>
+
+<p>•&nbsp;<b>L</b>0到<b>L</b>9：类型内温度递减。</p>
+
+<p><b>T：低温褐矮星</b></p>
+
+<p><i>这些是引力加热的天体，形成了L褐矮星和木星等气态巨行星之间的中间类别。光谱的特征是存在水（H<sub>2</sub>O）和氨（CH<sub>4</sub>），缺乏氢化物，以及在红外波段中陡峭的黑体斜率，这是由于K&nbsp;I双线的展宽，表明表面温度非常低。</i></p>
+
+<p>•&nbsp;<b>T</b>0到<b>T</b>8：类型内温度递减。</p>
+
+<p><b>Y：气态巨行星</b></p>
+
+<p><i>这些是引力收缩的天体，质量低于核心简并发生的质量，约为2到5个木星质量或~0.0012M<sub>⊙</sub>。目前对这些天体的光谱调查还不够大，无法支持光谱分类方案。</i></p>
+
+<p><span style="color:#33EECC; font-style:italic;">特殊代码。</span> 恒星光谱可以显示出多种特征，这些特征不是由质量、有效温度或半径引起的，或者是不寻常或难以解释的。这些特征通过特殊代码表示，包括下面列出的代码。</p>
+
+<table class="data" width="100%">
+    <tbody>
+        <tr><td width="50">代码</td><td><b>解释</b></td></tr>
+
+        <tr><td colspan="2" align="left"><i>模糊特征</i></td></tr>
+        <tr><td>&nbsp;:</td><td>混合和/或不确定的光谱值</td></tr>
+        <tr><td>...</td><td>存在未描述的光谱异常</td></tr>
+        <tr><td>&nbsp;!</td><td>特殊异常</td></tr>
+        <tr><td>comp</td><td>复合光谱</td></tr>
+        <tr><td>p</td><td>未指定的异常，特殊恒星</td></tr>
+        <tr><td>pq</td><td>类似于新星光谱的特殊光谱</td></tr>
+
+        <tr><td colspan="2" align="left"><i>发射特征</i></td></tr>
+        <tr><td>e</td><td>存在发射线</td></tr>
+        <tr><td>[e]</td><td>存在“禁戒”（近真空密度）发射线</td></tr>
+        <tr><td>er</td><td>发射线中心比边缘弱</td></tr>
+        <tr><td>ep</td><td>具有异常的发射线</td></tr>
+        <tr><td>eq</td><td>具有P Cygni轮廓的发射线</td></tr>
+        <tr><td>ev</td><td>显示可变性的光谱发射</td></tr>
+        <tr><td>f</td><td>N&nbsp;III和He&nbsp;II发射</td></tr>
+        <tr><td>f*</td><td>N&nbsp;IV λ4058Å比NIII λ4634Å, λ4640Å, &amp; λ4642Å线更强</td></tr>
+        <tr><td>f+</td><td>Si&nbsp;IV λ4089Å &amp; λ4116Å除了N&nbsp;III线外还有发射</td></tr>
+        <tr><td>(f)</td><td>弱的He发射线</td></tr>
+        <tr><td>((f))</td><td>显示强He&nbsp;II吸收并伴有弱N&nbsp;III发射</td></tr>
+
+        <tr><td colspan="2" align="left"><i>吸收特征</i></td></tr>
+        <tr><td>He wk</td><td>弱He线</td></tr>
+        <tr><td>k</td><td>光谱中具有星际气体或尘埃的吸收特征</td></tr>
+        <tr><td>m</td><td>增强的金属特征</td></tr>
+        <tr><td>n</td><td>由于快速旋转导致的宽（“模糊”）吸收</td></tr>
+        <tr><td>nn</td><td>由于快速旋转导致的非常宽的吸收特征</td></tr>
+        <tr><td>neb</td><td>源自星云的发射/吸收元素</td></tr>
+        <tr><td>q</td><td>存在红移和蓝移线</td></tr>
+        <tr><td>s</td><td>窄“尖锐”吸收线</td></tr>
+        <tr><td>ss</td><td>非常窄的线</td></tr>
+        <tr><td>sh</td><td>壳星特征</td></tr>
+        <tr><td>v</td><td>可变光谱特征（也写为“var”）</td></tr>
+        <tr><td>w</td><td>弱线（也写为“wl”和“wk”）</td></tr>
+        <tr><td>d Del</td><td>A型和F型巨星，具有弱钙H和K线，如原型Delta Delphini</td></tr>
+        <tr><td>d Sct</td><td>A型和F型恒星，光谱类似于短周期变星Delta Scuti</td>
+        </tr>
+        <tr><td colspan="2" valign="middle" height="30"><i>... 如果光谱显示增强或显著的线，则用元素符号表示：</i></td></tr>
+        <tr><td>Ba</td><td>钡</td></tr>
+        <tr><td>Ca</td><td>钙</td></tr>
+        <tr><td>Cr</td><td>铬</td></tr>
+        <tr><td>Eu</td><td>铕</td></tr>
+        <tr><td>He</td><td>氦</td></tr>
+        <tr><td>Hg</td><td>汞</td></tr>
+        <tr><td>Mn</td><td>锰</td></tr>
+        <tr><td>Si</td><td>硅</td></tr>
+        <tr><td>Sr</td><td>锶</td></tr>
+        <tr><td>Tc</td><td>锝</td></tr>
+    </tbody>
+</table>
+
+<p align="center">&nbsp;<br></p>
+<p class="endnote">最后修订于2013年11月26日 • ©2013 Bruce MacEvoy</p>
+<p>&nbsp;<br></p>
 
 </body>
 </html>
