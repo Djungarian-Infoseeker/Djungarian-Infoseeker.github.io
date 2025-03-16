@@ -56,6 +56,7 @@ Emeline Bolmont, Sean N. Raymond, Philip von Paris, Franck Selsis, Franck Hersan
 perennially frozen lakes
 Christopher P. McKay·, Gary D. Clowt,
 Robert A. Wharton Jr:j: & Steven W. Squyres:j: ](https://infoseeker.cn/docs/Mckay1985/Mckay1985)<span style="color:green;">（更新日期2025/3/8，已完结） </span>
+- [海冰的能量守恒热力学模型 中文翻译/An energy-conserving thermodynamic model of sea iceC. M. Bitz, William H. Lipscomb](https://infoseeker.cn/docs/Bitz1999/Bitz1999)<span style="color:green;">（更新日期2025/3/16，已完结） </span>
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:green;">（更新日期2024/12/20，已完结） </span>
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
