@@ -66,6 +66,7 @@ Robert A. Wharton Jr:j: & Steven W. Squyres:j: ](https://infoseeker.cn/docs/Mcka
 - [硅酸盐风化在地球气候与碳循环中的反馈与作用 中文翻译/ Silicate weathering as a feedback and forcing in Earth's climate and carbon cycle Donald E. Penman,, Jeremy K. Caves Rugensteinc, Daniel E. Ibarrad, Matthew J. Winnick](https://infoseeker.cn/docs/Penman2020/Penman2020)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
 - [气候科学的数学和物理思想 中文翻译/  Mathematical andphysical ideas for climate science Valerio Lucarini1,2,3, Richard Blender1, Corentin Herbert4, Francesco Ragone1,5, Salvatore Pascale1,and JeroenWouters1,6](https://infoseeker.cn/docs/Lucarini2014/Lucarini2014)<span style="color:green;">（更新日期2024/12/27，已完结） </span> 
 - [CICE4的物理原理/The physical principles of CICE4](https://infoseeker.cn/docs/CICE4PHY) <span style="color:red;">（更新日期2025/3/16，未完结） 
+- [CICE4的介绍文档/Community Ice CodE (CICE) User’s GuideVersion 4.0Released with CESM1.0David BaileyMarika HollandElizabeth HunkeBill LipscombBruce BrieglebCecilia BitzJulie Schramm](https://infoseeker.cn/docs/CICE4) <span style="color:red;">（更新日期2025/3/16，未完结） 
 ## 科学评论/Science Comment
 - [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
 
