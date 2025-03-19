@@ -22,6 +22,7 @@ header_image: '../../atmos.jpg'
 - [东华理工大学 陈童 经典力学系列文章/ East China University of Technology Chen Tong Classical Mechanics Series](https://newquanta.com/%e3%80%8a%e7%90%86%e8%ae%ba%e5%8a%9b%e5%ad%a6%e6%96%b0%e8%ae%b2%e3%80%8b%e4%b8%8b%e8%bd%bd/)
 - [研究生第0学期的大补课](https://infoseeker.cn/docs/suppcourse)
 - [如何将 CAM 移植到同步自转的系外行星上/How to transplant CAM to synchronously rotating exoplanets](https://infoseeker.cn/docs/tidallocking)
+- [认识与部署Molecfit-一种对于天文光谱观测去除地球大气影响的插件/Understanding and deploying Molecfit - a plugin for removing the effects of the Earth's atmosphere from astronomical spectroscopic observations](https://infoseeker.cn/docs/molecfit)
 # 文献与知识 / Thesis & Knowledge
 
 ## 知识/Knowledges
