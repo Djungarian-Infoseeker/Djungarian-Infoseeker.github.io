@@ -69,6 +69,7 @@ Robert A. Wharton Jr:j: & Steven W. Squyres:j: ](https://infoseeker.cn/docs/Mcka
 - [气候科学的数学和物理思想 中文翻译/  Mathematical andphysical ideas for climate science Valerio Lucarini1,2,3, Richard Blender1, Corentin Herbert4, Francesco Ragone1,5, Salvatore Pascale1,and JeroenWouters1,6](https://infoseeker.cn/docs/Lucarini2014/Lucarini2014)<span style="color:green;">（更新日期2024/12/27，已完结） </span> 
 - [CICE4的物理原理/The physical principles of CICE4](https://infoseeker.cn/docs/CICE4PHY) <span style="color:red;">（更新日期2025/3/16，未完结） 
 - [CICE4的介绍文档/Community Ice CodE (CICE) User’s GuideVersion 4.0Released with CESM1.0David BaileyMarika HollandElizabeth HunkeBill LipscombBruce BrieglebCecilia BitzJulie Schramm](https://infoseeker.cn/docs/CICE4) <span style="color:red;">（更新日期2025/3/16，未完结） 
+- [冰雪地球：海冰川流动与全球气候模型的异步耦合 中文翻译/  Snowball Earth: Asynchronous coupling of sea-glacier ﬂow with a global climate model D. Pollard 1 , J. F. Kasting 1,2 , and M. E. Zugger3](https://infoseeker.cn/docs/Pollard2017/Pollard2017)<span style="color:green;">（更新日期2025/4/1，已完结） </span> 
 ## 科学评论/Science Comment
 - [构建稳定性 中文翻译/ Built for stability by Paul Valdes](https://infoseeker.cn/docs/Valdes2011/Valdes2011)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
 
