@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -159,6 +159,157 @@
 <p>通过上述步骤，海冰川模型捕捉了决定高纬度千米级冰厚的基本物理平衡（局地表面/内部/基底物质收支与海冰川流动散度的平衡），可运行至~10<sup>6</sup>年接近平衡态。但若全球冰区变化超过赤道4°纬度带对应面积（显著反馈气候时），则中止异步积分。</p>
 
 <p>100万年积分结束后，用新的对称化冰/雪状态重置GCM相应变量。海冰川模型末期垂直冰温剖面（忽略热惯性计算）也用于更新GCM冰温。随后GCM再运行5年，循环(A)-(C)步骤。敏感性测试表明结果对时间间隔选择不敏感（同步期5-10年，异步期10,000-1,000,000年均测试）。</p>
-
+    <h2 class="article-section__title section__title section1" id="jgrd53826-sec-0005-title">3 结果</h2>
+    
+    <section class="article-section__sub-content" id="jgrd53826-sec-0006">
+        <h3 class="article-section__sub-title section2" id="jgrd53826-sec-0006-title">3.1 平衡曲线</h3>
+        
+        <p>首先，气候模型在无冰流情况下单独运行，以绘制不同海洋热传输假设下的冰线范围。图<a href="#jgrd53826-fig-0001">1</a>中的曲线显示了在平衡模型运行中，给定大气CO<sub>2</sub>值对应的冰缘纬度。x轴是CO<sub>2</sub>体积混合比的对数，因此CO<sub>2</sub>浓度向右增加（例如，现代值400 ppmv（4×10<sup>−4</sup> ppv）对应这些单位中的-3.4）。曲线通过运行GCM生成，初始条件为：(i) 无冰且初始海洋混合层温度=10°C；或(ii) 100%冰覆盖，初始冰厚度=5米（无海冰川流动）或200米（有海冰川流动）。</p>
+        
+        <section class="article-section__inline-figure">
+            <figure class="figure" id="jgrd53826-fig-0001">
+                <a target="_blank" href="/cms/asset/ba84c28e-8925-4132-97e5-9b2e583adeec/jgrd53826-fig-0001-m.jpg">
+                    <picture>
+                        <source srcset="/cms/asset/ba84c28e-8925-4132-97e5-9b2e583adeec/jgrd53826-fig-0001-m.jpg" media="(min-width: 1650px)">
+                        <img class="figure__image" src="/cms/asset/0f896ea2-2d04-4412-8a5a-b6016f6551c6/jgrd53826-fig-0001-m.png" data-lg-src="/cms/asset/ba84c28e-8925-4132-97e5-9b2e583adeec/jgrd53826-fig-0001-m.jpg" alt="详情见图片后说明" title="详情见图片后说明" loading="lazy">
+                    </picture>
+                </a>
+                <figcaption class="figure__caption">
+                    <div class="figure__caption__header">
+                        <strong class="figure__title">图1</strong>
+                        <div class="figure-extra">
+                            <a href="#" class="open-figure-link">在图表查看器中打开</a>
+                            <a href="/action/downloadFigures?id=jgrd53826-fig-0001&amp;partId=&amp;doi=10.1002%2F2017JD026621" class="ppt-figure-link">
+                                <i aria-hidden="true" class="icon-Icon_Download"></i>
+                                <span>PowerPoint</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="figure__caption figure__caption-text">
+                        冰纬度与大气CO<sub>2</sub>的平衡曲线，针对不同海洋热传输因子（<i>QF</i>）。在平衡运行中，冰缘纬度与大气CO<sub>2</sub>浓度的关系。CO<sub>2</sub>轴值为log<sub>10</sub>(ppv)，其中ppv为体积混合比（每体积份数）；例如现代浓度400 ppmv对应轴值-3.4。稳定模型状态显示为方块，由实线直线段连接。推断的不稳定平衡分支用虚线示意（见正文）。所有模拟均无风驱海冰动力学和无海冰川流动。红色：海洋热传输因子<i>QF</i>=1，乘以GCM混合层海洋中的标称水平扩散系数。绿色：<i>QF</i>=0.5。蓝色：<i>QF</i>=0.25。品红色：<i>QF</i>=0。
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+        
+        <p>对于(i)，模型运行直到冰缘停止向赤道扩展（如果存在冰）或到达赤道。如果在赤道前停止，这是平衡曲线稳定分支上的一个点。实际GCM运行的最终冰纬度在图中显示为方块符号，由实线直线段连接。这些均位于上轴（90°）或中纬度。在某些情况下，当CO<sub>2</sub>低于特定值时，最终冰纬度突然降至赤道，赤道解未显示。在其他不利于冰扩展的情况下，冰线在CO<sub>2</sub>降至零时仍保持在中纬度。</p>
+        
+        <p>对于(ii)，如果冰开始从赤道退缩，预计（且总是如此）会一直退缩到极地，即无冰状态。这些显示为图中右侧上轴或下轴（90或0°纬度）的方块。</p>
+        
+        <p>冰线通过中纬度然后突然跳至100%冰覆盖的运行定义了中间稳定分支的低CO<sub>2</sub>极限。从100%突然跳至0%的运行定义了100%雪球稳定分支的高CO<sub>2</sub>极限。必须连接这两者的不稳定分支在图中手工绘制（虚线）。这些受限于从最低CO<sub>2</sub>运行的冰缘纬度开始，该运行未推进至赤道，在上述"(i)"运行中；不跨越（即保持在右侧）下一个最低CO<sub>2</sub>，其中冰确实推进至赤道（在运行之间使用0.2至0.5 log(ppv)的增量生成这些图）；并在0°纬度和最高CO<sub>2</sub>值处结束，该值在上述"(ii)"运行中仍允许100%冰覆盖。</p>
+        
+        <p>在初步工作（未显示）中，我们进行了许多额外运行，针对中纬度初始冰线和各种CO<sub>2</sub>值的多种组合，试图找到Jormungand状态并完全映射出CO<sub>2</sub>和冰线的整个二维空间行为，包括不稳定和稳定分支。<i>Abbot et al.</i> [<a href="#jgrd53826-bib-0003" class="bibLink tab-link" id="jgrd53826-bib-0003_R_d23980033e2" data-tab="pane-pcw-references">2011</a>]表明，从中纬度冰线开始对于GCM找到大多数Jormungand状态是必要的，这些状态被分岔曲线隐藏，无法从0或100%冰覆盖的初始状态访问（其图1和12）。我们进行了许多此类运行，初始冰线在约5至25°纬度范围内，但未找到任何Jormungand最终状态。尽管我们对此结论有信心，但我们也发现这些运行中冰退缩或推进的早期方向，甚至最终状态，有时取决于其他初始条件，如海洋温度梯度和冰厚度。因此，我们将后续探索限制在上述类型(i)和(ii)运行中，仅从0%或100%冰覆盖开始，并继续映射出CO<sub>2</sub>-冰线空间中稳定平衡分支的更广泛方面，如下所述。</p>
+        
+        <p>图<a href="#jgrd53826-fig-0001">1</a>显示平衡线（EL）强烈依赖于GCM混合层海洋中的海洋热传输。这通过将标准热传输系数乘以效率因子<i>QF</i>（在0至1之间变化）来参数化。较高的<i>QF</i>使冰更难推进（从热带获得更多海洋热量），因此曲线向左（更低CO<sub>2</sub>）移动，与<i>Donnadieu et al.</i> [<a href="#jgrd53826-bib-0017" class="bibLink tab-link" id="jgrd53826-bib-0017_R_d23980036e2" data-tab="pane-pcw-references">2004</a>]讨论的添加海洋动力学效应一致。对于<i>QF</i>≥0.5，没有崩溃至100%冰覆盖，且冰线在CO<sub>2</sub>一直降至零时收敛到中纬度的某个值。</p>
+        
+        <p>上述模拟无冰流，既无风驱薄冰动力学，也无海冰川变形。添加风驱动力学（图<a href="#jgrd53826-fig-0002">2</a>，绿色曲线）对低至约55°纬度的冰线影响非常小；对于更低CO<sub>2</sub>值，动态冰更容易扩展至赤道，阻止任何中间冰状态，类似于<i>Voight and Abbot</i> [<a href="#jgrd53826-bib-0049" class="bibLink tab-link" id="jgrd53826-bib-0049_R_d23980039e2" data-tab="pane-pcw-references">2012</a>]。</p>
+        
+        <section class="article-section__inline-figure">
+            <figure class="figure" id="jgrd53826-fig-0002">
+                <a target="_blank" href="/cms/asset/27d9f418-fbe2-4cc2-b4d7-03b8a468106d/jgrd53826-fig-0002-m.jpg">
+                    <picture>
+                        <source srcset="/cms/asset/27d9f418-fbe2-4cc2-b4d7-03b8a468106d/jgrd53826-fig-0002-m.jpg" media="(min-width: 1650px)">
+                        <img class="figure__image" src="/cms/asset/c09e4725-d0f7-4918-b694-c7721a1bfcda/jgrd53826-fig-0002-m.png" data-lg-src="/cms/asset/27d9f418-fbe2-4cc2-b4d7-03b8a468106d/jgrd53826-fig-0002-m.jpg" alt="详情见图片后说明" title="详情见图片后说明" loading="lazy">
+                    </picture>
+                </a>
+                <figcaption class="figure__caption">
+                    <div class="figure__caption__header">
+                        <strong class="figure__title">图2</strong>
+                        <div class="figure-extra">
+                            <a href="#" class="open-figure-link">在图表查看器中打开</a>
+                            <a href="/action/downloadFigures?id=jgrd53826-fig-0002&amp;partId=&amp;doi=10.1002%2F2017JD026621" class="ppt-figure-link">
+                                <i aria-hidden="true" class="icon-Icon_Download"></i>
+                                <span>PowerPoint</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="figure__caption figure__caption-text">
+                        冰纬度与大气CO<sub>2</sub>的平衡曲线，针对动态海冰和海冰川流动。蓝色：无海冰动力学或海冰川流动（<i>QF</i>=0.25，如图<a href="#jgrd53826-fig-0001">1</a>蓝色曲线）。绿色：与蓝色相同，但有风驱动态海冰。红色：与蓝色相同，但有海冰川流动，且标称耦合系数决定冰基底海洋加热（<i>k</i>=70 W m<sup>−2</sup> K<sup>−1</sup>）。品红色：与红色相同，但<i>k</i>=2。棕色：与红色相同，但<i>k</i>=0。
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+        
+        <p>相比之下，添加海冰川流动的影响可能显著，但对涉及海洋温度的异步耦合方法敏感。在我们的标称模型中，在长期异步海冰川积分期间，从冰缘外推的GCM海洋温度无论海冰川如何推进都保持温暖，产生不合理的大垂直热通量进入冰基底并抑制推进。这在图<a href="#jgrd53826-fig-0002">2</a>红色曲线中显示，产生与无海冰川流动几乎相同的结果。</p>
+        
+        <p>我们可以粗略补偿这种偏差，通过减少系数<i>k</i>，该系数线性关联冰基底海洋加热与高于冻结的海洋温度（标称GCM值70 W m<sup>−2</sup>每°K）。如果<i>k</i>大幅减少，海冰川流动产生扩展的冰覆盖，要么在中纬度有稳定冰线（<i>k</i>=2，品红色曲线），要么对于零加热完全无稳定中间状态（<i>k</i>=0，棕色曲线）。（对于<i>k</i>=0的稳定状态，冰缘附近相对较小的大气融化必须平衡流动，等于所有上游降雪和基底冻结的面积积分。这在PK05中通过穿透性太阳辐射和低纬度内部融化实现，但这里内部融化被部分雪覆盖抑制，如下所述。）耦合GCM-海冰川流动的正确行为可能介于图中极端红色和棕色曲线之间，需要进一步工作确认；重要的是，对于本文，这些结果均未展示Jormungand类状态。</p>
+        
+        <p>接下来，我们考察对雪和冰反照率做不同假设的影响。如<i>Abbot et al.</i> [<a href="#jgrd53826-bib-0003" class="bibLink tab-link" id="jgrd53826-bib-0003_R_d23980049e2" data-tab="pane-pcw-references">2011</a>]强调，这些反照率是关键参数，因为Jormungand状态的存在依赖于裸冰和雪覆盖冰之间的反照率差异。（裸冰反照率可能低得多，特别是如果冰薄。）图<a href="#jgrd53826-fig-0003">3</a>青色曲线显示使用接近<i>Abbot et al.</i> [<a href="#jgrd53826-bib-0003" class="bibLink tab-link" id="jgrd53826-bib-0003_R_d23980052e2" data-tab="pane-pcw-references">2011</a>]的雪和冰反照率的效果。其他GCM海冰设置与其模型相同，即无风驱海冰动力学，无海冰川流动或穿透性太阳辐射导致内部冰融化。</p>
+        
+        <section class="article-section__inline-figure">
+            <figure class="figure" id="jgrd53826-fig-0003">
+                <a target="_blank" href="/cms/asset/db0d1d5d-70f1-482d-8d47-706a44a4e6b6/jgrd53826-fig-0003-m.jpg">
+                    <picture>
+                        <source srcset="/cms/asset/db0d1d5d-70f1-482d-8d47-706a44a4e6b6/jgrd53826-fig-0003-m.jpg" media="(min-width: 1650px)">
+                        <img class="figure__image" src="/cms/asset/411fe209-80ca-40dc-8e41-a537123b807c/jgrd53826-fig-0003-m.png" data-lg-src="/cms/asset/db0d1d5d-70f1-482d-8d47-706a44a4e6b6/jgrd53826-fig-0003-m.jpg" alt="详情见图片后说明" title="详情见图片后说明" loading="lazy">
+                    </picture>
+                </a>
+                <figcaption class="figure__caption">
+                    <div class="figure__caption__header">
+                        <strong class="figure__title">图3</strong>
+                        <div class="figure-extra">
+                            <a href="#" class="open-figure-link">在图表查看器中打开</a>
+                            <a href="/action/downloadFigures?id=jgrd53826-fig-0003&amp;partId=&amp;doi=10.1002%2F2017JD026621" class="ppt-figure-link">
+                                <i aria-hidden="true" class="icon-Icon_Download"></i>
+                                <span>PowerPoint</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="figure__caption figure__caption-text">
+                        冰纬度与大气CO<sub>2</sub>的平衡曲线，针对不同冰和雪反照率。蓝色：GENESIS v3 GCM中的海冰和雪反照率（<i>QF</i>=0.25，如图<a href="#jgrd53826-fig-0001">1</a>蓝色曲线）。青色：与蓝色相同，但海冰和雪反照率接近<i>Abbot et al.</i> [<a href="#jgrd53826-bib-0003" class="bibLink tab-link" id="jgrd53826-bib-0003_R_d23980060e2" data-tab="pane-pcw-references">2011</a>]（见正文）。
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+        
+        <p>与GENESIS相比，<i>Abbot et al.</i> [<a href="#jgrd53826-bib-0003" class="bibLink tab-link" id="jgrd53826-bib-0003_R_d23980062e2" data-tab="pane-pcw-references">2011</a>]中（裸）海冰反照率更低，但雪反照率更高，平均GENESIS的两个波段（可见光和近红外，波长小于或大于0.7 μm），如表<a class="tableLink scrollableLink" title="Link to table" href="#jgrd53826-tbl-0001">1</a>所示。</p>
+        
+        <div class="article-table-content" id="jgrd53826-tbl-0001">
+            <header class="article-table-caption">
+                <span class="table-caption__label">表1.</span>
+                GENESIS GCM中及修改为与<i>Abbot et al.</i> [<a href="#jgrd53826-bib-0003" class="bibLink tab-link" id="jgrd53826-bib-0003_R_d23980067e2" data-tab="pane-pcw-references">2011</a>]密切对应的海冰和雪反照率
+            </header>
+            
+            <div class="article-table-content-wrapper" tabindex="0">
+                <table class="table article-section__table">
+                    <thead>
+                        <tr>
+                            <td class="bottom-bordered-cell right-bordered-cell center-aligned"></td>
+                            <th class="bottom-bordered-cell center-aligned">海冰，低<a class="noteLink scrollableLink" data-noteid="jgrd53826-note-0001" title="Link to note" id="jgrd53826-note-0001_90-controller" href="#jgrd53826-note-0001_90" aria-haspopup="false" aria-expanded="true" aria-label="Note">a</a></th>
+                            <th class="bottom-bordered-cell center-aligned">海冰，高<a class="noteLink scrollableLink" data-noteid="jgrd53826-note-0001" title="Link to note" id="jgrd53826-note-0001_91-controller" href="#jgrd53826-note-0001_91" aria-haspopup="false" aria-expanded="true" aria-label="Note">a</a></th>
+                            <th class="bottom-bordered-cell center-aligned">雪，低</th>
+                            <th class="bottom-bordered-cell center-aligned">雪，高</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="right-bordered-cell left-aligned">GENESIS</td>
+                            <td class="center-aligned">0.70<a class="noteLink scrollableLink" data-noteid="jgrd53826-note-0002" title="Link to note" id="jgrd53826-note-0002_92-controller" href="#jgrd53826-note-0002_92" aria-haspopup="false" aria-expanded="true" aria-label="Note">b</a></td>
+                            <td class="center-aligned">0.65</td>
+                            <td class="center-aligned">0.75</td>
+                            <td class="center-aligned">0.45</td>
+                        </tr>
+                        <tr>
+                            <td class="right-bordered-cell left-aligned"><i>Abbot et al</i>.</td>
+                            <td class="center-aligned">0.45<a class="noteLink scrollableLink" data-noteid="jgrd53826-note-0002" title="Link to note" id="jgrd53826-note-0002_93-controller" href="#jgrd53826-note-0002_93" aria-haspopup="false" aria-expanded="true" aria-label="Note">b</a></td>
+                            <td class="center-aligned">0.38</td>
+                            <td class="center-aligned">0.79</td>
+                            <td class="center-aligned">0.66</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="article-section__table-footnotes">
+                <ul>
+                    <li id="jgrd53826-note-0001" class="footNotePopup__item" title="Footnote 1"><span><sup><i>a</i></sup> </span>“低”值是针对海冰或雪表面低于指定温度的情况，线性上升至“高”值在0°C，粗略考虑了在或接近熔点时液态水的存在。指定温度为GENESIS的-5°C和<i>Abbot et al.</i> [<a href="#jgrd53826-bib-0003" class="bibLink tab-link" id="jgrd53826-bib-0003_R_d23980118e2" data-tab="pane-pcw-references">2011</a>]的-1°C。</li>
+                    <li id="jgrd53826-note-0002" class="footNotePopup__item" title="Footnote 2"><span><sup><i>b</i></sup> </span>如果在GCM中启用穿透性太阳辐射的两流处理，海冰的低温值被修改：近红外波段：GENESIS中0.55，<i>Abbot et al</i>.中0.30；可见光波段：来自两流计算。</li>
+                </ul>
+            </div>
+            <div class="article-section__table-source"></div>
+        </div>
+        
+        <p>在我们的运行中，雪覆盖几乎无处不在（与<i>Abbot et al</i>.不同），如下一节所示。这可能至少部分解释了为什么我们找不到Jormungand状态。雪反照率差异占主导（<i>Abbot et al</i>.中更亮，对相同CO<sub>2</sub>水平产生更低温度），因此<i>Abbot et al</i>.反照率的EL曲线（图<a href="#jgrd53826-fig-0003">3</a>青色）略微向右（更高CO<sub>2</sub>）移动。这条曲线形式与<i>Abbot et al</i>.非常不同，后者稳定分支曲率更大（也有Jormungand状态）。我们将此归因于我们GCM中雪覆盖的行为，海冰几乎100%被雪覆盖，在冰缘附近仍部分被雪覆盖，基本无100%无雪冰。这与<i>Abbot et al</i>. [<a href="#jgrd53826-bib-0003" class="bibLink tab-link" id="jgrd53826-bib-0003_R_d23980168e2" data-tab="pane-pcw-references">2011</a>]和<i>Voight and Abbot</i> [<a href="#jgrd53826-bib-0049" class="bibLink tab-link" id="jgrd53826-bib-0049_R_d23980170e2" data-tab="pane-pcw-references">2012</a>]模型中冰缘附近无雪冰带非常不同。</p>
+        
 </body>
 </html>
