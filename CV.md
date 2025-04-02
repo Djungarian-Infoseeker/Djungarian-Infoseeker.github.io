@@ -106,6 +106,8 @@
     <tr>
         <td colspan="2">
             <div class="section-title">参加过的会议/Attended Conferences</div>
+            <span class="white-text">2025年 行星大气杰出讲座，2025年8月，北京大学，北京，中国</span><br>
+            <span class="gray-text">Distinguished Lectures on Planetary Atmospheres 2025, August 2025, Peking University, Beijing，China</span><br>
             <span class="white-text">2025年第八届地球系统科学大会，2025年7月，同济大学，上海，中国</span><br>
             <span class="gray-text">The 8th Conference on Earth System Science 2025, July 2025, Tongji University, Shanghai, China</span><br>
             <span class="white-text"><a href="https://www.ysfps.com/" target="_blank">第六届青年行星论坛，2025年3月，中国科学技术大学，安徽屯溪，中国</span><br>
