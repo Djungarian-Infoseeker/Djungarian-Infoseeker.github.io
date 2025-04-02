@@ -1,51 +1,4 @@
-
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>王胤杰 - 个人简历</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        td {
-            vertical-align: top;
-            padding: 10px;
-        }
-        img {
-            max-width: 150px;
-            border-radius: 5px;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .white-text {
-            color: #333;
-        }
-        .gray-text {
-            color: #666;
-        }
-        .section-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
 <table>
     <tr>
         <td style="padding-right: 15px;">
@@ -142,5 +95,4 @@
         </td>
     </tr>
 </table>
-</body>
 </html>
