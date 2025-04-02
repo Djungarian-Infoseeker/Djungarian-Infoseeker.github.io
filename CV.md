@@ -106,14 +106,20 @@
     <tr>
         <td colspan="2">
             <div class="section-title">参加过的会议/Attended Conferences</div>
-            <span class="white-text">2024年 行星大气杰出讲座，2024年8月，北京大学，中国</span><br>
-            <span class="gray-text">Distinguished Lectures on Planetary Atmospheres 2024, August 2024, Peking University, China</span><br>
-            <span class="white-text">2024年 第二届地球物理与天体物理流体力学科学研讨会，2024年5月，上海天文台，中国科学院，中国</span><br>
-            <span class="gray-text">2nd Symposium on Geophysical and Astrophysical Fluid Dynamics 2024, May 2024, Shanghai Astronomical Observatory, Chinese Academy of Sciences, China</span><br>
-            <span class="white-text"><a href="https://www.atmos.pku.edu.cn/kxzb/xzbg/tybg/152073.htm" target="_blank">2023年行星大气杰出讲座，2023年8月，北京大学，中国</a></span><br>
-            <span class="gray-text"><a href="https://www.atmos.pku.edu.cn/kxzb/xzbg/tybg/152073.htm" target="_blank">Distinguished Lectures on Planetary Atmospheres 2023, August 2023, Peking University, China</a></span><br>
-            <span class="white-text"><a href="http://www.cess.org.cn/Data/List/hyjj" target="_blank">2023年第七届地球系统科学大会，2023年7月，同济大学，中国</a></span><br>
-            <span class="gray-text"><a href="http://www.cess.org.cn/Data/List/hyjj" target="_blank">The 7th Conference on Earth System Science 2023, July 2023, Tongji University, China</a></span><br>
+            <span class="white-text">2025年第八届地球系统科学大会，2025年7月，同济大学，上海，中国</span><br>
+            <span class="gray-text">The 8th Conference on Earth System Science 2025, July 2025, Tongji University, Shanghai, China</span><br>
+            <span class="white-text"><a href="https://www.ysfps.com/" target="_blank">2第六届青年行星论坛，2025年3月，中国科学技术大学，安徽屯溪，中国</span><br>
+            <span class="gray-text"><a href="https://www.ysfps.com/" target="_blank">The 6th Young Scientist Forum of Planetary Science ,March 2025, University of Science and Technology of China, Tunxi, Anhui, China</span><br>
+            <span class="white-text">行星科学研究国际研讨会，2024年6月，中国科学技术大学，安徽合肥，中国</span><br>
+            <span class="gray-text">International Workshop on Planetary Sciences , June 2024, University of Science and Technology of China, Hefei, Anhui, China</span><br>
+            <span class="white-text">2024年 行星大气杰出讲座，2024年8月，北京大学，北京，中国</span><br>
+            <span class="gray-text">Distinguished Lectures on Planetary Atmospheres 2024, August 2024, Peking University, Beijing，China</span><br>
+            <span class="white-text">2024年 第二届地球物理与天体物理流体力学科学研讨会，2024年5月，中国科学院上海天文台，上海，中国</span><br>
+            <span class="gray-text">2nd Symposium on Geophysical and Astrophysical Fluid Dynamics 2024, May 2024, Chinese Academy of Sciences Shanghai Astronomical Observatory ,Shanghai, China</span><br>
+            <span class="white-text"><a href="https://www.atmos.pku.edu.cn/kxzb/xzbg/tybg/152073.htm" target="_blank">2023年行星大气杰出讲座，2023年8月，北京大学，北京，中国</a></span><br>
+            <span class="gray-text"><a href="https://www.atmos.pku.edu.cn/kxzb/xzbg/tybg/152073.htm" target="_blank">Distinguished Lectures on Planetary Atmospheres 2023, August 2023, Peking University, Beijing China</a></span><br>
+            <span class="white-text"><a href="http://www.cess.org.cn/Data/List/hyjj" target="_blank">2023年第七届地球系统科学大会，2023年7月，同济大学，上海，中国</a></span><br>
+            <span class="gray-text"><a href="http://www.cess.org.cn/Data/List/hyjj" target="_blank">The 7th Conference on Earth System Science 2023, July 2023, Tongji University, Shanghai, China</a></span><br>
         </td>
     </tr>
     <tr>
