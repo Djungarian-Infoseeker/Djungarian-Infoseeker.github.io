@@ -22,6 +22,7 @@ Climate phenomena emerge and evolve under the influence of multiple factors, inc
 During my childhood and teenage years, I had a wide range of interests, which have continued to benefit me to this day. In the online community, I have been active under the name "Djungarian" in various groups related to water lilies, YTPMVs (OtoMAD), astronomy, Qing dynasty history, pets, and antique collecting. I chose this username because, when I registered for QQ in 2010, I was fascinated by raising hamsters. Among the scientific names of various hamster species, only "Djungarian" (later standardized as *Phodopus sungorus*, the short-tailed dwarf hamster) had a suitable length and didn't sound as odd as the others. Though I attempted to change my username several times over the years, this was my very first name, and I ultimately kept it—sometimes, you just can't fight the inevitable!
 
 ### 研究领域/Research Areas
-- **宜居带外边界行星气候动力理论与模拟/Theory and Simulation of Planetary Climate Dynamics at the Outer Edge of the Habitable Zone**
+- **潮汐锁相冰雪行星的冰下海洋的宜居性/Habitability of subglacial oceans on tidally locked ice planets**
+- **海洋性冰川模式发展/Marine glacier model development**
 - **系外行星高层大气的观测/Observations of the Upper Atmosphere of Exoplanets**
 - **人工智能大气海洋预测模型降尺度方法的开发/Development of downscaling methods for AI atmosphere-ocean forecasting models**
