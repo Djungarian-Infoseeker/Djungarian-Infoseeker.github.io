@@ -97,42 +97,194 @@ w%  = 波浪组件网格（CESM1.2系列中不相关）
         <dd>三极网格，其中D表示近似分辨率（度），n表示网格版本。</dd>
     </dl>
 </body>
-    <div class="sect2">
-      <h2 class="sect2"><a name="using_create_newcase">使用create_newcase</a></h2>
-      <p>创建案例的基本命令格式：</p>
-      <table border="0" bgcolor="#E0E0E0" width="100%">
+<div class="sect2">
+    <h2 class="sect2"><a name="using_create_newcase">使用create_newcase</a></h2>
+    <p>
+        首先应使用<b class="command">create_newcase</b>的-h选项查看输入参数说明。此外，
+        <b class="command">create_newcase</b> -list [compsets,grids,machine]选项可查看支持的
+        组件集、模型网格和机器配置。但前述链接提供的信息更为完整。
+        <b class="command">create_newcase</b>可通过以下参数调用：
+    </p>
+    <table border="0" bgcolor="#E0E0E0" width="100%">
         <tbody>
-          <tr>
-            <td>
-              <pre class="screen">
+            <tr>
+                <td>
+                    <pre class="screen">
 create_newcase \     
      -case <i class="emphasis">案例名称</i> \        
      -compset <i class="emphasis">组件集</i> \      
      -res <i class="emphasis">分辨率</i> \         
-     -mach <i class="emphasis">机器名称</i>
-              </pre>
-            </td>
-          </tr>
+     -mach <i class="emphasis">机器名称</i> \
+     [-compiler <i class="emphasis">编译器名称&gt;</i> \
+     [-mpilib <i class="emphasis">MPI库名称</i>] \
+     [-mach_dir <i class="emphasis">Machines目录替代路径</i>] \
+     [-confopts [_AOA],[AOE],[_D],[_E],[_N],[_P],[_R]] \
+     [-pecount [S,M,L,X1,X2]] \
+     [-pes_file <i class="emphasis">完整路径名</i>] \
+     [-user_compset <i class="emphasis">用户自定义组件集长名称</i>] \
+     [-user_grid_file <i class="emphasis">用户XML网格文件完整路径</i>] \
+     [-help [或 -h]] |
+     [-list <i class="emphasis">[compsets,grids,machines]</i>  \         
+     [-silent [或 -s]] \
+     [-verbose [或 -v]] \
+     [-xmlmode [normal, expert]] \
+     [-nowarning]      
+                    </pre>
+                </td>
+            </tr>
         </tbody>
-      </table>
-      <p>示例：</p>
-      <table border="0" bgcolor="#E0E0E0" width="100%">
+    </table>
+    <p>
+        <b class="command">create_newcase</b>的必需参数为-case、-mach、-compset和-res。
+        如需使用自定义PE布局文件，可通过可选参数-pes_file指定该文件的完整路径。
+        所需PE布局文件格式参见<tt class="filename">$CCSMROOT/scripts/sample_pes_file.xml</tt>。
+    </p>
+    <p> 
+        以下是<b class="command">create_newcase</b>的简单示例（其中$<code class="envar">CCSMROOT</code>
+        表示CESM发行版的根目录完整路径）：
+    </p>
+    <table border="0" bgcolor="#E0E0E0" width="100%">
         <tbody>
-          <tr>
-            <td>
-              <pre class="screen"> 
-&gt; cd $CCSMROOT/scripts 
-&gt; create_newcase -case /work/home/yinjiewang/underthesis/default_cesm \ 
+            <tr>
+                <td>
+                    <pre class="screen"> 
+> cd $<code class="envar">CCSMROOT</code>/scripts 
+> create_newcase -case ~/cesm/example1 \ 
   -compset B_1850_CAM5_CN \ 
   -res ne30np4_gx1v6 \
-  -mach sugon
-              </pre>
-            </td>
-          </tr>
+  -mach yellowstone
+                    </pre>
+                </td>
+            </tr>
         </tbody>
-      </table>
+    </table>
+    <p>
+        此示例创建$<code class="envar">CASEROOT</code>目录<tt class="filename">~/cesm1/example1</tt>
+        （案例名"example1"），模型分辨率为0.9x1.25_gx1v6（1度大气/陆地网格配合1度海洋/海冰网格，
+        使用gx1v6海洋掩膜）。组件集B_1850_CN采用全活跃组件配置模拟现代气候。
+        完整示例参见<a href="c1868.html#use_case_basic">基础案例</a>。
+        案例名可包含字母、数字、"."和"_"。注意：若目录已存在，<b class="command">create_newcase</b>
+        将显示警告并中止。
+    </p>
+    <p>
+        概括来说，<b class="command">create_newcase</b>会创建由-case参数指定的$<code class="envar">CASEROOT</code>
+        目录，其中包含模型构建、运行及长期归档所需的文件。同时创建<tt class="filename">$CASEROOT/Buildconf/</tt>
+        目录用于存放生成组件namelist和构建组件库的脚本。下表列出<b class="command">create_newcase</b>
+        创建的主要文件和目录：
+    </p>
+    <div class="table">
+        <a name="AEN600"></a>
+        <p><b>表2-1. 调用<b class="command">create_newcase</b>生成的内容</b></p>
+        <table border="1" bgcolor="#E0E0E0" cellspacing="0" cellpadding="4" class="CALSTABLE">
+            <thead>
+                <tr>
+                    <th>目录/文件名</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>README.case</td>
+                    <td>记录<b class="command">create_newcase</b>使用详情的文件，建议用于跟踪运行时问题和修改记录</td>
+                </tr>
+                <tr>
+                    <td>CaseStatus</td>
+                    <td>记录当前案例操作历史的文件</td>
+                </tr>
+                <tr>
+                    <td>Buildconf/</td>
+                    <td>包含生成组件namelist和构建组件/工具库（如PIO、MCT）脚本的目录，用户无需修改内容（与CESM1.0.5不同）</td>
+                </tr>
+                <tr>
+                    <td>SourceMods/</td>
+                    <td>存放修改后源代码的目录</td>
+                </tr>
+                <tr>
+                    <td>LockedFiles/</td>
+                    <td>存放锁定文件的目录。XML文件被系统使用后会自动锁定，除非执行'clean'操作否则不可修改（详见<a href="x2017.html">第6章<em>文件锁定机制说明</em></a>），用户不得编辑此目录内容</td>
+                </tr>
+                <tr>
+                    <td>Tools/</td>
+                    <td>存放支持工具脚本的目录，用户无需修改内容</td>
+                </tr>
+                <tr>
+                    <td>env_mach_specific</td>
+                    <td>设置机器特定环境变量的文件。构建启动后不应再编辑其中的构建环境变量</td>
+                </tr>
+                <tr>
+                    <td>env_case.xml</td>
+                    <td>设置案例特定变量（如模型组件、根目录等），案例创建后<i class="emphasis">不可修改</i>，需重新运行<b class="command">create_newcase</b>变更配置</td>
+                </tr>
+                <tr>
+                    <td>env_build.xml</td>
+                    <td>设置模型构建参数，包括组件分辨率和配置选项（如CAM_CONFIG_OTPS），详见<a href="../modelnl/env_build.html" target="_top">env_build.xml变量</a></td>
+                </tr>
+                <tr>
+                    <td>env_mach_pes.xml</td>
+                    <td>设置组件处理器布局（见<a href="x715.html#case_conf_setting_pes"><em>修改PE布局</em></a>），对负载均衡至关重要（参见<a href="x1516.html">运行负载均衡</a>）</td>
+                </tr>
+                <tr>
+                    <td>env_run.xml</td>
+                    <td>设置运行时参数，包括运行时长、重启频率、耦合器诊断输出及短期/长期归档。完整说明参见：
+                        <a href="../modelnl/env_run.html#run_start" target="_top">运行初始化变量</a>、
+                        <a href="../modelnl/env_run.html#run_stop" target="_top">运行停止变量</a>、
+                        <a href="../modelnl/env_run.html#run_restart" target="_top">运行重启控制变量</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class="emphasis">cesm_setup</i></td>
+                    <td>用于创建$CASE.run脚本和user_nl_xxx文件的案例设置脚本</td>
+                </tr>
+                <tr>
+                    <td><i class="emphasis">$<code class="envar">CASE</code>.$<code class="envar">MACH</code><tt class="filename">.build</tt></i></td>
+                    <td>构建组件库和模型可执行文件的脚本</td>
+                </tr>
+                <tr>
+                    <td><i class="emphasis">$<code class="envar">CASE</code>.$<code class="envar">MACH</code><tt class="filename">.clean_build</tt></i></td>
+                    <td>清除所有目标文件和库的脚本，同时解锁<tt class="filename">Macros</tt>和<tt class="filename">env_build.xml</tt>，完整重建系统前必须执行</td>
+                </tr>
+                <tr>
+                    <td><i class="emphasis">$<code class="envar">CASE</code>.$<code class="envar">MACH</code><tt class="filename">.l_archive</tt></i></td>
+                    <td>长期归档输出数据的脚本（见<a href="c1113.html#running_ccsm_env_output">长期归档</a>），仅当目标机器支持长期归档时创建</td>
+                </tr>
+                <tr>
+                    <td><i class="emphasis">xmlchange</i></td>
+                    <td>修改XML文件值的工具</td>
+                </tr>
+                <tr>
+                    <td><i class="emphasis">preview_namelists</i></td>
+                    <td>预览组件namelist的工具（生成于$<code class="envar">CASEROOT</code><tt class="filename">/CaseDocs</tt>），注意：用户不得直接编辑CaseDocs中的namelist文件</td>
+                </tr>
+                <tr>
+                    <td><i class="emphasis">check_input_data</i></td>
+                    <td>检查并获取输入数据的工具</td>
+                </tr>
+                <tr>
+                    <td><i class="emphasis">create_production_test</i></td>
+                    <td>创建案例测试的工具</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-  </div>
+    <p>
+        关于案例目录结构的完整说明，参见<a href="x2043.html">第6章<em>案例目录结构详解</em></a>
+    </p>
+    <p>
+        <tt class="filename">env_*.xml</tt>文件中的XML变量会通过<b class="command">$<code class="envar">CASEROOT</code>/Tools/ccsm_getenv</b>
+        脚本转换为同名csh环境变量。该转换由多个脚本工具在构建和运行过程中自动完成，用户不可见。
+    </p>
+    <div class="note">
+        <blockquote class="note">
+            <p><b>注意：</b>用户只能修改XML变量，不可直接修改csh环境变量。</p>
+        </blockquote>
+    </div>
+    <p>
+        $<code class="envar">CASEROOT</code>中XML文件的完整变量列表参见：
+        <a href="../modelnl/env_case.html" target="_top">案例变量</a>、
+        <a href="../modelnl/env_mach_pes.html" target="_top">PE布局变量</a>、
+        <a href="../modelnl/env_build.html" target="_top">构建时变量</a>、
+        <a href="../modelnl/env_run.html" target="_top">运行时变量</a>
+    </p>
 </div>
   
   <div class="sect1">
