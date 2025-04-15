@@ -414,148 +414,147 @@ create_newcase \
         </div>
     </div>
 </div>
+<body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="NAVHEADER">
+<table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr><th colspan="3" align="center">CESM用户指南（CESM1.2发行系列用户指南）（<a href="ug.pdf" target="_top">PDF</a>）</th></tr>
+<tr>
+<td width="10%" align="left" valign="bottom"><a href="x715.html" accesskey="P">上一页</a></td>
+<td width="80%" align="center" valign="bottom">第二章 创建与设置案例</td>
+<td width="10%" align="right" valign="bottom"><a href="x886.html" accesskey="N">下一页</a></td>
+</tr>
+</tbody>
+</table>
+<hr align="LEFT" width="100%">
+</div>
 
-  <div class="sect1">
-    <h1 class="sect1"><a name="multiinst">多实例组件功能</a></h1>
-    
-    <p>与CESM1.1系列类似，CESM1.2系列也具备在一个模型可执行文件下运行多个组件实例的新功能。使用此功能的唯一注意事项是：如果对任何一个活动组件使用N个多实例，那么所有活动组件都需要使用N个多实例。更多细节将在下文讨论。开发此功能的主要动机是为了能够运行集合卡尔曼滤波器进行数据同化和参数估计（例如不确定性量化）。同时，它也提供了在一个CESM可执行文件中运行一组实验的能力，其中每个实例可以有不同的namelist，并将所有输出定向到一个目录。</p>
-    
-    <p>以下将以F组件集作为示例说明。使用多实例代码涉及以下步骤：</p>
-    
-    <ol type="1">
-      <li>
-        <p>创建案例</p>
-        <table border="0" bgcolor="#E0E0E0" width="100%">
-          <tbody>
-            <tr>
-              <td>
-                <pre class="screen">
+<div class="sect1">
+<h1 class="sect1"><a name="multiinst">多实例组件功能</a></h1>
+
+<p>与CESM1.1系列相同，CESM1.2系列也新增了在单一模型可执行文件下运行多个组件实例的能力。唯一需要注意的是：如果某个活跃组件需要运行N个实例，则所有活跃组件都必须运行N个实例。下文将详细讨论该功能。此功能最初是为实现集合卡尔曼滤波（用于数据同化和参数估计，如不确定性量化）而开发，同时也支持用户在单个CESM可执行文件中运行多组实验，每个实例可使用不同的namelist配置，并将所有输出集中到同一目录。</p>
+
+<p>以下以F组件集为例说明多实例功能的使用步骤：</p>
+
+<ol type="1">
+<li>
+<p>创建案例</p>
+<table border="0" bgcolor="#E0E0E0" width="100%">
+<tbody>
+<tr><td><pre class="screen">
 &gt; create_newcase -case Fmulti -compset F -res ne30_g16 -mach hopper
 &gt; cd Fmulti
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      
-      <li>
-        <p>假设hopper的默认PE布局如下：</p>
-        <table border="0" bgcolor="#E0E0E0" width="100%">
-          <tbody>
-            <tr>
-              <td>
-                <pre class="screen">
-&lt;entry id="NTASKS_ATM" value="128" /&gt;    
-&lt;entry id="NTHRDS_ATM" value="1" /&gt;    
-&lt;entry id="ROOTPE_ATM" value="0" /&gt;    
-&lt;entry id="NINST_ATM" value="1" /&gt;    
-&lt;entry id="NINST_ATM_LAYOUT" value="concurrent" /&gt;    
+</pre></td></tr>
+</tbody>
+</table>
+</li>
 
-&lt;entry id="NTASKS_LND" value="128" /&gt;    
-&lt;entry id="NTHRDS_LND" value="1" /&gt;    
-&lt;entry id="ROOTPE_LND" value="0" /&gt;    
-&lt;entry id="NINST_LND" value="1" /&gt;    
-&lt;entry id="NINST_LND_LAYOUT" value="concurrent" /&gt;    
+<li>
+<p>假设hopper平台的默认PE布局如下：</p>
+<table border="0" bgcolor="#E0E0E0" width="100%">
+<tbody>
+<tr><td><pre class="screen">
+&lt;entry id="NTASKS_ATM"   value="128" /&gt;    
+&lt;entry id="NTHRDS_ATM"   value="1" /&gt;    
+&lt;entry id="ROOTPE_ATM"   value="0" /&gt;    
+&lt;entry id="NINST_ATM"   value="1" /&gt;    
+&lt;entry id="NINST_ATM_LAYOUT"   value="concurrent" /&gt;    
 
-&lt;entry id="NTASKS_ICE" value="128" /&gt;    
-&lt;entry id="NTHRDS_ICE" value="1" /&gt;    
-&lt;entry id="ROOTPE_ICE" value="0" /&gt;    
-&lt;entry id="NINST_ICE" value="1" /&gt;    
-&lt;entry id="NINST_ICE_LAYOUT" value="concurrent" /&gt;    
+&lt;entry id="NTASKS_LND"   value="128" /&gt;    
+&lt;entry id="NTHRDS_LND"   value="1" /&gt;    
+&lt;entry id="ROOTPE_LND"   value="0" /&gt;    
+&lt;entry id="NINST_LND"   value="1" /&gt;    
+&lt;entry id="NINST_LND_LAYOUT"   value="concurrent" /&gt;    
 
-&lt;entry id="NTASKS_OCN" value="128" /&gt;    
-&lt;entry id="NTHRDS_OCN" value="1" /&gt;    
-&lt;entry id="ROOTPE_OCN" value="0" /&gt;    
-&lt;entry id="NINST_OCN" value="1" /&gt;    
-&lt;entry id="NINST_OCN_LAYOUT" value="concurrent" /&gt;    
+&lt;entry id="NTASKS_ICE"   value="128" /&gt;    
+&lt;entry id="NTHRDS_ICE"   value="1" /&gt;    
+&lt;entry id="ROOTPE_ICE"   value="0" /&gt;    
+&lt;entry id="NINST_ICE"   value="1" /&gt;    
+&lt;entry id="NINST_ICE_LAYOUT"   value="concurrent" /&gt;    
 
-&lt;entry id="NTASKS_GLC" value="128" /&gt;    
-&lt;entry id="NTHRDS_GLC" value="1" /&gt;    
-&lt;entry id="ROOTPE_GLC" value="0" /&gt;    
-&lt;entry id="NINST_GLC" value="1" /&gt;    
-&lt;entry id="NINST_GLC_LAYOUT" value="concurrent" /&gt;    
+&lt;entry id="NTASKS_OCN"   value="128" /&gt;    
+&lt;entry id="NTHRDS_OCN"   value="1" /&gt;    
+&lt;entry id="ROOTPE_OCN"   value="0" /&gt;    
+&lt;entry id="NINST_OCN"   value="1" /&gt;    
+&lt;entry id="NINST_OCN_LAYOUT"   value="concurrent" /&gt;    
 
-&lt;entry id="NTASKS_WAV" value="128" /&gt;    
-&lt;entry id="NTHRDS_WAV" value="1" /&gt;    
-&lt;entry id="ROOTPE_WAV" value="0" /&gt;    
-&lt;entry id="NINST_WAV" value="1" /&gt;    
-&lt;entry id="NINST_WAV_LAYOUT" value="concurrent" /&gt;    
+&lt;entry id="NTASKS_GLC"   value="128" /&gt;    
+&lt;entry id="NTHRDS_GLC"   value="1" /&gt;    
+&lt;entry id="ROOTPE_GLC"   value="0" /&gt;    
+&lt;entry id="NINST_GLC"   value="1" /&gt;    
+&lt;entry id="NINST_GLC_LAYOUT"   value="concurrent" /&gt;    
 
-&lt;entry id="NTASKS_CPL" value="128" /&gt;    
-&lt;entry id="NTHRDS_CPL" value="1" /&gt;    
-&lt;entry id="ROOTPE_CPL" value="0" /&gt;    
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <p>对于F组件集，只有atm、lnd、rof是完全预报组件。ocn是规定的数据组件，cice是混合规定/预报组件（冰覆盖率是规定的），glc和wav是存根组件。</p>
-        
-        <p>假设我们想在这个实验中运行2个CAM实例。当前多实例的实现还要求您运行2个CLM、CICE和RTM实例。但是，您可以选择运行1个或2个DOCN实例（我们可以忽略glc和wav，因为它们在此组件集中不做任何操作）。要运行2个CAM、CLM、CICE、RTM和DOCN实例，您只需将上述NINST_ATM、NINST_LND、NINST_ICE、NINST_ROF和NINST_DOCN从1改为2。这将生成以下<tt class="filename">env_mach_pes.xml</tt>文件：</p>
-        
-        <table border="0" bgcolor="#E0E0E0" width="100%">
-          <tbody>
-            <tr>
-              <td>
-                <pre class="screen">
-&lt;entry id="NTASKS_ATM" value="128" /&gt;    
-&lt;entry id="NTHRDS_ATM" value="1" /&gt;    
-&lt;entry id="ROOTPE_ATM" value="0" /&gt;    
-&lt;entry id="NINST_ATM" value="2" /&gt;    
-&lt;entry id="NINST_ATM_LAYOUT" value="concurrent" /&gt;    
+&lt;entry id="NTASKS_WAV"   value="128" /&gt;    
+&lt;entry id="NTHRDS_WAV"   value="1" /&gt;    
+&lt;entry id="ROOTPE_WAV"   value="0" /&gt;    
+&lt;entry id="NINST_WAV"   value="1" /&gt;    
+&lt;entry id="NINST_WAV_LAYOUT"   value="concurrent" /&gt;    
 
-&lt;entry id="NTASKS_LND" value="128" /&gt;    
-&lt;entry id="NTHRDS_LND" value="1" /&gt;    
-&lt;entry id="ROOTPE_LND" value="0" /&gt;    
-&lt;entry id="NINST_LND" value="2" /&gt;    
-&lt;entry id="NINST_LND_LAYOUT" value="concurrent" /&gt;    
+&lt;entry id="NTASKS_CPL"   value="128" /&gt;    
+&lt;entry id="NTHRDS_CPL"   value="1" /&gt;    
+&lt;entry id="ROOTPE_CPL"   value="0" /&gt;    
+</pre></td></tr>
+</tbody>
+</table>
 
-&lt;entry id="NTASKS_ICE" value="128" /&gt;    
-&lt;entry id="NTHRDS_ICE" value="1" /&gt;    
-&lt;entry id="ROOTPE_ICE" value="0" /&gt;    
-&lt;entry id="NINST_ICE" value="2" /&gt;    
-&lt;entry id="NINST_ICE_LAYOUT" value="concurrent" /&gt;    
+<p>在F组件集中，只有大气（atm）、陆地（lnd）、径流（rof）是完全预报组件。海洋（ocn）是预设数据组件，海冰（cice）是混合预设/预报组件（冰覆盖率由预设数据决定），而冰川（glc）和海浪（wav）是存根组件。</p>
 
-&lt;entry id="NTASKS_ROF" value="128" /&gt;    
-&lt;entry id="NTHRDS_ROF" value="1" /&gt;    
-&lt;entry id="ROOTPE_ROF" value="0" /&gt;    
-&lt;entry id="NINST_ROF" value="2" /&gt;    
-&lt;entry id="NINST_ROF_LAYOUT" value="concurrent" /&gt;    
+<p>假设需要运行2个CAM实例。当前实现要求必须同时运行2个CLM、CICE和RTM实例，但DOCN组件可选择运行1或2个实例（glc和wav组件在此配置中无实际作用）。要实现该配置，只需将env_mach_pes.xml中的NINST_ATM、NINST_LND、NINST_ICE、NINST_ROF和NINST_DOCN值从1改为2，修改后文件如下：</p>
 
-&lt;entry id="NTASKS_OCN" value="128" /&gt;    
-&lt;entry id="NTHRDS_OCN" value="1" /&gt;    
-&lt;entry id="ROOTPE_OCN" value="0" /&gt;    
-&lt;entry id="NINST_OCN" value="2" /&gt;    
-&lt;entry id="NINST_OCN_LAYOUT" value="concurrent" /&gt;    
+<table border="0" bgcolor="#E0E0E0" width="100%">
+<tbody>
+<tr><td><pre class="screen">
+&lt;entry id="NTASKS_ATM"   value="128" /&gt;    
+&lt;entry id="NTHRDS_ATM"   value="1" /&gt;    
+&lt;entry id="ROOTPE_ATM"   value="0" /&gt;    
+&lt;entry id="NINST_ATM"   value="2" /&gt;    
+&lt;entry id="NINST_ATM_LAYOUT"   value="concurrent" /&gt;    
 
-&lt;entry id="NTASKS_GLC" value="128" /&gt;    
-&lt;entry id="NTHRDS_GLC" value="1" /&gt;    
-&lt;entry id="ROOTPE_GLC" value="0" /&gt;    
-&lt;entry id="NINST_GLC" value="1" /&gt;    
-&lt;entry id="NINST_GLC_LAYOUT" value="concurrent" /&gt;    
+&lt;entry id="NTASKS_LND"   value="128" /&gt;    
+&lt;entry id="NTHRDS_LND"   value="1" /&gt;    
+&lt;entry id="ROOTPE_LND"   value="0" /&gt;    
+&lt;entry id="NINST_LND"   value="2" /&gt;    
+&lt;entry id="NINST_LND_LAYOUT"   value="concurrent" /&gt;    
 
-&lt;entry id="NTASKS_CPL" value="128" /&gt;    
-&lt;entry id="NTHRDS_CPL" value="1" /&gt;    
-&lt;entry id="ROOTPE_CPL" value="0" /&gt;    
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <p>这样做的结果是，您将有2个CAM、CLM和CICE（规定的）以及RTM实例，每个实例在64个MPI任务上并发运行，而DOCN只有1个实例。</p>
-      </li>
-      
-      <li>
-        <p>当调用<b class="command">cesm_setup</b>时，将为每个组件实例生成单独的user_nl_xxx_NNNN文件（其中NNNN是组件实例编号）。特别是，使用上述<tt class="filename">env_mach_pes.xml</tt>文件调用<b class="command">cesm_setup</b>将在$<code class="envar">CASEROOT</code>中生成以下<tt class="filename">user_nl_*</tt>文件：</p>
-        
-        <table border="0" bgcolor="#E0E0E0" width="100%">
-          <tbody>
-            <tr>
-              <td>
-                <pre class="screen">
+&lt;entry id="NTASKS_ICE"   value="128" /&gt;    
+&lt;entry id="NTHRDS_ICE"   value="1" /&gt;    
+&lt;entry id="ROOTPE_ICE"   value="0" /&gt;    
+&lt;entry id="NINST_ICE"   value="2" /&gt;    
+&lt;entry id="NINST_ICE_LAYOUT"   value="concurrent" /&gt;    
+
+&lt;entry id="NTASKS_ROF"   value="128" /&gt;    
+&lt;entry id="NTHRDS_ROF"   value="1" /&gt;    
+&lt;entry id="ROOTPE_ROF"   value="0" /&gt;    
+&lt;entry id="NINST_ROF"   value="2" /&gt;    
+&lt;entry id="NINST_ROF_LAYOUT"   value="concurrent" /&gt;    
+
+&lt;entry id="NTASKS_OCN"   value="128" /&gt;    
+&lt;entry id="NTHRDS_OCN"   value="1" /&gt;    
+&lt;entry id="ROOTPE_OCN"   value="0" /&gt;    
+&lt;entry id="NINST_OCN"   value="2" /&gt;    
+&lt;entry id="NINST_OCN_LAYOUT"   value="concurrent" /&gt;    
+
+&lt;entry id="NTASKS_GLC"   value="128" /&gt;    
+&lt;entry id="NTHRDS_GLC"   value="1" /&gt;    
+&lt;entry id="ROOTPE_GLC"   value="0" /&gt;    
+&lt;entry id="NINST_GLC"   value="1" /&gt;    
+&lt;entry id="NINST_GLC_LAYOUT"   value="concurrent" /&gt;    
+
+&lt;entry id="NTASKS_CPL"   value="128" /&gt;    
+&lt;entry id="NTHRDS_CPL"   value="1" /&gt;    
+&lt;entry id="ROOTPE_CPL"   value="0" /&gt;    
+</pre></td></tr>
+</tbody>
+</table>
+
+<p>此配置将生成：2个CAM、CLM、CICE（预设模式）和RTM实例，每个实例并发运行于64个MPI任务上；DOCN组件保持单实例运行。</p>
+</li>
+
+<li>
+<p>运行<b class="command">cesm_setup</b>时会生成对应的user_nl_xxx_NNNN文件（NNNN表示组件实例编号）。以上述env_mach_pes.xml配置为例，将在$CASEROOT目录生成以下文件：</p>
+<table border="0" bgcolor="#E0E0E0" width="100%">
+<tbody>
+<tr><td><pre class="screen">
 user_nl_cam_0001
 user_nl_cam_0002
 user_nl_cice_0001
@@ -567,19 +566,14 @@ user_nl_docn_0001
 user_nl_docn_0002
 user_nl_rtm_0001
 user_nl_rtm_0002
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <p>以及$CASEROOT/CaseDocs中的以下<tt class="filename">*_in_*</tt>文件和<tt class="filename">*txt*</tt>文件：</p>
-        
-        <table border="0" bgcolor="#E0E0E0" width="100%">
-          <tbody>
-            <tr>
-              <td>
-                <pre class="screen">
+</pre></td></tr>
+</tbody>
+</table>
+
+<p>同时在$CASEROOT/CaseDocs目录生成以下输入文件和流文件：</p>
+<table border="0" bgcolor="#E0E0E0" width="100%">
+<tbody>
+<tr><td><pre class="screen">
 atm_in_0001
 atm_in_0002
 docn.streams.txt.prescribed_0001
@@ -596,138 +590,94 @@ lnd_in_0001
 lnd_in_0002
 rof_in_0001
 rof_in_0002
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <p>每个组件实例的namelist可以通过修改相应的user_nl_xxx_NNNN文件来更改。修改user_nl_cam_0002将导致您所做的更改仅对CAM的实例2生效。要更改DOCN流文本文件实例0002，您应将<tt class="filename">docn.streams.txt.prescribed_0002</tt>的副本放在$<code class="envar">CASEROOT</code>中，命名为<tt class="filename">user_docn.streams.txt.prescribed_0002</tt>并进行相应修改。</p>
-      </li>
-    </ol>
-    
-    <p>还需要强调以下几点：</p>
-    
-    <ol type="1">
-      <li><p><b class="command">不同的组件实例只能通过namelist设置的差异来区分——它们都使用相同的模型可执行文件。</b></p></li>
-      <li><p>CESM1.2系列多实例实现中仅支持1个耦合器组件。</p></li>
-      <li><p>由<b class="command">cesm_setup</b>创建的<tt class="filename">user_nl_*</tt>文件在调用<b class="command">cesm_setup -clean</b>时<i class="emphasis">不会被</i>删除。<tt class="filename">Macros</tt>文件也是如此。</p></li>
-      <li><p>通常，您应该并发运行多个实例（<tt class="filename">env_mach_pes.xml</tt>中的默认设置）。串行设置仅适用于即将开发的代码实现中的专家用户。</p></li>
-    </ol>
-  </div>
+</pre></td></tr>
+</tbody>
+</table>
 
+<p>通过修改对应的user_nl_xxx_NNNN文件可定制各组件实例的namelist。例如修改user_nl_cam_0002将仅影响CAM的第2个实例。若要修改DOCN第2个实例的流文件，需将docn.streams.txt.prescribed_0002复制到$CASEROOT并重命名为user_docn.streams.txt.prescribed_0002后进行编辑。</p>
+</li>
+</ol>
+
+<p>需要重点强调以下几点：</p>
+<ol type="1">
+<li><b class="command">不同组件实例只能通过namelist设置区分——它们共享同一模型可执行文件</b></li>
+<li>CESM1.2系列多实例实现仅支持单个耦合器组件</li>
+<li><tt class="filename">user_nl_*</tt>文件一旦被<b class="command">cesm_setup</b>创建后，调用<b class="command">cesm_setup -clean</b>时<i class="emphasis">不会被删除</i>，Macros文件同理</li>
+<li>通常应保持并发运行多实例（env_mach_pes.xml中的默认设置），串行模式仅适用于后续开发代码的专家用户</li>
+</ol>
+</div>
+
+<div class="NAVFOOTER">
+<hr align="LEFT" width="100%">
+<table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="33%" align="left" valign="top"><a href="x715.html" accesskey="P">上一页</a></td>
+<td width="34%" align="center" valign="top"><a href="book1.html" accesskey="H">首页</a></td>
+<td width="33%" align="right" valign="top"><a href="x886.html" accesskey="N">下一页</a></td>
+</tr>
+<tr>
+<td width="33%" align="left" valign="top">案例设置与PE布局定制</td>
+<td width="34%" align="center" valign="top"><a href="c513.html" accesskey="U">向上</a></td>
+<td width="33%" align="right" valign="top">修改xml文件</td>
+</tr>
+</tbody>
+</table>
+</div>
 </body>
-<body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
-
-
-  <div class="sect1">
-    <h1 class="sect1"><a name="modifying_xml">修改xml文件</a></h1>
-    
-    <p>
-      您可以直接编辑xml文件来更改变量值。然而，最好使用$<code class="envar">CASEROOT</code>目录中的<b class="command">xmlchange</b>来修改xml变量，因为它在更改xml文件中的值时会执行变量错误检查。要调用<b class="command">xmlchange</b>：
-    </p>
-    
-    <table border="0" bgcolor="#E0E0E0" width="100%">
-      <tbody>
-        <tr>
-          <td>
-            <pre class="screen">
-xmlchange &lt;entry id&gt;=&lt;value&gt;
--- 或者 --
-xmlchange -id &lt;entry id&gt; -val &lt;name&gt; -file &lt;filename&gt;
+<div class="sect1"><h1 class="sect1"><a name="modifying_xml">修改xml文件</a></h1><p>
+您可以直接编辑xml文件来修改变量值。但建议使用<b class="command">xmlchange</b>工具在$<code class="envar">CASEROOT</code>目录下操作，因为该工具会在修改xml文件值时执行变量错误检查。调用<b class="command">xmlchange</b>的方式如下：
+</p><table border="0" bgcolor="#E0E0E0" width="100%"><tbody><tr><td><pre class="screen">
+xmlchange &lt;条目id&gt;=&lt;值&gt;
+-- 或 --
+xmlchange -id &lt;条目id&gt; -val &lt;名称&gt; -file &lt;文件名&gt;
           [-help] [-silent] [-verbose] [-warn] [-append] [-file]
-            </pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <div class="variablelist">
-      <dl>
-        <dt><code class="option">-id</code></dt>
-        <dd><p>要更改的xml变量名称（必需）</p></dd>
-        
-        <dt><code class="option">-val</code></dt>
-        <dd>
-          <p>与-id参数关联的变量的预期值（必需）</p>
-          <div class="note">
-            <blockquote class="note">
-              <p><b>注意：</b>如果您想在-val选项提供的字符串中包含单引号（"'"，也称为撇号），必须将其指定为"&amp;apos;"。</p>
-            </blockquote>
-          </div>
-        </dd>
-        
-        <dt><code class="option">-file</code></dt>
-        <dd><p>要编辑的xml文件（可选）</p></dd>
-        
-        <dt><code class="option">-silent</code></dt>
-        <dd><p>启用静默模式。仅会发出致命消息（可选）</p></dd>
-        
-        <dt><code class="option">-verbose</code></dt>
-        <dd><p>回显<b class="command">create_newcase</b>和<b class="command">cesm_setup</b>所做的所有设置（可选）</p></dd>
-        
-        <dt><code class="option">-help</code></dt>
-        <dd><p>将用法信息打印到STDOUT（可选）</p></dd>
-      </dl>
-    </div>
-  </div>
-
-
-</body>
-<body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
-
-
-  <div class="sect1">
-    <h1 class="sect1"><a name="cloning_case">克隆案例（仅限专家）</a></h1>
-    
-    <p>这是一个为专家用户提供的高级功能。如果您是新用户，请跳过本节。</p>
-    
-    <p>如果您有权访问要克隆的运行，<b class="command">create_clone</b>命令将创建一个新案例，同时保留您要克隆案例的本地修改。您可以在$<code class="envar">CCSMROOT</code>或要创建新案例的目录中运行<b class="command">create_clone</b>实用程序。它具有以下参数：</p>
-    
-    <div class="variablelist">
-      <dl>
-        <dt><code class="option">-case</code></dt>
-        <dd><p>新案例的名称或路径</p></dd>
-        
-        <dt><code class="option">-clone</code></dt>
-        <dd><p>要克隆案例的完整路径名</p></dd>
-        
-        <dt><code class="option">-silent</code></dt>
-        <dd><p>启用静默模式。仅会发出致命消息</p></dd>
-        
-        <dt><code class="option">-verbose</code></dt>
-        <dd><p>回显所有设置</p></dd>
-        
-        <dt><code class="option">-help</code></dt>
-        <dd><p>打印使用说明</p></dd>
-      </dl>
-    </div>
-    
-    <p>以下是使用<b class="command">create_clone</b>的最简单示例：</p>
-    
-    <table border="0" bgcolor="#E0E0E0" width="100%">
-      <tbody>
-        <tr>
-          <td>
-            <pre class="screen">
-&gt; cd $CCSMROOT/scripts
-&gt; create_clone -case $CASEROOT -clone $CLONEROOT 
-            </pre>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <p><b class="command">create_clone</b>将保留在user_nl_xxxx文件中所做的任何本地namelist修改以及SourceMods树中的任何源代码修改。请注意，新案例目录将与克隆案例目录<i class="emphasis">完全相同</i>，除了原始克隆脚本$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.build、$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.clean_build、$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.run和$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.l_archive将在新案例中具有新名称。</p>
-    
-    <div class="note">
-      <blockquote class="note">
-        <p><b>重要提示：</b>不要更改<tt class="filename">env_case.xml</tt>文件中的任何内容。$<code class="envar">CASEROOT</code>/目录现在将显示为刚刚运行<b class="command">create_newcase</b>的状态——除了保留对env_*文件的本地修改。</p>
-      </blockquote>
-    </div>
-    
-    <p>另一种复制案例的方法是使用该案例的README.case文件中的信息创建新案例。请注意，这种方法<i class="emphasis">不会</i>保留对原始案例所做的任何本地修改，例如源代码或构建脚本修改；您需要手动导入这些更改。</p>
-  </div>
+</pre></td></tr></tbody></table><p></p><div class="variablelist"><dl><dt><code class="option">-id</code></dt><dd><p>
+需要修改的xml变量名称（必填项）
+</p></dd><dt><code class="option">-val</code></dt><dd><p>
+与-id参数关联的变量目标值（必填项）
+</p><div class="note"><blockquote class="note"><p><b>注意： </b>若要在-val选项提供的字符串中包含单引号（"'"，又称撇号），必须将其指定为"&amp;apos;"。
+</p></blockquote></div></dd><dt><code class="option">-file</code></dt><dd><p>
+待编辑的xml文件（可选项）
+</p></dd><dt><code class="option">-silent</code></dt><dd><p>
+启用静默模式，仅显示致命错误信息（可选项）
+</p></dd><dt><code class="option">-verbose</code></dt><dd><p>
+回显<b class="command">create_newcase</b>和<b class="command">cesm_setup</b>的所有设置（可选项）
+</p></dd><dt><code class="option">-help</code></dt><dd><p>
+打印使用信息到标准输出（可选项）
+</p></dd></dl></div></div>
+<div class="sect1"><h1 class="sect1"><a name="cloning_case">克隆案例（仅限专家用户）</a></h1><p>
+此为面向专家用户的高级功能，新用户请跳过本节。</p><p>若您拥有待克隆案例的运行权限，
+<b class="command">create_clone</b>命令可在创建新案例的同时保留原案例的本地修改。该工具可在
+$<code class="envar">CCSMROOT</code>目录或目标创建目录下运行，参数如下：</p><p></p><div class="variablelist"><dl><dt><code class="option">-case</code></dt><dd><p>
+新案例名称或路径
+</p></dd><dt><code class="option">-clone</code></dt><dd><p>
+待克隆案例的完整路径
+</p></dd><dt><code class="option">-silent</code></dt><dd><p>
+静默模式，仅显示致命错误信息
+</p></dd><dt><code class="option">-verbose</code></dt><dd><p>
+显示所有配置信息
+</p></dd><dt><code class="option">-help</code></dt><dd><p>
+打印使用说明
+</p></dd></dl></div><p>
+基础使用示例：
+</p><table border="0" bgcolor="#E0E0E0" width="100%"><tbody><tr><td><pre class="screen">
+&gt; cd $<code class="envar">CCSMROOT</code>/scripts
+&gt; create_clone -case $<code class="envar">CASEROOT</code> -clone $<code class="envar">CLONEROOT</code> 
+</pre></td></tr></tbody></table><p>
+<b class="command">create_clone</b>会保留user_nl_xxxx文件中的本地namelist修改及SourceMods目录下的源码变更。
+需注意新案例目录将<b>完全复制</b>原案例目录，但以下脚本会重新生成：
+$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.build, 
+$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.clean_build,
+$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.run, 
+$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.l_archive。
+</p><div class="note"><blockquote class="note"><p><b>重要提示：</b>禁止修改<tt class="filename">env_case.xml</tt>文件。
+此时$<code class="envar">CASEROOT</code>/目录状态等同于刚执行完<b class="command">create_newcase</b>命令，
+但会保留env_*文件的本地修改。
+</p></blockquote></div><p>
+另一种复制方案是通过原案例README.case文件创建新案例。
+但此方法<b>不会保留</b>原案例的本地修改（如源码或编译脚本变更），
+需手动迁移这些变更。</p></div>
 
 
 </body>
