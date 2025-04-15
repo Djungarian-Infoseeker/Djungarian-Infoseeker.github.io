@@ -201,7 +201,7 @@ create_newcase \
                 </tr>
                 <tr>
                     <td>LockedFiles/</td>
-                    <td>存放锁定文件的目录。XML文件被系统使用后会自动锁定，除非执行'clean'操作否则不可修改（详见<a href="x2017.html">第6章<em>文件锁定机制说明</em></a>），用户不得编辑此目录内容</td>
+                    <td>存放锁定文件的目录。XML文件被系统使用后会自动锁定，除非执行'clean'操作否则不可修改（详见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/x2017.html">第6章<em>文件锁定机制说明</em></a>），用户不得编辑此目录内容</td>
                 </tr>
                 <tr>
                     <td>Tools/</td>
@@ -217,18 +217,18 @@ create_newcase \
                 </tr>
                 <tr>
                     <td>env_build.xml</td>
-                    <td>设置模型构建参数，包括组件分辨率和配置选项（如CAM_CONFIG_OTPS），详见<a href="../modelnl/env_build.html" target="_top">env_build.xml变量</a></td>
+                    <td>设置模型构建参数，包括组件分辨率和配置选项（如CAM_CONFIG_OTPS），详见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/env_build.html" target="_top">env_build.xml变量</a></td>
                 </tr>
                 <tr>
                     <td>env_mach_pes.xml</td>
-                    <td>设置组件处理器布局（见<a href="x715.html#case_conf_setting_pes"><em>修改PE布局</em></a>），对负载均衡至关重要（参见<a href="x1516.html">运行负载均衡</a>）</td>
+                    <td>设置组件处理器布局（见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/x715.html#case_conf_setting_pes"><em>修改PE布局</em></a>），对负载均衡至关重要（参见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/x1516.html">运行负载均衡</a>）</td>
                 </tr>
                 <tr>
                     <td>env_run.xml</td>
                     <td>设置运行时参数，包括运行时长、重启频率、耦合器诊断输出及短期/长期归档。完整说明参见：
-                        <a href="../modelnl/env_run.html#run_start" target="_top">运行初始化变量</a>、
-                        <a href="../modelnl/env_run.html#run_stop" target="_top">运行停止变量</a>、
-                        <a href="../modelnl/env_run.html#run_restart" target="_top">运行重启控制变量</a>
+                        <a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/env_run.html#run_start" target="_top">运行初始化变量</a>、
+                        <a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/env_run.html#run_stop" target="_top">运行停止变量</a>、
+                        <a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/env_run.html#run_restart" target="_top">运行重启控制变量</a>
                     </td>
                 </tr>
                 <tr>
@@ -245,7 +245,7 @@ create_newcase \
                 </tr>
                 <tr>
                     <td><i class="emphasis">$<code class="envar">CASE</code>.$<code class="envar">MACH</code><tt class="filename">.l_archive</tt></i></td>
-                    <td>长期归档输出数据的脚本（见<a href="c1113.html#running_ccsm_env_output">长期归档</a>），仅当目标机器支持长期归档时创建</td>
+                    <td>长期归档输出数据的脚本（见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/c1113.html#running_ccsm_env_output">长期归档</a>），仅当目标机器支持长期归档时创建</td>
                 </tr>
                 <tr>
                     <td><i class="emphasis">xmlchange</i></td>
