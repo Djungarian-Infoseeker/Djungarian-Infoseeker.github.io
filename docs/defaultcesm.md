@@ -1,15 +1,6 @@
 <div class="chapter">
   <h1><a name="creating_a_case"></a>第2章 创建和设置案例</h1>
-  <div class="TOC">
-    <dl>
-      <dt><b>目录</b></dt>
-      <dt><a href="c513.html#how_to_create_case">如何创建新案例</a></dt>
-      <dt><a href="x715.html">如何设置案例并自定义PE布局</a></dt>
-      <dt><a href="x836.html">多实例组件功能</a></dt>
-      <dt><a href="x886.html">修改xml文件</a></dt>
-      <dt><a href="x928.html">克隆案例（仅限专家）</a></dt>
-    </dl>
-  </div>
+
   <p>创建<acronym class="acronym">CESM</acronym>实验的第一步是使用<b class="command">create_newcase</b>。</p>
   
   <div class="sect1">
@@ -106,22 +97,6 @@ create_newcase \
     </div>
   </div>
 </div>
-<body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
-  <div class="NAVHEADER">
-    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <th colspan="3" align="center">CESM用户指南(CESM1.2发布系列用户指南)(<a href="ug.pdf" target="_top">PDF</a>)</th>
-        </tr>
-        <tr>
-          <td width="10%" align="left" valign="bottom"><a href="c513.html" accesskey="P">上一页</a></td>
-          <td width="80%" align="center" valign="bottom">第2章 创建和设置案例</td>
-          <td width="10%" align="right" valign="bottom"><a href="x836.html" accesskey="N">下一页</a></td>
-        </tr>
-      </tbody>
-    </table>
-    <hr align="LEFT" width="100%">
-  </div>
   
   <div class="sect1">
     <h1 class="sect1"><a name="how_to_setup_case">如何设置案例并自定义PE布局</a></h1>
@@ -203,40 +178,10 @@ create_newcase \
     </div>
   </div>
   
-  <div class="NAVFOOTER">
-    <hr align="LEFT" width="100%">
-    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td width="33%" align="left" valign="top"><a href="c513.html" accesskey="P">上一页</a></td>
-          <td width="34%" align="center" valign="top"><a href="book1.html" accesskey="H">首页</a></td>
-          <td width="33%" align="right" valign="top"><a href="x836.html" accesskey="N">下一页</a></td>
-        </tr>
-        <tr>
-          <td width="33%" align="left" valign="top">创建和设置案例</td>
-          <td width="34%" align="center" valign="top"><a href="c513.html" accesskey="U">向上</a></td>
-          <td width="33%" align="right" valign="top">多实例组件功能</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+
 </body>
 <body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
-  <div class="NAVHEADER">
-    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <th colspan="3" align="center">CESM用户指南(CESM1.2发布系列用户指南)(<a href="ug.pdf" target="_top">PDF</a>)</th>
-        </tr>
-        <tr>
-          <td width="10%" align="left" valign="bottom"><a href="x715.html" accesskey="P">上一页</a></td>
-          <td width="80%" align="center" valign="bottom">第2章 创建和设置案例</td>
-          <td width="10%" align="right" valign="bottom"><a href="x886.html" accesskey="N">下一页</a></td>
-        </tr>
-      </tbody>
-    </table>
-    <hr align="LEFT" width="100%">
-  </div>
+
 
   <div class="sect1">
     <h1 class="sect1"><a name="multiinst">多实例组件功能</a></h1>
@@ -439,40 +384,9 @@ rof_in_0002
     </ol>
   </div>
 
-  <div class="NAVFOOTER">
-    <hr align="LEFT" width="100%">
-    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td width="33%" align="left" valign="top"><a href="x715.html" accesskey="P">上一页</a></td>
-          <td width="34%" align="center" valign="top"><a href="book1.html" accesskey="H">首页</a></td>
-          <td width="33%" align="right" valign="top"><a href="x886.html" accesskey="N">下一页</a></td>
-        </tr>
-        <tr>
-          <td width="33%" align="left" valign="top">如何设置案例并自定义PE布局</td>
-          <td width="34%" align="center" valign="top"><a href="c513.html" accesskey="U">向上</a></td>
-          <td width="33%" align="right" valign="top">修改xml文件</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </body>
 <body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
-  <div class="NAVHEADER">
-    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <th colspan="3" align="center">CESM用户指南(CESM1.2发布系列用户指南)(<a href="ug.pdf" target="_top">PDF</a>)</th>
-        </tr>
-        <tr>
-          <td width="10%" align="left" valign="bottom"><a href="x836.html" accesskey="P">上一页</a></td>
-          <td width="80%" align="center" valign="bottom">第2章 创建和设置案例</td>
-          <td width="10%" align="right" valign="bottom"><a href="x928.html" accesskey="N">下一页</a></td>
-        </tr>
-      </tbody>
-    </table>
-    <hr align="LEFT" width="100%">
-  </div>
+
 
   <div class="sect1">
     <h1 class="sect1"><a name="modifying_xml">修改xml文件</a></h1>
@@ -526,40 +440,10 @@ xmlchange -id &lt;entry id&gt; -val &lt;name&gt; -file &lt;filename&gt;
     </div>
   </div>
 
-  <div class="NAVFOOTER">
-    <hr align="LEFT" width="100%">
-    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td width="33%" align="left" valign="top"><a href="x836.html" accesskey="P">上一页</a></td>
-          <td width="34%" align="center" valign="top"><a href="book1.html" accesskey="H">首页</a></td>
-          <td width="33%" align="right" valign="top"><a href="x928.html" accesskey="N">下一页</a></td>
-        </tr>
-        <tr>
-          <td width="33%" align="left" valign="top">多实例组件功能</td>
-          <td width="34%" align="center" valign="top"><a href="c513.html" accesskey="U">向上</a></td>
-          <td width="33%" align="right" valign="top">克隆案例（仅限专家）</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+
 </body>
 <body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
-  <div class="NAVHEADER">
-    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <th colspan="3" align="center">CESM用户指南(CESM1.2发布系列用户指南)(<a href="ug.pdf" target="_top">PDF</a>)</th>
-        </tr>
-        <tr>
-          <td width="10%" align="left" valign="bottom"><a href="x886.html" accesskey="P">上一页</a></td>
-          <td width="80%" align="center" valign="bottom">第2章 创建和设置案例</td>
-          <td width="10%" align="right" valign="bottom"><a href="c986.html" accesskey="N">下一页</a></td>
-        </tr>
-      </tbody>
-    </table>
-    <hr align="LEFT" width="100%">
-  </div>
+
 
   <div class="sect1">
     <h1 class="sect1"><a name="cloning_case">克隆案例（仅限专家）</a></h1>
@@ -613,21 +497,5 @@ xmlchange -id &lt;entry id&gt; -val &lt;name&gt; -file &lt;filename&gt;
     <p>另一种复制案例的方法是使用该案例的README.case文件中的信息创建新案例。请注意，这种方法<i class="emphasis">不会</i>保留对原始案例所做的任何本地修改，例如源代码或构建脚本修改；您需要手动导入这些更改。</p>
   </div>
 
-  <div class="NAVFOOTER">
-    <hr align="LEFT" width="100%">
-    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td width="33%" align="left" valign="top"><a href="x886.html" accesskey="P">上一页</a></td>
-          <td width="34%" align="center" valign="top"><a href="book1.html" accesskey="H">首页</a></td>
-          <td width="33%" align="right" valign="top"><a href="c986.html" accesskey="N">下一页</a></td>
-        </tr>
-        <tr>
-          <td width="33%" align="left" valign="top">修改xml文件</td>
-          <td width="34%" align="center" valign="top"><a href="c513.html" accesskey="U">向上</a></td>
-          <td width="33%" align="right" valign="top">构建CESM</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+
 </body>
