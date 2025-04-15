@@ -457,3 +457,177 @@ rof_in_0002
     </table>
   </div>
 </body>
+<body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
+  <div class="NAVHEADER">
+    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th colspan="3" align="center">CESM用户指南(CESM1.2发布系列用户指南)(<a href="ug.pdf" target="_top">PDF</a>)</th>
+        </tr>
+        <tr>
+          <td width="10%" align="left" valign="bottom"><a href="x836.html" accesskey="P">上一页</a></td>
+          <td width="80%" align="center" valign="bottom">第2章 创建和设置案例</td>
+          <td width="10%" align="right" valign="bottom"><a href="x928.html" accesskey="N">下一页</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr align="LEFT" width="100%">
+  </div>
+
+  <div class="sect1">
+    <h1 class="sect1"><a name="modifying_xml">修改xml文件</a></h1>
+    
+    <p>
+      您可以直接编辑xml文件来更改变量值。然而，最好使用$<code class="envar">CASEROOT</code>目录中的<b class="command">xmlchange</b>来修改xml变量，因为它在更改xml文件中的值时会执行变量错误检查。要调用<b class="command">xmlchange</b>：
+    </p>
+    
+    <table border="0" bgcolor="#E0E0E0" width="100%">
+      <tbody>
+        <tr>
+          <td>
+            <pre class="screen">
+xmlchange &lt;entry id&gt;=&lt;value&gt;
+-- 或者 --
+xmlchange -id &lt;entry id&gt; -val &lt;name&gt; -file &lt;filename&gt;
+          [-help] [-silent] [-verbose] [-warn] [-append] [-file]
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="variablelist">
+      <dl>
+        <dt><code class="option">-id</code></dt>
+        <dd><p>要更改的xml变量名称（必需）</p></dd>
+        
+        <dt><code class="option">-val</code></dt>
+        <dd>
+          <p>与-id参数关联的变量的预期值（必需）</p>
+          <div class="note">
+            <blockquote class="note">
+              <p><b>注意：</b>如果您想在-val选项提供的字符串中包含单引号（"'"，也称为撇号），必须将其指定为"&amp;apos;"。</p>
+            </blockquote>
+          </div>
+        </dd>
+        
+        <dt><code class="option">-file</code></dt>
+        <dd><p>要编辑的xml文件（可选）</p></dd>
+        
+        <dt><code class="option">-silent</code></dt>
+        <dd><p>启用静默模式。仅会发出致命消息（可选）</p></dd>
+        
+        <dt><code class="option">-verbose</code></dt>
+        <dd><p>回显<b class="command">create_newcase</b>和<b class="command">cesm_setup</b>所做的所有设置（可选）</p></dd>
+        
+        <dt><code class="option">-help</code></dt>
+        <dd><p>将用法信息打印到STDOUT（可选）</p></dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="NAVFOOTER">
+    <hr align="LEFT" width="100%">
+    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td width="33%" align="left" valign="top"><a href="x836.html" accesskey="P">上一页</a></td>
+          <td width="34%" align="center" valign="top"><a href="book1.html" accesskey="H">首页</a></td>
+          <td width="33%" align="right" valign="top"><a href="x928.html" accesskey="N">下一页</a></td>
+        </tr>
+        <tr>
+          <td width="33%" align="left" valign="top">多实例组件功能</td>
+          <td width="34%" align="center" valign="top"><a href="c513.html" accesskey="U">向上</a></td>
+          <td width="33%" align="right" valign="top">克隆案例（仅限专家）</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+<body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
+  <div class="NAVHEADER">
+    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th colspan="3" align="center">CESM用户指南(CESM1.2发布系列用户指南)(<a href="ug.pdf" target="_top">PDF</a>)</th>
+        </tr>
+        <tr>
+          <td width="10%" align="left" valign="bottom"><a href="x886.html" accesskey="P">上一页</a></td>
+          <td width="80%" align="center" valign="bottom">第2章 创建和设置案例</td>
+          <td width="10%" align="right" valign="bottom"><a href="c986.html" accesskey="N">下一页</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr align="LEFT" width="100%">
+  </div>
+
+  <div class="sect1">
+    <h1 class="sect1"><a name="cloning_case">克隆案例（仅限专家）</a></h1>
+    
+    <p>这是一个为专家用户提供的高级功能。如果您是新用户，请跳过本节。</p>
+    
+    <p>如果您有权访问要克隆的运行，<b class="command">create_clone</b>命令将创建一个新案例，同时保留您要克隆案例的本地修改。您可以在$<code class="envar">CCSMROOT</code>或要创建新案例的目录中运行<b class="command">create_clone</b>实用程序。它具有以下参数：</p>
+    
+    <div class="variablelist">
+      <dl>
+        <dt><code class="option">-case</code></dt>
+        <dd><p>新案例的名称或路径</p></dd>
+        
+        <dt><code class="option">-clone</code></dt>
+        <dd><p>要克隆案例的完整路径名</p></dd>
+        
+        <dt><code class="option">-silent</code></dt>
+        <dd><p>启用静默模式。仅会发出致命消息</p></dd>
+        
+        <dt><code class="option">-verbose</code></dt>
+        <dd><p>回显所有设置</p></dd>
+        
+        <dt><code class="option">-help</code></dt>
+        <dd><p>打印使用说明</p></dd>
+      </dl>
+    </div>
+    
+    <p>以下是使用<b class="command">create_clone</b>的最简单示例：</p>
+    
+    <table border="0" bgcolor="#E0E0E0" width="100%">
+      <tbody>
+        <tr>
+          <td>
+            <pre class="screen">
+&gt; cd $CCSMROOT/scripts
+&gt; create_clone -case $CASEROOT -clone $CLONEROOT 
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p><b class="command">create_clone</b>将保留在user_nl_xxxx文件中所做的任何本地namelist修改以及SourceMods树中的任何源代码修改。请注意，新案例目录将与克隆案例目录<i class="emphasis">完全相同</i>，除了原始克隆脚本$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.build、$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.clean_build、$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.run和$<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.l_archive将在新案例中具有新名称。</p>
+    
+    <div class="note">
+      <blockquote class="note">
+        <p><b>重要提示：</b>不要更改<tt class="filename">env_case.xml</tt>文件中的任何内容。$<code class="envar">CASEROOT</code>/目录现在将显示为刚刚运行<b class="command">create_newcase</b>的状态——除了保留对env_*文件的本地修改。</p>
+      </blockquote>
+    </div>
+    
+    <p>另一种复制案例的方法是使用该案例的README.case文件中的信息创建新案例。请注意，这种方法<i class="emphasis">不会</i>保留对原始案例所做的任何本地修改，例如源代码或构建脚本修改；您需要手动导入这些更改。</p>
+  </div>
+
+  <div class="NAVFOOTER">
+    <hr align="LEFT" width="100%">
+    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td width="33%" align="left" valign="top"><a href="x886.html" accesskey="P">上一页</a></td>
+          <td width="34%" align="center" valign="top"><a href="book1.html" accesskey="H">首页</a></td>
+          <td width="33%" align="right" valign="top"><a href="c986.html" accesskey="N">下一页</a></td>
+        </tr>
+        <tr>
+          <td width="33%" align="left" valign="top">修改xml文件</td>
+          <td width="34%" align="center" valign="top"><a href="c513.html" accesskey="U">向上</a></td>
+          <td width="33%" align="right" valign="top">构建CESM</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
