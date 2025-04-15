@@ -414,20 +414,7 @@ create_newcase \
         </div>
     </div>
 </div>
-<body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
-<div class="NAVHEADER">
-<table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-<tbody>
-<tr><th colspan="3" align="center">CESM用户指南（CESM1.2发行系列用户指南）（<a href="ug.pdf" target="_top">PDF</a>）</th></tr>
-<tr>
-<td width="10%" align="left" valign="bottom"><a href="x715.html" accesskey="P">上一页</a></td>
-<td width="80%" align="center" valign="bottom">第二章 创建与设置案例</td>
-<td width="10%" align="right" valign="bottom"><a href="x886.html" accesskey="N">下一页</a></td>
-</tr>
-</tbody>
-</table>
-<hr align="LEFT" width="100%">
-</div>
+
 
 <div class="sect1">
 <h1 class="sect1"><a name="multiinst">多实例组件功能</a></h1>
@@ -607,23 +594,7 @@ rof_in_0002
 </ol>
 </div>
 
-<div class="NAVFOOTER">
-<hr align="LEFT" width="100%">
-<table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-<tbody>
-<tr>
-<td width="33%" align="left" valign="top"><a href="x715.html" accesskey="P">上一页</a></td>
-<td width="34%" align="center" valign="top"><a href="book1.html" accesskey="H">首页</a></td>
-<td width="33%" align="right" valign="top"><a href="x886.html" accesskey="N">下一页</a></td>
-</tr>
-<tr>
-<td width="33%" align="left" valign="top">案例设置与PE布局定制</td>
-<td width="34%" align="center" valign="top"><a href="c513.html" accesskey="U">向上</a></td>
-<td width="33%" align="right" valign="top">修改xml文件</td>
-</tr>
-</tbody>
-</table>
-</div>
+
 </body>
 <div class="sect1"><h1 class="sect1"><a name="modifying_xml">修改xml文件</a></h1><p>
 您可以直接编辑xml文件来修改变量值。但建议使用<b class="command">xmlchange</b>工具在$<code class="envar">CASEROOT</code>目录下操作，因为该工具会在修改xml文件值时执行变量错误检查。调用<b class="command">xmlchange</b>的方式如下：
