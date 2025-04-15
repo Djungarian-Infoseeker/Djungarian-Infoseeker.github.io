@@ -296,14 +296,14 @@ create_newcase \
         <ul>
             <li><p>若不存在则创建Macros文件。调用<b class="command">cesm_setup -clean</b>不会删除此文件。</p></li>
             <li><p>创建<tt class="filename">user_nl_xxx</tt>文件（xxx表示特定案例的组件集合）。例如对于B_组件集，xxx可能包含[cam,clm,rtm,cice,pop2,cpl]。<i class="emphasis">在CESM1.2中，这些文件是用户修改组件namelist的唯一位置。</i> <b class="command">cesm_setup -clean</b>不会删除这些文件。</p></li>
-            <li><p>创建<tt class="filename">$CASEROOT/$CASE.run</tt>文件用于运行CESM模型并执行短期数据归档（参见<a href="c1113.html">运行CESM</a>）。该文件包含在指定机器上按PE布局运行模型所需的批处理指令。<i class="emphasis">必须</i>在调用<b class="command">cesm_setup</b><i class="emphasis">之前</i>完成对<tt class="filename">env_mach_pes.xml</tt>的修改。最简单情况下可不修改该文件直接使用默认设置。<b class="command">cesm_setup</b>必须在$<code class="envar">CASEROOT</code>目录执行。</p></li>
+            <li><p>创建<tt class="filename">$CASEROOT/$CASE.run</tt>文件用于运行CESM模型并执行短期数据归档（参见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/c1113.html">运行CESM</a>）。该文件包含在指定机器上按PE布局运行模型所需的批处理指令。<i class="emphasis">必须</i>在调用<b class="command">cesm_setup</b><i class="emphasis">之前</i>完成对<tt class="filename">env_mach_pes.xml</tt>的修改。最简单情况下可不修改该文件直接使用默认设置。<b class="command">cesm_setup</b>必须在$<code class="envar">CASEROOT</code>目录执行。</p></li>
         </ul>
 
         <p><b class="command">cesm_setup -clean</b>会将<tt class="filename">$CASEROOT/$CASE.run</tt>和<tt class="filename">env_mach_pes.xml</tt>副本移动到<tt class="filename">MachinesHist</tt>时间戳目录。此时$<code class="envar">CASEROOT</code>目录状态等同于刚执行<b class="command">create_newcase</b>后的状态（但已创建的Macros和user_nl_xxx文件会保留，<tt class="filename">env_*.xml</tt>的本地修改也会保留）。完成对<tt class="filename">env_mach_pes.xml</tt>的进一步修改后，必须重新运行<b class="command">cesm_setup</b>才能构建和运行模型。</p>
 
         <p>若在调用<b class="command">cesm_setup</b>后需要修改<tt class="filename">env_mach_pes.xml</tt>变量，必须先执行<b class="command">cesm_setup -clean</b>再运行<b class="command">cesm_setup</b>。</p>
 
-        <p>下表汇总了<b class="command">cesm_setup</b>创建的新目录和文件。更多案例目录文件说明参见<a href="x2043.html">第6章<em>案例目录结构详解</em></a>。</p>
+        <p>下表汇总了<b class="command">cesm_setup</b>创建的新目录和文件。更多案例目录文件说明参见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/x2043.html">第6章<em>案例目录结构详解</em></a>。</p>
 
         <div class="table">
             <a name="AEN761"></a>
@@ -343,7 +343,7 @@ create_newcase \
 
     <div class="sect2">
         <h2 class="sect2"><a name="case_conf_setting_pes">修改PE布局</a></h2>
-        <p><a href="../modelnl/env_mach_pes.html" target="_top"><tt class="filename">env_mach_pes.xml</tt></a>变量决定各组件的处理器数量、实例数量以及在硬件处理器上的分布方式。<a href="x1516.html">负载均衡</a>优化通常需要定制处理器(PE)布局。CESM在组件硬件分配方面具有高度灵活性，通常大气(atm)、陆地(lnd)、海洋(ocn)、海冰(ice)、冰盖(glc)、河流(rof)和耦合器(cpl)组件可运行在重叠或独立的处理器上。每个组件关联独立的MPI通信域，而驱动运行在所有处理器的合集上控制执行序列和硬件分区。组件处理器布局通过三个参数设置：MPI任务数、每个任务的OpenMP线程数、以及全局MPI任务中的起始处理器编号。</p>
+        <p><a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/env_mach_pes.html" target="_top"><tt class="filename">env_mach_pes.xml</tt></a>变量决定各组件的处理器数量、实例数量以及在硬件处理器上的分布方式。<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/x1516.html">负载均衡</a>优化通常需要定制处理器(PE)布局。CESM在组件硬件分配方面具有高度灵活性，通常大气(atm)、陆地(lnd)、海洋(ocn)、海冰(ice)、冰盖(glc)、河流(rof)和耦合器(cpl)组件可运行在重叠或独立的处理器上。每个组件关联独立的MPI通信域，而驱动运行在所有处理器的合集上控制执行序列和硬件分区。组件处理器布局通过三个参数设置：MPI任务数、每个任务的OpenMP线程数、以及全局MPI任务中的起始处理器编号。</p>
 
         <p>例如以下<tt class="filename">env_mach_pes.xml</tt>设置：</p>
         <table border="0" bgcolor="#E0E0E0" width="100%">
@@ -409,7 +409,7 @@ create_newcase \
 
         <div class="note">
             <blockquote class="note">
-                <p><b>注意：</b>调用"./cesm_setup"后<i class="emphasis">不可</i>直接修改<tt class="filename">env_mach_pes.xml</tt>，必须先执行"cesm_setup -clean"。修改PE布局示例参见<a href="x1927.html">第6章<em>如何修改处理器数量和组件布局？</em></a></p>
+                <p><b>注意：</b>调用"./cesm_setup"后<i class="emphasis">不可</i>直接修改<tt class="filename">env_mach_pes.xml</tt>，必须先执行"cesm_setup -clean"。修改PE布局示例参见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/x1927.html">第6章<em>如何修改处理器数量和组件布局？</em></a></p>
             </blockquote>
         </div>
     </div>
@@ -651,4 +651,3 @@ $<code class="envar">CASEROOT</code>.$<code class="envar">MACH</code>.l_archive�
 需手动迁移这些变更。</p></div>
 
 
-</body>
