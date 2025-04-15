@@ -149,20 +149,20 @@ create_newcase \
                 <td>
                     <pre class="screen"> 
 > cd $<code class="envar">CCSMROOT</code>/scripts 
-> create_newcase -case ~/cesm/example1 \ 
+> create_newcase -case /work/home/yinjiewang/underthesis/default_cesm \ 
   -compset B_1850_CAM5_CN \ 
   -res ne30np4_gx1v6 \
-  -mach yellowstone
+  -mach sugon
                     </pre>
                 </td>
             </tr>
         </tbody>
     </table>
     <p>
-        此示例创建$<code class="envar">CASEROOT</code>目录<tt class="filename">~/cesm1/example1</tt>
-        （案例名"example1"），模型分辨率为0.9x1.25_gx1v6（1度大气/陆地网格配合1度海洋/海冰网格，
+        此示例创建$<code class="envar">CASEROOT</code>目录<tt class="filename">~/work/home/yinjiewang/underthesis/default_cesm</tt>
+        （案例名"default_cesm"），模型分辨率为0.9x1.25_gx1v6（1度大气/陆地网格配合1度海洋/海冰网格，
         使用gx1v6海洋掩膜）。组件集B_1850_CN采用全活跃组件配置模拟现代气候。
-        完整示例参见<a href="c1868.html#use_case_basic">基础案例</a>。
+        完整示例参见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/c1868.html#use_case_basic">基础案例</a>。
         案例名可包含字母、数字、"."和"_"。注意：若目录已存在，<b class="command">create_newcase</b>
         将显示警告并中止。
     </p>
