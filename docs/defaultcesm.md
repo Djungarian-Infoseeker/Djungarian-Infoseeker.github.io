@@ -72,7 +72,7 @@ w%  = 波浪组件网格（CESM1.2系列中不相关）
 
     <p>该网格的短名称和别名分别为<strong>ne30np4_gx1v6</strong>和<strong>ne30_g16</strong>，对应CESM1.1系列的长名称和短名称。这三种网格名称（长名称、短名称或别名）均可作为create_newcase的输入参数。</p>
 
-    <p>现在用户可以更简单地定义新网格（参见"添加用户自定义网格"章节）。所有开箱即用的CESM1.2系列模型网格都列在<a href="#">网格列表</a>中。点击任意长名称将弹出显示该模型网格详细信息的对话框。</p>
+    <p>现在用户可以更简单地定义新网格（参见"添加用户自定义网格"章节）。所有开箱即用的CESM1.2系列模型网格都列在<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/compsets.html">网格列表</a>中。点击任意长名称将弹出显示该模型网格详细信息的对话框。</p>
 
     <h3>组件网格命名规范</h3>
     <p>（如大气网格或海洋网格）采用以下命名约定：</p>
@@ -267,7 +267,7 @@ create_newcase \
         </table>
     </div>
     <p>
-        关于案例目录结构的完整说明，参见<a href="x2043.html">第6章<em>案例目录结构详解</em></a>
+        关于案例目录结构的完整说明，参见<a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide/x2043.html">第6章<em>案例目录结构详解</em></a>
     </p>
     <p>
         <tt class="filename">env_*.xml</tt>文件中的XML变量会通过<b class="command">$<code class="envar">CASEROOT</code>/Tools/ccsm_getenv</b>
@@ -280,10 +280,10 @@ create_newcase \
     </div>
     <p>
         $<code class="envar">CASEROOT</code>中XML文件的完整变量列表参见：
-        <a href="../modelnl/env_case.html" target="_top">案例变量</a>、
-        <a href="../modelnl/env_mach_pes.html" target="_top">PE布局变量</a>、
-        <a href="../modelnl/env_build.html" target="_top">构建时变量</a>、
-        <a href="../modelnl/env_run.html" target="_top">运行时变量</a>
+        <a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/env_case.html" target="_top">案例变量</a>、
+        <a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/env_mach_pes.html" target="_top">PE布局变量</a>、
+        <a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/env_build.html" target="_top">构建时变量</a>、
+        <a href="https://www2.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/env_run.html" target="_top">运行时变量</a>
     </p>
 </div>
   
