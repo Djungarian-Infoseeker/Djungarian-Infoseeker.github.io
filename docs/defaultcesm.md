@@ -6,7 +6,7 @@
   <div class="sect1">
     <h1 class="sect1"><a name="how_to_create_case">如何创建新案例</a></h1>
     <p>
-      CESM支持开箱即用的<a href="../modelnl/compsets.html" target="_top">组件集</a>、<a href="../modelnl/grid.html" target="_top">模型网格</a>和<a href="../modelnl/machines.html" target="_top">硬件平台</a>。组件集（通常称为compsets）既定义了特定CESM配置中使用的模型组件，<i class="emphasis">也</i>定义了该配置特有的组件特定namelist或配置设置。
+      CESM支持开箱即用的组件集、模型网格和硬件平台。组件集（通常称为compset）既定义了特定CESM配置中将使用的具体模型组件，也定义了该配置特有的组件专属namelist或参数设置。在CESM1.2系列版本（从CESM1.2.0开始）中，组件集和分辨率已进行重大调整，以应对日益增长的模型复杂性需求。现在，组件集和模型网格都关联三个名称：新的长名称、新的短名称（向后兼容旧版CESM1.1系列的长名称）以及新的别名（向后兼容旧版CESM1.1系列的短名称）。
     </p>
     
     <div class="sect2">
@@ -33,7 +33,7 @@ BGC  = 可选的BGC场景
           </tr>
         </tbody>
       </table>
-      <p>例如，长名称20TR_CAM4_CLM40%CN_CICE_POP2_RTM_SGLC_SWAV表示运行CAM、CLM、RTM、CICE、POP2等预报组件，以及SGLC和SWAV存根组件。</p>
+      <p>举例来说，新的长名称"20TR_CAM4_CLM40%CN_CICE_POP2_RTM_SGLC_SWAV"表示运行包含预报型组件CAM、CLM、RTM、CICE、POP2以及存根组件SGLC和SWAV的配置。该特定配置将采用cam5物理过程、clm4.0物理过程（含clm4.0碳氮循环）、默认预报型cice和pop2，进行1850至2000年的瞬变模拟。该组件集对应的短名称和别名分别为"B_1850-2000_CAM5_CN"和"B20TRC5CN"，这两个名称分别对应CESM1.1系列的长名称和短名称。这三个组件集名称（长名称、短名称或别名）均可作为create_newcase的输入参数。现在创建自定义组件集也变得更加简便（参见"如何创建自定义组件集？"）。所有开箱即用的CESM1.2系列组件集都列在"组件集"列表中，点击任意长名称会弹出显示该组件配置详细信息的对话框。</p>
     </div>
     
     <div class="sect2">
@@ -179,7 +179,7 @@ create_newcase \
   </div>
   
 
-</body>
+
 <body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
 
 
