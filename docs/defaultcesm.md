@@ -85,10 +85,10 @@ create_newcase \
             <td>
               <pre class="screen"> 
 &gt; cd $CCSMROOT/scripts 
-&gt; create_newcase -case ~/cesm/example1 \ 
+&gt; create_newcase -case /work/home/yinjiewang/underthesis/default_cesm \ 
   -compset B_1850_CAM5_CN \ 
   -res ne30np4_gx1v6 \
-  -mach yellowstone
+  -mach sugon
               </pre>
             </td>
           </tr>
