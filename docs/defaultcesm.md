@@ -288,89 +288,132 @@ create_newcase \
 </div>
   
   <div class="sect1">
-    <h1 class="sect1"><a name="how_to_setup_case">如何设置案例并自定义PE布局</a></h1>
-    PE布局（Processor Element Layout）​ 指的是如何将不同的模型组件（如大气、海洋、陆面、海冰等）分配到计算节点的处理器（CPU/GPU）上，以优化计算效率和负载均衡。
-    <div class="sect2">
-      <h2 class="sect2"><a name="AEN717">调用<b class="command">cesm_setup</b></a></h2>
-      <p><b class="command">cesm_setup</b>命令执行以下操作：</p>
-      <ul>
-        <li><p>如果不存在则创建Macros文件。调用<b class="command">cesm_setup -clean</b>不会删除此文件。</p></li>
-        <li><p>创建<tt class="filename">user_nl_xxx</tt>文件(其中xxx表示针对特定案例的组件集合)。<i class="emphasis">在CESM1.2中，这些文件现在是所有用户组件namelist修改的地方。</i></p></li>
-        <li><p>创建<tt class="filename">$CASEROOT/$CASE.run</tt>文件，该文件运行<acronym class="acronym">CESM</acronym>模型并执行输出数据的短期归档。</p></li>
-      </ul>
-      
-      <p><b class="command">cesm_setup -clean</b>会将<tt class="filename">$CASEROOT/$CASE.run</tt>和<tt class="filename">env_mach_pes.xml</tt>的副本移动到<tt class="filename">MachinesHist</tt>中的时间戳目录。</p>
-      
-      <div class="table">
-        <p><b>表2-2. 调用<b class="command">cesm_setup</b>的结果</b></p>
-        <table border="1" bgcolor="#E0E0E0" cellspacing="0" cellpadding="4" class="CALSTABLE">
-          <thead>
-            <tr>
-              <th>文件或目录</th>
-              <th>描述</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Macros</td>
-              <td>包含目标平台/编译器的机器特定makefile指令的文件</td>
-            </tr>
-            <tr>
-              <td>user_nl_xxx[_NNNN]文件</td>
-              <td>用于所有用户对组件namelist修改的文件</td>
-            </tr>
-            <tr>
-              <td>$CASE.run</td>
-              <td>包含在所需机器上运行模型的必要批处理指令的文件</td>
-            </tr>
-            <tr>
-              <td>CaseDocs/</td>
-              <td>包含运行的所有组件namelist的目录(仅供参考)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <h1 class="sect1"><a name="how_to_setup_case">案例设置与PE布局定制</a></h1>
     
     <div class="sect2">
-      <h2 class="sect2"><a name="case_conf_setting_pes">更改PE布局</a></h2>
-      <p><a href="../modelnl/env_mach_pes.html" target="_top"><tt class="filename">env_mach_pes.xml</tt></a>变量确定每个组件的处理器数量、每个组件的实例数量以及组件在硬件处理器上的布局。</p>
-      
-      <p>示例设置：</p>
-      <table border="0" bgcolor="#E0E0E0" width="100%">
-        <tbody>
-          <tr>
-            <td>
-              <pre class="screen">
+        <h2 class="sect2"><a name="AEN717">调用<b class="command">cesm_setup</b></a></h2>
+        <p><b class="command">cesm_setup</b>命令执行以下操作：</p>
+        <ul>
+            <li><p>若不存在则创建Macros文件。调用<b class="command">cesm_setup -clean</b>不会删除此文件。</p></li>
+            <li><p>创建<tt class="filename">user_nl_xxx</tt>文件（xxx表示特定案例的组件集合）。例如对于B_组件集，xxx可能包含[cam,clm,rtm,cice,pop2,cpl]。<i class="emphasis">在CESM1.2中，这些文件是用户修改组件namelist的唯一位置。</i> <b class="command">cesm_setup -clean</b>不会删除这些文件。</p></li>
+            <li><p>创建<tt class="filename">$CASEROOT/$CASE.run</tt>文件用于运行CESM模型并执行短期数据归档（参见<a href="c1113.html">运行CESM</a>）。该文件包含在指定机器上按PE布局运行模型所需的批处理指令。<i class="emphasis">必须</i>在调用<b class="command">cesm_setup</b><i class="emphasis">之前</i>完成对<tt class="filename">env_mach_pes.xml</tt>的修改。最简单情况下可不修改该文件直接使用默认设置。<b class="command">cesm_setup</b>必须在$<code class="envar">CASEROOT</code>目录执行。</p></li>
+        </ul>
+
+        <p><b class="command">cesm_setup -clean</b>会将<tt class="filename">$CASEROOT/$CASE.run</tt>和<tt class="filename">env_mach_pes.xml</tt>副本移动到<tt class="filename">MachinesHist</tt>时间戳目录。此时$<code class="envar">CASEROOT</code>目录状态等同于刚执行<b class="command">create_newcase</b>后的状态（但已创建的Macros和user_nl_xxx文件会保留，<tt class="filename">env_*.xml</tt>的本地修改也会保留）。完成对<tt class="filename">env_mach_pes.xml</tt>的进一步修改后，必须重新运行<b class="command">cesm_setup</b>才能构建和运行模型。</p>
+
+        <p>若在调用<b class="command">cesm_setup</b>后需要修改<tt class="filename">env_mach_pes.xml</tt>变量，必须先执行<b class="command">cesm_setup -clean</b>再运行<b class="command">cesm_setup</b>。</p>
+
+        <p>下表汇总了<b class="command">cesm_setup</b>创建的新目录和文件。更多案例目录文件说明参见<a href="x2043.html">第6章<em>案例目录结构详解</em></a>。</p>
+
+        <div class="table">
+            <a name="AEN761"></a>
+            <p><b>表2-2. 调用<b class="command">cesm_setup</b>生成的内容</b></p>
+            <table border="1" bgcolor="#E0E0E0" cellspacing="0" cellpadding="4" class="CALSTABLE">
+                <thead>
+                    <tr>
+                        <th>文件/目录</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Macros</td>
+                        <td>包含目标平台/编译器特定make指令的文件。<i class="emphasis">仅在首次</i>调用<b class="command">cesm_setup</b>时创建。<b class="command">cesm_setup -clean</b>不会删除已创建的Macros文件。</td>
+                    </tr>
+                    <tr>
+                        <td>user_nl_xxx[_NNNN]文件</td>
+                        <td>用户修改组件namelist的文件。xxx表示目标组件集合，NNNN范围0001到该组件的实例数（参见<a href="c1868.html">多实例</a>说明）。例如B_组件集的xxx为[cam,clm,rtm,cice,pop2,cpl]。默认单实例情况下文件名不包含NNNN。每种user_nl文件仅创建一次。<b class="command">cesm_setup -clean</b>不会删除这些文件。修改<tt class="filename">env_mach_pes.xml</tt>中的实例数只会新增user_nl文件到$<code class="envar">CASEROOT</code>。</td>
+                    </tr>
+                    <tr>
+                        <td>$CASE.run</td>
+                        <td>包含按PE布局在目标机器运行CESM模型所需的批处理指令，同时处理短期数据归档（参见<a href="c1113.html">运行CESM</a>）。</td>
+                    </tr>
+                    <tr>
+                        <td>CaseDocs/</td>
+                        <td>存放运行时所有组件namelist的目录。这些文件<i class="emphasis">仅供参考不可编辑</i>，构建和运行时会被覆盖。</td>
+                    </tr>
+                    <tr>
+                        <td>env_derived</td>
+                        <td>包含从其他设置派生的环境变量。<i class="emphasis">禁止</i>用户修改。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="sect2">
+        <h2 class="sect2"><a name="case_conf_setting_pes">修改PE布局</a></h2>
+        <p><a href="../modelnl/env_mach_pes.html" target="_top"><tt class="filename">env_mach_pes.xml</tt></a>变量决定各组件的处理器数量、实例数量以及在硬件处理器上的分布方式。<a href="x1516.html">负载均衡</a>优化通常需要定制处理器(PE)布局。CESM在组件硬件分配方面具有高度灵活性，通常大气(atm)、陆地(lnd)、海洋(ocn)、海冰(ice)、冰盖(glc)、河流(rof)和耦合器(cpl)组件可运行在重叠或独立的处理器上。每个组件关联独立的MPI通信域，而驱动运行在所有处理器的合集上控制执行序列和硬件分区。组件处理器布局通过三个参数设置：MPI任务数、每个任务的OpenMP线程数、以及全局MPI任务中的起始处理器编号。</p>
+
+        <p>例如以下<tt class="filename">env_mach_pes.xml</tt>设置：</p>
+        <table border="0" bgcolor="#E0E0E0" width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="screen">
 &lt;entry id="NTASKS_OCN" value="128" /&gt;
 &lt;entry id="NTHRDS_OCN" value="1" /&gt;
 &lt;entry id="ROOTPE_OCN" value="0" /&gt;
-              </pre>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <p>重要注意事项：</p>
-      <ul>
-        <li><p>NTASKS必须大于或等于1(即使对于非活动组件)</p></li>
-        <li><p>NTHRDS必须大于或等于1</p></li>
-        <li><p>分配给组件的硬件处理器总数为NTASKS * NTHRDS</p></li>
-        <li><p>耦合器处理器输入指定用于耦合器计算的pes</p></li>
-      </ul>
-      
-      <div class="note">
-        <blockquote class="note">
-          <p><b>注意：</b>在调用"./cesm_setup"后，<i class="emphasis">不能</i>修改<tt class="filename">env_mach_pes.xml</tt>，除非先调用"cesm_setup -clean"。</p>
-        </blockquote>
-      </div>
+                        </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>将使海洋组件运行在128个硬件处理器上（128个MPI任务，单线程/任务），从全局MPI任务0开始。</p>
+
+        <p>再看以下示例：</p>
+        <table border="0" bgcolor="#E0E0E0" width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="screen">
+&lt;entry id="NTASKS_ATM" value="16" /&gt;
+&lt;entry id="NTHRDS_ATM" value="4" /&gt;
+&lt;entry id="ROOTPE_ATM" value="32" /&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>大气组件将使用64个硬件处理器（16个MPI任务，每个任务4线程），从全局MPI任务32开始。<tt class="filename">env_mach_pes.xml</tt>中每个组件都有NTASKS、NTHRDS和ROOTPE参数，需注意：</p>
+        <ul>
+            <li><p>NTASKS必须≥1（即使对于非活跃的存根组件）</p></li>
+            <li><p>NTHRDS必须≥1。设为1通常表示关闭该组件的线程并行。绝对不可设为0</p></li>
+            <li><p>组件占用的硬件处理器总数=NTASKS * NTHRDS</p></li>
+            <li><p>耦合器参数指定用于映射、合并、诊断和通量计算的处理器，与运行在所有处理器上管理并发和序列的驱动不同</p></li>
+            <li><p>起始处理器编号是相对于全局MPI通信域而非硬件处理器计数（见下例）</p></li>
+            <li><p>处理器布局不影响科学计算。执行序列由驱动固定，改变布局不会改变内在耦合延迟或序列。<i class="emphasis">重要提示</i>：全活跃配置中大气组件永远不会与陆地/海冰组件并发运行，因此没有理由不让大气与陆地/海冰组件重叠。在此约束之外，陆地、海冰、耦合器和海洋模型可以并发运行，海洋也可与大气并发</p></li>
+            <li><p>若所有组件的NTASKS、NTHRDS和ROOTPE相同，则所有组件将顺序运行在相同硬件处理器上</p></li>
+        </ul>
+
+        <p>起始处理器编号是相对于全局MPI通信域而非硬件处理器计数。例如：</p>
+        <table border="0" bgcolor="#E0E0E0" width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="screen">
+&lt;entry id="NTASKS_ATM" value="16" /&gt;
+&lt;entry id="NTHRDS_ATM" value="4" /&gt;
+&lt;entry id="ROOTPE_ATM" value="0" /&gt;
+&lt;entry id="NTASKS_OCN" value="64" /&gt;
+&lt;entry id="NTHRDS_OCN" value="1" /&gt;
+&lt;entry id="ROOTPE_OCN" value="16" /&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>大气和海洋并发运行，各占64个处理器：大气运行在MPI任务0-15（前64个硬件处理器，16×4分布），海洋运行在MPI任务16-79（后续64个处理器）。批处理脚本($CASE.run)会自动申请128个硬件处理器。</p>
+
+        <p>若将ROOTPE_OCN设为64，则会申请176个处理器：大气占用前64个（MPI任务0-15），海洋占用113-176（MPI任务64-127），而65-112号处理器处于空闲状态。</p>
+
+        <div class="note">
+            <blockquote class="note">
+                <p><b>注意：</b>调用"./cesm_setup"后<i class="emphasis">不可</i>直接修改<tt class="filename">env_mach_pes.xml</tt>，必须先执行"cesm_setup -clean"。修改PE布局示例参见<a href="x1927.html">第6章<em>如何修改处理器数量和组件布局？</em></a></p>
+            </blockquote>
+        </div>
     </div>
-  </div>
-  
-
-
-<body class="sect1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
-
+</div>
 
   <div class="sect1">
     <h1 class="sect1"><a name="multiinst">多实例组件功能</a></h1>
