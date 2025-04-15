@@ -59,7 +59,44 @@ w%  = 波浪组件网格（CESM1.2系列中不相关）
         </tbody>
       </table>
     </div>
+    <body>
+    <p>例如，新的长名称<strong>a%ne30np4_l%ne30np4_oi%gx1v6_r%r05_m%gx1v6_g%null_w%null</strong>，表示运行以下配置：</p>
     
+    <ul>
+        <li>大气和陆地网格：ne30np4谱元1度网格</li>
+        <li>海洋/海冰网格：gx1v6格陵兰极地1度网格</li>
+        <li>河流路由网格：1/2度网格</li>
+        <li>波浪和内部冰盖(CISM)网格：空值(null)</li>
+        <li>海陆掩膜：由gx1v6海洋掩膜确定</li>
+    </ul>
+
+    <p>该网格的短名称和别名分别为<strong>ne30np4_gx1v6</strong>和<strong>ne30_g16</strong>，对应CESM1.1系列的长名称和短名称。这三种网格名称（长名称、短名称或别名）均可作为create_newcase的输入参数。</p>
+
+    <p>现在用户可以更简单地定义新网格（参见"添加用户自定义网格"章节）。所有开箱即用的CESM1.2系列模型网格都列在<a href="#">网格列表</a>中。点击任意长名称将弹出显示该模型网格详细信息的对话框。</p>
+
+    <h3>组件网格命名规范</h3>
+    <p>（如大气网格或海洋网格）采用以下命名约定：</p>
+
+    <dl>
+        <dt>"[dlat]x[dlon]"</dt>
+        <dd>规则经纬度有限体积网格，其中dlat和dlon表示近似网格间距。缩写形式为"fnn"，其中nn通常是表示分辨率的一对数字。例如1.9x2.5或f19表示约"2度"的有限体积网格。注意CAM内部对此类网格使用[nlat]x[nlon]的命名约定。</dd>
+
+        <dt>"Tnn"</dt>
+        <dd>谱变换经纬度网格，其中nn表示分辨率的谱截断值。缩写名称相同。例如T85。</dd>
+
+        <dt>"ne[X]np[Y]"</dt>
+        <dd>立方球面网格，其中X和Y为整数。缩写通常为ne[X]。例如ne30np4或ne30。</dd>
+
+        <dt>"pt1"</dt>
+        <dd>单点网格。</dd>
+
+        <dt>"gx[D]v[n]"</dt>
+        <dd>偏移极地网格，其中D表示近似分辨率（度），n表示网格版本。缩写通常为g[D][n]。例如gx1v6或g16表示约1度分辨率的网格。</dd>
+
+        <dt>"tx[D]v[n]"</dt>
+        <dd>三极网格，其中D表示近似分辨率（度），n表示网格版本。</dd>
+    </dl>
+</body>
     <div class="sect2">
       <h2 class="sect2"><a name="using_create_newcase">使用create_newcase</a></h2>
       <p>创建案例的基本命令格式：</p>
