@@ -100,7 +100,7 @@ create_newcase \
   
   <div class="sect1">
     <h1 class="sect1"><a name="how_to_setup_case">如何设置案例并自定义PE布局</a></h1>
-    
+    PE布局（Processor Element Layout）​ 指的是如何将不同的模型组件（如大气、海洋、陆面、海冰等）分配到计算节点的处理器（CPU/GPU）上，以优化计算效率和负载均衡。
     <div class="sect2">
       <h2 class="sect2"><a name="AEN717">调用<b class="command">cesm_setup</b></a></h2>
       <p><b class="command">cesm_setup</b>命令执行以下操作：</p>
