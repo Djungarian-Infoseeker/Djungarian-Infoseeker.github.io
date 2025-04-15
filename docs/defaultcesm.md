@@ -595,7 +595,7 @@ rof_in_0002
 </div>
 
 
-</body>
+
 <div class="sect1"><h1 class="sect1"><a name="modifying_xml">修改xml文件</a></h1><p>
 您可以直接编辑xml文件来修改变量值。但建议使用<b class="command">xmlchange</b>工具在$<code class="envar">CASEROOT</code>目录下操作，因为该工具会在修改xml文件值时执行变量错误检查。调用<b class="command">xmlchange</b>的方式如下：
 </p><table border="0" bgcolor="#E0E0E0" width="100%"><tbody><tr><td><pre class="screen">
