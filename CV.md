@@ -12,10 +12,10 @@
         </td>
         <td>
             <strong>王胤杰</strong><br>
-            <a href="https://www.tongji.edu.cn" target="_blank">同济大学</a> <a href="https://mgg.tongji.edu.cn/" target="_blank">海洋与地球科学学院 海洋科学系</a><br>
+            <a href="https://www.pku.edu.cn/" target="_blank">北京大学</a> <a href="https://www.phy.pku.edu.cn/" target="_blank">物理学院 气候动力学</a><br>
             <strong>Yinjie Wang</strong><br>
-            <a href="https://mgg.tongji.edu.cn/mggen/main.htm" target="_blank">Department of Marine Science, School of Ocean and Earth Sciences</a>, <a href="https://en.tongji.edu.cn/" target="_blank">Tongji University</a><br>
-            <strong>Email:</strong> <a href="mailto:wangyinjie@tongji.edu.cn">wangyinjie@tongji.edu.cn</a><br>
+            <a href="https://www.phy.pku.edu.cn/" target="_blank">Department of Marine Science, School of Ocean and Earth Sciences</a>, <a href="https://www.pku.edu.cn/" target="_blank">Tongji University</a><br>
+            <strong>Email:</strong> <a href="mailto:yjwang25@stu.pku.edu.cn">yjwang25@stu.pku.edu.cn</a><br>
             <strong>地址: </strong><a href="https://www.bing.com/maps?cp=31.283704%7E121.500936&lvl=16.0" target="_blank">NO.1239 Siping Road, Shanghai, P.R. China</a><br>
         </td>
     </tr>
