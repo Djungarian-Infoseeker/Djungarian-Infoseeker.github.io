@@ -12,7 +12,7 @@
         </td>
         <td>
             <strong>王胤杰</strong><br>
-            <a href="https://www.pku.edu.cn/" target="_blank">北京大学</a> <a href="https://www.phy.pku.edu.cn/" target="_blank">物理学院 气候动力学</a><br>
+            <a href="https://www.pku.edu.cn/" target="_blank">北京大学</a> <a href="https://www.phy.pku.edu.cn/" target="_blank">物理学院 大气与海洋科学系</a><br>
             <strong>Yinjie Wang</strong><br>
             <a href="https://www.phy.pku.edu.cn/" target="_blank">Department of Marine Science, School of Ocean and Earth Sciences</a>, <a href="https://www.pku.edu.cn/" target="_blank">Tongji University</a><br>
             <strong>Email:</strong> <a href="mailto:yjwang25@stu.pku.edu.cn">yjwang25@stu.pku.edu.cn</a><br>
