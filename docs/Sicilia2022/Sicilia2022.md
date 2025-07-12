@@ -319,7 +319,6 @@ Largo E. Fermi 5,
 <a href="/articles/aa/full_html/2022/11/aa44055-22/F17.html" target="_blank"><span class="bold">图17</span></a><p>同<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F9">图9</a>，但为KELT-20 b数据。<i>上图：</i>Na <span class="smallcaps">i</span>双线。<i>下图：</i>H<sub><i>α</i></sub>线</p>
 </td>
 </tr></tbody></table></div>
-
 <h2 class="sec">
 <a name="S5"></a>5 总结与展望</h2>
 <p>本文介绍了SLOPpy(Spectral Lines Of Planets with python)——一个标准化、用户友好的工具，用于自动提取和分析系外行星的光学透射光谱。SLOPpy的科学目标是通过地基高分辨率透射光谱表征系外行星大气，这是约束凌日行星大气组成的最可靠技术之一。</p>
