@@ -25,6 +25,7 @@ header_image: '../../atmos.jpg'
 - [认识与部署Molecfit-一种对于天文光谱观测去除地球大气影响的插件/Understanding and deploying Molecfit - a plugin for removing the effects of the Earth's atmosphere from astronomical spectroscopic observations](https://infoseeker.cn/docs/molecfit)
 - [运行默认的CESM1.2.1案例（CESM1.2.1教程第二章）/Run the default CESM1.2.1 case (CESM1.2.1 Tutorial Chapter 2)](https://infoseeker.cn/docs/defaultcesm)
 - [平板海洋的强迫/Slab Ocean Model Forcing](https://infoseeker.cn/docs/BaileySOM)
+- [使用SLOPpy表征系外行星大气/Characterization of exoplanetary atmospheres with SLOPpy](https://infoseeker.cn/docs/Sicilia2022)
 # 文献与知识 / Thesis & Knowledge
 
 ## 知识/Knowledges
