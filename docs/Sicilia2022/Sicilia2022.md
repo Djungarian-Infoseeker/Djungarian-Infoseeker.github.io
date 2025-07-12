@@ -100,4 +100,21 @@ Largo E. Fermi 5,
 <p>地面观测受到由空气折射率随波长变化引起的大气色散的影响。由于差分折射，恒星在望远镜焦平面中的位置因波长而异，随着空气质量的增加，这种影响变得更严重。如果不校正，它会影响地球大气校正，进而影响透射光谱。</p>
 <p>为了计算作为波长函数的校正因子，管道首先将每个观测与通过合并所有凌日外观测获得的参考光谱相除，在SRF中考虑恒星线在夜间的位移。然后，代码根据用户的选择，用低阶多项式或样条对此比率建模。然后通过将此模型多普勒位移到ORF后除以每个观测来应用校正。用户可以选择对所有数据集使用相同的参考光谱或独立校正每个夜晚，并且可以在校正地球大气吸收后更新模型（<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S243">第2.4.3节</a>）。这种方法即使在望远镜的大气色散校正器（ADC）在观测凌日期间未能更新其位置的少数情况下也能很好地工作（<a name="InR6"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R6">Borsa et al. 2019</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R3">Pino et al. 2020</a>），导致每次曝光在连续谱的蓝色和红色部分都有相当大的通量损失（见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F4">图4</a>）。</p>
 <h4 class="sec3">
+<h4 class="sec3">
 <a name="S243"></a>2.4.3 地球大气校正</h4>
+<p>地面观测的主要困难之一是处理来自地球大气的地球大气印记。在光学波段，水蒸气和分子氧是地球大气吸收的主要贡献者。其去除是一项困难的任务，因为吸收线的强度和位置随时间变化，取决于恒星在地平线上的高度和夜间天气条件（空气质量、水汽柱、视宁度等）。用于地球大气校正的经典技术需要使用专用建模工具对大气进行建模，或获取参考光谱来创建地球大气模板。</p>
+<p>在SLOPpy中，已经测试并实现了不同的方法：（1）基于空气质量和BERV的地球大气吸收经验计算，（2）使用预生成的地球透射光谱模板，以及（3）通过大气透射代码Molecfit进行地球大气建模（<a name="InR76"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R76">Smette et al. 2015</a>）。前两种方法的更详细解释可以在<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#APP1">附录A</a>中找到。在本节中，我们仅讨论第三种方法，这无疑是最稳健的方法，并且在应用于不同夜晚、大气条件变化的数据时能产生一致的结果（<a name="InR47"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R47">Langeveld et al. 2021</a>）。</p>
+<p>由ESO提供的Molecfit使用HITRAN数据库和逐线辐射传输模型（LBLRTM）计算非常高分辨率（<i>R</i> ~ 4000000）的地球大气光谱，将地球大气线校正到噪声水平。<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R2">Allart et al. (2017)</a>首次将其用于HARPS数据，通过结合600-900条单独谱线的信号的互相关技术，在HD 189733 b的透射光谱中搜索水蒸气。随后，Molecfit被用于高分辨率透射光谱，在近红外波段搜索氦（<a name="InR54"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R54">Salz et al. 2018</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R54">Nortmann et al. 2018</a>），在可见光波段搜索钠特征（<a name="InR37"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R37">Hoeijmakers et al. 2019</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R70">Seidel et al. 2019</a>）。<a name="InR69"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R69">Scandariato et al. (2021)</a>在SLOPpy中使用Molecfit覆盖HARPS和HARPS-N的整个光谱范围，排除了波长长于~6700 Å的区域，该区域被饱和的O<sub>2</sub>线严重污染。</p>
+<p>Molecfit分两步计算参考地球大气光谱。第一步，通过调整连续谱、波长尺度和仪器分辨率，将ORF中的LBLRTM拟合到观测光谱的几个用户定义区域。此外，分子特征被独立重新缩放，以考虑大气模型与实际天气之间的微小差异。第二步，使用第一阶段的输出参数为观测的整个波长区间构建地球大气吸收光谱。</p>
+<p>使用此工具优化地球大气校正需要仔细选择仅包含单一分子（H<sub>2</sub>O或O<sub>2</sub>）的强地球大气线的光谱区域，具有平坦的连续谱，并且其中没有恒星特征，因为Molecfit不拟合恒星光谱。在光谱的可见光区域，这项任务并不简单，因为我们处于与Molecfit理想情况相反的情况。</p>
+<p>为了执行Molecfit拟合，<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R2">Allart et al. (2017)</a>为每个观测夜晚提供了不同的光谱区间。为了将此技术应用于更广泛的目标，我们选择了两类或列表的光谱区域。第一个包括所有具有强地球大气特征的波长区间，其中波长在ORF中列出。第二个列表包括所有没有恒星线的光谱区域，在SRF中选择并使用HD 189733光谱作为模板。第二个列表根据恒星的系统RV和夜晚的平均BERV从SRF移动到ORF进行更新，并假设区间范围的几十分之一埃的变化不会显著影响Molecfit拟合。SLOPpy传递给Molecfit的最终波长区间列表由两个列表的交集给出，结果是具有强地球大气特征且几乎没有恒星特征的光谱区域列表。</p>
+<p>对于较暗的目标，其观测具有较低的信噪比（S/N），拟合可能变得不可靠。为了防止这个问题，SLOPpy自动合并连续曝光；然后在合并的光谱上执行Molecfit分析，假设天气条件在合并的时间窗口内没有显著变化，而分析的第二阶段（即在整个波长范围内计算参考地球大气光谱）分别应用于每个观测。</p>
+<p>与任何基于光谱夜间随空气质量变化的经验方法不同，Molecfit也可以安全地应用于凌日期间的观测，因为用于表征地球大气模型的区域应该没有行星信号。如<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F5">图5</a>所示，Molecfit是一个非常强大的工具，能够将地球大气特征校正到噪声水平，唯一的要求是仔细选择拟合的光谱区域，尽管与其他算法相比它非常慢。</p>
+<p>如果在地球大气校正后仍然存在一些残差，管道的用户可以决定执行额外的校正。遵循与<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R79">Snellen et al. (2010)</a>类似的程序，当将每个光谱除以主凌日外光谱时（见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S245">第2.4.5节</a>），SLOPpy可以通过使用线性样条将每个像素值按其随时间变化的方差归一化来去除剩余的地球大气残差。</p>
+<a name="F5"></a>
+<div class="inset"><table><tbody><tr>
+<td valign="middle"><a href="/articles/aa/full_html/2022/11/aa44055-22/F5.html" target="_blank"><img alt="缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig5_small.jpg"></a></td>
+<td class="img-txt">
+<a href="/articles/aa/full_html/2022/11/aa44055-22/F5.html" target="_blank"><span class="bold">图5</span></a><p>使用Molecfit应用于WASP-127 b光谱的地球大气校正示例。<i>上图：</i>未校正和校正光谱的比较。<i>下图：</i>地球大气光谱。所有光谱都根据时间进行颜色编码。</p>
+</td>
+</tr></tbody></table></div>
