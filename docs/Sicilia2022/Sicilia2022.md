@@ -241,7 +241,6 @@
 <p>遵循<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R66">Redfield等人(2008)</a>和<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R91">Wyttenbach等人(2015)</a>的方法，在这第二种方法中，相对吸收深度直接从最终透射光谱<span class="math-inline">${\tilde \Re }$</span>中提取，由方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD2">(2)</a>给出。中心通带(C)内平均的透射通量与中心通带蓝侧(B)和红侧(R)两个相邻控制通带内平均的透射通量进行比较。</p>
 
 <p>相对吸收深度由下式给出：
-<a name="FD5"></a><span class="math-block">$\delta = {{{\Sigma _C}{\omega _i}\tilde R\left( {{\lambda _i}} \right)} \over {{\Sigma _C}{\omega _i}}} - {1 \over 2}\left( {{{{\Sigma _B}{\omega _i}\tilde R\left( {{\lambda _i}} \right)} \over {{\Sigma _B}{\omega _i}}} + {{{\Sigma _R}{\omega _i}\tilde R\left( {{\lambda _i}} \right)} \over {{\Sigma _R}{\omega _i}}}} \right)$</span><span class="equation-label">(5)</span></p>
 
 <p>其中权重<i>w</i><sub><i>i</i></sub>由<span class="math-inline">${\tilde \Re }$</span>不确定度的平方倒数给出。假设误差来源于光子和读出噪声，并从单个光谱传播。</p>
 
