@@ -169,7 +169,7 @@
     <a name="S248"></a>2.4.8 MCMC分析
   </h4>
 
-  <p>如果残差中存在光谱吸收线，用户可以决定对其进行建模并评估检测显著性。如<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R14">Yan &amp; Henning (2018)</a>所示，SLOPpy使用emcee工具(<a name="InR31"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R31">Foreman-Mackey et al. 2013</a>)进行马尔可夫链蒙特卡洛(MCMC)分析。该模型假设吸收线具有高斯轮廓，在其他情况下为平坦光谱(<span class="math-inline">${{\tilde \Re }_{\rm{i}}} = 1$</span>)。CLV和RM建模包含一个因子r，用于考虑分析波长范围内行星半径与凌日光度测量获得值(可能在不同波长范围获得)之间的可能差异。</p>
+  <p>如果残差中存在光谱吸收线，用户可以决定对其进行建模并评估检测显著性。如Yan &amp; Henning (2018)</a>所示，SLOPpy使用emcee工具(<a name="InR31"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R31">Foreman-Mackey et al. 2013</a>)进行马尔可夫链蒙特卡洛(MCMC)分析。该模型假设吸收线具有高斯轮廓，在其他情况下为平坦光谱(<span class="math-inline">${{\tilde \Re }_{\rm{i}}} = 1$</span>)。CLV和RM建模包含一个因子r，用于考虑分析波长范围内行星半径与凌日光度测量获得值(可能在不同波长范围获得)之间的可能差异。</p>
 
   <p>模型的自由参数包括：行星的RV半振幅(K<sub>p</sub>)，用于在PRF中建模大气吸收线；描述行星吸收的高斯轮廓的对比度(h)和半高全宽(FWHM)；相对于PRF过渡的大气风RV(v<sub>wind</sub>)；有效行星半径比例因子(r)。对于每次观测，透射模型的谱线根据行星的瞬时RV(从K<sub>p</sub>和观测时的轨道相位计算)移动到PRF。</p>
 
@@ -207,11 +207,144 @@
   </h4>
 
   <p>系外行星大气中吸收物种的存在可以看作是凌日期间的相对通量下降。这可以通过构建透射光变曲线来推断，即在特定通带内相对通量随时间的变化(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R19">Charbonneau et al. 2002</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R78">Snellen et al. 2008</a>)。SLOPpy对每次曝光(t)和给定用户定义通带(Δλ)推导相对通量为：
-  <a name="FD3"></a><span class="math-block">${F_{{\rm{rel}}}}\left( {t,\Delta \lambda } \right) = {{\overline {F\left( C \right)} } \over {\overline {F\left( B \right)} + \overline {F\left( R \right)} }}$</span><span class="equation-label">(3)</span></p>
+
 
   <p>其中<span class="math-inline">$\overline {F\left( C \right)} $</span>是感兴趣原子物种中心通带内的加权平均通量，而<span class="math-inline">$\overline {F\left( B \right)} $</span>和<span class="math-inline">$\overline {F\left( R \right)} $</span>是光谱特征蓝色和红色侧两个参考通带内的加权平均通量。虽然F(B)和F(R)在行星凌日期间应保持不变(因为它们仅包含恒星光)，F(C)根据行星大气的额外吸收而变化。</p>
 
   <p>每个通带和每条谱线的光变曲线的相对吸收深度由下式给出：
-  <a name="FD4"></a><span class="math-block">$\delta \left( {\Delta \lambda } \right) = {{\overline {{F_{{\rm{rel}}}}\left( {{t_{{\rm{in}}}}} \right)} } \over {\overline {{F_{{\rm{rel}}}}\left( {{t_{{\rm{out}}}}} \right)} }} - 1,$</span><span class="equation-label">(4)</span></p>
+
 
   <p>其中<span class="math-inline">$\overline {{F_{{\rm{rel}}}}\left( {{t_{{\rm{in}}}}} \right)} $</span>和<span class="math-inline">$\overline {{F_{{\rm{rel}}}}\left( {{t_{{\rm{out}}}}} \right)} $</span>分别是凌日内和凌日外的加权平均相对通量。我们注意到这个计算在SRF中进行。在凌日期间，行星信号将根据行星的RV(对于圆形轨道，在凌日中心时间理想为零)在光谱上移动。如果中央通带太窄，可能无法捕获凌日开始和结束部分的行星信号，从而导致透射光变曲线中的凌日持续时间缩短。</p>
+<a name="F7"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F7.html" target="_blank">
+            <img alt="HD 189733 b观测光谱缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig7_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F7.html" target="_blank"><span class="bold">图7</span></a>
+          <p>HD 189733 b的观测光谱。<i>上图：</i>显示用于测量Na <span class="smallcaps">i</span> D线相对通量的三个中心通带(0.75 Å、1.50 Å和3.00 Å)。这些通带以D<sub>1</sub>和D<sub>2</sub>线核为中心。同时展示了Na <span class="smallcaps">i</span> D线蓝端和红端的参考通带。<i>下图：</i>Na <span class="smallcaps">i</span> D线区域的放大视图。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="section-subtitle">
+  <a name="S32"></a>3.2 透射光谱分析
+</h3>
+
+<p>遵循<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R66">Redfield等人(2008)</a>和<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R91">Wyttenbach等人(2015)</a>的方法，在这第二种方法中，相对吸收深度直接从最终透射光谱<span class="math-inline">${\tilde \Re }$</span>中提取，由方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD2">(2)</a>给出。中心通带(C)内平均的透射通量与中心通带蓝侧(B)和红侧(R)两个相邻控制通带内平均的透射通量进行比较。</p>
+
+<p>相对吸收深度由下式给出：
+<a name="FD5"></a><span class="math-block">$\delta = {{{\Sigma _C}{\omega _i}\tilde R\left( {{\lambda _i}} \right)} \over {{\Sigma _C}{\omega _i}}} - {1 \over 2}\left( {{{{\Sigma _B}{\omega _i}\tilde R\left( {{\lambda _i}} \right)} \over {{\Sigma _B}{\omega _i}}} + {{{\Sigma _R}{\omega _i}\tilde R\left( {{\lambda _i}} \right)} \over {{\Sigma _R}{\omega _i}}}} \right)$</span><span class="equation-label">(5)</span></p>
+
+<p>其中权重<i>w</i><sub><i>i</i></sub>由<span class="math-inline">${\tilde \Re }$</span>不确定度的平方倒数给出。假设误差来源于光子和读出噪声，并从单个光谱传播。</p>
+
+<p>由于相对吸收深度的测量在PRF中进行，这种方法可以很好地估计信号的统计显著性。尽管如此，对于某些类型的目标(例如周期较长的目标)，还有其他更可靠的方法来确认或否定信号的系外行星性质，如经验蒙特卡洛或自举分析(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R66">Redfield等人2008</a>)。</p>
+
+<a name="T1"></a>
+<div class="table-container">
+  <div class="table-line">
+    <a href="/articles/aa/full_html/2022/11/aa44055-22/T1.html" target="_blank"><span class="bold">表1</span></a>
+    <p>用于验证管道的分析目标列表。</p>
+  </div>
+</div>
+
+<h2 class="section-title">
+  <a name="S4"></a>4 数据应用
+</h2>
+
+<p>我们通过将管道应用于四个基准目标的数据集来测试管道，这些数据集是用HARPS或HARPS-N获取的(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#T1">表1</a>)。所有这些目标都在其他寻找共振Na <span class="smallcaps">i</span>双线的工作中被分析过，利用它们都具有较大的标高和围绕明亮恒星运行的特点，因此是大气表征的理想目标。</p>
+
+<h3 class="section-subtitle">
+  <a name="S41"></a>4.1 HD 189733 b
+</h3>
+
+<p>HD 189733 b是迄今为止研究最充分的行星之一。它是一颗热木星，质量和半径与木星大致相同，围绕一颗明亮(<i>V</i> ~ 7.7)且活跃的K型恒星运行，周期约2.2天，其大气标高约200 km(<a name="InR25"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R25">Désert等人2011</a>)。</p>
+
+<p>对于这个目标，我们分析了用HARPS观测的三次凌星。这些数据从ESO档案中获取，来自项目072.C-0488(E)、079.C-0127(A)(PI:Mayor)和079.C-0828(A)(PI: Lecavelier des Etangs)，已在多项工作中分析过(例如<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R91">Wyttenbach等人2015</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R95">Yan等人2017</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R13">Casasayas-Barris等人2017</a>; <a name="InR5"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R5">Borsa &amp; Zannoni 2018</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R47">Langeveld等人2021</a>)。第一晚和第三晚的数据被<a name="InR86"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R86">Triaud等人(2009)</a>用于测量RM效应。此外，<a name="InR26"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R26">Di Gloria等人(2015)</a>利用这些相同观测检测到行星-恒星半径比的斜率，如<a name="InR64"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R64">Pont等人(2008)</a>和<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R25">Sing等人(2011)</a>使用HST数据发现的，解释为瑞利散射。</p>
+
+<p>在这三个观测序列中，第一个序列采用低节奏(900至600秒)曝光，后两个采用高节奏(300秒)曝光。第二晚没有凌星前的观测。该目标的所有参数取自<a name="InR1"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R1">Addison等人(2019)</a>，除了有效温度取自<a name="InR81"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R81">Stassun等人(2017)</a>。</p>
+
+<p>在这些观测中，光纤B的天空光谱仅针对第二晚和第三晚收集。然而，在这些天空光谱中没有观察到钠发射。其他作者没有对任何这些夜晚应用天空校正，因此我们也决定跳过此步骤，以便与他们的结果进行更一致的比较。</p>
+
+<p><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R95">Yan等人(2017)</a>表明，对于HD 189733 b的情况，如果不考虑CLV效应，Na <span class="smallcaps">i</span>吸收深度会被高估，这将导致Na <span class="smallcaps">i</span>丰度的显著高估。出于这个原因，我们决定应用CLV效应的校正。</p>
+
+<p>我们验证了RM效应对这个目标明显可见，因为从光谱FITS头文件获得的测量RV偏离了由于行星存在导致的恒星预期轨道运动。因此，RM效应与CLV校正一起考虑(如<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S247">第2.4.7节</a>所述)。</p>
+
+<p>我们将我们的分析结果与<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R91">Wyttenbach等人(2015</a>，以下简称W2015)和<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R13">Casasayas-Barris等人(2017</a>，以下简称CB2017)进行比较。为保持一致性，我们仅在比较CB2017时包含CLV和RM校正。</p>
+
+<p><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F8">图8</a>显示了SLOPpy提取的最终透射光谱，合并了所有三个HARPS夜晚的数据，未校正CLV和RM效应(上图)和应用此校正后(中图)。CLV和RM效应的模型以蓝色叠加。在两个光谱中，两条系外行星钠线从连续谱中突出，但第二个光谱中的线比第一个略深且窄，因为CLV和RM效应对双线翼的贡献更大。</p>
+
+<p>每条钠线的对比度(h)和FWHM报告在<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#T2">表2</a>中，与共享的<i>v</i><sub>wind</sub>、<i>r</i>和<i>K</i><sub>p</sub>值一起。我们的结果与W2015兼容，而与CB2017的结果仅在D1线的误差范围内一致。对于D2线，CB2017获得了略高的线对比度和FWHM值。我们假设这种差异可能是由于用于地球大气校正的不同方法造成的，因为我们的结果与<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R47">Langeveld等人(2021)</a>分析相同HARPS数据、校正CLV和RM效应并使用Molecfit去除地球大气特征的结果兼容。无论如何，本工作和CB2017中发现的D<sub>2</sub>/D<sub>1</sub>在误差范围内与该目标的预期值兼容(即D<sub>2</sub>/D<sub>1</sub> ≳ 1.2, <a name="InR33"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R33">Gebek &amp; Oza 2020</a>)。</p>
+
+<p>关于从MCMC拟合过程中提取的共享风速，我们发现相对于Na <span class="smallcaps">i</span>线预期波长位置的净蓝移约0.04 Å，对应于约2 km s<sup>−1</sup>。这个值明显小于W2015发现的8 ± 2 km s<sup>−1</sup>，但与<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R10">Brogi等人(2016)</a>使用CRIRES(红外)数据检测到的风速(<span class="math-inline">$ - 1.7_{ - 1.1}^{ + 1.2}$</span> km s<sup>−1</sup>)以及<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R49">Louden &amp; Wheatley (2015)</a>使用此处分析的第三晚HARPS数据发现的风速(<span class="math-inline">$ - 1.9_{ - 0.7}^{ + 0.6}$</span> km s<sup>−1</sup>)一致。虽然CLV+RM校正的加入被提倡用来解释W2015与后续工作之间的差异，但尚不清楚为什么我们在关闭校正时没有恢复这种差异。可能差异实际上源于分析的另一个步骤或假设，我们无法验证，因为结果是使用专有代码获得的。这种再现性问题再次凸显了公开代码的重要性。</p>
+
+<p>拟合CLV和RM模型时获得的有效半径为0.99 ± 0.04 <i>R</i><sub>p</sub>。另一方面，假设连续谱水平为(<i>R</i><sub>p</sub>/<i>R</i><sub>s</sub>)<sup>2</sup> = 2.262%，从吸收值推导出的D<sub>2</sub>为1.10 ± 0.02 <i>R</i><sub>p</sub>，D<sub>1</sub>为1.09 ± 0.02 <i>R</i><sub>p</sub>。</p>
+
+<p>至于<i>K</i><sub>p</sub>值，MCMC分析只能找到一个上限，约为理论值(~150km s<sup>−1</sup>)的一半。我们已验证，设置150± 10 km s<sup>−1</sup>的高斯先验会导致未校正CLV+RM的光谱<i>K</i><sub>p</sub>值为121 ± 10 km s<sup>−1</sup>，校正后为137± 10 km s<sup>−1</sup>(MCMC相关图见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F24">图B.1</a>)。然而，虽然找到了更接近理论值的值，但使用先验导致MCMC分析在较低对比度下拟合D<sub>2</sub>线：未校正CLV和RM效应的透射光谱中<span class="math-inline">$0.44_{ - 0.6}^{ + 0.7}\% $</span>，校正后为0.35 ± 0.07%；这两个值与W2015和CB2017发现的值都不兼容。我们认为这不太可能是由于代码错误，因为对于所有其他分析目标，我们得到的<i>K</i><sub>p</sub>值与理论值一致。此外，在其他目标的分析中施加先验不会产生与文献结果的差异。检索到的<i>K</i><sub>p</sub>值与理论值之间的差异可能源于天体物理原因。例如，谱线轮廓可能不对称，从而产生虚假的RV信号，或者其他大气环流特征(探测大气不同区域)可能导致与理论值的偏差(例如KELT-9 b上的H<sub><i>α</i></sub>和Fe，<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R3">Pino等人2020</a>)。</p>
+
+<p>我们使用<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S3">第3节</a>描述的两种方法在三个不同的中心带宽(0.75 Å、1.50 Å和3.00 Å)提取了相对吸收深度(ADs)。为了优化比较，与CB2017一样，我们选择了W2015使用的相同参考通带：蓝端[5874.89–5886.89] Å，红端[5898.89–5910.89] Å。从<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#T3">表3</a>报告的结果可以推断，CLV和RM效应的贡献是显著的，因为如果不考虑这些效应，ADs会被高估。从透射光谱(TS)和透射光变曲线(TLC)提取的值在误差范围内兼容(第二种情况的误差更大)。然而，在考虑更宽的通带时并不总是如此；具体来说，从TLC中提取的ADs更高，其中CLV和RM效应对该目标更为明显(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F9">图9</a>)。CB2017在所有三个通带中发现两种方法之间存在差异，而W2015报告两种方法兼容，即使在合并所有三晚数据时，1.5和3.0 Å通带中存在差异。</p>
+
+<p>Na <span class="smallcaps">i</span>双线的AD在最小通带(0.75 Å)中通过TS方法最佳检测到，因为更窄、更细的钠线更好地填充了通带，达到0.28 ± 0.02%(~11<i>σ</i>)的水平。在同一通带中，使用TLC方法，我们发现值为0.32 ± 0.07%，虽然显著性较低(4.8<i>σ</i>)，但与第一种方法发现的值兼容，如上所述。</p>
+
+<p>我们的ADs与W2015和CB2017使用两种方法获得的结果一致，尽管大多数时候CB2017使用两种方法发现更高的ADs值。CB2017从TLC提取的ADs值(见他们的<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#T5">表5</a>)仅指第一晚和第三晚的组合。我们已经验证，如果我们也只组合这两晚，我们发现：0.75 Å中0.32 ± 0.09，1.50 Å中0.19 ± 0.05，3.00 Å中0.10 ± 0.03。因此，与CB2017的唯一不兼容是在最大通带中，他们发现更高的值，但与TS提取的值一致。再次，差异可能是由于应用的地球大气校正方法不同造成的。</p>
+
+<a name="F8"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F8.html" target="_blank">
+            <img alt="HD 189733 b最终透射光谱缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig8_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F8.html" target="_blank"><span class="bold">图8</span></a>
+          <p>HD 189733 b在行星静止参考系中围绕钠双线为中心的最终透射光谱(浅灰色)，也以20×分箱显示为黑色圆圈，未校正CLV和RM效应(<i>上图</i>)和校正后(<i>中图</i>)<i>。</i>蓝线是用于校正最终透射光谱的最佳拟合CLV+RM模型。红线是应用于钠双线两条线的MCMC高斯拟合。蓝色虚线表示钠双线的静止参考系跃迁波长。<i>下图：</i>高斯拟合的残差。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<a name="T2"></a>
+<div class="table-container">
+  <div class="table-line">
+    <a href="/articles/aa/full_html/2022/11/aa44055-22/T2.html" target="_blank"><span class="bold">表2</span></a>
+    <p>HD 189733 b的MCMC拟合程序获得的最佳拟合参数和1-<i>σ</i>误差范围摘要。</p>
+  </div>
+</div>
+
+<a name="T3"></a>
+<div class="table-container">
+  <div class="table-line">
+    <a href="/articles/aa/full_html/2022/11/aa44055-22/T3.html" target="_blank"><span class="bold">表3</span></a>
+    <p>从透射光谱(TS)和透射光变曲线(TLC)提取的HD 189733 b大气钠相对吸收深度(%)测量结果摘要。</p>
+  </div>
+</div>
+
+<a name="F9"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F9.html" target="_blank">
+            <img alt="HD 189733 b透射光变曲线缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig9_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F9.html" target="_blank"><span class="bold">图9</span></a>
+          <p>HD 189733 b合并所有三晚数据使用三种不同中心带宽的透射光变曲线(TLC)：0.75 Å(左列)、1.50 Å(中列)和3.00 Å(右列)。灰色数据点显示每次曝光的相对吸收；黑色为20个光谱分箱后的数据。绿色背景标记凌日外观测。<i>第一行：</i>观测到的TLCs；红色虚线显示CLV和RM模型。<i>第二行：</i>去除CLV和RM效应贡献后的TLCs。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
