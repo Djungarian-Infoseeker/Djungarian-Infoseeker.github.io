@@ -112,7 +112,7 @@
 </h4>
 
 <p>在应用上述校正后，每个凌星中观测(<i>F</i><sub><i>i</i>,in</sub>)除以重新归一化到1的<i>M</i><sub>OUT</sub>(<span>$M_{{\rm{OUT}}}^\~$</span>)，以获得该曝光的透射光谱：
-<a name="FD1"></a><span>${\tilde R_{\rm{i}}}{|_{{\rm{ORF}}}} = = {{{F_{i,{\rm{in}}}}} \over {{{\tilde M}_{{\rm{OUT}}}}{{\rm{|}}_{{\rm{ORF}}}}}}$</span><span class="label-eq">(1)</span>
+
 称为光谱比。计算在ORF中进行，意味着将(高S/N的)<i>M</i><sub>OUT</sub>从SRF移回，以避免在噪声大得多的单个凌星中观测上进行任何不必要的重分箱步骤。</p>
 
 <p>管道在配置文件中指定的感兴趣的原子种类周围的光谱范围内提取透射光谱。实际上，透射光谱是在仪器的整个光谱范围内计算的，这很容易允许未来采用其他方法来搜索原子或分子种类，如交叉相关函数(<a name="InR60"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R60">Pino等人2018a</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R37">Hoeijmakers等人2019</a>)，而限制在特定波长范围内允许在合理的时间内执行计算昂贵的分析。共振钠双线(在5889.95 Å和5895.92 Å处)，由于其大的吸收截面，是被研究最多的大气特征之一(例如，<a name="InR78"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R78">Snellen等人2008</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R91">Wyttenbach等人2015</a>; <a name="InR16"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R16">Casasayas-Barris等人2020</a>)。</p>
