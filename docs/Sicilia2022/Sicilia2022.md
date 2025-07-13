@@ -347,3 +347,349 @@
     </tbody>
   </table>
 </div>
+<a name="F11"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F11.html" target="_blank">
+            <img alt="WASP-76 b透射光变曲线缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig11_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F11.html" target="_blank"><span class="bold">图11</span></a>
+          <p>同<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F9">图9</a>，但为WASP-76 b数据。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<a name="T6"></a>
+<div class="table-container">
+  <div class="table-line">
+    <a href="/articles/aa/full_html/2022/11/aa44055-22/T6.html" target="_blank"><span class="bold">表6</span></a>
+    <p>WASP-127 b的MCMC拟合程序获得的最佳拟合参数及1-<i>σ</i>误差范围汇总。</p>
+  </div>
+</div>
+
+<a name="F12"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F12.html" target="_blank">
+            <img alt="WASP-127 b透射光谱缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig12_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F12.html" target="_blank"><span class="bold">图12</span></a>
+          <p>同<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F10">图10</a>，但为WASP-127 b数据。线性拟合(黄线)显著优于高斯拟合(红线)。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<a name="F13"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F13.html" target="_blank">
+            <img alt="WASP-127 b主外光谱校正对比缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig13_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F13.html" target="_blank"><span class="bold">图13</span></a>
+          <p>WASP-127 b在钠双线区域归一化的主外光谱(第2晚)天空校正前(黑色)和校正后(红色)对比。插图为钠D线线心区域的放大视图。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="section-subtitle">
+  <a name="S44"></a>4.4 KELT-20 b
+</h3>
+
+<p>KELT-20 b(<a name="InR50"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R50">Lund等人2017</a>)，亦称MASCARA-2 b(<a name="InR85"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R85">Talens等人2018</a>)，是一颗热木星(<i>R</i><sub>p</sub> = 1.83 ± 0.07 <i>R</i><sub>J</sub><i>, M</i><sub>p</sub> &lt; 3.510 <i>M</i><sub>J</sub>)，围绕一颗快速自转(<i>v</i> sin <i>i</i> = 115.9 ± 3.4 km s<sup>−1</sup>)的A型恒星运行，轨道周期约3.5天。该行星接收来自宿主恒星(<i>T</i><sub>eff</sub> ~ 9000 K)的强烈辐射，平衡温度高达~2260 K，属于超热木星。</p>
+
+<p>对于该目标，我们分析了通过HARPS-N(TNG档案项目：CAT17A_38和CAT18A_34)获取的三次凌星数据，<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R15">Casasayas-Barris等人(2019</a>，下称CB2019)曾用这些数据研究Ca <span class="smallcaps">ii</span>、Fe <span class="smallcaps">ii</span>、Na <span class="smallcaps">i</span>和H巴耳默线系。第一晚和第二晚曝光时间200秒，第三晚增至300秒以提高信噪比。如CB2019，我们剔除了第二晚8帧因云层导致低信噪比的凌日外光谱和1帧类似质量的凌日内光谱。其中两晚数据因望远镜ADC控制软件故障导致连续谱变化，CB2019使用宽中值滤波校正，而我们采用SLOPpy的"差分折射"模块处理(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S242">第2.4.2节</a>和<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F14">图14</a>)。</p>
+
+<p>虽然光纤B采集了天空光谱，但我们与CB2019一致未应用天空校正(各晚均无发射特征)，并忽略恒星反射运动(因宿主星快速自转)。星际钠线在SRF中除以主外光谱时自动校正(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S244">第2.4.4节</a>)。Molecfit地球大气校正后仍有残差，我们使用线性样条归一化最终透射光谱(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S243">第2.4.3节</a>)。</p>
+
+<p>该目标受CLV和RM效应影响。参照CB2019，我们采用LTE Kurucz ATLAS9模型模拟恒星光谱，氢线太阳丰度，[Na/H] = 0.98。</p>
+
+<p>钠双线最终透射光谱见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F15">图15</a>。为更好对比结果(列于<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#T7">表7</a>)，本次对钠D线分别进行MCMC拟合，获得独立的<i>K</i><sub>p</sub><i>, r</i>和<i>v</i><sub>wind</sub>值。H<sub><i>α</i></sub>线透射光谱见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F16">图16</a>，MCMC相关图见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F26">图B.3</a>-<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F28">B.5</a>。</p>
+
+<p>多数参数与CB2019一致。所有钠线的<i>K</i><sub>p</sub>, <i>r</i>和<i>v</i><sub>wind</sub>均在误差范围内相符，但第二、三晚的对比度和FWHM存在差异。合并数据后结果与CB2019一致，<i>K</i><sub>p</sub>值(~173 km s<sup>−1</sup>)与理论预测相符。</p>
+
+<p>H<sub><i>α</i></sub>线拟合参数除第二晚的<i>v</i><sub>wind</sub>(我们发现过度蓝移)和<i>r</i>因子(高于CB2019)外均一致。<i>r</i>因子差异导致合并数据后不兼容。</p>
+
+<p>钠双线和H<sub><i>α</i></sub>的TLC见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F17">图17</a>。3 Å通带的TLC中CLV和RM效应可忽略。<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#T8">表8</a>显示TS和TLC提取的AD值相符。除第二晚我们测得更高AD值外，钠线结果与CB2019一致。合并三晚数据后，仅TLC提取的AD与CB2019兼容。0.75 Å通带的最佳检测结果为0.18 ± 0.01(~18<i>σ</i>)。H<sub><i>α</i></sub>线蓝侧参考通带[6558.0-6561.0]Å，红侧[6564.0-6567.0]Å，0.75 Å通带检测值0.55 ± 0.05(~11<i>σ</i>)与CB2019完全一致。</p>
+<div class="astronomy-paper">
+
+<a name="T7"></a>
+<div class="table-container">
+  <div class="table-line">
+    <a href="/articles/aa/full_html/2022/11/aa44055-22/T7.html" target="_blank"><span class="bold">表7</span></a>
+    <p>KELT-20 b的MCMC拟合程序获得的最佳拟合参数及1-<i>σ</i>误差范围汇总。</p>
+  </div>
+</div>
+
+<a name="F14"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F14.html" target="_blank">
+            <img alt="KELT-20 b第二晚数据应用的差分折射校正缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig14_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F14.html" target="_blank"><span class="bold">图14</span></a>
+          <p>SLOPpy对KELT-20 b第二晚数据应用的差分折射校正。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<a name="F15"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F15.html" target="_blank">
+            <img alt="KELT-20 b钠双线透射光谱缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig15_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F15.html" target="_blank"><span class="bold">图15</span></a>
+          <p>同<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F10">图10</a>，但为KELT-20 b数据。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<a name="F16"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F16.html" target="_blank">
+            <img alt="KELT-20 b Hα线透射光谱缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig16_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F16.html" target="_blank"><span class="bold">图16</span></a>
+          <p>同<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F15">图15</a>，但为H<sub><i>α</i></sub>线数据。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<a name="F17"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F17.html" target="_blank">
+            <img alt="KELT-20 b透射光变曲线缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig17_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F17.html" target="_blank"><span class="bold">图17</span></a>
+          <p>同<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F9">图9</a>，但为KELT-20 b数据。<i>上图：</i>Na <span class="smallcaps">i</span>双线。<i>下图：</i>H<sub><i>α</i></sub>线。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="section-title">
+  <a name="S5"></a>5 总结与未来展望
+</h2>
+
+<p>本文介绍了SLOPpy(Spectral Lines Of Planets with python)——一个标准化、用户友好的工具，用于自动提取和分析系外行星的光学透射光谱。SLOPpy的科学目标是通过地基高分辨率透射光谱表征系外行星大气，这是约束凌日行星大气组成的最可靠技术之一。</p>
+
+<p>提取高可靠性透射光谱需要一系列还原步骤，如去除天空发射、校正差分折射等。这些步骤的细节不仅在本论文中详述，也可在GitHub开源代码库中查阅。</p>
+
+<p>地基观测的主要难点是处理随时间变化的地球大气印记。SLOPpy实现了三种校正方法，本文统一采用最强大的Molecfit工具进行地球大气校正(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S243">第2.4.3节</a>)。</p>
+
+<p>我们还重新实现了临边变化(CLV)和Rossiter-McLaughlin(RM)效应的校正模块。对于强吸收线(如Na <span class="smallcaps">i</span>双线)，这些效应的处理对系外行星大气成分检测至关重要。</p>
+
+<p>最终吸收信号可解释为等效相对高度。管道已优化用于计算这些高度并提取相对吸收深度。</p>
+
+<p>为验证管道在HARPS和HARPS-N数据上的有效性，我们将其应用于HD 189733 b、WASP-76 b、WASP-127 b和KELT-20 b四个大气表征理想目标，重点研究具有大吸收截面的钠双线。与独立分析相同数据的其他研究组相比，我们的结果多数时候在1<i>σ</i>内相符，且SLOPpy能获得相当或更高的显著性。</p>
+
+<p>唯一与其他物理参数(如行星RV半振幅)存在矛盾的是HD 189733 b。鉴于这是唯一出现此情况的目标，我们有信心整体方法正确，但仍不排除输入参数或数据处理中存在未识别的错误。差异更可能源于不同的地球大气校正和/或用于CLV和RM效应校正的恒星模型。这强调了SLOPpy等公开标准工具的必要性——代码发布是实现开放独立比较的第一步，有助于发现分析或模型中的潜在错误。</p>
+
+<p>SLOPpy的计算和绘图模块分离，用户可以检查每个步骤对最终透射光谱的影响。例如我们展示了WASP-127 b的天空发射校正对主外光谱提取的关键作用。代码设计尽可能通用和用户友好，所有可能影响最终结果的参数都记录在用户可配置的文件中。</p>
+
+<p>得益于模块化设计，SLOPpy可随时进行改进和扩展。当前版本支持HARPS和HARPS-N，但可适配其他高分辨率设备如LBT的PEPSI(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R83">Strassmeier等人2015</a>)、Calar Alto天文台的CARMENES(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R65">Quirrenbach等人2016</a>)和VLT的ESPRESSO<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R9">(Pepe等人2014</a>)。虽然本文聚焦钠双线和H<sub><i>α</i></sub>，SLOPpy完全适用于整个可见光波段。</p>
+
+<p>其他分析技术如多普勒层析成像(<a name="InR89"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R89">Watson等人2019</a>)和互相关技术(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R60">Pino等人2018a</a>)也常用于检测原子和分子物种。虽然SLOPpy初期专注于单线和简单线系(如钠双线和镁三重线)，但这些新方法正在开发中，将通过公共代码库发布。</p>
+
+<p>长期计划是将SLOPpy的灵活性、可移植性和可重复性理念扩展到其他工具，用于比较透射光谱与大气模型(如<a name="InR34"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R34">Guillot 2010</a>; <a name="InR41"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R41">Kawashima &amp; Ikoma 2018</a>)。未来SLOPpy及其后继者不仅能检测大气成分，还能表征系外行星大气的物理条件。</p>
+
+<a name="T8"></a>
+<div class="table-container">
+  <div class="table-line">
+    <a href="/articles/aa/full_html/2022/11/aa44055-22/T8.html" target="_blank"><span class="bold">表8</span></a>
+    <p>从透射光谱(TS)和透射光变曲线(TLC)提取的KELT-20 b大气钠相对吸收深度(%)测量结果汇总。</p>
+  </div>
+</div>
+
+<h2 class="section-title">
+  <a name="ack"></a>致谢
+</h2>
+
+<p>本工作基于ESO智利La Silla Paranal天文台望远镜和意大利Telescopio Nazionale Galileo(TNG)的观测数据，后者由INAF(Istituto Nazionale di Astrofísica)的Fundación Galileo Galilei在西班牙加那利群岛Instituto de Astrofísica de Canarias的Observatorio del Roque de los Muchachos操作。部分工作是在帕多瓦大学博士项目框架内完成的。我们感谢匿名审稿人的建设性意见帮助提升论文质量。D.S.感谢意大利航天局(ASI)根据'ASI-INAF协议第2019-29-HH.0号(2019年11月26日)'提供的资金支持。感谢A. Wyttenbach和J.V. Seidel的讨论与见解。</p>
+
+<h2 class="section-title">
+  <a name="app"></a>附录A SLOPpy中实现的其他地球大气校正技术
+</h2>
+
+<h3 class="section-subtitle">
+  <a name="A1"></a>A.1 光谱时间序列的经验方法
+</h3>
+
+<p>该方法首次由<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R88">Vidal-Madjar等人(2010)</a>和<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R4">Astudillo-Defru &amp; Rojo (2013)</a>描述。这是一种完全经验性的方法，因为地球大气光谱是从数据本身中提取的，特别是从凌日外观测中提取。该技术利用地球大气线强度是大气质量对数尺度线性函数的事实，而恒星特征和连续谱的强度在一夜之间基本保持不变(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F18">图A.1</a>)；这是平面平行大气辐射传输常用假设的结果。</p>
+
+<a name="F18"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F18.html" target="_blank">
+            <img alt="通量对数与大气质量关系图缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig18_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F18.html" target="_blank"><span class="bold">图A.1</span></a>
+          <p>通量对数与大气质量的关系图：地球大气线(观测参考系中5883.91 Å处)、恒星线(5883.66 Å)和连续谱(5903.02 Å)。直线是每条线的最佳拟合。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>将<i>I</i>(<i>λ</i>)表示恒星光进入地球大气前的谱线强度(即连续谱与地球大气线核的对比度)，<i>T</i>(<i>λ</i>)表示大气传输函数(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R88">Vidal-Madjar等人2010</a>)，对于给定大气质量，观测光谱<i>O</i><sub><i>a</i></sub>(<i>λ</i>)由下式给出：
+<a name="FD6"></a><span class="math-block">${O_a}\left( \lambda \right) = I\left( \lambda \right) \times {T_a}\left( \lambda \right).$</span><span class="equation-label">(A.1)</span></p>
+
+<p>对于小于~5的大气质量，我们可以假设平面平行大气。此时大气质量约等于sec <i>θ</i>，<i>θ</i>为天顶角，大气传输函数简化为<i>T</i><sup>sec<i>θ</i></sup>。</p>
+
+<p>根据辐射传输方程，天顶处(sec <i>θ</i> =1)的<i>T</i>(<i>λ</i>)可表示为每表面单元粒子数N和给定波长不透明度<i>k</i><sub><i>λ</i></sub>的函数(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R91">Wyttenbach等人2015</a>)：
+<a name="FD7"></a><span class="math-block">$T\left( \lambda \right) = {T^1}\left( \lambda \right) \equiv {e^{N{k_\lambda }}}$</span><span class="equation-label">(A.2)</span></p>
+
+<p>因此给定大气质量的地球大气光谱为
+<a name="FD8"></a><span class="math-block">${T^a} = \exp \left( {N{k_\lambda }a} \right).$</span><span class="equation-label">(A.3)</span></p>
+
+<p>将方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD8">(A.3)</a>代入方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD7">(A.1)</a>得到：
+<a name="FD9"></a><span class="math-block">${I_\lambda } = {I_{0,\lambda }}{e^{N{K_\lambda }a}} = {I_{0,\lambda }}{e^{{\tau _{\lambda ,0}}{\rm{ }}\sec {\rm{ }}\theta }},$</span><span class="equation-label">(A.4)</span></p>
+
+<p>可改写为
+<a name="FD10"></a><span class="math-block">$\ln {I_\lambda } = \ln {I_{0,\lambda }} + {\tau _{\lambda ,0}}\sec \theta .$</span><span class="equation-label">(A.5)</span></p>
+
+<a name="F19"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F19.html" target="_blank">
+            <img alt="钠双线区域地球大气光谱缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig19_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F19.html" target="_blank"><span class="bold">图A.2</span></a>
+          <p>钠双线区域的地球大气光谱。红色光谱使用BRF参考的光谱获得，黑色使用ORF参考的光谱获得。后者为清晰起见进行了垂直偏移。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>该方程中有两个未知量<i>I</i><sub>0,<i>λ</i></sub>和<i>τ</i><sub><i>λ</i>,0</sub>，无法通过单次观测接收强度<i>I</i><sub><i>λ</i></sub>确定。但随着时间推移和地球自转，角度<i>θ</i>会变化而<i>τ</i><sub><i>λ</i>,0</sub>和ln <i>I</i><sub>0,<i>λ</i></sub>保持不变，从而使我们能够求解该系统。绘制ln <i>I</i><sub><i>λ</i></sub>随sec <i>θ</i>变化的图，最佳拟合直线的斜率为<i>τ</i><sub><i>λ</i>,0</sub> = <i>Nk</i><sub><i>λ</i></sub><i>.</i> 将最佳拟合线外推至sec <i>θ</i> = 0可得<i>I</i><sub>0,<i>λ</i></sub>值。已知<i>τ</i><sub><i>λ</i>,0</sub>后，我们可以构建参考地球大气光谱<i>T</i>(<i>λ</i>)。</p>
+
+<p>最后，为校正地球大气污染，每个观测光谱需除以由方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD8">(A.2)</a>给出的参考地球大气光谱，取<i>a</i><sub><i>i</i></sub> − <i>a</i><sub><i>ref</i></sub>次方，其中<i>a</i><sub><i>ref</i></sub>是凌日内光谱的平均大气质量：
+<a name="FD11"></a><span class="math-block">${F_{ref}}\left( \lambda \right) = {{{O_a}\left( \lambda \right)} \over {T{{\left( \lambda \right)}^{{a_i} - {a_{ref}}}}}} = {{{O_a}\left( \lambda \right)} \over {{e^{N{k_\lambda }}}\left( {{a_i} - {a_{ref}}} \right)}}.$</span><span class="equation-label">(A.6)</span></p>
+
+<p>通过这种方式，所有光谱都被重新缩放，就像它们在同一大气质量下观测的一样，地球大气吸收线仍然存在但现在在时间上是静止的。要完全去除它们，可以通过线性拟合最终透射光谱和<i>T</i>(<i>λ</i>)来应用第二次地球大气校正。然而，与其他使用相同技术的作者(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R91">Wyttenbach等人2015</a>, <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R92">2017</a>)有时稍作修改(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R95">Yan等人2017</a>)不同，SLOPpy中实现的方程与<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD11">A.6</a>不完全相同。在SLOPpy中，地球大气参考光谱被提升到观测光谱的精确大气质量，考虑平均大气质量<i>a</i><sub><i>ref</i></sub>等于零，换句话说，SLOPpy完全从观测光谱中去除地球大气吸收线而不运行第二次校正(尽管该功能已实现)。</p>
+
+<p>此外，其他作者应用方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD10">(A.5)</a>并从参考太阳系质心参考系(BRF)的光谱中提取地球大气光谱，其中恒星线固定在相同位置，但他们没有考虑由于BERV导致的地球大气线位移，错误地假设地球大气线在一夜之间的位移可以忽略不计。同样，在观测者参考系(ORF)中，地球大气线固定而恒星线位移。<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F19">图A.2</a>显示了BRF(红色)和ORF(黑色)中获得的地球大气光谱之间的差异：后者在恒星特征对应位置呈现一些尖峰，其强度与该位置恒星线的强度成正比。尖峰的存在是由于未在ORF中考虑BERV的变化。</p>
+
+<a name="F20"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F20.html" target="_blank">
+            <img alt="BRF中校正后的恒星光谱缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig20_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F20.html" target="_blank"><span class="bold">图A.3</span></a>
+          <p>使用图上方的地球大气光谱校正后的BRF恒星光谱。地球大气光谱使用凌日外光谱获得。蓝色垂直线标识地球大气线。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>我们测试了在地球大气校正前对凌日外光谱进行BERV校正的解决方案，尽管这会向分析中引入噪声。然而，将观测值除以地球大气光谱并不能校正地球大气线，这些线仍然可见且红移(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F20">图A.3</a>)。此外，在校正后的光谱中相同位置出现尖峰，而这些尖峰在地球大气光谱中并不存在。这证实观察到的尖峰是由BRF中地球大气线和ORF中恒星线的位移产生的。</p>
+
+<p>为去除这些尖峰(它们不可避免地会影响最终透射光谱)，SLOPpy在ORF中同时拟合随大气质量变化的线性趋势和随BERV变化的线性趋势，后者是相对于其他作者的新项：
+<a name="FD12"></a><span class="math-block">$\ln {I_\lambda } = {C_{0,\lambda }}\sec \theta + {C_{1,\lambda }}BERV + {C_{2,\lambda }},$</span><span class="equation-label">(A.7)</span></p>
+
+<p>其中<i>C</i><sub>0</sub>, <i>C</i><sub>1</sub>, 和 <i>C</i><sub>2</sub>是待确定系数，而sec <i>θ</i>和<i>BERV</i>是自变量。特别是，<i>C</i><sub>0</sub>应表示<i>τ</i><sub><i>λ</i>,0</sub>。通过这种方式，对每个点都考虑了两种效应。这意味着地球大气光谱的构建使用大气质量和BERV作为独立变量，而不是像方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD10">(A.5)</a>中仅使用大气质量。</p>
+
+<p><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F21">图A.4</a>显示了使用最后一个方程获得的地球大气光谱(黑色)、未校正的观测光谱(蓝色)和经地球大气校正后的光谱(红色)。尽管该技术具有若干优势(例如不依赖模型或无需额外时间观测参考星)，但计算得到的地球大气光谱通常噪声很大。</p>
+
+<a name="F21"></a>
+<div class="figure-container">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="middle">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F21.html" target="_blank">
+            <img alt="钠双线区域经验法地球大气校正示例缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig21_small.jpg">
+          </a>
+        </td>
+        <td class="figure-caption">
+          <a href="/articles/aa/full_html/2022/11/aa44055-22/F21.html" target="_blank"><span class="bold">图A.4</span></a>
+          <p>钠双线区域使用经验方法进行地球大气校正的示例。绿线标识地球大气特征位置。光谱在ORF中。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="section-subtitle">
+  <a name="A2"></a>附录A.2 预生成地球大气模板
+</h3>
+
+<p>SLOPpy中实现的另一种地球大气校正方法涉及使用模板作为地球大气参考光谱。</p>
+
+<p>当使用模型校正地球大气污染时，主要问题之一是地球大气透射率的变化。线深变化对所有地球大气线并不相同，导致在缩放模型时去除地球大气特征效果不佳，并可能在最终透射光谱中引入小的残差。然而，该方法的最佳优点之一是不会在校正后的光谱中引入额外噪声。</p>
+
+<p>合成模板使用SkyCalc<sup><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FN6">5</a></sup>创建，这是一个ESO天空模型计算器，用于根据用户输入的观测条件预测大气地球大气吸收。该工具依赖于HITRAN(高分辨率传输分子吸收数据库)，该数据库包含可用于模拟地球大气光谱的原子线数据，而吸收光谱则使用逐线辐射传输模型(LBLRTM)结合天气条件计算。通过命令行界面(CLI)，用户可以直接向托管在ESO网络服务器上的SkyCalc发送请求，而不是使用通常的网页表单。如果想要计算许多不同观测条件下的天空，或将ESO SkyCalc集成到另一个天文工具中，这将非常有用。</p>
+
+<p>我们验证了使用La Silla特征( HARPS光谱仪所在地)构建的合成模板与使用HARPS-N在La Palma获取的184帧地球大气标准星HIP63901光谱获得的地球大气参考光谱(即大气质量=1)几乎相同(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F23">图A.6</a>)。将La Silla SkyCalc模型的FWHM调整至HARPS-N分辨率后，重新缩放足以拟合地球大气线。</p>
+
+<p>使用模板相比经验方法在地球大气校正方面有显著改进。此外，当观测基线不足以计算高质量地球大气光谱以有效校正地球大气线时，也可以使用该方法。该方法已在钠双线及周围光谱区域(地球大气线以水蒸气吸收为主)进行测试(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F22">图A.5</a>)。然而水蒸气并不是随时间和海拔变化的唯一大气成分。如果像我们案例中一样仅适当校正水蒸气，其他成分的特征将无法在强度和宽度上与观测者光谱正确对齐，导致校正不准确的光谱。此外，分辨率低于HARPS和HARPS-N的仪器可能不适合这种方法，因为对于低分辨率数据，匹配线轮廓可能变得过于困难，因为模板显示单独解析的线而大气线在光谱中显示为带。因此，虽然这种方法优于经验方法，但不能推广到HARPS和HARPS-N的整个光谱区间。</p>
+
+</div>
