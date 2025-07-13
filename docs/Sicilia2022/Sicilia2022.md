@@ -169,7 +169,7 @@
     <a name="S248"></a>2.4.8 MCMC分析
   </h4>
 
-  <p>如果残差中存在光谱吸收线，用户可以决定对其进行建模并评估检测显著性。如Yan &amp; Henning (2018)</a>所示，SLOPpy使用emcee工具(<a name="InR31"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R31">Foreman-Mackey et al. 2013</a>)进行马尔可夫链蒙特卡洛(MCMC)分析。该模型假设吸收线具有高斯轮廓，在其他情况下为平坦光谱(<span class="math-inline">${{\tilde \Re }_{\rm{i}}} = 1$</span>)。CLV和RM建模包含一个因子r，用于考虑分析波长范围内行星半径与凌日光度测量获得值(可能在不同波长范围获得)之间的可能差异。</p>
+  <p>如果残差中存在光谱吸收线，用户可以决定对其进行建模并评估检测显著性。如Yan &amp; Henning (2018)</a>所示，SLOPpy使用emcee工具(<a name="InR31"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R31">Foreman-Mackey et al. 2013</a>)进行马尔可夫链蒙特卡洛(MCMC)分析。该模型假设吸收线具有高斯轮廓，在其他情况下为平坦光谱(<span class="math-inline">。CLV和RM建模包含一个因子r，用于考虑分析波长范围内行星半径与凌日光度测量获得值(可能在不同波长范围获得)之间的可能差异。</p>
 
   <p>模型的自由参数包括：行星的RV半振幅(K<sub>p</sub>)，用于在PRF中建模大气吸收线；描述行星吸收的高斯轮廓的对比度(h)和半高全宽(FWHM)；相对于PRF过渡的大气风RV(v<sub>wind</sub>)；有效行星半径比例因子(r)。对于每次观测，透射模型的谱线根据行星的瞬时RV(从K<sub>p</sub>和观测时的轨道相位计算)移动到PRF。</p>
 
