@@ -136,3 +136,82 @@
 <p>最后，我们通过积分被行星遮挡的所有表面元素，并从盘面积分恒星光谱中减去结果，来模拟凌星期间每次观测的恒星光谱。作为波长函数的校正因子是通过将每个模拟光谱除以凌星外盘面积分模型获得的。然后通过将其除以相应的校正因子，对每次观测的透射光谱(见方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD1">(1)</a>)进行CLV和RM效应校正。</p>
 
 <p>这种校正在原始参考框架中的单个透射光谱上执行，通过重新分箱校正模型，即使它需要更大的计算努力和更复杂的算法结构。最后，在移动到行星参考框架(PRF)构建平均透射光谱时，对观测光谱进行的唯一重分箱步骤(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S249">第2.4.9节</a>)。</p>
+  <p>当行星从恒星盘面前经过时，它会阻挡部分恒星光。根据行星覆盖的恒星表面特定位置的光谱特性，积分恒星光谱可能与凌日外观测获得的光谱不同，导致系外行星透射光谱变形。改变透射光谱的两个主要效应是临边变化(CLV)和Rossiter-McLaughlin(RM)效应。</p>
+
+  <p>RM效应是恒星自转的结果。被行星阻挡的恒星光可能发生红移或蓝移，取决于行星覆盖恒星的哪一侧，从而导致每条谱线变形(例如<a name="InR49"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R49">Louden &amp; Wheatley 2015</a>)。</p>
+
+  <p>另一方面，CLV效应是归一化恒星谱线从中心到边缘在恒星盘面上的轮廓变化，因为当我们向边缘移动时，我们观测到更外层、更冷的光球层，类似于光度学中的临边昏暗。对于更强的吸收线，CLV可以变化相当显著，在检测系外行星大气种类时变得至关重要(<a name="InR95"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R95">Yan et al. 2017</a>)。对于慢速自转恒星，吸收线上变形的大小大致与(R<sub>p</sub>/R<sub>s</sub>)<sup>2</sup>成比例。除了行星与恒星半径比之外，还有多种参数影响CLV特征，包括恒星参数和行星轨道参数。特别是，<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R95">Yan et al. (2017)</a>表明，对于Na <span class="smallcaps">i</span> D线，CLV效应对于较低有效温度T<sub>eff</sub>和接近b = 0.84的撞击参数的恒星更强。此外，建模的CLV特征还取决于恒星大气模型；通常非LTE和三维模型可以产生更真实的结果(<a name="InR48"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R48">Leenaarts et al. 2012</a>; <a name="InR7"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R7">Borsa et al. 2021</a>)。</p>
+
+  <p>在分析透射光谱时，重要的是同时考虑这两种效应，因为从行星覆盖的恒星表面每个元素出现的光谱将在波长上移动(对于RM效应)并在不同的光球层深度形成(对于CLV效应)。这导致特定临边昏暗部分的恒星光损失和特定的径向速度。</p>
+
+  <p>为了校正这两种效应，遵循<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R95">Yan et al. (2017)</a>，我们首先在21个不同的μ值(从零到一步长为0.05)模拟合成恒星光谱，其中μ = cosθ，θ是恒星表面法线与视线之间的角度("临边角")。在恒星边缘，我们假设μ = 0.001而不是μ = 0以避免数值问题(<a name="InR23"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R23">Czesla et al. 2015</a>)。使用Spectroscopy Made Easy(SME, <a name="InR63"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R63">Piskunov &amp; Valenti 2017</a>)和VALD数据库(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R23">Ryabchikova et al. 2015</a>)的线表以及MARCS(<a name="InR35"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R35">Gustafsson et al. 2008</a>)或Kurucz ATLAS9(<a name="InR46"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R46">Kurucz 2005</a>)模型获得恒星光谱。这些光谱计算时不包含恒星的自转加宽，因为它们旨在表示从恒星给定位置出现的光谱。SME还计算盘面积分、加宽的光谱。随后，我们将恒星盘面划分为大小为0.01 R<sub>s</sub> × 0.01 R<sub>s</sub>的元素；每个这些元素有一个μ值，因此其光谱从先前计算的合成光谱线性插值。为了考虑RM效应，如<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R14">Yan &amp; Henning (2018)</a>，每个光谱也根据元素在盘面上的位置、系统几何、恒星自转速度和微分自转的存在，多普勒位移到元素的投影速度(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F6">图6</a>)。</p>
+
+  <a name="F6"></a>
+  <div class="figure-container">
+    <table>
+      <tbody>
+        <tr>
+          <td valign="middle">
+            <a href="/articles/aa/full_html/2022/11/aa44055-22/F6.html" target="_blank">
+              <img alt="恒星盘面上不同μ角和径向速度分布" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig6_small.jpg">
+            </a>
+          </td>
+          <td class="figure-caption">
+            <a href="/articles/aa/full_html/2022/11/aa44055-22/F6.html" target="_blank"><span class="bold">图6</span></a>
+            <p>系外行星系统中恒星盘面上不同μ角(<i>左图</i>)和径向速度(<i>右图</i>)的分布，该系统参数为λ = (−22.1 ± 6.0)°和v sin i = (19.6 ± 0.5) km s<sup>−1</sup>。</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 class="section-subtitle">
+    <a name="S248"></a>2.4.8 MCMC分析
+  </h4>
+
+  <p>如果残差中存在光谱吸收线，用户可以决定对其进行建模并评估检测显著性。如<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R14">Yan &amp; Henning (2018)</a>所示，SLOPpy使用emcee工具(<a name="InR31"></a><a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R31">Foreman-Mackey et al. 2013</a>)进行马尔可夫链蒙特卡洛(MCMC)分析。该模型假设吸收线具有高斯轮廓，在其他情况下为平坦光谱(<span class="math-inline">${{\tilde \Re }_{\rm{i}}} = 1$</span>)。CLV和RM建模包含一个因子r，用于考虑分析波长范围内行星半径与凌日光度测量获得值(可能在不同波长范围获得)之间的可能差异。</p>
+
+  <p>模型的自由参数包括：行星的RV半振幅(K<sub>p</sub>)，用于在PRF中建模大气吸收线；描述行星吸收的高斯轮廓的对比度(h)和半高全宽(FWHM)；相对于PRF过渡的大气风RV(v<sub>wind</sub>)；有效行星半径比例因子(r)。对于每次观测，透射模型的谱线根据行星的瞬时RV(从K<sub>p</sub>和观测时的轨道相位计算)移动到PRF。</p>
+
+  <p>需要注意的是，MCMC分析仅应用于完全凌日内的数据(即排除进入和退出阶段)，因为在进入和退出阶段的行星吸收光谱与完全凌日内不同，此时RM效应最约束r因子。虽然原则上可以建模这种差异，但此功能尚未在SLOPpy中实现。</p>
+
+  <p>为了减少计算时间，分析在SRF中对用户选择步长(例如0.05 Å，如<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R15">Casasayas-Barris et al. 2019</a>所用)分箱的单个透射光谱上进行。这个选择主要出于保持计算机内存使用和MCMC每一步执行时间在可接受水平的考虑。这也是分析数据上进行的唯一重新分箱步骤，从而最小化重新分箱过程对低信噪比光谱引入的系统噪声的影响。我们探索了在未分箱光谱(即在原始参考系中)进行分析的可能性以避免任何重新分箱过程，但与之前方法相比，极长的计算时间和更高的内存需求(主要由于光谱不再在共同波长网格上)阻止了我们完全开发此选项，尽管我们不排除将其作为未来功能。</p>
+
+  <p>这里报告的不确定性表示自由参数后验分布的第15到第84百分位的置信区间。误差从光子噪声传播，但经常被低估；因此我们在拟合过程中允许自由抖动参数。这个参数被平方添加到误差中以考虑任何额外的系统误差(例如不良视宁度)。</p>
+
+  <p>对于同一目标有多个夜晚数据的情况，首先对单个夜晚进行MCMC，然后执行包含所有夜晚的全局拟合。管道还返回用户固定参数的透射光谱(此时行星半径不是自由参数)和仅使用凌日外光谱构建的所谓"平均外"透射光谱。预期平坦的平均外透射光谱用于检查任何非行星来源的残差。</p>
+
+  <p>在配置文件中，用户可以设置步数和行走者数量、计算拟合的范围、分箱步长和参数先验。此外，有一个标志决定是否释放参数r和v<sub>wind</sub>。如果MCMC分析要同时对多条谱线进行(例如钠双线的两条线或镁三重线)，用户还可以决定这些线是否应共享相同的FWHM或相同的风引起的径向速度位移。</p>
+
+  <h4 class="section-subtitle">
+    <a name="S249"></a>2.4.9 最终透射光谱
+  </h4>
+
+  <p>最终透射光谱通过在PRF中求和方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD1">(1)</a>的所有光谱比获得：
+  <a name="FD2"></a><span class="math-block">$\tilde R{|_{{\rm{PRF}}}} = \sum\limits_{i = 0}^N {\left( {{{\tilde R}_i}{|_{{\rm{PRF}}}}} \right)}$</span><span class="equation-label">(2)</span></p>
+
+  <p>其中N是凌日内光谱的数量。这避免了在恒星或观测者参考系中执行此步骤将导致的行星大气吸收线的剪切。如果同一目标有多个可用数据集(例如在不同夜晚或用不同仪器观测的目标)，管道可以组合所有数据集计算平均透射光谱。</p>
+
+  <p>主外光谱必须始终在SRF中构建。另一方面，透射光谱可以在PRF中构建(这是检测行星信号必须的)，如果怀疑信号可能有恒星来源(例如恒星活动)则在SRF中构建，或如果怀疑信号可能有局部来源(例如地球大气吸收去除不正确)则在ORF中构建。</p>
+
+  <h3 class="section-title">
+    <a name="S3"></a>3 吸收深度提取
+  </h3>
+
+  <p>为了表征检测到的行星信号，我们通过积分以分析中的大气物种波长为中心的窄通带内的通量，并将其与连续谱中参考通带内的通量比较，计算相对吸收深度(δ)。对于钠双线，包含信号的中央通带(C)被分成两个较小的通带，双线的每条线一个，D<sub>2</sub>和D<sub>1</sub>，我们感兴趣测量其中的过量吸收。由于每个中央通带仅包含一条线，两条Na <span class="smallcaps">i</span>双线的吸收深度经常取平均。为了将我们的结果与文献中其他工作(例如<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R91">Wyttenbach et al. 2015</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R70">Seidel et al. 2019</a>)比较，我们选择相同的带宽(例如2 × 0.75 Å、2 × 1.50 Å、2 × 3.00 Å)用于中央通带，以及相同的参考通带(例如[5874.89-5886.89] Å和[5898.89-5910.89] Å)用于连续谱，取自中央通带的蓝色和红色侧(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#F7">图7</a>)。</p>
+
+  <p>SLOPpy可以遵循两种不同方法提取吸收深度：分析"透射光变曲线"(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R78">Snellen et al. 2008</a>，见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S31">第3.1节</a>)，或分析最终透射光谱(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R66">Redfield et al. 2008</a>，见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S32">第3.2节</a>)。</p>
+
+  <h4 class="section-subtitle">
+    <a name="S31"></a>3.1 透射光变曲线分析
+  </h4>
+
+  <p>系外行星大气中吸收物种的存在可以看作是凌日期间的相对通量下降。这可以通过构建透射光变曲线来推断，即在特定通带内相对通量随时间的变化(<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R19">Charbonneau et al. 2002</a>; <a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R78">Snellen et al. 2008</a>)。SLOPpy对每次曝光(t)和给定用户定义通带(Δλ)推导相对通量为：
+  <a name="FD3"></a><span class="math-block">${F_{{\rm{rel}}}}\left( {t,\Delta \lambda } \right) = {{\overline {F\left( C \right)} } \over {\overline {F\left( B \right)} + \overline {F\left( R \right)} }}$</span><span class="equation-label">(3)</span></p>
+
+  <p>其中<span class="math-inline">$\overline {F\left( C \right)} $</span>是感兴趣原子物种中心通带内的加权平均通量，而<span class="math-inline">$\overline {F\left( B \right)} $</span>和<span class="math-inline">$\overline {F\left( R \right)} $</span>是光谱特征蓝色和红色侧两个参考通带内的加权平均通量。虽然F(B)和F(R)在行星凌日期间应保持不变(因为它们仅包含恒星光)，F(C)根据行星大气的额外吸收而变化。</p>
+
+  <p>每个通带和每条谱线的光变曲线的相对吸收深度由下式给出：
+  <a name="FD4"></a><span class="math-block">$\delta \left( {\Delta \lambda } \right) = {{\overline {{F_{{\rm{rel}}}}\left( {{t_{{\rm{in}}}}} \right)} } \over {\overline {{F_{{\rm{rel}}}}\left( {{t_{{\rm{out}}}}} \right)} }} - 1,$</span><span class="equation-label">(4)</span></p>
+
+  <p>其中<span class="math-inline">$\overline {{F_{{\rm{rel}}}}\left( {{t_{{\rm{in}}}}} \right)} $</span>和<span class="math-inline">$\overline {{F_{{\rm{rel}}}}\left( {{t_{{\rm{out}}}}} \right)} $</span>分别是凌日内和凌日外的加权平均相对通量。我们注意到这个计算在SRF中进行。在凌日期间，行星信号将根据行星的RV(对于圆形轨道，在凌日中心时间理想为零)在光谱上移动。如果中央通带太窄，可能无法捕获凌日开始和结束部分的行星信号，从而导致透射光变曲线中的凌日持续时间缩短。</p>
