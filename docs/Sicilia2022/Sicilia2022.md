@@ -91,25 +91,6 @@
 
 <p>如果在校正大气吸收后仍然存在一些残余，管道用户可以决定执行额外的校正。遵循与<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#R79">Snellen等人(2010)</a>类似的程序，当将每个光谱除以主出光谱时(见<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#S245">第2.4.5节</a>)，SLOPpy可以通过使用线性样条将每个像素值按其时间方差归一化来去除剩余的大气残余。</p>
 
-<a name="F5"></a>
-<div class="inset">
-    <table>
-        <tbody>
-            <tr>
-                <td valign="middle">
-                    <a href="/articles/aa/full_html/2022/11/aa44055-22/F5.html" target="_blank">
-                        <img alt="缩略图" src="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22-fig5_small.jpg">
-                    </a>
-                </td>
-                <td class="img-txt">
-                    <a href="/articles/aa/full_html/2022/11/aa44055-22/F5.html" target="_blank"><span class="bold">图5</span></a>
-                    <p>使用Molecfit应用于WASP-127 b光谱的大气校正示例。<i>上图：</i>未校正和已校正光谱的比较。<i>下图：</i>大气光谱。所有光谱都根据时间进行颜色编码。</p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
 <h4 class="sec3">
     <a name="S244"></a>2.4.4 星际谱线
 </h4>
