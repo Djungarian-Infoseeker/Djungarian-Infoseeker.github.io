@@ -188,7 +188,7 @@
   </h4>
 
   <p>最终透射光谱通过在PRF中求和方程<a href="/articles/aa/full_html/2022/11/aa44055-22/aa44055-22.html#FD1">(1)</a>的所有光谱比获得：
-  <a name="FD2"></a><span class="math-block">$\tilde R{|_{{\rm{PRF}}}} = \sum\limits_{i = 0}^N {\left( {{{\tilde R}_i}{|_{{\rm{PRF}}}}} \right)}$</span><span class="equation-label">(2)</span></p>
+
 
   <p>其中N是凌日内光谱的数量。这避免了在恒星或观测者参考系中执行此步骤将导致的行星大气吸收线的剪切。如果同一目标有多个可用数据集(例如在不同夜晚或用不同仪器观测的目标)，管道可以组合所有数据集计算平均透射光谱。</p>
 
