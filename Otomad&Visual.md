@@ -155,7 +155,12 @@ header_image: '../../visual.jpg'
                 <td>MoonTDN</td>
                 <td><a href="https://www.bilibili.com/video/BV1ub4y177ML/">BV1ub4y177ML</a></td>
             </tr>
-
+            <tr>
+                <td>【合作】2025，寄给旧时光的鬼畜书信</td>
+                <td>2025-08-17</td>
+                <td>FFFanwen</td>
+                <td><a href="https://www.bilibili.com/video/BV1ApYzz2ENu/">BV1ApYzz2ENu</a></td>
+            </tr>
         </tbody>
     </table>
 </body>
