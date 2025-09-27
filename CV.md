@@ -36,7 +36,7 @@
             September 2021, <a href="https://www.tongji.edu.cn/" target="_blank">Tongji University</a>, <a href="https://mgg.tongji.edu.cn/" target="_blank">School of Ocean and Earth Sciences</a>, Marine Science - Bachelor's Degree<br>
             2024年10月 <a href="https://www.isct.ac.jp/en" target="_blank">东京科学大学</a>（<a href="https://www.titech.ac.jp/english" target="_blank">东京工业大学</a>）水文气候实验室 & 地球生命研究所 访问学生<br>
             October 2024, <a href="https://www.isct.ac.jp/en" target="_blank">Institute of Science Tokyo</a> (<a href="https://www.titech.ac.jp/english" target="_blank">Tokyo Institute of Technology</a>), Hydroclimate Laboratory & Earth-Life Science Institute Visiting Student<br>
-            2025年9月 <a href="https://www.pku.edu.cn/" target="_blank">北京大学</a> <a href="https://www.phy.pku.edu.cn/" target="_blank">物理学院</a> <a href="https://www.atmos.pku.edu.cn/index.htm" target="_blank">大气与海洋科学系</a> 博士研究生（预计）<br>
+            2025年9月 <a href="https://www.pku.edu.cn/" target="_blank">北京大学</a> <a href="https://www.phy.pku.edu.cn/" target="_blank">物理学院</a> <a href="https://www.atmos.pku.edu.cn/index.htm" target="_blank">大气与海洋科学系</a> 博士研究生<br>
             September 2025, <a href="https://www.pku.edu.cn/" target="_blank">Peking University</a>, <a href="https://www.phy.pku.edu.cn/" target="_blank">School of Physics</a>, <a href="https://www.atmos.pku.edu.cn/index.htm" target="_blank">Department of Atmospheric and Oceanic Sciences</a>, Ph.D. Candidate (Expected)<br>
         </td>
     </tr>
