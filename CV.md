@@ -15,7 +15,7 @@
             <a href="https://www.pku.edu.cn/" target="_blank">北京大学</a> <a href="https://www.phy.pku.edu.cn/" target="_blank">物理学院 大气与海洋科学系</a><br>
             <strong>Yinjie Wang</strong><br>
             <a href="https://www.phy.pku.edu.cn/" target="_blank">Department of Atmospheric and Oceanic Sciences, School of Physics</a>, <a href="https://www.pku.edu.cn/" target="_blank">Peking University</a><br>
-            <strong>Email:</strong> <a href="mailto:yjwang25@pku.edu.cn">yjwang25@pku.edu.cn</a><br>
+            <strong>Email:</strong> <a href="mailto:yjwang25@stu.pku.edu.cn">yjwang25@stu.pku.edu.cn</a><br>
             <strong>地址: </strong><a href="https://www.bing.com/maps?cp=39.992806%7E116.305801&lvl=16.0" target="_blank">No.209 Chengfu Road, Haidian District, Beijing, P.R. China</a><br>
         </td>
     </tr>
