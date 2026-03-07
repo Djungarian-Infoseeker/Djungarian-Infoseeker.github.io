@@ -2,4 +2,5 @@
 header_image: '../../peking.jpg'
 ---
 
-暂时没有，放这个页面在这里是为了勉励自己快点做事情。
+[1]Yinjie Wang, Jun Yang*: Ice thickness on tide-locked snowball planets orbiting low-mass stars, The Astrophysical
+Journal Letters (In Prep)

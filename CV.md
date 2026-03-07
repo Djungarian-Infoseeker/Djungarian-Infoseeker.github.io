@@ -30,8 +30,6 @@
             September 2014, Yangquan No. 3 Middle School, Junior High<br>
             2017年9月 山西省阳泉市第一中学校 高中<br>
             September 2017, Yangquan No. 1 High School<br>
-            <s>2020年9月 上海大学悉尼工商学院 国际经济与贸易系</s><br>
-            <s>September 2020, SILC Business School, Shanghai University, International Economics and Trade</s><br>
             2021年9月 <a href="https://www.tongji.edu.cn/" target="_blank">同济大学</a> <a href="https://mgg.tongji.edu.cn/" target="_blank">海洋与地球科学学院</a> 海洋科学系 本科<br>
             September 2021, <a href="https://www.tongji.edu.cn/" target="_blank">Tongji University</a>, <a href="https://mgg.tongji.edu.cn/" target="_blank">School of Ocean and Earth Sciences</a>, Marine Science - Bachelor's Degree<br>
             2024年10月 <a href="https://www.isct.ac.jp/en" target="_blank">东京科学大学</a>（<a href="https://www.titech.ac.jp/english" target="_blank">东京工业大学</a>）水文气候实验室 & 地球生命研究所 访问学生<br>
@@ -50,8 +48,8 @@
     <tr>
         <td colspan="2">
             <h3>个人兴趣/Personal Interest</h3>
-            喜欢的音乐（Vocaloid、Dubstep、VaporWave、Future Funk等）<br>
-            Favorite Music (Vocaloid, Dubstep, VaporWave, Future Funk, etc)<br>
+            喜欢的音乐（Vocaloid, Citypop, Slushwave等）<br>
+            Favorite Music (Vocaloid,  Citypop, Slushwave, etc)<br>
             喜欢的饮料（咖啡☕️和茶🍵，很少喝酒🍺，因为有点酒精过敏）<br>
             Favorite beverage (coffee☕️ and tea🍵，I rarely drink alcohol🍺 because I am allergic to it.)<br>
             健身（长跑🏃、骑自行车🚴与肌肉训练🏋️）<br>
