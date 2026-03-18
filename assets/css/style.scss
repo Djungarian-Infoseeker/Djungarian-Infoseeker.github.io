@@ -1,48 +1,195 @@
 ---
 ---
-$section-headings-color: rosybrown;
+$section-headings-color: #1f3a5f;
+@import "{{ site.theme }}";
 
-@import"{{ site.theme }}";
-
-.page-header {
-  background: url("{{ page.header_image | default: '../../Mars_evolution.jpg' }}");
-  background-size: cover;
-  height: 600px;
+/* ===== Academic / Clean Theme ===== */
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --heading: #0f172a;
+  --line: #e5e7eb;
+  --link: #1d4ed8;
+  --link-hover: #1e40af;
+  --accent: #1f3a5f;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
-
-
-
-
-#Nav a{
-     color: #f2f2f2;
-     text-decoration:none;
-}
-
-#Nav a:hover {
-    color: SteelBlue;
-}
-
-#Nav a:active a{
-  color: SteelBlue;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: black;
-  color: silver;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
 }
 
+/* 页头更克制，保留你的背景图但加深遮罩提高可读性 */
+.page-header {
+  position: relative;
+  background-size: cover !important;
+  background-position: center center !important;
+  min-height: 320px;
+  height: auto;
+  padding: 5rem 1.25rem 3.5rem;
+}
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15,23,42,.52), rgba(15,23,42,.30));
+}
+.header-overlay, .header-title, .header-nav {
+  position: relative;
+  z-index: 1;
+}
+.project-name {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: 0.02em;
+  margin-bottom: .4rem;
+}
+.project-tagline {
+  opacity: .96;
+  font-weight: 450;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* 导航学术化 */
+#Nav {
+  margin-top: 1rem;
+}
+#Nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  margin: 0 .45rem;
+  padding-bottom: .15rem;
+  border-bottom: 1px solid transparent;
+  transition: .2s ease;
+}
+#Nav a:hover,
+#Nav a:focus {
+  color: #ffffff;
+  border-color: rgba(255,255,255,.85);
+}
+
+/* 主内容容器卡片化但克制 */
+.main-content {
+  max-width: 980px;
+  margin: -2.4rem auto 2.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: clamp(1.2rem, 2.5vw, 2.2rem) clamp(1rem, 3vw, 2.4rem);
+}
+
+/* 文字层次 */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  color: var(--heading);
+  letter-spacing: .01em;
+  margin-top: 1.4em;
+  margin-bottom: .6em;
+}
+.main-content h1 { font-size: clamp(1.55rem, 2.5vw, 2rem); }
+.main-content h2 {
+  font-size: clamp(1.3rem, 2.1vw, 1.6rem);
+  padding-bottom: .25rem;
+  border-bottom: 1px solid var(--line);
+}
+.main-content h3 { font-size: clamp(1.12rem, 1.8vw, 1.28rem); }
+
+.main-content p,
+.main-content li {
+  color: var(--text);
+  font-size: 1.02rem;
+}
+.main-content code {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: .15rem .4rem;
+}
+.main-content pre code {
+  display: block;
+  padding: .95rem 1rem;
+  overflow-x: auto;
+}
+
+/* 链接与引用 */
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  margin: 1rem 0;
+  padding: .4rem 1rem;
+  color: var(--muted);
+  background: #f8fafc;
+}
+
+/* 表格更论文化 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.4rem;
+  font-size: .98rem;
+}
+th, td {
+  border: 1px solid var(--line);
+  padding: .56rem .66rem;
+}
+th {
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* 图片与图集 */
+img {
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(15,23,42,.08);
+}
 .gallery {
-  margin: 10px 50px;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: .7rem;
 }
-
 .gallery img {
-  transition: 1s;
-  padding: 15px;
-  width: 200px;
+  width: 100%;
+  padding: 0;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.gallery img:hover {
+  transform: translateY(-2px) scale(1.01);
+  filter: none;
+  box-shadow: 0 10px 24px rgba(15,23,42,.12);
 }
 
-.gallery img:hover {
-  filter:grayscale(100%);
-  transform: scale(1.1);
+/* 页脚弱化 */
+.site-footer {
+  margin-top: 1.5rem;
+  color: #64748b;
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+
+/* 移动端 */
+@media (max-width: 768px) {
+  .page-header {
+    min-height: 250px;
+    padding-top: 4rem;
+  }
+  .main-content {
+    margin-top: -1.2rem;
+    border-radius: 10px;
+    padding: 1rem;
+  }
 }
