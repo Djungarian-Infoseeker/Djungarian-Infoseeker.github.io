@@ -31,28 +31,11 @@ header_image: '../../atmos.jpg'
 ## 知识/Knowledges
 ## 经典文章/Classical Articles
 
-## 研究类文章/Research Articles
-- [Aquaplanets作为气溶胶效应研究的框架 中文翻译/ Aquaplanets as a Frameworkfor Examination of Aerosol Effects by Dorian S. Abbot, Nicolas B. Cowan, and Fred J. Ciesla](https://infoseeker.cn/docs/Medeiros2019/Medeiros2019)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
-- [大西洋环流的多重稳态和中间倾翻 中文翻译/ Multistability and intermediate tipping of the AtlanticOcean circulation by Johannes Lohmann , Henk A. Dijkstra, Markus Jochum, Valerio Lucarini , and Peter D. Ditlevsen ](https://infoseeker.cn/docs/Lohmann2024/Lohmann2024)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
-- [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
- - [在岩石行星上的二氧化碳海洋双稳态 中文翻译/ CO2 Ocean Bistability on Terrestrial Exoplanets R. J. Graham, Tim Lichtenberg, and Raymond T. Pierrehumbert](https://infoseeker.cn/docs/Graham2022/Graham2022)<span style="color:green;">（更新日期2024/12/17，已完结） </span>
-- [由于失控温室效应和云反馈导致宜居带内缘的气候双稳态 中文翻译/ Climate Bistability at the Inner Edge of the Habitable Zone due to Runaway Greenhouse and Cloud Feedbacks Bowen Fan , Da Yang , and Dorian S. Abbot](https://infoseeker.cn/docs/Fan2024/Fan2024)<span style="color:green;">（更新日期2024/12/18，已完结） </span>
-- [高二氧化碳系外行星的碳循环不稳定性：对宜居性的影响 中文翻译/ Carbon Cycle Instability for High-CO2 Exoplanets: Implications for Habitability R. J. Graham and R. T. Pierrehumbert](https://infoseeker.cn/docs/Graham2024/Graham2024)<span style="color:green;">（更新日期2024/12/21，已完结） </span>
-- [长太阳日行星气候滞后现象减少 中文翻译/ Decrease in Hysteresis of Planetary Climate for Planets with Long Solar Days Dorian S. Abbot , Jonah Bloch-Johnson, Jade Checlair, Navah X. Farahat, R. J. Graham, David Plotkin, Predrag Popovic, and Francisco Spaulding-Astudillo](https://infoseeker.cn/docs/Abbot2018/Abbot2018)<span style="color:green;">（更新日期2025/1/2，已完结） </span>
-- [从雪球地球到潮湿或失控温室的气候跃变 中文翻译/Abrupt climate transition of icy worlds from snowball to moist or runaway greenhouse Jun Yang, Feng Ding, Ramses M. Ramirez, W. R. Peltier, Yongyun Hu & Yonggang Liu ](https://infoseeker.cn/docs/Yang2018/Yang2018)<span style="color:green;">（更新日期2025/1/13，已完结） </span>
-- [潮汐锁定类地行星从眼球到雪球状态的转变：海冰漂移的驱动作用 中文翻译/Transition from eyeball to snowball driven by sea-ice drift on tidally locked terrestrial planets  Jun Yang *, Weiwen Ji and Yaoxuan Zeng](https://infoseeker.cn/docs/Yang2020/Yang2020)<span style="color:green;">（更新日期2025/2/17，已完结） </span>
-- [Kepler-186 系统的形成、潮汐演化及宜居性 中文翻译/ARTICLES • THE FOLLOWING ARTICLE IS FREE ARTICLE
 FORMATION, TIDAL EVOLUTION, AND HABITABILITY OF THE KEPLER-186 SYSTEM
 Emeline Bolmont, Sean N. Raymond, Philip von Paris, Franck Selsis, Franck Hersant, Elisa V. Quintana, and Thomas Barclay](https://infoseeker.cn/docs/Bolmont2014/Bolmont2014)<span style="color:green;">（更新日期2025/2/18，已完结） </span>
-- [大陆收缩与雪球地球情景下海洋冰盖厚度 中文翻译/Continental constriction and oceanic ice-cover thickness  in a Snowball-Earth scenario  Eli Tziperman,1 Dorian S. Abbot,2 Yosef Ashkenazy,3 Hezi Gildor,4 David Pollard,5 Christian G. Schoof,6 and Daniel P. Schrag1](https://infoseeker.cn/docs/Tziperman2012/Tziperman2012)<span style="color:green;">（更新日期2025/2/21，已完结） </span>
-- [雪球地球上的海洋冰川流动与尘埃输运 中文翻译/Sea glacier flow and dust transport on Snowball Earth  Dawei Li1 and Raymond T. Pierrehumbert1](https://infoseeker.cn/docs/Li2011/Li2011)<span style="color:green;">（更新日期2025/2/23，已完结） </span>
-- [雪球地球上的热带冰层厚度和光合作用 中文翻译/Thickness of tropical ice and photosynthesis on a snowball EarthChristopher P. McKay](https://infoseeker.cn/docs/Mckay2000/Mckay2000)<span style="color:green;">（更新日期2025/2/24，已完结） </span>
-- [永久冰覆盖的南极洲霍尔湖中光的透射与反射 中文翻译/Light transmission and reflection in perennially ice-covered Lake Hoare, Antarctica](https://infoseeker.cn/docs/Mckay1994/Mckay1994)<span style="color:green;">（更新日期2025/3/6，已完结） </span>
-- [永冻湖泊冰层厚度 中文翻译/Thickness of ice on
 perennially frozen lakes
 Christopher P. McKay·, Gary D. Clowt,
 Robert A. Wharton Jr:j: & Steven W. Squyres:j: ](https://infoseeker.cn/docs/Mckay1985/Mckay1985)<span style="color:green;">（更新日期2025/3/8，已完结） </span>
-- [海冰的能量守恒热力学模型 中文翻译/An energy-conserving thermodynamic model of sea iceC. M. Bitz, William H. Lipscomb](https://infoseeker.cn/docs/Bitz1999/Bitz1999)<span style="color:green;">（更新日期2025/3/16，已完结） </span>
 ## 综述类文章/Review Articles
 - [什么是古气候与行星气候？（翻译文章节选）/What are paleoclimatology and planetary climatology?](https://infoseeker.cn/docs/planetclimate/planetaryclimate) <span style="color:green;">（更新日期2024/12/20，已完结） </span>
 - [CAM5的物理原理/The physical principles of CAM5 (Community Atmosphere Model version 5)](https://infoseeker.cn/docs/CAM5PHY) <span style="color:red;">（更新日期2024/12/1，未完结） 
