@@ -29,17 +29,9 @@ header_image: '../../atmos.jpg'
 # 文献与知识 / Thesis & Knowledge
 
 ## 知识/Knowledges
-- [赫罗图 维基百科/ Hertzsprung–Russell diagram wikipedia](https://zh.wikipedia.org/wiki/%E8%B5%AB%E7%BE%85%E5%9C%96) 
-- [赫罗图/ Hertzsprung–Russell diagram](https://image.xmcdn.com/group38/M07/A1/B7/wKgJolpoLzGj0qldAACjyO_JG9A910.jpg?op_type=4&device_type=ios&upload_type=attachment&name=mobile_large) 
-- [瑞利散射 维基百科/ Rayleigh scattering wikipedia](https://zh.wikipedia.org/wiki/%E7%91%9E%E5%88%A9%E6%95%A3%E5%B0%84) 
-- [大气辐射与物理的补课 / Atmosphere Radiation & Physics addtion](https://infoseeker.cn/docs/radiation1227) 
-- [恒星光谱学分类 中文翻译 / Spectral Classification of Stars ASTRO index page](https://infoseeker.cn/docs/spectstar) 
 ## 经典文章/Classical Articles
-- [主序星周围的宜居带 中文翻译/ Habitable Zones Around Main Sequence Stars by James F. Kasting, Daniel P. Whitmire, Ray T. Reynolds](https://infoseeker.cn/docs/Kasting1993/Kasting1993)<span style="color:green;">（更新日期2024/12/21，已完结） </span> 
-- [可居住带围绕主序星：新估算 中文翻译/ HABITABLE ZONES AROUND MAIN-SEQUENCE STARS: NEW ESTIMATES Ravi Kumar Kopparapu, Ramses Ramirez, James F. Kasting, Vincent Eymet, Tyler D. Robinson, Suvrath Mahadevan, Ryan C. Terrien, Shawn Domagal-Goldman, Victoria Meadows, and Rohit Deshpande](https://infoseeker.cn/docs/Kopparapu2013/Kopparapu2013)<span style="color:green;">（更新日期2024/12/19，已完结） </span> 
 
 ## 研究类文章/Research Articles
-- [行星风化行为与可居住带对地表陆地比例的敏感性指示 中文翻译/ INDICATION OF INSENSITIVITY OF PLANETARY WEATHERINGBEHAVIORAND HABITABLE ZONETOSURFACELANDFRACTION by Brian Medeiros](https://infoseeker.cn/docs/abbot2012/abbot2012)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
 - [Aquaplanets作为气溶胶效应研究的框架 中文翻译/ Aquaplanets as a Frameworkfor Examination of Aerosol Effects by Dorian S. Abbot, Nicolas B. Cowan, and Fred J. Ciesla](https://infoseeker.cn/docs/Medeiros2019/Medeiros2019)<span style="color:red;">（更新日期2024/12/5，未完结） </span>
 - [大西洋环流的多重稳态和中间倾翻 中文翻译/ Multistability and intermediate tipping of the AtlanticOcean circulation by Johannes Lohmann , Henk A. Dijkstra, Markus Jochum, Valerio Lucarini , and Peter D. Ditlevsen ](https://infoseeker.cn/docs/Lohmann2024/Lohmann2024)<span style="color:green;">（更新日期2024/12/9，已完结） </span>
 - [类地行星的宜居性与多稳定性 中文翻译/ Habitability and Multistability in Earth-like Planets by V. Lucarini, S. Pascale, R. Boschi, E. Kirk, and N. Iro](https://infoseeker.cn/docs/Lucarini2013/Lucarini2013)<span style="color:green;">（更新日期2024/12/11，已完结） </span>
